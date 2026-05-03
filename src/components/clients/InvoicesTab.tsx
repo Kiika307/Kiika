@@ -1,0 +1,437 @@
+"use client";
+
+import { useState, useTransition, useMemo } from "react";
+import { Plus, Trash2, Pencil, Save, X, FileText, Receipt } from "lucide-react";
+import { toast } from "sonner";
+import { FormField, FormSelect, FormTextarea } from "@/components/ui/FormField";
+import { EmptyState } from "@/components/ui/EmptyState";
+import { useConfirm } from "@/components/ui/ConfirmDialog";
+import { addInvoice, updateInvoice, deleteInvoice } from "@/lib/actions";
+import type { Invoice, InvoiceStatut, ModeFinancement } from "@/lib/types";
+
+interface InvoicesTabProps {
+  clientId: string;
+  invoices: Invoice[];
+}
+
+const STATUT_LABEL: Record<InvoiceStatut, string> = {
+  en_attente: "En attente",
+  envoyee: "Envoyée",
+  reglee: "Réglée",
+  relance: "Relance",
+  annulee: "Annulée",
+};
+
+const STATUT_COLOR: Record<InvoiceStatut, string> = {
+  en_attente: "#5B8FB9",
+  envoyee: "#C8A030",
+  reglee: "#2E8A7B",
+  relance: "#D4622A",
+  annulee: "#999999",
+};
+
+const MODE_LABEL: Record<ModeFinancement, string> = {
+  autofinancement: "Autofinancement",
+  cpf: "CPF",
+  mutuelle: "Mutuelle",
+  employeur: "Employeur",
+  autre: "Autre",
+};
+
+const EUR = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" });
+
+export function InvoicesTab({ clientId, invoices }: InvoicesTabProps) {
+  const [adding, setAdding] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [pending, startTransition] = useTransition();
+  const [error, setError] = useState<string | null>(null);
+  const { confirm, dialog } = useConfirm();
+
+  const totals = useMemo(() => {
+    let billed = 0;
+    let paid = 0;
+    let outstanding = 0;
+    for (const inv of invoices) {
+      if (inv.statut === "annulee") continue;
+      billed += inv.montant;
+      paid += inv.montantRegle;
+      if (inv.statut !== "reglee") outstanding += inv.montant - inv.montantRegle;
+    }
+    return { billed, paid, outstanding };
+  }, [invoices]);
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h2 className="font-serif text-[18px] font-semibold text-[var(--color-navy)]">
+          Facturation
+          <span className="ml-2 text-[12px] font-normal text-[var(--color-gray-soft)]">
+            {invoices.length} facture{invoices.length > 1 ? "s" : ""}
+          </span>
+        </h2>
+        {!adding && (
+          <button
+            type="button"
+            onClick={() => setAdding(true)}
+            className="inline-flex items-center gap-1.5 rounded-[10px] px-3 py-2 text-[12px] font-semibold text-white"
+            style={{ backgroundColor: "var(--color-gold)" }}
+          >
+            <Plus size={14} />
+            Nouvelle facture
+          </button>
+        )}
+      </div>
+
+      <div className="grid grid-cols-3 gap-3">
+        <SummaryCard label="Facturé" value={EUR.format(totals.billed)} color="#5B8FB9" />
+        <SummaryCard label="Encaissé" value={EUR.format(totals.paid)} color="#2E8A7B" />
+        <SummaryCard label="En attente" value={EUR.format(totals.outstanding)} color="#D4622A" />
+      </div>
+
+      {error && (
+        <div className="rounded-[10px] bg-red-50 border border-red-200 px-4 py-2 text-[13px] text-red-700">
+          {error}
+        </div>
+      )}
+
+      {adding && (
+        <InvoiceEditor
+          pending={pending}
+          onCancel={() => setAdding(false)}
+          onSubmit={(input) => {
+            setError(null);
+            startTransition(async () => {
+              const res = await addInvoice({ clientId, ...input });
+              if (res.ok) {
+                setAdding(false);
+                toast.success("Facture créée");
+              } else {
+                setError(res.error ?? "Erreur");
+                toast.error(res.error ?? "Impossible de créer la facture");
+              }
+            });
+          }}
+        />
+      )}
+
+      {invoices.length === 0 && !adding && (
+        <div
+          className="rounded-[16px]"
+          style={{ backgroundColor: "var(--color-white-soft)", boxShadow: "var(--shadow-card)" }}
+        >
+          <EmptyState
+            icon={Receipt}
+            title="Aucune facture émise"
+            message="Créez la première facture pour ce client (séances, forfaits, accompagnements)."
+            action={
+              <button
+                type="button"
+                onClick={() => setAdding(true)}
+                className="inline-flex items-center gap-1.5 rounded-[10px] px-4 py-2.5 text-[13px] font-semibold text-white min-h-11"
+                style={{ backgroundColor: "var(--color-gold)" }}
+              >
+                <Plus size={14} aria-hidden="true" />
+                Première facture
+              </button>
+            }
+          />
+        </div>
+      )}
+
+      <div className="space-y-2">
+        {invoices.map((inv) =>
+          editingId === inv.id ? (
+            <InvoiceEditor
+              key={inv.id}
+              initial={inv}
+              pending={pending}
+              onCancel={() => setEditingId(null)}
+              onSubmit={(input) => {
+                setError(null);
+                startTransition(async () => {
+                  const res = await updateInvoice(inv.id, input);
+                  if (res.ok) {
+                    setEditingId(null);
+                    toast.success("Facture mise à jour");
+                  } else {
+                    setError(res.error ?? "Erreur");
+                    toast.error(res.error ?? "Impossible de mettre à jour");
+                  }
+                });
+              }}
+            />
+          ) : (
+            <InvoiceRow
+              key={inv.id}
+              invoice={inv}
+              pending={pending}
+              onEdit={() => setEditingId(inv.id)}
+              onDelete={async () => {
+                const ok = await confirm({
+                  title: "Supprimer la facture",
+                  message: `Supprimer la facture ${inv.numero} (${EUR.format(inv.montant)}) ? Cette action est irréversible.`,
+                  confirmLabel: "Supprimer",
+                  destructive: true,
+                });
+                if (!ok) return;
+                startTransition(async () => {
+                  const res = await deleteInvoice(inv.id);
+                  if (res.ok) {
+                    toast.success("Facture supprimée");
+                  } else {
+                    setError(res.error ?? "Erreur");
+                    toast.error(res.error ?? "Impossible de supprimer");
+                  }
+                });
+              }}
+              onStatusChange={(statut) => {
+                startTransition(async () => {
+                  const patch: Parameters<typeof updateInvoice>[1] = { statut };
+                  if (statut === "reglee") patch.montantRegle = inv.montant;
+                  const res = await updateInvoice(inv.id, patch);
+                  if (res.ok) {
+                    toast.success(`Statut : ${STATUT_LABEL[statut]}`);
+                  } else {
+                    setError(res.error ?? "Erreur");
+                    toast.error(res.error ?? "Impossible de changer le statut");
+                  }
+                });
+              }}
+            />
+          ),
+        )}
+      </div>
+      {dialog}
+    </div>
+  );
+}
+
+function SummaryCard({ label, value, color }: { label: string; value: string; color: string }) {
+  return (
+    <div
+      className="rounded-[14px] bg-white p-4"
+      style={{ boxShadow: "var(--shadow-card)", borderTop: `3px solid ${color}` }}
+    >
+      <div className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)]">
+        {label}
+      </div>
+      <div className="mt-1 font-serif text-[20px] font-bold text-[var(--color-navy)] tabular">{value}</div>
+    </div>
+  );
+}
+
+function InvoiceRow({
+  invoice,
+  pending,
+  onEdit,
+  onDelete,
+  onStatusChange,
+}: {
+  invoice: Invoice;
+  pending: boolean;
+  onEdit: () => void;
+  onDelete: () => void;
+  onStatusChange: (s: InvoiceStatut) => void;
+}) {
+  return (
+    <article
+      className="rounded-[12px] bg-white px-4 py-3"
+      style={{ boxShadow: "var(--shadow-card)" }}
+    >
+      <div className="flex items-center gap-4">
+        <FileText size={18} className="text-[var(--color-gray-soft)]" />
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2">
+            <span className="text-[14px] font-semibold text-[var(--color-navy)]">
+              {invoice.numero}
+            </span>
+            {invoice.modeFinancement && (
+              <span className="text-[11px] text-[var(--color-gray-soft)]">
+                · {MODE_LABEL[invoice.modeFinancement]}
+              </span>
+            )}
+          </div>
+          <div className="text-[11px] text-[var(--color-gray-soft)]">
+            Émise le {formatDate(invoice.dateEmission)}
+            {invoice.dateEcheance && ` · échéance ${formatDate(invoice.dateEcheance)}`}
+          </div>
+        </div>
+        <div className="text-right">
+          <div className="font-serif text-[15px] font-bold text-[var(--color-navy)] tabular">
+            {EUR.format(invoice.montant)}
+          </div>
+          {invoice.montantRegle > 0 && invoice.montantRegle < invoice.montant && (
+            <div className="text-[11px] text-[var(--color-teal)] tabular">
+              {EUR.format(invoice.montantRegle)} payé
+            </div>
+          )}
+        </div>
+        <select
+          value={invoice.statut}
+          onChange={(e) => onStatusChange(e.target.value as InvoiceStatut)}
+          disabled={pending}
+          className="rounded-[8px] border border-[var(--color-light-gray)] px-2 py-1 text-[12px] font-semibold disabled:opacity-50 min-h-9"
+          style={{ color: STATUT_COLOR[invoice.statut] }}
+        >
+          {(Object.keys(STATUT_LABEL) as InvoiceStatut[]).map((s) => (
+            <option key={s} value={s}>{STATUT_LABEL[s]}</option>
+          ))}
+        </select>
+        <button
+          type="button"
+          onClick={onEdit}
+          disabled={pending}
+          className="inline-flex items-center justify-center rounded text-[var(--color-gray-soft)] hover:bg-[var(--color-light-gray)] hover:text-[var(--color-navy)] disabled:opacity-50 min-h-9 min-w-9"
+          title="Modifier"
+          aria-label="Modifier la facture"
+        >
+          <Pencil size={13} aria-hidden="true" />
+        </button>
+        <button
+          type="button"
+          onClick={onDelete}
+          disabled={pending}
+          className="inline-flex items-center justify-center rounded text-[var(--color-gray-soft)] hover:bg-red-50 hover:text-red-600 disabled:opacity-50 min-h-9 min-w-9"
+          title="Supprimer"
+          aria-label="Supprimer la facture"
+        >
+          <Trash2 size={13} aria-hidden="true" />
+        </button>
+      </div>
+      {invoice.notes && (
+        <p className="mt-2 text-[12px] text-[var(--color-gray-soft)] whitespace-pre-wrap pl-7">
+          {invoice.notes}
+        </p>
+      )}
+    </article>
+  );
+}
+
+interface EditorInput {
+  numero: string;
+  montant: number;
+  modeFinancement?: ModeFinancement | null;
+  dateEmission?: string;
+  dateEcheance?: string | null;
+  notes?: string | null;
+}
+
+function InvoiceEditor({
+  initial,
+  pending,
+  onCancel,
+  onSubmit,
+}: {
+  initial?: Invoice;
+  pending: boolean;
+  onCancel: () => void;
+  onSubmit: (input: EditorInput) => void;
+}) {
+  const [numero, setNumero] = useState(initial?.numero ?? autoNumero());
+  const [montant, setMontant] = useState(String(initial?.montant ?? ""));
+  const [modeFinancement, setModeFinancement] = useState<ModeFinancement | "">(
+    initial?.modeFinancement ?? "",
+  );
+  const [dateEmission, setDateEmission] = useState(
+    initial?.dateEmission ?? new Date().toISOString().slice(0, 10),
+  );
+  const [dateEcheance, setDateEcheance] = useState(initial?.dateEcheance ?? "");
+  const [notes, setNotes] = useState(initial?.notes ?? "");
+
+  return (
+    <div className="rounded-[12px] bg-white p-4 space-y-3" style={{ boxShadow: "var(--shadow-card)" }}>
+      <div className="grid grid-cols-3 gap-3">
+        <FormField
+          label="Numéro"
+          type="text"
+          value={numero}
+          onChange={(e) => setNumero(e.target.value)}
+          required
+        />
+        <FormField
+          label="Montant (€)"
+          type="number"
+          min={0}
+          step={0.01}
+          value={montant}
+          onChange={(e) => setMontant(e.target.value)}
+          required
+        />
+        <FormSelect
+          label="Mode de financement"
+          value={modeFinancement}
+          onChange={(e) => setModeFinancement(e.target.value as ModeFinancement | "")}
+        >
+          <option value="">—</option>
+          {(Object.keys(MODE_LABEL) as ModeFinancement[]).map((m) => (
+            <option key={m} value={m}>{MODE_LABEL[m]}</option>
+          ))}
+        </FormSelect>
+        <FormField
+          label="Date d'émission"
+          type="date"
+          value={dateEmission}
+          onChange={(e) => setDateEmission(e.target.value)}
+        />
+        <FormField
+          label="Date d'échéance"
+          type="date"
+          value={dateEcheance}
+          onChange={(e) => setDateEcheance(e.target.value)}
+        />
+      </div>
+      <FormTextarea
+        label="Notes"
+        rows={2}
+        placeholder="Notes (optionnel)…"
+        value={notes}
+        onChange={(e) => setNotes(e.target.value)}
+      />
+      <div className="flex justify-end gap-2">
+        <button
+          type="button"
+          onClick={onCancel}
+          disabled={pending}
+          className="inline-flex items-center gap-1.5 rounded-[10px] border border-[var(--color-light-gray)] px-3 py-1.5 text-[12px] font-semibold text-[var(--color-navy)] hover:bg-[var(--color-light-gray)] disabled:opacity-50"
+        >
+          <X size={12} />
+          Annuler
+        </button>
+        <button
+          type="button"
+          onClick={() =>
+            onSubmit({
+              numero: numero.trim(),
+              montant: Number(montant) || 0,
+              modeFinancement: modeFinancement || null,
+              dateEmission: dateEmission || undefined,
+              dateEcheance: dateEcheance || null,
+              notes: notes.trim() || null,
+            })
+          }
+          disabled={pending || !numero.trim() || !montant}
+          className="inline-flex items-center gap-1.5 rounded-[10px] px-3 py-1.5 text-[12px] font-semibold text-white disabled:opacity-50"
+          style={{ backgroundColor: "var(--color-gold)" }}
+        >
+          <Save size={12} />
+          {pending ? "…" : "Enregistrer"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function autoNumero(): string {
+  const now = new Date();
+  const yyyy = now.getFullYear();
+  const mm = String(now.getMonth() + 1).padStart(2, "0");
+  const dd = String(now.getDate()).padStart(2, "0");
+  const hhmm = String(now.getHours()).padStart(2, "0") + String(now.getMinutes()).padStart(2, "0");
+  return `F-${yyyy}${mm}${dd}-${hhmm}`;
+}
+
+function formatDate(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString("fr-FR", { day: "2-digit", month: "short", year: "numeric" });
+}

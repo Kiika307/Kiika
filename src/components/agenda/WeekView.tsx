@@ -1,0 +1,113 @@
+"use client";
+
+import { Avatar } from "@/components/ui/Avatar";
+import type { Appointment, Client } from "@/lib/types";
+
+const HOURS = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+const DAYS = [
+  { short: "Lun", num: 21, today: true },
+  { short: "Mar", num: 22, today: false },
+  { short: "Mer", num: 23, today: false },
+  { short: "Jeu", num: 24, today: false },
+  { short: "Ven", num: 25, today: false },
+];
+const HOUR_HEIGHT = 62;
+const TIME_COL = 64;
+
+interface WeekViewProps {
+  appointments: Appointment[];
+  clients: Client[];
+  onSelect?: (appt: Appointment) => void;
+}
+
+function timeToOffset(time: string) {
+  const [h, m] = time.split(":").map(Number);
+  return (h - HOURS[0]) * HOUR_HEIGHT + (m / 60) * HOUR_HEIGHT;
+}
+
+export function WeekView({ appointments, clients, onSelect }: WeekViewProps) {
+  return (
+    <div
+      className="rounded-[16px] overflow-x-auto"
+      style={{ backgroundColor: "var(--color-white-soft)", boxShadow: "var(--shadow-card)" }}
+    >
+      <div className="min-w-[640px]">
+      <div
+        className="grid border-b border-[var(--color-light-gray)]"
+        style={{ gridTemplateColumns: `${TIME_COL}px repeat(${DAYS.length}, 1fr)` }}
+      >
+        <div />
+        {DAYS.map((d) => (
+          <div
+            key={d.short}
+            className="px-4 py-3 text-center"
+            style={{ backgroundColor: d.today ? "var(--color-gold-light)" : undefined }}
+          >
+            <div className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)]">{d.short}</div>
+            <div className="font-serif text-[24px] font-semibold text-[var(--color-navy)]">{d.num}</div>
+          </div>
+        ))}
+      </div>
+
+      <div
+        className="relative grid"
+        style={{
+          gridTemplateColumns: `${TIME_COL}px repeat(${DAYS.length}, 1fr)`,
+          gridTemplateRows: `repeat(${HOURS.length}, ${HOUR_HEIGHT}px)`,
+        }}
+      >
+        {HOURS.map((h) => (
+          <div
+            key={h}
+            className="border-t border-[var(--color-light-gray)] text-[11px] text-[var(--color-gray-soft)] pl-3 pt-1 tabular"
+            style={{ gridColumn: 1, gridRow: HOURS.indexOf(h) + 1 }}
+          >
+            {String(h).padStart(2, "0")}:00
+          </div>
+        ))}
+
+        {DAYS.map((_, dayIdx) =>
+          HOURS.map((h) => (
+            <div
+              key={`${dayIdx}-${h}`}
+              className="border-t border-l border-[var(--color-light-gray)]"
+              style={{ gridColumn: dayIdx + 2, gridRow: HOURS.indexOf(h) + 1 }}
+            />
+          )),
+        )}
+
+        {appointments.map((a) => {
+          const dayIdx = DAYS.findIndex((d) => d.short === a.day);
+          if (dayIdx < 0) return null;
+          const client = clients.find((c) => c.id === a.clientId);
+          if (!client) return null;
+          const top = timeToOffset(a.time);
+          const height = (a.duration / 60) * HOUR_HEIGHT - 4;
+
+          return (
+            <button
+              key={a.id}
+              onClick={() => onSelect?.(a)}
+              className="absolute left-1 right-1 rounded-lg px-2 py-1.5 text-left transition-transform hover:scale-[1.02]"
+              style={{
+                top,
+                height,
+                backgroundColor: client.color,
+                boxShadow: `0 4px 12px ${client.color}55`,
+                gridColumn: dayIdx + 2,
+                position: "absolute",
+                left: `calc(${TIME_COL}px + ${(dayIdx * 100) / DAYS.length}% + 4px)`,
+                width: `calc(${100 / DAYS.length}% - 8px)`,
+              }}
+            >
+              <div className="text-[10px] font-bold text-white/85 tabular">{a.time}</div>
+              <div className="text-[11px] font-bold text-white truncate">{client.name.split(" ")[0]}</div>
+              {a.protocol && <div className="text-[10px] text-white/80 truncate">{a.protocol}</div>}
+            </button>
+          );
+        })}
+      </div>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+@theme {
+  /* INTIO Design Tokens */
+  --color-cream: #FAF2DF;
+  --color-navy: #1B2D47;
+  --color-navy-dark: #142238;
+  --color-gold: #C8A030;
+  --color-gold-light: #F5E8C0;
+  --color-teal: #2E8A7B;
+  --color-teal-light: #E6F4F1;
+  --color-white-soft: #FFFDF5;
+  --color-gray-soft: #6B7280;
+  --color-light-gray: #F3F4F6;
+  --color-red-alert: #E05252;
+  --color-purple-alt: #7C5CBF;
+  --color-purple-light: #F0EAFA;
+  --color-client-purple: #7C5CBF;
+  --color-client-orange: #D4622A;
+  --color-client-teal: #2E8A7B;
+  --color-client-blue: #5B8FB9;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+
+  --radius-card: 16px;
+  --radius-card-lg: 18px;
+  --radius-badge: 20px;
+  --radius-button: 10px;
+  --radius-button-round: 20px;
+  --radius-input: 10px;
+  --radius-step: 12px;
+
+  --shadow-card: 0 1px 4px rgba(27, 45, 71, 0.07);
+  --shadow-card-hover: 0 10px 30px rgba(27, 45, 71, 0.14);
+  --shadow-modal: 0 24px 64px rgba(0, 0, 0, 0.22);
+  --shadow-tweaks: 0 12px 40px rgba(27, 45, 71, 0.18);
+}
+
+:root {
+  --background: var(--color-cream);
+  --foreground: var(--color-navy);
+}
+
+/* === Dark mode ===
+   Activé via [data-theme="dark"] sur <html>. Override les tokens couleur.
+   Les composants utilisant var(--color-*) s'adaptent automatiquement. */
+html[data-theme="dark"] {
+  --color-cream: #0E1726;
+  --color-navy: #F0E9D6;
+  --color-navy-dark: #E8DFC9;
+  --color-gold: #D4B560;
+  --color-gold-light: #2A2218;
+  --color-teal: #4FB3A3;
+  --color-teal-light: #1A2A28;
+  --color-white-soft: #182232;
+  --color-gray-soft: #94A3B8;
+  --color-light-gray: #243246;
+  --color-red-alert: #E87878;
+  --color-purple-alt: #9D7CD9;
+  --color-purple-light: #1F1A30;
+  --background: var(--color-cream);
+  --foreground: var(--color-navy);
+
+  --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.35);
+  --shadow-card-hover: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-modal: 0 24px 64px rgba(0, 0, 0, 0.6);
+  --shadow-tweaks: 0 12px 40px rgba(0, 0, 0, 0.45);
+
+  color-scheme: dark;
+}
+
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-serif);
+}
+
+/* === Accessibilité globale === */
+
+/* Focus visible cohérent sur tous les interactifs natifs (clavier uniquement). */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Utility class réutilisable pour les wrappers non-natifs (Link wrappant card, divs interactives). */
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Skip-link pour utilisateurs clavier (à ajouter dans layout). */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  background: var(--color-navy);
+  color: var(--color-gold-light);
+  padding: 8px 16px;
+  border-radius: 8px;
+  z-index: 100;
+  font-size: 13px;
+  font-weight: 600;
+  transition: top 150ms ease-out;
+}
+.skip-link:focus {
+  top: 8px;
+}
+
+/* Respect des préférences mouvement réduit. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* === Typographie === */
+
+/* Chiffres tabulaires sur tous les nombres data (prix, durées, compteurs).
+   Évite le jitter de largeur quand la valeur change. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Tokens sémantiques de typographie (Material/HIG-aligned). */
+.text-display {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.text-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.text-title {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.text-body {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.text-label {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Animations utilitaires (utilisées par modals, dialogs, sheets). */
+@keyframes intio-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes intio-zoom-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes intio-slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: intio-fade-in 200ms ease-out; }
+.animate-zoom-in { animation: intio-zoom-in 180ms cubic-bezier(0.16, 1, 0.3, 1); }
+.animate-slide-up { animation: intio-slide-up 220ms cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Stagger : chaque enfant entre avec un léger décalage. */
+.stagger > * {
+  animation: intio-slide-up 260ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+.stagger > *:nth-child(1) { animation-delay: 0ms; }
+.stagger > *:nth-child(2) { animation-delay: 40ms; }
+.stagger > *:nth-child(3) { animation-delay: 80ms; }
+.stagger > *:nth-child(4) { animation-delay: 120ms; }
+.stagger > *:nth-child(5) { animation-delay: 160ms; }
+.stagger > *:nth-child(6) { animation-delay: 200ms; }
+.stagger > *:nth-child(7) { animation-delay: 240ms; }
+.stagger > *:nth-child(8) { animation-delay: 280ms; }
+.stagger > *:nth-child(n+9) { animation-delay: 320ms; }
+
+/* Press feedback : léger scale-down au tap. */
+.press-feedback {
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.press-feedback:active {
+  transform: scale(0.97);
+}
+
+/* Virtualisation native pour grandes listes (305+ items).
+   Le navigateur skip le rendu/layout des cartes hors viewport. */
+.virtualized-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 280px;
+}
+.virtualized-row {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 72px;
+}
