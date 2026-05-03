@@ -1,6 +1,7 @@
 import type { ProtocolDetail } from "./types";
 import { colors } from "./tokens";
 import { spirituelDetails } from "./protocol-details-spirituel";
+import { tabacDetails } from "./protocol-details-tabac";
 
 const hypnoseDetail: ProtocolDetail = {
   protocolId: 1,
@@ -257,6 +258,7 @@ export const protocolDetails: Record<number, ProtocolDetail> = {
   3: coherenceDetail,
   4: emdrDetail,
   ...spirituelDetails,
+  ...tabacDetails,
 };
 
 export function getProtocolDetail(id: number): ProtocolDetail | null {
