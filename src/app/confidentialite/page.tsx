@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { LegalShell } from "@/components/legal/LegalShell";
 
 export const metadata: Metadata = {
-  title: "Politique de confidentialité — INTIO",
-  description: "Politique de confidentialité et traitement des données personnelles INTIO.",
+  title: "Politique de confidentialité — KIIKA",
+  description: "Politique de confidentialité et traitement des données personnelles de l'application KIIKA, éditée par INTIO.",
 };
 
 export default function ConfidentialitePage() {

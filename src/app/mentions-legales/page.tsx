@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { LegalShell } from "@/components/legal/LegalShell";
 
 export const metadata: Metadata = {
-  title: "Mentions légales — INTIO",
-  description: "Mentions légales de l'application INTIO.",
+  title: "Mentions légales — KIIKA",
+  description: "Mentions légales de l'application KIIKA, éditée par INTIO.",
 };
 
 export default function MentionsLegalesPage() {
@@ -14,6 +14,9 @@ export default function MentionsLegalesPage() {
           Éditeur du site
         </h2>
         <p>
+          L&apos;application <strong>KIIKA</strong> est éditée par&nbsp;:
+        </p>
+        <p className="mt-2">
           <strong>INTIO</strong>
           <br />
           Propriétaire&nbsp;: Madame Varinka ROBERT

@@ -47,7 +47,7 @@ function addHeader(doc: jsPDF, clientName: string, therapistName: string) {
   doc.setTextColor(255, 255, 255);
   doc.setFont("helvetica", "bold");
   doc.setFontSize(14);
-  doc.text("INTIO — Dossier client", MARGIN_X, 11);
+  doc.text("KIIKA — Dossier client", MARGIN_X, 11);
   doc.setFont("helvetica", "normal");
   doc.setFontSize(9);
   doc.text(`${clientName}  ·  ${therapistName}`, MARGIN_X, 17);

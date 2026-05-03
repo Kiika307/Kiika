@@ -5,7 +5,7 @@ export default function SignupPage() {
   return (
     <AuthShell
       title="Créer un compte"
-      subtitle="Espace réservé aux thérapeutes"
+      subtitle="Espace réservé aux praticiens et accompagnants"
       footer={{ text: "Déjà un compte ?", linkLabel: "Se connecter", href: "/login" }}
     >
       <SignupForm />

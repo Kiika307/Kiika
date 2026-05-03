@@ -16,8 +16,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "INTIO — Espace Thérapeute",
-  description: "Plateforme de gestion pour thérapeutes et coachs holistiques",
+  title: "KIIKA — Espace praticien",
+  description:
+    "KIIKA — du Ki au Ka : la plateforme des praticiens et accompagnants holistiques pour suivre, accompagner et faire évoluer leurs clients.",
 };
 
 export const viewport: Viewport = {

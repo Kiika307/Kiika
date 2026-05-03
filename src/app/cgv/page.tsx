@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { LegalShell } from "@/components/legal/LegalShell";
 
 export const metadata: Metadata = {
-  title: "Conditions Générales de Vente — INTIO",
-  description: "Conditions Générales de Vente de l'application INTIO.",
+  title: "Conditions Générales de Vente — KIIKA",
+  description: "Conditions Générales de Vente de l'application KIIKA, éditée par INTIO.",
 };
 
 export default function CGVPage() {
@@ -19,7 +19,7 @@ export default function CGVPage() {
           des services proposés par <strong>INTIO</strong>, dont le siège est situé au{" "}
           <strong>99 domaine de Suartello</strong>, propriété de Madame{" "}
           <strong>Varinka ROBERT</strong> (ci-après «&nbsp;l&apos;Éditeur&nbsp;»), via
-          l&apos;application accessible à l&apos;adresse{" "}
+          l&apos;application <strong>KIIKA</strong> accessible à l&apos;adresse{" "}
           <a href="https://kiika.intio.fr" className="text-[var(--color-gold)] hover:underline">
             https://kiika.intio.fr
           </a>{" "}

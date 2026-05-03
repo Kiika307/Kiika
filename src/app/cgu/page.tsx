@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { LegalShell } from "@/components/legal/LegalShell";
 
 export const metadata: Metadata = {
-  title: "Conditions Générales d'Utilisation — INTIO",
-  description: "Conditions Générales d'Utilisation de l'application INTIO.",
+  title: "Conditions Générales d'Utilisation — KIIKA",
+  description: "Conditions Générales d'Utilisation de l'application KIIKA, éditée par INTIO.",
 };
 
 export default function CGUPage() {
@@ -16,7 +16,7 @@ export default function CGUPage() {
         <p>
           Les présentes Conditions Générales d&apos;Utilisation (ci-après «&nbsp;CGU&nbsp;»)
           régissent l&apos;accès et l&apos;utilisation de l&apos;application en ligne
-          <strong> INTIO</strong> (ci-après «&nbsp;l&apos;Application&nbsp;»), accessible à
+          <strong> KIIKA</strong> (ci-après «&nbsp;l&apos;Application&nbsp;»), accessible à
           l&apos;adresse{" "}
           <a href="https://kiika.intio.fr" className="text-[var(--color-gold)] hover:underline">
             https://kiika.intio.fr
@@ -24,8 +24,8 @@ export default function CGUPage() {
           .
         </p>
         <p className="mt-2">
-          L&apos;Application est éditée par <strong>INTIO</strong>, dont le siège est situé
-          au <strong>99 domaine de Suartello</strong>, propriété de Madame{" "}
+          L&apos;Application KIIKA est éditée par <strong>INTIO</strong>, dont le siège
+          est situé au <strong>99 domaine de Suartello</strong>, propriété de Madame{" "}
           <strong>Varinka ROBERT</strong>.
         </p>
         <p className="mt-2">
