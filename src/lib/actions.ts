@@ -2,6 +2,13 @@
 
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
+import {
+  rankProtocolsForClient,
+  deepAnalyzeWithLLM,
+  type ScoredProtocol,
+  type LLMDeepAnalysis,
+} from "@/lib/matching";
+import { getClientsRich, getProtocols } from "@/lib/data";
 import type {
   ClientInfo,
   NoteKind,
@@ -794,3 +801,57 @@ export async function exportClientData(
     },
   };
 }
+
+// ============================================================
+// KIIKA Assistant — matching protocoles
+// ============================================================
+
+export interface KiikaAnalysisResult {
+  ok: boolean;
+  error?: string;
+  clientName?: string;
+  clientInitials?: string;
+  ranked?: ScoredProtocol[];
+  generatedAt?: string;
+}
+
+export async function analyzeClientWithKiika(
+  clientId: string,
+): Promise<KiikaAnalysisResult> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  // RLS scopes both queries to the caller — no manual therapist_id filter needed.
+  const [clients, protocols] = await Promise.all([getClientsRich(), getProtocols()]);
+  const client = clients.find((c) => c.id === clientId);
+  if (!client) return { ok: false, error: "Client introuvable" };
+
+  const ranked = rankProtocolsForClient(client, protocols, { topN: 5 });
+
+  return {
+    ok: true,
+    clientName: client.name,
+    clientInitials: client.initials,
+    ranked,
+    generatedAt: new Date().toISOString(),
+  };
+}
+
+export async function deepAnalyzeClientWithLLM(
+  clientId: string,
+): Promise<{ ok: boolean; error?: string; analysis?: LLMDeepAnalysis }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const [clients, protocols] = await Promise.all([getClientsRich(), getProtocols()]);
+  const client = clients.find((c) => c.id === clientId);
+  if (!client) return { ok: false, error: "Client introuvable" };
+
+  const ranked = rankProtocolsForClient(client, protocols, { topN: 5 });
+  const analysis = await deepAnalyzeWithLLM(client, ranked);
+
+  return { ok: analysis.ok, error: analysis.error, analysis };
+}
+

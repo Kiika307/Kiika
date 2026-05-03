@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Users, CalendarCheck, TrendingUp, Sparkles, AlertTriangle } from "lucide-react";
+import { Users, CalendarCheck, TrendingUp, Sparkles, AlertTriangle, Brain, Zap } from "lucide-react";
 import { AppShell } from "@/components/layout/AppShell";
 import { Avatar } from "@/components/ui/Avatar";
 import { Badge } from "@/components/ui/Badge";
@@ -140,54 +140,77 @@ export default async function DashboardPage() {
 
         <div className="space-y-6">
           <section
-            className="rounded-[18px] p-6"
-            style={{ backgroundColor: "var(--color-navy)", color: "var(--color-gold-light)" }}
+            className="rounded-[18px] p-6 relative overflow-hidden"
+            style={{
+              background: "linear-gradient(135deg, var(--color-navy) 0%, #2A3F5C 100%)",
+              color: "var(--color-gold-light)",
+            }}
           >
-            <header className="flex items-center gap-2 mb-5">
-              <Sparkles size={18} strokeWidth={1.8} className="text-[var(--color-gold)]" aria-hidden="true" />
-              <h2 className="font-serif text-[16px] font-semibold">Suggestions IA</h2>
+            <div
+              className="pointer-events-none absolute -top-12 -right-12 h-40 w-40 rounded-full opacity-20 blur-2xl"
+              style={{ background: "radial-gradient(circle, #C8A030 0%, transparent 70%)" }}
+              aria-hidden="true"
+            />
+            <header className="flex items-center gap-2.5 mb-3 relative">
+              <div
+                className="inline-flex items-center justify-center rounded-[10px] w-9 h-9"
+                style={{ background: "linear-gradient(135deg, #C8A030 0%, #F5E8C0 100%)" }}
+                aria-hidden="true"
+              >
+                <Brain size={18} className="text-[var(--color-navy)]" />
+              </div>
+              <h2 className="font-serif text-[17px] font-semibold text-white">Demande à KIIKA</h2>
             </header>
-            {aiCandidates.length === 0 ? (
-              <p className="text-[12px] text-white/60">Ajoutez vos premiers clients pour générer des suggestions.</p>
-            ) : (
-              <ul className="space-y-3">
-                {aiCandidates.map((c) => {
-                  const protocol = c.dominante
-                    ? protocols.find((p) =>
-                        c.dominante!.toLowerCase().includes(p.category.toLowerCase().split("-")[0]),
-                      ) ?? protocols[0]
-                    : null;
-                  return (
-                    <li
-                      key={c.id}
-                      className="flex items-center gap-3 rounded-[12px] px-3 py-2.5"
-                      style={{ backgroundColor: "rgba(255,255,255,0.04)" }}
-                    >
-                      <Avatar initials={c.initials} color={c.color} size={36} />
-                      <div className="flex-1 min-w-0">
-                        <div className="text-[13px] font-semibold text-white truncate">{c.fullName}</div>
-                        <div className="text-[11px] text-white/60 truncate inline-flex items-center gap-1">
-                          {c.testDone && protocol ? (
-                            protocol.name
-                          ) : (
-                            <>
-                              <AlertTriangle size={11} strokeWidth={2} className="text-[var(--color-gold)]" aria-hidden="true" />
-                              Test psychométrique manquant
-                            </>
-                          )}
-                        </div>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
+            <p className="text-[13px] text-white/75 leading-[1.6] mb-4 relative">
+              L&apos;assistant analyse le profil d&apos;un client et propose les protocoles les
+              plus alignés, avec une explication claire pour chaque recommandation.
+            </p>
+            <ul className="space-y-1.5 mb-5 relative">
+              <li className="flex items-start gap-2 text-[12px] text-white/70">
+                <Zap size={12} className="text-[var(--color-gold)] mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <span>Matching basé sur profil psychométrique + motifs + pratiques</span>
+              </li>
+              <li className="flex items-start gap-2 text-[12px] text-white/70">
+                <Sparkles size={12} className="text-[var(--color-gold)] mt-0.5 flex-shrink-0" aria-hidden="true" />
+                <span>Analyse approfondie LLM en option (sur activation)</span>
+              </li>
+            </ul>
             <Link
-              href="/protocoles"
-              className="mt-5 block text-[12px] font-semibold uppercase tracking-wide text-[var(--color-gold)] hover:underline"
+              href="/kiika"
+              className="relative inline-flex items-center gap-2 rounded-[10px] px-4 py-2.5 text-[13px] font-semibold text-[var(--color-navy)] min-h-11 transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "var(--color-gold-light)" }}
             >
-              Parcourir les protocoles →
+              <Brain size={14} aria-hidden="true" />
+              Ouvrir l&apos;assistant →
             </Link>
+            {aiCandidates.length > 0 && (
+              <div className="mt-5 pt-4 border-t border-white/10 relative">
+                <p className="text-[10px] uppercase tracking-wide text-white/50 mb-2">
+                  Clients récents à analyser
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  {aiCandidates.slice(0, 4).map((c) => (
+                    <Link
+                      key={c.id}
+                      href="/kiika"
+                      className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium text-white/80 hover:bg-white/10 transition-colors"
+                      style={{ backgroundColor: "rgba(255,255,255,0.04)" }}
+                      title={c.fullName}
+                    >
+                      <Avatar initials={c.initials} color={c.color} size={20} />
+                      <span className="max-w-[100px] truncate">{c.fullName.split(" ")[0]}</span>
+                      {!c.testDone && (
+                        <AlertTriangle
+                          size={10}
+                          className="text-[var(--color-gold)] flex-shrink-0"
+                          aria-hidden="true"
+                        />
+                      )}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </section>
 
           <section className="rounded-[18px] p-6" style={{ backgroundColor: "var(--color-gold-light)" }}>

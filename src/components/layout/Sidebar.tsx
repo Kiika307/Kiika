@@ -17,6 +17,7 @@ import {
   LogOut,
   Menu,
   X,
+  Brain,
 } from "lucide-react";
 import { signOutAction } from "@/app/login/actions";
 
@@ -25,6 +26,7 @@ const navItems = [
   { href: "/agenda", label: "Agenda", icon: CalendarDays },
   { href: "/clients", label: "Clients", icon: Users },
   { href: "/protocoles", label: "Protocoles", icon: Sparkles },
+  { href: "/kiika", label: "KIIKA", icon: Brain },
   { href: "/messagerie", label: "Messagerie", icon: MessageSquare },
   { href: "/visio", label: "Visio", icon: Video },
 ];
