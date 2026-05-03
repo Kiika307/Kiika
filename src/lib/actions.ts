@@ -12,7 +12,41 @@ import type {
   DocumentCategory,
   SignatureMethod,
 } from "@/lib/types";
-// ClientTask actions appended below
+
+// === Server-side input limits ===
+// These guards complement RLS and are not display hints.
+const MAX_NOTE_BODY = 50_000;
+const MAX_NOTE_TITLE = 200;
+const MAX_TASK_TITLE = 200;
+const MAX_TASK_DESC = 5_000;
+const MAX_TASK_FEEDBACK = 5_000;
+const MAX_INVOICE_NUMERO = 50;
+const MAX_INVOICE_NOTES = 2_000;
+const MAX_INVOICE_AMOUNT = 99_999;
+const MAX_DOC_FILENAME = 255;
+const MAX_DOC_DESCRIPTION = 1_000;
+const MAX_DOC_SIZE_BYTES = 50 * 1024 * 1024; // 50 MB
+const MAX_TEXT_LONG = 5_000;
+const MAX_TEXT_SHORT = 500;
+
+const ALLOWED_DOC_MIME = new Set<string>([
+  "application/pdf",
+  "image/jpeg",
+  "image/png",
+  "image/webp",
+  "image/heic",
+  "image/heif",
+  "application/msword",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "application/vnd.ms-excel",
+  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "text/plain",
+  "text/csv",
+]);
+
+function validMoney(v: number, max: number): boolean {
+  return Number.isFinite(v) && v >= 0 && v <= max;
+}
 
 export async function markAppointmentDone(appointmentId: string): Promise<{ ok: boolean; error?: string }> {
   const supabase = await createClient();
@@ -39,6 +73,28 @@ export async function updateClientInfo(
   const supabase = await createClient();
   const { data: auth } = await supabase.auth.getUser();
   if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  // Length guards on free-text PHI fields to prevent DB bloat / DoS.
+  const longFields: Array<string | null | undefined> = [
+    info.antecedentsMedicaux,
+    info.antecedentsPsy,
+    info.traitementsEnCours,
+  ];
+  for (const v of longFields) {
+    if (v && v.length > MAX_TEXT_LONG)
+      return { ok: false, error: "Champ trop long (5000 caractères max)" };
+  }
+  const shortFields: Array<string | null | undefined> = [
+    info.profession,
+    info.situationFamiliale,
+    info.adresse,
+    info.medecinTraitant,
+    info.personneReferente,
+  ];
+  for (const v of shortFields) {
+    if (v && v.length > MAX_TEXT_SHORT)
+      return { ok: false, error: "Champ trop long (500 caractères max)" };
+  }
 
   const { error } = await supabase
     .from("clients")
@@ -92,6 +148,8 @@ export async function addClientNote(input: {
   const { data: auth } = await supabase.auth.getUser();
   if (!auth.user) return { ok: false, error: "Non authentifié" };
   if (!input.body.trim()) return { ok: false, error: "Note vide" };
+  if (input.body.length > MAX_NOTE_BODY) return { ok: false, error: "Note trop longue" };
+  if (input.title && input.title.length > MAX_NOTE_TITLE) return { ok: false, error: "Titre trop long" };
 
   const { data, error } = await supabase
     .from("client_notes")
@@ -118,6 +176,10 @@ export async function updateClientNote(
   const supabase = await createClient();
   const { data: auth } = await supabase.auth.getUser();
   if (!auth.user) return { ok: false, error: "Non authentifié" };
+  if (patch.body !== undefined && patch.body.length > MAX_NOTE_BODY)
+    return { ok: false, error: "Note trop longue" };
+  if (patch.title && patch.title.length > MAX_NOTE_TITLE)
+    return { ok: false, error: "Titre trop long" };
 
   const { error } = await supabase
     .from("client_notes")
@@ -282,6 +344,9 @@ export async function addClientTask(input: {
   const { data: auth } = await supabase.auth.getUser();
   if (!auth.user) return { ok: false, error: "Non authentifié" };
   if (!input.title.trim()) return { ok: false, error: "Titre requis" };
+  if (input.title.length > MAX_TASK_TITLE) return { ok: false, error: "Titre trop long" };
+  if (input.description && input.description.length > MAX_TASK_DESC)
+    return { ok: false, error: "Description trop longue" };
 
   const { data, error } = await supabase
     .from("client_tasks")
@@ -313,6 +378,13 @@ export async function updateClientTask(
   const supabase = await createClient();
   const { data: auth } = await supabase.auth.getUser();
   if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  if (patch.title !== undefined && patch.title.length > MAX_TASK_TITLE)
+    return { ok: false, error: "Titre trop long" };
+  if (patch.description && patch.description.length > MAX_TASK_DESC)
+    return { ok: false, error: "Description trop longue" };
+  if (patch.clientFeedback && patch.clientFeedback.length > MAX_TASK_FEEDBACK)
+    return { ok: false, error: "Retour client trop long" };
 
   const update: Record<string, unknown> = {};
   if (patch.title !== undefined) update.title = patch.title;
@@ -380,7 +452,12 @@ export async function addInvoice(input: {
   const { data: auth } = await supabase.auth.getUser();
   if (!auth.user) return { ok: false, error: "Non authentifié" };
   if (!input.numero.trim()) return { ok: false, error: "Numéro requis" };
-  if (input.montant < 0) return { ok: false, error: "Montant invalide" };
+  if (input.numero.trim().length > MAX_INVOICE_NUMERO)
+    return { ok: false, error: "Numéro de facture trop long" };
+  if (!validMoney(input.montant, MAX_INVOICE_AMOUNT))
+    return { ok: false, error: "Montant invalide" };
+  if (input.notes && input.notes.length > MAX_INVOICE_NOTES)
+    return { ok: false, error: "Notes trop longues" };
 
   const { data, error } = await supabase
     .from("invoices")
@@ -420,6 +497,14 @@ export async function updateInvoice(
   const supabase = await createClient();
   const { data: auth } = await supabase.auth.getUser();
   if (!auth.user) return { ok: false, error: "Non authentifié" };
+  if (patch.numero !== undefined && patch.numero.trim().length > MAX_INVOICE_NUMERO)
+    return { ok: false, error: "Numéro de facture trop long" };
+  if (patch.montant !== undefined && !validMoney(patch.montant, MAX_INVOICE_AMOUNT))
+    return { ok: false, error: "Montant invalide" };
+  if (patch.montantRegle !== undefined && !validMoney(patch.montantRegle, MAX_INVOICE_AMOUNT))
+    return { ok: false, error: "Montant réglé invalide" };
+  if (patch.notes && patch.notes.length > MAX_INVOICE_NOTES)
+    return { ok: false, error: "Notes trop longues" };
 
   const update: Record<string, unknown> = {};
   if (patch.numero !== undefined) update.numero = patch.numero;
@@ -476,6 +561,19 @@ export async function recordClientDocument(input: {
   const supabase = await createClient();
   const { data: auth } = await supabase.auth.getUser();
   if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  if (!input.filename.trim()) return { ok: false, error: "Nom de fichier requis" };
+  if (input.filename.length > MAX_DOC_FILENAME)
+    return { ok: false, error: "Nom de fichier trop long" };
+  if (input.sizeBytes != null && input.sizeBytes > MAX_DOC_SIZE_BYTES)
+    return { ok: false, error: "Fichier trop volumineux (max 50 Mo)" };
+  if (input.mimeType && !ALLOWED_DOC_MIME.has(input.mimeType))
+    return { ok: false, error: "Type de fichier non autorisé" };
+  if (input.description && input.description.length > MAX_DOC_DESCRIPTION)
+    return { ok: false, error: "Description trop longue" };
+  // Path must live under the caller's auth.uid() folder (defense in depth — Storage RLS already enforces).
+  if (!input.storagePath.startsWith(`${auth.user.id}/`))
+    return { ok: false, error: "Chemin de stockage invalide" };
 
   const { data, error } = await supabase
     .from("client_documents")
