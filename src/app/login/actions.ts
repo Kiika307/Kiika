@@ -7,10 +7,16 @@ export interface AuthState {
   error?: string;
 }
 
+function safeRelativePath(input: string): string {
+  if (!input || !input.startsWith("/")) return "/";
+  if (input.startsWith("//") || input.startsWith("/\\")) return "/";
+  return input;
+}
+
 export async function loginAction(_prev: AuthState, formData: FormData): Promise<AuthState> {
   const email = String(formData.get("email") ?? "").trim();
   const password = String(formData.get("password") ?? "");
-  const redirectTo = String(formData.get("redirect") ?? "/");
+  const redirectTo = safeRelativePath(String(formData.get("redirect") ?? "/"));
 
   if (!email || !password) {
     return { error: "Email et mot de passe requis." };
@@ -23,7 +29,7 @@ export async function loginAction(_prev: AuthState, formData: FormData): Promise
     return { error: error.message };
   }
 
-  redirect(redirectTo || "/");
+  redirect(redirectTo);
 }
 
 export async function signupAction(_prev: AuthState, formData: FormData): Promise<AuthState> {
