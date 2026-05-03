@@ -6,6 +6,8 @@ import { tcaDetails } from "./protocol-details-tca";
 import { reikiDetails } from "./protocol-details-reiki";
 import { deepDetails } from "./protocol-details-deep";
 import { avancesDetails } from "./protocol-details-avances";
+import { technicienDetails } from "./protocol-details-technicien";
+import { praticienDetails } from "./protocol-details-praticien";
 
 const hypnoseDetail: ProtocolDetail = {
   protocolId: 1,
@@ -267,6 +269,8 @@ export const protocolDetails: Record<number, ProtocolDetail> = {
   ...reikiDetails,
   ...deepDetails,
   ...avancesDetails,
+  ...technicienDetails,
+  ...praticienDetails,
 };
 
 export function getProtocolDetail(id: number): ProtocolDetail | null {
