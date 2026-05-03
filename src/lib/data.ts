@@ -264,6 +264,10 @@ interface ClientRowDb {
   antecedents_medicaux: string | null;
   antecedents_psy: string | null;
   traitements_en_cours: string | null;
+  selene_scores: Record<string, number> | null;
+  selene_dominante: string | null;
+  selene_top3: string[] | null;
+  selene_taken_at: string | null;
 }
 
 export async function getClientsRich(): Promise<Client[]> {
@@ -271,7 +275,7 @@ export async function getClientsRich(): Promise<Client[]> {
   const { data: rows } = await supabase
     .from("clients")
     .select(
-      "id, full_name, email, phone, age, status, color, test_done, profile_axes, profile_dominante, themes, objectifs, blocages, created_at, date_naissance, sexe, profession, situation_familiale, adresse, medecin_traitant, personne_referente, antecedents_medicaux, antecedents_psy, traitements_en_cours",
+      "id, full_name, email, phone, age, status, color, test_done, profile_axes, profile_dominante, themes, objectifs, blocages, created_at, date_naissance, sexe, profession, situation_familiale, adresse, medecin_traitant, personne_referente, antecedents_medicaux, antecedents_psy, traitements_en_cours, selene_scores, selene_dominante, selene_top3, selene_taken_at",
     )
     .order("created_at", { ascending: true });
 
@@ -353,6 +357,15 @@ export async function getClientsRich(): Promise<Client[]> {
         antecedentsPsy: row.antecedents_psy,
         traitementsEnCours: row.traitements_en_cours,
       },
+      selene:
+        row.selene_scores && row.selene_dominante && row.selene_top3 && row.selene_taken_at
+          ? {
+              scores: row.selene_scores,
+              dominante: row.selene_dominante,
+              top3: row.selene_top3,
+              takenAt: row.selene_taken_at,
+            }
+          : null,
     };
   });
 }

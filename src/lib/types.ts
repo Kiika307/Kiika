@@ -16,6 +16,13 @@ export interface ClientProfile {
   blocages: string[];
 }
 
+export interface SeleneSummary {
+  scores: Record<string, number>;        // { ESSENCE: 73, ALTRUISME: 62, ... }
+  dominante: string;                     // 'ESSENCE' | 'ALTRUISME' | ...
+  top3: string[];                        // ['ESSENCE','ANALYSE','LOYAUTE']
+  takenAt: string;                       // ISO datetime
+}
+
 export interface Client {
   id: string;
   name: string;
@@ -32,6 +39,7 @@ export interface Client {
   testDone: boolean;
   topProtocols: Array<{ id: number; score: number; reason: string }>;
   info: ClientInfo;
+  selene: SeleneSummary | null;
 }
 
 export type Sexe = "F" | "M" | "Autre" | "Non précisé";

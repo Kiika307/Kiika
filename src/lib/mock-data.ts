@@ -47,6 +47,7 @@ export const clients: Client[] = [
       { id: 3, score: 71, reason: "Bonne tolérance somatique" },
     ],
     info: EMPTY_INFO,
+    selene: null,
   },
   {
     id: "2",
@@ -73,6 +74,7 @@ export const clients: Client[] = [
       { id: 4, score: 81, reason: "EMDR adapté au contexte burn-out" },
     ],
     info: EMPTY_INFO,
+    selene: null,
   },
   {
     id: "3",
@@ -90,6 +92,7 @@ export const clients: Client[] = [
     testDone: false,
     topProtocols: [],
     info: EMPTY_INFO,
+    selene: null,
   },
   {
     id: "4",
@@ -116,6 +119,7 @@ export const clients: Client[] = [
       { id: 1, score: 76, reason: "Hypnose en complément" },
     ],
     info: EMPTY_INFO,
+    selene: null,
   },
 ];
 
