@@ -184,6 +184,7 @@ export interface Protocol {
   color: string;
   sessions: number;
   objectives: string[];
+  source: string | null;
 }
 
 export interface Appointment {

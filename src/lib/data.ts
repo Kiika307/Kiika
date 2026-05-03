@@ -453,7 +453,7 @@ export async function getProtocols(): Promise<Protocol[]> {
   const supabase = await createClient();
   const { data } = await supabase
     .from("protocols")
-    .select("id, name, category, practice, motifs, description, duration, level, tags, color, sessions, objectives")
+    .select("id, name, category, practice, motifs, description, duration, level, tags, color, sessions, objectives, source")
     .order("id", { ascending: true });
 
   return (data ?? []).map((row): Protocol => ({
@@ -469,6 +469,7 @@ export async function getProtocols(): Promise<Protocol[]> {
     color: row.color,
     sessions: row.sessions,
     objectives: row.objectives ?? [],
+    source: row.source ?? null,
   }));
 }
 
@@ -476,7 +477,7 @@ export async function getProtocolById(id: number): Promise<Protocol | null> {
   const supabase = await createClient();
   const { data } = await supabase
     .from("protocols")
-    .select("id, name, category, practice, motifs, description, duration, level, tags, color, sessions, objectives")
+    .select("id, name, category, practice, motifs, description, duration, level, tags, color, sessions, objectives, source")
     .eq("id", id)
     .maybeSingle();
 
@@ -494,6 +495,7 @@ export async function getProtocolById(id: number): Promise<Protocol | null> {
     color: data.color,
     sessions: data.sessions,
     objectives: data.objectives ?? [],
+    source: data.source ?? null,
   };
 }
 

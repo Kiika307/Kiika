@@ -138,6 +138,7 @@ export const protocols: Protocol[] = [
     color: colors.purple,
     sessions: 7,
     objectives: ["Tabac", "Perte de poids", "Anxiété", "Estime de soi", "Dépendances"],
+    source: null,
   },
   {
     id: 2,
@@ -153,6 +154,7 @@ export const protocols: Protocol[] = [
     color: colors.gold,
     sessions: 5,
     objectives: ["Croyances limitantes", "Phobies", "Estime de soi", "Confiance en soi"],
+    source: null,
   },
   {
     id: 3,
@@ -168,6 +170,7 @@ export const protocols: Protocol[] = [
     color: colors.teal,
     sessions: 21,
     objectives: ["Stress", "Anxiété", "Sommeil", "Hypertension", "Burn-out"],
+    source: null,
   },
   {
     id: 4,
@@ -183,6 +186,7 @@ export const protocols: Protocol[] = [
     color: colors.red,
     sessions: 10,
     objectives: ["Trauma", "ESPT", "Phobies", "Deuil", "Anxiété"],
+    source: null,
   },
 ];
 

@@ -7,6 +7,7 @@ import { Avatar } from "@/components/ui/Avatar";
 import { Badge } from "@/components/ui/Badge";
 import { MatchBar } from "@/components/ui/MatchBar";
 import { ProtoStepItem } from "./ProtoStepItem";
+import { ProtocolFicheBasic } from "./ProtocolFicheBasic";
 import type { Client, Protocol, ProtocolDetail } from "@/lib/types";
 
 type TabKey = "protocole" | "outils" | "matching" | "croyances";
@@ -26,30 +27,8 @@ interface ProtocolDetailClientProps {
 
 export function ProtocolDetailClient({ protocol, detail, clients }: ProtocolDetailClientProps) {
   if (!detail) {
-    return (
-      <>
-        <Link href="/protocoles" className="inline-flex items-center gap-1 text-[13px] text-[var(--color-gray-soft)] hover:text-[var(--color-navy)]">
-          <ChevronLeft size={14} strokeWidth={2} aria-hidden="true" />
-          Retour au catalogue
-        </Link>
-        <div className="mt-6 rounded-[16px] bg-[var(--color-white-soft)] p-10 text-center" style={{ boxShadow: "var(--shadow-card)" }}>
-          <div className="text-[40px] mb-4">📋</div>
-          <h2 className="font-serif text-[22px] text-[var(--color-navy)]">{protocol.name}</h2>
-          <p className="mt-2 text-[14px] text-[var(--color-gray-soft)] leading-[1.7]">{protocol.description}</p>
-          <div className="mt-5 flex flex-wrap justify-center gap-2">
-            {protocol.tags.map((t) => (
-              <Badge key={t} color={protocol.color}>{t}</Badge>
-            ))}
-          </div>
-          <p className="mt-6 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[var(--color-gold)]">
-            Fiche détaillée en cours de rédaction
-            <Sparkles size={13} strokeWidth={2} aria-hidden="true" />
-          </p>
-        </div>
-      </>
-    );
+    return <ProtocolFicheBasic protocol={protocol} />;
   }
-
   return <ProtocolDetailContent protocol={protocol} detail={detail} clients={clients} />;
 }
 
