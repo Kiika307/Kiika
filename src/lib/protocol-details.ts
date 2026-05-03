@@ -8,6 +8,7 @@ import { deepDetails } from "./protocol-details-deep";
 import { avancesDetails } from "./protocol-details-avances";
 import { technicienDetails } from "./protocol-details-technicien";
 import { praticienDetails } from "./protocol-details-praticien";
+import { praticienPnlDetails } from "./protocol-details-praticien-pnl";
 
 const hypnoseDetail: ProtocolDetail = {
   protocolId: 1,
@@ -271,6 +272,7 @@ export const protocolDetails: Record<number, ProtocolDetail> = {
   ...avancesDetails,
   ...technicienDetails,
   ...praticienDetails,
+  ...praticienPnlDetails,
 };
 
 export function getProtocolDetail(id: number): ProtocolDetail | null {
