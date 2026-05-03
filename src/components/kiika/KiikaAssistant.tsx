@@ -163,7 +163,8 @@ export function KiikaAssistant({ clients, llmEnabled }: KiikaAssistantProps) {
                   {pendingHeur ? "Analyse…" : "Analyser ce client"}
                 </button>
                 <p className="text-[11px] text-[var(--color-gray-soft)] leading-[1.4]">
-                  Algorithme local basé sur le profil psychométrique, les motifs et les pratiques.
+                  Matching basé en priorité sur le profil <strong>Selene</strong> (9 dimensions)
+                  quand le test a été passé, complété par les motifs déclarés et le niveau d&apos;expérience.
                   Aucune donnée ne quitte KIIKA.
                 </p>
               </div>

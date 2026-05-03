@@ -7,6 +7,8 @@ import type { Client, Protocol } from "@/lib/types";
 // Score sur 100 :
 //   - 50 pts : intersection des motifs (Jaccard)
 //   - 25 pts : alignement profil dominant ↔ catégorie/pratique
+//             - Si Selene disponible : moyenne pondérée des 3 dimensions du top3
+//             - Sinon : 4-axes legacy (Émotionnel/Cognitif/Somatique/Comportemental)
 //   - 15 pts : adéquation du niveau (Débutant pour nouveaux, Inter sinon)
 //   - 10 pts : diversité de pratiques dans le top 5
 
@@ -64,6 +66,142 @@ const DOMINANTE_KEYWORDS: Record<Dominante, string[]> = {
   ],
 };
 
+// Mapping Selene → mots-clés catégories/pratiques/tags pour scoring.
+// Une dimension dominante haute oriente le matching vers les protocoles
+// qui adressent ses tensions caractéristiques.
+type SeleneDim =
+  | "ESSENCE"
+  | "ALTRUISME"
+  | "ACCOMPLISSEMENT"
+  | "AUTHENTICITE"
+  | "ANALYSE"
+  | "LOYAUTE"
+  | "ENTHOUSIASME"
+  | "LEADERSHIP"
+  | "HARMONIE";
+
+const SELENE_KEYWORDS: Record<SeleneDim, string[]> = {
+  // Perfectionniste · Intégrité → recadrage du jugement, lâcher-prise, croyances
+  ESSENCE: [
+    "croyance",
+    "recadrage",
+    "perfectionnisme",
+    "exigence",
+    "lâcher-prise",
+    "auto-compassion",
+    "rigidité",
+    "humaniste",
+    "parts internes",
+    "ancrage",
+  ],
+  // Aidant · Relationnel → communication, parts internes, dire non, identité
+  ALTRUISME: [
+    "communication",
+    "rapport",
+    "parts internes",
+    "empathie",
+    "limites",
+    "identité",
+    "humaniste",
+    "ericksonienne",
+    "famille",
+    "couple",
+  ],
+  // Performeur · Réalisateur → objectifs, motivation, performance, authenticité
+  ACCOMPLISSEMENT: [
+    "objectif",
+    "motivation",
+    "performance",
+    "confiance",
+    "réussite",
+    "modélisation",
+    "burn-out",
+    "fatigue",
+    "ancrage",
+    "identité",
+  ],
+  // Individualiste · Authenticité → identité, deuil, créativité, parts internes
+  AUTHENTICITE: [
+    "identité",
+    "authenticité",
+    "deuil",
+    "trauma",
+    "humaniste",
+    "parts internes",
+    "créativité",
+    "spiritualité",
+    "quête",
+    "sens",
+    "mélancolie",
+    "ancrage",
+  ],
+  // Penseur · Analyse → modélisation, langage, hypnose, ancrage corporel
+  ANALYSE: [
+    "modélisation",
+    "langage",
+    "apprentissage",
+    "ancrage",
+    "respiration",
+    "cohérence cardiaque",
+    "rumination",
+    "anxiété",
+    "ericksonienne",
+    "raisonnement",
+  ],
+  // Loyal · Sécurité → anxiété, peurs, sécurité, ancrage, croyances
+  LOYAUTE: [
+    "anxiété",
+    "stress",
+    "peur",
+    "phobie",
+    "sécurité",
+    "ancrage",
+    "croyance",
+    "humaniste",
+    "ericksonienne",
+    "respiration",
+  ],
+  // Enthousiaste · Joie → focus, ancrage, addictions, parts internes
+  ENTHOUSIASME: [
+    "focus",
+    "concentration",
+    "addictions",
+    "ancrage",
+    "parts internes",
+    "objectif",
+    "motivation",
+    "engagement",
+    "transitions",
+    "alignement",
+  ],
+  // Protecteur · Leadership → confiance, identité, parts internes, vulnérabilité
+  LEADERSHIP: [
+    "confiance",
+    "identité",
+    "parts internes",
+    "humaniste",
+    "vulnérabilité",
+    "colère",
+    "leadership",
+    "communication",
+    "ancrage",
+    "alignement",
+  ],
+  // Médiateur · Paix → affirmation, décision, ancrage, parts internes
+  HARMONIE: [
+    "décision",
+    "orientation",
+    "affirmation",
+    "ancrage",
+    "parts internes",
+    "humaniste",
+    "objectif",
+    "motivation",
+    "alignement",
+    "transitions",
+  ],
+};
+
 function jaccard(a: string[], b: string[]): { score: number; common: string[] } {
   if (a.length === 0 || b.length === 0) return { score: 0, common: [] };
   const setA = new Set(a.map((s) => s.toLowerCase().trim()));
@@ -86,6 +224,29 @@ function dominanteAlignment(dominante: string | null | undefined, p: Protocol): 
   let hits = 0;
   for (const k of keys) if (haystack.includes(k)) hits++;
   return Math.min(1, hits / 3);
+}
+
+// Aligns a protocol against the Selene profile.
+// Uses the top 3 dimensions weighted by their normalized score.
+// Returns 0..1.
+function seleneAlignment(client: Client, p: Protocol): number {
+  const sel = client.selene;
+  if (!sel) return 0;
+  const haystack = `${p.category} ${p.practice} ${(p.tags ?? []).join(" ")}`.toLowerCase();
+  let weighted = 0;
+  let weightSum = 0;
+  for (const code of sel.top3) {
+    const keys = SELENE_KEYWORDS[code as SeleneDim];
+    if (!keys) continue;
+    const score = sel.scores[code] ?? 0;
+    if (score < 40) continue; // ignore "Secondaire"
+    let hits = 0;
+    for (const k of keys) if (haystack.includes(k)) hits++;
+    const dimAlign = Math.min(1, hits / 3);
+    weighted += dimAlign * score;
+    weightSum += score;
+  }
+  return weightSum > 0 ? weighted / weightSum : 0;
 }
 
 function levelFit(client: Client, p: Protocol): number {
@@ -117,18 +278,24 @@ export function rankProtocolsForClient(
   const minScore = opts.minScore ?? 5;
 
   const profile = client.profile;
+  const sel = client.selene;
   const clientMotifs: string[] = [
     ...(profile?.themes ?? []),
     ...(profile?.objectifs ?? []),
   ];
   const dominante = profile?.dominante ?? null;
+  const useSelene = !!sel;
 
   const candidates: ScoredProtocol[] = [];
 
   for (const p of protocols) {
     const m = jaccard(clientMotifs, p.motifs ?? []);
     const motifsScore = m.score * 50;
-    const dominanteScore = dominanteAlignment(dominante, p) * 25;
+    // Selene prend la priorité quand le test a été fait. Le scoring legacy
+    // 4-axes reste actif si seul l'ancien profil est renseigné.
+    const dominanteScore = useSelene
+      ? seleneAlignment(client, p) * 25
+      : dominanteAlignment(dominante, p) * 25;
     const levelScore = levelFit(client, p) * 15;
     const baseScore = motifsScore + dominanteScore + levelScore;
 
@@ -170,7 +337,8 @@ export function rankProtocolsForClient(
 
 function buildReasoning(client: Client, p: Protocol, motifsCommon: string[]): string {
   const parts: string[] = [];
-  const dominante = client.profile?.dominante ?? null;
+  const sel = client.selene;
+  const legacyDom = client.profile?.dominante ?? null;
 
   if (motifsCommon.length > 0) {
     parts.push(
@@ -180,19 +348,35 @@ function buildReasoning(client: Client, p: Protocol, motifsCommon: string[]): st
     parts.push(`Pas de motif explicite partagé — pertinence basée sur le profil et la pratique.`);
   }
 
-  if (dominante) {
+  if (sel) {
+    // Find the Selene dimensions that actually matched the protocol.
     const haystack = `${p.category} ${p.practice}`.toLowerCase();
-    const keys = DOMINANTE_KEYWORDS[dominante as Dominante] ?? [];
-    const matchedKeys = keys.filter((k) => haystack.includes(k));
-    if (matchedKeys.length > 0) {
+    const matchedDims: string[] = [];
+    for (const code of sel.top3) {
+      const keys = SELENE_KEYWORDS[code as SeleneDim] ?? [];
+      if (keys.some((k) => haystack.includes(k))) matchedDims.push(code);
+    }
+    if (matchedDims.length > 0) {
+      const labels = matchedDims.map((d) => `*${d}*`).join(", ");
       parts.push(
-        `Profil dominant *${dominante}* aligné avec ${p.practice} (${p.category}).`,
+        `Selene : ${labels} (top 3 de ${client.name.split(" ")[0]}) résonne avec ${p.practice}.`,
       );
     } else {
-      parts.push(`Pratique ${p.practice} — peut compléter le profil ${dominante}.`);
+      parts.push(
+        `Selene : profil dominant *${sel.dominante}* — ${p.practice} peut élargir le champ d'accompagnement.`,
+      );
+    }
+  } else if (legacyDom) {
+    const haystack = `${p.category} ${p.practice}`.toLowerCase();
+    const keys = DOMINANTE_KEYWORDS[legacyDom as Dominante] ?? [];
+    const matchedKeys = keys.filter((k) => haystack.includes(k));
+    if (matchedKeys.length > 0) {
+      parts.push(`Profil ancien (4 axes) : *${legacyDom}* aligné avec ${p.practice} (${p.category}).`);
+    } else {
+      parts.push(`Pratique ${p.practice} — peut compléter le profil ${legacyDom}.`);
     }
   } else {
-    parts.push(`Profil psychométrique non encore évalué — proposition basée sur les thèmes déclarés.`);
+    parts.push(`Aucun test psychométrique encore réalisé — envoi d'un lien Selene recommandé.`);
   }
 
   if (client.status === "nouveau" && p.level === "Débutant") {
@@ -238,13 +422,26 @@ function anonymizeForLLM(client: Client) {
   return {
     initials: clientInitials(client.name),
     age: client.age ?? null,
-    profile_dominante: client.profile?.dominante ?? null,
-    profile_axes: client.profile?.axes ?? null,
+    sessions_count: client.sessions ?? 0,
+    status: client.status,
+    // Selene (test principal) — 9 dimensions psychométriques
+    selene: client.selene
+      ? {
+          dominante: client.selene.dominante,
+          top3: client.selene.top3,
+          scores: client.selene.scores,
+        }
+      : null,
+    // Profil legacy 4-axes (si Selene non disponible ou en complément)
+    legacy_profile: client.profile
+      ? {
+          dominante: client.profile.dominante,
+          axes: client.profile.axes,
+        }
+      : null,
     themes: client.profile?.themes ?? [],
     objectifs: client.profile?.objectifs ?? [],
     blocages: client.profile?.blocages ?? [],
-    sessions_count: client.sessions ?? 0,
-    status: client.status,
   };
 }
 
@@ -284,10 +481,26 @@ CONTEXTE CRITIQUE :
 - Tu ne donnes PAS de prescription. Tu suggères des pistes d'accompagnement holistique.
 - Si tu détectes des éléments qui semblent dépasser le cadre du coaching/accompagnement (idées suicidaires, dépression sévère, trauma complexe), tu le signales explicitement dans cautionPoints.
 
+LECTURE DU PROFIL SELENE :
+Le test Selene (créé par Varinka ROBERT, 9 dimensions, 117 questions) est l'instrument principal.
+Quand "selene" est présent dans le payload, fonde TOUTE ton analyse dessus en priorité.
+Les 9 dimensions et leur essence :
+- ESSENCE (Perfectionniste · Intégrité) — quête de perfection, sens éthique, rigueur
+- ALTRUISME (Aidant · Relationnel) — empathie, don de soi, besoin d'être nécessaire
+- ACCOMPLISSEMENT (Performeur · Réalisateur) — orientation succès, image, efficacité
+- AUTHENTICITE (Individualiste · Authenticité) — singularité, profondeur émotionnelle, créativité
+- ANALYSE (Penseur · Analyse) — observation, retrait, raisonnement, indépendance intellectuelle
+- LOYAUTE (Loyal · Sécurité) — vigilance, anxiété, fidélité, besoin de cadre
+- ENTHOUSIASME (Enthousiaste · Joie) — optimisme, multiplicité, fuite des émotions douloureuses
+- LEADERSHIP (Protecteur · Leadership) — courage, intensité, contrôle, défense des vulnérables
+- HARMONIE (Médiateur · Paix) — adaptabilité, médiation, évitement des conflits, procrastination
+
+Lis le top 3 + les scores normalisés (0-100, ≥85 = Dominant). Le profil "legacy_profile" 4-axes est secondaire et ancien.
+
 FORMAT DE RÉPONSE — JSON STRICT :
 {
-  "insight": "Analyse en français, 400-600 mots, markdown léger. Structure : (1) Lecture du profil (2) Pourquoi ces protocoles ont du sens (3) Ordre conseillé d'engagement.",
-  "alternativeAngles": ["3-4 angles alternatifs courts en une phrase chacun"],
+  "insight": "Analyse en français, 400-600 mots, markdown léger. Structure : (1) Lecture du profil Selene (dimensions dominantes, tensions, ressources) (2) Pourquoi ces protocoles ont du sens pour CE profil (3) Ordre conseillé d'engagement.",
+  "alternativeAngles": ["3-4 angles alternatifs courts en une phrase chacun, qui sortent du top 5 algorithmique"],
   "cautionPoints": ["1-3 points de vigilance ou contre-indications relatives"]
 }
 
