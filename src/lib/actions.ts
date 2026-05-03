@@ -651,3 +651,146 @@ export async function recordClientConsent(input: {
   revalidatePath("/clients");
   return { ok: true, id: data.id };
 }
+
+// ============================================================
+// RGPD art. 17 — Droit à l'effacement
+// ============================================================
+
+function computeInitials(fullName: string): string {
+  const parts = fullName.trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return "?";
+  if (parts.length === 1) return parts[0]!.charAt(0).toUpperCase() + ".";
+  return (
+    parts[0]!.charAt(0).toUpperCase() +
+    "." +
+    parts[parts.length - 1]!.charAt(0).toUpperCase() +
+    "."
+  );
+}
+
+export async function eraseClient(input: {
+  clientId: string;
+  confirmName: string;
+  reason?: string | null;
+}): Promise<{ ok: boolean; error?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const { data: client, error: fetchError } = await supabase
+    .from("clients")
+    .select("id, full_name")
+    .eq("id", input.clientId)
+    .eq("therapist_id", auth.user.id)
+    .maybeSingle();
+
+  if (fetchError) return { ok: false, error: fetchError.message };
+  if (!client) return { ok: false, error: "Client introuvable" };
+
+  if (input.confirmName.trim().toLowerCase() !== client.full_name.trim().toLowerCase()) {
+    return { ok: false, error: "Le nom saisi ne correspond pas. Effacement annulé." };
+  }
+
+  const folder = `${auth.user.id}/${input.clientId}`;
+  const { data: files } = await supabase.storage.from("documents").list(folder, { limit: 1000 });
+  if (files && files.length > 0) {
+    const paths = files.map((f) => `${folder}/${f.name}`);
+    await supabase.storage.from("documents").remove(paths);
+  }
+
+  const { error: delError } = await supabase
+    .from("clients")
+    .delete()
+    .eq("id", input.clientId)
+    .eq("therapist_id", auth.user.id);
+
+  if (delError) return { ok: false, error: delError.message };
+
+  const initials = computeInitials(client.full_name);
+  await supabase.from("client_erasures").insert({
+    therapist_id: auth.user.id,
+    client_id_erased: input.clientId,
+    client_initials: initials,
+    reason: input.reason ?? null,
+  });
+
+  revalidatePath("/clients");
+  revalidatePath("/agenda");
+  revalidatePath("/messagerie");
+  return { ok: true };
+}
+
+// ============================================================
+// RGPD art. 20 — Portabilité (gated by KIIKA_ENABLE_DATA_EXPORT)
+// ============================================================
+
+interface ClientExport {
+  exportedAt: string;
+  exportFormat: "kiika.client.v1";
+  client: Record<string, unknown> | null;
+  notes: unknown[];
+  plans: unknown[];
+  snapshots: unknown[];
+  tasks: unknown[];
+  appointments: unknown[];
+  invoices: unknown[];
+  documents: unknown[];
+  consents: unknown[];
+  messages: unknown[];
+}
+
+export async function exportClientData(
+  clientId: string,
+): Promise<{ ok: boolean; data?: ClientExport; error?: string }> {
+  if (process.env.KIIKA_ENABLE_DATA_EXPORT !== "true") {
+    return {
+      ok: false,
+      error:
+        "Export désactivé. Pour activer la portabilité des données, contactez l'éditeur (INTIO).",
+    };
+  }
+
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const { data: client } = await supabase
+    .from("clients")
+    .select("*")
+    .eq("id", clientId)
+    .eq("therapist_id", auth.user.id)
+    .maybeSingle();
+
+  if (!client) return { ok: false, error: "Client introuvable" };
+
+  const [notes, plans, snapshots, tasks, appointments, invoices, documents, consents, messages] =
+    await Promise.all([
+      supabase.from("client_notes").select("*").eq("client_id", clientId),
+      supabase.from("client_protocols").select("*").eq("client_id", clientId),
+      supabase.from("client_profile_snapshots").select("*").eq("client_id", clientId),
+      supabase.from("client_tasks").select("*").eq("client_id", clientId),
+      supabase.from("appointments").select("*").eq("client_id", clientId),
+      supabase.from("invoices").select("*").eq("client_id", clientId),
+      supabase.from("client_documents").select("*").eq("client_id", clientId),
+      supabase.from("client_consents").select("*").eq("client_id", clientId),
+      supabase.from("messages").select("*").eq("client_id", clientId),
+    ]);
+
+  return {
+    ok: true,
+    data: {
+      exportedAt: new Date().toISOString(),
+      exportFormat: "kiika.client.v1",
+      client,
+      notes: notes.data ?? [],
+      plans: plans.data ?? [],
+      snapshots: snapshots.data ?? [],
+      tasks: tasks.data ?? [],
+      appointments: appointments.data ?? [],
+      invoices: invoices.data ?? [],
+      documents: documents.data ?? [],
+      consents: consents.data ?? [],
+      messages: messages.data ?? [],
+    },
+  };
+}

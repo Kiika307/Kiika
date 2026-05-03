@@ -5,6 +5,7 @@ import { Mail, Phone, Calendar, Download } from "lucide-react";
 import { exportClientDossier } from "@/lib/pdf-export";
 import { Avatar } from "@/components/ui/Avatar";
 import { Badge } from "@/components/ui/Badge";
+import { EraseClientButton } from "./EraseClientButton";
 import { ProfilTab } from "./ProfilTab";
 import { MatchingTab } from "./MatchingTab";
 import { HistoriqueTab } from "./HistoriqueTab";
@@ -136,6 +137,7 @@ export function ClientDetail({
           >
             Nouveau RDV
           </button>
+          <EraseClientButton clientId={client.id} clientName={client.name} />
         </div>
       </header>
 
