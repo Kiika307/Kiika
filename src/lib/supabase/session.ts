@@ -1,7 +1,17 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
-const PUBLIC_PREFIXES = ["/login", "/signup", "/auth", "/_next", "/favicon"];
+const PUBLIC_PREFIXES = [
+  "/login",
+  "/signup",
+  "/auth",
+  "/cgu",
+  "/cgv",
+  "/mentions-legales",
+  "/confidentialite",
+  "/_next",
+  "/favicon",
+];
 
 export async function refreshSession(request: NextRequest) {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;

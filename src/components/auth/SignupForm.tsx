@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useActionState } from "react";
 import { FormField } from "@/components/ui/FormField";
 import { signupAction, type AuthState } from "@/app/login/actions";
@@ -27,6 +28,42 @@ export function SignupForm() {
         autoComplete="new-password"
         helper="Au moins 8 caractères"
       />
+
+      <div className="flex items-start gap-2.5 pt-1">
+        <input
+          id="acceptTerms"
+          name="acceptTerms"
+          type="checkbox"
+          required
+          aria-required="true"
+          className="mt-0.5 h-4 w-4 cursor-pointer accent-[var(--color-gold)]"
+        />
+        <label
+          htmlFor="acceptTerms"
+          className="text-[12.5px] leading-[1.5] text-[var(--color-navy)] cursor-pointer select-none"
+        >
+          J&apos;accepte les{" "}
+          <Link
+            href="/cgu"
+            target="_blank"
+            rel="noopener"
+            className="font-semibold text-[var(--color-gold)] underline underline-offset-2 hover:opacity-80"
+          >
+            Conditions Générales d&apos;Utilisation
+          </Link>{" "}
+          et les{" "}
+          <Link
+            href="/cgv"
+            target="_blank"
+            rel="noopener"
+            className="font-semibold text-[var(--color-gold)] underline underline-offset-2 hover:opacity-80"
+          >
+            Conditions Générales de Vente
+          </Link>
+          .
+        </label>
+      </div>
+
       {state.error && (
         <div
           role="alert"
@@ -38,7 +75,7 @@ export function SignupForm() {
       <button
         type="submit"
         disabled={pending}
-        className="w-full rounded-[10px] py-2.5 text-[14px] font-semibold text-white transition-opacity disabled:opacity-60"
+        className="w-full rounded-[10px] py-2.5 text-[14px] font-semibold text-white transition-opacity disabled:opacity-60 min-h-11"
         style={{ background: "var(--color-navy)" }}
       >
         {pending ? "Création…" : "Créer mon compte"}

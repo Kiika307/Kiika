@@ -36,6 +36,7 @@ export async function signupAction(_prev: AuthState, formData: FormData): Promis
   const email = String(formData.get("email") ?? "").trim();
   const password = String(formData.get("password") ?? "");
   const fullName = String(formData.get("fullName") ?? "").trim();
+  const acceptTerms = formData.get("acceptTerms") === "on";
 
   if (!email || !password || !fullName) {
     return { error: "Tous les champs sont requis." };
@@ -43,12 +44,15 @@ export async function signupAction(_prev: AuthState, formData: FormData): Promis
   if (password.length < 8) {
     return { error: "Le mot de passe doit faire au moins 8 caractères." };
   }
+  if (!acceptTerms) {
+    return { error: "Vous devez accepter les CGU et les CGV pour créer un compte." };
+  }
 
   const supabase = await createClient();
   const { error } = await supabase.auth.signUp({
     email,
     password,
-    options: { data: { full_name: fullName } },
+    options: { data: { full_name: fullName, terms_accepted_at: new Date().toISOString() } },
   });
 
   if (error) {
