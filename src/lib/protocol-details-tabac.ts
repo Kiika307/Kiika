@@ -464,6 +464,246 @@ const tabacOrdalique: ProtocolDetail = {
 };
 
 // =====================================================================
+// Outils & techniques spécifiques tabac (804-809)
+// =====================================================================
+
+const make = (
+  id: number,
+  efficacite: string,
+  efficaciteSub: string,
+  description: string,
+  indications: string[],
+  contraindications: string[],
+  programTitle: string,
+  duration: string,
+  programColor: string,
+  programDescription: string,
+  seanceTitle: string,
+  steps: { label: string; detail: string }[],
+  outils: { name: string; type: string; icon: string; desc: string }[],
+  stats: { val: string; label: string; sub: string; color: string }[],
+  croyances: string[]
+): ProtocolDetail => ({
+  protocolId: id,
+  efficacite,
+  efficaciteSub,
+  description,
+  indications,
+  contraindications,
+  programs: [
+    {
+      id: "principal",
+      title: programTitle,
+      icon: "◑",
+      duration,
+      color: programColor,
+      recommended: true,
+      description: programDescription,
+      seances: [{ num: 1, title: seanceTitle, steps }],
+    },
+  ],
+  outils,
+  stats,
+  croyances,
+});
+
+const testsDependance = make(
+  804, "Batterie", "Fagerström + Lagrue + Richmond + HAD",
+  "Batterie de tests validés pour évaluer le fumeur en première séance : Fagerström (dépendance physique 0-10), Lagrue & Legeron (motivation à l'arrêt), Richmond (motivation alternative), HAD (anxiété-dépression). Permet d'adapter le programme et de prédire la réussite.",
+  ["Première séance avec un fumeur", "Préparation au programme", "Évaluation de la sévérité"],
+  ["Refus de remplir les questionnaires"],
+  "Tests de dépendance & motivation tabac",
+  "30-45 min (1ère séance)",
+  colors.clientBlue,
+  "4 tests + cotation + cartographie + adaptation du programme.",
+  "Étapes",
+  [
+    { label: "Présentation des tests", detail: "Cadre rassurant, chiffres comme outil pas verdict." },
+    { label: "Test de Fagerström (6 questions)", detail: "Dépendance physique : Quand fumez-vous votre 1ère cigarette le matin ? Combien par jour ? Difficile de vous abstenir où c'est interdit ? Score 0-10." },
+    { label: "Test Lagrue & Legeron (motivation)", detail: "Score motivationnel à l'arrêt. < 6 : motivation faible (renforcement nécessaire). 6-10 : motivation modérée. > 10 : motivation forte." },
+    { label: "Test de Richmond (4 questions)", detail: "Validation alternative de la motivation. Score 0-10." },
+    { label: "Test HAD (anxiété-dépression)", detail: "14 items. Score Anxiété + Score Dépression. Permet de coordonner si nécessaire." },
+    { label: "Cartographie complète", detail: "Profil : dépendance forte/faible, motivation forte/faible, comorbidités." },
+    { label: "Adaptation du programme", detail: "Dépendance forte + motivation forte = programme 4 séances. Faible motivation = travail préalable. HAD élevé = coordination médicale." },
+    { label: "Restitution au client", detail: "Compréhension de son profil. Engagement adapté." },
+  ],
+  [
+    { name: "Fagerström", type: "Test", icon: "📋", desc: "Dépendance physique 0-10." },
+    { name: "Lagrue & Legeron", type: "Test", icon: "📊", desc: "Motivation à l'arrêt." },
+    { name: "Richmond", type: "Test", icon: "📈", desc: "Motivation alternative." },
+    { name: "HAD", type: "Test", icon: "🩺", desc: "Anxiété-dépression." },
+  ],
+  [
+    { val: "4", label: "Tests validés", sub: "batterie complète", color: colors.clientBlue },
+    { val: "30-45", label: "Minutes", sub: "1ère séance", color: colors.gold },
+  ],
+  ["Les tests sont des étiquettes", "Mon profil ne change pas le résultat"]
+);
+
+const douzeCroyances = make(
+  805, "12 croyances", "Recadrage systématique des croyances du fumeur",
+  "Travail systématique de recadrage des 12 croyances classiques du fumeur : « la cigarette est un plaisir », « ça me calme », « je suis libre de fumer », « il faut de la volonté », « je vais grossir », « je serai insupportable », « il y a un bon moment »... Chaque croyance déconstruite avec contre-exemples.",
+  ["Première séance d'un programme tabac", "Préparation à l'arrêt", "Travail des résistances"],
+  ["Refus de questionner ses croyances"],
+  "Casser les 12 croyances du fumeur",
+  "60-90 min",
+  colors.gold,
+  "Identification + déconstruction systématique + contre-exemples.",
+  "Les 12 croyances classiques",
+  [
+    { label: "1 — « La cigarette est un plaisir »", detail: "Contre-exemple : un fumeur fume sa marque détestée plutôt que rien. Ce n'est pas du plaisir mais de l'addiction." },
+    { label: "2 — « Ça me calme »", detail: "Faux : la cigarette calme le manque qu'elle a créé. Le fumeur est plus stressé entre 2 cigarettes qu'un non-fumeur." },
+    { label: "3 — « Je suis libre de fumer quand je veux »", detail: "Distorsion : où est la liberté quand on ne peut s'arrêter ?" },
+    { label: "4 — « Il faut de la volonté »", detail: "Faux : c'est une question de motivation et d'outils, pas de volonté." },
+    { label: "5 — « Je vais grossir »", detail: "Moyenne : femme +2,8 kg, homme +3,2 kg. Pas de fatalité. Coupe-faim de la nicotine compensable." },
+    { label: "6 — « Je serai insupportable »", detail: "Sevrage 21 jours, troubles d'humeur transitoires. Pas durable." },
+    { label: "7 — « Il y a un bon moment »", detail: "Le bon moment, c'est celui de la décision. Tout autre moment est un report." },
+    { label: "8 — « Je ne fume que matin et soir »", detail: "Précisément les plus dures à éteindre (cumul nocturne, anticipation cérébrale)." },
+    { label: "9 — « C'est viril/féminin »", detail: "Image construite par l'industrie (placement films, publicité). Pas une réalité." },
+    { label: "10 — « Ça occupe les mains »", detail: "Pourquoi l'allumer alors ? Faux argument." },
+    { label: "11 — « Cigarette électronique = sevrage »", detail: "Maintien de la gestuelle et de la nicotine, ralentit l'arrêt réel." },
+    { label: "12 — « Mieux qu'un joint »", detail: "Faux dilemme : les deux sont nocifs, pas l'un meilleur que l'autre." },
+  ],
+  [
+    { name: "Liste des 12 croyances", type: "Document", icon: "📋", desc: "Déconstruction systématique." },
+    { name: "Contre-exemples solides", type: "Recadrage", icon: "🔄", desc: "Pour chaque croyance." },
+  ],
+  [
+    { val: "12", label: "Croyances ciblées", sub: "déconstruction systématique", color: colors.gold },
+    { val: "60-90", label: "Minutes", sub: "séance complète", color: colors.purple },
+  ],
+  ["La cigarette est un plaisir", "Ça me calme", "Je suis libre de fumer"]
+);
+
+const schemaEmotionnel = make(
+  806, "Boucle", "Déclencheur → Cigarette → Soulagement → Culpabilité",
+  "Travail en transe sur le schéma émotionnel répétitif qui pousse à fumer : déclencheur émotionnel → réflexe cigarette → soulagement temporaire → culpabilité. Identification de l'intention positive du comportement (gérer stress, peur, ennui, colère). Substitution par alternative saine.",
+  ["Fumeur émotionnel (cigarettes liées au stress)", "Programme tabac séance 2-3", "Travail des automatismes"],
+  ["Déni complet du lien émotion-tabac"],
+  "Schéma émotionnel & intention positive",
+  "60 min",
+  colors.red,
+  "Cartographie du schéma + intention positive + alternatives + ancrage.",
+  "Étapes",
+  [
+    { label: "Cartographie du schéma émotionnel", detail: "« Quels sont les déclencheurs précis qui te font allumer une cigarette ? » Liste exhaustive." },
+    { label: "Identification des émotions sous-jacentes", detail: "Stress, peur, ennui, colère, joie, anxiété. Lesquelles sont en jeu ?" },
+    { label: "Mise en transe", detail: "Profondeur moyenne pour travail émotionnel." },
+    { label: "Découverte de l'intention positive", detail: "« Si on enlève le tabac, qu'est-ce que cette part de toi cherchait à obtenir ? » Calme, pause, plaisir, identité, contrôle." },
+    { label: "Brainstorming d'alternatives", detail: "« Quelles autres façons d'obtenir [intention positive] sans tabac ? » 5+ alternatives." },
+    { label: "Choix des 3 meilleures alternatives", detail: "Pour chaque déclencheur, 3 alternatives concrètes." },
+    { label: "Ancrage de la nouvelle réponse en transe", detail: "« Quand [déclencheur] survient, ton corps active [alternative]. »" },
+    { label: "Pont sur le futur", detail: "Visualisation de plusieurs situations déclenchantes avec la nouvelle réponse." },
+  ],
+  [
+    { name: "Cartographie déclencheurs", type: "Document", icon: "📋", desc: "Liste exhaustive." },
+    { name: "Intention positive", type: "PNL", icon: "💡", desc: "Sous-jacente au tabac." },
+    { name: "Alternatives ancrées", type: "Substitution", icon: "🔄", desc: "3 par déclencheur." },
+  ],
+  [
+    { val: "5+", label: "Alternatives", sub: "par déclencheur", color: colors.red },
+    { val: "60", label: "Minutes", sub: "séance ciblée", color: colors.gold },
+  ],
+  ["Je fume sans raison", "L'émotion n'a rien à voir", "Je ne peux pas changer mes automatismes"]
+);
+
+const visualisationsTabac = make(
+  807, "3 visualisations", "Poison + Nettoyage + Victoire",
+  "Suite de 3 visualisations en transe profonde : (1) Le tabac est un poison (perception cellulaire des dommages), (2) Nettoyage des toxines (purification corporelle progressive), (3) Victoire (visualisation du soi non-fumeur épanoui). Travail sensoriel puissant.",
+  ["Renforcement motivationnel", "Programme tabac séance 3-4", "Préparation à la date d'arrêt"],
+  ["Hypocondrie sévère (visualisation poison risque amplification anxieuse)"],
+  "Visualisations tabac — Poison, nettoyage, victoire",
+  "60-75 min",
+  colors.purple,
+  "Mise en transe profonde + 3 visualisations successives + ancrage.",
+  "Étapes",
+  [
+    { label: "Mise en transe profonde", detail: "Erickson ou Elman, profondeur somnambulique pour effet sensoriel maximal." },
+    { label: "Visualisation 1 — Le tabac est un poison", detail: "« Vois les goudrons noirs s'incruster dans tes poumons roses. Sens la nicotine paralyser tes vaisseaux. Ressens ce que ça fait à tes cellules. »" },
+    { label: "Réaction émotionnelle assumée", detail: "Le client peut ressentir dégoût, peur, tristesse. C'est sain et utile." },
+    { label: "Transition vers visualisation 2", detail: "« Mais ton corps est extraordinaire. Il va se nettoyer. Voyons cela. »" },
+    { label: "Visualisation 2 — Nettoyage des toxines", detail: "« Une lumière purifiante traverse tes poumons. Les goudrons partent. Les cellules se régénèrent. Le sang se purifie. »" },
+    { label: "Sensation de purification", detail: "Le client ressent fraîcheur, légèreté, énergie." },
+    { label: "Visualisation 3 — Victoire", detail: "« Vois-toi dans 1 an, non-fumeur. Comment tu te tiens, comment tu respires, comment tu rayonnes. »" },
+    { label: "Ancrage de la victoire", detail: "Geste, mot, image. Cette image sera réactivée à chaque tentation." },
+  ],
+  [
+    { name: "Visualisation Poison", type: "Hypnose", icon: "💀", desc: "Sensorialité dégoût." },
+    { name: "Visualisation Nettoyage", type: "Hypnose", icon: "💧", desc: "Purification cellulaire." },
+    { name: "Visualisation Victoire", type: "Hypnose", icon: "🏆", desc: "Soi futur non-fumeur." },
+  ],
+  [
+    { val: "3", label: "Visualisations", sub: "séquentielles", color: colors.purple },
+    { val: "Somnam.", label: "Profondeur", sub: "pour effet sensoriel", color: colors.gold },
+  ],
+  ["La cigarette n'est pas si nocive", "Mon corps ne se réparera pas"]
+);
+
+const identitaireNonFumeur = make(
+  808, "Identité", "« Je suis un non-fumeur »",
+  "Travail au niveau identitaire (Niveaux logiques de Dilts) : passer de « Je suis un fumeur qui essaie d'arrêter » à « Je suis un non-fumeur ». Reconstruction du discours intérieur, ancrage de la nouvelle identité, projection dans le futur en tant que non-fumeur.",
+  ["Programme tabac séance 4", "Préparation à la date d'arrêt", "Travail identitaire profond"],
+  ["Résistance identitaire forte non encore travaillée"],
+  "Travail identitaire non-fumeur",
+  "60-90 min",
+  colors.teal,
+  "Niveaux logiques + reconstruction identitaire + ancrage + projection.",
+  "Étapes",
+  [
+    { label: "Travail sur les niveaux logiques", detail: "Présentation des 6 niveaux de Dilts (cf 851). Localisation actuelle du fumeur." },
+    { label: "Identification identitaire actuelle", detail: "« Comment te définis-tu actuellement ? \"Fumeur\" ? \"Ancien fumeur\" ? \"Quelqu'un qui essaie d'arrêter\" ? »" },
+    { label: "Distinction critique", detail: "« \"Ne pas fumer\" vs \"être non-fumeur\". La 1ère est une lutte, la 2nde une identité. »" },
+    { label: "Mise en transe", detail: "Profondeur moyenne, accès au niveau identitaire." },
+    { label: "Reconstruction du discours intérieur", detail: "« Je suis un non-fumeur. Le tabac n'a pas de place dans qui je suis. »" },
+    { label: "Ancrage identitaire", detail: "Geste, mot, image. Identité non-fumeur ressentie pleinement." },
+    { label: "Projection dans le futur", detail: "« Vois-toi dans 1 an, 5 ans, 10 ans en tant que non-fumeur. Comment tu vis ? »" },
+    { label: "Pacte avec soi", detail: "« Cette identité est désormais la mienne. Je l'incarne dès aujourd'hui. »" },
+  ],
+  [
+    { name: "Niveaux logiques Dilts", type: "Modèle", icon: "🔺", desc: "6 niveaux." },
+    { name: "Discours intérieur", type: "Reconstruction", icon: "💬", desc: "« Je suis non-fumeur »." },
+    { name: "Ancrage identitaire", type: "PNL", icon: "📍", desc: "Permanent." },
+  ],
+  [
+    { val: "Identité", label: "Niveau visé", sub: "vs comportement", color: colors.teal },
+    { val: "Permanent", label: "Ancrage", sub: "vs lutte temporaire", color: colors.gold },
+  ],
+  ["Je serai toujours un fumeur", "Arrêter c'est manquer de quelque chose"]
+);
+
+const contratMoral = make(
+  809, "Engagement", "Contrat solennel + suivi 21 jours",
+  "Outil rituel d'engagement : signature solennelle d'un contrat moral d'arrêt, fixation de la date, programme d'activités alternatives, questionnaire de suivi à J+21 et M+3. Marque psychique forte du début de la nouvelle vie.",
+  ["Fin de programme tabac", "Engagement final à l'arrêt", "Cadre formalisé"],
+  ["Engagement non sincère"],
+  "Contrat moral d'arrêt + suivi 21 jours",
+  "20-30 min (en fin de programme)",
+  colors.clientOrange,
+  "Contrat + date + programme alternatif + suivi.",
+  "Étapes",
+  [
+    { label: "Présentation du contrat", detail: "Document écrit, formel. Marque l'importance de l'engagement." },
+    { label: "Fixation de la date d'arrêt", detail: "Date précise, choisie par le client. Inscrite dans le contrat." },
+    { label: "Programme d'activités alternatives", detail: "Liste de 5-10 activités à mettre en place : sport, loisirs, sorties, créativité." },
+    { label: "Identification des situations à risque", detail: "Quand et où le risque de rechute est-il maximal ? Plan préventif." },
+    { label: "Réseau de soutien", detail: "Qui informer ? Qui appeler en cas d'envie forte ?" },
+    { label: "Signature solennelle", detail: "Le client signe le contrat. Cérémonie courte mais marquante." },
+    { label: "Programmation du suivi J+21", detail: "Questionnaire envoyé à 3 semaines. Évaluation des difficultés et succès." },
+    { label: "Programmation du suivi M+3", detail: "Questionnaire à 3 mois. Validation de l'arrêt durable." },
+  ],
+  [
+    { name: "Contrat moral écrit", type: "Document", icon: "📜", desc: "Signature solennelle." },
+    { name: "Programme alternatif", type: "Liste", icon: "📋", desc: "5-10 activités." },
+    { name: "Questionnaires de suivi", type: "Suivi", icon: "📅", desc: "J+21 et M+3." },
+  ],
+  [
+    { val: "21", label: "Jours sevrage critique", sub: "questionnaire de suivi", color: colors.clientOrange },
+    { val: "M+3", label: "Validation durable", sub: "questionnaire suivi", color: colors.gold },
+  ],
+  ["Un contrat ne change rien", "Signer ne fait pas la décision"]
+);
+
+// =====================================================================
 // Export consolidé
 // =====================================================================
 export const tabacDetails: Record<number, ProtocolDetail> = {
@@ -471,4 +711,10 @@ export const tabacDetails: Record<number, ProtocolDetail> = {
   801: tabac4seances,
   802: tabacGroupe,
   803: tabacOrdalique,
+  804: testsDependance,
+  805: douzeCroyances,
+  806: schemaEmotionnel,
+  807: visualisationsTabac,
+  808: identitaireNonFumeur,
+  809: contratMoral,
 };
