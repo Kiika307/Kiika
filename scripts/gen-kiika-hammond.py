@@ -8,7 +8,7 @@ SOURCE_DIR = r"C:\Users\laure\Desktop\Cours\Hammond\Fiches détaillées"
 SQL_OUT = "supabase/seed_protocols_kiika_hammond.sql"
 TS_OUT = "src/lib/protocol-details-kiika-hammond.ts"
 
-# Order matches ID assignment 1000-1074
+# Order matches ID assignment 600-727
 FILES = [
     "kiika_cercle1_lot1_inductions.json",
     "kiika_cercle1_lot2_approfondissements_lieux.json",
@@ -17,6 +17,10 @@ FILES = [
     "kiika_cercle2_lot1_anxiete.json",
     "kiika_cercle2_lot2_sommeil.json",
     "kiika_cercle2_lot3_douleur.json",
+    "kiika_cercle3_lot1_pathologies_chroniques.json",
+    "kiika_cercle3_lot2_somatique_specialise.json",
+    "kiika_cercle3_lot3_neuro_pneumo_uro.json",
+    "kiika_cercle3_lot4_cloture.json",
 ]
 
 # Color by category prefix
@@ -68,6 +72,10 @@ def motifs_for(category, tags):
         motifs.append("Sommeil & insomnie")
     if "douleur" in cat:
         motifs.append("Douleurs & psychosomatique")
+    if "médical" in cat or "medical" in cat:
+        motifs.append("Douleurs & psychosomatique")
+        if "addiction" in cat:
+            motifs.append("Addictions")
     return list(set(motifs)) or ["Anxiété & stress"]
 
 # Niveau mapping
@@ -105,8 +113,8 @@ print(f"Loaded {len(all_protocols)} protocols")
 # Generate SQL seed
 sql_lines = [
     "-- Seed protocoles KIIKA Hammond (fiches détaillées Varinka Robert)",
-    "-- IDs : 600-674 (75 protocoles) — REMPLACENT les anciens Hammond 600-700",
-    "-- Source : KIIKA v3 — fiches détaillées par lot (Cercle 1 Noyau + Cercle 2 Anxiété/Sommeil/Douleur)",
+    "-- IDs : 600-727 (128 protocoles) — Cercle 1 + Cercle 2 + Cercle 3",
+    "-- Source : KIIKA v3 — fiches détaillées par lot (Noyau / Anxiété-Sommeil-Douleur / Médical-Somatique)",
     "",
     "INSERT INTO public.protocols (id, name, category, practice, description, duration, level, tags, color, sessions, objectives, source, motifs)",
     "VALUES",
@@ -168,9 +176,9 @@ ts_lines = [
     'import type { ProtocolDetail } from "./types";',
     '',
     '/**',
-    ' * Fiches détaillées KIIKA Hammond (IDs 600-674) — remplacent les anciens Hammond 600-700.',
-    ' * Source : Varinka Robert — fiches KIIKA v3 (Cercle 1 noyau + Cercle 2 Anxiété/Sommeil/Douleur).',
-    ' * 75 protocoles avec scripts complets, structure technique, dimensions KIIKA.',
+    ' * Fiches détaillées KIIKA Hammond (IDs 600-727) — remplacent les anciens Hammond.',
+    ' * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3).',
+    ' * 128 protocoles avec scripts complets, structure technique, dimensions KIIKA.',
     ' */',
     '',
 ]

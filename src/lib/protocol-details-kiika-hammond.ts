@@ -1,9 +1,9 @@
 import type { ProtocolDetail } from "./types";
 
 /**
- * Fiches détaillées KIIKA Hammond (IDs 600-674) — remplacent les anciens Hammond 600-700.
- * Source : Varinka Robert — fiches KIIKA v3 (Cercle 1 noyau + Cercle 2 Anxiété/Sommeil/Douleur).
- * 75 protocoles avec scripts complets, structure technique, dimensions KIIKA.
+ * Fiches détaillées KIIKA Hammond (IDs 600-727) — remplacent les anciens Hammond.
+ * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3).
+ * 128 protocoles avec scripts complets, structure technique, dimensions KIIKA.
  */
 
 const k_600: ProtocolDetail = {
@@ -3064,6 +3064,2073 @@ const k_674: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur auto-hypnose ne fonctionne pas pour moi"],
 };
 
+const k_675: ProtocolDetail = {
+  protocolId: 675,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Cardio-vasculaire",
+  description: "Pour patients hypertendus en complément du suivi médical. Travail sur l'apaisement du système nerveux autonome, la régulation respiratoire, la gestion du stress chronique. Sans modification du traitement médicamenteux.",
+  indications: ["Hypertension artérielle essentielle", "HTA labile liée au stress", "Patients en complément des antihypertenseurs", "Sujets à risque cardio-vasculaire (prévention)"],
+  contraindications: ["HTA secondaire non explorée", "Crise hypertensive (urgence médicale)"],
+  programs: [{
+    id: "principal",
+    title: "Hypertension artérielle — Apaiser le système",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Hypertension artérielle — Apaiser le système",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients hypertendus en complément du suivi médical. Travail sur l'apaisement du système nerveux autonome, la régulation respiratoire, la gestion du stress chronique. Sans modification du traitement médicamenteux." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Activation parasympathique par respiration", type: "Levier", icon: "🎯", desc: "Régulation du système nerveux autonome" },
+    { name: "Apaisement de la vigilance chronique", type: "Levier", icon: "🎯", desc: "Régulation du système nerveux autonome" },
+    { name: "Imagerie de fluidité circulatoire", type: "Levier", icon: "🎯", desc: "Régulation du système nerveux autonome" },
+    { name: "Souffle qui régule", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Système apaisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur cardio-vasculaire ne fonctionne pas pour moi"],
+};
+
+const k_676: ProtocolDetail = {
+  protocolId: 676,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Cardio-vasculaire",
+  description: "Pour patients souffrant de palpitations bénignes, extrasystoles, arythmies fonctionnelles validées comme non dangereuses. Travail sur la perception et la régulation du rythme cardiaque par le souffle.",
+  indications: ["Palpitations bénignes", "Extrasystoles fonctionnelles", "Tachycardies sinusales liées au stress", "Patients hypervigilants à leur rythme cardiaque"],
+  contraindications: ["Arythmies cardiaques pathologiques nécessitant suivi spécialisé", "Toute palpitation non explorée par cardiologue"],
+  programs: [{
+    id: "principal",
+    title: "Palpitations et arythmies bénignes — Apaiser le rythme",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Palpitations et arythmies bénignes — Apaiser le rythme",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients souffrant de palpitations bénignes, extrasystoles, arythmies fonctionnelles validées comme non dangereuses. Travail sur la perception et la régulation du rythme cardiaque par le souffle." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Cohérence cardiaque par respiration", type: "Levier", icon: "🎯", desc: "Régulation cardiaque et désinvestissement attentionnel" },
+    { name: "Désinvestissement de la surveillance", type: "Levier", icon: "🎯", desc: "Régulation cardiaque et désinvestissement attentionnel" },
+    { name: "Imagerie d'apaisement cardiaque", type: "Levier", icon: "🎯", desc: "Régulation cardiaque et désinvestissement attentionnel" },
+    { name: "Cœur tranquille", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Rythme juste", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur cardio-vasculaire ne fonctionne pas pour moi"],
+};
+
+const k_677: ProtocolDetail = {
+  protocolId: 677,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Respiratoire",
+  description: "Pour patients asthmatiques en complément du traitement médical. Travail sur la respiration de fond, la diminution de l'anxiété face aux crises, la prévention par apaisement bronchique imagé.",
+  indications: ["Asthme chronique en complément du traitement", "Asthme avec composante anxieuse importante", "Prévention des crises", "Apprentissage de l'autorégulation respiratoire"],
+  contraindications: ["Crise d'asthme aiguë (urgence médicale)", "Asthme sévère non contrôlé"],
+  programs: [{
+    id: "principal",
+    title: "Asthme — Soutenir le souffle entre les crises",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Asthme — Soutenir le souffle entre les crises",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients asthmatiques en complément du traitement médical. Travail sur la respiration de fond, la diminution de l'anxiété face aux crises, la prévention par apaisement bronchique imagé." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Respiration ample non forcée", type: "Levier", icon: "🎯", desc: "Soutien respiratoire et désamorçage anxieux" },
+    { name: "Imagerie de bronches détendues", type: "Levier", icon: "🎯", desc: "Soutien respiratoire et désamorçage anxieux" },
+    { name: "Désamorçage de l'anxiété de crise", type: "Levier", icon: "🎯", desc: "Soutien respiratoire et désamorçage anxieux" },
+    { name: "Souffle ample", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Bronches qui s'ouvrent", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur respiratoire ne fonctionne pas pour moi"],
+};
+
+const k_678: ProtocolDetail = {
+  protocolId: 678,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Endocrinologie",
+  description: "Pour diabétiques de type 2 en complément du suivi médical. Travail sur la motivation aux changements de vie, la régulation par le stress, la conscience corporelle et l'observance.",
+  indications: ["Diabète de type 2 en complément du traitement", "Patients en difficulté avec les changements alimentaires", "Stress chronique aggravant la glycémie", "Soutien à l'observance"],
+  contraindications: ["Diabète de type 1 (cadre spécifique)", "Décompensation aiguë"],
+  programs: [{
+    id: "principal",
+    title: "Diabète de type 2 — Soutenir l'équilibre métabolique",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Diabète de type 2 — Soutenir l'équilibre métabolique",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour diabétiques de type 2 en complément du suivi médical. Travail sur la motivation aux changements de vie, la régulation par le stress, la conscience corporelle et l'observance." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Motivation et engagement aux changements", type: "Levier", icon: "🎯", desc: "Soutien métabolique et motivation aux changements" },
+    { name: "Régulation du stress qui élève la glycémie", type: "Levier", icon: "🎯", desc: "Soutien métabolique et motivation aux changements" },
+    { name: "Conscience alimentaire", type: "Levier", icon: "🎯", desc: "Soutien métabolique et motivation aux changements" },
+    { name: "Équilibre retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Choix justes", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur endocrinologie ne fonctionne pas pour moi"],
+};
+
+const k_679: ProtocolDetail = {
+  protocolId: 679,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Métabolisme",
+  description: "Pour patients en surpoids voulant changer leur rapport à l'alimentation. Travail de fond sur la conscience alimentaire, les déclencheurs émotionnels, la réconciliation corporelle. Hors troubles du comportement alimentaire pathologiques.",
+  indications: ["Surpoids modéré à modéré-sévère", "Mangeurs émotionnels", "Patients en perte de motivation", "Personnes ayant échoué aux régimes restrictifs"],
+  contraindications: ["Anorexie, boulimie, hyperphagie boulimique (cadre spécialisé)", "Obésité sévère nécessitant cadre multidisciplinaire"],
+  programs: [{
+    id: "principal",
+    title: "Surpoids et déséquilibre alimentaire — Réconciliation avec le corps",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Surpoids et déséquilibre alimentaire — Réconciliation avec le corps",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en surpoids voulant changer leur rapport à l'alimentation. Travail de fond sur la conscience alimentaire, les déclencheurs émotionnels, la réconciliation corporelle. Hors troubles du comportement alimentaire pathologiques." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Distinction faim physique / faim émotionnelle", type: "Levier", icon: "🎯", desc: "Réconciliation corporelle et conscience alimentaire" },
+    { name: "Conscience alimentaire", type: "Levier", icon: "🎯", desc: "Réconciliation corporelle et conscience alimentaire" },
+    { name: "Réconciliation avec le corps", type: "Levier", icon: "🎯", desc: "Réconciliation corporelle et conscience alimentaire" },
+    { name: "Corps réconcilié", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Faim juste", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur métabolisme ne fonctionne pas pour moi"],
+};
+
+const k_680: ProtocolDetail = {
+  protocolId: 680,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Digestif",
+  description: "Pour patients souffrant de RGO chronique fonctionnel ou en complément du traitement. Travail sur l'apaisement du système digestif haut, la gestion du stress qui aggrave les symptômes, la conscience alimentaire.",
+  indications: ["RGO chronique", "Pyrosis fonctionnel", "Patients sous IPP au long cours voulant réduire", "Symptômes digestifs hauts liés au stress"],
+  contraindications: ["Œsophagite sévère ou hernie hiatale non traitée", "Symptômes alarmants non explorés"],
+  programs: [{
+    id: "principal",
+    title: "Reflux gastro-œsophagien chronique — Apaiser le tube digestif haut",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Reflux gastro-œsophagien chronique — Apaiser le tube digestif haut",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients souffrant de RGO chronique fonctionnel ou en complément du traitement. Travail sur l'apaisement du système digestif haut, la gestion du stress qui aggrave les symptômes, la conscience alimentaire." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement du système nerveux digestif", type: "Levier", icon: "🎯", desc: "Apaisement digestif haut" },
+    { name: "Imagerie de fermeture cardiale", type: "Levier", icon: "🎯", desc: "Apaisement digestif haut" },
+    { name: "Conscience alimentaire et postures", type: "Levier", icon: "🎯", desc: "Apaisement digestif haut" },
+    { name: "Œsophage tranquille", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Estomac apaisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur digestif ne fonctionne pas pour moi"],
+};
+
+const k_681: ProtocolDetail = {
+  protocolId: 681,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Digestif",
+  description: "Pour patients atteints de maladie de Crohn ou rectocolite hémorragique en rémission ou en activité modérée. Soutien au confort digestif, gestion du stress facteur connu d'aggravation, soutien moral.",
+  indications: ["Maladie de Crohn en complément", "RCH en complément", "Patients en rémission cherchant à la prolonger", "Soutien à l'observance et qualité de vie"],
+  contraindications: ["Poussée aiguë sévère (urgence médicale)", "Substitution au traitement"],
+  programs: [{
+    id: "principal",
+    title: "Maladies inflammatoires chroniques de l'intestin — Soutenir les rémissions",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Maladies inflammatoires chroniques de l'intestin — Soutenir les rémissions",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients atteints de maladie de Crohn ou rectocolite hémorragique en rémission ou en activité modérée. Soutien au confort digestif, gestion du stress facteur connu d'aggravation, soutien moral." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement intestinal", type: "Levier", icon: "🎯", desc: "Soutien aux MICI en rémission ou activité légère" },
+    { name: "Régulation immunitaire imagée", type: "Levier", icon: "🎯", desc: "Soutien aux MICI en rémission ou activité légère" },
+    { name: "Gestion du stress facteur de poussée", type: "Levier", icon: "🎯", desc: "Soutien aux MICI en rémission ou activité légère" },
+    { name: "Intestin apaisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Rémission soutenue", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur digestif ne fonctionne pas pour moi"],
+};
+
+const k_682: ProtocolDetail = {
+  protocolId: 682,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Asthénie",
+  description: "Pour patients souffrant de fatigue chronique (syndrome de fatigue chronique, post-virale, post-traitement, fibromyalgie). Travail sur l'énergie disponible, la dépose de l'épuisement, la gestion par paliers.",
+  indications: ["Syndrome de fatigue chronique", "Asthénie post-virale prolongée (post-Covid, mononucléose)", "Fatigue post-cancer ou post-traitement", "Asthénie liée à pathologie chronique"],
+  contraindications: ["Causes médicales non explorées (toujours bilan préalable)", "Dépression majeure sous-jacente non traitée"],
+  programs: [{
+    id: "principal",
+    title: "Fatigue chronique — Restaurer l'énergie disponible",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Fatigue chronique — Restaurer l'énergie disponible",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients souffrant de fatigue chronique (syndrome de fatigue chronique, post-virale, post-traitement, fibromyalgie). Travail sur l'énergie disponible, la dépose de l'épuisement, la gestion par paliers." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Économie d'énergie par paliers", type: "Levier", icon: "🎯", desc: "Restauration énergétique progressive" },
+    { name: "Restauration progressive", type: "Levier", icon: "🎯", desc: "Restauration énergétique progressive" },
+    { name: "Imagerie de réservoir qui se remplit", type: "Levier", icon: "🎯", desc: "Restauration énergétique progressive" },
+    { name: "Énergie respectée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Réservoir qui se remplit", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur asthénie ne fonctionne pas pour moi"],
+};
+
+const k_683: ProtocolDetail = {
+  protocolId: 683,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Allergologie",
+  description: "Pour patients allergiques (rhinites, eczémas, urticaires fonctionnels) en complément du traitement médical. Travail sur la régulation de la réponse immune par imagerie, dialogue avec le système immunitaire.",
+  indications: ["Rhinite allergique chronique", "Eczéma atopique modéré", "Urticaire chronique fonctionnel", "Hypersensibilités multiples non sévères"],
+  contraindications: ["Allergies sévères avec risque anaphylactique", "Asthme allergique sévère"],
+  programs: [{
+    id: "principal",
+    title: "Allergies et hypersensibilité — Réguler la réponse immune",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Allergies et hypersensibilité — Réguler la réponse immune",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients allergiques (rhinites, eczémas, urticaires fonctionnels) en complément du traitement médical. Travail sur la régulation de la réponse immune par imagerie, dialogue avec le système immunitaire." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie immunitaire", type: "Levier", icon: "🎯", desc: "Régulation immunitaire imagée" },
+    { name: "Dialogue avec le système immunitaire", type: "Levier", icon: "🎯", desc: "Régulation immunitaire imagée" },
+    { name: "Désensibilisation imaginaire", type: "Levier", icon: "🎯", desc: "Régulation immunitaire imagée" },
+    { name: "Système immunitaire allié", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Réponse juste", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur allergologie ne fonctionne pas pour moi"],
+};
+
+const k_684: ProtocolDetail = {
+  protocolId: 684,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / ORL",
+  description: "Pour patients souffrant d'acouphènes chroniques. Travail sur la perception et la place du bruit, désinvestissement attentionnel, recadrage de la souffrance secondaire.",
+  indications: ["Acouphènes chroniques (plus de 6 mois)", "Patients épuisés par la surveillance auditive", "Acouphènes avec composante anxieuse"],
+  contraindications: ["Acouphènes récents non explorés (urgence ORL possible)", "Surdité brusque associée"],
+  programs: [{
+    id: "principal",
+    title: "Acouphènes — Modifier la place du bruit",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Acouphènes — Modifier la place du bruit",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients souffrant d'acouphènes chroniques. Travail sur la perception et la place du bruit, désinvestissement attentionnel, recadrage de la souffrance secondaire." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Modification des sous-modalités du bruit", type: "Levier", icon: "🎯", desc: "Modification perceptive et désinvestissement" },
+    { name: "Désinvestissement attentionnel", type: "Levier", icon: "🎯", desc: "Modification perceptive et désinvestissement" },
+    { name: "Recadrage de la souffrance", type: "Levier", icon: "🎯", desc: "Modification perceptive et désinvestissement" },
+    { name: "Bruit éloigné", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Attention libérée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur orl ne fonctionne pas pour moi"],
+};
+
+const k_685: ProtocolDetail = {
+  protocolId: 685,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / ORL et neurologique",
+  description: "Pour vertiges fonctionnels (post-VPPB résolu, vertige phobique postural, anxiété vestibulaire). Travail de restauration de l'ancrage corporel, désensibilisation aux mouvements anxiogènes.",
+  indications: ["Vertige phobique postural", "Anxiété post-VPPB résolu", "Vertiges fonctionnels chroniques", "Peur de tomber chez personnes âgées"],
+  contraindications: ["Vertiges d'origine vestibulaire active (Ménière, névrite)", "Causes neurologiques non explorées"],
+  programs: [{
+    id: "principal",
+    title: "Vertiges et troubles de l'équilibre fonctionnels — Restaurer l'ancrage",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Vertiges et troubles de l'équilibre fonctionnels — Restaurer l'ancrage",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour vertiges fonctionnels (post-VPPB résolu, vertige phobique postural, anxiété vestibulaire). Travail de restauration de l'ancrage corporel, désensibilisation aux mouvements anxiogènes." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Conscience du contact au sol", type: "Levier", icon: "🎯", desc: "Restauration de l'ancrage corporel et désensibilisation" },
+    { name: "Désensibilisation graduée aux mouvements", type: "Levier", icon: "🎯", desc: "Restauration de l'ancrage corporel et désensibilisation" },
+    { name: "Confiance dans le système postural", type: "Levier", icon: "🎯", desc: "Restauration de l'ancrage corporel et désensibilisation" },
+    { name: "Ancrage retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Pieds présents", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur orl et neurologique ne fonctionne pas pour moi"],
+};
+
+const k_686: ProtocolDetail = {
+  protocolId: 686,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Gynécologique",
+  description: "Pour patientes souffrant de SPM modéré à sévère avec composante émotionnelle marquée. Travail de soutien dans la phase prémenstruelle, anticipation, recadrage des fluctuations hormonales.",
+  indications: ["SPM avec irritabilité, anxiété, tristesse cycliques", "Patientes voulant complément à un traitement", "Sensibilité hormonale marquée"],
+  contraindications: ["Trouble dysphorique prémenstruel sévère (cadre psychiatrique)", "Dépression masquée par cyclicité"],
+  programs: [{
+    id: "principal",
+    title: "Syndrome prémenstruel — Traverser la phase difficile",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Syndrome prémenstruel — Traverser la phase difficile",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patientes souffrant de SPM modéré à sévère avec composante émotionnelle marquée. Travail de soutien dans la phase prémenstruelle, anticipation, recadrage des fluctuations hormonales." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Anticipation et préparation", type: "Levier", icon: "🎯", desc: "Soutien cyclique au SPM" },
+    { name: "Distinction entre soi et état hormonal", type: "Levier", icon: "🎯", desc: "Soutien cyclique au SPM" },
+    { name: "Bienveillance pendant la phase", type: "Levier", icon: "🎯", desc: "Soutien cyclique au SPM" },
+    { name: "Cycle accueilli", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Soi qui demeure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur gynécologique ne fonctionne pas pour moi"],
+};
+
+const k_687: ProtocolDetail = {
+  protocolId: 687,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Gynécologique",
+  description: "Pour femmes en péri-ménopause ou ménopause confrontées à bouffées de chaleur, troubles du sommeil, modifications de l'humeur, vécu de transition identitaire. Accompagnement holistique.",
+  indications: ["Bouffées de chaleur de la ménopause", "Troubles du sommeil ménopausique", "Modifications de l'humeur", "Vécu identitaire de la transition"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Ménopause — Traverser la transition",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Ménopause — Traverser la transition",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour femmes en péri-ménopause ou ménopause confrontées à bouffées de chaleur, troubles du sommeil, modifications de l'humeur, vécu de transition identitaire. Accompagnement holistique." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Régulation des bouffées de chaleur", type: "Levier", icon: "🎯", desc: "Accompagnement holistique de la transition ménopausique" },
+    { name: "Soutien au sommeil", type: "Levier", icon: "🎯", desc: "Accompagnement holistique de la transition ménopausique" },
+    { name: "Recadrage identitaire", type: "Levier", icon: "🎯", desc: "Accompagnement holistique de la transition ménopausique" },
+    { name: "Transition honorée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Saison nouvelle", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur gynécologique ne fonctionne pas pour moi"],
+};
+
+const k_688: ProtocolDetail = {
+  protocolId: 688,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Dermatologie",
+  description: "Pour patients souffrant de dermatoses chroniques à composante psychosomatique : eczéma, psoriasis, urticaire chronique, prurit nerveux. Travail sur la régulation locale et la diminution du stress qui aggrave.",
+  indications: ["Eczéma atopique chronique", "Psoriasis avec poussées liées au stress", "Urticaire chronique fonctionnel", "Prurit nerveux"],
+  contraindications: ["Substitution au traitement dermatologique", "Dermatoses sévères non suivies médicalement"],
+  programs: [{
+    id: "principal",
+    title: "Dermatoses chroniques — Apaiser la peau",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Dermatoses chroniques — Apaiser la peau",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients souffrant de dermatoses chroniques à composante psychosomatique : eczéma, psoriasis, urticaire chronique, prurit nerveux. Travail sur la régulation locale et la diminution du stress qui aggrave." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie locale d'apaisement", type: "Levier", icon: "🎯", desc: "Apaisement cutané et régulation systémique" },
+    { name: "Régulation du stress facteur d'aggravation", type: "Levier", icon: "🎯", desc: "Apaisement cutané et régulation systémique" },
+    { name: "Recadrage du grattage", type: "Levier", icon: "🎯", desc: "Apaisement cutané et régulation systémique" },
+    { name: "Peau accueillie", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Confort cutané", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dermatologie ne fonctionne pas pour moi"],
+};
+
+const k_689: ProtocolDetail = {
+  protocolId: 689,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Digestif",
+  description: "Pour constipation chronique fonctionnelle (sans cause organique). Travail sur la régulation du transit, la respiration abdominale, le moment des selles, le lâcher-prise digestif.",
+  indications: ["Constipation chronique fonctionnelle", "Constipation liée au stress", "Patients utilisant trop de laxatifs", "Transit perturbé par voyages, vie irrégulière"],
+  contraindications: ["Causes organiques non explorées", "Constipation aiguë (occlusion à éliminer)"],
+  programs: [{
+    id: "principal",
+    title: "Constipation chronique fonctionnelle — Restaurer le transit",
+    icon: "◑",
+    duration: "30 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Constipation chronique fonctionnelle — Restaurer le transit",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour constipation chronique fonctionnelle (sans cause organique). Travail sur la régulation du transit, la respiration abdominale, le moment des selles, le lâcher-prise digestif." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie du péristaltisme", type: "Levier", icon: "🎯", desc: "Restauration de la fonction intestinale" },
+    { name: "Respiration abdominale", type: "Levier", icon: "🎯", desc: "Restauration de la fonction intestinale" },
+    { name: "Moment dédié aux selles", type: "Levier", icon: "🎯", desc: "Restauration de la fonction intestinale" },
+    { name: "Mouvement intestinal", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Lâcher-prise", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "30 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur digestif ne fonctionne pas pour moi"],
+};
+
+const k_690: ProtocolDetail = {
+  protocolId: 690,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Neurologique fonctionnel",
+  description: "Pour tics fonctionnels (hors syndrome de Tourette) et tremblements fonctionnels validés. Travail sur la régulation neuromusculaire, le désinvestissement attentionnel, l'apaisement du système.",
+  indications: ["Tics nerveux fonctionnels", "Tremblements essentiels modérés", "Tremblements liés au stress", "Mouvements involontaires fonctionnels validés"],
+  contraindications: ["Syndrome de Tourette (cadre spécialisé)", "Tremblements d'origine neurologique active (Parkinson, dystonie)"],
+  programs: [{
+    id: "principal",
+    title: "Tics et tremblements fonctionnels — Apaiser le mouvement involontaire",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Tics et tremblements fonctionnels — Apaiser le mouvement involontaire",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour tics fonctionnels (hors syndrome de Tourette) et tremblements fonctionnels validés. Travail sur la régulation neuromusculaire, le désinvestissement attentionnel, l'apaisement du système." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désinvestissement attentionnel", type: "Levier", icon: "🎯", desc: "Régulation neuromusculaire et désinvestissement" },
+    { name: "Détente musculaire ciblée", type: "Levier", icon: "🎯", desc: "Régulation neuromusculaire et désinvestissement" },
+    { name: "Imagerie de stabilité", type: "Levier", icon: "🎯", desc: "Régulation neuromusculaire et désinvestissement" },
+    { name: "Calme retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Stabilité corporelle", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur neurologique fonctionnel ne fonctionne pas pour moi"],
+};
+
+const k_691: ProtocolDetail = {
+  protocolId: 691,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Dermatologique fonctionnel",
+  description: "Pour transpiration excessive fonctionnelle (mains, aisselles, visage) liée au stress ou idiopathique. Travail sur la régulation du système sympathique, désamorçage du cycle anxiété-transpiration.",
+  indications: ["Hyperhidrose palmaire", "Hyperhidrose axillaire fonctionnelle", "Transpiration faciale invalidante", "Hyperhidrose émotionnelle"],
+  contraindications: ["Hyperhidrose secondaire à pathologie endocrinienne ou neurologique"],
+  programs: [{
+    id: "principal",
+    title: "Hyperhidrose fonctionnelle — Réguler la transpiration",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Hyperhidrose fonctionnelle — Réguler la transpiration",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour transpiration excessive fonctionnelle (mains, aisselles, visage) liée au stress ou idiopathique. Travail sur la régulation du système sympathique, désamorçage du cycle anxiété-transpiration." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Régulation du système nerveux autonome", type: "Levier", icon: "🎯", desc: "Régulation du système sympathique et désamorçage" },
+    { name: "Imagerie de fraîcheur et sécheresse", type: "Levier", icon: "🎯", desc: "Régulation du système sympathique et désamorçage" },
+    { name: "Désamorçage cycle anxiété-transpiration", type: "Levier", icon: "🎯", desc: "Régulation du système sympathique et désamorçage" },
+    { name: "Système régulé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Peau qui respire", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dermatologique fonctionnel ne fonctionne pas pour moi"],
+};
+
+const k_692: ProtocolDetail = {
+  protocolId: 692,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / ORL fonctionnel",
+  description: "Pour patients ressentant une boule dans la gorge ou difficultés de déglutition fonctionnelles, sans cause organique. Travail sur la décrispation pharyngée, le souffle, l'expression de l'avalé.",
+  indications: ["Globus hystericus / globus pharyngis", "Sensation de boule dans la gorge persistante", "Difficultés de déglutition fonctionnelles", "Syndrome bilan ORL négatif"],
+  contraindications: ["Cause organique non explorée (toujours bilan ORL et gastro)"],
+  programs: [{
+    id: "principal",
+    title: "Globus pharyngis — La boule dans la gorge",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Globus pharyngis — La boule dans la gorge",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients ressentant une boule dans la gorge ou difficultés de déglutition fonctionnelles, sans cause organique. Travail sur la décrispation pharyngée, le souffle, l'expression de l'avalé." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Décrispation cervicale et pharyngée", type: "Levier", icon: "🎯", desc: "Décrispation pharyngée et expression" },
+    { name: "Imagerie de passage libre", type: "Levier", icon: "🎯", desc: "Décrispation pharyngée et expression" },
+    { name: "Travail sur ce qui n'a pas pu être dit", type: "Levier", icon: "🎯", desc: "Décrispation pharyngée et expression" },
+    { name: "Gorge libre", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Souffle qui passe", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur orl fonctionnel ne fonctionne pas pour moi"],
+};
+
+const k_693: ProtocolDetail = {
+  protocolId: 693,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / ORL",
+  description: "Pour patients atteints de la maladie de Ménière, en complément du suivi ORL. Travail entre les crises pour réduire l'anxiété anticipatoire, soutenir la fonction vestibulaire, gérer les acouphènes associés.",
+  indications: ["Maladie de Ménière confirmée", "Patients en intercrise voulant complément à leur traitement", "Anxiété liée à l'anticipation des crises"],
+  contraindications: ["Crise aiguë (urgence)", "Substitution au traitement spécialisé"],
+  programs: [{
+    id: "principal",
+    title: "Vertige de Ménière — Soutenir entre les crises",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Vertige de Ménière — Soutenir entre les crises",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients atteints de la maladie de Ménière, en complément du suivi ORL. Travail entre les crises pour réduire l'anxiété anticipatoire, soutenir la fonction vestibulaire, gérer les acouphènes associés." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement du système vestibulaire", type: "Levier", icon: "🎯", desc: "Soutien intercritique de la maladie de Ménière" },
+    { name: "Désamorçage de l'anxiété anticipatoire", type: "Levier", icon: "🎯", desc: "Soutien intercritique de la maladie de Ménière" },
+    { name: "Imagerie d'équilibre liquidien interne", type: "Levier", icon: "🎯", desc: "Soutien intercritique de la maladie de Ménière" },
+    { name: "Équilibre intérieur", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Liquide juste", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur orl ne fonctionne pas pour moi"],
+};
+
+const k_694: ProtocolDetail = {
+  protocolId: 694,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / ORL",
+  description: "Pour acouphènes apparus suite à un traumatisme sonore récent (concert, explosion). Intervention précoce pour éviter la chronicisation, en complément du traitement ORL.",
+  indications: ["Acouphènes post-traumatiques récents (moins de 3 mois)", "Suite de concert ou exposition sonore intense", "Patients à risque de chronicisation"],
+  contraindications: ["Acouphènes très anciens (utiliser K-MED-010)", "Surdité brusque associée non traitée"],
+  programs: [{
+    id: "principal",
+    title: "Tinnitus aigu post-traumatique — Désamorçage précoce",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Tinnitus aigu post-traumatique — Désamorçage précoce",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour acouphènes apparus suite à un traumatisme sonore récent (concert, explosion). Intervention précoce pour éviter la chronicisation, en complément du traitement ORL." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Évitement de la chronicisation", type: "Levier", icon: "🎯", desc: "Intervention précoce sur acouphène traumatique" },
+    { name: "Désamorçage attentionnel précoce", type: "Levier", icon: "🎯", desc: "Intervention précoce sur acouphène traumatique" },
+    { name: "Imagerie de réparation auditive", type: "Levier", icon: "🎯", desc: "Intervention précoce sur acouphène traumatique" },
+    { name: "Récupération possible", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Système qui se répare", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur orl ne fonctionne pas pour moi"],
+};
+
+const k_695: ProtocolDetail = {
+  protocolId: 695,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Ophtalmologique",
+  description: "Soutien à la rééducation orthoptique chez l'enfant ou l'adulte, ou pour fatigue visuelle chronique liée au stress. Travail de détente oculaire, conscience visuelle, soutien à l'orthoptie.",
+  indications: ["Suite à orthoptie (en complément)", "Fatigue oculaire chronique", "Tensions oculaires liées au stress", "Spasme accommodatif"],
+  contraindications: ["Pathologies oculaires actives non traitées", "Substitution à la médecine ophtalmologique"],
+  programs: [{
+    id: "principal",
+    title: "Strabisme et troubles visuels fonctionnels — Soutien à la rééducation",
+    icon: "◑",
+    duration: "30 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Strabisme et troubles visuels fonctionnels — Soutien à la rééducation",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Soutien à la rééducation orthoptique chez l'enfant ou l'adulte, ou pour fatigue visuelle chronique liée au stress. Travail de détente oculaire, conscience visuelle, soutien à l'orthoptie." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Détente des muscles oculomoteurs", type: "Levier", icon: "🎯", desc: "Détente oculaire et soutien orthoptique" },
+    { name: "Imagerie de regard libre", type: "Levier", icon: "🎯", desc: "Détente oculaire et soutien orthoptique" },
+    { name: "Pauses visuelles régulières", type: "Levier", icon: "🎯", desc: "Détente oculaire et soutien orthoptique" },
+    { name: "Yeux qui se reposent", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Vision détendue", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "30 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur ophtalmologique ne fonctionne pas pour moi"],
+};
+
+const k_696: ProtocolDetail = {
+  protocolId: 696,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Orthophonique",
+  description: "Pour personnes bégayant, en complément de la rééducation orthophonique. Travail sur la décrispation pharyngée, la confiance, le rapport à la parole, la diminution de l'anxiété de prise de parole.",
+  indications: ["Bégaiement chronique en complément orthophonie", "Patients voulant soutien à leur rééducation", "Anxiété de prise de parole"],
+  contraindications: ["Substitution à la rééducation orthophonique"],
+  programs: [{
+    id: "principal",
+    title: "Bégaiement — Soutenir la fluence",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Bégaiement — Soutenir la fluence",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour personnes bégayant, en complément de la rééducation orthophonique. Travail sur la décrispation pharyngée, la confiance, le rapport à la parole, la diminution de l'anxiété de prise de parole." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Décrispation laryngo-pharyngée", type: "Levier", icon: "🎯", desc: "Soutien à la fluence et confiance" },
+    { name: "Confiance en sa parole", type: "Levier", icon: "🎯", desc: "Soutien à la fluence et confiance" },
+    { name: "Désinvestissement anticipatoire", type: "Levier", icon: "🎯", desc: "Soutien à la fluence et confiance" },
+    { name: "Parole fluide", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Confiance", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur orthophonique ne fonctionne pas pour moi"],
+};
+
+const k_697: ProtocolDetail = {
+  protocolId: 697,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Pédiatrique",
+  description: "Pour enfants énurétiques (au-delà de l'âge habituel de propreté nocturne, généralement après 6-7 ans). Soutien hypnotique à la maturation du contrôle vésical nocturne, en complément du suivi pédiatrique.",
+  indications: ["Énurésie nocturne primaire après 7 ans", "Énurésie secondaire (à explorer en parallèle)", "Patients en complément du suivi pédiatrique"],
+  contraindications: ["Cause organique non explorée", "Substitution à un bilan urologique"],
+  programs: [{
+    id: "principal",
+    title: "Énurésie de l'enfant — Maturation soutenue",
+    icon: "◑",
+    duration: "25 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Énurésie de l'enfant — Maturation soutenue",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour enfants énurétiques (au-delà de l'âge habituel de propreté nocturne, généralement après 6-7 ans). Soutien hypnotique à la maturation du contrôle vésical nocturne, en complément du suivi pédiatrique." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie ludique adaptée", type: "Levier", icon: "🎯", desc: "Hypnose pédiatrique pour maturation vésicale" },
+    { name: "Conscience corporelle", type: "Levier", icon: "🎯", desc: "Hypnose pédiatrique pour maturation vésicale" },
+    { name: "Confiance dans la maturation", type: "Levier", icon: "🎯", desc: "Hypnose pédiatrique pour maturation vésicale" },
+    { name: "Grandir", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Corps qui apprend", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "25 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pédiatrique ne fonctionne pas pour moi"],
+};
+
+const k_698: ProtocolDetail = {
+  protocolId: 698,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Urologique",
+  description: "Pour cystite interstitielle, syndrome douloureux vésical, vessie hyperactive avec composante fonctionnelle. Travail d'apaisement vésical, gestion de l'urgence mictionnelle, désinvestissement attentionnel.",
+  indications: ["Cystite interstitielle confirmée", "Syndrome douloureux vésical", "Vessie hyperactive non infectieuse", "Suite de cystites récidivantes douloureuses"],
+  contraindications: ["Infection urinaire active (traitement antibiotique nécessaire)", "Causes urologiques organiques non explorées"],
+  programs: [{
+    id: "principal",
+    title: "Cystite interstitielle et douleurs vésicales chroniques — Apaiser la vessie",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Cystite interstitielle et douleurs vésicales chroniques — Apaiser la vessie",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour cystite interstitielle, syndrome douloureux vésical, vessie hyperactive avec composante fonctionnelle. Travail d'apaisement vésical, gestion de l'urgence mictionnelle, désinvestissement attentionnel." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement local", type: "Levier", icon: "🎯", desc: "Apaisement vésical et régulation" },
+    { name: "Régulation de l'urgence", type: "Levier", icon: "🎯", desc: "Apaisement vésical et régulation" },
+    { name: "Imagerie de paroi vésicale apaisée", type: "Levier", icon: "🎯", desc: "Apaisement vésical et régulation" },
+    { name: "Vessie apaisée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Confort retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur urologique ne fonctionne pas pour moi"],
+};
+
+const k_699: ProtocolDetail = {
+  protocolId: 699,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Confort des soins",
+  description: "Protocole d'installation d'une hypoanesthésie par catalepsie de la main et transfert de fraîcheur dissociative. Pour soins, examens, petites interventions sans anesthésie locale possible. Inspiré des techniques classiques (Bishay & Lee 1984).",
+  indications: ["Préparation à un soin local sans anesthésie médicale", "Examens douloureux courts", "Patients allergiques aux anesthésiques locaux", "Compléter une anesthésie locale insuffisante"],
+  contraindications: ["Substitution à une anesthésie médicale nécessaire", "Patients très réfractaires à l'imagerie"],
+  programs: [{
+    id: "principal",
+    title: "Catalepsie et fraîcheur dissociative — Hypoanesthésie",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Catalepsie et fraîcheur dissociative — Hypoanesthésie",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Protocole d'installation d'une hypoanesthésie par catalepsie de la main et transfert de fraîcheur dissociative. Pour soins, examens, petites interventions sans anesthésie locale possible. Inspiré des techniques classiques (Bishay & Lee 1984)." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Catalepsie de la main", type: "Levier", icon: "🎯", desc: "Hypoanesthésie par catalepsie et transfert" },
+    { name: "Fraîcheur dissociative", type: "Levier", icon: "🎯", desc: "Hypoanesthésie par catalepsie et transfert" },
+    { name: "Transfert kinesthésique", type: "Levier", icon: "🎯", desc: "Hypoanesthésie par catalepsie et transfert" },
+    { name: "Fraîcheur ailleurs", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Main qui sait", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur confort des soins ne fonctionne pas pour moi"],
+};
+
+const k_700: ProtocolDetail = {
+  protocolId: 700,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Cardio-vasculaire",
+  description: "Pour patients avec tachycardie disproportionnée à l'effort (sans pathologie cardiaque), souvent lié à un déconditionnement et à l'anxiété de l'effort. Travail de restauration progressive et apaisement.",
+  indications: ["Tachycardie d'effort fonctionnelle confirmée non pathologique", "Déconditionnement physique", "Anxiété face à l'effort", "Patients reprenant l'activité physique après pause"],
+  contraindications: ["Pathologies cardiaques actives", "Bilan cardiologique non fait"],
+  programs: [{
+    id: "principal",
+    title: "Tachycardie d'effort excessive — Reéquilibrer la réponse cardiaque",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Tachycardie d'effort excessive — Reéquilibrer la réponse cardiaque",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients avec tachycardie disproportionnée à l'effort (sans pathologie cardiaque), souvent lié à un déconditionnement et à l'anxiété de l'effort. Travail de restauration progressive et apaisement." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désamorçage anxiété d'effort", type: "Levier", icon: "🎯", desc: "Restauration de la réponse cardiaque à l'effort" },
+    { name: "Imagerie de cœur efficient", type: "Levier", icon: "🎯", desc: "Restauration de la réponse cardiaque à l'effort" },
+    { name: "Reprise progressive", type: "Levier", icon: "🎯", desc: "Restauration de la réponse cardiaque à l'effort" },
+    { name: "Cœur efficient", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Effort apprivoisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur cardio-vasculaire ne fonctionne pas pour moi"],
+};
+
+const k_701: ProtocolDetail = {
+  protocolId: 701,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Digestif",
+  description: "Protocole spécifique pour syndrome du côlon irritable. L'hypnose est l'une des thérapies les plus validées scientifiquement pour le SII. Travail intensif sur l'axe cerveau-intestin, en plusieurs séances.",
+  indications: ["Syndrome du côlon irritable confirmé", "Patients en complément traitement", "SII avec composante stress importante", "Échec des approches médicamenteuses seules"],
+  contraindications: ["Maladies inflammatoires intestinales (utiliser K-MED-007)", "Causes organiques non écartées"],
+  programs: [{
+    id: "principal",
+    title: "Côlon irritable — Protocole spécifique",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Côlon irritable — Protocole spécifique",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Protocole spécifique pour syndrome du côlon irritable. L'hypnose est l'une des thérapies les plus validées scientifiquement pour le SII. Travail intensif sur l'axe cerveau-intestin, en plusieurs séances." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie d'intestin tranquille et régulier", type: "Levier", icon: "🎯", desc: "Protocole spécifique SII (gut-directed hypnotherapy)" },
+    { name: "Régulation de la motilité", type: "Levier", icon: "🎯", desc: "Protocole spécifique SII (gut-directed hypnotherapy)" },
+    { name: "Apaisement de la sensibilité viscérale", type: "Levier", icon: "🎯", desc: "Protocole spécifique SII (gut-directed hypnotherapy)" },
+    { name: "Intestin tranquille", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Motilité juste", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur digestif ne fonctionne pas pour moi"],
+};
+
+const k_702: ProtocolDetail = {
+  protocolId: 702,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Dermatologique",
+  description: "Pour verrues persistantes après échecs des traitements classiques. L'hypnose dispose d'une littérature ancienne et solide sur cette indication particulière. Travail spécifique sur le système immunitaire local.",
+  indications: ["Verrues récalcitrantes après échecs traitements classiques", "Verrues multiples chez l'enfant", "Verrues de localisation difficile à traiter"],
+  contraindications: ["Aucune en complément du suivi dermatologique"],
+  programs: [{
+    id: "principal",
+    title: "Verrues récalcitrantes — L'hypnose qui surprend",
+    icon: "◑",
+    duration: "30 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Verrues récalcitrantes — L'hypnose qui surprend",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour verrues persistantes après échecs des traitements classiques. L'hypnose dispose d'une littérature ancienne et solide sur cette indication particulière. Travail spécifique sur le système immunitaire local." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Activation immunitaire locale par imagerie", type: "Levier", icon: "🎯", desc: "Activation immunitaire ciblée par imagerie" },
+    { name: "Suggestion de disparition", type: "Levier", icon: "🎯", desc: "Activation immunitaire ciblée par imagerie" },
+    { name: "Dialogue avec le système immunitaire", type: "Levier", icon: "🎯", desc: "Activation immunitaire ciblée par imagerie" },
+    { name: "Système qui se mobilise", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Peau qui se rétablit", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "30 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dermatologique ne fonctionne pas pour moi"],
+};
+
+const k_703: ProtocolDetail = {
+  protocolId: 703,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Examens",
+  description: "Préparation hypnotique à un examen d'IRM pour patients claustrophobes ou anxieux. Installation d'outils utilisables pendant l'examen pour rendre les 20-45 minutes traversables.",
+  indications: ["Anxiété face à l'IRM", "Claustrophobie modérée", "Échecs d'IRM précédents par anxiété"],
+  contraindications: ["Claustrophobie sévère décompensée (préférer IRM ouverte ou anxiolytique)"],
+  programs: [{
+    id: "principal",
+    title: "Préparation à l'IRM — Confort en espace clos",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Préparation à l'IRM — Confort en espace clos",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Préparation hypnotique à un examen d'IRM pour patients claustrophobes ou anxieux. Installation d'outils utilisables pendant l'examen pour rendre les 20-45 minutes traversables." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Lieu sûr accessible en machine", type: "Levier", icon: "🎯", desc: "Préparation à examen anxiogène" },
+    { name: "Modification de la perception de l'espace", type: "Levier", icon: "🎯", desc: "Préparation à examen anxiogène" },
+    { name: "Désinvestissement du bruit", type: "Levier", icon: "🎯", desc: "Préparation à examen anxiogène" },
+    { name: "Espace mental large", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Lieu sûr portable", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur examens ne fonctionne pas pour moi"],
+};
+
+const k_704: ProtocolDetail = {
+  protocolId: 704,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Examens",
+  description: "Préparation à coloscopie pour patients anxieux ou ayant mal vécu un examen précédent. Travail sur la préparation digestive (la veille), la traversée de l'examen, le réveil.",
+  indications: ["Préparation à coloscopie programmée", "Patients anxieux avant l'examen", "Suite d'examen précédent mal vécu", "Patients refusant la sédation"],
+  contraindications: ["Aucune en complément des soins"],
+  programs: [{
+    id: "principal",
+    title: "Préparation à la coloscopie — Examen mieux toléré",
+    icon: "◑",
+    duration: "30 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Préparation à la coloscopie — Examen mieux toléré",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Préparation à coloscopie pour patients anxieux ou ayant mal vécu un examen précédent. Travail sur la préparation digestive (la veille), la traversée de l'examen, le réveil." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Tolérance de la préparation digestive", type: "Levier", icon: "🎯", desc: "Préparation à coloscopie" },
+    { name: "Détente abdominale pendant l'examen", type: "Levier", icon: "🎯", desc: "Préparation à coloscopie" },
+    { name: "Réveil confortable", type: "Levier", icon: "🎯", desc: "Préparation à coloscopie" },
+    { name: "Examen traversé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Confort possible", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "30 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur examens ne fonctionne pas pour moi"],
+};
+
+const k_705: ProtocolDetail = {
+  protocolId: 705,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Neurologique",
+  description: "Pour céphalées de tension chroniques (différentes des migraines). Travail spécifique sur la décrispation des muscles péricrâniens, cervicaux, des épaules. Décharge de la tension qui s'accumule.",
+  indications: ["Céphalées de tension chroniques (plus de 15 jours par mois)", "Patients avec contractures cervicales associées", "Céphalées liées au travail sur écran, au stress posturé"],
+  contraindications: ["Céphalées d'apparition récente non explorées", "Suspicion d'autre cause neurologique"],
+  programs: [{
+    id: "principal",
+    title: "Céphalées de tension chroniques — Décrisper la coiffe",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Céphalées de tension chroniques — Décrisper la coiffe",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour céphalées de tension chroniques (différentes des migraines). Travail spécifique sur la décrispation des muscles péricrâniens, cervicaux, des épaules. Décharge de la tension qui s'accumule." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Détente des muscles péricrâniens", type: "Levier", icon: "🎯", desc: "Décrispation musculaire et posturale" },
+    { name: "Décrispation cervicale et trapèzes", type: "Levier", icon: "🎯", desc: "Décrispation musculaire et posturale" },
+    { name: "Conscience posturale", type: "Levier", icon: "🎯", desc: "Décrispation musculaire et posturale" },
+    { name: "Crâne libéré", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Cou détendu", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur neurologique ne fonctionne pas pour moi"],
+};
+
+const k_706: ProtocolDetail = {
+  protocolId: 706,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Neurologique",
+  description: "Soutien hypnotique aux patients en récupération post-AVC, en complément de la rééducation. Travail sur la motivation à la rééducation, la reprise du schéma corporel, l'acceptation des séquelles, la diminution de la spasticité.",
+  indications: ["Phase post-AVC après stabilisation", "Patients en rééducation motrice ou cognitive", "Soutien à l'observance des exercices", "Acceptation des séquelles persistantes"],
+  contraindications: ["Phase aiguë (urgence)", "Troubles cognitifs sévères empêchant l'hypnose", "Aphasie majeure (à adapter)"],
+  programs: [{
+    id: "principal",
+    title: "Accompagnement post-AVC — Récupération et qualité de vie",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Accompagnement post-AVC — Récupération et qualité de vie",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Soutien hypnotique aux patients en récupération post-AVC, en complément de la rééducation. Travail sur la motivation à la rééducation, la reprise du schéma corporel, l'acceptation des séquelles, la diminution de la spasticité." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie de plasticité cérébrale", type: "Levier", icon: "🎯", desc: "Soutien à la récupération neurologique post-AVC" },
+    { name: "Soutien à la rééducation motrice", type: "Levier", icon: "🎯", desc: "Soutien à la récupération neurologique post-AVC" },
+    { name: "Diminution de la spasticité par imagerie", type: "Levier", icon: "🎯", desc: "Soutien à la récupération neurologique post-AVC" },
+    { name: "Cerveau qui se reconfigure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Mouvement qui revient", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur neurologique ne fonctionne pas pour moi"],
+};
+
+const k_707: ProtocolDetail = {
+  protocolId: 707,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Neurologique",
+  description: "Soutien aux patients atteints de SEP. Travail sur la fatigue spécifique de la SEP, les paresthésies, la spasticité, la gestion des poussées et la qualité de vie entre elles.",
+  indications: ["SEP en phase stable ou rémittente", "Patients fatigués par la maladie", "Paresthésies invalidantes", "Spasticité modérée"],
+  contraindications: ["Poussée aiguë sévère (urgence neurologique)", "Substitution au traitement de fond"],
+  programs: [{
+    id: "principal",
+    title: "Sclérose en plaques — Accompagnement et qualité de vie",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Sclérose en plaques — Accompagnement et qualité de vie",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Soutien aux patients atteints de SEP. Travail sur la fatigue spécifique de la SEP, les paresthésies, la spasticité, la gestion des poussées et la qualité de vie entre elles." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Gestion de la fatigue spécifique", type: "Levier", icon: "🎯", desc: "Accompagnement holistique de la SEP" },
+    { name: "Apaisement des paresthésies", type: "Levier", icon: "🎯", desc: "Accompagnement holistique de la SEP" },
+    { name: "Diminution de la spasticité", type: "Levier", icon: "🎯", desc: "Accompagnement holistique de la SEP" },
+    { name: "Énergie respectée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Corps écouté", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur neurologique ne fonctionne pas pour moi"],
+};
+
+const k_708: ProtocolDetail = {
+  protocolId: 708,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Neurologique",
+  description: "Soutien aux patients parkinsoniens en complément du traitement. Travail sur la fluidité du mouvement, la confiance dans la marche, l'apaisement des tremblements, la qualité de vie.",
+  indications: ["Maladie de Parkinson en phase stable", "Patients en complément de la dopathérapie", "Anxiété face à l'évolution", "Soutien à la motricité"],
+  contraindications: ["Forme avancée avec démence", "Substitution au traitement"],
+  programs: [{
+    id: "principal",
+    title: "Maladie de Parkinson — Soutenir le mouvement et la qualité de vie",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Maladie de Parkinson — Soutenir le mouvement et la qualité de vie",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Soutien aux patients parkinsoniens en complément du traitement. Travail sur la fluidité du mouvement, la confiance dans la marche, l'apaisement des tremblements, la qualité de vie." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie motrice", type: "Levier", icon: "🎯", desc: "Soutien à la motricité parkinsonienne" },
+    { name: "Confiance dans la marche", type: "Levier", icon: "🎯", desc: "Soutien à la motricité parkinsonienne" },
+    { name: "Apaisement du tremblement", type: "Levier", icon: "🎯", desc: "Soutien à la motricité parkinsonienne" },
+    { name: "Mouvement qui se fluidifie", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Confiance retrouvée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur neurologique ne fonctionne pas pour moi"],
+};
+
+const k_709: ProtocolDetail = {
+  protocolId: 709,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Neurologique",
+  description: "Pour patients épileptiques en complément de leur traitement antiépileptique. Travail sur la diminution de l'anxiété entre les crises, l'identification des prodromes, le confort post-crise. Strict complément.",
+  indications: ["Épilepsie stable sous traitement", "Anxiété intercritique", "Patients connaissant des prodromes"],
+  contraindications: ["Substitution au traitement antiépileptique (jamais)", "Épilepsie déstabilisée"],
+  programs: [{
+    id: "principal",
+    title: "Épilepsie — Soutien complémentaire entre les crises",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Épilepsie — Soutien complémentaire entre les crises",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients épileptiques en complément de leur traitement antiépileptique. Travail sur la diminution de l'anxiété entre les crises, l'identification des prodromes, le confort post-crise. Strict complément." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement de l'anxiété intercritique", type: "Levier", icon: "🎯", desc: "Soutien intercritique de l'épilepsie" },
+    { name: "Repérage des prodromes", type: "Levier", icon: "🎯", desc: "Soutien intercritique de l'épilepsie" },
+    { name: "Confort post-crise", type: "Levier", icon: "🎯", desc: "Soutien intercritique de l'épilepsie" },
+    { name: "Vie possible", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Système qu'on accompagne", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur neurologique ne fonctionne pas pour moi"],
+};
+
+const k_710: ProtocolDetail = {
+  protocolId: 710,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Pneumologie",
+  description: "Pour patients atteints de BPCO en complément du traitement pneumologique. Travail sur la dyspnée, l'anxiété respiratoire, la motivation aux exercices respiratoires et à l'arrêt du tabac.",
+  indications: ["BPCO modérée à modérément sévère", "Anxiété de la dyspnée", "Patients en réhabilitation respiratoire", "Sevrage tabagique en parallèle"],
+  contraindications: ["Exacerbation aiguë (urgence)", "Insuffisance respiratoire sévère décompensée"],
+  programs: [{
+    id: "principal",
+    title: "BPCO — Souffle préservé",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — BPCO — Souffle préservé",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients atteints de BPCO en complément du traitement pneumologique. Travail sur la dyspnée, l'anxiété respiratoire, la motivation aux exercices respiratoires et à l'arrêt du tabac." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désamorçage de l'anxiété respiratoire", type: "Levier", icon: "🎯", desc: "Soutien respiratoire chronique" },
+    { name: "Imagerie de bronches accueillantes", type: "Levier", icon: "🎯", desc: "Soutien respiratoire chronique" },
+    { name: "Motivation aux exercices", type: "Levier", icon: "🎯", desc: "Soutien respiratoire chronique" },
+    { name: "Souffle préservé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Air qui entre", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pneumologie ne fonctionne pas pour moi"],
+};
+
+const k_711: ProtocolDetail = {
+  protocolId: 711,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Pneumologie fonctionnelle",
+  description: "Pour patients ayant une sensation de manque d'air ou d'oppression thoracique sans cause organique identifiable, ou disproportionnée à la cause. Travail sur l'hyperventilation, la perception respiratoire, l'anxiété.",
+  indications: ["Dyspnée fonctionnelle (bilan négatif)", "Syndrome d'hyperventilation chronique", "Sensation de blocage thoracique", "Soupirs fréquents avec sensation de mal respirer"],
+  contraindications: ["Causes organiques non explorées (toujours bilan complet)", "Patients en panique respiratoire actuelle"],
+  programs: [{
+    id: "principal",
+    title: "Dyspnée chronique fonctionnelle — Sensation de manque d'air",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Dyspnée chronique fonctionnelle — Sensation de manque d'air",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients ayant une sensation de manque d'air ou d'oppression thoracique sans cause organique identifiable, ou disproportionnée à la cause. Travail sur l'hyperventilation, la perception respiratoire, l'anxiété." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désamorçage de l'hyperventilation", type: "Levier", icon: "🎯", desc: "Régulation de la perception respiratoire" },
+    { name: "Recadrage des sensations", type: "Levier", icon: "🎯", desc: "Régulation de la perception respiratoire" },
+    { name: "Confiance respiratoire restaurée", type: "Levier", icon: "🎯", desc: "Régulation de la perception respiratoire" },
+    { name: "Souffle qui passe naturellement", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Air suffisant", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pneumologie fonctionnelle ne fonctionne pas pour moi"],
+};
+
+const k_712: ProtocolDetail = {
+  protocolId: 712,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Addictions",
+  description: "Protocole d'accompagnement à l'arrêt du tabac. Travail sur la motivation, la gestion des envies, le rapport au geste, la libération de l'identité de fumeur. Approche en plusieurs séances.",
+  indications: ["Volonté d'arrêter de fumer", "Échecs précédents", "Patients motivés mais ayant peur du manque"],
+  contraindications: ["Patients non motivés (l'hypnose ne crée pas la motivation)", "Pathologies psychiatriques sévères non stabilisées"],
+  programs: [{
+    id: "principal",
+    title: "Sevrage tabagique — Préparation et accompagnement",
+    icon: "◑",
+    duration: "60 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Sevrage tabagique — Préparation et accompagnement",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Protocole d'accompagnement à l'arrêt du tabac. Travail sur la motivation, la gestion des envies, le rapport au geste, la libération de l'identité de fumeur. Approche en plusieurs séances." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Renforcement de la motivation", type: "Levier", icon: "🎯", desc: "Sevrage tabagique multi-séances" },
+    { name: "Désinvestissement du geste", type: "Levier", icon: "🎯", desc: "Sevrage tabagique multi-séances" },
+    { name: "Gestion des envies", type: "Levier", icon: "🎯", desc: "Sevrage tabagique multi-séances" },
+    { name: "Liberté retrouvée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Souffle reconquis", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "60 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur addictions ne fonctionne pas pour moi"],
+};
+
+const k_713: ProtocolDetail = {
+  protocolId: 713,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Urogynécologie",
+  description: "Pour incontinence urinaire d'effort ou par urgenturie, en complément de la rééducation périnéale. Travail sur la conscience du périnée, la régulation de l'urgenturie, la confiance corporelle.",
+  indications: ["Incontinence urinaire d'effort modérée", "Urgenturie", "Patients en complément de la rééducation périnéale", "Suite de chirurgie ou accouchement"],
+  contraindications: ["Substitution à la rééducation médicale", "Causes organiques non explorées"],
+  programs: [{
+    id: "principal",
+    title: "Incontinence urinaire — Restaurer le contrôle",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Incontinence urinaire — Restaurer le contrôle",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour incontinence urinaire d'effort ou par urgenturie, en complément de la rééducation périnéale. Travail sur la conscience du périnée, la régulation de l'urgenturie, la confiance corporelle." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Conscience du périnée", type: "Levier", icon: "🎯", desc: "Soutien à la rééducation périnéale et urgenturie" },
+    { name: "Imagerie de tonicité retrouvée", type: "Levier", icon: "🎯", desc: "Soutien à la rééducation périnéale et urgenturie" },
+    { name: "Régulation de l'urgenturie", type: "Levier", icon: "🎯", desc: "Soutien à la rééducation périnéale et urgenturie" },
+    { name: "Périnée vivant", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Contrôle retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur urogynécologie ne fonctionne pas pour moi"],
+};
+
+const k_714: ProtocolDetail = {
+  protocolId: 714,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Gynécologique",
+  description: "Pour vaginisme, contraction involontaire des muscles du vagin empêchant la pénétration. Travail délicat sur la décrispation, la confiance corporelle, le rapport à l'intime. En coordination avec gynécologue, sexologue, kiné périnéale.",
+  indications: ["Vaginisme primaire ou secondaire", "Patientes en parcours pluridisciplinaire", "Difficultés à la pénétration médicale ou intime"],
+  contraindications: ["Trauma sexuel non traité (cadre psychothérapeutique requis avant)"],
+  programs: [{
+    id: "principal",
+    title: "Vaginisme — Réconciliation avec l'intime",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Vaginisme — Réconciliation avec l'intime",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour vaginisme, contraction involontaire des muscles du vagin empêchant la pénétration. Travail délicat sur la décrispation, la confiance corporelle, le rapport à l'intime. En coordination avec gynécologue, sexologue, kiné périnéale." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Décrispation périnéale", type: "Levier", icon: "🎯", desc: "Travail intime de décrispation et réconciliation" },
+    { name: "Réconciliation avec le corps intime", type: "Levier", icon: "🎯", desc: "Travail intime de décrispation et réconciliation" },
+    { name: "Désinvestissement du contrôle", type: "Levier", icon: "🎯", desc: "Travail intime de décrispation et réconciliation" },
+    { name: "Corps intime accueilli", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Détente possible", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur gynécologique ne fonctionne pas pour moi"],
+};
+
+const k_715: ProtocolDetail = {
+  protocolId: 715,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Gynécologique",
+  description: "Pour dyspareunie (douleurs lors des rapports sexuels) chez la femme. Travail sur l'apaisement local, la décrispation, la confiance corporelle, en complément du suivi médical pour identifier la cause.",
+  indications: ["Dyspareunie post-ménopausique (avec THM si pertinent)", "Dyspareunie après accouchement", "Dyspareunie sans cause organique trouvée", "Vestibulodynie"],
+  contraindications: ["Pathologies gynécologiques actives non traitées (endométriose, infections)", "Trauma sexuel non traité"],
+  programs: [{
+    id: "principal",
+    title: "Dyspareunie — Apaiser la douleur intime",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Dyspareunie — Apaiser la douleur intime",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour dyspareunie (douleurs lors des rapports sexuels) chez la femme. Travail sur l'apaisement local, la décrispation, la confiance corporelle, en complément du suivi médical pour identifier la cause." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement local", type: "Levier", icon: "🎯", desc: "Apaisement local intime et confiance" },
+    { name: "Décrispation périnéale", type: "Levier", icon: "🎯", desc: "Apaisement local intime et confiance" },
+    { name: "Confiance corporelle", type: "Levier", icon: "🎯", desc: "Apaisement local intime et confiance" },
+    { name: "Intime apaisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Plaisir possible", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur gynécologique ne fonctionne pas pour moi"],
+};
+
+const k_716: ProtocolDetail = {
+  protocolId: 716,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Cardio-vasculaire",
+  description: "Pour patients atteints d'insuffisance cardiaque chronique en complément du traitement cardiologique. Travail sur la gestion de l'anxiété, la dyspnée, l'observance thérapeutique, la qualité de vie.",
+  indications: ["Insuffisance cardiaque chronique stable", "Patients en complément du traitement", "Anxiété face à la maladie", "Soutien à l'observance"],
+  contraindications: ["Décompensation aiguë (urgence)", "Substitution au traitement cardiologique"],
+  programs: [{
+    id: "principal",
+    title: "Insuffisance cardiaque — Vivre avec un cœur fragile",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Insuffisance cardiaque — Vivre avec un cœur fragile",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients atteints d'insuffisance cardiaque chronique en complément du traitement cardiologique. Travail sur la gestion de l'anxiété, la dyspnée, l'observance thérapeutique, la qualité de vie." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement de l'anxiété cardiaque", type: "Levier", icon: "🎯", desc: "Soutien aux patients insuffisants cardiaques" },
+    { name: "Soutien à l'observance", type: "Levier", icon: "🎯", desc: "Soutien aux patients insuffisants cardiaques" },
+    { name: "Gestion de la dyspnée d'effort", type: "Levier", icon: "🎯", desc: "Soutien aux patients insuffisants cardiaques" },
+    { name: "Cœur ménagé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Vie habitée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur cardio-vasculaire ne fonctionne pas pour moi"],
+};
+
+const k_717: ProtocolDetail = {
+  protocolId: 717,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Cardio-vasculaire",
+  description: "Soutien aux patients ayant fait un infarctus, en complément de la rééducation cardiaque. Travail sur la confiance corporelle après le choc, l'anxiété de récidive, l'engagement dans les changements de vie.",
+  indications: ["Post-infarctus en phase de rééducation", "Anxiété de récidive", "Patients en réhabilitation cardiaque", "Reprise progressive d'activité"],
+  contraindications: ["Phase aiguë (urgence)"],
+  programs: [{
+    id: "principal",
+    title: "Post-infarctus — Reconstruction et rééducation",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Post-infarctus — Reconstruction et rééducation",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Soutien aux patients ayant fait un infarctus, en complément de la rééducation cardiaque. Travail sur la confiance corporelle après le choc, l'anxiété de récidive, l'engagement dans les changements de vie." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement du traumatisme", type: "Levier", icon: "🎯", desc: "Reconstruction post-infarctus" },
+    { name: "Confiance corporelle restaurée", type: "Levier", icon: "🎯", desc: "Reconstruction post-infarctus" },
+    { name: "Engagement aux changements", type: "Levier", icon: "🎯", desc: "Reconstruction post-infarctus" },
+    { name: "Cœur retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Vie reprise", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur cardio-vasculaire ne fonctionne pas pour moi"],
+};
+
+const k_718: ProtocolDetail = {
+  protocolId: 718,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Endocrinologie",
+  description: "Pour patients hypothyroïdiens en complément du traitement substitutif. Travail sur la fatigue résiduelle, la régulation énergétique, la motivation aux activités.",
+  indications: ["Hypothyroïdie sous traitement avec fatigue résiduelle", "Difficultés à reprendre l'activité après bilan thyroïdien équilibré", "Soutien hygiéno-diététique"],
+  contraindications: ["Hypothyroïdie non équilibrée biologiquement (ajuster traitement)", "Substitution au traitement"],
+  programs: [{
+    id: "principal",
+    title: "Hypothyroïdie — Soutenir l'énergie",
+    icon: "◑",
+    duration: "30 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Hypothyroïdie — Soutenir l'énergie",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients hypothyroïdiens en complément du traitement substitutif. Travail sur la fatigue résiduelle, la régulation énergétique, la motivation aux activités." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Mobilisation énergétique", type: "Levier", icon: "🎯", desc: "Soutien à l'énergie en hypothyroïdie" },
+    { name: "Recadrage de la fatigue résiduelle", type: "Levier", icon: "🎯", desc: "Soutien à l'énergie en hypothyroïdie" },
+    { name: "Motivation à l'activité", type: "Levier", icon: "🎯", desc: "Soutien à l'énergie en hypothyroïdie" },
+    { name: "Énergie disponible", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Métabolisme accompagné", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "30 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur endocrinologie ne fonctionne pas pour moi"],
+};
+
+const k_719: ProtocolDetail = {
+  protocolId: 719,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Endocrinologie",
+  description: "Pour patients en hyperthyroïdie ou en post-traitement, en complément du suivi. Travail sur l'apaisement du système nerveux emballé, la régulation des palpitations, l'anxiété, la gestion de la fatigue paradoxale.",
+  indications: ["Hyperthyroïdie en cours de traitement", "Maladie de Basedow accompagnée", "Anxiété et palpitations liées à l'hyperthyroïdie", "Période de transition après traitement"],
+  contraindications: ["Crise thyréotoxique (urgence)", "Substitution au traitement"],
+  programs: [{
+    id: "principal",
+    title: "Hyperthyroïdie — Apaiser l'emballement",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Hyperthyroïdie — Apaiser l'emballement",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en hyperthyroïdie ou en post-traitement, en complément du suivi. Travail sur l'apaisement du système nerveux emballé, la régulation des palpitations, l'anxiété, la gestion de la fatigue paradoxale." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement du système nerveux", type: "Levier", icon: "🎯", desc: "Apaisement de l'emballement métabolique" },
+    { name: "Régulation cardiaque", type: "Levier", icon: "🎯", desc: "Apaisement de l'emballement métabolique" },
+    { name: "Gestion de l'anxiété thyroïdienne", type: "Levier", icon: "🎯", desc: "Apaisement de l'emballement métabolique" },
+    { name: "Système apaisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Cœur tranquille", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur endocrinologie ne fonctionne pas pour moi"],
+};
+
+const k_720: ProtocolDetail = {
+  protocolId: 720,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Oncologie",
+  description: "Pour patients en cours de chimiothérapie souffrant d'effets secondaires : nausées, vomissements anticipatoires, fatigue, mucites, neuropathies. Travail de soutien spécifique sur chaque manifestation.",
+  indications: ["Patients en cours de chimiothérapie", "Nausées et vomissements chimio-induits", "Vomissements anticipatoires", "Fatigue post-chimio", "Mucites buccales"],
+  contraindications: ["Substitution aux antiémétiques médicaux"],
+  programs: [{
+    id: "principal",
+    title: "Effets secondaires de la chimiothérapie — Atténuation",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Effets secondaires de la chimiothérapie — Atténuation",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en cours de chimiothérapie souffrant d'effets secondaires : nausées, vomissements anticipatoires, fatigue, mucites, neuropathies. Travail de soutien spécifique sur chaque manifestation." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désamorçage des nausées anticipatoires", type: "Levier", icon: "🎯", desc: "Atténuation des effets secondaires de chimiothérapie" },
+    { name: "Imagerie d'apaisement digestif", type: "Levier", icon: "🎯", desc: "Atténuation des effets secondaires de chimiothérapie" },
+    { name: "Soutien à la récupération entre cycles", type: "Levier", icon: "🎯", desc: "Atténuation des effets secondaires de chimiothérapie" },
+    { name: "Traitement reçu", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Corps soutenu", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur oncologie ne fonctionne pas pour moi"],
+};
+
+const k_721: ProtocolDetail = {
+  protocolId: 721,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Oncologie",
+  description: "Pour patients en cours de radiothérapie. Travail sur l'immobilité durant les séances, l'apaisement de la peau qui réagit, l'anxiété claustrophobique des appareils, le fil des semaines.",
+  indications: ["Patients en cours de radiothérapie", "Anxiété face à l'appareil", "Réactions cutanées aux rayons", "Fatigue de fin de cycle"],
+  contraindications: ["Substitution aux soins prescrits"],
+  programs: [{
+    id: "principal",
+    title: "Radiothérapie — Confort des séances et de la peau",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Radiothérapie — Confort des séances et de la peau",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en cours de radiothérapie. Travail sur l'immobilité durant les séances, l'apaisement de la peau qui réagit, l'anxiété claustrophobique des appareils, le fil des semaines." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Confort durant l'immobilité", type: "Levier", icon: "🎯", desc: "Soutien à la radiothérapie" },
+    { name: "Apaisement cutané imagé", type: "Levier", icon: "🎯", desc: "Soutien à la radiothérapie" },
+    { name: "Désamorçage anxiété appareil", type: "Levier", icon: "🎯", desc: "Soutien à la radiothérapie" },
+    { name: "Immobilité confortable", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Peau apaisée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur oncologie ne fonctionne pas pour moi"],
+};
+
+const k_722: ProtocolDetail = {
+  protocolId: 722,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Immunologie",
+  description: "Pour patients atteints de maladies auto-immunes (lupus, polyarthrite rhumatoïde stabilisée, sclérodermie, etc.). Travail sur le dialogue intérieur avec le système immunitaire, la gestion du stress facteur de poussées, l'acceptation.",
+  indications: ["Maladies auto-immunes en phase stable ou rémission", "Patients en complément de leur traitement", "Soutien à la qualité de vie"],
+  contraindications: ["Poussée aiguë sévère", "Substitution aux traitements immunomodulateurs"],
+  programs: [{
+    id: "principal",
+    title: "Maladies auto-immunes — Dialogue avec le système immunitaire",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Maladies auto-immunes — Dialogue avec le système immunitaire",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients atteints de maladies auto-immunes (lupus, polyarthrite rhumatoïde stabilisée, sclérodermie, etc.). Travail sur le dialogue intérieur avec le système immunitaire, la gestion du stress facteur de poussées, l'acceptation." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Dialogue avec le système immunitaire", type: "Levier", icon: "🎯", desc: "Soutien aux maladies auto-immunes" },
+    { name: "Gestion du stress facteur de poussées", type: "Levier", icon: "🎯", desc: "Soutien aux maladies auto-immunes" },
+    { name: "Acceptation de la chronicité", type: "Levier", icon: "🎯", desc: "Soutien aux maladies auto-immunes" },
+    { name: "Système immunitaire allié", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Discernement retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur immunologie ne fonctionne pas pour moi"],
+};
+
+const k_723: ProtocolDetail = {
+  protocolId: 723,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Dermatologique",
+  description: "Pour patients atteints de vitiligo en complément du traitement dermatologique. Travail sur la régulation immunitaire locale, l'acceptation de la peau actuelle, le soutien à la repigmentation.",
+  indications: ["Vitiligo stable ou évolutif modéré", "Patients en complément de PUVA, corticoïdes locaux, ou autres traitements", "Vécu identitaire face aux taches"],
+  contraindications: ["Substitution aux traitements dermatologiques"],
+  programs: [{
+    id: "principal",
+    title: "Vitiligo — Soutenir la repigmentation",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Vitiligo — Soutenir la repigmentation",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients atteints de vitiligo en complément du traitement dermatologique. Travail sur la régulation immunitaire locale, l'acceptation de la peau actuelle, le soutien à la repigmentation." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie de mélanocytes actifs", type: "Levier", icon: "🎯", desc: "Soutien à la repigmentation et acceptation" },
+    { name: "Régulation immunitaire locale", type: "Levier", icon: "🎯", desc: "Soutien à la repigmentation et acceptation" },
+    { name: "Acceptation de l'apparence actuelle", type: "Levier", icon: "🎯", desc: "Soutien à la repigmentation et acceptation" },
+    { name: "Peau qui se réharmonise", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Mélanocytes actifs", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dermatologique ne fonctionne pas pour moi"],
+};
+
+const k_724: ProtocolDetail = {
+  protocolId: 724,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Dermatologique",
+  description: "Pour patients atteints d'alopécie areata (pelade) en complément du traitement dermatologique. Travail sur le soutien folliculaire, la régulation immunitaire locale, le vécu de la perte capillaire.",
+  indications: ["Pelade en plaques", "Alopécie areata", "Patients en complément traitement", "Vécu identitaire de la perte"],
+  contraindications: ["Alopécie d'autre cause", "Substitution au traitement"],
+  programs: [{
+    id: "principal",
+    title: "Alopécie areata — Soutien folliculaire et estime",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Alopécie areata — Soutien folliculaire et estime",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients atteints d'alopécie areata (pelade) en complément du traitement dermatologique. Travail sur le soutien folliculaire, la régulation immunitaire locale, le vécu de la perte capillaire." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie folliculaire", type: "Levier", icon: "🎯", desc: "Soutien à la repousse et acceptation" },
+    { name: "Régulation immunitaire locale", type: "Levier", icon: "🎯", desc: "Soutien à la repousse et acceptation" },
+    { name: "Acceptation transitoire", type: "Levier", icon: "🎯", desc: "Soutien à la repousse et acceptation" },
+    { name: "Cuir chevelu nourri", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Follicules réveillés", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dermatologique ne fonctionne pas pour moi"],
+};
+
+const k_725: ProtocolDetail = {
+  protocolId: 725,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Pédiatrique",
+  description: "Pour enfants souffrant de douleurs abdominales chroniques fonctionnelles (sans cause organique identifiée). Travail adapté avec imagerie ludique, en lien avec parents.",
+  indications: ["Douleurs abdominales fonctionnelles 5-12 ans", "Enfants avec bilan négatif", "Côlon irritable de l'enfant"],
+  contraindications: ["Causes organiques non éliminées", "Très jeunes enfants (- 5 ans)"],
+  programs: [{
+    id: "principal",
+    title: "Douleurs abdominales fonctionnelles de l'enfant — Apaiser le ventre qui parle",
+    icon: "◑",
+    duration: "25 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Douleurs abdominales fonctionnelles de l'enfant — Apaiser le ventre qui parle",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour enfants souffrant de douleurs abdominales chroniques fonctionnelles (sans cause organique identifiée). Travail adapté avec imagerie ludique, en lien avec parents." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie ludique apaisante", type: "Levier", icon: "🎯", desc: "Hypnose pédiatrique pour douleurs abdominales" },
+    { name: "Personnage protecteur du ventre", type: "Levier", icon: "🎯", desc: "Hypnose pédiatrique pour douleurs abdominales" },
+    { name: "Implication des parents", type: "Levier", icon: "🎯", desc: "Hypnose pédiatrique pour douleurs abdominales" },
+    { name: "Ventre apaisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Magie protectrice", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "25 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pédiatrique ne fonctionne pas pour moi"],
+};
+
+const k_726: ProtocolDetail = {
+  protocolId: 726,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Pédiatrique",
+  description: "Adaptation pédiatrique pour enfants asthmatiques. Travail ludique sur le souffle, l'apaisement bronchique imagé, la confiance respiratoire, en complément du traitement.",
+  indications: ["Asthme de l'enfant 5-12 ans", "Enfants anxieux face aux crises", "Soutien à l'observance des traitements"],
+  contraindications: ["Crise d'asthme aiguë", "Asthme sévère mal contrôlé", "Très jeunes enfants"],
+  programs: [{
+    id: "principal",
+    title: "Asthme de l'enfant — Souffle apprivoisé",
+    icon: "◑",
+    duration: "25 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Asthme de l'enfant — Souffle apprivoisé",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Adaptation pédiatrique pour enfants asthmatiques. Travail ludique sur le souffle, l'apaisement bronchique imagé, la confiance respiratoire, en complément du traitement." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie ludique de souffle", type: "Levier", icon: "🎯", desc: "Hypnose pédiatrique pour asthme" },
+    { name: "Personnage gardien des poumons", type: "Levier", icon: "🎯", desc: "Hypnose pédiatrique pour asthme" },
+    { name: "Désamorçage de la peur de crise", type: "Levier", icon: "🎯", desc: "Hypnose pédiatrique pour asthme" },
+    { name: "Souffle qui passe", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Poumons amis", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "25 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pédiatrique ne fonctionne pas pour moi"],
+};
+
+const k_727: ProtocolDetail = {
+  protocolId: 727,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Pédiatrique",
+  description: "Pour enfants devant subir des soins répétés ou douloureux (ponctions, perfusions répétées, examens invasifs). Adaptation ludique des techniques de confort, dispositif rapide.",
+  indications: ["Enfant en soins répétés (oncologie pédiatrique, pathologie chronique)", "Préparation à examen douloureux", "Phobie des soins chez l'enfant"],
+  contraindications: ["Très jeunes enfants (- 5 ans)"],
+  programs: [{
+    id: "principal",
+    title: "Préparation aux soins lourds chez l'enfant — Ponctions, examens douloureux",
+    icon: "◑",
+    duration: "25 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Préparation aux soins lourds chez l'enfant — Ponctions, examens douloureux",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour enfants devant subir des soins répétés ou douloureux (ponctions, perfusions répétées, examens invasifs). Adaptation ludique des techniques de confort, dispositif rapide." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Lieu sûr ludique", type: "Levier", icon: "🎯", desc: "Hypnose pédiatrique pour soins" },
+    { name: "Personnage protecteur", type: "Levier", icon: "🎯", desc: "Hypnose pédiatrique pour soins" },
+    { name: "Modification ludique des sensations", type: "Levier", icon: "🎯", desc: "Hypnose pédiatrique pour soins" },
+    { name: "Voyage protégé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Outil magique", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "25 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pédiatrique ne fonctionne pas pour moi"],
+};
+
 export const kiikaHammondDetails: Record<number, ProtocolDetail> = {
   600: k_600,
   601: k_601,
@@ -3140,4 +5207,57 @@ export const kiikaHammondDetails: Record<number, ProtocolDetail> = {
   672: k_672,
   673: k_673,
   674: k_674,
+  675: k_675,
+  676: k_676,
+  677: k_677,
+  678: k_678,
+  679: k_679,
+  680: k_680,
+  681: k_681,
+  682: k_682,
+  683: k_683,
+  684: k_684,
+  685: k_685,
+  686: k_686,
+  687: k_687,
+  688: k_688,
+  689: k_689,
+  690: k_690,
+  691: k_691,
+  692: k_692,
+  693: k_693,
+  694: k_694,
+  695: k_695,
+  696: k_696,
+  697: k_697,
+  698: k_698,
+  699: k_699,
+  700: k_700,
+  701: k_701,
+  702: k_702,
+  703: k_703,
+  704: k_704,
+  705: k_705,
+  706: k_706,
+  707: k_707,
+  708: k_708,
+  709: k_709,
+  710: k_710,
+  711: k_711,
+  712: k_712,
+  713: k_713,
+  714: k_714,
+  715: k_715,
+  716: k_716,
+  717: k_717,
+  718: k_718,
+  719: k_719,
+  720: k_720,
+  721: k_721,
+  722: k_722,
+  723: k_723,
+  724: k_724,
+  725: k_725,
+  726: k_726,
+  727: k_727,
 };
