@@ -26,6 +26,9 @@ FILES = [
     "kiika_cercle4_lot3_relationnel_transitions.json",
     "kiika_cercle5_lot1_performance_sportive.json",
     "kiika_cercle5_lot2_performance_pro.json",
+    "kiika_cercle6_lot1_pediatrie.json",
+    "kiika_cercle6_lot2_perinatalite_sexologie.json",
+    "kiika_cercle6_lot3_addictions.json",
 ]
 
 # Color by category prefix
@@ -81,6 +84,29 @@ def motifs_for(category, tags):
         motifs.append("Douleurs & psychosomatique")
         if "addiction" in cat:
             motifs.append("Addictions")
+    if "pédiatrie" in cat or "pediatrie" in cat or "adolescent" in cat:
+        if "sommeil" in cat:
+            motifs.append("Sommeil & insomnie")
+        if "anxi" in cat or "phobie" in cat:
+            motifs.append("Anxiété & stress")
+        if "estime" in cat or "mal-être" in cat or "corps" in cat:
+            motifs.append("Estime & confiance en soi")
+        if "examens" in cat:
+            motifs.append("Performance & examens")
+        if "harcèlement" in cat or "harcelement" in cat:
+            motifs.append("Trauma & deuil")
+        if "alimentation" in cat:
+            motifs.append("Perte de poids & TCA")
+        if not motifs:
+            motifs.append("Anxiété & stress")
+    if "périnatalité" in cat or "perinatalite" in cat or "sexologie" in cat:
+        motifs.append("Couple & sexualité")
+        if "post-partum" in cat or "grossesse" in cat or "accouchement" in cat or "pma" in cat or "conception" in cat:
+            motifs.append("Trauma & deuil")
+    if "addictions" in cat or "addiction" in cat:
+        motifs.append("Addictions")
+        if "alimentaire" in cat:
+            motifs.append("Perte de poids & TCA")
     if "performance" in cat:
         motifs.append("Performance & examens")
         if "burn-out" in cat or "burn" in cat:
@@ -134,28 +160,38 @@ def sql_array(items):
     """Convert list to SQL ARRAY[...] syntax."""
     return "ARRAY[" + ", ".join("'" + sql_str(s) + "'" for s in items) + "]"
 
-# Load all protocols
-all_protocols = []
+# Load all protocols, tracking the cercle for ID assignment
+all_protocols: list[tuple[int, dict]] = []  # (db_id, protocol)
+next_id_for_cercle = {1: 600, 2: None, 3: None, 4: None, 5: None, 6: 1000, 7: 1040}
+
+cur_id = next_id_for_cercle[1]
 for fname in FILES:
+    # Determine cercle from filename
+    cercle = int(fname.split('cercle')[1].split('_')[0])
+    if next_id_for_cercle.get(cercle) is not None:
+        cur_id = next_id_for_cercle[cercle]
+        # Lock-in: subsequent files of same cercle continue from here
+        next_id_for_cercle[cercle] = None
     path = os.path.join(SOURCE_DIR, fname)
     d = json.load(open(path, encoding='utf-8'))
     for p in d['protocoles']:
-        all_protocols.append(p)
+        all_protocols.append((cur_id, p))
+        cur_id += 1
 
 print(f"Loaded {len(all_protocols)} protocols")
+print(f"ID range: {all_protocols[0][0]} - {all_protocols[-1][0]}")
 
 # Generate SQL seed
 sql_lines = [
     "-- Seed protocoles KIIKA Hammond (fiches détaillées Varinka Robert)",
-    "-- IDs : 600-792 (193 protocoles) — Cercles 1+2+3+4+5",
-    "-- Source : KIIKA v3 — fiches détaillées par lot (Noyau / Anxiété-Sommeil-Douleur / Médical-Somatique / Émotionnel-Relationnel / Performance)",
+    "-- IDs : 600-792 + 1000-1039 (233 protocoles) — Cercles 1+2+3+4+5+6",
+    "-- Source : KIIKA v3 — fiches détaillées par lot (Noyau / Anxiété-Sommeil-Douleur / Médical-Somatique / Émotionnel-Relationnel / Performance / Pédiatrie-Périnatalité-Addictions)",
     "",
     "INSERT INTO public.protocols (id, name, category, practice, description, duration, level, tags, color, sessions, objectives, source, motifs)",
     "VALUES",
 ]
 seed_rows = []
-for idx, p in enumerate(all_protocols):
-    db_id = 600 + idx
+for db_id, p in all_protocols:
     name = p['titre']
     category = "KIIKA — " + p['categorie'].split(" / ", 1)[-1] if " / " in p['categorie'] else "KIIKA — " + p['categorie']
     description = p['description_courte']
@@ -210,15 +246,14 @@ ts_lines = [
     'import type { ProtocolDetail } from "./types";',
     '',
     '/**',
-    ' * Fiches détaillées KIIKA Hammond (IDs 600-792) — remplacent les anciens Hammond.',
-    ' * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3+4+5).',
-    ' * 193 protocoles avec scripts complets, structure technique, dimensions KIIKA.',
+    ' * Fiches détaillées KIIKA Hammond (IDs 600-792 + 1000-1039) — remplacent les anciens Hammond.',
+    ' * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3+4+5+6).',
+    ' * 233 protocoles avec scripts complets, structure technique, dimensions KIIKA.',
     ' */',
     '',
 ]
 
-for idx, p in enumerate(all_protocols):
-    db_id = 600 + idx
+for db_id, p in all_protocols:
     name = p['titre']
     category = p['categorie']
     description = p['description_courte']
@@ -324,8 +359,7 @@ for idx, p in enumerate(all_protocols):
 
 # Export aggregator
 ts_lines.append("export const kiikaHammondDetails: Record<number, ProtocolDetail> = {")
-for idx in range(len(all_protocols)):
-    db_id = 600 + idx
+for db_id, _ in all_protocols:
     ts_lines.append(f"  {db_id}: k_{db_id},")
 ts_lines.append("};")
 

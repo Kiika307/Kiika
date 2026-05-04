@@ -1,9 +1,9 @@
 import type { ProtocolDetail } from "./types";
 
 /**
- * Fiches détaillées KIIKA Hammond (IDs 600-792) — remplacent les anciens Hammond.
- * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3+4+5).
- * 193 protocoles avec scripts complets, structure technique, dimensions KIIKA.
+ * Fiches détaillées KIIKA Hammond (IDs 600-792 + 1000-1039) — remplacent les anciens Hammond.
+ * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3+4+5+6).
+ * 233 protocoles avec scripts complets, structure technique, dimensions KIIKA.
  */
 
 const k_600: ProtocolDetail = {
@@ -7666,6 +7666,1566 @@ const k_792: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pratique de la présence ne fonctionne pas pour moi"],
 };
 
+const k_1000: ProtocolDetail = {
+  protocolId: 1000,
+  efficacite: "KIIKA",
+  efficaciteSub: "Pédiatrie / Anxiété",
+  description: "Pour enfants 4-10 ans souffrant d'anxiété de séparation (école, garde, sortie sans parent). Travail ludique sur la sécurité intérieure et le lien qui demeure malgré la distance.",
+  indications: ["Anxiété de séparation à l'entrée à l'école", "Refus scolaire anxieux", "Difficulté à dormir sans parent à proximité", "Crises d'angoisse au moment de la séparation"],
+  contraindications: ["Trouble anxieux sévère pédiatrique (cadre spécialisé)", "Maltraitance suspectée"],
+  programs: [{
+    id: "principal",
+    title: "Anxiété de séparation chez l'enfant — Apprivoiser l'éloignement",
+    icon: "◑",
+    duration: "20 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Anxiété de séparation chez l'enfant — Apprivoiser l'éloignement",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour enfants 4-10 ans souffrant d'anxiété de séparation (école, garde, sortie sans parent). Travail ludique sur la sécurité intérieure et le lien qui demeure malgré la distance." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Lien intériorisé qui demeure", type: "Levier", icon: "🎯", desc: "Anxiété de séparation pédiatrique" },
+    { name: "Objet transitionnel imaginé", type: "Levier", icon: "🎯", desc: "Anxiété de séparation pédiatrique" },
+    { name: "Sécurité portée en soi", type: "Levier", icon: "🎯", desc: "Anxiété de séparation pédiatrique" },
+    { name: "Lien qui demeure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Force intérieure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "20 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur anxiété ne fonctionne pas pour moi"],
+};
+
+const k_1001: ProtocolDetail = {
+  protocolId: 1001,
+  efficacite: "KIIKA",
+  efficaciteSub: "Pédiatrie / Sommeil",
+  description: "Pour enfants 4-12 ans souffrant de peurs nocturnes, terreurs nocturnes, cauchemars répétés. Travail ludique sur le sentiment de sécurité au coucher, le contrôle imaginé sur les rêves.",
+  indications: ["Peur du noir, peur du coucher", "Cauchemars répétés", "Terreurs nocturnes", "Réveils anxieux"],
+  contraindications: ["Trauma à l'origine des cauchemars (cadre spécifique)", "Troubles du sommeil organiques"],
+  programs: [{
+    id: "principal",
+    title: "Peurs nocturnes et cauchemars — Le bouclier de rêves",
+    icon: "◑",
+    duration: "20 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Peurs nocturnes et cauchemars — Le bouclier de rêves",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour enfants 4-12 ans souffrant de peurs nocturnes, terreurs nocturnes, cauchemars répétés. Travail ludique sur le sentiment de sécurité au coucher, le contrôle imaginé sur les rêves." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Bouclier protecteur imaginé", type: "Levier", icon: "🎯", desc: "Sécurité nocturne pédiatrique" },
+    { name: "Personnage gardien", type: "Levier", icon: "🎯", desc: "Sécurité nocturne pédiatrique" },
+    { name: "Modification ludique des cauchemars", type: "Levier", icon: "🎯", desc: "Sécurité nocturne pédiatrique" },
+    { name: "Bouclier magique", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Gardien des rêves", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "20 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur sommeil ne fonctionne pas pour moi"],
+};
+
+const k_1002: ProtocolDetail = {
+  protocolId: 1002,
+  efficacite: "KIIKA",
+  efficaciteSub: "Pédiatrie / Phobie",
+  description: "Pour enfants 5-12 ans avec phobies spécifiques (animaux, insectes, médecin, dentiste, eau, hauteur). Travail de désensibilisation ludique avec progression douce.",
+  indications: ["Phobies spécifiques pédiatriques", "Enfants évitant des situations utiles (vaccins, baignade)", "Peurs invalidant le quotidien"],
+  contraindications: ["Phobies très sévères (cadre spécifique)"],
+  programs: [{
+    id: "principal",
+    title: "Phobies spécifiques chez l'enfant — Apprivoiser ce qui fait peur",
+    icon: "◑",
+    duration: "25 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Phobies spécifiques chez l'enfant — Apprivoiser ce qui fait peur",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour enfants 5-12 ans avec phobies spécifiques (animaux, insectes, médecin, dentiste, eau, hauteur). Travail de désensibilisation ludique avec progression douce." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Exposition imaginaire graduée et ludique", type: "Levier", icon: "🎯", desc: "Désensibilisation pédiatrique ludique" },
+    { name: "Pouvoir de l'enfant sur le scénario", type: "Levier", icon: "🎯", desc: "Désensibilisation pédiatrique ludique" },
+    { name: "Personnage protecteur", type: "Levier", icon: "🎯", desc: "Désensibilisation pédiatrique ludique" },
+    { name: "Courage qui grandit", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Magie protectrice", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "25 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur phobie ne fonctionne pas pour moi"],
+};
+
+const k_1003: ProtocolDetail = {
+  protocolId: 1003,
+  efficacite: "KIIKA",
+  efficaciteSub: "Pédiatrie / Soins",
+  description: "Pour préparation rapide d'un enfant 4-10 ans à un acte médical court mais redouté (vaccin, prise de sang, examen). Dispositif court avec lieu sûr ludique et transformation des sensations.",
+  indications: ["Préparation à acte médical court", "Enfants ayant développé peur après mauvaise expérience", "Soins répétés (allergies, diabète enfant)"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Préparation à un soin (vaccin, prise de sang, examen) — Confort enfant",
+    icon: "◑",
+    duration: "20 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Préparation à un soin (vaccin, prise de sang, examen) — Confort enfant",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour préparation rapide d'un enfant 4-10 ans à un acte médical court mais redouté (vaccin, prise de sang, examen). Dispositif court avec lieu sûr ludique et transformation des sensations." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Lieu magique", type: "Levier", icon: "🎯", desc: "Préparation pédiatrique acte court" },
+    { name: "Compagnon protecteur", type: "Levier", icon: "🎯", desc: "Préparation pédiatrique acte court" },
+    { name: "Transformation sensation", type: "Levier", icon: "🎯", desc: "Préparation pédiatrique acte court" },
+    { name: "Voyage protégé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Soin traversé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "20 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur soins ne fonctionne pas pour moi"],
+};
+
+const k_1004: ProtocolDetail = {
+  protocolId: 1004,
+  efficacite: "KIIKA",
+  efficaciteSub: "Pédiatrie / Alimentation",
+  description: "Pour enfants 5-12 ans avec difficultés alimentaires sélectives (refus de catégories d'aliments, sensibilité texture, néophobie). Travail ludique sans pression. PAS pour TCA pathologiques.",
+  indications: ["Néophobie alimentaire", "Sélectivité alimentaire marquée", "Sensibilité texturielle", "Repas devenus conflictuels"],
+  contraindications: ["Anorexie pédiatrique (cadre spécialisé URGENT)", "Boulimie", "Phobie de déglutition après trauma"],
+  programs: [{
+    id: "principal",
+    title: "Trouble alimentaire pédiatrique léger — Réconciliation avec l'alimentation",
+    icon: "◑",
+    duration: "25 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Trouble alimentaire pédiatrique léger — Réconciliation avec l'alimentation",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour enfants 5-12 ans avec difficultés alimentaires sélectives (refus de catégories d'aliments, sensibilité texture, néophobie). Travail ludique sans pression. PAS pour TCA pathologiques." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Découverte ludique des aliments", type: "Levier", icon: "🎯", desc: "Réconciliation alimentaire pédiatrique" },
+    { name: "Désinvestissement de la pression parentale", type: "Levier", icon: "🎯", desc: "Réconciliation alimentaire pédiatrique" },
+    { name: "Curiosité réveillée", type: "Levier", icon: "🎯", desc: "Réconciliation alimentaire pédiatrique" },
+    { name: "Découverte", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Petits pas", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "25 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur alimentation ne fonctionne pas pour moi"],
+};
+
+const k_1005: ProtocolDetail = {
+  protocolId: 1005,
+  efficacite: "KIIKA",
+  efficaciteSub: "Pédiatrie / Attention",
+  description: "Pour enfants 6-12 ans avec difficultés d'attention ou agitation (sans diagnostic TDAH, ou en complément). Travail sur la régulation, la qualité d'attention courte, le calme accessible.",
+  indications: ["Difficultés d'attention en classe", "Agitation excessive", "Difficulté à se poser", "Complément à un suivi TDAH"],
+  contraindications: ["TDAH sévère sans suivi spécialisé"],
+  programs: [{
+    id: "principal",
+    title: "Hyperactivité et difficulté de concentration chez l'enfant — Calme apprivoisé",
+    icon: "◑",
+    duration: "20 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Hyperactivité et difficulté de concentration chez l'enfant — Calme apprivoisé",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour enfants 6-12 ans avec difficultés d'attention ou agitation (sans diagnostic TDAH, ou en complément). Travail sur la régulation, la qualité d'attention courte, le calme accessible." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Calme accessible et bref", type: "Levier", icon: "🎯", desc: "Régulation attentionnelle pédiatrique" },
+    { name: "Image du focus", type: "Levier", icon: "🎯", desc: "Régulation attentionnelle pédiatrique" },
+    { name: "Outils de retour à l'attention", type: "Levier", icon: "🎯", desc: "Régulation attentionnelle pédiatrique" },
+    { name: "Calme apprivoisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Faisceau d'attention", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "20 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur attention ne fonctionne pas pour moi"],
+};
+
+const k_1006: ProtocolDetail = {
+  protocolId: 1006,
+  efficacite: "KIIKA",
+  efficaciteSub: "Pédiatrie / Estime",
+  description: "Pour enfants 6-12 ans avec faible estime de soi, hypersensibilité à la critique, peur de l'échec. Travail ludique sur la lumière intérieure, les forces de l'enfant, le droit à l'imperfection.",
+  indications: ["Faible estime de soi pédiatrique", "Hypersensibilité à la critique", "Peur de l'échec", "Comparaison constante avec frères/sœurs ou camarades"],
+  contraindications: ["Maltraitance ou harcèlement actifs (cadre spécifique)"],
+  programs: [{
+    id: "principal",
+    title: "Confiance en soi de l'enfant — Faire grandir la lumière intérieure",
+    icon: "◑",
+    duration: "25 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Confiance en soi de l'enfant — Faire grandir la lumière intérieure",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour enfants 6-12 ans avec faible estime de soi, hypersensibilité à la critique, peur de l'échec. Travail ludique sur la lumière intérieure, les forces de l'enfant, le droit à l'imperfection." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Lumière intérieure visualisée", type: "Levier", icon: "🎯", desc: "Estime de soi pédiatrique" },
+    { name: "Identification des forces propres", type: "Levier", icon: "🎯", desc: "Estime de soi pédiatrique" },
+    { name: "Droit à l'imperfection", type: "Levier", icon: "🎯", desc: "Estime de soi pédiatrique" },
+    { name: "Lumière qui grandit", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Mes forces à moi", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "25 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur estime ne fonctionne pas pour moi"],
+};
+
+const k_1007: ProtocolDetail = {
+  protocolId: 1007,
+  efficacite: "KIIKA",
+  efficaciteSub: "Pédiatrie / Harcèlement",
+  description: "Pour enfants victimes de harcèlement scolaire (en complément des actions sur le harcèlement lui-même). Travail sur la sécurité intérieure, la légitimité, la non-intériorisation des mots blessants.",
+  indications: ["Harcèlement scolaire en cours ou récent", "Séquelles psychiques d'un harcèlement passé", "Soutien en parallèle d'actions concrètes"],
+  contraindications: ["Substitution aux actions sur le harcèlement (signalement, école, médiation)", "ESPT constitué (cadre spécialisé)"],
+  programs: [{
+    id: "principal",
+    title: "Harcèlement scolaire — Soutien à l'enfant",
+    icon: "◑",
+    duration: "30 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Harcèlement scolaire — Soutien à l'enfant",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour enfants victimes de harcèlement scolaire (en complément des actions sur le harcèlement lui-même). Travail sur la sécurité intérieure, la légitimité, la non-intériorisation des mots blessants." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Légitimité réaffirmée", type: "Levier", icon: "🎯", desc: "Soutien à enfant harcelé" },
+    { name: "Bouclier protecteur", type: "Levier", icon: "🎯", desc: "Soutien à enfant harcelé" },
+    { name: "Non-intériorisation des paroles", type: "Levier", icon: "🎯", desc: "Soutien à enfant harcelé" },
+    { name: "Tu es légitime", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Bouclier qui protège", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "30 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur harcèlement ne fonctionne pas pour moi"],
+};
+
+const k_1008: ProtocolDetail = {
+  protocolId: 1008,
+  efficacite: "KIIKA",
+  efficaciteSub: "Pédiatrie / Tics",
+  description: "Pour enfants 6-12 ans avec tics nerveux fonctionnels ou TOC débutants légers (rituels de vérification, pensées intrusives). Travail d'apaisement et de désinvestissement.",
+  indications: ["Tics nerveux fonctionnels", "Rituels de vérification", "Pensées qui reviennent (TOC débutants)", "Précautions excessives"],
+  contraindications: ["Syndrome de Tourette", "TOC sévère (cadre TCC pédiatrique)"],
+  programs: [{
+    id: "principal",
+    title: "Tics nerveux et tocs légers chez l'enfant — Apaiser le système",
+    icon: "◑",
+    duration: "25 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Tics nerveux et tocs légers chez l'enfant — Apaiser le système",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour enfants 6-12 ans avec tics nerveux fonctionnels ou TOC débutants légers (rituels de vérification, pensées intrusives). Travail d'apaisement et de désinvestissement." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désinvestissement attentionnel", type: "Levier", icon: "🎯", desc: "Apaisement TOC/tics pédiatriques" },
+    { name: "Image du système qui se calme", type: "Levier", icon: "🎯", desc: "Apaisement TOC/tics pédiatriques" },
+    { name: "Non-réponse aux pensées", type: "Levier", icon: "🎯", desc: "Apaisement TOC/tics pédiatriques" },
+    { name: "Système apaisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Pensées qui passent", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "25 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur tics ne fonctionne pas pour moi"],
+};
+
+const k_1009: ProtocolDetail = {
+  protocolId: 1009,
+  efficacite: "KIIKA",
+  efficaciteSub: "Adolescent / Mal-être",
+  description: "Pour adolescents 12-17 ans en mal-être diffus, perte de repères, fluctuations émotionnelles intenses. Adaptation registre adolescent. PAS pour dépression majeure ni risque suicidaire.",
+  indications: ["Mal-être diffus de l'adolescence", "Crise identitaire", "Hypersensibilité émotionnelle adolescente", "Adolescents demandant un espace pour eux"],
+  contraindications: ["Dépression majeure (cadre médical)", "Idées suicidaires (urgence)", "Trouble psychiatrique avéré"],
+  programs: [{
+    id: "principal",
+    title: "Adolescent en mal-être — Accompagner la traversée",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Adolescent en mal-être — Accompagner la traversée",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour adolescents 12-17 ans en mal-être diffus, perte de repères, fluctuations émotionnelles intenses. Adaptation registre adolescent. PAS pour dépression majeure ni risque suicidaire." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Espace propre respecté", type: "Levier", icon: "🎯", desc: "Accompagnement adolescent" },
+    { name: "Légitimation des fluctuations", type: "Levier", icon: "🎯", desc: "Accompagnement adolescent" },
+    { name: "Identité en construction", type: "Levier", icon: "🎯", desc: "Accompagnement adolescent" },
+    { name: "Espace à toi", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Fluctuations normales", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur mal-être ne fonctionne pas pour moi"],
+};
+
+const k_1010: ProtocolDetail = {
+  protocolId: 1010,
+  efficacite: "KIIKA",
+  efficaciteSub: "Adolescent / Examens",
+  description: "Pour adolescents préparant brevet, bac, partiels, concours. Travail sur la confiance, l'apaisement de l'anxiété, la mobilisation des ressources le jour J. Adaptation registre.",
+  indications: ["Préparation brevet, bac, partiels", "Adolescents anxieux malgré bon travail", "Concours préparatoires", "Trous de mémoire en examen"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Adolescent et examens — Préparation aux brevets, bac, partiels",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Adolescent et examens — Préparation aux brevets, bac, partiels",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour adolescents préparant brevet, bac, partiels, concours. Travail sur la confiance, l'apaisement de l'anxiété, la mobilisation des ressources le jour J. Adaptation registre." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Confiance dans le travail accompli", type: "Levier", icon: "🎯", desc: "Préparation examen adolescent" },
+    { name: "Apaisement anxiété", type: "Levier", icon: "🎯", desc: "Préparation examen adolescent" },
+    { name: "Mobilisation des ressources", type: "Levier", icon: "🎯", desc: "Préparation examen adolescent" },
+    { name: "Connaissance disponible", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Mental préparé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur examens ne fonctionne pas pour moi"],
+};
+
+const k_1011: ProtocolDetail = {
+  protocolId: 1011,
+  efficacite: "KIIKA",
+  efficaciteSub: "Adolescent / Corps",
+  description: "Pour adolescents 12-17 ans en difficulté avec leur image corporelle (acné, corpulence, transformation pubertaire mal vécue, comparaison sur réseaux sociaux). PAS pour TCA pathologiques.",
+  indications: ["Difficultés image corporelle adolescente", "Mauvais vécu transformation pubertaire", "Comparaison toxique réseaux sociaux", "Estime de soi liée au physique"],
+  contraindications: ["Anorexie, boulimie, hyperphagie boulimique (cadre spécialisé)", "Dysphorie de genre (cadre spécifique)"],
+  programs: [{
+    id: "principal",
+    title: "Adolescent et image corporelle — Habiter le corps qui change",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Adolescent et image corporelle — Habiter le corps qui change",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour adolescents 12-17 ans en difficulté avec leur image corporelle (acné, corpulence, transformation pubertaire mal vécue, comparaison sur réseaux sociaux). PAS pour TCA pathologiques." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Réconciliation avec corps en transformation", type: "Levier", icon: "🎯", desc: "Image corporelle adolescente" },
+    { name: "Désinvestissement images extérieures", type: "Levier", icon: "🎯", desc: "Image corporelle adolescente" },
+    { name: "Valeur au-delà de l'apparence", type: "Levier", icon: "🎯", desc: "Image corporelle adolescente" },
+    { name: "Corps qui se construit", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Valeur intérieure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur corps ne fonctionne pas pour moi"],
+};
+
+const k_1012: ProtocolDetail = {
+  protocolId: 1012,
+  efficacite: "KIIKA",
+  efficaciteSub: "Périnatalité / Conception",
+  description: "Pour couples ou femmes en désir de grossesse depuis quelques mois, sans diagnostic d'infertilité avéré. Travail de détente, désamorçage de la pression, confiance dans le processus naturel.",
+  indications: ["Désir de grossesse depuis 6-12 mois", "Pression psychologique du chronomètre", "Détente nécessaire après échecs courts", "Préparation conception"],
+  contraindications: ["Infertilité diagnostiquée (PMA en cours - voir K-PERI-002)", "Promesse de résultat (jamais)"],
+  programs: [{
+    id: "principal",
+    title: "Désir d'enfant et conception — Apaiser le chemin",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Désir d'enfant et conception — Apaiser le chemin",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour couples ou femmes en désir de grossesse depuis quelques mois, sans diagnostic d'infertilité avéré. Travail de détente, désamorçage de la pression, confiance dans le processus naturel." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désamorçage de la pression mensuelle", type: "Levier", icon: "🎯", desc: "Apaisement et confiance dans la conception" },
+    { name: "Confiance dans le corps", type: "Levier", icon: "🎯", desc: "Apaisement et confiance dans la conception" },
+    { name: "Détente du système nerveux", type: "Levier", icon: "🎯", desc: "Apaisement et confiance dans la conception" },
+    { name: "Corps confiant", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Pression déposée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur conception ne fonctionne pas pour moi"],
+};
+
+const k_1013: ProtocolDetail = {
+  protocolId: 1013,
+  efficacite: "KIIKA",
+  efficaciteSub: "Périnatalité / PMA",
+  description: "Pour couples ou femmes en parcours d'aide médicale à la procréation (FIV, IAC, IVG médicamenteuse). Travail spécifique sur la traversée psychologique, l'attente, les échecs possibles, le maintien du couple.",
+  indications: ["PMA en cours (toutes formes)", "Parcours longs (plusieurs tentatives)", "Soutien après échec et reprise", "Maintien équilibre du couple en PMA"],
+  contraindications: ["Substitution au suivi médical PMA"],
+  programs: [{
+    id: "principal",
+    title: "Parcours PMA — Soutenir la traversée médicale",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Parcours PMA — Soutenir la traversée médicale",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour couples ou femmes en parcours d'aide médicale à la procréation (FIV, IAC, IVG médicamenteuse). Travail spécifique sur la traversée psychologique, l'attente, les échecs possibles, le maintien du couple." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Traversée des phases du parcours", type: "Levier", icon: "🎯", desc: "Accompagnement parcours PMA" },
+    { name: "Soutien dans l'attente", type: "Levier", icon: "🎯", desc: "Accompagnement parcours PMA" },
+    { name: "Acceptation des échecs", type: "Levier", icon: "🎯", desc: "Accompagnement parcours PMA" },
+    { name: "Parcours soutenu", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Patience habitée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pma ne fonctionne pas pour moi"],
+};
+
+const k_1014: ProtocolDetail = {
+  protocolId: 1014,
+  efficacite: "KIIKA",
+  efficaciteSub: "Périnatalité / Grossesse",
+  description: "Pour femmes enceintes en anxiété (peur de complications, hypervigilance corporelle, stress récurrent). Travail d'apaisement, de présence à la grossesse, de confiance dans le corps qui sait.",
+  indications: ["Anxiété de fond pendant grossesse", "Hypervigilance après antécédent obstétrical", "Stress chronique impactant la grossesse", "Peurs spécifiques (malformation, complications)"],
+  contraindications: ["Complications obstétricales actives (suivi médical strict)"],
+  programs: [{
+    id: "principal",
+    title: "Anxiété de la grossesse — Vivre la grossesse avec sérénité",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Anxiété de la grossesse — Vivre la grossesse avec sérénité",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour femmes enceintes en anxiété (peur de complications, hypervigilance corporelle, stress récurrent). Travail d'apaisement, de présence à la grossesse, de confiance dans le corps qui sait." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Lien à l'enfant porté", type: "Levier", icon: "🎯", desc: "Apaisement de l'anxiété pendant grossesse" },
+    { name: "Confiance dans le corps", type: "Levier", icon: "🎯", desc: "Apaisement de l'anxiété pendant grossesse" },
+    { name: "Désamorçage de l'hypervigilance", type: "Levier", icon: "🎯", desc: "Apaisement de l'anxiété pendant grossesse" },
+    { name: "Grossesse habitée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Lien apaisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur grossesse ne fonctionne pas pour moi"],
+};
+
+const k_1015: ProtocolDetail = {
+  protocolId: 1015,
+  efficacite: "KIIKA",
+  efficaciteSub: "Périnatalité / Symptômes",
+  description: "Pour femmes enceintes souffrant de nausées et vomissements gravidiques (premier trimestre principalement). Travail spécifique d'apaisement digestif, en complément éventuel du suivi médical.",
+  indications: ["Nausées matinales", "Vomissements gravidiques modérés", "Hyperémèse modérée (formes sévères = médical)", "Femmes voulant alternative ou complément"],
+  contraindications: ["Hyperémèse sévère (cadre médical strict)", "Substitution aux traitements"],
+  programs: [{
+    id: "principal",
+    title: "Nausées et vomissements de grossesse — Apaiser le système",
+    icon: "◑",
+    duration: "30 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Nausées et vomissements de grossesse — Apaiser le système",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour femmes enceintes souffrant de nausées et vomissements gravidiques (premier trimestre principalement). Travail spécifique d'apaisement digestif, en complément éventuel du suivi médical." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement digestif imagé", type: "Levier", icon: "🎯", desc: "Apaisement nausées de grossesse" },
+    { name: "Désamorçage cycle anxiété-nausée", type: "Levier", icon: "🎯", desc: "Apaisement nausées de grossesse" },
+    { name: "Geste-ancre pour soulagement", type: "Levier", icon: "🎯", desc: "Apaisement nausées de grossesse" },
+    { name: "Estomac apaisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Système qui s'adapte", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "30 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur symptômes ne fonctionne pas pour moi"],
+};
+
+const k_1016: ProtocolDetail = {
+  protocolId: 1016,
+  efficacite: "KIIKA",
+  efficaciteSub: "Périnatalité / Accouchement",
+  description: "Préparation hypnotique à l'accouchement (en complément des cours de préparation classiques ou hypnonatal). Travail sur la confiance dans le processus, les outils pour le travail, la gestion de la douleur.",
+  indications: ["Préparation accouchement (en complément)", "Femmes anxieuses face à l'accouchement", "Préparation après expérience difficile", "Souhait d'accouchement physiologique"],
+  contraindications: ["Substitution à la préparation classique"],
+  programs: [{
+    id: "principal",
+    title: "Préparation à l'accouchement — Confiance et outils",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Préparation à l'accouchement — Confiance et outils",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Préparation hypnotique à l'accouchement (en complément des cours de préparation classiques ou hypnonatal). Travail sur la confiance dans le processus, les outils pour le travail, la gestion de la douleur." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Confiance dans le corps physiologique", type: "Levier", icon: "🎯", desc: "Préparation hypnotique accouchement" },
+    { name: "Outils pour le travail (souffle, lieu sûr, anchors)", type: "Levier", icon: "🎯", desc: "Préparation hypnotique accouchement" },
+    { name: "Imagerie d'ouverture", type: "Levier", icon: "🎯", desc: "Préparation hypnotique accouchement" },
+    { name: "Corps qui sait", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Vague qui passe", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur accouchement ne fonctionne pas pour moi"],
+};
+
+const k_1017: ProtocolDetail = {
+  protocolId: 1017,
+  efficacite: "KIIKA",
+  efficaciteSub: "Périnatalité / Post-partum",
+  description: "Pour femmes ayant vécu un accouchement difficile ou traumatique (urgences, césarienne en urgence, complications, sentiment d'avoir été dépossédée). Travail d'intégration sans précipiter, pas de retraumatisation.",
+  indications: ["Vécu d'accouchement difficile", "Sentiment d'avoir été déresponsabilisée", "Souvenirs intrusifs post-accouchement", "Pas d'ESPT constitué"],
+  contraindications: ["ESPT post-partum constitué (cadre traumatologique)", "Phase aiguë très récente (laisser le temps)"],
+  programs: [{
+    id: "principal",
+    title: "Vécu difficile d'accouchement — Intégrer l'expérience",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Vécu difficile d'accouchement — Intégrer l'expérience",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour femmes ayant vécu un accouchement difficile ou traumatique (urgences, césarienne en urgence, complications, sentiment d'avoir été dépossédée). Travail d'intégration sans précipiter, pas de retraumatisation." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnaissance du vécu sans minimisation", type: "Levier", icon: "🎯", desc: "Intégration vécu accouchement difficile" },
+    { name: "Lieu sûr stabilisé", type: "Levier", icon: "🎯", desc: "Intégration vécu accouchement difficile" },
+    { name: "Récit ré-élaboré", type: "Levier", icon: "🎯", desc: "Intégration vécu accouchement difficile" },
+    { name: "Vécu reconnu", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Récit habité", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur post-partum ne fonctionne pas pour moi"],
+};
+
+const k_1018: ProtocolDetail = {
+  protocolId: 1018,
+  efficacite: "KIIKA",
+  efficaciteSub: "Périnatalité / Post-partum",
+  description: "Pour mères en post-partum difficile (baby blues prolongé, fatigue extrême, doute sur soi, difficulté à investir le bébé). PAS pour dépression post-partum constituée.",
+  indications: ["Post-partum difficile sans dépression majeure", "Baby blues prolongé (au-delà de 2 semaines)", "Fatigue épuisante", "Doutes sur ses capacités maternelles"],
+  contraindications: ["Dépression post-partum (cadre médical et psychiatrique)", "Pensées suicidaires ou de violence envers le bébé (urgence)"],
+  programs: [{
+    id: "principal",
+    title: "Post-partum difficile — Traverser les premiers mois",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Post-partum difficile — Traverser les premiers mois",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour mères en post-partum difficile (baby blues prolongé, fatigue extrême, doute sur soi, difficulté à investir le bébé). PAS pour dépression post-partum constituée." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Légitimation de la difficulté", type: "Levier", icon: "🎯", desc: "Soutien post-partum" },
+    { name: "Restauration énergétique", type: "Levier", icon: "🎯", desc: "Soutien post-partum" },
+    { name: "Confiance maternelle progressive", type: "Levier", icon: "🎯", desc: "Soutien post-partum" },
+    { name: "Mère qui apprend", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Énergie respectée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur post-partum ne fonctionne pas pour moi"],
+};
+
+const k_1019: ProtocolDetail = {
+  protocolId: 1019,
+  efficacite: "KIIKA",
+  efficaciteSub: "Périnatalité / Allaitement",
+  description: "Pour mères en difficulté avec l'allaitement (douleurs, refus du bébé, lactation insuffisante perçue, anxiété de manque). Soutien sans jugement sur le choix d'allaiter ou non.",
+  indications: ["Difficultés d'allaitement maternel", "Anxiété autour de la quantité de lait", "Douleurs persistantes malgré accompagnement", "Tensions psychiques autour du choix"],
+  contraindications: ["Substitution au suivi consultant en lactation"],
+  programs: [{
+    id: "principal",
+    title: "Allaitement difficile — Soutenir la traversée",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Allaitement difficile — Soutenir la traversée",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour mères en difficulté avec l'allaitement (douleurs, refus du bébé, lactation insuffisante perçue, anxiété de manque). Soutien sans jugement sur le choix d'allaiter ou non." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement de la pression", type: "Levier", icon: "🎯", desc: "Soutien à l'allaitement" },
+    { name: "Confiance dans le corps", type: "Levier", icon: "🎯", desc: "Soutien à l'allaitement" },
+    { name: "Désamorçage anxiété de manque", type: "Levier", icon: "🎯", desc: "Soutien à l'allaitement" },
+    { name: "Confiance dans le corps", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Lien préservé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur allaitement ne fonctionne pas pour moi"],
+};
+
+const k_1020: ProtocolDetail = {
+  protocolId: 1020,
+  efficacite: "KIIKA",
+  efficaciteSub: "Sexologie / Désir",
+  description: "Pour patientes (et patients) en perte de désir sexuel. Travail sur les conditions du désir, la reconnexion à soi, la dimension du plaisir possible. Pour individus ou en couple.",
+  indications: ["Baisse durable de libido", "Désir altéré après événements (post-partum, maladie, deuil)", "Patients en couple voulant retrouver l'élan", "Dimension psychique du désir"],
+  contraindications: ["Causes médicales non explorées (hormonales, médicamenteuses)", "Trauma sexuel actif (cadre spécialisé)"],
+  programs: [{
+    id: "principal",
+    title: "Désir et libido — Réveil de la dimension intime",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Désir et libido — Réveil de la dimension intime",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patientes (et patients) en perte de désir sexuel. Travail sur les conditions du désir, la reconnexion à soi, la dimension du plaisir possible. Pour individus ou en couple." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnexion sensorielle à soi", type: "Levier", icon: "🎯", desc: "Travail sur le désir" },
+    { name: "Désamorçage de la pression de performance", type: "Levier", icon: "🎯", desc: "Travail sur le désir" },
+    { name: "Condition d'émergence du désir", type: "Levier", icon: "🎯", desc: "Travail sur le désir" },
+    { name: "Sensorialité retrouvée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Désir invité", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur désir ne fonctionne pas pour moi"],
+};
+
+const k_1021: ProtocolDetail = {
+  protocolId: 1021,
+  efficacite: "KIIKA",
+  efficaciteSub: "Sexologie / Érection",
+  description: "Pour hommes avec difficultés d'érection à composante psychogène (pression de performance, anxiété, blocage situationnel). Pas pour causes organiques pures.",
+  indications: ["Difficultés d'érection à composante anxieuse", "Blocages situationnels après échec", "Hommes en pression de performance", "Soutien complémentaire au traitement médical"],
+  contraindications: ["Causes organiques majeures non traitées", "Substitution au traitement médical si indiqué"],
+  programs: [{
+    id: "principal",
+    title: "Difficultés d'érection — Apaiser la pression",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Difficultés d'érection — Apaiser la pression",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour hommes avec difficultés d'érection à composante psychogène (pression de performance, anxiété, blocage situationnel). Pas pour causes organiques pures." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désamorçage cycle anxiété-blocage", type: "Levier", icon: "🎯", desc: "Apaisement difficultés érectiles psychogènes" },
+    { name: "Reconnexion sensorielle", type: "Levier", icon: "🎯", desc: "Apaisement difficultés érectiles psychogènes" },
+    { name: "Désinvestissement performance", type: "Levier", icon: "🎯", desc: "Apaisement difficultés érectiles psychogènes" },
+    { name: "Pression déposée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Sensorialité retrouvée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur érection ne fonctionne pas pour moi"],
+};
+
+const k_1022: ProtocolDetail = {
+  protocolId: 1022,
+  efficacite: "KIIKA",
+  efficaciteSub: "Sexologie / Plaisir féminin",
+  description: "Pour femmes ayant difficulté à atteindre l'orgasme. Travail sur l'écoute du corps, le désinvestissement de la performance, la reconnexion au plaisir.",
+  indications: ["Anorgasmie primaire ou secondaire", "Difficulté à habiter le plaisir", "Pression intérieure ou de couple"],
+  contraindications: ["Trauma sexuel non traité", "Causes organiques non explorées"],
+  programs: [{
+    id: "principal",
+    title: "Anorgasmie féminine — Réconciliation au plaisir",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Anorgasmie féminine — Réconciliation au plaisir",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour femmes ayant difficulté à atteindre l'orgasme. Travail sur l'écoute du corps, le désinvestissement de la performance, la reconnexion au plaisir." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Écoute du corps", type: "Levier", icon: "🎯", desc: "Réconciliation au plaisir féminin" },
+    { name: "Désinvestissement de l'objectif", type: "Levier", icon: "🎯", desc: "Réconciliation au plaisir féminin" },
+    { name: "Reconnexion sensorielle", type: "Levier", icon: "🎯", desc: "Réconciliation au plaisir féminin" },
+    { name: "Corps écouté", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Plaisir habité", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur plaisir féminin ne fonctionne pas pour moi"],
+};
+
+const k_1023: ProtocolDetail = {
+  protocolId: 1023,
+  efficacite: "KIIKA",
+  efficaciteSub: "Sexologie / Couple",
+  description: "Pour couples vivant un déséquilibre de désir (l'un demande, l'autre se retire). Travail sur la communication, la dépose des dynamiques toxiques, la création d'espaces nouveaux.",
+  indications: ["Couples avec désir asymétrique chronique", "Tensions autour de la fréquence sexuelle", "Patrons demande/refus installés"],
+  contraindications: ["Violence dans le couple", "Pressions sexuelles inappropriées (à traiter en cadre spécifique)"],
+  programs: [{
+    id: "principal",
+    title: "Différence de désir dans le couple — Naviguer l'asymétrie",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Différence de désir dans le couple — Naviguer l'asymétrie",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour couples vivant un déséquilibre de désir (l'un demande, l'autre se retire). Travail sur la communication, la dépose des dynamiques toxiques, la création d'espaces nouveaux." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Décodage de la dynamique", type: "Levier", icon: "🎯", desc: "Travail sur l'asymétrie de désir" },
+    { name: "Communication renouvelée", type: "Levier", icon: "🎯", desc: "Travail sur l'asymétrie de désir" },
+    { name: "Sortie du pattern demande/refus", type: "Levier", icon: "🎯", desc: "Travail sur l'asymétrie de désir" },
+    { name: "Pattern brisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Communication vraie", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur couple ne fonctionne pas pour moi"],
+};
+
+const k_1024: ProtocolDetail = {
+  protocolId: 1024,
+  efficacite: "KIIKA",
+  efficaciteSub: "Sexologie / Âge",
+  description: "Pour patients confrontés aux changements de la sexualité avec l'âge (ménopause, andropause, modifications physiologiques, du désir, du corps). Travail de réinvention plutôt que de deuil.",
+  indications: ["Sexualité altérée par la ménopause/andropause", "Adaptation de la sexualité à l'âge", "Couples vieillissants questionnant leur intimité"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Sexualité et vieillissement — Réinventer l'intimité",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Sexualité et vieillissement — Réinventer l'intimité",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients confrontés aux changements de la sexualité avec l'âge (ménopause, andropause, modifications physiologiques, du désir, du corps). Travail de réinvention plutôt que de deuil." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Acceptation des changements", type: "Levier", icon: "🎯", desc: "Sexualité et vieillissement" },
+    { name: "Réinvention plutôt que deuil", type: "Levier", icon: "🎯", desc: "Sexualité et vieillissement" },
+    { name: "Approfondissement de l'intimité", type: "Levier", icon: "🎯", desc: "Sexualité et vieillissement" },
+    { name: "Sexualité réinventée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Intimité approfondie", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur âge ne fonctionne pas pour moi"],
+};
+
+const k_1025: ProtocolDetail = {
+  protocolId: 1025,
+  efficacite: "KIIKA",
+  efficaciteSub: "Périnatalité / Chirurgie",
+  description: "Pour femmes devant subir une chirurgie gynécologique (hystérectomie, ablation kyste, conisation, ovariectomie). Travail sur l'apaisement, la dimension symbolique de l'organe, la récupération.",
+  indications: ["Préparation à chirurgie gynécologique programmée", "Anxiété face à l'intervention", "Dimension symbolique de l'organe (utérus, ovaires)"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Préparation à une chirurgie gynécologique — Soin et confiance",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Préparation à une chirurgie gynécologique — Soin et confiance",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour femmes devant subir une chirurgie gynécologique (hystérectomie, ablation kyste, conisation, ovariectomie). Travail sur l'apaisement, la dimension symbolique de l'organe, la récupération." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement préopératoire", type: "Levier", icon: "🎯", desc: "Préparation chirurgie gynécologique" },
+    { name: "Reconnaissance de la dimension symbolique", type: "Levier", icon: "🎯", desc: "Préparation chirurgie gynécologique" },
+    { name: "Confiance dans le corps qui guérit", type: "Levier", icon: "🎯", desc: "Préparation chirurgie gynécologique" },
+    { name: "Corps confiant", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Soin reçu", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur chirurgie ne fonctionne pas pour moi"],
+};
+
+const k_1026: ProtocolDetail = {
+  protocolId: 1026,
+  efficacite: "KIIKA",
+  efficaciteSub: "Médical / Gynécologie",
+  description: "Pour patientes atteintes d'endométriose. Travail sur la gestion de la douleur, l'apaisement de l'inflammation imagée, la qualité de vie, la relation au corps et à la fertilité.",
+  indications: ["Endométriose confirmée en complément du suivi médical", "Douleurs cycliques", "Patientes en parcours fertilité avec endométriose", "Qualité de vie altérée"],
+  contraindications: ["Substitution au traitement médical"],
+  programs: [{
+    id: "principal",
+    title: "Endométriose — Vivre avec et au-delà",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Endométriose — Vivre avec et au-delà",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patientes atteintes d'endométriose. Travail sur la gestion de la douleur, l'apaisement de l'inflammation imagée, la qualité de vie, la relation au corps et à la fertilité." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Gestion de la douleur", type: "Levier", icon: "🎯", desc: "Soutien aux patientes endométriose" },
+    { name: "Apaisement inflammation imagée", type: "Levier", icon: "🎯", desc: "Soutien aux patientes endométriose" },
+    { name: "Réconciliation au corps", type: "Levier", icon: "🎯", desc: "Soutien aux patientes endométriose" },
+    { name: "Inflammation apaisée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Corps écouté", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur gynécologie ne fonctionne pas pour moi"],
+};
+
+const k_1027: ProtocolDetail = {
+  protocolId: 1027,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Tabac",
+  description: "Pour patients désireux d'arrêter le tabac ou consolider un arrêt récent. Travail sur la motivation profonde, les ancrages comportementaux, la gestion des envies, la prévention de rechute. Alternative ou complément aux substituts nicotiniques.",
+  indications: ["Désir d'arrêt de tabac avec motivation interne", "Consolidation d'arrêt récent", "Échecs antérieurs de sevrage", "Patients refusant les substituts ou en complément"],
+  contraindications: ["Patients sans motivation propre à arrêter", "Pathologie psychiatrique aiguë"],
+  programs: [{
+    id: "principal",
+    title: "Tabac — Arrêt et prévention rechute",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Tabac — Arrêt et prévention rechute",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients désireux d'arrêter le tabac ou consolider un arrêt récent. Travail sur la motivation profonde, les ancrages comportementaux, la gestion des envies, la prévention de rechute. Alternative ou complément aux substituts nicotiniques." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnexion à la motivation profonde", type: "Levier", icon: "🎯", desc: "Sevrage tabagique hypnotique" },
+    { name: "Désinvestissement de l'identité fumeur", type: "Levier", icon: "🎯", desc: "Sevrage tabagique hypnotique" },
+    { name: "Gestion des déclencheurs", type: "Levier", icon: "🎯", desc: "Sevrage tabagique hypnotique" },
+    { name: "Liberté retrouvée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Corps respecté", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur tabac ne fonctionne pas pour moi"],
+};
+
+const k_1028: ProtocolDetail = {
+  protocolId: 1028,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Alcool",
+  description: "Pour patients en réduction ou abstinence d'alcool, en COMPLÉMENT du suivi addictologique. Travail sur la motivation, les déclencheurs, la gestion des envies, la reconstruction d'une vie sans. JAMAIS substitution au sevrage médicalisé pour dépendance physique.",
+  indications: ["Démarche d'arrêt alcool en cours avec suivi médical", "Consommation problématique sans dépendance physique majeure", "Consolidation d'abstinence", "Réduction des consommations"],
+  contraindications: ["Dépendance physique sévère sans suivi médical (sevrage hospitalier obligatoire)", "Consommation active sans démarche", "Comorbidités psychiatriques non stabilisées"],
+  programs: [{
+    id: "principal",
+    title: "Alcool — Soutien à la réduction ou abstinence",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Alcool — Soutien à la réduction ou abstinence",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en réduction ou abstinence d'alcool, en COMPLÉMENT du suivi addictologique. Travail sur la motivation, les déclencheurs, la gestion des envies, la reconstruction d'une vie sans. JAMAIS substitution au sevrage médicalisé pour dépendance physique." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnexion au pourquoi profond", type: "Levier", icon: "🎯", desc: "Soutien à l'abstinence/réduction d'alcool" },
+    { name: "Gestion des déclencheurs", type: "Levier", icon: "🎯", desc: "Soutien à l'abstinence/réduction d'alcool" },
+    { name: "Outils anti-envie (craving)", type: "Levier", icon: "🎯", desc: "Soutien à l'abstinence/réduction d'alcool" },
+    { name: "Liberté retrouvée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Corps respecté", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur alcool ne fonctionne pas pour moi"],
+};
+
+const k_1029: ProtocolDetail = {
+  protocolId: 1029,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Alimentaire",
+  description: "Pour patients avec consommation excessive de sucre, grignotages compulsifs entre repas, addiction au sucré. Pas pour TCA pathologiques. Travail sur la régulation, les déclencheurs émotionnels, la satiété.",
+  indications: ["Grignotages compulsifs réguliers", "Addiction au sucré", "Consommations émotionnelles d'aliments", "Désir de réduction sans régime restrictif"],
+  contraindications: ["Anorexie, boulimie, hyperphagie boulimique (cadre TCA spécialisé)", "Diabète mal équilibré"],
+  programs: [{
+    id: "principal",
+    title: "Sucre et grignotage compulsif — Apaiser la demande",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Sucre et grignotage compulsif — Apaiser la demande",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients avec consommation excessive de sucre, grignotages compulsifs entre repas, addiction au sucré. Pas pour TCA pathologiques. Travail sur la régulation, les déclencheurs émotionnels, la satiété." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Identification des déclencheurs émotionnels", type: "Levier", icon: "🎯", desc: "Régulation alimentaire compulsive" },
+    { name: "Distinction faim / envie", type: "Levier", icon: "🎯", desc: "Régulation alimentaire compulsive" },
+    { name: "Outils alternatifs", type: "Levier", icon: "🎯", desc: "Régulation alimentaire compulsive" },
+    { name: "Faim juste", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Émotion accueillie autrement", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur alimentaire ne fonctionne pas pour moi"],
+};
+
+const k_1030: ProtocolDetail = {
+  protocolId: 1030,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Comportementales",
+  description: "Pour patients avec usage compulsif des écrans (smartphone, réseaux sociaux, séries, défilement infini). Travail sur la conscience de l'usage, la dépose des ancrages compulsifs, la reconquête du temps.",
+  indications: ["Usage compulsif des écrans", "Scrolling chronique", "Réseaux sociaux envahissants", "Sentiment de perte de temps massive", "FOMO (peur de rater)"],
+  contraindications: ["Aucune absolue, peut concerner tous publics"],
+  programs: [{
+    id: "principal",
+    title: "Écrans et réseaux sociaux — Reprendre le contrôle",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Écrans et réseaux sociaux — Reprendre le contrôle",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients avec usage compulsif des écrans (smartphone, réseaux sociaux, séries, défilement infini). Travail sur la conscience de l'usage, la dépose des ancrages compulsifs, la reconquête du temps." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Conscience de l'usage automatique", type: "Levier", icon: "🎯", desc: "Régulation usage des écrans" },
+    { name: "Identification des déclencheurs", type: "Levier", icon: "🎯", desc: "Régulation usage des écrans" },
+    { name: "Désamorçage du circuit de la récompense", type: "Levier", icon: "🎯", desc: "Régulation usage des écrans" },
+    { name: "Temps repris", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Choix conscient", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur comportementales ne fonctionne pas pour moi"],
+};
+
+const k_1031: ProtocolDetail = {
+  protocolId: 1031,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Jeux d'argent",
+  description: "Pour patients en addiction aux jeux d'argent (paris sportifs, machines à sous, casinos, poker en ligne) en COMPLÉMENT du suivi addictologique. Travail sur la motivation, l'identification du circuit de la récompense, la prévention rechute.",
+  indications: ["Addiction aux jeux d'argent en démarche d'arrêt", "Suivi en CSAPA en cours", "Pertes financières causant souffrance", "Soutien à la prévention de rechute"],
+  contraindications: ["Pas de démarche réelle d'arrêt", "Substitution au cadre spécialisé"],
+  programs: [{
+    id: "principal",
+    title: "Jeux d'argent — Sortir de la spirale",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Jeux d'argent — Sortir de la spirale",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en addiction aux jeux d'argent (paris sportifs, machines à sous, casinos, poker en ligne) en COMPLÉMENT du suivi addictologique. Travail sur la motivation, l'identification du circuit de la récompense, la prévention rechute." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnexion à la réalité des pertes", type: "Levier", icon: "🎯", desc: "Soutien à l'abstinence des jeux d'argent" },
+    { name: "Désamorçage du circuit récompense", type: "Levier", icon: "🎯", desc: "Soutien à l'abstinence des jeux d'argent" },
+    { name: "Gestion des envies (chasing)", type: "Levier", icon: "🎯", desc: "Soutien à l'abstinence des jeux d'argent" },
+    { name: "Réalité reconnue", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Spirale brisée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur jeux d'argent ne fonctionne pas pour moi"],
+};
+
+const k_1032: ProtocolDetail = {
+  protocolId: 1032,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Comportementales",
+  description: "Pour patients (adolescents et adultes) avec usage problématique des jeux vidéo, plateformes de streaming. Travail de régulation, pas d'interdit moral, restauration d'autres dimensions de la vie.",
+  indications: ["Usage excessif de jeux vidéo", "Sessions interminables de streaming/séries", "Retentissement sur le sommeil, le travail, les relations", "Patients souhaitant réguler"],
+  contraindications: ["Trouble du jeu vidéo (gaming disorder OMS) sévère : cadre spécialisé"],
+  programs: [{
+    id: "principal",
+    title: "Jeux vidéo et streaming — Régulation de l'usage",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Jeux vidéo et streaming — Régulation de l'usage",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients (adolescents et adultes) avec usage problématique des jeux vidéo, plateformes de streaming. Travail de régulation, pas d'interdit moral, restauration d'autres dimensions de la vie." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Conscience de l'usage et de ses fonctions", type: "Levier", icon: "🎯", desc: "Régulation jeux vidéo et streaming" },
+    { name: "Identification des bénéfices recherchés", type: "Levier", icon: "🎯", desc: "Régulation jeux vidéo et streaming" },
+    { name: "Restauration d'autres dimensions", type: "Levier", icon: "🎯", desc: "Régulation jeux vidéo et streaming" },
+    { name: "Usage choisi", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Vie multiple", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur comportementales ne fonctionne pas pour moi"],
+};
+
+const k_1033: ProtocolDetail = {
+  protocolId: 1033,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Comportementales",
+  description: "Pour patients avec achats compulsifs (vêtements, gadgets, e-commerce). Travail sur les déclencheurs émotionnels, le bref soulagement vs vide post-achat, la régulation.",
+  indications: ["Achats compulsifs récurrents", "Conséquences financières problématiques", "Vide ou culpabilité post-achat", "Désir de réguler"],
+  contraindications: ["Trouble bipolaire (phase maniaque)", "Substitution au suivi spécialisé"],
+  programs: [{
+    id: "principal",
+    title: "Achats compulsifs — Apaiser le besoin",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Achats compulsifs — Apaiser le besoin",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients avec achats compulsifs (vêtements, gadgets, e-commerce). Travail sur les déclencheurs émotionnels, le bref soulagement vs vide post-achat, la régulation." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Identification déclencheurs émotionnels", type: "Levier", icon: "🎯", desc: "Régulation achats compulsifs" },
+    { name: "Délai imposé avant achat", type: "Levier", icon: "🎯", desc: "Régulation achats compulsifs" },
+    { name: "Distinction besoin / désir compulsif", type: "Levier", icon: "🎯", desc: "Régulation achats compulsifs" },
+    { name: "Pause avant achat", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Vide reconnu", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur comportementales ne fonctionne pas pour moi"],
+};
+
+const k_1034: ProtocolDetail = {
+  protocolId: 1034,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Affectives",
+  description: "Pour patients en addiction affective (besoin compulsif de l'autre, dépendance amoureuse, incapacité à être seul, relations toxiques répétées). Travail sur la reconquête de soi, la sécurité intérieure, la sortie progressive.",
+  indications: ["Dépendance affective marquée", "Relations toxiques récurrentes", "Incapacité à être seul", "Patients prêts à se questionner sur le pattern"],
+  contraindications: ["Violence active dans le couple (cadre de protection d'abord)", "Trauma d'attachement sévère (cadre spécialisé)"],
+  programs: [{
+    id: "principal",
+    title: "Addictions affectives — Sortir du lien dévorant",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Addictions affectives — Sortir du lien dévorant",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en addiction affective (besoin compulsif de l'autre, dépendance amoureuse, incapacité à être seul, relations toxiques répétées). Travail sur la reconquête de soi, la sécurité intérieure, la sortie progressive." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnexion à soi", type: "Levier", icon: "🎯", desc: "Travail sur addiction affective" },
+    { name: "Sécurité intérieure indépendante", type: "Levier", icon: "🎯", desc: "Travail sur addiction affective" },
+    { name: "Identification du pattern", type: "Levier", icon: "🎯", desc: "Travail sur addiction affective" },
+    { name: "Soi retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Sécurité intérieure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur affectives ne fonctionne pas pour moi"],
+};
+
+const k_1035: ProtocolDetail = {
+  protocolId: 1035,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Affectives",
+  description: "Pour patients codépendants (proches d'addicts, sauveurs chroniques, hyper-responsables d'autrui). Travail sur la limite, la responsabilité de l'autre, la reconquête de soi.",
+  indications: ["Codépendance d'un proche addict", "Pattern de sauvetage chronique", "Hyper-responsabilité d'autrui", "Épuisement du rôle de soutien"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Codépendance — Cesser de sauver l'autre",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Codépendance — Cesser de sauver l'autre",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients codépendants (proches d'addicts, sauveurs chroniques, hyper-responsables d'autrui). Travail sur la limite, la responsabilité de l'autre, la reconquête de soi." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Distinction soi / autre", type: "Levier", icon: "🎯", desc: "Travail sur la codépendance" },
+    { name: "Limite de la responsabilité", type: "Levier", icon: "🎯", desc: "Travail sur la codépendance" },
+    { name: "Reconquête de soi", type: "Levier", icon: "🎯", desc: "Travail sur la codépendance" },
+    { name: "Soi retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Limite reconnue", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur affectives ne fonctionne pas pour moi"],
+};
+
+const k_1036: ProtocolDetail = {
+  protocolId: 1036,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Sexuelles",
+  description: "Pour patients en hypersexualité, addiction à la pornographie, compulsions sexuelles. En complément du suivi spécialisé. Travail sur la régulation, les déclencheurs, la reconstruction d'une sexualité intégrée.",
+  indications: ["Addiction à la pornographie", "Compulsions sexuelles répétées", "Hypersexualité ressentie comme problématique", "Démarche d'arrêt en cours"],
+  contraindications: ["Trauma sexuel non traité", "Substitution au cadre spécialisé", "Comportements illégaux ou prédateurs (cadre légal nécessaire)"],
+  programs: [{
+    id: "principal",
+    title: "Hypersexualité et compulsions sexuelles — Apaiser le système",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Hypersexualité et compulsions sexuelles — Apaiser le système",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en hypersexualité, addiction à la pornographie, compulsions sexuelles. En complément du suivi spécialisé. Travail sur la régulation, les déclencheurs, la reconstruction d'une sexualité intégrée." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Identification fonctions du comportement", type: "Levier", icon: "🎯", desc: "Régulation hypersexualité" },
+    { name: "Désamorçage circuit récompense", type: "Levier", icon: "🎯", desc: "Régulation hypersexualité" },
+    { name: "Gestion des envies", type: "Levier", icon: "🎯", desc: "Régulation hypersexualité" },
+    { name: "Soi retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Pulsion régulée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur sexuelles ne fonctionne pas pour moi"],
+};
+
+const k_1037: ProtocolDetail = {
+  protocolId: 1037,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Cannabis",
+  description: "Pour patients en démarche de réduction ou arrêt du cannabis. Travail sur la motivation, la reconquête des fonctions cognitives, la gestion des envies, la reconstruction.",
+  indications: ["Consommation problématique de cannabis", "Démarche d'arrêt", "Soutien en réduction", "Consolidation d'arrêt récent"],
+  contraindications: ["Trouble psychotique avéré ou comorbidité psychiatrique grave (cadre psychiatrique)", "Substitution au suivi addictologique"],
+  programs: [{
+    id: "principal",
+    title: "Cannabis — Régulation ou abstinence",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Cannabis — Régulation ou abstinence",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en démarche de réduction ou arrêt du cannabis. Travail sur la motivation, la reconquête des fonctions cognitives, la gestion des envies, la reconstruction." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Motivation profonde", type: "Levier", icon: "🎯", desc: "Soutien arrêt/réduction cannabis" },
+    { name: "Récupération des fonctions cognitives", type: "Levier", icon: "🎯", desc: "Soutien arrêt/réduction cannabis" },
+    { name: "Gestion des envies", type: "Levier", icon: "🎯", desc: "Soutien arrêt/réduction cannabis" },
+    { name: "Esprit clair", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Motivation retrouvée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur cannabis ne fonctionne pas pour moi"],
+};
+
+const k_1038: ProtocolDetail = {
+  protocolId: 1038,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Comportementales",
+  description: "Pour patients en addiction au travail (workaholisme), incapables de poser le travail, qui s'épuisent dans la performance. Travail sur les fonctions du surinvestissement, la restauration d'autres dimensions.",
+  indications: ["Workaholisme reconnu", "Incapacité à poser le travail", "Pré-burn-out lié au surinvestissement", "Prise de conscience tardive"],
+  contraindications: ["Burn-out constitué (arrêt nécessaire)"],
+  programs: [{
+    id: "principal",
+    title: "Travail compulsif et workaholisme — Sortir du tout-travail",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Travail compulsif et workaholisme — Sortir du tout-travail",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en addiction au travail (workaholisme), incapables de poser le travail, qui s'épuisent dans la performance. Travail sur les fonctions du surinvestissement, la restauration d'autres dimensions." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Identification des fonctions du travail compulsif", type: "Levier", icon: "🎯", desc: "Travail sur le workaholisme" },
+    { name: "Distinction valeur / production", type: "Levier", icon: "🎯", desc: "Travail sur le workaholisme" },
+    { name: "Restauration d'autres dimensions", type: "Levier", icon: "🎯", desc: "Travail sur le workaholisme" },
+    { name: "Vie multiple", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Valeur intrinsèque", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur comportementales ne fonctionne pas pour moi"],
+};
+
+const k_1039: ProtocolDetail = {
+  protocolId: 1039,
+  efficacite: "KIIKA",
+  efficaciteSub: "Addictions / Prévention rechute",
+  description: "Protocole transversal pour prévention de la rechute dans toute addiction. À utiliser en consolidation, après quelques semaines à mois d'abstinence. Travail spécifique sur l'identification précoce, les outils, le filet de sécurité.",
+  indications: ["Toute addiction en phase de consolidation", "Patients en abstinence depuis quelques semaines à mois", "Risque de rechute identifié", "Démarche de prévention proactive"],
+  contraindications: ["Rechute active en cours (autre approche)"],
+  programs: [{
+    id: "principal",
+    title: "Prévention de la rechute — Tenir dans la durée",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Prévention de la rechute — Tenir dans la durée",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Protocole transversal pour prévention de la rechute dans toute addiction. À utiliser en consolidation, après quelques semaines à mois d'abstinence. Travail spécifique sur l'identification précoce, les outils, le filet de sécurité." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Identification signaux précurseurs", type: "Levier", icon: "🎯", desc: "Prévention rechute toute addiction" },
+    { name: "Outils déjà éprouvés", type: "Levier", icon: "🎯", desc: "Prévention rechute toute addiction" },
+    { name: "Réseau de soutien activé", type: "Levier", icon: "🎯", desc: "Prévention rechute toute addiction" },
+    { name: "Vigilance bienveillante", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Outils prêts", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur prévention rechute ne fonctionne pas pour moi"],
+};
+
 export const kiikaHammondDetails: Record<number, ProtocolDetail> = {
   600: k_600,
   601: k_601,
@@ -7860,4 +9420,44 @@ export const kiikaHammondDetails: Record<number, ProtocolDetail> = {
   790: k_790,
   791: k_791,
   792: k_792,
+  1000: k_1000,
+  1001: k_1001,
+  1002: k_1002,
+  1003: k_1003,
+  1004: k_1004,
+  1005: k_1005,
+  1006: k_1006,
+  1007: k_1007,
+  1008: k_1008,
+  1009: k_1009,
+  1010: k_1010,
+  1011: k_1011,
+  1012: k_1012,
+  1013: k_1013,
+  1014: k_1014,
+  1015: k_1015,
+  1016: k_1016,
+  1017: k_1017,
+  1018: k_1018,
+  1019: k_1019,
+  1020: k_1020,
+  1021: k_1021,
+  1022: k_1022,
+  1023: k_1023,
+  1024: k_1024,
+  1025: k_1025,
+  1026: k_1026,
+  1027: k_1027,
+  1028: k_1028,
+  1029: k_1029,
+  1030: k_1030,
+  1031: k_1031,
+  1032: k_1032,
+  1033: k_1033,
+  1034: k_1034,
+  1035: k_1035,
+  1036: k_1036,
+  1037: k_1037,
+  1038: k_1038,
+  1039: k_1039,
 };
