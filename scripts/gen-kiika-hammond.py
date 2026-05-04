@@ -24,6 +24,8 @@ FILES = [
     "kiika_cercle4_lot1_deuil.json",
     "kiika_cercle4_lot2_emotions_difficiles.json",
     "kiika_cercle4_lot3_relationnel_transitions.json",
+    "kiika_cercle5_lot1_performance_sportive.json",
+    "kiika_cercle5_lot2_performance_pro.json",
 ]
 
 # Color by category prefix
@@ -79,6 +81,18 @@ def motifs_for(category, tags):
         motifs.append("Douleurs & psychosomatique")
         if "addiction" in cat:
             motifs.append("Addictions")
+    if "performance" in cat:
+        motifs.append("Performance & examens")
+        if "burn-out" in cat or "burn" in cat:
+            motifs.append("Burn-out & fatigue")
+        if "procrastination" in cat or "motivation" in cat:
+            motifs.append("Procrastination & motivation")
+        if "confiance" in cat or "perfectionnisme" in cat:
+            motifs.append("Estime & confiance en soi")
+        if "blocage" in cat or "crise" in cat or "pression" in cat:
+            motifs.append("Anxiété & stress")
+        if "reconversion" in cat or "transition" in cat:
+            motifs.append("Quête de sens & spiritualité")
     if "émotion" in cat or "motion" in cat:
         if "deuil" in cat or "perte" in cat:
             motifs.append("Trauma & deuil")
@@ -133,8 +147,8 @@ print(f"Loaded {len(all_protocols)} protocols")
 # Generate SQL seed
 sql_lines = [
     "-- Seed protocoles KIIKA Hammond (fiches détaillées Varinka Robert)",
-    "-- IDs : 600-762 (163 protocoles) — Cercles 1+2+3+4",
-    "-- Source : KIIKA v3 — fiches détaillées par lot (Noyau / Anxiété-Sommeil-Douleur / Médical-Somatique / Émotionnel-Relationnel)",
+    "-- IDs : 600-792 (193 protocoles) — Cercles 1+2+3+4+5",
+    "-- Source : KIIKA v3 — fiches détaillées par lot (Noyau / Anxiété-Sommeil-Douleur / Médical-Somatique / Émotionnel-Relationnel / Performance)",
     "",
     "INSERT INTO public.protocols (id, name, category, practice, description, duration, level, tags, color, sessions, objectives, source, motifs)",
     "VALUES",
@@ -196,9 +210,9 @@ ts_lines = [
     'import type { ProtocolDetail } from "./types";',
     '',
     '/**',
-    ' * Fiches détaillées KIIKA Hammond (IDs 600-762) — remplacent les anciens Hammond.',
-    ' * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3+4).',
-    ' * 163 protocoles avec scripts complets, structure technique, dimensions KIIKA.',
+    ' * Fiches détaillées KIIKA Hammond (IDs 600-792) — remplacent les anciens Hammond.',
+    ' * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3+4+5).',
+    ' * 193 protocoles avec scripts complets, structure technique, dimensions KIIKA.',
     ' */',
     '',
 ]

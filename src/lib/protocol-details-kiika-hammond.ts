@@ -1,9 +1,9 @@
 import type { ProtocolDetail } from "./types";
 
 /**
- * Fiches détaillées KIIKA Hammond (IDs 600-762) — remplacent les anciens Hammond.
- * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3+4).
- * 163 protocoles avec scripts complets, structure technique, dimensions KIIKA.
+ * Fiches détaillées KIIKA Hammond (IDs 600-792) — remplacent les anciens Hammond.
+ * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3+4+5).
+ * 193 protocoles avec scripts complets, structure technique, dimensions KIIKA.
  */
 
 const k_600: ProtocolDetail = {
@@ -6496,6 +6496,1176 @@ const k_762: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur sens ne fonctionne pas pour moi"],
 };
 
+const k_763: ProtocolDetail = {
+  protocolId: 763,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Préparation",
+  description: "Rituel hypnotique court à utiliser dans les heures précédant une compétition. Met l'athlète dans un état mental optimal : calme intense, focus, confiance, prêt à donner le meilleur sans crispation.",
+  indications: ["Compétition imminente (heures à minutes avant)", "Athlètes voulant un dispositif de mise en condition", "Suite de mauvaises performances liées à l'état mental", "Prévention du surplus d'énergie nerveuse"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Préparation mentale avant compétition — Le rituel d'entrée",
+    icon: "◑",
+    duration: "30 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Préparation mentale avant compétition — Le rituel d'entrée",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Rituel hypnotique court à utiliser dans les heures précédant une compétition. Met l'athlète dans un état mental optimal : calme intense, focus, confiance, prêt à donner le meilleur sans crispation." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Calme intense (pas mou)", type: "Levier", icon: "🎯", desc: "Préparation mentale courte avant compétition" },
+    { name: "Focus sur ce qui importe", type: "Levier", icon: "🎯", desc: "Préparation mentale courte avant compétition" },
+    { name: "Confiance corporelle activée", type: "Levier", icon: "🎯", desc: "Préparation mentale courte avant compétition" },
+    { name: "Calme tendu", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Présent total", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "30 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur préparation ne fonctionne pas pour moi"],
+};
+
+const k_764: ProtocolDetail = {
+  protocolId: 764,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Concentration",
+  description: "Pour athlètes qui décrochent mentalement en compétition (pensées parasites, anticipation du résultat, rumination sur erreur passée). Travail sur la qualité d'attention pendant l'épreuve.",
+  indications: ["Décrochage mental en compétition", "Pensées parasites pendant l'effort", "Rumination après erreur en cours d'épreuve", "Anticipation du résultat qui parasite l'action"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Focus en compétition — Garder l'attention juste",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Focus en compétition — Garder l'attention juste",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour athlètes qui décrochent mentalement en compétition (pensées parasites, anticipation du résultat, rumination sur erreur passée). Travail sur la qualité d'attention pendant l'épreuve." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Attention dans l'instant", type: "Levier", icon: "🎯", desc: "Travail sur le focus attentionnel en compétition" },
+    { name: "Réinitialisation après erreur", type: "Levier", icon: "🎯", desc: "Travail sur le focus attentionnel en compétition" },
+    { name: "Désinvestissement du résultat pendant l'action", type: "Levier", icon: "🎯", desc: "Travail sur le focus attentionnel en compétition" },
+    { name: "Présent dans l'action", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Attention juste", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur concentration ne fonctionne pas pour moi"],
+};
+
+const k_765: ProtocolDetail = {
+  protocolId: 765,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Confiance",
+  description: "Pour athlètes qui doutent de leur corps en compétition, qui se crispent par excès de contrôle conscient, ou qui ont perdu confiance après une blessure. Travail de réactivation de la confiance corporelle profonde.",
+  indications: ["Perte de confiance après blessure ou contre-performance", "Crispation par excès de contrôle conscient", "Athlètes qui doutent malgré un bon niveau", "Prévention en période d'enjeu fort"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Confiance corporelle — Faire confiance à l'entraînement",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Confiance corporelle — Faire confiance à l'entraînement",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour athlètes qui doutent de leur corps en compétition, qui se crispent par excès de contrôle conscient, ou qui ont perdu confiance après une blessure. Travail de réactivation de la confiance corporelle profonde." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Mémoire corporelle activée", type: "Levier", icon: "🎯", desc: "Restauration de la confiance corporelle" },
+    { name: "Désinvestissement du contrôle conscient", type: "Levier", icon: "🎯", desc: "Restauration de la confiance corporelle" },
+    { name: "Confiance profonde retrouvée", type: "Levier", icon: "🎯", desc: "Restauration de la confiance corporelle" },
+    { name: "Corps qui sait", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Mémoire vivante", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur confiance ne fonctionne pas pour moi"],
+};
+
+const k_766: ProtocolDetail = {
+  protocolId: 766,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Imagerie",
+  description: "Apprentissage de l'imagerie motrice de qualité pour répéter en imagination des gestes techniques. Méthode validée scientifiquement, particulièrement utile en complément de l'entraînement physique.",
+  indications: ["Apprentissage d'un geste technique nouveau", "Perfectionnement d'un geste existant", "Pratique en période de blessure (sans pouvoir bouger)", "Préparation d'un mouvement spécifique avant compétition"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Visualisation de geste technique — Imagerie motrice efficace",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Visualisation de geste technique — Imagerie motrice efficace",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Apprentissage de l'imagerie motrice de qualité pour répéter en imagination des gestes techniques. Méthode validée scientifiquement, particulièrement utile en complément de l'entraînement physique." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie multisensorielle", type: "Levier", icon: "🎯", desc: "Apprentissage de l'imagerie motrice" },
+    { name: "Vue interne (de l'intérieur du corps)", type: "Levier", icon: "🎯", desc: "Apprentissage de l'imagerie motrice" },
+    { name: "Précision du geste imaginé", type: "Levier", icon: "🎯", desc: "Apprentissage de l'imagerie motrice" },
+    { name: "Geste imaginé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Précision intérieure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur imagerie ne fonctionne pas pour moi"],
+};
+
+const k_767: ProtocolDetail = {
+  protocolId: 767,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Régulation",
+  description: "Pour athlètes qui s'effondrent mentalement après une erreur (point perdu, faute technique, mauvais départ). Travail spécifique sur la capacité à rebondir instantanément, à ne pas amplifier l'erreur.",
+  indications: ["Effondrement mental après une erreur", "Spirales négatives en compétition", "Athlètes qui multiplient les erreurs après la première", "Difficulté à oublier rapidement"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Gestion de l'erreur en compétition — Rebond rapide",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Gestion de l'erreur en compétition — Rebond rapide",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour athlètes qui s'effondrent mentalement après une erreur (point perdu, faute technique, mauvais départ). Travail spécifique sur la capacité à rebondir instantanément, à ne pas amplifier l'erreur." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reset rapide", type: "Levier", icon: "🎯", desc: "Capacité de rebond après erreur" },
+    { name: "Désinvestissement du passé immédiat", type: "Levier", icon: "🎯", desc: "Capacité de rebond après erreur" },
+    { name: "Geste-ancre de remise à zéro", type: "Levier", icon: "🎯", desc: "Capacité de rebond après erreur" },
+    { name: "Reset", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Page tournée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur régulation ne fonctionne pas pour moi"],
+};
+
+const k_768: ProtocolDetail = {
+  protocolId: 768,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Pression",
+  description: "Pour athlètes qui sous-performent dans les compétitions à fort enjeu. Travail sur le rapport au résultat, la transformation de la pression en énergie, l'investissement du processus plutôt que de la finalité.",
+  indications: ["Sous-performance en compétition à enjeu élevé", "Crispation à l'approche d'un objectif majeur", "Athlètes meilleurs à l'entraînement qu'en compétition", "Pression médiatique ou familiale"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Gestion de la pression du résultat — Performer sans se crisper",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Gestion de la pression du résultat — Performer sans se crisper",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour athlètes qui sous-performent dans les compétitions à fort enjeu. Travail sur le rapport au résultat, la transformation de la pression en énergie, l'investissement du processus plutôt que de la finalité." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désinvestissement du résultat pendant l'action", type: "Levier", icon: "🎯", desc: "Recadrage de la pression du résultat" },
+    { name: "Investissement total du processus", type: "Levier", icon: "🎯", desc: "Recadrage de la pression du résultat" },
+    { name: "Transformation pression en énergie", type: "Levier", icon: "🎯", desc: "Recadrage de la pression du résultat" },
+    { name: "Processus habité", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Pression transformée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pression ne fonctionne pas pour moi"],
+};
+
+const k_769: ProtocolDetail = {
+  protocolId: 769,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Flow",
+  description: "Pour faciliter l'entrée dans l'état de flow (expérience optimale décrite par Csikszentmihalyi). Travail sur les conditions mentales d'apparition du flow, ancrage des états vécus, conditions facilitantes.",
+  indications: ["Athlètes ayant déjà vécu le flow et voulant le retrouver", "Préparation pour épreuves longues nécessitant état optimal", "Amélioration globale de la qualité de présence en performance"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Activation de l'état de flow — L'expérience optimale",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Activation de l'état de flow — L'expérience optimale",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour faciliter l'entrée dans l'état de flow (expérience optimale décrite par Csikszentmihalyi). Travail sur les conditions mentales d'apparition du flow, ancrage des états vécus, conditions facilitantes." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Remémoration d'un flow vécu", type: "Levier", icon: "🎯", desc: "Activation de l'état de flow" },
+    { name: "Ancrage de cet état", type: "Levier", icon: "🎯", desc: "Activation de l'état de flow" },
+    { name: "Identification des conditions facilitantes", type: "Levier", icon: "🎯", desc: "Activation de l'état de flow" },
+    { name: "Flow vivant", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Action sans effort", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur flow ne fonctionne pas pour moi"],
+};
+
+const k_770: ProtocolDetail = {
+  protocolId: 770,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Blessure",
+  description: "Pour athlètes en phase de retour après blessure significative. Travail sur la confiance corporelle restaurée, la peur de la rechute, la reprise progressive psychique en parallèle de la reprise physique.",
+  indications: ["Retour de blessure significative", "Peur de la rechute paralysante", "Sous-performance après guérison physique complète", "Athlètes traumatisés par leur blessure"],
+  contraindications: ["Reprise médicale non validée"],
+  programs: [{
+    id: "principal",
+    title: "Retour de blessure — Reprise psychique de la confiance",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Retour de blessure — Reprise psychique de la confiance",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour athlètes en phase de retour après blessure significative. Travail sur la confiance corporelle restaurée, la peur de la rechute, la reprise progressive psychique en parallèle de la reprise physique." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désamorçage de la peur de rechute", type: "Levier", icon: "🎯", desc: "Reprise psychique post-blessure" },
+    { name: "Restauration de la confiance corporelle", type: "Levier", icon: "🎯", desc: "Reprise psychique post-blessure" },
+    { name: "Désensibilisation aux mouvements anxiogènes", type: "Levier", icon: "🎯", desc: "Reprise psychique post-blessure" },
+    { name: "Corps qui a repris", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Confiance restaurée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur blessure ne fonctionne pas pour moi"],
+};
+
+const k_771: ProtocolDetail = {
+  protocolId: 771,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Endurance",
+  description: "Pour sports d'endurance ou efforts longs (marathon, trail, cyclisme longue distance, triathlon). Travail sur la gestion de l'inconfort durable, la division mentale de l'effort, la résistance au décrochage.",
+  indications: ["Sports d'endurance avec long effort", "Athlètes qui décrochent dans les fins d'épreuve", "Préparation à un défi inhabituel en distance", "Course de très longue durée (ultra)"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Endurance mentale — Tenir sur la durée",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Endurance mentale — Tenir sur la durée",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour sports d'endurance ou efforts longs (marathon, trail, cyclisme longue distance, triathlon). Travail sur la gestion de l'inconfort durable, la division mentale de l'effort, la résistance au décrochage." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Découpage mental de l'effort", type: "Levier", icon: "🎯", desc: "Endurance mentale sur effort long" },
+    { name: "Acceptation de l'inconfort durable", type: "Levier", icon: "🎯", desc: "Endurance mentale sur effort long" },
+    { name: "Gestion des moments difficiles", type: "Levier", icon: "🎯", desc: "Endurance mentale sur effort long" },
+    { name: "Tenue dans la durée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Inconfort accepté", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur endurance ne fonctionne pas pour moi"],
+};
+
+const k_772: ProtocolDetail = {
+  protocolId: 772,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Collectif",
+  description: "Pour athlètes en sports collectifs (foot, basket, hand, rugby, volley). Travail sur la posture mentale dans le collectif, la gestion des relations avec coéquipiers, la performance individuelle au service de l'équipe.",
+  indications: ["Sports collectifs", "Athlètes en difficulté avec leur rôle", "Tensions en équipe affectant la performance", "Repositionnement mental en cours de saison"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Sports collectifs — Synergie d'équipe et rôle individuel",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Sports collectifs — Synergie d'équipe et rôle individuel",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour athlètes en sports collectifs (foot, basket, hand, rugby, volley). Travail sur la posture mentale dans le collectif, la gestion des relations avec coéquipiers, la performance individuelle au service de l'équipe." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Clarté du rôle individuel", type: "Levier", icon: "🎯", desc: "Mental du sportif d'équipe" },
+    { name: "Confiance dans le collectif", type: "Levier", icon: "🎯", desc: "Mental du sportif d'équipe" },
+    { name: "Gestion des frictions", type: "Levier", icon: "🎯", desc: "Mental du sportif d'équipe" },
+    { name: "Rôle habité", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Équipe portée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur collectif ne fonctionne pas pour moi"],
+};
+
+const k_773: ProtocolDetail = {
+  protocolId: 773,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Saison",
+  description: "Pour athlètes préparant un objectif majeur sur plusieurs mois (championnat, Jeux Olympiques, qualification). Travail de structuration mentale sur la durée, gestion des phases, prévention de l'épuisement.",
+  indications: ["Préparation d'un objectif majeur sur plusieurs mois", "Athlètes en perte de motivation à mi-parcours", "Saison longue avec compétitions multiples", "Qualifications olympiques ou mondiales"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Préparation longue durée — Saison ou objectif majeur",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Préparation longue durée — Saison ou objectif majeur",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour athlètes préparant un objectif majeur sur plusieurs mois (championnat, Jeux Olympiques, qualification). Travail de structuration mentale sur la durée, gestion des phases, prévention de l'épuisement." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Vision claire du jour J", type: "Levier", icon: "🎯", desc: "Préparation mentale longue durée" },
+    { name: "Découpage en phases", type: "Levier", icon: "🎯", desc: "Préparation mentale longue durée" },
+    { name: "Gestion de la motivation sur la durée", type: "Levier", icon: "🎯", desc: "Préparation mentale longue durée" },
+    { name: "Vision portée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Phases respectées", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur saison ne fonctionne pas pour moi"],
+};
+
+const k_774: ProtocolDetail = {
+  protocolId: 774,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Crise",
+  description: "Pour athlètes pris dans une spirale négative : enchaînement de contre-performances, doutes massifs, perte d'estime, blocage qui s'installe. Travail de remise à zéro et reconstruction progressive.",
+  indications: ["Spirale de contre-performances", "Doute massif sur soi", "Athlètes en perte de cap", "Blocage qui s'installe sur plusieurs semaines"],
+  contraindications: ["Dépression majeure (cadre médical en parallèle)"],
+  programs: [{
+    id: "principal",
+    title: "Sortie de spirale négative — Quand rien ne va plus",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Sortie de spirale négative — Quand rien ne va plus",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour athlètes pris dans une spirale négative : enchaînement de contre-performances, doutes massifs, perte d'estime, blocage qui s'installe. Travail de remise à zéro et reconstruction progressive." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnaissance de la spirale", type: "Levier", icon: "🎯", desc: "Sortie de spirale négative" },
+    { name: "Reconnexion aux fondations", type: "Levier", icon: "🎯", desc: "Sortie de spirale négative" },
+    { name: "Reset complet", type: "Levier", icon: "🎯", desc: "Sortie de spirale négative" },
+    { name: "Page tournée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Fondations retrouvées", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur crise ne fonctionne pas pour moi"],
+};
+
+const k_775: ProtocolDetail = {
+  protocolId: 775,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Perfectionnisme",
+  description: "Pour athlètes dont le perfectionnisme excessif paralyse la performance. Travail sur le rapport à l'erreur, l'autorisation de l'imperfection, la libération du geste de la contrainte du parfait.",
+  indications: ["Perfectionnisme entravant la performance", "Paralysie devant la possibilité d'erreur", "Athlètes qui ne s'autorisent pas le risque créatif", "Sur-analyse de chaque geste"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Perfectionnisme paralysant — Libérer le geste",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Perfectionnisme paralysant — Libérer le geste",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour athlètes dont le perfectionnisme excessif paralyse la performance. Travail sur le rapport à l'erreur, l'autorisation de l'imperfection, la libération du geste de la contrainte du parfait." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Distinction excellence / perfection", type: "Levier", icon: "🎯", desc: "Travail sur le perfectionnisme dans le sport" },
+    { name: "Autorisation de l'imperfection", type: "Levier", icon: "🎯", desc: "Travail sur le perfectionnisme dans le sport" },
+    { name: "Libération du geste", type: "Levier", icon: "🎯", desc: "Travail sur le perfectionnisme dans le sport" },
+    { name: "Geste libre", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Excellence sans perfection", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur perfectionnisme ne fonctionne pas pour moi"],
+};
+
+const k_776: ProtocolDetail = {
+  protocolId: 776,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Moments décisifs",
+  description: "Pour préparation à des moments isolés à très fort enjeu (tir au but, penalty, dernier coup, putt décisif, dernier service). Dispositif court à activer juste avant.",
+  indications: ["Tirs au but, penalties", "Coups décisifs en fin de match", "Moments à un seul essai", "Athlètes ayant raté des moments décisifs"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Préparation aux tirs au but, penalties, moments décisifs",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Préparation aux tirs au but, penalties, moments décisifs",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour préparation à des moments isolés à très fort enjeu (tir au but, penalty, dernier coup, putt décisif, dernier service). Dispositif court à activer juste avant." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Routine pré-action", type: "Levier", icon: "🎯", desc: "Dispositif pour moments décisifs ponctuels" },
+    { name: "État optimal en quelques secondes", type: "Levier", icon: "🎯", desc: "Dispositif pour moments décisifs ponctuels" },
+    { name: "Confiance dans le geste répété mille fois", type: "Levier", icon: "🎯", desc: "Dispositif pour moments décisifs ponctuels" },
+    { name: "Routine ancrée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Geste connu", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur moments décisifs ne fonctionne pas pour moi"],
+};
+
+const k_777: ProtocolDetail = {
+  protocolId: 777,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance sportive / Transition",
+  description: "Pour athlètes en fin de carrière (choisie ou subie : retraite, blessure de carrière, non-renouvellement). Travail spécifique sur cette transition majeure, identité au-delà du sport, deuil et reconstruction.",
+  indications: ["Athlètes en dernière saison", "Fin de carrière par blessure", "Non-renouvellement contractuel", "Anciens sportifs en difficulté d'après-carrière"],
+  contraindications: ["Dépression majeure (cadre médical en parallèle)"],
+  programs: [{
+    id: "principal",
+    title: "Fin de carrière sportive — Transition vers l'après",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Fin de carrière sportive — Transition vers l'après",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour athlètes en fin de carrière (choisie ou subie : retraite, blessure de carrière, non-renouvellement). Travail spécifique sur cette transition majeure, identité au-delà du sport, deuil et reconstruction." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnaissance du deuil sportif", type: "Levier", icon: "🎯", desc: "Accompagnement de fin de carrière" },
+    { name: "Identité au-delà de la performance", type: "Levier", icon: "🎯", desc: "Accompagnement de fin de carrière" },
+    { name: "Construction du nouveau monde", type: "Levier", icon: "🎯", desc: "Accompagnement de fin de carrière" },
+    { name: "Page tournée avec dignité", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Identité élargie", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur transition ne fonctionne pas pour moi"],
+};
+
+const k_778: ProtocolDetail = {
+  protocolId: 778,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance académique / Examen",
+  description: "Pour étudiants ou patients préparant un examen important. Travail sur la confiance dans le travail accompli, l'apaisement de l'anxiété, la mobilisation des ressources le jour J.",
+  indications: ["Examens importants à venir (semaines à jours)", "Étudiants travailleurs mais anxieux", "Concours, oraux, écrits", "Reprise d'études chez l'adulte"],
+  contraindications: ["Manque de travail réel (l'hypnose ne remplace pas la préparation)", "Trouble anxieux sévère"],
+  programs: [{
+    id: "principal",
+    title: "Préparation à un examen — Mobiliser ses ressources",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Préparation à un examen — Mobiliser ses ressources",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour étudiants ou patients préparant un examen important. Travail sur la confiance dans le travail accompli, l'apaisement de l'anxiété, la mobilisation des ressources le jour J." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Confiance dans le travail accompli", type: "Levier", icon: "🎯", desc: "Préparation à un examen" },
+    { name: "Apaisement anxiété anticipatoire", type: "Levier", icon: "🎯", desc: "Préparation à un examen" },
+    { name: "Mobilisation des ressources", type: "Levier", icon: "🎯", desc: "Préparation à un examen" },
+    { name: "Connaissance disponible", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Confiance dans le travail", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur examen ne fonctionne pas pour moi"],
+};
+
+const k_779: ProtocolDetail = {
+  protocolId: 779,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance académique / Apprentissage",
+  description: "Pour étudiants ou patients ayant des difficultés de concentration durant l'apprentissage. Travail sur la qualité d'attention, l'absence de distraction interne, l'apprentissage en présence pleine.",
+  indications: ["Difficultés de concentration", "Travail haché et peu efficace", "Distractions internes (rumination, anxiété)", "Améliorer la qualité du temps d'étude"],
+  contraindications: ["TDAH non pris en charge (combiner avec suivi médical)"],
+  programs: [{
+    id: "principal",
+    title: "Concentration et apprentissage — Optimiser le travail",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Concentration et apprentissage — Optimiser le travail",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour étudiants ou patients ayant des difficultés de concentration durant l'apprentissage. Travail sur la qualité d'attention, l'absence de distraction interne, l'apprentissage en présence pleine." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Présence pleine à la tâche", type: "Levier", icon: "🎯", desc: "Optimisation de la concentration en apprentissage" },
+    { name: "Désamorçage des distractions internes", type: "Levier", icon: "🎯", desc: "Optimisation de la concentration en apprentissage" },
+    { name: "Bulle d'étude", type: "Levier", icon: "🎯", desc: "Optimisation de la concentration en apprentissage" },
+    { name: "Présent dans la tâche", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Absorption", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur apprentissage ne fonctionne pas pour moi"],
+};
+
+const k_780: ProtocolDetail = {
+  protocolId: 780,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance académique / Mémoire",
+  description: "Pour patients ayant des difficultés à mémoriser ou à restituer ce qu'ils ont appris. Travail sur l'encodage, le ressouvenir, la lutte contre les blocages mnésiques liés au stress.",
+  indications: ["Difficultés de mémorisation", "Trous de mémoire en examen", "Patients ayant l'impression d'oublier vite", "Lutte contre le blanc en oral ou présentation"],
+  contraindications: ["Troubles cognitifs avérés (cadre médical)"],
+  programs: [{
+    id: "principal",
+    title: "Mémoire et restitution — Optimiser l'accès aux connaissances",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Mémoire et restitution — Optimiser l'accès aux connaissances",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients ayant des difficultés à mémoriser ou à restituer ce qu'ils ont appris. Travail sur l'encodage, le ressouvenir, la lutte contre les blocages mnésiques liés au stress." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Encodage en présence", type: "Levier", icon: "🎯", desc: "Optimisation mémoire et restitution" },
+    { name: "Imagerie associative", type: "Levier", icon: "🎯", desc: "Optimisation mémoire et restitution" },
+    { name: "Désamorçage des blocages stress", type: "Levier", icon: "🎯", desc: "Optimisation mémoire et restitution" },
+    { name: "Mémoire fidèle", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Accès libre", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur mémoire ne fonctionne pas pour moi"],
+};
+
+const k_781: ProtocolDetail = {
+  protocolId: 781,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance professionnelle / Prise de parole",
+  description: "Pour patients devant faire une présentation, conférence, soutenance, intervention publique. Travail sur la qualité de présence sur scène, la gestion de l'anxiété, la connexion avec l'auditoire.",
+  indications: ["Présentations professionnelles importantes", "Conférences à donner", "Soutenances de thèse, mémoires", "Patients craignant la prise de parole"],
+  contraindications: ["Phobie sociale invalidante (combiner avec K-ANX-004)"],
+  programs: [{
+    id: "principal",
+    title: "Présentation publique et prise de parole — Habiter la scène",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Présentation publique et prise de parole — Habiter la scène",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients devant faire une présentation, conférence, soutenance, intervention publique. Travail sur la qualité de présence sur scène, la gestion de l'anxiété, la connexion avec l'auditoire." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Présence sur scène", type: "Levier", icon: "🎯", desc: "Préparation à la prise de parole en public" },
+    { name: "Gestion du stress sur scène", type: "Levier", icon: "🎯", desc: "Préparation à la prise de parole en public" },
+    { name: "Connexion avec auditoire", type: "Levier", icon: "🎯", desc: "Préparation à la prise de parole en public" },
+    { name: "Scène habitée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Présence partagée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur prise de parole ne fonctionne pas pour moi"],
+};
+
+const k_782: ProtocolDetail = {
+  protocolId: 782,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance professionnelle / Entretien",
+  description: "Pour préparation à un entretien d'embauche, évaluation professionnelle, ou rencontre déterminante. Travail sur la posture, la confiance, la qualité de présence, la valorisation juste de soi.",
+  indications: ["Entretiens d'embauche importants", "Évaluations professionnelles", "Entretiens de promotion", "Rencontres déterminantes"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Entretien d'embauche ou évaluation — Présenter le meilleur de soi",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Entretien d'embauche ou évaluation — Présenter le meilleur de soi",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour préparation à un entretien d'embauche, évaluation professionnelle, ou rencontre déterminante. Travail sur la posture, la confiance, la qualité de présence, la valorisation juste de soi." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Confiance en sa valeur", type: "Levier", icon: "🎯", desc: "Préparation à l'entretien" },
+    { name: "Présence dans l'instant", type: "Levier", icon: "🎯", desc: "Préparation à l'entretien" },
+    { name: "Écoute active", type: "Levier", icon: "🎯", desc: "Préparation à l'entretien" },
+    { name: "Soi présenté", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Valeur portée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur entretien ne fonctionne pas pour moi"],
+};
+
+const k_783: ProtocolDetail = {
+  protocolId: 783,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance académique / Conduite",
+  description: "Pour patients préparant le permis de conduire (code et conduite), avec anxiété spécifique. Travail sur la maîtrise de l'examen, la confiance au volant, la décrispation pour la conduite quotidienne.",
+  indications: ["Préparation permis de conduire", "Échec à plusieurs reprises", "Anxiété de la conduite chez débutants", "Reprise de conduite après un long arrêt"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Permis de conduire — Apprivoiser l'examen et la conduite",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Permis de conduire — Apprivoiser l'examen et la conduite",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients préparant le permis de conduire (code et conduite), avec anxiété spécifique. Travail sur la maîtrise de l'examen, la confiance au volant, la décrispation pour la conduite quotidienne." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement de l'anxiété d'examen", type: "Levier", icon: "🎯", desc: "Préparation à l'examen et à la conduite" },
+    { name: "Confiance dans les acquis", type: "Levier", icon: "🎯", desc: "Préparation à l'examen et à la conduite" },
+    { name: "Décrispation au volant", type: "Levier", icon: "🎯", desc: "Préparation à l'examen et à la conduite" },
+    { name: "Conduite habitée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Confiance progressive", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur conduite ne fonctionne pas pour moi"],
+};
+
+const k_784: ProtocolDetail = {
+  protocolId: 784,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance créative / Blocage",
+  description: "Pour patients créatifs (artistes, écrivains, musiciens, designers, entrepreneurs) en blocage créatif. Travail sur les conditions de la créativité, le désinvestissement de l'auto-jugement, l'accès au flux.",
+  indications: ["Blocage créatif chez professionnels créatifs", "Page blanche prolongée", "Perte d'accès à la créativité", "Patients créatifs qui s'auto-censurent"],
+  contraindications: ["Dépression majeure (à traiter en parallèle)"],
+  programs: [{
+    id: "principal",
+    title: "Créativité bloquée — Libérer le flux créatif",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Créativité bloquée — Libérer le flux créatif",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients créatifs (artistes, écrivains, musiciens, designers, entrepreneurs) en blocage créatif. Travail sur les conditions de la créativité, le désinvestissement de l'auto-jugement, l'accès au flux." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désinvestissement de l'auto-jugement", type: "Levier", icon: "🎯", desc: "Déblocage créatif" },
+    { name: "Espace intérieur sans censure", type: "Levier", icon: "🎯", desc: "Déblocage créatif" },
+    { name: "Accès à l'inconscient créatif", type: "Levier", icon: "🎯", desc: "Déblocage créatif" },
+    { name: "Flux libéré", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Sans censure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur blocage ne fonctionne pas pour moi"],
+};
+
+const k_785: ProtocolDetail = {
+  protocolId: 785,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance / Motivation",
+  description: "Pour patients en perte de motivation pour des objectifs qu'ils valorisent pourtant. Travail sur la connexion au pourquoi profond, la division des objectifs, l'élan régénéré.",
+  indications: ["Perte de motivation pour un objectif personnel", "Procrastination chronique", "Difficulté à maintenir l'effort", "Démarrage difficile sur des projets longs"],
+  contraindications: ["Dépression majeure (à traiter d'abord)"],
+  programs: [{
+    id: "principal",
+    title: "Motivation durable — Restaurer l'élan vers ses objectifs",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Motivation durable — Restaurer l'élan vers ses objectifs",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en perte de motivation pour des objectifs qu'ils valorisent pourtant. Travail sur la connexion au pourquoi profond, la division des objectifs, l'élan régénéré." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnexion au pourquoi profond", type: "Levier", icon: "🎯", desc: "Restauration de la motivation" },
+    { name: "Division des objectifs", type: "Levier", icon: "🎯", desc: "Restauration de la motivation" },
+    { name: "Action minimale viable", type: "Levier", icon: "🎯", desc: "Restauration de la motivation" },
+    { name: "Élan retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Pourquoi vivant", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur motivation ne fonctionne pas pour moi"],
+};
+
+const k_786: ProtocolDetail = {
+  protocolId: 786,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance / Procrastination",
+  description: "Pour patients qui reportent systématiquement des tâches importantes. Travail sur les mécanismes du report, l'identification des évitements émotionnels, le passage à l'action.",
+  indications: ["Procrastination chronique", "Report de tâches importantes", "Patients qui font tout sauf ce qui compte", "Anxiété qui paralyse l'action"],
+  contraindications: ["TDAH non traité", "Dépression majeure"],
+  programs: [{
+    id: "principal",
+    title: "Procrastination — Sortir du report chronique",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Procrastination — Sortir du report chronique",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients qui reportent systématiquement des tâches importantes. Travail sur les mécanismes du report, l'identification des évitements émotionnels, le passage à l'action." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Identification de l'émotion fuie", type: "Levier", icon: "🎯", desc: "Travail sur la procrastination" },
+    { name: "Action de 5 minutes", type: "Levier", icon: "🎯", desc: "Travail sur la procrastination" },
+    { name: "Auto-bienveillance", type: "Levier", icon: "🎯", desc: "Travail sur la procrastination" },
+    { name: "Action commencée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Émotion accueillie", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur procrastination ne fonctionne pas pour moi"],
+};
+
+const k_787: ProtocolDetail = {
+  protocolId: 787,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance / Décision",
+  description: "Pour patients confrontés à une décision importante qu'ils n'arrivent pas à prendre. Travail sur l'écoute intérieure, la clarification des valeurs en jeu, le dépassement de la paralysie analytique.",
+  indications: ["Décisions importantes en suspens", "Paralysie analytique", "Tergiversations chroniques sur un choix", "Choix de carrière, de relation, de vie"],
+  contraindications: ["Décisions très complexes nécessitant expertise (juridique, médicale, financière)"],
+  programs: [{
+    id: "principal",
+    title: "Décision difficile — Clarifier la voie juste",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Décision difficile — Clarifier la voie juste",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients confrontés à une décision importante qu'ils n'arrivent pas à prendre. Travail sur l'écoute intérieure, la clarification des valeurs en jeu, le dépassement de la paralysie analytique." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Écoute intérieure profonde", type: "Levier", icon: "🎯", desc: "Aide à la décision" },
+    { name: "Clarification des valeurs en jeu", type: "Levier", icon: "🎯", desc: "Aide à la décision" },
+    { name: "Dépassement de l'analyse paralysante", type: "Levier", icon: "🎯", desc: "Aide à la décision" },
+    { name: "Voix sage entendue", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Valeurs clarifiées", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur décision ne fonctionne pas pour moi"],
+};
+
+const k_788: ProtocolDetail = {
+  protocolId: 788,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance professionnelle / Leadership",
+  description: "Pour patients en position de responsabilité ayant du mal à s'affirmer ou à incarner leur leadership. Travail sur la posture, l'autorité juste, la prise de place sans agression.",
+  indications: ["Managers en difficulté avec leur autorité", "Patients en prise de poste de responsabilité", "Difficulté à se faire respecter sans agresser", "Imposture dans le leadership"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Affirmation et leadership — Prendre sa place",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Affirmation et leadership — Prendre sa place",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en position de responsabilité ayant du mal à s'affirmer ou à incarner leur leadership. Travail sur la posture, l'autorité juste, la prise de place sans agression." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Posture intérieure d'autorité juste", type: "Levier", icon: "🎯", desc: "Travail sur l'affirmation et le leadership" },
+    { name: "Différenciation autorité / autoritarisme", type: "Levier", icon: "🎯", desc: "Travail sur l'affirmation et le leadership" },
+    { name: "Présence qui légitime", type: "Levier", icon: "🎯", desc: "Travail sur l'affirmation et le leadership" },
+    { name: "Place prise", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Autorité juste", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur leadership ne fonctionne pas pour moi"],
+};
+
+const k_789: ProtocolDetail = {
+  protocolId: 789,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance professionnelle / Burn-out",
+  description: "Pour patients en pré-burn-out (surcharge, premiers signes d'épuisement) ne nécessitant pas encore d'arrêt médical. Travail de prévention, restauration progressive, modification du rapport au travail.",
+  indications: ["Pré-burn-out", "Surcharge professionnelle chronique", "Premiers signes d'épuisement", "Désir de prévention chez patients à risque"],
+  contraindications: ["Burn-out constitué (NÉCESSITE arrêt médical et accompagnement spécialisé)"],
+  programs: [{
+    id: "principal",
+    title: "Burn-out en prévention — Tenir sans se brûler",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Burn-out en prévention — Tenir sans se brûler",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en pré-burn-out (surcharge, premiers signes d'épuisement) ne nécessitant pas encore d'arrêt médical. Travail de prévention, restauration progressive, modification du rapport au travail." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnaissance des signaux", type: "Levier", icon: "🎯", desc: "Prévention du burn-out" },
+    { name: "Restauration énergétique", type: "Levier", icon: "🎯", desc: "Prévention du burn-out" },
+    { name: "Modification du rapport au travail", type: "Levier", icon: "🎯", desc: "Prévention du burn-out" },
+    { name: "Énergie respectée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Rythme tenable", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur burn-out ne fonctionne pas pour moi"],
+};
+
+const k_790: ProtocolDetail = {
+  protocolId: 790,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance professionnelle / Reconversion",
+  description: "Pour patients en reconversion professionnelle, choisie ou subie. Travail sur l'identité professionnelle qui se transforme, le passage de l'ancien au nouveau métier, la confiance dans la transition.",
+  indications: ["Reconversion en cours", "Désir de reconversion encore flou", "Reconversion subie (licenciement, fermeture)", "Patients craignant de tout perdre"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Reconversion professionnelle — Habiter le changement",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Reconversion professionnelle — Habiter le changement",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en reconversion professionnelle, choisie ou subie. Travail sur l'identité professionnelle qui se transforme, le passage de l'ancien au nouveau métier, la confiance dans la transition." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Identité professionnelle en transition", type: "Levier", icon: "🎯", desc: "Accompagnement de reconversion" },
+    { name: "Acquis transférables", type: "Levier", icon: "🎯", desc: "Accompagnement de reconversion" },
+    { name: "Confiance dans le nouveau", type: "Levier", icon: "🎯", desc: "Accompagnement de reconversion" },
+    { name: "Métier qui se réinvente", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Acquis qui demeurent", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur reconversion ne fonctionne pas pour moi"],
+};
+
+const k_791: ProtocolDetail = {
+  protocolId: 791,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance / Projet",
+  description: "Pour entrepreneurs, créateurs, porteurs de projet personnel ayant des doutes sur leur capacité à mener à bien. Travail sur la confiance en sa vision, la persévérance, la résilience face aux obstacles.",
+  indications: ["Entrepreneurs en phase de lancement ou de doute", "Créateurs portant un projet artistique", "Porteurs de projet associatif ou personnel", "Doutes sur la capacité à porter le projet à terme"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Confiance dans un projet personnel — Porter sa vision",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Confiance dans un projet personnel — Porter sa vision",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour entrepreneurs, créateurs, porteurs de projet personnel ayant des doutes sur leur capacité à mener à bien. Travail sur la confiance en sa vision, la persévérance, la résilience face aux obstacles." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnexion à la vision", type: "Levier", icon: "🎯", desc: "Soutien à un projet personnel" },
+    { name: "Confiance dans sa capacité de porteur", type: "Levier", icon: "🎯", desc: "Soutien à un projet personnel" },
+    { name: "Résilience face aux obstacles", type: "Levier", icon: "🎯", desc: "Soutien à un projet personnel" },
+    { name: "Vision portée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Capacité reconnue", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur projet ne fonctionne pas pour moi"],
+};
+
+const k_792: ProtocolDetail = {
+  protocolId: 792,
+  efficacite: "KIIKA",
+  efficaciteSub: "Performance / Pratique de la présence",
+  description: "Protocole transversal de cultivation de la présence pleine dans toute activité. Approche du quotidien comme champ de performance — pas seulement les grands moments. Très KIIKA dans son esprit.",
+  indications: ["Patients souhaitant cultiver la qualité de présence", "Approche complémentaire à toute pratique", "Démarche de développement personnel global"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Vivre l'instant et l'engagement total — La performance au quotidien",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Vivre l'instant et l'engagement total — La performance au quotidien",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Protocole transversal de cultivation de la présence pleine dans toute activité. Approche du quotidien comme champ de performance — pas seulement les grands moments. Très KIIKA dans son esprit." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Présence dans l'instant", type: "Levier", icon: "🎯", desc: "Pratique de la présence pleine" },
+    { name: "Engagement total dans ce qu'on fait", type: "Levier", icon: "🎯", desc: "Pratique de la présence pleine" },
+    { name: "Conscience de la qualité du temps", type: "Levier", icon: "🎯", desc: "Pratique de la présence pleine" },
+    { name: "Instant habité", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Présence totale", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pratique de la présence ne fonctionne pas pour moi"],
+};
+
 export const kiikaHammondDetails: Record<number, ProtocolDetail> = {
   600: k_600,
   601: k_601,
@@ -6660,4 +7830,34 @@ export const kiikaHammondDetails: Record<number, ProtocolDetail> = {
   760: k_760,
   761: k_761,
   762: k_762,
+  763: k_763,
+  764: k_764,
+  765: k_765,
+  766: k_766,
+  767: k_767,
+  768: k_768,
+  769: k_769,
+  770: k_770,
+  771: k_771,
+  772: k_772,
+  773: k_773,
+  774: k_774,
+  775: k_775,
+  776: k_776,
+  777: k_777,
+  778: k_778,
+  779: k_779,
+  780: k_780,
+  781: k_781,
+  782: k_782,
+  783: k_783,
+  784: k_784,
+  785: k_785,
+  786: k_786,
+  787: k_787,
+  788: k_788,
+  789: k_789,
+  790: k_790,
+  791: k_791,
+  792: k_792,
 };
