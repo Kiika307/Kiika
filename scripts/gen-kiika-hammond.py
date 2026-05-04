@@ -105,7 +105,7 @@ print(f"Loaded {len(all_protocols)} protocols")
 # Generate SQL seed
 sql_lines = [
     "-- Seed protocoles KIIKA Hammond (fiches détaillées Varinka Robert)",
-    "-- IDs : 1000-1074 (75 protocoles)",
+    "-- IDs : 600-674 (75 protocoles) — REMPLACENT les anciens Hammond 600-700",
     "-- Source : KIIKA v3 — fiches détaillées par lot (Cercle 1 Noyau + Cercle 2 Anxiété/Sommeil/Douleur)",
     "",
     "INSERT INTO public.protocols (id, name, category, practice, description, duration, level, tags, color, sessions, objectives, source, motifs)",
@@ -113,7 +113,7 @@ sql_lines = [
 ]
 seed_rows = []
 for idx, p in enumerate(all_protocols):
-    db_id = 1000 + idx
+    db_id = 600 + idx
     name = p['titre']
     category = "KIIKA — " + p['categorie'].split(" / ", 1)[-1] if " / " in p['categorie'] else "KIIKA — " + p['categorie']
     description = p['description_courte']
@@ -168,7 +168,7 @@ ts_lines = [
     'import type { ProtocolDetail } from "./types";',
     '',
     '/**',
-    ' * Fiches détaillées KIIKA Hammond (IDs 1000-1074).',
+    ' * Fiches détaillées KIIKA Hammond (IDs 600-674) — remplacent les anciens Hammond 600-700.',
     ' * Source : Varinka Robert — fiches KIIKA v3 (Cercle 1 noyau + Cercle 2 Anxiété/Sommeil/Douleur).',
     ' * 75 protocoles avec scripts complets, structure technique, dimensions KIIKA.',
     ' */',
@@ -176,7 +176,7 @@ ts_lines = [
 ]
 
 for idx, p in enumerate(all_protocols):
-    db_id = 1000 + idx
+    db_id = 600 + idx
     name = p['titre']
     category = p['categorie']
     description = p['description_courte']
@@ -283,7 +283,7 @@ for idx, p in enumerate(all_protocols):
 # Export aggregator
 ts_lines.append("export const kiikaHammondDetails: Record<number, ProtocolDetail> = {")
 for idx in range(len(all_protocols)):
-    db_id = 1000 + idx
+    db_id = 600 + idx
     ts_lines.append(f"  {db_id}: k_{db_id},")
 ts_lines.append("};")
 

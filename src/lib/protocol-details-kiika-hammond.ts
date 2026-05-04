@@ -1,13 +1,13 @@
 import type { ProtocolDetail } from "./types";
 
 /**
- * Fiches détaillées KIIKA Hammond (IDs 1000-1074).
+ * Fiches détaillées KIIKA Hammond (IDs 600-674) — remplacent les anciens Hammond 600-700.
  * Source : Varinka Robert — fiches KIIKA v3 (Cercle 1 noyau + Cercle 2 Anxiété/Sommeil/Douleur).
  * 75 protocoles avec scripts complets, structure technique, dimensions KIIKA.
  */
 
-const k_1000: ProtocolDetail = {
-  protocolId: 1000,
+const k_600: ProtocolDetail = {
+  protocolId: 600,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Induction",
   description: "Induction métaphorique douce par descente d'un escalier imaginaire, comptage de 10 à 1 avec dépose progressive des tensions corporelles. Convient à la majorité des patients en début de prise en charge.",
@@ -48,8 +48,8 @@ const k_1000: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur induction ne fonctionne pas pour moi"],
 };
 
-const k_1001: ProtocolDetail = {
-  protocolId: 1001,
+const k_601: ProtocolDetail = {
+  protocolId: 601,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Induction",
   description: "Induction classique par focalisation du regard sur un point fixe (point au mur, flamme de bougie, doigt du thérapeute), avec installation progressive de la fatigue oculaire qui amène la fermeture spontanée des paupières.",
@@ -91,8 +91,8 @@ const k_1001: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur induction ne fonctionne pas pour moi"],
 };
 
-const k_1002: ProtocolDetail = {
-  protocolId: 1002,
+const k_602: ProtocolDetail = {
+  protocolId: 602,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Induction",
   description: "Induction par balayage corporel descendant ou ascendant, en relaxant successivement chaque zone du corps. Méthode rassurante, transparente, particulièrement utile pour patients somatiques ou anxieux.",
@@ -136,8 +136,8 @@ const k_1002: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur induction ne fonctionne pas pour moi"],
 };
 
-const k_1003: ProtocolDetail = {
-  protocolId: 1003,
+const k_603: ProtocolDetail = {
+  protocolId: 603,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Induction",
   description: "Induction permissive par conversation orientée, utilisation de truismes, de sensations naturelles déjà présentes, et de suggestions indirectes. Sans annonce d'hypnose. Convient aux patients résistants ou défensifs.",
@@ -179,8 +179,8 @@ const k_1003: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur induction ne fonctionne pas pour moi"],
 };
 
-const k_1004: ProtocolDetail = {
-  protocolId: 1004,
+const k_604: ProtocolDetail = {
+  protocolId: 604,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Induction",
   description: "Induction kinesthésique avec démonstration : la main du patient se soulève apparemment toute seule sous l'effet de suggestions de légèreté. Ratification puissante de la transe pour patients qui ont besoin de preuves.",
@@ -224,8 +224,8 @@ const k_1004: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur induction ne fonctionne pas pour moi"],
 };
 
-const k_1005: ProtocolDetail = {
-  protocolId: 1005,
+const k_605: ProtocolDetail = {
+  protocolId: 605,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Induction",
   description: "Induction de quelques secondes pour patients déjà entraînés, par activation d'un signal d'auto-induction préalablement installé (geste, respiration, mot-clé). Idéale pour les séances de suivi ou l'usage en autohypnose.",
@@ -265,8 +265,8 @@ const k_1005: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur induction ne fonctionne pas pour moi"],
 };
 
-const k_1006: ProtocolDetail = {
-  protocolId: 1006,
+const k_606: ProtocolDetail = {
+  protocolId: 606,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Approfondissement",
   description: "Approfondissement classique par comptage de 20 à 1, ou de 10 à 1, avec suggestion d'enfoncement progressif à chaque chiffre. Brique simple et fiable utilisable après n'importe quelle induction.",
@@ -305,8 +305,8 @@ const k_1006: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur approfondissement ne fonctionne pas pour moi"],
 };
 
-const k_1007: ProtocolDetail = {
-  protocolId: 1007,
+const k_607: ProtocolDetail = {
+  protocolId: 607,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Approfondissement",
   description: "Approfondissement par cycles successifs de transe-éveil-retransition. À chaque cycle, la transe atteinte est plus profonde que la précédente. Très efficace pour patients qui résistent à un approfondissement linéaire.",
@@ -349,8 +349,8 @@ const k_1007: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur approfondissement ne fonctionne pas pour moi"],
 };
 
-const k_1008: ProtocolDetail = {
-  protocolId: 1008,
+const k_608: ProtocolDetail = {
+  protocolId: 608,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Approfondissement",
   description: "Approfondissement par imagerie kinesthésique de descente : ascenseur intérieur, racines qui s'enfoncent, plongée dans une eau calme. Choix de l'image selon le patient.",
@@ -392,8 +392,8 @@ const k_1008: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur approfondissement ne fonctionne pas pour moi"],
 };
 
-const k_1009: ProtocolDetail = {
-  protocolId: 1009,
+const k_609: ProtocolDetail = {
+  protocolId: 609,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Approfondissement",
   description: "Approfondissement par accumulation de ratifications : le thérapeute nomme des phénomènes hypnotiques observables ou subjectivement présents, et les utilise pour confirmer et amplifier la transe.",
@@ -434,8 +434,8 @@ const k_1009: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur approfondissement ne fonctionne pas pour moi"],
 };
 
-const k_1010: ProtocolDetail = {
-  protocolId: 1010,
+const k_610: ProtocolDetail = {
+  protocolId: 610,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Lieu ressource",
   description: "Installation d'un lieu intérieur de sécurité absolue, accessible à tout moment. Pierre angulaire de tout travail hypnotique, particulièrement en contexte traumatique. À installer en première ou deuxième séance.",
@@ -480,8 +480,8 @@ const k_1010: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur lieu ressource ne fonctionne pas pour moi"],
 };
 
-const k_1011: ProtocolDetail = {
-  protocolId: 1011,
+const k_611: ProtocolDetail = {
+  protocolId: 611,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Lieu ressource",
   description: "Variante du lieu sûr orientée vers la dimension sacrée et spirituelle. Lieu de recueillement, de connexion à plus grand que soi. Particulièrement adapté à l'approche thérapeutique-spirituelle de KIIKA.",
@@ -526,8 +526,8 @@ const k_1011: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur lieu ressource ne fonctionne pas pour moi"],
 };
 
-const k_1012: ProtocolDetail = {
-  protocolId: 1012,
+const k_612: ProtocolDetail = {
+  protocolId: 612,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Lieu ressource",
   description: "Lieu ressource sous forme de jardin personnel, espace d'exploration et de soin. Permet le travail métaphorique sur la croissance, les saisons, les semis. Très utilisable avec enfants et adolescents.",
@@ -570,8 +570,8 @@ const k_1012: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur lieu ressource ne fonctionne pas pour moi"],
 };
 
-const k_1013: ProtocolDetail = {
-  protocolId: 1013,
+const k_613: ProtocolDetail = {
+  protocolId: 613,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Lieu ressource",
   description: "Lieu ressource sous forme de cabane ou abri personnel : espace contenant, chaleureux, fortement délimité. Particulièrement adapté aux patients ayant besoin d'un sentiment de protection forte.",
@@ -614,8 +614,8 @@ const k_1013: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur lieu ressource ne fonctionne pas pour moi"],
 };
 
-const k_1014: ProtocolDetail = {
-  protocolId: 1014,
+const k_614: ProtocolDetail = {
+  protocolId: 614,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Lieu ressource",
   description: "Lieu ressource organisé autour d'un élément aquatique (rivière, lac, mer, source, bain). Offre des qualités spécifiques : fluidité, contenance liquide, lavage symbolique, dépose des charges.",
@@ -659,8 +659,8 @@ const k_1014: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur lieu ressource ne fonctionne pas pour moi"],
 };
 
-const k_1015: ProtocolDetail = {
-  protocolId: 1015,
+const k_615: ProtocolDetail = {
+  protocolId: 615,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Ancrage",
   description: "Installation d'un geste discret (pouce-index, main sur le sternum, paume sur le ventre) qui devient déclencheur d'un état ressource accessible en toute situation, y compris en public.",
@@ -703,8 +703,8 @@ const k_1015: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur ancrage ne fonctionne pas pour moi"],
 };
 
-const k_1016: ProtocolDetail = {
-  protocolId: 1016,
+const k_616: ProtocolDetail = {
+  protocolId: 616,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Ancrage",
   description: "Installation d'un schéma respiratoire spécifique (par exemple : inspiration 4 temps, rétention 2 temps, expiration 6 temps) comme déclencheur d'un état de calme accessible à tout moment.",
@@ -747,8 +747,8 @@ const k_1016: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur ancrage ne fonctionne pas pour moi"],
 };
 
-const k_1017: ProtocolDetail = {
-  protocolId: 1017,
+const k_617: ProtocolDetail = {
+  protocolId: 617,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Ancrage",
   description: "Choix et installation d'un mot-clef personnel (mot ressource ou mot inventé) qui devient déclencheur d'un état intérieur. Ancre verbale particulièrement adaptée aux patients qui pensent en mots.",
@@ -790,8 +790,8 @@ const k_1017: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur ancrage ne fonctionne pas pour moi"],
 };
 
-const k_1018: ProtocolDetail = {
-  protocolId: 1018,
+const k_618: ProtocolDetail = {
+  protocolId: 618,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Ancrage",
   description: "Installation du signal qui permettra au patient d'entrer rapidement en transe seul. Étape clef pour rendre le patient autonome et utilisable avec K-BASE-006 (induction rapide).",
@@ -835,8 +835,8 @@ const k_1018: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur ancrage ne fonctionne pas pour moi"],
 };
 
-const k_1019: ProtocolDetail = {
-  protocolId: 1019,
+const k_619: ProtocolDetail = {
+  protocolId: 619,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Dissociation",
   description: "Installation d'une position d'observateur intérieur qui regarde l'expérience sans s'y identifier. Brique fondamentale pour tout travail dissociatif, particulièrement utile face à du contenu chargé.",
@@ -879,8 +879,8 @@ const k_1019: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dissociation ne fonctionne pas pour moi"],
 };
 
-const k_1020: ProtocolDetail = {
-  protocolId: 1020,
+const k_620: ProtocolDetail = {
+  protocolId: 620,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Dissociation",
   description: "Technique de dissociation par projection d'un contenu mental sur un écran de cinéma intérieur. Permet de regarder une scène pénible, un souvenir, un comportement à distance, avec contrôle des paramètres (taille, couleur, son, vitesse).",
@@ -923,8 +923,8 @@ const k_1020: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dissociation ne fonctionne pas pour moi"],
 };
 
-const k_1021: ProtocolDetail = {
-  protocolId: 1021,
+const k_621: ProtocolDetail = {
+  protocolId: 621,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Dissociation",
   description: "Installation d'une métaphore de déplacement temporel intérieur permettant régression et progression douces. Brique préalable aux protocoles de régression en âge ou de progression future.",
@@ -967,8 +967,8 @@ const k_1021: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dissociation ne fonctionne pas pour moi"],
 };
 
-const k_1022: ProtocolDetail = {
-  protocolId: 1022,
+const k_622: ProtocolDetail = {
+  protocolId: 622,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Dissociation",
   description: "Installation d'une figure intérieure sage et bienveillante (conseiller, guide, vieil ami intérieur, ancêtre) à laquelle le patient peut s'adresser pour obtenir des éclairages venant de son inconscient.",
@@ -1012,8 +1012,8 @@ const k_1022: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dissociation ne fonctionne pas pour moi"],
 };
 
-const k_1023: ProtocolDetail = {
-  protocolId: 1023,
+const k_623: ProtocolDetail = {
+  protocolId: 623,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Dissociation",
   description: "Installation d'une enveloppe protectrice imaginaire (bulle, cocon, halo) qui entoure le patient et filtre ce qui peut l'atteindre. Particulièrement utile pour patients hypersensibles et en travail psycho-spirituel.",
@@ -1056,8 +1056,8 @@ const k_1023: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dissociation ne fonctionne pas pour moi"],
 };
 
-const k_1024: ProtocolDetail = {
-  protocolId: 1024,
+const k_624: ProtocolDetail = {
+  protocolId: 624,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Retour",
   description: "Retour à l'état de veille par remontée d'escalier inverse, comptage de 1 à 10 avec réintégration progressive du corps, des sens et de l'environnement. Brique de retour la plus utilisée.",
@@ -1097,8 +1097,8 @@ const k_1024: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur retour ne fonctionne pas pour moi"],
 };
 
-const k_1025: ProtocolDetail = {
-  protocolId: 1025,
+const k_625: ProtocolDetail = {
+  protocolId: 625,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Retour",
   description: "Retour bref en quelques minutes pour situations cliniques pressées (séance courte, fin de consultation, patient pressé). À utiliser uniquement sur des transes légères à modérées.",
@@ -1137,8 +1137,8 @@ const k_1025: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur retour ne fonctionne pas pour moi"],
 };
 
-const k_1026: ProtocolDetail = {
-  protocolId: 1026,
+const k_626: ProtocolDetail = {
+  protocolId: 626,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Retour",
   description: "Retour qui inclut un temps de consolidation : revue rapide des bénéfices de la séance, ancrage des nouvelles ressources, suggestions de prolongement inconscient du travail entre les séances.",
@@ -1180,8 +1180,8 @@ const k_1026: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur retour ne fonctionne pas pour moi"],
 };
 
-const k_1027: ProtocolDetail = {
-  protocolId: 1027,
+const k_627: ProtocolDetail = {
+  protocolId: 627,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Retour",
   description: "Variante de retour qui guide la transe vers le sommeil naturel plutôt que vers la veille. Spécifique aux séances de soir ou aux protocoles d'aide à l'endormissement.",
@@ -1222,8 +1222,8 @@ const k_1027: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur retour ne fonctionne pas pour moi"],
 };
 
-const k_1028: ProtocolDetail = {
-  protocolId: 1028,
+const k_628: ProtocolDetail = {
+  protocolId: 628,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Post-hypnotique",
   description: "Bibliothèque de suggestions post-hypnotiques génériques utilisables en fin de tout protocole : renforcement à chaque pratique, disponibilité des ressources, intégration au quotidien, confiance dans l'inconscient.",
@@ -1264,8 +1264,8 @@ const k_1028: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur post-hypnotique ne fonctionne pas pour moi"],
 };
 
-const k_1029: ProtocolDetail = {
-  protocolId: 1029,
+const k_629: ProtocolDetail = {
+  protocolId: 629,
   efficacite: "KIIKA",
   efficaciteSub: "Fondations / Clôture",
   description: "Clôture spécifique à l'identité KIIKA : passage par les cinq dimensions (Ki, Introspection, Intuition, Ka, Alignement) pour intégrer la séance dans une cohérence d'ensemble. Réservée aux séances marquantes ou rituelles.",
@@ -1309,8 +1309,8 @@ const k_1029: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur clôture ne fonctionne pas pour moi"],
 };
 
-const k_1030: ProtocolDetail = {
-  protocolId: 1030,
+const k_630: ProtocolDetail = {
+  protocolId: 630,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Régulation de base",
   description: "Protocole de fond pour anxiété généralisée. Combine ancre respiratoire, lieu sûr et bulle protectrice. À installer en premières séances pour donner au patient des outils utilisables au quotidien.",
@@ -1348,8 +1348,8 @@ const k_1030: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur régulation de base ne fonctionne pas pour moi"],
 };
 
-const k_1031: ProtocolDetail = {
-  protocolId: 1031,
+const k_631: ProtocolDetail = {
+  protocolId: 631,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Crise aiguë",
   description: "Protocole bref pour gestion d'une crise d'angoisse en cours ou imminente. Inhalation forcée brève, exhalation lente, ancrage corporel par les cinq sens, recadrage de la sensation corporelle.",
@@ -1387,8 +1387,8 @@ const k_1031: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur crise aiguë ne fonctionne pas pour moi"],
 };
 
-const k_1032: ProtocolDetail = {
-  protocolId: 1032,
+const k_632: ProtocolDetail = {
+  protocolId: 632,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Anticipation",
   description: "Pour patients qui s'épuisent à anticiper négativement les événements à venir. Travail de différenciation entre anticipation utile et anxiété anticipatoire. Installation d'un futur alternatif crédible.",
@@ -1426,8 +1426,8 @@ const k_1032: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur anticipation ne fonctionne pas pour moi"],
 };
 
-const k_1033: ProtocolDetail = {
-  protocolId: 1033,
+const k_633: ProtocolDetail = {
+  protocolId: 633,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Phobie sociale",
   description: "Pour anxiété sociale et peur du jugement. Combine bulle protectrice, repérage des regards alliés (vs hostiles imaginaires), et installation d'une voix sage qui rappelle la valeur du patient.",
@@ -1465,8 +1465,8 @@ const k_1033: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur phobie sociale ne fonctionne pas pour moi"],
 };
 
-const k_1034: ProtocolDetail = {
-  protocolId: 1034,
+const k_634: ProtocolDetail = {
+  protocolId: 634,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Performance",
   description: "Trac avant prise de parole, examen, audition, compétition. Travail de transformation du trac en énergie disponible plutôt que tentative de le supprimer. Activation de l'attention juste, ni sur-engagée ni dispersée.",
@@ -1504,8 +1504,8 @@ const k_1034: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur performance ne fonctionne pas pour moi"],
 };
 
-const k_1035: ProtocolDetail = {
-  protocolId: 1035,
+const k_635: ProtocolDetail = {
+  protocolId: 635,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Phobie spécifique",
   description: "Méthode de désensibilisation par construction d'une hiérarchie d'anxiété puis exposition imaginaire graduée en transe, avec extinction de l'anxiété à chaque palier avant progression.",
@@ -1543,8 +1543,8 @@ const k_1035: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur phobie spécifique ne fonctionne pas pour moi"],
 };
 
-const k_1036: ProtocolDetail = {
-  protocolId: 1036,
+const k_636: ProtocolDetail = {
+  protocolId: 636,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Somatisation",
   description: "Pour anxiété qui s'exprime principalement par des symptômes corporels (boule à l'estomac, oppression thoracique, tensions musculaires chroniques, troubles digestifs fonctionnels). Travail de dialogue avec la sensation.",
@@ -1582,8 +1582,8 @@ const k_1036: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur somatisation ne fonctionne pas pour moi"],
 };
 
-const k_1037: ProtocolDetail = {
-  protocolId: 1037,
+const k_637: ProtocolDetail = {
+  protocolId: 637,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Rumination",
   description: "Pour pensées en boucle qui tournent sans déboucher sur l'action. Reconnaissance du mécanisme, distinction réflexion utile / rumination, technique de désengagement attentionnel par déplacement vers le corps et le présent.",
@@ -1621,8 +1621,8 @@ const k_1037: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur rumination ne fonctionne pas pour moi"],
 };
 
-const k_1038: ProtocolDetail = {
-  protocolId: 1038,
+const k_638: ProtocolDetail = {
+  protocolId: 638,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Hypervigilance",
   description: "Pour patients en état d'alerte permanent, souvent suite à un environnement éprouvant ou à un trauma léger. Travail de différenciation entre vigilance utile et vigilance parasite, permission progressive de relâcher.",
@@ -1660,8 +1660,8 @@ const k_1038: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur hypervigilance ne fonctionne pas pour moi"],
 };
 
-const k_1039: ProtocolDetail = {
-  protocolId: 1039,
+const k_639: ProtocolDetail = {
+  protocolId: 639,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Attachement",
   description: "Pour anxiété massive lors de séparations (conjoint en déplacement, enfant qui part, deuil anticipé). Travail d'intériorisation du lien, distinction entre absence physique et perte du lien.",
@@ -1699,8 +1699,8 @@ const k_1039: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur attachement ne fonctionne pas pour moi"],
 };
 
-const k_1040: ProtocolDetail = {
-  protocolId: 1040,
+const k_640: ProtocolDetail = {
+  protocolId: 640,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Sollicitude",
   description: "Pour patients qui se rongent pour un proche malade, en difficulté ou en danger. Travail de différenciation entre sollicitude utile et inquiétude paralysante. Recharge des aidants.",
@@ -1738,8 +1738,8 @@ const k_1040: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur sollicitude ne fonctionne pas pour moi"],
 };
 
-const k_1041: ProtocolDetail = {
-  protocolId: 1041,
+const k_641: ProtocolDetail = {
+  protocolId: 641,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Médical",
   description: "Pour anxiété face aux examens, attentes de résultats, traitements médicaux pesants. Travail sur la confiance corporelle, la gestion de l'attente, la différenciation entre vraie alerte et anxiété.",
@@ -1777,8 +1777,8 @@ const k_1041: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur médical ne fonctionne pas pour moi"],
 };
 
-const k_1042: ProtocolDetail = {
-  protocolId: 1042,
+const k_642: ProtocolDetail = {
+  protocolId: 642,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Transport",
   description: "Pour anxiété spécifique aux transports : avion, voiture, métro, train. Combine désensibilisation par hiérarchie, contrôle perçu et installation d'un voyage intérieur parallèle au voyage réel.",
@@ -1816,8 +1816,8 @@ const k_1042: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur transport ne fonctionne pas pour moi"],
 };
 
-const k_1043: ProtocolDetail = {
-  protocolId: 1043,
+const k_643: ProtocolDetail = {
+  protocolId: 643,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Existentiel",
   description: "Pour anxiété touchant les fondamentaux : finitude, sens de la vie, solitude existentielle, liberté. Travail spécifique à l'approche thérapie-spiritualité KIIKA, avec mobilisation forte du Ka.",
@@ -1855,8 +1855,8 @@ const k_1043: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur existentiel ne fonctionne pas pour moi"],
 };
 
-const k_1044: ProtocolDetail = {
-  protocolId: 1044,
+const k_644: ProtocolDetail = {
+  protocolId: 644,
   efficacite: "KIIKA",
   efficaciteSub: "Anxiété / Tolérance à l'incertitude",
   description: "Pour patients ayant un faible seuil de tolérance à l'incertitude : besoin compulsif de savoir, de contrôler, de prévoir. Travail sur la cohabitation possible avec le non-su.",
@@ -1894,8 +1894,8 @@ const k_1044: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur tolérance à l'incertitude ne fonctionne pas pour moi"],
 };
 
-const k_1045: ProtocolDetail = {
-  protocolId: 1045,
+const k_645: ProtocolDetail = {
+  protocolId: 645,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Endormissement",
   description: "Pour patients qui mettent plus de 30-45 minutes à s'endormir le soir. Travail sur le rapport au sommeil, déconditionnement de la lutte, installation d'une routine du glissement.",
@@ -1933,8 +1933,8 @@ const k_1045: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur endormissement ne fonctionne pas pour moi"],
 };
 
-const k_1046: ProtocolDetail = {
-  protocolId: 1046,
+const k_646: ProtocolDetail = {
+  protocolId: 646,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Continuité",
   description: "Pour patients qui s'endorment correctement mais se réveillent une ou plusieurs fois dans la nuit et peinent à se rendormir. Installation d'un protocole de retour au sommeil sans dramatisation.",
@@ -1972,8 +1972,8 @@ const k_1046: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur continuité ne fonctionne pas pour moi"],
 };
 
-const k_1047: ProtocolDetail = {
-  protocolId: 1047,
+const k_647: ProtocolDetail = {
+  protocolId: 647,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Qualité",
   description: "Pour patients qui dorment leurs heures mais se réveillent fatigués. Travail sur la qualité du sommeil profond et le sentiment de récupération, par installation d'intentions de réparation pendant la nuit.",
@@ -2011,8 +2011,8 @@ const k_1047: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur qualité ne fonctionne pas pour moi"],
 };
 
-const k_1048: ProtocolDetail = {
-  protocolId: 1048,
+const k_648: ProtocolDetail = {
+  protocolId: 648,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Hypersomnie",
   description: "Pour patients qui dorment trop ou qui sont somnolents en journée. Travail de structuration des cycles veille-sommeil, restauration d'une vigilance diurne pleine.",
@@ -2050,8 +2050,8 @@ const k_1048: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur hypersomnie ne fonctionne pas pour moi"],
 };
 
-const k_1049: ProtocolDetail = {
-  protocolId: 1049,
+const k_649: ProtocolDetail = {
+  protocolId: 649,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Rêves",
   description: "Pour patients dont les rêves intenses ou anxieux perturbent le repos. Travail de pacification du contenu onirique sans le supprimer, installation d'une posture intérieure d'observateur des rêves.",
@@ -2089,8 +2089,8 @@ const k_1049: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur rêves ne fonctionne pas pour moi"],
 };
 
-const k_1050: ProtocolDetail = {
-  protocolId: 1050,
+const k_650: ProtocolDetail = {
+  protocolId: 650,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Rythmes",
   description: "Pour voyageurs traversant des fuseaux horaires ou travailleurs en horaires décalés. Aide à la resynchronisation de l'horloge interne et à la qualité du sommeil dans des conditions atypiques.",
@@ -2128,8 +2128,8 @@ const k_1050: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur rythmes ne fonctionne pas pour moi"],
 };
 
-const k_1051: ProtocolDetail = {
-  protocolId: 1051,
+const k_651: ProtocolDetail = {
+  protocolId: 651,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Réactionnel",
   description: "Pour patients dont le sommeil est perturbé suite à un événement marquant : deuil, séparation, déménagement, changement professionnel. Aide à traverser sans que l'insomnie ne devienne chronique.",
@@ -2167,8 +2167,8 @@ const k_1051: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur réactionnel ne fonctionne pas pour moi"],
 };
 
-const k_1052: ProtocolDetail = {
-  protocolId: 1052,
+const k_652: ProtocolDetail = {
+  protocolId: 652,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Pédiatrique",
   description: "Adaptation pour enfants de 4 à 12 ans souffrant de troubles d'endormissement, peurs nocturnes, cauchemars. Imagerie ludique, présence rassurante des parents.",
@@ -2206,8 +2206,8 @@ const k_1052: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pédiatrique ne fonctionne pas pour moi"],
 };
 
-const k_1053: ProtocolDetail = {
-  protocolId: 1053,
+const k_653: ProtocolDetail = {
+  protocolId: 653,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Grossesse",
   description: "Pour femmes enceintes en fin de grossesse confrontées à inconforts physiques, anxiétés, réveils fréquents. Adaptations spécifiques au contexte gravidique.",
@@ -2245,8 +2245,8 @@ const k_1053: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur grossesse ne fonctionne pas pour moi"],
 };
 
-const k_1054: ProtocolDetail = {
-  protocolId: 1054,
+const k_654: ProtocolDetail = {
+  protocolId: 654,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Personne âgée",
   description: "Pour seniors confrontés aux modifications physiologiques du sommeil avec l'âge : nuits plus courtes, plus fragmentées, réveils précoces. Adaptation des attentes et optimisation du repos.",
@@ -2284,8 +2284,8 @@ const k_1054: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur personne âgée ne fonctionne pas pour moi"],
 };
 
-const k_1055: ProtocolDetail = {
-  protocolId: 1055,
+const k_655: ProtocolDetail = {
+  protocolId: 655,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Bruxisme",
   description: "Pour patients qui serrent ou grincent des dents la nuit. Travail sur la relaxation de la mâchoire au coucher, dépose des tensions accumulées, suggestion de relâchement nocturne.",
@@ -2323,8 +2323,8 @@ const k_1055: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur bruxisme ne fonctionne pas pour moi"],
 };
 
-const k_1056: ProtocolDetail = {
-  protocolId: 1056,
+const k_656: ProtocolDetail = {
+  protocolId: 656,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Cauchemars",
   description: "Technique de répétition imaginaire (rehearsal) pour cauchemars récurrents non liés à un trauma identifiable. Réécriture du scénario en éveil pour modifier le contenu nocturne.",
@@ -2362,8 +2362,8 @@ const k_1056: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur cauchemars ne fonctionne pas pour moi"],
 };
 
-const k_1057: ProtocolDetail = {
-  protocolId: 1057,
+const k_657: ProtocolDetail = {
+  protocolId: 657,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Sevrage",
   description: "Accompagnement hypnotique du sevrage progressif de somnifères (benzodiazépines, Z-drugs) en coordination avec le médecin prescripteur. Transition vers ressources autonomes.",
@@ -2401,8 +2401,8 @@ const k_1057: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur sevrage ne fonctionne pas pour moi"],
 };
 
-const k_1058: ProtocolDetail = {
-  protocolId: 1058,
+const k_658: ProtocolDetail = {
+  protocolId: 658,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Sieste",
   description: "Technique de sieste courte et efficace : 15-20 minutes de récupération profonde sans entrer en sommeil paradoxal. Pour patients qui peinent à faire la sieste ou qui veulent en optimiser la qualité.",
@@ -2440,8 +2440,8 @@ const k_1058: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur sieste ne fonctionne pas pour moi"],
 };
 
-const k_1059: ProtocolDetail = {
-  protocolId: 1059,
+const k_659: ProtocolDetail = {
+  protocolId: 659,
   efficacite: "KIIKA",
   efficaciteSub: "Sommeil / Rituel",
   description: "Construction d'un rituel de coucher complet, à la fois pratique (hygiène du sommeil) et symbolique (rituel KIIKA). Brique fondatrice du sommeil sur le long terme.",
@@ -2479,8 +2479,8 @@ const k_1059: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur rituel ne fonctionne pas pour moi"],
 };
 
-const k_1060: ProtocolDetail = {
-  protocolId: 1060,
+const k_660: ProtocolDetail = {
+  protocolId: 660,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Chronique",
   description: "Protocole de fond pour patients vivant avec une douleur chronique persistante. Travail sur le rapport à la douleur plutôt que sur sa suppression : différenciation douleur primaire / souffrance secondaire, restauration de zones non-douloureuses, dépose de la lutte épuisante.",
@@ -2518,8 +2518,8 @@ const k_1060: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur chronique ne fonctionne pas pour moi"],
 };
 
-const k_1061: ProtocolDetail = {
-  protocolId: 1061,
+const k_661: ProtocolDetail = {
+  protocolId: 661,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Lombaire",
   description: "Pour douleur lombaire chronique non spécifique. Travail spécifique sur la décrispation de la zone lombaire, désinvestissement du cycle peur-tension-douleur, restauration progressive du mouvement.",
@@ -2557,8 +2557,8 @@ const k_1061: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur lombaire ne fonctionne pas pour moi"],
 };
 
-const k_1062: ProtocolDetail = {
-  protocolId: 1062,
+const k_662: ProtocolDetail = {
+  protocolId: 662,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Céphalées",
   description: "Pour migraines récurrentes et céphalées de tension. Travail en deux temps : désamorçage de la crise installée par modification des sous-modalités, et travail préventif entre les crises sur les facteurs déclenchants.",
@@ -2596,8 +2596,8 @@ const k_1062: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur céphalées ne fonctionne pas pour moi"],
 };
 
-const k_1063: ProtocolDetail = {
-  protocolId: 1063,
+const k_663: ProtocolDetail = {
+  protocolId: 663,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Fibromyalgie",
   description: "Pour patients atteints de fibromyalgie. Travail spécifique sur l'hypersensibilisation centrale, restauration des zones de moindre douleur, gestion de la fatigue associée, dépose progressive de l'épuisement.",
@@ -2635,8 +2635,8 @@ const k_1063: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur fibromyalgie ne fonctionne pas pour moi"],
 };
 
-const k_1064: ProtocolDetail = {
-  protocolId: 1064,
+const k_664: ProtocolDetail = {
+  protocolId: 664,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Post-opératoire",
   description: "Préparation pré-opératoire et accompagnement post-opératoire pour réduction de la douleur, accélération de la récupération, diminution des besoins en antalgiques. Idéalement pratiqué en plusieurs séances.",
@@ -2674,8 +2674,8 @@ const k_1064: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur post-opératoire ne fonctionne pas pour moi"],
 };
 
-const k_1065: ProtocolDetail = {
-  protocolId: 1065,
+const k_665: ProtocolDetail = {
+  protocolId: 665,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Neuropathique",
   description: "Pour douleurs neuropathiques (neuropathie diabétique, post-zostérienne, post-chimio, neuropathie périphérique). Travail spécifique sur la nature particulière de cette douleur, modification des sensations brûlantes ou électriques.",
@@ -2713,8 +2713,8 @@ const k_1065: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur neuropathique ne fonctionne pas pour moi"],
 };
 
-const k_1066: ProtocolDetail = {
-  protocolId: 1066,
+const k_666: ProtocolDetail = {
+  protocolId: 666,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Aiguë et soins",
   description: "Pour douleurs aiguës répétées liées à des soins (pansements, ponctions, kinésithérapie douloureuse, soins dentaires longs). Installation rapide de dispositifs anti-douleur utilisables en soin.",
@@ -2752,8 +2752,8 @@ const k_1066: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur aiguë et soins ne fonctionne pas pour moi"],
 };
 
-const k_1067: ProtocolDetail = {
-  protocolId: 1067,
+const k_667: ProtocolDetail = {
+  protocolId: 667,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Oncologie",
   description: "Accompagnement hypnotique de la douleur en contexte de cancer. Travail spécifique adapté à un parcours souvent long et complexe : douleurs liées à la maladie, aux traitements, à la fatigue, à l'angoisse. En strict complément du suivi oncologique.",
@@ -2791,8 +2791,8 @@ const k_1067: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur oncologie ne fonctionne pas pour moi"],
 };
 
-const k_1068: ProtocolDetail = {
-  protocolId: 1068,
+const k_668: ProtocolDetail = {
+  protocolId: 668,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Articulaire",
   description: "Pour douleurs articulaires chroniques (arthrose, polyarthrite stabilisée, séquelles articulaires). Travail sur le confort des articulations, la lubrification imagée, la diminution de l'inflammation perçue.",
@@ -2830,8 +2830,8 @@ const k_1068: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur articulaire ne fonctionne pas pour moi"],
 };
 
-const k_1069: ProtocolDetail = {
-  protocolId: 1069,
+const k_669: ProtocolDetail = {
+  protocolId: 669,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Post-traumatique",
   description: "Pour douleurs persistant longtemps après un traumatisme physique guéri (accident, fracture consolidée, blessure réparée). Travail sur le décalage entre tissu réparé et système nerveux qui continue à signaler.",
@@ -2869,8 +2869,8 @@ const k_1069: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur post-traumatique ne fonctionne pas pour moi"],
 };
 
-const k_1070: ProtocolDetail = {
-  protocolId: 1070,
+const k_670: ProtocolDetail = {
+  protocolId: 670,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Viscérale",
   description: "Pour douleurs viscérales chroniques fonctionnelles : côlon irritable, dyspepsie fonctionnelle, douleurs pelviennes chroniques. Travail sur l'axe cerveau-intestin et l'apaisement des viscères.",
@@ -2908,8 +2908,8 @@ const k_1070: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur viscérale ne fonctionne pas pour moi"],
 };
 
-const k_1071: ProtocolDetail = {
-  protocolId: 1071,
+const k_671: ProtocolDetail = {
+  protocolId: 671,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Gynécologique",
   description: "Pour dysménorrhée invalidante. Travail spécifique sur les douleurs des règles : préparation du cycle, gestion de la phase douloureuse, apaisement utérin par imagerie chaleur et lâcher-prise.",
@@ -2947,8 +2947,8 @@ const k_1071: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur gynécologique ne fonctionne pas pour moi"],
 };
 
-const k_1072: ProtocolDetail = {
-  protocolId: 1072,
+const k_672: ProtocolDetail = {
+  protocolId: 672,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Membre fantôme",
   description: "Pour patients amputés présentant des douleurs du membre fantôme. Travail spécifique sur cette douleur particulière : reconnaissance, modification par imagerie, miroir mental, intégration progressive de l'absence.",
@@ -2986,8 +2986,8 @@ const k_1072: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur membre fantôme ne fonctionne pas pour moi"],
 };
 
-const k_1073: ProtocolDetail = {
-  protocolId: 1073,
+const k_673: ProtocolDetail = {
+  protocolId: 673,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Dentaire",
   description: "Pour patients devant subir des soins dentaires longs ou douloureux : implants, extractions multiples, traitements de canaux, chirurgie maxillo-faciale. Préparation et accompagnement.",
@@ -3025,8 +3025,8 @@ const k_1073: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dentaire ne fonctionne pas pour moi"],
 };
 
-const k_1074: ProtocolDetail = {
-  protocolId: 1074,
+const k_674: ProtocolDetail = {
+  protocolId: 674,
   efficacite: "KIIKA",
   efficaciteSub: "Douleur / Auto-hypnose",
   description: "Protocole-pivot d'apprentissage de l'auto-hypnose anti-douleur. Pour patients avancés dans le travail anti-douleur, ayant déjà installé les ressources de base. Permet la pratique autonome quotidienne.",
@@ -3065,79 +3065,79 @@ const k_1074: ProtocolDetail = {
 };
 
 export const kiikaHammondDetails: Record<number, ProtocolDetail> = {
-  1000: k_1000,
-  1001: k_1001,
-  1002: k_1002,
-  1003: k_1003,
-  1004: k_1004,
-  1005: k_1005,
-  1006: k_1006,
-  1007: k_1007,
-  1008: k_1008,
-  1009: k_1009,
-  1010: k_1010,
-  1011: k_1011,
-  1012: k_1012,
-  1013: k_1013,
-  1014: k_1014,
-  1015: k_1015,
-  1016: k_1016,
-  1017: k_1017,
-  1018: k_1018,
-  1019: k_1019,
-  1020: k_1020,
-  1021: k_1021,
-  1022: k_1022,
-  1023: k_1023,
-  1024: k_1024,
-  1025: k_1025,
-  1026: k_1026,
-  1027: k_1027,
-  1028: k_1028,
-  1029: k_1029,
-  1030: k_1030,
-  1031: k_1031,
-  1032: k_1032,
-  1033: k_1033,
-  1034: k_1034,
-  1035: k_1035,
-  1036: k_1036,
-  1037: k_1037,
-  1038: k_1038,
-  1039: k_1039,
-  1040: k_1040,
-  1041: k_1041,
-  1042: k_1042,
-  1043: k_1043,
-  1044: k_1044,
-  1045: k_1045,
-  1046: k_1046,
-  1047: k_1047,
-  1048: k_1048,
-  1049: k_1049,
-  1050: k_1050,
-  1051: k_1051,
-  1052: k_1052,
-  1053: k_1053,
-  1054: k_1054,
-  1055: k_1055,
-  1056: k_1056,
-  1057: k_1057,
-  1058: k_1058,
-  1059: k_1059,
-  1060: k_1060,
-  1061: k_1061,
-  1062: k_1062,
-  1063: k_1063,
-  1064: k_1064,
-  1065: k_1065,
-  1066: k_1066,
-  1067: k_1067,
-  1068: k_1068,
-  1069: k_1069,
-  1070: k_1070,
-  1071: k_1071,
-  1072: k_1072,
-  1073: k_1073,
-  1074: k_1074,
+  600: k_600,
+  601: k_601,
+  602: k_602,
+  603: k_603,
+  604: k_604,
+  605: k_605,
+  606: k_606,
+  607: k_607,
+  608: k_608,
+  609: k_609,
+  610: k_610,
+  611: k_611,
+  612: k_612,
+  613: k_613,
+  614: k_614,
+  615: k_615,
+  616: k_616,
+  617: k_617,
+  618: k_618,
+  619: k_619,
+  620: k_620,
+  621: k_621,
+  622: k_622,
+  623: k_623,
+  624: k_624,
+  625: k_625,
+  626: k_626,
+  627: k_627,
+  628: k_628,
+  629: k_629,
+  630: k_630,
+  631: k_631,
+  632: k_632,
+  633: k_633,
+  634: k_634,
+  635: k_635,
+  636: k_636,
+  637: k_637,
+  638: k_638,
+  639: k_639,
+  640: k_640,
+  641: k_641,
+  642: k_642,
+  643: k_643,
+  644: k_644,
+  645: k_645,
+  646: k_646,
+  647: k_647,
+  648: k_648,
+  649: k_649,
+  650: k_650,
+  651: k_651,
+  652: k_652,
+  653: k_653,
+  654: k_654,
+  655: k_655,
+  656: k_656,
+  657: k_657,
+  658: k_658,
+  659: k_659,
+  660: k_660,
+  661: k_661,
+  662: k_662,
+  663: k_663,
+  664: k_664,
+  665: k_665,
+  666: k_666,
+  667: k_667,
+  668: k_668,
+  669: k_669,
+  670: k_670,
+  671: k_671,
+  672: k_672,
+  673: k_673,
+  674: k_674,
 };

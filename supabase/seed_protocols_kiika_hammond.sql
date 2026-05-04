@@ -1,10 +1,10 @@
 -- Seed protocoles KIIKA Hammond (fiches détaillées Varinka Robert)
--- IDs : 1000-1074 (75 protocoles)
+-- IDs : 600-674 (75 protocoles) — REMPLACENT les anciens Hammond 600-700
 -- Source : KIIKA v3 — fiches détaillées par lot (Cercle 1 Noyau + Cercle 2 Anxiété/Sommeil/Douleur)
 
 INSERT INTO public.protocols (id, name, category, practice, description, duration, level, tags, color, sessions, objectives, source, motifs)
 VALUES
-  (1000,
+  (600,
    'Induction par escalier intérieur',
    'KIIKA — Induction',
    'Hypnose Ericksonienne',
@@ -18,7 +18,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-001',
    ARRAY['Anxiété & stress']
   ),
-  (1001,
+  (601,
    'Induction par fixation visuelle',
    'KIIKA — Induction',
    'Hypnose Ericksonienne',
@@ -32,7 +32,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-002',
    ARRAY['Anxiété & stress']
   ),
-  (1002,
+  (602,
    'Induction par relaxation progressive',
    'KIIKA — Induction',
    'Hypnose Ericksonienne',
@@ -46,7 +46,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-003',
    ARRAY['Anxiété & stress']
   ),
-  (1003,
+  (603,
    'Induction conversationnelle éricksonienne légère',
    'KIIKA — Induction',
    'Hypnose Ericksonienne',
@@ -60,7 +60,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-004',
    ARRAY['Anxiété & stress']
   ),
-  (1004,
+  (604,
    'Induction par lévitation de la main',
    'KIIKA — Induction',
    'Hypnose Ericksonienne',
@@ -74,7 +74,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-005',
    ARRAY['Anxiété & stress']
   ),
-  (1005,
+  (605,
    'Induction rapide par signal personnel',
    'KIIKA — Induction',
    'Hypnose Ericksonienne',
@@ -88,7 +88,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-006',
    ARRAY['Anxiété & stress']
   ),
-  (1006,
+  (606,
    'Approfondissement par comptage descendant',
    'KIIKA — Approfondissement',
    'Hypnose Ericksonienne',
@@ -102,7 +102,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-007',
    ARRAY['Anxiété & stress']
   ),
-  (1007,
+  (607,
    'Approfondissement par fractionnement',
    'KIIKA — Approfondissement',
    'Hypnose Ericksonienne',
@@ -116,7 +116,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-008',
    ARRAY['Anxiété & stress']
   ),
-  (1008,
+  (608,
    'Approfondissement par image de descente',
    'KIIKA — Approfondissement',
    'Hypnose Ericksonienne',
@@ -130,7 +130,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-009',
    ARRAY['Anxiété & stress']
   ),
-  (1009,
+  (609,
    'Approfondissement par ratification progressive',
    'KIIKA — Approfondissement',
    'Hypnose Ericksonienne',
@@ -144,7 +144,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-010',
    ARRAY['Anxiété & stress']
   ),
-  (1010,
+  (610,
    'Lieu sûr fondamental',
    'KIIKA — Lieu ressource',
    'Hypnose Ericksonienne',
@@ -158,7 +158,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-011',
    ARRAY['Anxiété & stress']
   ),
-  (1011,
+  (611,
    'Sanctuaire intérieur',
    'KIIKA — Lieu ressource',
    'Hypnose Ericksonienne',
@@ -172,7 +172,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-012',
    ARRAY['Anxiété & stress']
   ),
-  (1012,
+  (612,
    'Jardin intérieur',
    'KIIKA — Lieu ressource',
    'Hypnose Ericksonienne',
@@ -186,7 +186,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-013',
    ARRAY['Anxiété & stress']
   ),
-  (1013,
+  (613,
    'Cabane refuge',
    'KIIKA — Lieu ressource',
    'Hypnose Ericksonienne',
@@ -200,7 +200,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-014',
    ARRAY['Anxiété & stress']
   ),
-  (1014,
+  (614,
    'Eau ressource',
    'KIIKA — Lieu ressource',
    'Hypnose Ericksonienne',
@@ -214,7 +214,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-015',
    ARRAY['Anxiété & stress']
   ),
-  (1015,
+  (615,
    'Ancre kinesthésique discrète',
    'KIIKA — Ancrage',
    'Hypnose Ericksonienne',
@@ -228,7 +228,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-016',
    ARRAY['Anxiété & stress']
   ),
-  (1016,
+  (616,
    'Ancre respiratoire',
    'KIIKA — Ancrage',
    'Hypnose Ericksonienne',
@@ -242,7 +242,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-017',
    ARRAY['Anxiété & stress']
   ),
-  (1017,
+  (617,
    'Mot-signal personnel',
    'KIIKA — Ancrage',
    'Hypnose Ericksonienne',
@@ -256,7 +256,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-018',
    ARRAY['Anxiété & stress']
   ),
-  (1018,
+  (618,
    'Signal d''auto-induction',
    'KIIKA — Ancrage',
    'Hypnose Ericksonienne',
@@ -270,7 +270,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-019',
    ARRAY['Anxiété & stress']
   ),
-  (1019,
+  (619,
    'Observateur bienveillant',
    'KIIKA — Dissociation',
    'Hypnose Ericksonienne',
@@ -284,7 +284,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-020',
    ARRAY['Anxiété & stress']
   ),
-  (1020,
+  (620,
    'Écran de cinéma intérieur',
    'KIIKA — Dissociation',
    'Hypnose Ericksonienne',
@@ -298,7 +298,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-021',
    ARRAY['Anxiété & stress']
   ),
-  (1021,
+  (621,
    'Voyage dans le temps intérieur',
    'KIIKA — Dissociation',
    'Hypnose Ericksonienne',
@@ -312,7 +312,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-022',
    ARRAY['Anxiété & stress']
   ),
-  (1022,
+  (622,
    'Voix sage intérieure',
    'KIIKA — Dissociation',
    'Hypnose Ericksonienne',
@@ -326,7 +326,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-023',
    ARRAY['Anxiété & stress']
   ),
-  (1023,
+  (623,
    'Bulle protectrice',
    'KIIKA — Dissociation',
    'Hypnose Ericksonienne',
@@ -340,7 +340,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-024',
    ARRAY['Anxiété & stress']
   ),
-  (1024,
+  (624,
    'Retour standard par escalier inverse',
    'KIIKA — Retour',
    'Hypnose Ericksonienne',
@@ -354,7 +354,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-025',
    ARRAY['Anxiété & stress']
   ),
-  (1025,
+  (625,
    'Retour rapide pour cabinet',
    'KIIKA — Retour',
    'Hypnose Ericksonienne',
@@ -368,7 +368,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-026',
    ARRAY['Anxiété & stress']
   ),
-  (1026,
+  (626,
    'Retour avec consolidation des acquis',
    'KIIKA — Retour',
    'Hypnose Ericksonienne',
@@ -382,7 +382,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-027',
    ARRAY['Anxiété & stress']
   ),
-  (1027,
+  (627,
    'Retour vers le sommeil enchaîné',
    'KIIKA — Retour',
    'Hypnose Ericksonienne',
@@ -396,7 +396,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-028',
    ARRAY['Anxiété & stress']
   ),
-  (1028,
+  (628,
    'Suggestions post-hypnotiques génériques',
    'KIIKA — Post-hypnotique',
    'Hypnose Ericksonienne',
@@ -410,7 +410,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-029',
    ARRAY['Anxiété & stress']
   ),
-  (1029,
+  (629,
    'Clôture rituelle KIIKA',
    'KIIKA — Clôture',
    'Hypnose Ericksonienne',
@@ -424,7 +424,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-BASE-030',
    ARRAY['Anxiété & stress']
   ),
-  (1030,
+  (630,
    'Anxiété généralisée — Régulation par souffle et lieu sûr',
    'KIIKA — Régulation de base',
    'Hypnose Ericksonienne',
@@ -438,7 +438,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-001',
    ARRAY['Anxiété & stress']
   ),
-  (1031,
+  (631,
    'Crise d''angoisse aiguë — Protocole de désamorçage',
    'KIIKA — Crise aiguë',
    'Hypnose Ericksonienne',
@@ -452,7 +452,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-002',
    ARRAY['Anxiété & stress']
   ),
-  (1032,
+  (632,
    'Anxiété anticipatoire — Désamorçage du futur catastrophique',
    'KIIKA — Anticipation',
    'Hypnose Ericksonienne',
@@ -466,7 +466,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-003',
    ARRAY['Anxiété & stress']
   ),
-  (1033,
+  (633,
    'Phobie sociale — Bulle, voix sage et regards alliés',
    'KIIKA — Phobie sociale',
    'Hypnose Ericksonienne',
@@ -480,7 +480,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-004',
    ARRAY['Phobies & peurs', 'Anxiété & stress']
   ),
-  (1034,
+  (634,
    'Trac de performance — Préparation et activation juste',
    'KIIKA — Performance',
    'Hypnose Ericksonienne',
@@ -492,9 +492,9 @@ VALUES
    1,
    ARRAY['Recadrage trac comme énergie', 'Différenciation activation utile / activation parasite', 'Préparation imaginaire de la performance', 'Ancrage gestuel d''activation juste'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-005',
-   ARRAY['Anxiété & stress', 'Performance & examens']
+   ARRAY['Performance & examens', 'Anxiété & stress']
   ),
-  (1035,
+  (635,
    'Phobie spécifique — Désensibilisation graduée par hiérarchie',
    'KIIKA — Phobie spécifique',
    'Hypnose Ericksonienne',
@@ -508,7 +508,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-006',
    ARRAY['Phobies & peurs', 'Anxiété & stress']
   ),
-  (1036,
+  (636,
    'Anxiété somatique — Du corps qui parle',
    'KIIKA — Somatisation',
    'Hypnose Ericksonienne',
@@ -522,7 +522,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-007',
    ARRAY['Anxiété & stress']
   ),
-  (1037,
+  (637,
    'Rumination mentale — Sortir de la roue',
    'KIIKA — Rumination',
    'Hypnose Ericksonienne',
@@ -536,7 +536,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-008',
    ARRAY['Anxiété & stress']
   ),
-  (1038,
+  (638,
    'Hypervigilance — Permission de baisser la garde',
    'KIIKA — Hypervigilance',
    'Hypnose Ericksonienne',
@@ -550,7 +550,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-009',
    ARRAY['Anxiété & stress']
   ),
-  (1039,
+  (639,
    'Anxiété de séparation adulte — Lien intériorisé',
    'KIIKA — Attachement',
    'Hypnose Ericksonienne',
@@ -564,7 +564,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-010',
    ARRAY['Anxiété & stress']
   ),
-  (1040,
+  (640,
    'Inquiétude pour un proche — Charge de soin et présence juste',
    'KIIKA — Sollicitude',
    'Hypnose Ericksonienne',
@@ -578,7 +578,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-011',
    ARRAY['Anxiété & stress']
   ),
-  (1041,
+  (641,
    'Anxiété médicale — Examens, diagnostics, traitements',
    'KIIKA — Médical',
    'Hypnose Ericksonienne',
@@ -592,7 +592,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-012',
    ARRAY['Anxiété & stress']
   ),
-  (1042,
+  (642,
    'Anxiété de transport — Avion, voiture, transports en commun',
    'KIIKA — Transport',
    'Hypnose Ericksonienne',
@@ -606,7 +606,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-013',
    ARRAY['Anxiété & stress']
   ),
-  (1043,
+  (643,
    'Anxiété existentielle — Vertige du sens',
    'KIIKA — Existentiel',
    'Hypnose Ericksonienne',
@@ -620,7 +620,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-014',
    ARRAY['Anxiété & stress']
   ),
-  (1044,
+  (644,
    'Anxiété de l''incertitude — Apprivoiser le non-savoir',
    'KIIKA — Tolérance à l''incertitude',
    'Hypnose Ericksonienne',
@@ -634,7 +634,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-015',
    ARRAY['Anxiété & stress']
   ),
-  (1045,
+  (645,
    'Insomnie d''endormissement — Le glissement vers la nuit',
    'KIIKA — Endormissement',
    'Hypnose Ericksonienne',
@@ -648,7 +648,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-001',
    ARRAY['Sommeil & insomnie']
   ),
-  (1046,
+  (646,
    'Réveils nocturnes — Le retour dans le sommeil',
    'KIIKA — Continuité',
    'Hypnose Ericksonienne',
@@ -662,7 +662,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-002',
    ARRAY['Sommeil & insomnie']
   ),
-  (1047,
+  (647,
    'Sommeil non réparateur — Approfondir la qualité',
    'KIIKA — Qualité',
    'Hypnose Ericksonienne',
@@ -676,7 +676,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-003',
    ARRAY['Sommeil & insomnie']
   ),
-  (1048,
+  (648,
    'Hypersomnie et somnolence diurne — Restaurer la vigilance juste',
    'KIIKA — Hypersomnie',
    'Hypnose Ericksonienne',
@@ -690,7 +690,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-004',
    ARRAY['Sommeil & insomnie']
   ),
-  (1049,
+  (649,
    'Sommeil agité par les rêves — Pacifier la nuit',
    'KIIKA — Rêves',
    'Hypnose Ericksonienne',
@@ -704,7 +704,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-005',
    ARRAY['Sommeil & insomnie']
   ),
-  (1050,
+  (650,
    'Décalage horaire et travail posté — Resynchronisation de l''horloge',
    'KIIKA — Rythmes',
    'Hypnose Ericksonienne',
@@ -718,7 +718,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-006',
    ARRAY['Sommeil & insomnie']
   ),
-  (1051,
+  (651,
    'Insomnie post-événementielle — Quand un événement perturbe la nuit',
    'KIIKA — Réactionnel',
    'Hypnose Ericksonienne',
@@ -732,7 +732,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-007',
    ARRAY['Sommeil & insomnie']
   ),
-  (1052,
+  (652,
    'Sommeil de l''enfant — Accompagner le coucher',
    'KIIKA — Pédiatrique',
    'Hypnose Ericksonienne',
@@ -746,7 +746,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-008',
    ARRAY['Sommeil & insomnie']
   ),
-  (1053,
+  (653,
    'Sommeil et grossesse — Accompagner les nuits du dernier trimestre',
    'KIIKA — Grossesse',
    'Hypnose Ericksonienne',
@@ -760,7 +760,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-009',
    ARRAY['Sommeil & insomnie']
   ),
-  (1054,
+  (654,
    'Sommeil de la personne âgée — Adapter aux nouveaux rythmes',
    'KIIKA — Personne âgée',
    'Hypnose Ericksonienne',
@@ -774,7 +774,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-010',
    ARRAY['Sommeil & insomnie']
   ),
-  (1055,
+  (655,
    'Bruxisme nocturne — Relâcher la mâchoire qui serre',
    'KIIKA — Bruxisme',
    'Hypnose Ericksonienne',
@@ -788,7 +788,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-011',
    ARRAY['Sommeil & insomnie']
   ),
-  (1056,
+  (656,
    'Cauchemars récurrents non traumatiques — Réécrire le scénario',
    'KIIKA — Cauchemars',
    'Hypnose Ericksonienne',
@@ -802,7 +802,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-012',
    ARRAY['Sommeil & insomnie']
   ),
-  (1057,
+  (657,
    'Sevrage des somnifères — Transition accompagnée',
    'KIIKA — Sevrage',
    'Hypnose Ericksonienne',
@@ -816,7 +816,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-013',
    ARRAY['Sommeil & insomnie']
   ),
-  (1058,
+  (658,
    'Sieste réparatrice — L''art du repos court',
    'KIIKA — Sieste',
    'Hypnose Ericksonienne',
@@ -830,7 +830,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-014',
    ARRAY['Sommeil & insomnie']
   ),
-  (1059,
+  (659,
    'Hygiène du sommeil et rituel du soir — Préparation profonde',
    'KIIKA — Rituel',
    'Hypnose Ericksonienne',
@@ -844,7 +844,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-SOM-015',
    ARRAY['Sommeil & insomnie']
   ),
-  (1060,
+  (660,
    'Douleur chronique généralisée — Restaurer une relation soutenable',
    'KIIKA — Chronique',
    'Hypnose Ericksonienne',
@@ -858,7 +858,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-001',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1061,
+  (661,
    'Lombalgie chronique — Décrisper le bas du dos',
    'KIIKA — Lombaire',
    'Hypnose Ericksonienne',
@@ -872,7 +872,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-002',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1062,
+  (662,
    'Migraines et céphalées — Désamorçage et prévention',
    'KIIKA — Céphalées',
    'Hypnose Ericksonienne',
@@ -886,7 +886,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-003',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1063,
+  (663,
    'Fibromyalgie — Apaiser le système nerveux sensibilisé',
    'KIIKA — Fibromyalgie',
    'Hypnose Ericksonienne',
@@ -900,7 +900,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-004',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1064,
+  (664,
    'Douleur post-opératoire — Récupération accélérée',
    'KIIKA — Post-opératoire',
    'Hypnose Ericksonienne',
@@ -914,7 +914,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-005',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1065,
+  (665,
    'Douleur neuropathique — Apprivoiser le signal défaillant',
    'KIIKA — Neuropathique',
    'Hypnose Ericksonienne',
@@ -928,7 +928,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-006',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1066,
+  (666,
    'Douleur aiguë et soins répétés — Traverser sans s''épuiser',
    'KIIKA — Aiguë et soins',
    'Hypnose Ericksonienne',
@@ -942,7 +942,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-007',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1067,
+  (667,
    'Douleur cancéreuse — Confort dans la traversée',
    'KIIKA — Oncologie',
    'Hypnose Ericksonienne',
@@ -956,7 +956,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-008',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1068,
+  (668,
    'Douleur articulaire chronique — Arthrose et inflammations',
    'KIIKA — Articulaire',
    'Hypnose Ericksonienne',
@@ -970,7 +970,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-009',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1069,
+  (669,
    'Douleur post-traumatique chronique — Quand la blessure ancienne reste vive',
    'KIIKA — Post-traumatique',
    'Hypnose Ericksonienne',
@@ -984,7 +984,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-010',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1070,
+  (670,
    'Douleurs viscérales chroniques — Apaiser le ventre qui parle',
    'KIIKA — Viscérale',
    'Hypnose Ericksonienne',
@@ -998,7 +998,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-011',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1071,
+  (671,
    'Douleurs menstruelles — Accompagner les cycles',
    'KIIKA — Gynécologique',
    'Hypnose Ericksonienne',
@@ -1012,7 +1012,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-012',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1072,
+  (672,
    'Douleur du membre fantôme — Apprivoiser ce qui n''est plus là',
    'KIIKA — Membre fantôme',
    'Hypnose Ericksonienne',
@@ -1026,7 +1026,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-013',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1073,
+  (673,
    'Douleur dentaire et soins longs — Confort dans le fauteuil',
    'KIIKA — Dentaire',
    'Hypnose Ericksonienne',
@@ -1040,7 +1040,7 @@ VALUES
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-014',
    ARRAY['Douleurs & psychosomatique']
   ),
-  (1074,
+  (674,
    'Auto-hypnose anti-douleur — Le dispositif quotidien',
    'KIIKA — Auto-hypnose',
    'Hypnose Ericksonienne',
