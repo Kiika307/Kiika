@@ -21,6 +21,9 @@ FILES = [
     "kiika_cercle3_lot2_somatique_specialise.json",
     "kiika_cercle3_lot3_neuro_pneumo_uro.json",
     "kiika_cercle3_lot4_cloture.json",
+    "kiika_cercle4_lot1_deuil.json",
+    "kiika_cercle4_lot2_emotions_difficiles.json",
+    "kiika_cercle4_lot3_relationnel_transitions.json",
 ]
 
 # Color by category prefix
@@ -76,6 +79,23 @@ def motifs_for(category, tags):
         motifs.append("Douleurs & psychosomatique")
         if "addiction" in cat:
             motifs.append("Addictions")
+    if "émotion" in cat or "motion" in cat:
+        if "deuil" in cat or "perte" in cat:
+            motifs.append("Trauma & deuil")
+        if "estime" in cat or "imposture" in cat or "compétence" in cat:
+            motifs.append("Estime & confiance en soi")
+        if "relationnel" in cat or "blessure" in cat or "conflit" in cat or "ressentiment" in cat or "jalousie" in cat or "solitude" in cat:
+            motifs.append("Conflits & communication")
+        if "trauma" in cat or "enfance" in cat:
+            motifs.append("Trauma & deuil")
+        if "sens" in cat or "existentiel" in cat:
+            motifs.append("Quête de sens & spiritualité")
+        if "anxiété" in cat or "anxiete" in cat or "surcharge" in cat or "contrôle" in cat or "controle" in cat:
+            motifs.append("Anxiété & stress")
+        if "dépressif" in cat or "depressif" in cat or "motivation" in cat:
+            motifs.append("Burn-out & fatigue")
+        if not [m for m in motifs if m]:
+            motifs.append("Estime & confiance en soi")
     return list(set(motifs)) or ["Anxiété & stress"]
 
 # Niveau mapping
@@ -113,8 +133,8 @@ print(f"Loaded {len(all_protocols)} protocols")
 # Generate SQL seed
 sql_lines = [
     "-- Seed protocoles KIIKA Hammond (fiches détaillées Varinka Robert)",
-    "-- IDs : 600-727 (128 protocoles) — Cercle 1 + Cercle 2 + Cercle 3",
-    "-- Source : KIIKA v3 — fiches détaillées par lot (Noyau / Anxiété-Sommeil-Douleur / Médical-Somatique)",
+    "-- IDs : 600-762 (163 protocoles) — Cercles 1+2+3+4",
+    "-- Source : KIIKA v3 — fiches détaillées par lot (Noyau / Anxiété-Sommeil-Douleur / Médical-Somatique / Émotionnel-Relationnel)",
     "",
     "INSERT INTO public.protocols (id, name, category, practice, description, duration, level, tags, color, sessions, objectives, source, motifs)",
     "VALUES",
@@ -176,9 +196,9 @@ ts_lines = [
     'import type { ProtocolDetail } from "./types";',
     '',
     '/**',
-    ' * Fiches détaillées KIIKA Hammond (IDs 600-727) — remplacent les anciens Hammond.',
-    ' * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3).',
-    ' * 128 protocoles avec scripts complets, structure technique, dimensions KIIKA.',
+    ' * Fiches détaillées KIIKA Hammond (IDs 600-762) — remplacent les anciens Hammond.',
+    ' * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3+4).',
+    ' * 163 protocoles avec scripts complets, structure technique, dimensions KIIKA.',
     ' */',
     '',
 ]

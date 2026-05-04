@@ -1,9 +1,9 @@
 import type { ProtocolDetail } from "./types";
 
 /**
- * Fiches détaillées KIIKA Hammond (IDs 600-727) — remplacent les anciens Hammond.
- * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3).
- * 128 protocoles avec scripts complets, structure technique, dimensions KIIKA.
+ * Fiches détaillées KIIKA Hammond (IDs 600-762) — remplacent les anciens Hammond.
+ * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3+4).
+ * 163 protocoles avec scripts complets, structure technique, dimensions KIIKA.
  */
 
 const k_600: ProtocolDetail = {
@@ -5131,6 +5131,1371 @@ const k_727: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pédiatrique ne fonctionne pas pour moi"],
 };
 
+const k_728: ProtocolDetail = {
+  protocolId: 728,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Deuil",
+  description: "Pour patients dans les premières semaines à mois suivant la perte d'un proche. Travail de présence à l'épreuve, légitimation des émotions, lien intériorisé avec le défunt, soutien à la traversée sans pression de durée.",
+  indications: ["Deuil récent (jours, semaines, premiers mois)", "Patients submergés par l'épreuve", "Première rencontre thérapeutique après la perte"],
+  contraindications: ["Deuil compliqué chronique installé (cadre psychothérapeutique structuré requis)", "Risque suicidaire (orienter en urgence)"],
+  programs: [{
+    id: "principal",
+    title: "Deuil récent — Accompagner la première traversée",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Deuil récent — Accompagner la première traversée",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients dans les premières semaines à mois suivant la perte d'un proche. Travail de présence à l'épreuve, légitimation des émotions, lien intériorisé avec le défunt, soutien à la traversée sans pression de durée." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Légitimation des émotions", type: "Levier", icon: "🎯", desc: "Accompagnement du deuil récent" },
+    { name: "Présence sans précipitation", type: "Levier", icon: "🎯", desc: "Accompagnement du deuil récent" },
+    { name: "Lien intériorisé avec le défunt", type: "Levier", icon: "🎯", desc: "Accompagnement du deuil récent" },
+    { name: "Traversée respectée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Lien préservé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur deuil ne fonctionne pas pour moi"],
+};
+
+const k_729: ProtocolDetail = {
+  protocolId: 729,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Deuil",
+  description: "Pour patients portant un deuil ancien (années) qui ne s'est pas pleinement traversé. Reprise du travail de deuil resté en suspens, retrouvailles avec le défunt intérieur, libération progressive.",
+  indications: ["Deuil de plusieurs années non traversé", "Tristesse persistante liée à une ancienne perte", "Patients ayant 'mis de côté' un deuil par survie", "Réémergence d'un ancien deuil à l'occasion d'un événement"],
+  contraindications: ["Deuil compliqué pathologique (cadre psychiatrique)", "Trauma associé non traité"],
+  programs: [{
+    id: "principal",
+    title: "Deuil ancien non résolu — Reprendre le fil",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Deuil ancien non résolu — Reprendre le fil",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients portant un deuil ancien (années) qui ne s'est pas pleinement traversé. Reprise du travail de deuil resté en suspens, retrouvailles avec le défunt intérieur, libération progressive." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Validation du gel émotionnel", type: "Levier", icon: "🎯", desc: "Reprise d'un deuil ancien" },
+    { name: "Retrouvailles avec le défunt intérieur", type: "Levier", icon: "🎯", desc: "Reprise d'un deuil ancien" },
+    { name: "Libération des émotions en suspens", type: "Levier", icon: "🎯", desc: "Reprise d'un deuil ancien" },
+    { name: "Reprise du fil", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Lien retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur deuil ne fonctionne pas pour moi"],
+};
+
+const k_730: ProtocolDetail = {
+  protocolId: 730,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Deuil",
+  description: "Pour deuils suite à mort traumatique : suicide, accident, mort violente, perte d'enfant. Travail spécifique sur la dimension traumatique de la perte avant ou en parallèle du travail de deuil. Prudence accrue.",
+  indications: ["Deuil suite à suicide d'un proche", "Deuil suite à accident", "Deuil après mort violente", "Perte d'enfant", "Mort soudaine inattendue"],
+  contraindications: ["Phase aiguë (premières semaines) si patient pas stabilisé", "PTSD sévère non traité", "Risque suicidaire actif"],
+  programs: [{
+    id: "principal",
+    title: "Deuil traumatique — Quand la perte a été violente",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Deuil traumatique — Quand la perte a été violente",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour deuils suite à mort traumatique : suicide, accident, mort violente, perte d'enfant. Travail spécifique sur la dimension traumatique de la perte avant ou en parallèle du travail de deuil. Prudence accrue." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Distinction trauma / deuil", type: "Levier", icon: "🎯", desc: "Travail spécifique du deuil traumatique" },
+    { name: "Apaisement de l'image traumatique", type: "Levier", icon: "🎯", desc: "Travail spécifique du deuil traumatique" },
+    { name: "Légitimation de la révolte", type: "Levier", icon: "🎯", desc: "Travail spécifique du deuil traumatique" },
+    { name: "Deuil rendu possible", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Image apaisée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur deuil ne fonctionne pas pour moi"],
+};
+
+const k_731: ProtocolDetail = {
+  protocolId: 731,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Deuil",
+  description: "Pour patients accompagnant un proche en fin de vie. Travail sur la traversée anticipatoire, la présence dans les derniers moments, la culpabilité de continuer à vivre, la préparation au passage.",
+  indications: ["Aidants de personnes en fin de vie", "Familles en soins palliatifs", "Anticipation d'une perte certaine", "Pertes par maladie évolutive (Alzheimer, cancers métastasés)"],
+  contraindications: ["Patient lui-même en fin de vie (autre approche)"],
+  programs: [{
+    id: "principal",
+    title: "Deuil anticipatoire — Accompagner avant la perte",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Deuil anticipatoire — Accompagner avant la perte",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients accompagnant un proche en fin de vie. Travail sur la traversée anticipatoire, la présence dans les derniers moments, la culpabilité de continuer à vivre, la préparation au passage." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Présence dans le présent qui reste", type: "Levier", icon: "🎯", desc: "Accompagnement du deuil anticipatoire" },
+    { name: "Légitimation des émotions ambivalentes", type: "Levier", icon: "🎯", desc: "Accompagnement du deuil anticipatoire" },
+    { name: "Préparation douce", type: "Levier", icon: "🎯", desc: "Accompagnement du deuil anticipatoire" },
+    { name: "Présence aux derniers temps", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Émotions accueillies", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur deuil ne fonctionne pas pour moi"],
+};
+
+const k_732: ProtocolDetail = {
+  protocolId: 732,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Pertes relationnelles",
+  description: "Pour rupture amoureuse, divorce, fin de relation significative. Travail sur le travail de deuil amoureux, la libération du lien, la reconstruction de l'identité, l'estime de soi.",
+  indications: ["Rupture amoureuse récente ou en cours", "Divorce", "Fin de relation longue", "Patients en difficulté de tourner la page"],
+  contraindications: ["Dépression majeure réactionnelle (cadre psychiatrique)", "Idées suicidaires"],
+  programs: [{
+    id: "principal",
+    title: "Rupture amoureuse — Reconstruire après l'amour",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Rupture amoureuse — Reconstruire après l'amour",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour rupture amoureuse, divorce, fin de relation significative. Travail sur le travail de deuil amoureux, la libération du lien, la reconstruction de l'identité, l'estime de soi." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Légitimation de la souffrance", type: "Levier", icon: "🎯", desc: "Travail du deuil amoureux et reconstruction" },
+    { name: "Libération progressive du lien", type: "Levier", icon: "🎯", desc: "Travail du deuil amoureux et reconstruction" },
+    { name: "Reconstruction de l'identité", type: "Levier", icon: "🎯", desc: "Travail du deuil amoureux et reconstruction" },
+    { name: "Reconstruction de soi", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Lien transformé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pertes relationnelles ne fonctionne pas pour moi"],
+};
+
+const k_733: ProtocolDetail = {
+  protocolId: 733,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Pertes identitaires",
+  description: "Pour pertes liées à l'emploi : licenciement, retraite, fermeture d'entreprise, reconversion forcée, fin d'une carrière marquante. Travail sur le deuil identitaire, la transformation, l'avenir.",
+  indications: ["Licenciement", "Départ à la retraite difficile", "Reconversion subie", "Fin d'une activité importante", "Burn-out menant à arrêt"],
+  contraindications: ["Dépression majeure réactionnelle (cadre psychiatrique)"],
+  programs: [{
+    id: "principal",
+    title: "Deuil professionnel — Perte d'emploi, retraite, reconversion",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Deuil professionnel — Perte d'emploi, retraite, reconversion",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour pertes liées à l'emploi : licenciement, retraite, fermeture d'entreprise, reconversion forcée, fin d'une carrière marquante. Travail sur le deuil identitaire, la transformation, l'avenir." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Distinction entre identité et fonction", type: "Levier", icon: "🎯", desc: "Deuil professionnel et identitaire" },
+    { name: "Légitimation du deuil professionnel", type: "Levier", icon: "🎯", desc: "Deuil professionnel et identitaire" },
+    { name: "Identification de ce qui demeure", type: "Levier", icon: "🎯", desc: "Deuil professionnel et identitaire" },
+    { name: "Identité préservée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Transformation possible", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pertes identitaires ne fonctionne pas pour moi"],
+};
+
+const k_734: ProtocolDetail = {
+  protocolId: 734,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Pertes corporelles",
+  description: "Pour patients confrontés à l'annonce d'une maladie chronique, à la perte d'une fonction physique ou cognitive, à un handicap installé. Travail sur le deuil du corps d'avant et l'accueil du corps actuel.",
+  indications: ["Annonce de maladie chronique", "Handicap installé suite à accident", "Perte d'une fonction (motrice, cognitive, sensorielle)", "Patients devant accepter une nouvelle réalité corporelle"],
+  contraindications: ["Phase de choc immédiat (donner du temps)", "Dépression majeure réactionnelle"],
+  programs: [{
+    id: "principal",
+    title: "Deuil de santé — Perte d'une fonction, maladie chronique annoncée",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Deuil de santé — Perte d'une fonction, maladie chronique annoncée",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients confrontés à l'annonce d'une maladie chronique, à la perte d'une fonction physique ou cognitive, à un handicap installé. Travail sur le deuil du corps d'avant et l'accueil du corps actuel." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Légitimation du deuil corporel", type: "Levier", icon: "🎯", desc: "Deuil corporel et accueil de la nouvelle réalité" },
+    { name: "Distinction entre identité et corps", type: "Levier", icon: "🎯", desc: "Deuil corporel et accueil de la nouvelle réalité" },
+    { name: "Accueil progressif", type: "Levier", icon: "🎯", desc: "Deuil corporel et accueil de la nouvelle réalité" },
+    { name: "Corps d'avant honoré", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Corps actuel accueilli", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pertes corporelles ne fonctionne pas pour moi"],
+};
+
+const k_735: ProtocolDetail = {
+  protocolId: 735,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Estime",
+  description: "Pour patients dont l'estime de soi a été abîmée par des événements de vie : ruptures, échecs, jugements, parcours difficiles. Travail de reconstruction de l'estime, distinction valeur/performance, voix intérieure bienveillante.",
+  indications: ["Estime de soi basse chronique", "Suite d'échec ou rejet", "Perfectionnisme épuisant", "Auto-critique excessive"],
+  contraindications: ["Trouble de personnalité borderline (cadre psychothérapeutique structuré)", "Dépression majeure"],
+  programs: [{
+    id: "principal",
+    title: "Estime de soi blessée — Reconstruire la valeur intérieure",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Estime de soi blessée — Reconstruire la valeur intérieure",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients dont l'estime de soi a été abîmée par des événements de vie : ruptures, échecs, jugements, parcours difficiles. Travail de reconstruction de l'estime, distinction valeur/performance, voix intérieure bienveillante." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Distinction valeur intrinsèque / performance", type: "Levier", icon: "🎯", desc: "Reconstruction de l'estime de soi" },
+    { name: "Reconnaissance des qualités", type: "Levier", icon: "🎯", desc: "Reconstruction de l'estime de soi" },
+    { name: "Voix intérieure bienveillante", type: "Levier", icon: "🎯", desc: "Reconstruction de l'estime de soi" },
+    { name: "Valeur inconditionnelle", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Bienveillance pour soi", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur estime ne fonctionne pas pour moi"],
+};
+
+const k_736: ProtocolDetail = {
+  protocolId: 736,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Émotions chroniques",
+  description: "Pour patients porteurs d'une culpabilité chronique, fondée ou non, qui pèse sur leur vie. Travail de différenciation responsabilité réelle / culpabilité excessive, dépose progressive, pardon de soi.",
+  indications: ["Culpabilité chronique disproportionnée", "Culpabilité du survivant", "Culpabilité parentale", "Culpabilité qui empêche d'avancer"],
+  contraindications: ["TOC à thème de culpabilité (cadre psychiatrique)", "Mélancolie délirante"],
+  programs: [{
+    id: "principal",
+    title: "Culpabilité écrasante — Déposer ce qui n'a plus à être porté",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Culpabilité écrasante — Déposer ce qui n'a plus à être porté",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients porteurs d'une culpabilité chronique, fondée ou non, qui pèse sur leur vie. Travail de différenciation responsabilité réelle / culpabilité excessive, dépose progressive, pardon de soi." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Distinction responsabilité / culpabilité", type: "Levier", icon: "🎯", desc: "Travail sur la culpabilité chronique" },
+    { name: "Réparation symbolique si pertinente", type: "Levier", icon: "🎯", desc: "Travail sur la culpabilité chronique" },
+    { name: "Pardon de soi progressif", type: "Levier", icon: "🎯", desc: "Travail sur la culpabilité chronique" },
+    { name: "Culpabilité juste", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Pardon de soi", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur émotions chroniques ne fonctionne pas pour moi"],
+};
+
+const k_737: ProtocolDetail = {
+  protocolId: 737,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Émotions chroniques",
+  description: "Pour patients gelés par une honte chronique, qu'elle soit liée à un événement particulier ou à un sentiment diffus d'indignité. Travail délicat de réintégration et de restauration.",
+  indications: ["Honte chronique d'événement précis", "Honte diffuse de soi", "Patients en évitement social par honte", "Suite d'humiliation marquante"],
+  contraindications: ["Trauma sévère non traité (cadre spécifique trauma d'abord)", "Trouble personnalité non stabilisé"],
+  programs: [{
+    id: "principal",
+    title: "Honte — Sortir du gel intérieur",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Honte — Sortir du gel intérieur",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients gelés par une honte chronique, qu'elle soit liée à un événement particulier ou à un sentiment diffus d'indignité. Travail délicat de réintégration et de restauration." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Création d'un espace sécurisé", type: "Levier", icon: "🎯", desc: "Travail délicat sur la honte" },
+    { name: "Distinction honte / culpabilité / regret", type: "Levier", icon: "🎯", desc: "Travail délicat sur la honte" },
+    { name: "Présence non jugeante", type: "Levier", icon: "🎯", desc: "Travail délicat sur la honte" },
+    { name: "Présence accueillante", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Sortie du gel", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur émotions chroniques ne fonctionne pas pour moi"],
+};
+
+const k_738: ProtocolDetail = {
+  protocolId: 738,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Colère",
+  description: "Pour patients submergés par une colère chronique ou des accès de colère disproportionnés. Travail sur la reconnaissance de la fonction de la colère, l'identification des déclencheurs, les modes d'expression sains.",
+  indications: ["Colère chronique non identifiée", "Accès de colère disproportionnés", "Conflits relationnels récurrents", "Patients qui se reprochent leurs colères"],
+  contraindications: ["Trouble explosif intermittent sévère (cadre psychiatrique)", "Violence avérée envers proches"],
+  programs: [{
+    id: "principal",
+    title: "Colère chronique — Apprivoiser le feu intérieur",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Colère chronique — Apprivoiser le feu intérieur",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients submergés par une colère chronique ou des accès de colère disproportionnés. Travail sur la reconnaissance de la fonction de la colère, l'identification des déclencheurs, les modes d'expression sains." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnaissance de la fonction de la colère", type: "Levier", icon: "🎯", desc: "Travail sur la colère chronique" },
+    { name: "Identification des déclencheurs", type: "Levier", icon: "🎯", desc: "Travail sur la colère chronique" },
+    { name: "Désamorçage corporel précoce", type: "Levier", icon: "🎯", desc: "Travail sur la colère chronique" },
+    { name: "Énergie reconnue", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Limites légitimes", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur colère ne fonctionne pas pour moi"],
+};
+
+const k_739: ProtocolDetail = {
+  protocolId: 739,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Blessures relationnelles",
+  description: "Pour patients porteurs d'une blessure d'abandon récurrente : peur abandonnique, hyperdépendance, choix relationnels répétitifs douloureux. Travail délicat sur la blessure ancienne et la sécurité intérieure.",
+  indications: ["Peur abandonnique chronique", "Hyperdépendance affective", "Patterns relationnels répétitifs", "Difficulté à supporter la solitude"],
+  contraindications: ["Trouble personnalité borderline (cadre structuré)", "Trauma précoce sévère (approche spécifique)"],
+  programs: [{
+    id: "principal",
+    title: "Sentiment d'abandon — Réparer la blessure ancienne",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Sentiment d'abandon — Réparer la blessure ancienne",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients porteurs d'une blessure d'abandon récurrente : peur abandonnique, hyperdépendance, choix relationnels répétitifs douloureux. Travail délicat sur la blessure ancienne et la sécurité intérieure." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnaissance de la blessure originelle", type: "Levier", icon: "🎯", desc: "Travail sur la blessure d'abandon" },
+    { name: "Réparation symbolique", type: "Levier", icon: "🎯", desc: "Travail sur la blessure d'abandon" },
+    { name: "Construction de la sécurité intérieure", type: "Levier", icon: "🎯", desc: "Travail sur la blessure d'abandon" },
+    { name: "Présence à soi", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Sécurité intérieure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur blessures relationnelles ne fonctionne pas pour moi"],
+};
+
+const k_740: ProtocolDetail = {
+  protocolId: 740,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Dépressif léger",
+  description: "Pour tristesse persistante n'atteignant pas les critères de dépression majeure. Mélancolie diffuse, perte d'élan, manque de joie. Travail de soutien et de relance sans pathologisation.",
+  indications: ["Tristesse persistante depuis plusieurs semaines", "Mélancolie diffuse", "Perte de plaisir partielle", "État dépressif léger"],
+  contraindications: ["Dépression majeure (cadre psychiatrique)", "Idées suicidaires (urgence)", "Mélancolie sévère"],
+  programs: [{
+    id: "principal",
+    title: "Tristesse persistante — Quand la grisaille s'installe",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Tristesse persistante — Quand la grisaille s'installe",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour tristesse persistante n'atteignant pas les critères de dépression majeure. Mélancolie diffuse, perte d'élan, manque de joie. Travail de soutien et de relance sans pathologisation." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Accueil de la tristesse sans pathologiser", type: "Levier", icon: "🎯", desc: "Soutien dans la tristesse persistante" },
+    { name: "Identification des facteurs alimentant", type: "Levier", icon: "🎯", desc: "Soutien dans la tristesse persistante" },
+    { name: "Mobilisation douce de ressources", type: "Levier", icon: "🎯", desc: "Soutien dans la tristesse persistante" },
+    { name: "Tristesse accueillie", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Élan progressif", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dépressif léger ne fonctionne pas pour moi"],
+};
+
+const k_741: ProtocolDetail = {
+  protocolId: 741,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Dépressif léger",
+  description: "Pour épisode dépressif léger en complément du suivi médical/psychiatrique. Travail de soutien à la sortie, mobilisation douce, identification des leviers, prévention des rechutes.",
+  indications: ["Épisode dépressif léger diagnostiqué en complément", "Patients en suivi psychiatrique pour soutien", "Phase de sortie de dépression", "Prévention des rechutes"],
+  contraindications: ["Dépression sévère (cadre psychiatrique structuré)", "Idées suicidaires actives (urgence)", "Mélancolie", "Substitution au traitement médical"],
+  programs: [{
+    id: "principal",
+    title: "Dépression légère — Soutenir l'éclaircie",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Dépression légère — Soutenir l'éclaircie",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour épisode dépressif léger en complément du suivi médical/psychiatrique. Travail de soutien à la sortie, mobilisation douce, identification des leviers, prévention des rechutes." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Mobilisation douce sans forcer", type: "Levier", icon: "🎯", desc: "Soutien en dépression légère" },
+    { name: "Identification des leviers personnels", type: "Levier", icon: "🎯", desc: "Soutien en dépression légère" },
+    { name: "Activation comportementale légère", type: "Levier", icon: "🎯", desc: "Soutien en dépression légère" },
+    { name: "Lumière qui revient", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Pas à pas", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dépressif léger ne fonctionne pas pour moi"],
+};
+
+const k_742: ProtocolDetail = {
+  protocolId: 742,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Motivation",
+  description: "Pour patients en panne de motivation, sans dépression caractérisée. Travail sur la reconnexion aux désirs profonds, la mobilisation du Ki, la reprise progressive d'élan.",
+  indications: ["Apathie sans dépression", "Démotivation chronique", "Patients en burn-out post-aigu", "Manque d'élan vital"],
+  contraindications: ["Dépression vraie (utiliser K-EMOT-014)", "Pathologie thyroïdienne non explorée"],
+  programs: [{
+    id: "principal",
+    title: "Apathie et perte de motivation — Réveiller l'élan",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Apathie et perte de motivation — Réveiller l'élan",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en panne de motivation, sans dépression caractérisée. Travail sur la reconnexion aux désirs profonds, la mobilisation du Ki, la reprise progressive d'élan." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnexion aux désirs profonds", type: "Levier", icon: "🎯", desc: "Réveil de l'élan vital" },
+    { name: "Mobilisation du Ki", type: "Levier", icon: "🎯", desc: "Réveil de l'élan vital" },
+    { name: "Activation par micro-engagements", type: "Levier", icon: "🎯", desc: "Réveil de l'élan vital" },
+    { name: "Ki réveillé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Désir retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur motivation ne fonctionne pas pour moi"],
+};
+
+const k_743: ProtocolDetail = {
+  protocolId: 743,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Existentiel",
+  description: "Pour patients porteurs d'un mal-être diffus, sans cause identifiable, lié à un sentiment de vide existentiel ou de questionnement sur le sens. Travail à la lisière du psychologique et du spirituel, mobilisant fortement le Ka.",
+  indications: ["Sentiment de vide existentiel", "Mal-être diffus sans cause", "Questionnement sur le sens", "Patients matures en quête"],
+  contraindications: ["Dépression mélancolique", "Crise existentielle aiguë avec idées suicidaires"],
+  programs: [{
+    id: "principal",
+    title: "Anxiété d'être — Mal-être existentiel diffus",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Anxiété d'être — Mal-être existentiel diffus",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients porteurs d'un mal-être diffus, sans cause identifiable, lié à un sentiment de vide existentiel ou de questionnement sur le sens. Travail à la lisière du psychologique et du spirituel, mobilisant fortement le Ka." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Validation du questionnement", type: "Levier", icon: "🎯", desc: "Travail à la lisière psychologique et spirituel" },
+    { name: "Connexion au Ka, l'essence", type: "Levier", icon: "🎯", desc: "Travail à la lisière psychologique et spirituel" },
+    { name: "Sanctuaire intérieur", type: "Levier", icon: "🎯", desc: "Travail à la lisière psychologique et spirituel" },
+    { name: "Essence retrouvée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Vide habité", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur existentiel ne fonctionne pas pour moi"],
+};
+
+const k_744: ProtocolDetail = {
+  protocolId: 744,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Existentiel",
+  description: "Pour anxiété spécifique de la mort, qu'elle survienne à un âge avancé, après une maladie, ou de manière plus jeune et inattendue. Travail délicat mêlant psychologique et spirituel.",
+  indications: ["Peur de la mort marquée et invalidante", "Crise au seuil de la vieillesse", "Suite de diagnostic grave", "Patients vieillissants en angoisse"],
+  contraindications: ["Trouble psychotique", "Dépression mélancolique"],
+  programs: [{
+    id: "principal",
+    title: "Peur de mourir — Apprivoiser la finitude",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Peur de mourir — Apprivoiser la finitude",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour anxiété spécifique de la mort, qu'elle survienne à un âge avancé, après une maladie, ou de manière plus jeune et inattendue. Travail délicat mêlant psychologique et spirituel." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Légitimation universelle", type: "Levier", icon: "🎯", desc: "Travail délicat sur la finitude" },
+    { name: "Diminution de l'évitement", type: "Levier", icon: "🎯", desc: "Travail délicat sur la finitude" },
+    { name: "Traversée imaginative", type: "Levier", icon: "🎯", desc: "Travail délicat sur la finitude" },
+    { name: "Finitude apprivoisée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Présent précieux", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur existentiel ne fonctionne pas pour moi"],
+};
+
+const k_745: ProtocolDetail = {
+  protocolId: 745,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Anxiété somatique",
+  description: "Pour patients hypocondriaques modérés, surveillant leur corps avec anxiété, multipliant les consultations, redoutant des maladies graves. Travail sur la régulation de la surveillance et la confiance corporelle.",
+  indications: ["Hypocondrie modérée", "Anxiété de santé chronique", "Cyberchondrie", "Surveillance corporelle excessive"],
+  contraindications: ["TOC sévère à thème santé (cadre psychiatrique)", "Délire hypocondriaque"],
+  programs: [{
+    id: "principal",
+    title: "Anxiété de la santé — Hypocondrie modérée",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Anxiété de la santé — Hypocondrie modérée",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients hypocondriaques modérés, surveillant leur corps avec anxiété, multipliant les consultations, redoutant des maladies graves. Travail sur la régulation de la surveillance et la confiance corporelle." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désinvestissement de la surveillance", type: "Levier", icon: "🎯", desc: "Régulation de la surveillance corporelle" },
+    { name: "Confiance dans le corps", type: "Levier", icon: "🎯", desc: "Régulation de la surveillance corporelle" },
+    { name: "Distinction signal / bruit", type: "Levier", icon: "🎯", desc: "Régulation de la surveillance corporelle" },
+    { name: "Corps allié", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Surveillance régulée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur anxiété somatique ne fonctionne pas pour moi"],
+};
+
+const k_746: ProtocolDetail = {
+  protocolId: 746,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Compétences relationnelles",
+  description: "Pour patients qui ne savent pas refuser, qui s'épuisent à satisfaire les autres, qui craignent les conflits. Travail sur l'assertivité, le droit de dire non, la légitimité des limites.",
+  indications: ["Patients qui ne savent pas dire non", "Personnalité 'aidante' épuisée", "Peur du conflit", "Surinvestissement à se rendre indispensable"],
+  contraindications: ["Trouble personnalité dépendante sévère (cadre structuré)"],
+  programs: [{
+    id: "principal",
+    title: "Difficulté à dire non — Affirmation de soi",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Difficulté à dire non — Affirmation de soi",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients qui ne savent pas refuser, qui s'épuisent à satisfaire les autres, qui craignent les conflits. Travail sur l'assertivité, le droit de dire non, la légitimité des limites." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Légitimation du droit de refuser", type: "Levier", icon: "🎯", desc: "Apprentissage de l'assertivité" },
+    { name: "Exploration des peurs du non", type: "Levier", icon: "🎯", desc: "Apprentissage de l'assertivité" },
+    { name: "Pratique imaginaire", type: "Levier", icon: "🎯", desc: "Apprentissage de l'assertivité" },
+    { name: "Limites légitimes", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Non bienveillant", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur compétences relationnelles ne fonctionne pas pour moi"],
+};
+
+const k_747: ProtocolDetail = {
+  protocolId: 747,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotionnel / Surcharge",
+  description: "Pour patients submergés par la charge mentale (souvent femmes, parents, professions de soin). Travail sur la conscience de la charge, le délestage légitime, la délégation, le droit à l'oubli.",
+  indications: ["Charge mentale familiale", "Patients en surcharge cognitive permanente", "Difficulté à se reposer même physiquement", "Mère épuisée"],
+  contraindications: ["Burn-out aigu (autre approche)"],
+  programs: [{
+    id: "principal",
+    title: "Charge mentale — Délester ce qu'on porte sans le voir",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Charge mentale — Délester ce qu'on porte sans le voir",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients submergés par la charge mentale (souvent femmes, parents, professions de soin). Travail sur la conscience de la charge, le délestage légitime, la délégation, le droit à l'oubli." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Conscience de la charge", type: "Levier", icon: "🎯", desc: "Délestage de la charge mentale" },
+    { name: "Légitimation du délestage", type: "Levier", icon: "🎯", desc: "Délestage de la charge mentale" },
+    { name: "Délégation possible", type: "Levier", icon: "🎯", desc: "Délestage de la charge mentale" },
+    { name: "Charge déposée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Délégation possible", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur surcharge ne fonctionne pas pour moi"],
+};
+
+const k_748: ProtocolDetail = {
+  protocolId: 748,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Jalousie",
+  description: "Pour patients souffrant de jalousie chronique en couple ou face à la réussite d'autres. Travail sur la sécurité intérieure, le rapport à la valeur de soi, le désinvestissement de la comparaison toxique.",
+  indications: ["Jalousie amoureuse récurrente", "Jalousie envers des proches qui réussissent", "Comparaison sociale toxique", "Patients ayant conscience que leur jalousie les abîme"],
+  contraindications: ["Jalousie pathologique avec délires (cadre psychiatrique)", "Violence dans le couple (cadre spécifique)"],
+  programs: [{
+    id: "principal",
+    title: "Jalousie envahissante — Apaiser le feu de la comparaison",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Jalousie envahissante — Apaiser le feu de la comparaison",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients souffrant de jalousie chronique en couple ou face à la réussite d'autres. Travail sur la sécurité intérieure, le rapport à la valeur de soi, le désinvestissement de la comparaison toxique." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Sécurité intérieure indépendante", type: "Levier", icon: "🎯", desc: "Travail sur la jalousie chronique" },
+    { name: "Différenciation jalousie / amour", type: "Levier", icon: "🎯", desc: "Travail sur la jalousie chronique" },
+    { name: "Travail sur la valeur de soi", type: "Levier", icon: "🎯", desc: "Travail sur la jalousie chronique" },
+    { name: "Sécurité intérieure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Souveraineté", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur jalousie ne fonctionne pas pour moi"],
+};
+
+const k_749: ProtocolDetail = {
+  protocolId: 749,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Ressentiment",
+  description: "Pour patients portant un ressentiment ancien et lourd contre une personne ou un événement. Travail de différenciation entre rancune toxique et reconnaissance d'une injustice subie, voie de la libération sans déni.",
+  indications: ["Rancune chronique envers un proche", "Ressentiment ancien qui pèse", "Patients épuisés de porter cette charge", "Sentiment d'injustice non résolu"],
+  contraindications: ["Trauma actif (le ressentiment peut être protecteur, ne pas précipiter)"],
+  programs: [{
+    id: "principal",
+    title: "Ressentiment et rancune — Désencombrer la mémoire émotionnelle",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Ressentiment et rancune — Désencombrer la mémoire émotionnelle",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients portant un ressentiment ancien et lourd contre une personne ou un événement. Travail de différenciation entre rancune toxique et reconnaissance d'une injustice subie, voie de la libération sans déni." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnaissance de l'injustice", type: "Levier", icon: "🎯", desc: "Travail sur le ressentiment chronique" },
+    { name: "Différenciation pardon / oubli", type: "Levier", icon: "🎯", desc: "Travail sur le ressentiment chronique" },
+    { name: "Récupération de l'énergie investie", type: "Levier", icon: "🎯", desc: "Travail sur le ressentiment chronique" },
+    { name: "Reconnaissance", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Libération", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur ressentiment ne fonctionne pas pour moi"],
+};
+
+const k_750: ProtocolDetail = {
+  protocolId: 750,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Solitude",
+  description: "Pour patients souffrant de solitude chronique, qu'elle soit objective ou subjective. Travail de différenciation entre solitude vécue et solitude choisie, restauration du rapport à soi, capacité à être seul et à se relier.",
+  indications: ["Solitude chronique pesante", "Difficulté à être seul", "Sentiment d'isolement même entouré", "Patients récemment seuls (séparation, déménagement, retraite)"],
+  contraindications: ["Dépression majeure", "Phobie sociale invalidante (combiner avec K-ANX-004)"],
+  programs: [{
+    id: "principal",
+    title: "Solitude relationnelle — Habiter le seul et l'ensemble",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Solitude relationnelle — Habiter le seul et l'ensemble",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients souffrant de solitude chronique, qu'elle soit objective ou subjective. Travail de différenciation entre solitude vécue et solitude choisie, restauration du rapport à soi, capacité à être seul et à se relier." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Différenciation solitude pesante / solitude habitée", type: "Levier", icon: "🎯", desc: "Travail sur la solitude" },
+    { name: "Restauration du rapport à soi", type: "Levier", icon: "🎯", desc: "Travail sur la solitude" },
+    { name: "Compétence relationnelle", type: "Levier", icon: "🎯", desc: "Travail sur la solitude" },
+    { name: "Présence à soi", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Solitude habitée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur solitude ne fonctionne pas pour moi"],
+};
+
+const k_751: ProtocolDetail = {
+  protocolId: 751,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Blessure relationnelle",
+  description: "Pour patients porteurs d'une blessure de rejet ancienne (parents, fratrie, groupe scolaire, premier amour) qui continue à colorer les relations adultes. Travail spécifique sur cette blessure typique.",
+  indications: ["Hypersensibilité au rejet à l'âge adulte", "Évitement par peur d'être rejeté", "Réactions disproportionnées aux signes ambigus", "Histoire de rejets précoces"],
+  contraindications: ["Trauma sévère non stabilisé"],
+  programs: [{
+    id: "principal",
+    title: "Blessure de rejet — Apaiser la cicatrice ancienne",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Blessure de rejet — Apaiser la cicatrice ancienne",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients porteurs d'une blessure de rejet ancienne (parents, fratrie, groupe scolaire, premier amour) qui continue à colorer les relations adultes. Travail spécifique sur cette blessure typique." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnaissance de la blessure ancienne", type: "Levier", icon: "🎯", desc: "Travail sur la blessure de rejet ancienne" },
+    { name: "Distinction présent / passé", type: "Levier", icon: "🎯", desc: "Travail sur la blessure de rejet ancienne" },
+    { name: "Soin de l'enfant intérieur blessé", type: "Levier", icon: "🎯", desc: "Travail sur la blessure de rejet ancienne" },
+    { name: "Enfant accueilli", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Blessure soignée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "0/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur blessure relationnelle ne fonctionne pas pour moi"],
+};
+
+const k_752: ProtocolDetail = {
+  protocolId: 752,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Conflit",
+  description: "Pour patients pris dans des conflits récurrents (couple, famille, travail) où les mêmes scénarios se rejouent. Travail de prise de recul, identification des automatismes, ouverture de nouveaux possibles relationnels.",
+  indications: ["Conflits répétitifs en couple", "Conflits familiaux récurrents", "Difficultés relationnelles au travail", "Patients ayant conscience qu'ils contribuent au pattern"],
+  contraindications: ["Violence intrafamiliale (cadre spécifique)", "Manipulation perverse (autre approche)"],
+  programs: [{
+    id: "principal",
+    title: "Conflit relationnel récurrent — Sortir des spirales",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Conflit relationnel récurrent — Sortir des spirales",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients pris dans des conflits récurrents (couple, famille, travail) où les mêmes scénarios se rejouent. Travail de prise de recul, identification des automatismes, ouverture de nouveaux possibles relationnels." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Identification des automatismes", type: "Levier", icon: "🎯", desc: "Travail sur les conflits récurrents" },
+    { name: "Vue méta du conflit", type: "Levier", icon: "🎯", desc: "Travail sur les conflits récurrents" },
+    { name: "Responsabilité partagée", type: "Levier", icon: "🎯", desc: "Travail sur les conflits récurrents" },
+    { name: "Spirale brisée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Vue d'ensemble", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur conflit ne fonctionne pas pour moi"],
+};
+
+const k_753: ProtocolDetail = {
+  protocolId: 753,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Trauma léger",
+  description: "Pour intégration d'un événement récent éprouvant mais non dévastateur : accident sans gravité, agression verbale, témoin d'événement difficile, scène choquante. Travail d'intégration sans replonger.",
+  indications: ["Événement éprouvant récent (semaines à mois)", "Symptômes légers post-événement", "Patients qui ressassent l'événement", "Pas d'ESPT constitué"],
+  contraindications: ["Trauma sévère avec ESPT (cadre spécialisé EMDR, TCC trauma)", "Violences subies graves"],
+  programs: [{
+    id: "principal",
+    title: "Trauma léger récent — Intégrer un événement éprouvant",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Trauma léger récent — Intégrer un événement éprouvant",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour intégration d'un événement récent éprouvant mais non dévastateur : accident sans gravité, agression verbale, témoin d'événement difficile, scène choquante. Travail d'intégration sans replonger." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Distanciation par l'écran de cinéma", type: "Levier", icon: "🎯", desc: "Intégration de trauma léger" },
+    { name: "Apaisement émotionnel", type: "Levier", icon: "🎯", desc: "Intégration de trauma léger" },
+    { name: "Recadrage sécurisant", type: "Levier", icon: "🎯", desc: "Intégration de trauma léger" },
+    { name: "Événement intégré", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Distance retrouvée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur trauma léger ne fonctionne pas pour moi"],
+};
+
+const k_754: ProtocolDetail = {
+  protocolId: 754,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Acceptation",
+  description: "Pour patients confrontés à une réalité durable qu'ils ne peuvent pas changer (maladie chronique, handicap d'un proche, décision irrévocable, perte définitive). Travail délicat sur l'acceptation sans résignation.",
+  indications: ["Réalités durables non modifiables", "Lutte épuisante contre l'inéluctable", "Patients en révolte chronique", "Acceptation comme étape d'apaisement"],
+  contraindications: ["Phase initiale de la perte ou du diagnostic (trop tôt)", "Patients à qui on demande d'accepter une situation qu'ils peuvent en fait modifier"],
+  programs: [{
+    id: "principal",
+    title: "Acceptation de l'inacceptable — Vivre avec ce qu'on ne peut changer",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Acceptation de l'inacceptable — Vivre avec ce qu'on ne peut changer",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients confrontés à une réalité durable qu'ils ne peuvent pas changer (maladie chronique, handicap d'un proche, décision irrévocable, perte définitive). Travail délicat sur l'acceptation sans résignation." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Distinction acceptation / résignation", type: "Levier", icon: "🎯", desc: "Travail sur l'acceptation" },
+    { name: "Reconnaissance de la réalité", type: "Levier", icon: "🎯", desc: "Travail sur l'acceptation" },
+    { name: "Récupération de l'énergie de lutte", type: "Levier", icon: "🎯", desc: "Travail sur l'acceptation" },
+    { name: "Réalité accueillie", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Lutte déposée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur acceptation ne fonctionne pas pour moi"],
+};
+
+const k_755: ProtocolDetail = {
+  protocolId: 755,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Transition",
+  description: "Pour patients en transition majeure (déménagement, changement professionnel radical, fin d'une relation longue, devenir parent, retraite, expatriation). Travail d'intégration psychique de la transition.",
+  indications: ["Transitions de vie majeures en cours ou récentes", "Difficulté d'adaptation", "Sentiment de perte d'identité dans la transition", "Patients ne se reconnaissant plus"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Transition de vie majeure — Passer d'un monde à l'autre",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Transition de vie majeure — Passer d'un monde à l'autre",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en transition majeure (déménagement, changement professionnel radical, fin d'une relation longue, devenir parent, retraite, expatriation). Travail d'intégration psychique de la transition." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnaissance des deux mondes", type: "Levier", icon: "🎯", desc: "Accompagnement de transition de vie" },
+    { name: "Phase de seuil légitimée", type: "Levier", icon: "🎯", desc: "Accompagnement de transition de vie" },
+    { name: "Continuité d'identité", type: "Levier", icon: "🎯", desc: "Accompagnement de transition de vie" },
+    { name: "Passage habité", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Identité fil conducteur", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur transition ne fonctionne pas pour moi"],
+};
+
+const k_756: ProtocolDetail = {
+  protocolId: 756,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Enfance",
+  description: "Pour patients adultes portant des manques affectifs anciens (parents froids, distants, absents, défaillants sans malveillance majeure). Travail de soin différé à l'enfant intérieur, pas de remplacement des parents mais réparation possible.",
+  indications: ["Manques affectifs anciens", "Parents distants ou peu disponibles", "Enfance carencée affectivement (sans maltraitance majeure)", "Adultes qui ressassent ce qu'ils n'ont pas eu"],
+  contraindications: ["Maltraitance grave (cadre psychothérapeutique long)", "Trauma sexuel (cadre spécialisé)"],
+  programs: [{
+    id: "principal",
+    title: "Réconciliation avec l'enfance — Soigner ce qui a manqué",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Réconciliation avec l'enfance — Soigner ce qui a manqué",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients adultes portant des manques affectifs anciens (parents froids, distants, absents, défaillants sans malveillance majeure). Travail de soin différé à l'enfant intérieur, pas de remplacement des parents mais réparation possible." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnaissance des manques", type: "Levier", icon: "🎯", desc: "Réparation différée des manques de l'enfance" },
+    { name: "Soin différé à l'enfant intérieur", type: "Levier", icon: "🎯", desc: "Réparation différée des manques de l'enfance" },
+    { name: "Auto-parentalisation bienveillante", type: "Levier", icon: "🎯", desc: "Réparation différée des manques de l'enfance" },
+    { name: "Enfant accueilli", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Parents reconnus dans leurs limites", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "0/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur enfance ne fonctionne pas pour moi"],
+};
+
+const k_757: ProtocolDetail = {
+  protocolId: 757,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Imposture",
+  description: "Pour syndrome de l'imposteur : peur d'être démasqué malgré des compétences réelles, attribution des succès à la chance, terreur d'être jugé incompétent. Travail sur l'intégration des succès, la compétence reconnue.",
+  indications: ["Syndrome de l'imposteur professionnel", "Patients qualifiés se sentant illégitimes", "Difficulté à intégrer les réussites", "Peur paralysante du jugement"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Sentiment d'imposture — Dépasser le syndrome",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Sentiment d'imposture — Dépasser le syndrome",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour syndrome de l'imposteur : peur d'être démasqué malgré des compétences réelles, attribution des succès à la chance, terreur d'être jugé incompétent. Travail sur l'intégration des succès, la compétence reconnue." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Intégration des succès objectifs", type: "Levier", icon: "🎯", desc: "Travail sur le syndrome de l'imposteur" },
+    { name: "Différenciation perception / réalité", type: "Levier", icon: "🎯", desc: "Travail sur le syndrome de l'imposteur" },
+    { name: "Accueil de la légitimité", type: "Levier", icon: "🎯", desc: "Travail sur le syndrome de l'imposteur" },
+    { name: "Légitimité retrouvée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Compétence reconnue", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur imposture ne fonctionne pas pour moi"],
+};
+
+const k_758: ProtocolDetail = {
+  protocolId: 758,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Hypersensibilité",
+  description: "Pour patients hypersensibles débordés par leurs émotions ou par celles des autres. Travail sur la régulation, la juste distance, sans pathologiser une qualité qui peut aussi être une ressource.",
+  indications: ["Hypersensibilité débordante", "Empathie envahissante envers les autres", "Submersion émotionnelle quotidienne", "Patients épuisés par leur sensibilité"],
+  contraindications: ["Trouble de la personnalité borderline (cadre spécifique)"],
+  programs: [{
+    id: "principal",
+    title: "Hypersensibilité émotionnelle — Apprivoiser ce qui traverse",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Hypersensibilité émotionnelle — Apprivoiser ce qui traverse",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients hypersensibles débordés par leurs émotions ou par celles des autres. Travail sur la régulation, la juste distance, sans pathologiser une qualité qui peut aussi être une ressource." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Distinction soi / autre émotionnellement", type: "Levier", icon: "🎯", desc: "Régulation de l'hypersensibilité" },
+    { name: "Bulle protectrice K-BASE-024", type: "Levier", icon: "🎯", desc: "Régulation de l'hypersensibilité" },
+    { name: "Régulation sans répression", type: "Levier", icon: "🎯", desc: "Régulation de l'hypersensibilité" },
+    { name: "Sensibilité juste", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Filtre bienveillant", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur hypersensibilité ne fonctionne pas pour moi"],
+};
+
+const k_759: ProtocolDetail = {
+  protocolId: 759,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Contrôle",
+  description: "Pour patients en hypercontrôle qui s'épuisent à vouloir tout maîtriser. Travail sur la confiance, le lâcher-prise progressif, la distinction entre vigilance utile et contrôle compulsif.",
+  indications: ["Hypercontrôle chronique", "Anxiété de l'imprévisible", "Patients qui s'épuisent à vouloir tout maîtriser", "Difficulté à déléguer"],
+  contraindications: ["TOC (cadre spécifique)", "Trauma justifiant l'hypervigilance (à traiter d'abord)"],
+  programs: [{
+    id: "principal",
+    title: "Lâcher-prise sur le contrôle — Vivre sans tout maîtriser",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Lâcher-prise sur le contrôle — Vivre sans tout maîtriser",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en hypercontrôle qui s'épuisent à vouloir tout maîtriser. Travail sur la confiance, le lâcher-prise progressif, la distinction entre vigilance utile et contrôle compulsif." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Distinction vigilance / contrôle compulsif", type: "Levier", icon: "🎯", desc: "Travail sur le lâcher-prise" },
+    { name: "Confiance dans la vie", type: "Levier", icon: "🎯", desc: "Travail sur le lâcher-prise" },
+    { name: "Pratique du non-contrôle", type: "Levier", icon: "🎯", desc: "Travail sur le lâcher-prise" },
+    { name: "Confiance retrouvée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Énergie libérée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur contrôle ne fonctionne pas pour moi"],
+};
+
+const k_760: ProtocolDetail = {
+  protocolId: 760,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Rapport au corps",
+  description: "Pour patients en mauvaise relation avec leur corps : critique chronique, déconnexion, dégoût, sentiment d'étrangeté. Travail de réhabitation bienveillante de son propre corps.",
+  indications: ["Critique chronique du corps", "Déconnexion corps-esprit", "Suite de maladie ayant abîmé le rapport au corps", "Adolescence ou suite d'événement modifiant l'image"],
+  contraindications: ["Troubles du comportement alimentaire pathologiques (cadre spécialisé)", "Dysphorie de genre (cadre spécifique)"],
+  programs: [{
+    id: "principal",
+    title: "Réconciliation avec son corps — Habiter sa maison",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Réconciliation avec son corps — Habiter sa maison",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en mauvaise relation avec leur corps : critique chronique, déconnexion, dégoût, sentiment d'étrangeté. Travail de réhabitation bienveillante de son propre corps." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Présence sensorielle", type: "Levier", icon: "🎯", desc: "Réconciliation au corps" },
+    { name: "Reconnaissance du corps comme allié", type: "Levier", icon: "🎯", desc: "Réconciliation au corps" },
+    { name: "Bienveillance corporelle progressive", type: "Levier", icon: "🎯", desc: "Réconciliation au corps" },
+    { name: "Maison habitée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Corps allié", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "3/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur rapport au corps ne fonctionne pas pour moi"],
+};
+
+const k_761: ProtocolDetail = {
+  protocolId: 761,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Travail",
+  description: "Pour patients dont le travail occupe toute la place identitaire et émotionnelle. Travail de différenciation soi/fonction, restauration d'autres dimensions de la vie, prévention du burn-out.",
+  indications: ["Surinvestissement professionnel", "Identité fusionnée à la fonction", "Sentiment de vide hors travail", "Pré-burn-out"],
+  contraindications: ["Burn-out constitué (cadre médical et arrêt nécessaires)"],
+  programs: [{
+    id: "principal",
+    title: "Surinvestissement professionnel — Reposer ce qui n'a pas à être tout",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Surinvestissement professionnel — Reposer ce qui n'a pas à être tout",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients dont le travail occupe toute la place identitaire et émotionnelle. Travail de différenciation soi/fonction, restauration d'autres dimensions de la vie, prévention du burn-out." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Distinction soi / rôle professionnel", type: "Levier", icon: "🎯", desc: "Différenciation soi / fonction" },
+    { name: "Restauration d'autres dimensions", type: "Levier", icon: "🎯", desc: "Différenciation soi / fonction" },
+    { name: "Permission d'exister hors travail", type: "Levier", icon: "🎯", desc: "Différenciation soi / fonction" },
+    { name: "Soi qui demeure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Vie multiple", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur travail ne fonctionne pas pour moi"],
+};
+
+const k_762: ProtocolDetail = {
+  protocolId: 762,
+  efficacite: "KIIKA",
+  efficaciteSub: "Émotion / Sens",
+  description: "Pour patients vivant un sentiment de vide, d'absurdité, de perte de cap. Pas une dépression mais une crise de sens. Travail d'écoute intérieure, retour aux valeurs, ouverture à ce qui appelle.",
+  indications: ["Sentiment de vide existentiel", "Crise de sens à mi-vie ou autre étape", "Patients ayant tout pour être heureux et qui ne le sont pas", "Recherche d'orientation"],
+  contraindications: ["Dépression majeure (à traiter d'abord)"],
+  programs: [{
+    id: "principal",
+    title: "Sentiment de manque de sens — Quand la boussole intérieure est brouillée",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Sentiment de manque de sens — Quand la boussole intérieure est brouillée",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients vivant un sentiment de vide, d'absurdité, de perte de cap. Pas une dépression mais une crise de sens. Travail d'écoute intérieure, retour aux valeurs, ouverture à ce qui appelle." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Écoute intérieure profonde", type: "Levier", icon: "🎯", desc: "Travail sur le sens" },
+    { name: "Retour aux valeurs essentielles", type: "Levier", icon: "🎯", desc: "Travail sur le sens" },
+    { name: "Ka comme boussole", type: "Levier", icon: "🎯", desc: "Travail sur le sens" },
+    { name: "Sens retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Boussole intérieure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur sens ne fonctionne pas pour moi"],
+};
+
 export const kiikaHammondDetails: Record<number, ProtocolDetail> = {
   600: k_600,
   601: k_601,
@@ -5260,4 +6625,39 @@ export const kiikaHammondDetails: Record<number, ProtocolDetail> = {
   725: k_725,
   726: k_726,
   727: k_727,
+  728: k_728,
+  729: k_729,
+  730: k_730,
+  731: k_731,
+  732: k_732,
+  733: k_733,
+  734: k_734,
+  735: k_735,
+  736: k_736,
+  737: k_737,
+  738: k_738,
+  739: k_739,
+  740: k_740,
+  741: k_741,
+  742: k_742,
+  743: k_743,
+  744: k_744,
+  745: k_745,
+  746: k_746,
+  747: k_747,
+  748: k_748,
+  749: k_749,
+  750: k_750,
+  751: k_751,
+  752: k_752,
+  753: k_753,
+  754: k_754,
+  755: k_755,
+  756: k_756,
+  757: k_757,
+  758: k_758,
+  759: k_759,
+  760: k_760,
+  761: k_761,
+  762: k_762,
 };
