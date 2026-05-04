@@ -87,6 +87,36 @@ export function ProfilTab({ client, snapshots }: ProfilTabProps) {
       {/* === SELENE results === */}
       {selene && <SeleneResultBlock client={client} selene={selene} />}
 
+      {/* === Selene CTA when missing === */}
+      {!selene && (
+        <div
+          className="rounded-[16px] p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center gap-4 justify-between"
+          style={{
+            background: "linear-gradient(135deg, var(--color-navy) 0%, #2A3F5C 100%)",
+            color: "var(--color-gold-light)",
+          }}
+        >
+          <div className="flex items-start gap-4">
+            <Moon size={26} className="text-[var(--color-gold)] shrink-0 mt-0.5" aria-hidden="true" />
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-gold)] mb-1">
+                Test psychométrique
+              </p>
+              <h3 className="font-serif text-[18px] sm:text-[20px] font-semibold text-white leading-tight">
+                Approfondir avec Selene
+              </h3>
+              <p className="mt-1 text-[12.5px] text-white/70 leading-[1.5] max-w-md">
+                Complète le profil de {client.name.split(" ")[0]} avec les 9 dimensions Selene
+                (117 questions, ~15-20 min).
+              </p>
+            </div>
+          </div>
+          <div className="shrink-0">
+            <SendSeleneInvitationButton clientId={client.id} clientName={client.name} />
+          </div>
+        </div>
+      )}
+
       {/* === Legacy 4-axis profile === */}
       {profile && (
       <div className="grid gap-6 lg:grid-cols-2">
