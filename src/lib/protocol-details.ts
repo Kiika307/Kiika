@@ -15,6 +15,7 @@ import { bbnlp1Details } from "./protocol-details-bbnlp-1";
 import { bbnlp2Details } from "./protocol-details-bbnlp-2";
 import { bbnlp3Details } from "./protocol-details-bbnlp-3";
 import { bbnlp4Details } from "./protocol-details-bbnlp-4";
+import { kiikaHammondDetails } from "./protocol-details-kiika-hammond";
 
 const hypnoseDetail: ProtocolDetail = {
   protocolId: 1,
@@ -285,6 +286,7 @@ export const protocolDetails: Record<number, ProtocolDetail> = {
   ...bbnlp2Details,
   ...bbnlp3Details,
   ...bbnlp4Details,
+  ...kiikaHammondDetails,
 };
 
 export function getProtocolDetail(id: number): ProtocolDetail | null {
