@@ -10,6 +10,7 @@ import { technicienDetails } from "./protocol-details-technicien";
 import { praticienDetails } from "./protocol-details-praticien";
 import { praticienPnlDetails } from "./protocol-details-praticien-pnl";
 import { maitrePnlDetails } from "./protocol-details-maitre-pnl";
+import { maitreHypnoseDetails } from "./protocol-details-maitre-hypnose";
 
 const hypnoseDetail: ProtocolDetail = {
   protocolId: 1,
@@ -275,6 +276,7 @@ export const protocolDetails: Record<number, ProtocolDetail> = {
   ...praticienDetails,
   ...praticienPnlDetails,
   ...maitrePnlDetails,
+  ...maitreHypnoseDetails,
 };
 
 export function getProtocolDetail(id: number): ProtocolDetail | null {
