@@ -6,6 +6,12 @@ import { createPublicClient } from "@/lib/supabase/public";
 import { calculateSeleneScores, buildSeleneProfile } from "@/lib/selene-scoring";
 import type { SeleneDimension } from "@/lib/selene-data";
 import { rateLimit, clientIp } from "@/lib/rate-limit";
+import { getResend, emailFrom } from "@/lib/email/resend-client";
+import {
+  renderSeleneInvitationHtml,
+  renderSeleneInvitationSubject,
+  renderSeleneInvitationText,
+} from "@/lib/email/templates/selene-invitation";
 
 // ============================================================
 // Génération de lien d'invitation au test (thérapeute)
@@ -56,6 +62,136 @@ export async function createSeleneInvitation(
 
   revalidatePath("/clients");
   return { ok: true, token, url, expiresAt };
+}
+
+// ============================================================
+// Envoi par email via Resend (KIIKA -> client, Reply-To: thérapeute)
+// ============================================================
+
+export interface SendSeleneEmailResult {
+  ok: boolean;
+  error?: string;
+  sentTo?: string;
+}
+
+/**
+ * Generate a fresh Selene invitation and email it to the client via Resend,
+ * branded as KIIKA, with Reply-To set to the therapist's address so any
+ * client reply lands in the therapist's inbox.
+ *
+ * Falls back to ok:false with a descriptive error when:
+ * - Resend is not configured (no RESEND_API_KEY)
+ * - The client has no email on file
+ */
+export async function sendSeleneInvitationByEmail(
+  clientId: string,
+): Promise<SendSeleneEmailResult> {
+  const resend = getResend();
+  if (!resend) {
+    return {
+      ok: false,
+      error:
+        "L'envoi automatique n'est pas encore configuré sur ce serveur. Utilisez « Copier le lien » en attendant.",
+    };
+  }
+
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  // Therapist info: use full_name from user metadata when available, else email.
+  const therapistEmail = auth.user.email ?? "";
+  const therapistFullName =
+    (auth.user.user_metadata?.full_name as string | undefined) ||
+    therapistEmail ||
+    "Votre praticien·ne";
+
+  // Client must have an email and belong to the current therapist.
+  const { data: client } = await supabase
+    .from("clients")
+    .select("id, full_name, email")
+    .eq("id", clientId)
+    .eq("therapist_id", auth.user.id)
+    .maybeSingle();
+
+  if (!client) return { ok: false, error: "Client introuvable" };
+  if (!client.email) {
+    return {
+      ok: false,
+      error: "Le client n'a pas d'adresse e-mail enregistrée. Renseignez-la dans la fiche.",
+    };
+  }
+
+  // Generate a fresh invitation. We do not reuse a previously generated one
+  // because the user expects "Envoyer" to mean "envoyer maintenant" with a
+  // visible new audit trail entry.
+  const token = randomToken();
+  const expiresAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString();
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://kiika.intio.fr";
+  const url = `${baseUrl}/selene/${token}`;
+
+  const { data: invitation, error: insertError } = await supabase
+    .from("selene_invitations")
+    .insert({
+      token,
+      therapist_id: auth.user.id,
+      client_id: clientId,
+      expires_at: expiresAt,
+    })
+    .select("id")
+    .single();
+
+  if (insertError || !invitation) {
+    return { ok: false, error: insertError?.message ?? "Impossible de créer l'invitation" };
+  }
+
+  const firstName = (client.full_name ?? "").split(" ")[0] || "vous";
+  const data = {
+    clientFirstName: firstName,
+    therapistFullName,
+    testUrl: url,
+    expiresAtIso: expiresAt,
+  };
+
+  try {
+    const { error: sendError } = await resend.emails.send({
+      from: emailFrom(),
+      to: client.email,
+      subject: renderSeleneInvitationSubject(data),
+      html: renderSeleneInvitationHtml(data),
+      text: renderSeleneInvitationText(data),
+      replyTo: therapistEmail || undefined,
+      tags: [
+        { name: "type", value: "selene_invitation" },
+        { name: "therapist_id", value: auth.user.id },
+      ],
+    });
+
+    if (sendError) {
+      // Surface the Resend error message but mark the invitation as not-sent
+      // so the therapist can retry. The invitation row stays usable (the
+      // client could still receive the link via copy/paste).
+      return { ok: false, error: sendError.message };
+    }
+  } catch (e) {
+    return {
+      ok: false,
+      error: e instanceof Error ? e.message : "Échec de l'envoi de l'e-mail",
+    };
+  }
+
+  // Stamp the row with the send metadata for the audit trail.
+  await supabase
+    .from("selene_invitations")
+    .update({
+      sent_at: new Date().toISOString(),
+      sent_to_email: client.email,
+      send_method: "kiika_email",
+    })
+    .eq("id", invitation.id);
+
+  revalidatePath("/clients");
+  return { ok: true, sentTo: client.email };
 }
 
 // ============================================================

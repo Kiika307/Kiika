@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { Send, Copy, Check, ExternalLink, Sparkles } from "lucide-react";
+import { Send, Copy, Check, ExternalLink, Sparkles, Mail, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import { createSeleneInvitation } from "@/lib/selene-actions";
+import { createSeleneInvitation, sendSeleneInvitationByEmail } from "@/lib/selene-actions";
 
 interface Props {
   clientId: string;
@@ -15,7 +15,9 @@ export function SendSeleneInvitationButton({ clientId, clientName, hasTakenTest 
   const [open, setOpen] = useState(false);
   const [url, setUrl] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+  const [emailSentTo, setEmailSentTo] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
+  const [sendPending, startSendTransition] = useTransition();
 
   const generate = () => {
     startTransition(async () => {
@@ -25,7 +27,20 @@ export function SendSeleneInvitationButton({ clientId, clientName, hasTakenTest 
         return;
       }
       setUrl(res.url);
+      setEmailSentTo(null);
       setOpen(true);
+    });
+  };
+
+  const sendByEmail = () => {
+    startSendTransition(async () => {
+      const res = await sendSeleneInvitationByEmail(clientId);
+      if (!res.ok) {
+        toast.error(res.error ?? "Échec de l'envoi");
+        return;
+      }
+      setEmailSentTo(res.sentTo ?? null);
+      toast.success(`Test envoyé à ${res.sentTo}`);
     });
   };
 
@@ -106,22 +121,48 @@ export function SendSeleneInvitationButton({ clientId, clientName, hasTakenTest 
               <code className="text-[12px] text-[var(--color-navy)] font-mono">{url}</code>
             </div>
 
+            {/* Primary action: KIIKA-branded email send */}
+            {emailSentTo ? (
+              <div
+                className="flex items-center gap-2 rounded-[10px] px-4 py-3 text-[13px] mb-3"
+                style={{ backgroundColor: "rgba(46, 138, 123, 0.10)", color: "var(--color-teal)" }}
+              >
+                <Check size={16} aria-hidden="true" />
+                Envoyé à <strong>{emailSentTo}</strong>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={sendByEmail}
+                disabled={sendPending}
+                className="w-full inline-flex items-center justify-center gap-1.5 rounded-[10px] px-4 py-2.5 text-[13px] font-semibold mb-3 min-h-11 disabled:opacity-60"
+                style={{ backgroundColor: "var(--color-gold)", color: "var(--color-navy)" }}
+              >
+                {sendPending ? (
+                  <Loader2 size={14} className="animate-spin" aria-hidden="true" />
+                ) : (
+                  <Mail size={14} aria-hidden="true" />
+                )}
+                {sendPending ? "Envoi en cours…" : "Envoyer via KIIKA (recommandé)"}
+              </button>
+            )}
+
+            {/* Secondary fallbacks */}
             <div className="flex flex-col sm:flex-row gap-2">
               <button
                 type="button"
                 onClick={copyToClipboard}
-                className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-[10px] px-4 py-2.5 text-[13px] font-semibold text-white min-h-11"
-                style={{ backgroundColor: "var(--color-navy)" }}
+                className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-[var(--color-light-gray)] bg-white px-4 py-2.5 text-[12px] font-semibold text-[var(--color-navy)] hover:bg-[var(--color-light-gray)] min-h-10"
               >
                 {copied ? <Check size={14} aria-hidden="true" /> : <Copy size={14} aria-hidden="true" />}
                 {copied ? "Copié !" : "Copier le lien"}
               </button>
               <a
                 href={mailto}
-                className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-[var(--color-light-gray)] bg-white px-4 py-2.5 text-[13px] font-semibold text-[var(--color-navy)] hover:bg-[var(--color-light-gray)] min-h-11"
+                className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-[var(--color-light-gray)] bg-white px-4 py-2.5 text-[12px] font-semibold text-[var(--color-navy)] hover:bg-[var(--color-light-gray)] min-h-10"
               >
                 <ExternalLink size={14} aria-hidden="true" />
-                Envoyer par e-mail
+                Mon client mail
               </a>
             </div>
 
