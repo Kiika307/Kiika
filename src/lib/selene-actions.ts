@@ -6,7 +6,7 @@ import { createPublicClient } from "@/lib/supabase/public";
 import { calculateSeleneScores, buildSeleneProfile } from "@/lib/selene-scoring";
 import type { SeleneDimension } from "@/lib/selene-data";
 import { rateLimit, clientIp } from "@/lib/rate-limit";
-import { getResend, emailFrom } from "@/lib/email/resend-client";
+import { getSmtpTransporter, emailFrom } from "@/lib/email/smtp-client";
 import {
   renderSeleneInvitationHtml,
   renderSeleneInvitationSubject,
@@ -65,7 +65,7 @@ export async function createSeleneInvitation(
 }
 
 // ============================================================
-// Envoi par email via Resend (KIIKA -> client, Reply-To: thérapeute)
+// Envoi par email via SMTP SiteGround (KIIKA -> client, Reply-To: thérapeute)
 // ============================================================
 
 export interface SendSeleneEmailResult {
@@ -75,19 +75,20 @@ export interface SendSeleneEmailResult {
 }
 
 /**
- * Generate a fresh Selene invitation and email it to the client via Resend,
- * branded as KIIKA, with Reply-To set to the therapist's address so any
- * client reply lands in the therapist's inbox.
+ * Generate a fresh Selene invitation and email it to the client via the
+ * configured SMTP server (SiteGround mailbox), branded as KIIKA. Reply-To
+ * is set to the therapist's address so any client reply lands in the
+ * therapist's inbox.
  *
  * Falls back to ok:false with a descriptive error when:
- * - Resend is not configured (no RESEND_API_KEY)
+ * - SMTP is not configured (missing SMTP_HOST/SMTP_USER/SMTP_PASSWORD)
  * - The client has no email on file
  */
 export async function sendSeleneInvitationByEmail(
   clientId: string,
 ): Promise<SendSeleneEmailResult> {
-  const resend = getResend();
-  if (!resend) {
+  const transporter = getSmtpTransporter();
+  if (!transporter) {
     return {
       ok: false,
       error:
@@ -154,26 +155,22 @@ export async function sendSeleneInvitationByEmail(
   };
 
   try {
-    const { error: sendError } = await resend.emails.send({
+    await transporter.sendMail({
       from: emailFrom(),
       to: client.email,
       subject: renderSeleneInvitationSubject(data),
       html: renderSeleneInvitationHtml(data),
       text: renderSeleneInvitationText(data),
       replyTo: therapistEmail || undefined,
-      tags: [
-        { name: "type", value: "selene_invitation" },
-        { name: "therapist_id", value: auth.user.id },
-      ],
+      headers: {
+        "X-KIIKA-Type": "selene_invitation",
+        "X-KIIKA-Therapist-Id": auth.user.id,
+      },
     });
-
-    if (sendError) {
-      // Surface the Resend error message but mark the invitation as not-sent
-      // so the therapist can retry. The invitation row stays usable (the
-      // client could still receive the link via copy/paste).
-      return { ok: false, error: sendError.message };
-    }
   } catch (e) {
+    // Common SMTP failures: bad creds, connection refused, mailbox over quota,
+    // recipient rejected. Bubble up the message verbatim — therapist can read
+    // and decide whether to retry or use the copy-link fallback.
     return {
       ok: false,
       error: e instanceof Error ? e.message : "Échec de l'envoi de l'e-mail",
