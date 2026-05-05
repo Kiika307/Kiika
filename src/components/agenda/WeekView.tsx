@@ -1,37 +1,65 @@
 "use client";
 
-import { Avatar } from "@/components/ui/Avatar";
 import type { Appointment, Client } from "@/lib/types";
 
 const HOURS = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
-const DAYS = [
-  { short: "Lun", num: 21, today: true },
-  { short: "Mar", num: 22, today: false },
-  { short: "Mer", num: 23, today: false },
-  { short: "Jeu", num: 24, today: false },
-  { short: "Ven", num: 25, today: false },
-];
+const DAY_SHORT = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
 const HOUR_HEIGHT = 62;
 const TIME_COL = 64;
+
+interface DayCell {
+  short: string;
+  num: number;
+  today: boolean;
+  isWeekend: boolean;
+}
 
 interface WeekViewProps {
   appointments: Appointment[];
   clients: Client[];
+  weekStart: string; // ISO date of Monday 00:00 (passed by server to keep tz consistent)
   onSelect?: (appt: Appointment) => void;
 }
 
-function timeToOffset(time: string) {
-  const [h, m] = time.split(":").map(Number);
-  return (h - HOURS[0]) * HOUR_HEIGHT + (m / 60) * HOUR_HEIGHT;
+function buildDays(weekStartIso: string): DayCell[] {
+  const start = new Date(weekStartIso);
+  const today = new Date();
+  const todayKey = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
+  const out: DayCell[] = [];
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(start);
+    d.setDate(d.getDate() + i);
+    const key = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+    // getDay(): 0=Sun, 1=Mon,..., 6=Sat
+    const dow = d.getDay();
+    out.push({
+      short: DAY_SHORT[dow],
+      num: d.getDate(),
+      today: key === todayKey,
+      isWeekend: dow === 0 || dow === 6,
+    });
+  }
+  return out;
 }
 
-export function WeekView({ appointments, clients, onSelect }: WeekViewProps) {
+function timeToOffset(time: string): number {
+  const [h, m] = time.split(":").map(Number);
+  const raw = (h - HOURS[0]) * HOUR_HEIGHT + (m / 60) * HOUR_HEIGHT;
+  // Clamp into the visible grid so early/late appointments don't overflow on the header.
+  const max = HOURS.length * HOUR_HEIGHT - 12;
+  if (raw < 0) return 0;
+  if (raw > max) return max;
+  return raw;
+}
+
+export function WeekView({ appointments, clients, weekStart, onSelect }: WeekViewProps) {
+  const DAYS = buildDays(weekStart);
   return (
     <div
       className="rounded-[16px] overflow-x-auto"
       style={{ backgroundColor: "var(--color-white-soft)", boxShadow: "var(--shadow-card)" }}
     >
-      <div className="min-w-[640px]">
+      <div className="min-w-[840px]">
       <div
         className="grid border-b border-[var(--color-light-gray)]"
         style={{ gridTemplateColumns: `${TIME_COL}px repeat(${DAYS.length}, 1fr)` }}
@@ -39,9 +67,15 @@ export function WeekView({ appointments, clients, onSelect }: WeekViewProps) {
         <div />
         {DAYS.map((d) => (
           <div
-            key={d.short}
+            key={d.num}
             className="px-4 py-3 text-center"
-            style={{ backgroundColor: d.today ? "var(--color-gold-light)" : undefined }}
+            style={{
+              backgroundColor: d.today
+                ? "var(--color-gold-light)"
+                : d.isWeekend
+                  ? "rgba(0,0,0,0.025)"
+                  : undefined,
+            }}
           >
             <div className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)]">{d.short}</div>
             <div className="font-serif text-[24px] font-semibold text-[var(--color-navy)]">{d.num}</div>

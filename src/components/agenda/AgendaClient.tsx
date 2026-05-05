@@ -13,11 +13,12 @@ interface AgendaClientProps {
   clients: Client[];
   protocols: Protocol[];
   weekLabel: string;
+  weekStart: string;
 }
 
 type View = "semaine" | "mois";
 
-export function AgendaClient({ appointments, clients, protocols, weekLabel }: AgendaClientProps) {
+export function AgendaClient({ appointments, clients, protocols, weekLabel, weekStart }: AgendaClientProps) {
   const router = useRouter();
   const [view, setView] = useState<View>("semaine");
   const [modalOpen, setModalOpen] = useState(false);
@@ -72,7 +73,12 @@ export function AgendaClient({ appointments, clients, protocols, weekLabel }: Ag
       </header>
 
       {view === "semaine" ? (
-        <WeekView appointments={appointments} clients={clients} onSelect={openClient} />
+        <WeekView
+          appointments={appointments}
+          clients={clients}
+          weekStart={weekStart}
+          onSelect={openClient}
+        />
       ) : (
         <MonthView appointments={appointments} clients={clients} onSelect={openClient} />
       )}
