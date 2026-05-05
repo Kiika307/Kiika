@@ -1,25 +1,51 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Star, Search } from "lucide-react";
 import { ProtocolCard } from "./ProtocolCard";
 import { Badge } from "@/components/ui/Badge";
 import { MatchBar } from "@/components/ui/MatchBar";
 import Link from "next/link";
 import type { Client, Protocol } from "@/lib/types";
+import { FEATURED_PROTOCOL_IDS } from "@/lib/protocol-featured";
+
+const PAGE_SIZE = 36;
 
 interface ProtocolesClientProps {
   protocols: Protocol[];
   clients: Client[];
 }
 
-type Mode = "pratique" | "objectif";
+type Mode = "recommande" | "pratique" | "objectif";
 
 export function ProtocolesClient({ protocols, clients }: ProtocolesClientProps) {
-  const [mode, setMode] = useState<Mode>("pratique");
+  const [mode, setMode] = useState<Mode>("recommande");
   const [practiceFilter, setPracticeFilter] = useState<string>("Tous");
   const [objectiveFilter, setObjectiveFilter] = useState<string>("Tous");
   const [selectedClientId, setSelectedClientId] = useState<string | null>(null);
+  const [search, setSearch] = useState<string>("");
+
+  // Apply text search before any view-specific filtering.
+  const searched = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    if (!q) return protocols;
+    return protocols.filter((p) => {
+      if (p.name.toLowerCase().includes(q)) return true;
+      if (p.category?.toLowerCase().includes(q)) return true;
+      if (p.practice?.toLowerCase().includes(q)) return true;
+      if (p.description?.toLowerCase().includes(q)) return true;
+      if (p.tags.some((t) => t.toLowerCase().includes(q))) return true;
+      if (p.motifs.some((m) => m.toLowerCase().includes(q))) return true;
+      return false;
+    });
+  }, [protocols, search]);
+
+  const featured = useMemo(() => {
+    const byId = new Map(protocols.map((p) => [p.id, p] as const));
+    return FEATURED_PROTOCOL_IDS.map((id) => byId.get(id)).filter(
+      (p): p is Protocol => p !== undefined,
+    );
+  }, [protocols]);
 
   const practices = useMemo(() => {
     const PRACTICE_ORDER = [
@@ -51,11 +77,11 @@ export function ProtocolesClient({ protocols, clients }: ProtocolesClientProps) 
       "Process Communication",
       "Analyse systémique",
     ];
-    const present = new Set(protocols.map((p) => p.practice));
+    const present = new Set(searched.map((p) => p.practice));
     const ordered = PRACTICE_ORDER.filter((p) => present.has(p));
     const extras = Array.from(present).filter((p) => !PRACTICE_ORDER.includes(p)).sort();
     return ["Tous", ...ordered, ...extras];
-  }, [protocols]);
+  }, [searched]);
 
   const objectives = useMemo(() => {
     const MOTIFS_ORDER = [
@@ -79,11 +105,11 @@ export function ProtocolesClient({ protocols, clients }: ProtocolesClientProps) 
       "Quête de sens & spiritualité",
     ];
     const present = new Set<string>();
-    protocols.forEach((p) => p.motifs.forEach((m) => present.add(m)));
+    searched.forEach((p) => p.motifs.forEach((m) => present.add(m)));
     const ordered = MOTIFS_ORDER.filter((m) => present.has(m));
     const extras = Array.from(present).filter((m) => !MOTIFS_ORDER.includes(m)).sort();
     return ["Tous", ...ordered, ...extras];
-  }, [protocols]);
+  }, [searched]);
 
   const selectedClient =
     selectedClientId != null ? clients.find((c) => c.id === selectedClientId) ?? null : null;
@@ -174,34 +200,59 @@ export function ProtocolesClient({ protocols, clients }: ProtocolesClientProps) 
         </div>
       )}
 
-      {/* Mode toggle */}
-      <div
-        className="inline-flex items-center rounded-[20px] p-1 mb-5"
-        style={{ backgroundColor: "var(--color-white-soft)", boxShadow: "var(--shadow-card)" }}
-      >
-        {(
-          [
-            { key: "pratique", label: "Par pratique" },
-            { key: "objectif", label: "Par objectif" },
-          ] as const
-        ).map((m) => (
-          <button
-            key={m.key}
-            onClick={() => setMode(m.key)}
-            className="px-4 py-1.5 rounded-[16px] text-[12px] font-semibold transition-colors"
-            style={{
-              backgroundColor: mode === m.key ? "var(--color-navy)" : "transparent",
-              color: mode === m.key ? "var(--color-gold-light)" : "var(--color-gray-soft)",
-            }}
-          >
-            {m.label}
-          </button>
-        ))}
+      {/* Mode toggle + search */}
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-5">
+        <div
+          className="inline-flex items-center rounded-[20px] p-1 self-start"
+          style={{ backgroundColor: "var(--color-white-soft)", boxShadow: "var(--shadow-card)" }}
+        >
+          {(
+            [
+              { key: "recommande", label: "Recommandé KIIKA" },
+              { key: "pratique", label: "Par pratique" },
+              { key: "objectif", label: "Par objectif" },
+            ] as const
+          ).map((m) => (
+            <button
+              key={m.key}
+              onClick={() => setMode(m.key)}
+              className="px-4 py-1.5 rounded-[16px] text-[12px] font-semibold transition-colors"
+              style={{
+                backgroundColor: mode === m.key ? "var(--color-navy)" : "transparent",
+                color: mode === m.key ? "var(--color-gold-light)" : "var(--color-gray-soft)",
+              }}
+            >
+              {m.label}
+            </button>
+          ))}
+        </div>
+        <label className="relative flex-1 sm:max-w-md">
+          <span className="sr-only">Rechercher un protocole</span>
+          <Search
+            size={16}
+            className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-gray-soft)] pointer-events-none"
+            aria-hidden="true"
+          />
+          <input
+            type="search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Rechercher (nom, motif, tag...)"
+            className="w-full rounded-[10px] border border-[var(--color-light-gray)] bg-[var(--color-white-soft)] pl-9 pr-3 py-2 text-[13px] text-[var(--color-navy)] min-h-10"
+          />
+        </label>
       </div>
 
-      {mode === "pratique" ? (
+      {mode === "recommande" ? (
+        <RecommendedView
+          featured={featured}
+          search={search}
+          searched={searched}
+          matchScoreFor={matchScoreFor}
+        />
+      ) : mode === "pratique" ? (
         <PracticeView
-          protocols={protocols}
+          protocols={searched}
           practices={practices}
           filter={practiceFilter}
           onFilterChange={setPracticeFilter}
@@ -209,7 +260,7 @@ export function ProtocolesClient({ protocols, clients }: ProtocolesClientProps) 
         />
       ) : (
         <ObjectiveView
-          protocols={protocols}
+          protocols={searched}
           objectives={objectives}
           filter={objectiveFilter}
           onFilterChange={setObjectiveFilter}
@@ -217,6 +268,104 @@ export function ProtocolesClient({ protocols, clients }: ProtocolesClientProps) 
         />
       )}
     </div>
+  );
+}
+
+interface RecommendedViewProps {
+  featured: Protocol[];
+  search: string;
+  searched: Protocol[];
+  matchScoreFor: (id: number) => number | null;
+}
+
+function RecommendedView({ featured, search, searched, matchScoreFor }: RecommendedViewProps) {
+  // When searching from the recommended view, show search results across the
+  // full library instead of the curated short list.
+  if (search.trim()) {
+    return (
+      <PaginatedGrid
+        protocols={searched}
+        matchScoreFor={matchScoreFor}
+        emptyMessage="Aucun protocole ne correspond à votre recherche."
+      />
+    );
+  }
+
+  return (
+    <section>
+      <div className="flex items-center gap-3 mb-3">
+        <Star size={18} className="text-[var(--color-gold)]" aria-hidden="true" />
+        <h2 className="font-serif text-[18px] font-semibold text-[var(--color-navy)]">
+          Sélection KIIKA — les essentiels
+        </h2>
+        <span className="text-[11px] text-[var(--color-gray-soft)]">
+          {featured.length} protocoles à connaître
+        </span>
+        <div className="flex-1 h-px" style={{ backgroundColor: "var(--color-light-gray)" }} />
+      </div>
+      <p className="text-[12.5px] text-[var(--color-gray-soft)] mb-5 max-w-2xl">
+        Une sélection éditoriale d'outils universellement utiles : anamnèse structurée, cadrage
+        d'objectif, lecture systémique, recadrage, ancrage de ressources, libération symbolique.
+        Bascule sur «&nbsp;Par pratique&nbsp;» ou «&nbsp;Par objectif&nbsp;» pour explorer le
+        catalogue complet.
+      </p>
+      <div
+        className="grid gap-4"
+        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(278px, 1fr))" }}
+      >
+        {featured.map((p) => (
+          <ProtocolCard key={p.id} protocol={p} matchScore={matchScoreFor(p.id)} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+interface PaginatedGridProps {
+  protocols: Protocol[];
+  matchScoreFor: (id: number) => number | null;
+  emptyMessage?: string;
+}
+
+function PaginatedGrid({ protocols, matchScoreFor, emptyMessage }: PaginatedGridProps) {
+  const [visible, setVisible] = useState(PAGE_SIZE);
+  const shown = protocols.slice(0, visible);
+  const hasMore = protocols.length > visible;
+
+  if (protocols.length === 0) {
+    return (
+      <p className="text-[13px] text-[var(--color-gray-soft)] py-8 text-center">
+        {emptyMessage ?? "Aucun protocole."}
+      </p>
+    );
+  }
+
+  return (
+    <>
+      <div
+        className="grid gap-4"
+        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(278px, 1fr))" }}
+      >
+        {shown.map((p) => (
+          <ProtocolCard key={p.id} protocol={p} matchScore={matchScoreFor(p.id)} />
+        ))}
+      </div>
+      {hasMore && (
+        <div className="flex justify-center mt-6">
+          <button
+            type="button"
+            onClick={() => setVisible((v) => v + PAGE_SIZE)}
+            className="rounded-[12px] px-5 py-2.5 text-[13px] font-semibold transition-colors"
+            style={{
+              backgroundColor: "var(--color-navy)",
+              color: "var(--color-gold-light)",
+            }}
+          >
+            Voir plus ({protocols.length - visible} restants)
+          </button>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -268,14 +417,7 @@ function PracticeView({
   return (
     <>
       <PillRow options={practices} value={filter} onChange={onFilterChange} />
-      <div
-        className="grid gap-4 stagger"
-        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(278px, 1fr))" }}
-      >
-        {filtered.map((p) => (
-          <ProtocolCard key={p.id} protocol={p} matchScore={matchScoreFor(p.id)} />
-        ))}
-      </div>
+      <PaginatedGrid key={`practice:${filter}`} protocols={filtered} matchScoreFor={matchScoreFor} />
     </>
   );
 }
@@ -287,7 +429,22 @@ function ObjectiveView({
   onFilterChange,
   matchScoreFor,
 }: ViewProps & { objectives: string[] }) {
-  const groupNames = filter === "Tous" ? objectives.filter((o) => o !== "Tous") : [filter];
+  // Single objective selected -> standard paginated grid.
+  if (filter !== "Tous") {
+    const filtered = protocols.filter((p) => p.motifs.includes(filter));
+    return (
+      <>
+        <PillRow options={objectives} value={filter} onChange={onFilterChange} />
+        <PaginatedGrid key={`objective:${filter}`} protocols={filtered} matchScoreFor={matchScoreFor} />
+      </>
+    );
+  }
+
+  // "Tous": show grouped sections, each capped to a few cards with a "Voir tous"
+  // shortcut that switches the filter to that group. Avoids rendering hundreds of
+  // cards at once on the default view.
+  const PER_GROUP = 6;
+  const groupNames = objectives.filter((o) => o !== "Tous");
   const groups = groupNames
     .map((obj) => ({
       objective: obj,
@@ -312,12 +469,21 @@ function ObjectiveView({
                 className="flex-1 h-px"
                 style={{ backgroundColor: "var(--color-light-gray)" }}
               />
+              {g.protocols.length > PER_GROUP && (
+                <button
+                  type="button"
+                  onClick={() => onFilterChange(g.objective)}
+                  className="text-[12px] font-semibold text-[var(--color-gold)] hover:underline"
+                >
+                  Voir tous →
+                </button>
+              )}
             </div>
             <div
               className="grid gap-4"
               style={{ gridTemplateColumns: "repeat(auto-fill, minmax(278px, 1fr))" }}
             >
-              {g.protocols.map((p) => (
+              {g.protocols.slice(0, PER_GROUP).map((p) => (
                 <ProtocolCard key={p.id} protocol={p} matchScore={matchScoreFor(p.id)} />
               ))}
             </div>
