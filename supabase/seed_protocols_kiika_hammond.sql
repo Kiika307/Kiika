@@ -492,7 +492,7 @@ VALUES
    1,
    ARRAY['Recadrage trac comme énergie', 'Différenciation activation utile / activation parasite', 'Préparation imaginaire de la performance', 'Ancrage gestuel d''activation juste'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-ANX-005',
-   ARRAY['Performance & examens', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Performance & examens']
   ),
   (635,
    'Phobie spécifique — Désensibilisation graduée par hiérarchie',
@@ -954,7 +954,7 @@ VALUES
    1,
    ARRAY['Confort multidimensionnel', 'Soutien à la résistance physique et psychique', 'Restauration de zones de bien-être', 'Allègement des effets secondaires', 'Présence à ce qui reste vivant'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-008',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (668,
    'Douleur articulaire chronique — Arthrose et inflammations',
@@ -982,7 +982,7 @@ VALUES
    1,
    ARRAY['Reconnaissance de la guérison anatomique', 'Mise à jour du système nerveux', 'Reconnexion de la zone au schéma corporel sain', 'Effacement progressif du signal résiduel'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-DOUL-010',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (670,
    'Douleurs viscérales chroniques — Apaiser le ventre qui parle',
@@ -1584,7 +1584,7 @@ VALUES
    1,
    ARRAY['Renforcement de la motivation', 'Désinvestissement du geste', 'Gestion des envies', 'Nouvelle identité de non-fumeur'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-MED-038',
-   ARRAY['Addictions', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Addictions']
   ),
   (713,
    'Incontinence urinaire — Restaurer le contrôle',
@@ -1696,7 +1696,7 @@ VALUES
    1,
    ARRAY['Désamorçage des nausées anticipatoires', 'Imagerie d''apaisement digestif', 'Soutien à la récupération entre cycles', 'Apaisement local des mucites'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-MED-046',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (721,
    'Radiothérapie — Confort des séances et de la peau',
@@ -1710,7 +1710,7 @@ VALUES
    1,
    ARRAY['Confort durant l''immobilité', 'Apaisement cutané imagé', 'Désamorçage anxiété appareil', 'Soutien sur la durée'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-MED-047',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (722,
    'Maladies auto-immunes — Dialogue avec le système immunitaire',
@@ -1864,7 +1864,7 @@ VALUES
    1,
    ARRAY['Légitimation de la souffrance', 'Libération progressive du lien', 'Reconstruction de l''identité', 'Restauration de l''estime'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-EMOT-005',
-   ARRAY['Trauma & deuil', 'Conflits & communication']
+   ARRAY['Conflits & communication', 'Trauma & deuil']
   ),
   (733,
    'Deuil professionnel — Perte d''emploi, retraite, reconversion',
@@ -2060,7 +2060,7 @@ VALUES
    1,
    ARRAY['Légitimation du droit de refuser', 'Exploration des peurs du non', 'Pratique imaginaire', 'Voix sage qui soutient'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-EMOT-019',
-   ARRAY['Conflits & communication', 'Estime & confiance en soi']
+   ARRAY['Estime & confiance en soi', 'Conflits & communication']
   ),
   (747,
    'Charge mentale — Délester ce qu''on porte sans le voir',
@@ -2158,7 +2158,7 @@ VALUES
    1,
    ARRAY['Distanciation par l''écran de cinéma', 'Apaisement émotionnel', 'Recadrage sécurisant', 'Intégration progressive'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-EMOT-026',
-   ARRAY['Trauma & deuil', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Trauma & deuil']
   ),
   (754,
    'Acceptation de l''inacceptable — Vivre avec ce qu''on ne peut changer',
@@ -2326,7 +2326,7 @@ VALUES
    1,
    ARRAY['Mémoire corporelle activée', 'Désinvestissement du contrôle conscient', 'Confiance profonde retrouvée', 'Corps qui sait'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERF-003',
-   ARRAY['Performance & examens', 'Estime & confiance en soi']
+   ARRAY['Estime & confiance en soi', 'Performance & examens']
   ),
   (766,
    'Visualisation de geste technique — Imagerie motrice efficace',
@@ -2368,7 +2368,7 @@ VALUES
    1,
    ARRAY['Désinvestissement du résultat pendant l''action', 'Investissement total du processus', 'Transformation pression en énergie', 'Désamorçage des enjeux extérieurs'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERF-006',
-   ARRAY['Performance & examens', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Performance & examens']
   ),
   (769,
    'Activation de l''état de flow — L''expérience optimale',
@@ -2452,7 +2452,7 @@ VALUES
    1,
    ARRAY['Reconnaissance de la spirale', 'Reconnexion aux fondations', 'Reset complet', 'Reconstruction progressive'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERF-012',
-   ARRAY['Performance & examens', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Performance & examens']
   ),
   (775,
    'Perfectionnisme paralysant — Libérer le geste',
@@ -2466,7 +2466,7 @@ VALUES
    1,
    ARRAY['Distinction excellence / perfection', 'Autorisation de l''imperfection', 'Libération du geste', 'Rapport sain à l''erreur'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERF-013',
-   ARRAY['Performance & examens', 'Estime & confiance en soi']
+   ARRAY['Estime & confiance en soi', 'Performance & examens']
   ),
   (776,
    'Préparation aux tirs au but, penalties, moments décisifs',
@@ -2494,7 +2494,7 @@ VALUES
    1,
    ARRAY['Reconnaissance du deuil sportif', 'Identité au-delà de la performance', 'Construction du nouveau monde', 'Capitalisation des acquis'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERF-015',
-   ARRAY['Performance & examens', 'Quête de sens & spiritualité']
+   ARRAY['Quête de sens & spiritualité', 'Performance & examens']
   ),
   (778,
    'Préparation à un examen — Mobiliser ses ressources',
@@ -2592,7 +2592,7 @@ VALUES
    1,
    ARRAY['Désinvestissement de l''auto-jugement', 'Espace intérieur sans censure', 'Accès à l''inconscient créatif', 'Conditions facilitantes du flux'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERF-022',
-   ARRAY['Performance & examens', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Performance & examens']
   ),
   (785,
    'Motivation durable — Restaurer l''élan vers ses objectifs',
@@ -2676,7 +2676,7 @@ VALUES
    1,
    ARRAY['Identité professionnelle en transition', 'Acquis transférables', 'Confiance dans le nouveau', 'Patience du processus'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERF-028',
-   ARRAY['Performance & examens', 'Quête de sens & spiritualité']
+   ARRAY['Quête de sens & spiritualité', 'Performance & examens']
   ),
   (791,
    'Confiance dans un projet personnel — Porter sa vision',
@@ -2886,7 +2886,7 @@ VALUES
    1,
    ARRAY['Désamorçage de la pression mensuelle', 'Confiance dans le corps', 'Détente du système nerveux', 'Acceptation du processus'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERI-001',
-   ARRAY['Trauma & deuil', 'Couple & sexualité']
+   ARRAY['Couple & sexualité', 'Trauma & deuil']
   ),
   (1013,
    'Parcours PMA — Soutenir la traversée médicale',
@@ -2900,7 +2900,7 @@ VALUES
    1,
    ARRAY['Traversée des phases du parcours', 'Soutien dans l''attente', 'Acceptation des échecs', 'Maintien du couple'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERI-002',
-   ARRAY['Trauma & deuil', 'Couple & sexualité']
+   ARRAY['Couple & sexualité', 'Trauma & deuil']
   ),
   (1014,
    'Anxiété de la grossesse — Vivre la grossesse avec sérénité',
@@ -2914,7 +2914,7 @@ VALUES
    1,
    ARRAY['Lien à l''enfant porté', 'Confiance dans le corps', 'Désamorçage de l''hypervigilance', 'Présence pleine à l''expérience'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERI-003',
-   ARRAY['Trauma & deuil', 'Couple & sexualité']
+   ARRAY['Couple & sexualité', 'Trauma & deuil']
   ),
   (1015,
    'Nausées et vomissements de grossesse — Apaiser le système',
@@ -2942,7 +2942,7 @@ VALUES
    1,
    ARRAY['Confiance dans le corps physiologique', 'Outils pour le travail (souffle, lieu sûr, anchors)', 'Imagerie d''ouverture', 'Désamorçage des peurs'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERI-005',
-   ARRAY['Trauma & deuil', 'Couple & sexualité']
+   ARRAY['Couple & sexualité', 'Trauma & deuil']
   ),
   (1017,
    'Vécu difficile d''accouchement — Intégrer l''expérience',
@@ -2956,7 +2956,7 @@ VALUES
    1,
    ARRAY['Reconnaissance du vécu sans minimisation', 'Lieu sûr stabilisé', 'Récit ré-élaboré', 'Réconciliation possible'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERI-006',
-   ARRAY['Trauma & deuil', 'Couple & sexualité']
+   ARRAY['Couple & sexualité', 'Trauma & deuil']
   ),
   (1018,
    'Post-partum difficile — Traverser les premiers mois',
@@ -2970,7 +2970,7 @@ VALUES
    1,
    ARRAY['Légitimation de la difficulté', 'Restauration énergétique', 'Confiance maternelle progressive', 'Lien au bébé soutenu'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-PERI-007',
-   ARRAY['Trauma & deuil', 'Couple & sexualité']
+   ARRAY['Couple & sexualité', 'Trauma & deuil']
   ),
   (1019,
    'Allaitement difficile — Soutenir la traversée',
@@ -3278,7 +3278,7 @@ VALUES
    1,
    ARRAY['Lieu sûr profondément ancré', 'Ressources internes activées', 'Régulation par le souffle', 'Fenêtre de tolérance restaurée'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-001',
-   ARRAY['Trauma & deuil', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Trauma & deuil']
   ),
   (1041,
    'Approche du contenu traumatique — Écran de cinéma sécurisé',
@@ -3292,7 +3292,7 @@ VALUES
    1,
    ARRAY['Double dissociation par l''écran', 'Maintien de la fenêtre de tolérance', 'Possibilité d''arrêt à tout moment', 'Re-stabilisation après'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-002',
-   ARRAY['Trauma & deuil', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Trauma & deuil']
   ),
   (1042,
    'Intégration post-trauma — Reprendre sa place dans le récit de vie',
@@ -3306,7 +3306,7 @@ VALUES
    1,
    ARRAY['Récit de vie restauré', 'Événement intégré sans dominer', 'Identité au-delà du trauma', 'Sens à donner à la traversée'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-003',
-   ARRAY['Trauma & deuil', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Trauma & deuil']
   ),
   (1043,
    'Flashbacks et reviviscences — Sortir de la boucle intrusive',
@@ -3320,7 +3320,7 @@ VALUES
    1,
    ARRAY['Ancrage immédiat dans le présent', 'Différenciation passé / présent', '5 sens activés', 'Lieu sûr accessible'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-004',
-   ARRAY['Trauma & deuil', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Trauma & deuil']
   ),
   (1044,
    'ESPT complexe — Travail sur les parts dissociées',
@@ -3334,7 +3334,7 @@ VALUES
    1,
    ARRAY['Identification des parts', 'Communication interne', 'Soin des parts blessées', 'Leadership du Self'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-005',
-   ARRAY['Trauma & deuil', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Trauma & deuil']
   ),
   (1045,
    'Phobie de soi — Quand certaines parts intérieures font peur',
@@ -3348,7 +3348,7 @@ VALUES
    1,
    ARRAY['Approche très progressive', 'Lieu sûr renforcé', 'Compagnon de route intérieur', 'Désensibilisation à soi'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-006',
-   ARRAY['Trauma & deuil', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Trauma & deuil']
   ),
   (1046,
    'Dépression majeure en complément — Soutien à la traversée',
@@ -3432,7 +3432,7 @@ VALUES
    1,
    ARRAY['Tolérance à la détresse', 'Régulation émotionnelle', 'Pleine conscience', 'Présent comme refuge'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-012',
-   ARRAY['Trauma & deuil', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Trauma & deuil']
   ),
   (1052,
    'Trouble dissociatif identitaire (TDI) — Présence respectueuse',
@@ -3446,7 +3446,7 @@ VALUES
    1,
    ARRAY['Présence sécurisante pour le système', 'Lieu sûr partagé entre parts', 'Communication interne respectueuse', 'Pas d''unification forcée'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-013',
-   ARRAY['Trauma & deuil', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Trauma & deuil']
   ),
   (1053,
    'Idéations suicidaires hors crise — Soutien et lien à la vie',
@@ -3460,7 +3460,7 @@ VALUES
    1,
    ARRAY['Lien à la vie restauré', 'Identification des protecteurs', 'Contrats de sécurité', 'Espoir cultivable'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-014',
-   ARRAY['Trauma & deuil', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Trauma & deuil']
   ),
   (1054,
    'Schizophrénie en rémission — Soutien à la qualité de vie',
@@ -3474,7 +3474,7 @@ VALUES
    1,
    ARRAY['Présence ancrée dans le réel', 'Régulation du stress', 'Hygiène de vie', 'Soutien à l''observance'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-015',
-   ARRAY['Trauma & deuil', 'Anxiété & stress']
+   ARRAY['Anxiété & stress', 'Trauma & deuil']
   ),
   (1055,
    'Annonce diagnostique en cancérologie — Traverser le choc',
@@ -3488,7 +3488,7 @@ VALUES
    1,
    ARRAY['Légitimation du choc', 'Stabilisation immédiate', 'Mobilisation des ressources', 'Préparation à la suite sans précipiter'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-016',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1056,
    'Préparation à un acte invasif lourd — Chirurgie majeure, prélèvement',
@@ -3502,7 +3502,7 @@ VALUES
    1,
    ARRAY['Apaisement préopératoire intense', 'Confiance dans l''équipe', 'Visualisation guérison post-op', 'Mobilisation pour récupération'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-017',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1057,
    'Chimiothérapie — Préparation et accompagnement des cycles',
@@ -3516,7 +3516,7 @@ VALUES
    1,
    ARRAY['Préparation à chaque cycle', 'Gestion des nausées (geste-ancre)', 'Préservation de la qualité de vie', 'Confiance dans le traitement'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-018',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1058,
    'Radiothérapie — Présence pendant les séances',
@@ -3530,7 +3530,7 @@ VALUES
    1,
    ARRAY['Présence pendant immobilité', 'Lieu sûr accessible en quelques secondes', 'Désamorçage anxiété machine', 'Préservation énergie'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-019',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1059,
    'Douleur cancéreuse complexe — Approche multimodale',
@@ -3544,7 +3544,7 @@ VALUES
    1,
    ARRAY['Imagerie de transformation locale', 'Apaisement complémentaire', 'Lieu sûr accessible', 'Présence respectueuse'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-020',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1060,
    'Fatigue oncologique chronique — Préserver les forces',
@@ -3558,7 +3558,7 @@ VALUES
    1,
    ARRAY['Acceptation de la limite', 'Qualité du repos', 'Hiérarchisation des activités', 'Moments de vie pleine'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-021',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1061,
    'Récidive ou aggravation — Faire face à un nouveau choc',
@@ -3572,7 +3572,7 @@ VALUES
    1,
    ARRAY['Légitimation de l''effondrement', 'Distinction du premier choc', 'Ressources accumulées', 'Réorganisation possible'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-022',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1062,
    'Espoir et incertitude — Habiter l''entre-deux',
@@ -3586,7 +3586,7 @@ VALUES
    1,
    ARRAY['Reconnaissance de l''incertitude', 'Présence dans le non-savoir', 'Espoir sans certitude', 'Vie pleine malgré'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-023',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1063,
    'Soins palliatifs — Présence et apaisement',
@@ -3600,7 +3600,7 @@ VALUES
    1,
    ARRAY['Présence respectueuse', 'Apaisement physique et émotionnel', 'Dimension existentielle accueillie', 'Lien aux proches préservé'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-024',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1064,
    'Questions de fin de vie pour les proches — Soutien aux accompagnants',
@@ -3614,7 +3614,7 @@ VALUES
    1,
    ARRAY['Préservation énergétique de l''aidant', 'Présence qualitative', 'Paroles essentielles possibles', 'Préparation au passage'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-025',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1065,
    'Maladies neurodégénératives — Accompagner Alzheimer et Parkinson débutants',
@@ -3628,7 +3628,7 @@ VALUES
    1,
    ARRAY['Apaisement de l''anxiété de la maladie', 'Présence à ce qui demeure', 'Qualité de vie soutenue', 'Dimension de sens'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-026',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1066,
    'Réveil de coma et soins intensifs — Présence à l''émergence',
@@ -3642,7 +3642,7 @@ VALUES
    1,
    ARRAY['Présence rassurante', 'Orientation temporelle et spatiale', 'Lien retrouvé', 'Récupération soutenue'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-027',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1067,
    'Annonce de mauvais pronostic — Accompagner le passage',
@@ -3656,7 +3656,7 @@ VALUES
    1,
    ARRAY['Accueil du choc sans précipiter', 'Lieu sûr stabilisé', 'Présence sans solution', 'Temps respecté'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-028',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1068,
    'Dimension spirituelle en fin de vie — Sens et transcendance',
@@ -3670,7 +3670,7 @@ VALUES
    1,
    ARRAY['Sens de la vie traversée', 'Connexion à plus grand que soi', 'Réconciliations possibles', 'Apaisement existentiel'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-029',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique', 'Quête de sens & spiritualité']
+   ARRAY['Quête de sens & spiritualité', 'Douleurs & psychosomatique', 'Trauma & deuil']
   ),
   (1069,
    'Soutien aux soignants en soins palliatifs — Pour ceux qui accompagnent',
@@ -3684,7 +3684,7 @@ VALUES
    1,
    ARRAY['Décharge des accumulations', 'Deuils cumulatifs reconnus', 'Séparation soi/patient', 'Restauration profonde'],
    'KIIKA — Fiches détaillées (Varinka Robert) — K-AVA-030',
-   ARRAY['Trauma & deuil', 'Douleurs & psychosomatique']
+   ARRAY['Douleurs & psychosomatique', 'Trauma & deuil']
   )
 ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,

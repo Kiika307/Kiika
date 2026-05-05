@@ -1328,7 +1328,14 @@ const k_630: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Protocole de fond pour anxiété généralisée. Combine ancre respiratoire, lieu sûr et bulle protectrice. À installer en premières séances pour donner au patient des outils utilisables au quotidien." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction par K-BASE-003 (relaxation progressive) ou K-BASE-001 (escalier)\n• Phase 2 — Installation du lieu sûr K-BASE-011 si pas déjà fait\n• Phase 3 — Travail spécifique anxiété (script ci-dessous)\n• Phase 4 — Installation ancre respiratoire K-BASE-017\n• Phase 5 — Suggestions post-hypnotiques K-BASE-029\n• Phase 6 — Retour K-BASE-025 ou K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu portes en toi une tension qui ne te quitte pas. Une vigilance qui s'est installée et qui ne sait plus comment se déposer. Ton corps a appris à être prêt en permanence, comme s'il devait surveiller une menace qui ne vient jamais vraiment, mais qui pourrait venir. Cette tension, tu la connais bien. Elle n'est pas ton ennemie. Elle a voulu te protéger. Mais aujourd'hui, elle peut se reposer." },
+      { label: "Permission", detail: "Quelque chose en toi sait déjà comment se relâcher. C'est une connaissance ancienne, antérieure à la vigilance. Ton corps savait se reposer avant d'apprendre à veiller. Ce savoir n'a pas disparu. Il est juste resté en arrière-plan. Aujourd'hui, tu peux le retrouver." },
+      { label: "Dépose Corporelle", detail: "Là où tu sens le plus de tension dans ton corps en ce moment — la mâchoire, les épaules, le ventre, la poitrine — tu peux y porter ton attention sans rien y changer. Juste constater. Et puis demander à cette zone, doucement, sans forcer, si elle accepterait de se relâcher un peu. Pas tout d'un coup. Juste un peu. Tu remarques peut-être qu'elle accepte plus facilement que tu ne croyais." },
+      { label: "Souffle Regulateur", detail: "Maintenant, ta respiration peut prendre un rythme particulier. Une inspiration calme. Une expiration plus longue, plus longue que l'inspiration. C'est cette expiration prolongée qui dit à ton corps : tu peux te reposer maintenant. Quelques cycles suffisent pour qu'il commence à entendre." },
+      { label: "Lieu Refuge", detail: "Tu peux maintenant rejoindre cet endroit en toi qui t'appartient en propre. Ce lieu où tu te sens chez toi, où la vigilance n'a plus besoin d'être active. Reste-y un moment. Sens comment, ici, ton corps a la permission complète de se déposer." },
+      { label: "Installation Durable", detail: "Ce lieu, ce souffle, cette permission, tu peux les emporter avec toi. Pas seulement pendant cette séance. Dans tes journées. Quand la tension monte, ton souffle peut devenir cette respiration apaisante. Quand l'agitation est trop forte, tu peux fermer les yeux quelques secondes et retrouver l'image de ton lieu. Ce sont tes outils, à présent." },
+      { label: "Recadrage Vigilance", detail: "Et la vigilance elle-même peut apprendre à se reposer entre les sollicitations. Elle n'a pas besoin d'être active 100% du temps. Elle peut savoir reconnaître une vraie menace et rester en veille douce le reste du temps. C'est plus efficace ainsi, et bien moins épuisant pour toi." }
       ],
     }],
   }],
@@ -1367,7 +1374,13 @@ const k_631: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Protocole bref pour gestion d'une crise d'angoisse en cours ou imminente. Inhalation forcée brève, exhalation lente, ancrage corporel par les cinq sens, recadrage de la sensation corporelle." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Pas d'induction formelle, travail à yeux ouverts\n• Phase 2 — Régulation respiratoire d'urgence\n• Phase 3 — Ancrage 5-4-3-2-1\n• Phase 4 — Recadrage de la sensation\n• Phase 5 — Installation du dispositif pour usage autonome" },
+      { label: "Contact", detail: "Reste avec moi. Je suis là. Tu vis quelque chose de très désagréable, mais ce qui se passe ne va pas te faire de mal. Ton corps a déclenché une alarme, et nous allons l'aider à comprendre qu'il n'y a pas de danger immédiat." },
+      { label: "Respiration Urgence", detail: "Première chose : ta respiration. Ne cherche pas à respirer profondément. Au contraire, tu vas inspirer brièvement par le nez, puis expirer longuement par la bouche, comme si tu soufflais dans une paille. Inspire un temps. Expire trois temps en soufflant doucement. Encore une fois. Et encore. C'est cette expiration plus longue qui calme l'alarme." },
+      { label: "Ancrage 5 4 3 2 1", detail: "Maintenant, garde tes yeux ouverts, et nomme avec moi cinq choses que tu vois autour de toi. Pas en pensée — à voix haute, ou intérieurement très clairement. Cinq choses. Prends ton temps. Maintenant quatre choses que tu peux toucher. Trois choses que tu entends. Deux choses que tu sens (odeur, ou contact). Une chose que tu goûtes ou pourrais goûter. Tu reviens dans le présent. Tu reviens dans cette pièce." },
+      { label: "Recadrage Sensations", detail: "Ce que tu ressens dans ton corps en ce moment — le cœur qui bat fort, la chaleur, le picotement, la respiration courte — ce sont des manifestations de l'alarme, pas des signes de danger. Ces sensations sont désagréables, mais elles vont passer. Elles passent toujours. Une crise comme celle-ci ne dure jamais plus de quelques minutes une fois que tu cesses de l'alimenter." },
+      { label: "Vague", detail: "Cette crise est comme une vague. Elle est haute en ce moment. Elle va redescendre. Tu n'as pas besoin de la combattre. Tu peux la laisser passer, en respirant comme nous venons de respirer, en restant ancré dans la pièce avec moi." },
+      { label: "Dispositif Autonomie", detail: "Tu vas garder en mémoire ce que nous venons de faire. Si une autre crise survient, tu te rappelleras de trois choses : un, ne pas chercher à respirer profondément mais expirer plus long ; deux, regarder cinq choses autour de toi ; trois, te dire que c'est une vague, et qu'elle va passer." }
       ],
     }],
   }],
@@ -1406,7 +1419,15 @@ const k_632: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients qui s'épuisent à anticiper négativement les événements à venir. Travail de différenciation entre anticipation utile et anxiété anticipatoire. Installation d'un futur alternatif crédible." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001 + approfondissement K-BASE-007\n• Phase 2 — Installation voyage temporel K-BASE-022\n• Phase 3 — Travail spécifique (script ci-dessous)\n• Phase 4 — Suggestions post-hypnotiques de souplesse mentale\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu as cette tendance à voyager dans le futur, et à n'y rencontrer souvent que des versions difficiles de ce qui peut arriver. Comme si ton imagination ne savait fabriquer que des films catastrophes. Tu te prépares au pire en pensant que cela te protège. Mais cela t'épuise, et le pire ne se produit presque jamais comme tu l'avais imaginé." },
+      { label: "Distinction Utile Toxique", detail: "Il y a une anticipation utile : préparer un examen, vérifier des billets de train, prévoir une réponse à une question difficile. Cette anticipation-là est concrète, brève, et débouche sur une action. Et il y a une autre anticipation, qui tourne en boucle, qui imagine sans préparer, qui catastrophise sans agir. C'est cette deuxième que nous allons travailler." },
+      { label: "Voyage Pluriel", detail: "Pense à un événement à venir qui te préoccupe. Ne t'attarde pas sur les détails — laisse-le simplement venir à l'esprit. Maintenant, depuis ton véhicule de voyage temporel, tu vas faire quelque chose d'inhabituel. Tu vas explorer non pas un seul futur, mais plusieurs. Au moins trois." },
+      { label: "Futur Difficile", detail: "Premier futur : celui que tu as déjà beaucoup imaginé. Le difficile. Tu le connais bien. Pose-toi un instant dessus, sans t'y enfermer. Que se passe-t-il dans ce scénario ? Quelles sont les pires choses qui arrivent ?" },
+      { label: "Futur Neutre", detail: "Deuxième futur : un scénario où l'événement se passe simplement. Sans drame, sans triomphe. Comme se passent la plupart des événements en réalité. Imagine ce scénario neutre. Que fais-tu ? Que disent les autres ? Comment cela se déroule-t-il, simplement ?" },
+      { label: "Futur Favorable", detail: "Troisième futur : un scénario favorable. Pas un miracle. Juste une version où les choses se passent bien. Où tu as les ressources qu'il faut. Où les autres sont accueillants ou neutres. Où tu sors de la situation satisfait. Imagine ce scénario." },
+      { label: "Constat", detail: "Tu viens de constater quelque chose d'important : il existe au moins trois futurs possibles pour cette situation. Tu n'en as imaginé qu'un seul jusqu'à présent. C'était comme regarder un film en sachant déjà que c'est un film d'horreur. Mais le scénario n'est pas écrit. Et ton imagination peut créer aussi les deux autres versions, qui sont au moins aussi probables." },
+      { label: "Dispositif Pratique", detail: "À partir de maintenant, quand tu te surprends à imaginer un futur catastrophique, tu peux te dire : c'est UN futur possible. Et imaginer délibérément les deux autres : le neutre et le favorable. Tu n'as pas besoin d'y croire à 100%. Le simple fait de les imaginer modifie quelque chose en toi. Tu rends ton imagination plus juste, plus libre, plus réaliste." }
       ],
     }],
   }],
@@ -1445,7 +1466,15 @@ const k_633: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour anxiété sociale et peur du jugement. Combine bulle protectrice, repérage des regards alliés (vs hostiles imaginaires), et installation d'une voix sage qui rappelle la valeur du patient." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 + approfondissement K-BASE-009\n• Phase 2 — Installation/réactivation bulle K-BASE-024\n• Phase 3 — Travail sur les regards (script ci-dessous)\n• Phase 4 — Activation voix sage K-BASE-023\n• Phase 5 — Préparation imaginaire d'une situation sociale précise\n• Phase 6 — Retour K-BASE-027 (avec consolidation)" },
+      { label: "Reconnaissance", detail: "Tu portes une attention particulière aux autres. Tu sens leurs regards, tu imagines ce qu'ils pensent de toi. Et la plupart du temps, ce que tu imagines est dur. Comme si chaque regard portait un jugement. Cette hypersensibilité au regard des autres, tu ne l'as pas choisie, et elle te coûte beaucoup d'énergie." },
+      { label: "Constat Imaginaire", detail: "Tu vas faire un constat important. La plupart des regards que tu redoutes sont des regards imaginés. Tu construis dans ta tête ce que les autres pensent. Et ton imagination, dans ce domaine, est presque toujours plus dure que la réalité." },
+      { label: "Regards Reels", detail: "Imagine maintenant une situation sociale qui te pèse — un repas, une réunion, un trajet en transport. Regarde les visages autour de toi. Pas avec l'œil intérieur du juge. Avec un œil neutre. Tu remarqueras quelque chose : la plupart des gens ne te regardent pas. Ils sont occupés par leurs propres pensées, leurs propres soucis, leur propre conversation. Le regard fixé sur toi que tu imagines, en réalité, presque personne n'a le temps de le porter." },
+      { label: "Repérage Regards Alliés", detail: "Et parmi les regards qui se posent réellement sur toi, il y en a presque toujours d'alliés. Des regards bienveillants, neutres, ou simplement curieux sans hostilité. Ton attention a tendance à filtrer pour ne retenir que les regards qui pourraient être jugeants. À partir de maintenant, ton attention peut apprendre à repérer aussi les regards alliés. Il y en a plus que tu ne crois." },
+      { label: "Bulle Active", detail: "Pendant ce temps, autour de toi, ta bulle est là. Elle filtre. Ce qui pourrait te blesser glisse dessus. Ce qui pourrait te nourrir entre librement. Tu n'as pas besoin de te défendre activement : la bulle fait son travail. Tu peux donc redevenir présent à la situation, sans être happé par la surveillance." },
+      { label: "Voix Sage", detail: "Et il y a en toi une voix qui sait quelque chose que tu oublies souvent : ta valeur ne dépend pas du regard des autres. Tu existes en dehors de ce qu'ils pensent. Cette voix sage, tu peux la rejoindre maintenant. Que te dit-elle, sur ta valeur propre, sur ta légitimité à être là ?" },
+      { label: "Preparation Situation", detail: "Pense à une situation sociale précise qui arrive bientôt. Avec ta bulle, avec la voix sage en toi, avec ce nouveau regard sur les regards des autres, imagine-toi traverser cette situation. Tu n'es pas obligé qu'elle soit parfaite. Juste possible, et juste vivante. Sens comment tu peux y être différemment." },
+      { label: "Consolidation", detail: "Cette manière nouvelle d'être avec les autres, tu peux l'emporter avec toi. Pas tout de suite, pas tout d'un coup. Petit à petit. Chaque situation sociale devient une occasion de pratiquer : la bulle qui filtre, le regard qui repère les alliés, la voix qui rappelle la valeur." }
       ],
     }],
   }],
@@ -1484,7 +1513,14 @@ const k_634: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Trac avant prise de parole, examen, audition, compétition. Travail de transformation du trac en énergie disponible plutôt que tentative de le supprimer. Activation de l'attention juste, ni sur-engagée ni dispersée." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Préparation imaginaire de la situation\n• Phase 4 — Ancrage gestuel d'activation juste K-BASE-016\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Recadrage", detail: "Le trac que tu ressens avant un événement important, ce n'est pas une faiblesse. C'est ton corps qui se prépare. Il mobilise de l'énergie, il aiguise tes sens, il te rend plus vif. Le problème n'est pas que cette énergie soit là — c'est qu'elle déborde, qu'elle se transforme en agitation parasite au lieu d'être au service de ce que tu vas faire." },
+      { label: "Distinction Activation", detail: "Il y a deux qualités d'activation. La première, c'est l'activation juste : alerte, vive, présente, mais canalisée vers la tâche. Tu connais cette qualité — c'est celle qui te porte quand tu es absorbé par quelque chose qui te passionne. La deuxième, c'est l'activation parasite : agitation, palpitations, pensées qui partent dans tous les sens, sensation de débordement. Notre travail, c'est de transformer la deuxième en première." },
+      { label: "Canalisation", detail: "Imagine que toute cette énergie qui s'agite en toi est de l'eau sous pression. Pour le moment, elle déborde dans tous les sens. Tu vas la rassembler, lui donner un canal. Ce canal, c'est la performance qui t'attend. L'énergie va y entrer, et au lieu de te submerger, elle va te porter." },
+      { label: "Souffle Canalisateur", detail: "Trois respirations particulières te servent de bascule. Inspire lentement par le nez en sentant l'énergie s'organiser. Retiens un instant. Expire longuement par la bouche en envoyant cette énergie vers ce que tu vas faire. Recommence. Et encore. Avec chaque cycle, l'agitation devient activation." },
+      { label: "Repetition Imaginaire", detail: "Maintenant, imagine la situation qui t'attend. Pas dans le détail anxieux. Dans ses grandes lignes. Tu arrives. Tu prends ta place. L'énergie est là, vive, disponible, à ton service. Tu commences. Tu sens cette qualité d'attention vive qui t'accompagne. Tu fais ce que tu sais faire, mieux peut-être que d'habitude parce que cette énergie te porte." },
+      { label: "Ancrage Activation", detail: "Choisis maintenant un geste qui sera ton signal d'activation juste. Quelque chose que tu pourras faire discrètement quelques minutes avant l'événement. Par exemple, fermer doucement le poing en respirant profondément. Pendant que tu fais ce geste, ressens cette qualité d'énergie organisée. Le geste et l'état se lient." },
+      { label: "Post Hypnotique", detail: "Le jour de ta performance, quand tu sentiras le trac monter, tu n'essaieras pas de le faire disparaître — au contraire, tu accueilleras l'énergie qu'il apporte. Tu feras ton geste, tu prendras tes trois respirations, et tu canaliseras cette force vers ce que tu as à faire. Plus tu pratiqueras, plus ce sera facile." }
       ],
     }],
   }],
@@ -1523,7 +1559,14 @@ const k_635: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Méthode de désensibilisation par construction d'une hiérarchie d'anxiété puis exposition imaginaire graduée en transe, avec extinction de l'anxiété à chaque palier avant progression." }
+      { label: "Structure De Seance", detail: "• Phase préparatoire (séance N-1) — Construire avec le patient une hiérarchie de 8-10 items\n• Phase 1 — Induction K-BASE-001\n• Phase 2 — Approfondissement et installation lieu sûr K-BASE-011\n• Phase 3 — Installation signal idéomoteur\n• Phase 4 — Exposition graduée (script)\n• Phase 5 — Retour avec consolidation K-BASE-027" },
+      { label: "Signal Ideomoteur", detail: "Pour communiquer avec moi pendant la séance sans avoir à parler, tu vas utiliser un signal simple. Si tu sens monter une anxiété qui devient gênante, tu lèves légèrement l'index de la main droite. C'est le signal pour ralentir. Si tout va bien, tu peux laisser ton index immobile. Vérifions : lève ton index pour me montrer que tu as compris. Bien. Tu peux le reposer." },
+      { label: "Lieu Refuge", detail: "Pendant tout notre travail, ton lieu sûr reste accessible. Il est juste à côté de toi, en arrière-plan. Si jamais quelque chose devient trop intense, tu peux y revenir en un instant. Tu n'es jamais seul ni piégé." },
+      { label: "Item 1", detail: "Nous allons commencer par le premier item de notre liste, le moins difficile. [Le thérapeute énonce l'item construit avec le patient.] Imagine cette situation. Pas trop loin, pas trop près. Comme une image dans ton esprit. Reste avec elle. Si quelque chose monte, observe-le sans le combattre. La sensation va monter, peut-être atteindre un pic, et redescendre." },
+      { label: "Extinction", detail: "Tu maintiens cette image, en respirant calmement. Tu sens peut-être que la première vague d'anxiété s'apaise déjà. C'est l'extinction qui se produit. Ton corps comprend que cette image, dans ce contexte sécurisé, n'a pas besoin de déclencher l'alarme." },
+      { label: "Validation", detail: "Quand tu sens que cette image est devenue presque neutre, ou très atténuée, lève brièvement le pouce de la main gauche. C'est le signal pour passer au niveau suivant." },
+      { label: "Progression", detail: "Excellent. Nous passons au deuxième item. [Le thérapeute énonce l'item suivant.] Tu fais le même travail : laisser l'image s'installer, observer la sensation, attendre l'apaisement. Tu peux toujours utiliser ton index droit pour ralentir, ou ton lieu sûr pour pause." },
+      { label: "Finalisation", detail: "Nous avons traversé plusieurs paliers aujourd'hui. C'est suffisant pour cette séance. Ton inconscient va continuer à travailler ce que nous avons fait. Lors de la prochaine séance, nous reprendrons un cran plus loin, et cela sera plus facile." }
       ],
     }],
   }],
@@ -1562,7 +1605,15 @@ const k_636: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour anxiété qui s'exprime principalement par des symptômes corporels (boule à l'estomac, oppression thoracique, tensions musculaires chroniques, troubles digestifs fonctionnels). Travail de dialogue avec la sensation." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 (relaxation progressive)\n• Phase 2 — Approfondissement K-BASE-007\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Suggestions d'écoute continuée\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Localisation", detail: "Tu portes en toi une sensation corporelle qui revient régulièrement. Une boule, une oppression, une tension. Aujourd'hui, au lieu de chercher à la faire taire, nous allons l'écouter. Localise-la dans ton corps. Où est-elle exactement en ce moment ? Sens-la précisément." },
+      { label: "Description", detail: "Décris-la, intérieurement. Quelle est sa forme, sa taille, sa texture, sa température ? Si elle avait une couleur, laquelle ? Si elle avait un poids, lequel ? Plus tu la précises, mieux tu la connais." },
+      { label: "Personnification", detail: "Imagine que cette sensation a une voix. Pas une voix littérale — plutôt une intention, un message qu'elle essaie de faire passer. Cette sensation n'est pas là pour rien. Elle est dans ton corps depuis longtemps, et elle a quelque chose à dire." },
+      { label: "Dialogue", detail: "Tu peux lui poser une question, intérieurement. Par exemple : pourquoi es-tu là ? Qu'essaies-tu de me dire ? De quoi essaies-tu de me protéger ? Ne force pas la réponse. Laisse-la venir, sous quelque forme qu'elle se présente — un mot, une image, un souvenir, une compréhension floue." },
+      { label: "Reconnaissance", detail: "Quelle que soit la réponse qui vient, ou même si rien ne vient clairement, tu peux remercier cette sensation pour son travail. Elle a essayé de t'aider, à sa façon, depuis longtemps. Même si sa manière de le faire est devenue un fardeau." },
+      { label: "Negociation", detail: "Tu peux maintenant lui proposer quelque chose. Lui dire que tu as entendu son message — même si tu ne l'as pas compris dans tous ses détails. Lui dire qu'elle peut alléger sa présence, parce que tu vas prendre soin de ce qu'elle protégeait. Pas la faire disparaître complètement, peut-être pas tout de suite. Juste alléger." },
+      { label: "Observation", detail: "Observe maintenant comment elle est. Sa forme a peut-être un peu changé. Sa taille. Sa texture. Sa température. Sa couleur. Pas spectaculairement. Peut-être juste un peu. C'est suffisant. C'est un début de dialogue." },
+      { label: "Continuite", detail: "Cette sensation va peut-être revenir dans les jours qui viennent. Quand elle revient, tu peux l'accueillir avec ce nouveau regard : non pas comme un ennemi, mais comme un messager. Et chaque fois, tu peux refaire ce dialogue. Petit à petit, le message se précise, et le messager se calme." }
       ],
     }],
   }],
@@ -1601,7 +1652,14 @@ const k_637: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour pensées en boucle qui tournent sans déboucher sur l'action. Reconnaissance du mécanisme, distinction réflexion utile / rumination, technique de désengagement attentionnel par déplacement vers le corps et le présent." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-004 (conversationnelle) ou K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Installation observateur K-BASE-020\n• Phase 4 — Ancrage corporel comme dispositif de retour\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu as ce mécanisme : une pensée arrive, et au lieu de passer, elle s'installe. Elle se met à tourner. Tu y reviens, encore et encore. Tu repenses à la même chose, sous tous les angles, sans que cela ne débouche sur rien. C'est épuisant, et c'est inutile. Tu le sais, mais tu n'arrives pas à arrêter." },
+      { label: "Distinction", detail: "Il y a une différence importante entre réfléchir et ruminer. Réfléchir, c'est explorer un sujet pour comprendre, décider, agir. Cela a un début et une fin. Ruminer, c'est tourner autour du même point sans avancer, comme un cheval qui marche sur place. La pensée donne l'impression de travailler, mais elle ne va nulle part." },
+      { label: "Desidentification", detail: "Tu n'es pas tes pensées. Tu es celui qui les a, et qui peut les regarder. Une pensée qui arrive, c'est comme un visiteur. Elle peut entrer, traverser, et sortir. Ou rester. Mais elle reste seulement si tu lui ouvres la porte chaque fois qu'elle frappe. Aujourd'hui, tu vas apprendre à laisser passer." },
+      { label: "Observateur", detail: "Imagine que tu es assis sur le bord d'une route. Les pensées sont des voitures qui passent. Certaines sont rapides, d'autres lentes. Tu peux les regarder passer, sans monter dedans. Une pensée passe, tu la vois, tu ne lui sautes pas dessus. Une autre passe. Une autre. Toi, tu restes au bord. Tu n'es pas dans la voiture." },
+      { label: "Corps Ancre", detail: "Quand tu te surprends à être monté dans une voiture-pensée, tu peux faire une chose simple : revenir à ton corps. Sentir tes pieds par terre. Sentir ton souffle. Sentir l'air sur ta peau. Ces sensations corporelles te ramènent immédiatement au présent. Le corps ne rumine pas. Le corps est toujours dans le maintenant." },
+      { label: "Pratique", detail: "Je vais te proposer un exercice. Pense volontairement à la rumination habituelle, celle qui revient le plus souvent. Laisse-la s'installer un instant. Maintenant, sans lutter contre elle, porte ton attention à tes pieds. Sens vraiment le contact avec le sol. Tu remarques que la pensée s'éloigne, sans que tu aies eu à la combattre. Le corps a fait le travail." },
+      { label: "Dispositif", detail: "À partir de maintenant, quand la rumination commence, tu as un dispositif simple. Un, tu reconnais : tiens, c'est la rumination, je la connais. Deux, tu ne luttes pas contre la pensée — la lutte la nourrit. Trois, tu déplaces ton attention vers ton corps : pieds, souffle, sensations. La pensée s'éloignera d'elle-même." }
       ],
     }],
   }],
@@ -1640,7 +1698,15 @@ const k_638: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en état d'alerte permanent, souvent suite à un environnement éprouvant ou à un trauma léger. Travail de différenciation entre vigilance utile et vigilance parasite, permission progressive de relâcher." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction très progressive K-BASE-003\n• Phase 2 — Lieu sûr K-BASE-011 et bulle K-BASE-024\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Permission graduée à pratiquer entre les séances\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis dans un état d'alerte. Tu surveilles, sans t'en apercevoir. Le moindre bruit te fait sursauter. Tu remarques tout : le visage des gens, les changements de ton, ce qui se passe dans ton dos. Ce n'est pas une qualité que tu as choisie. C'est quelque chose qui s'est mis en place, à un moment, parce que c'était nécessaire. Et qui est resté actif après que la nécessité ait disparu." },
+      { label: "Honneur", detail: "Avant de demander à cette vigilance de se reposer, il faut l'honorer. Elle t'a protégé. Dans des moments où tu en avais besoin, elle a fait son travail. Ce que nous allons faire ensemble n'est pas la trahir. C'est la libérer d'un travail qui n'est plus nécessaire." },
+      { label: "Distinction", detail: "Il y a deux modes de vigilance. Le premier, c'est l'alerte rouge permanente : tout est traité comme une menace potentielle, le système est saturé en permanence. Le deuxième, c'est la veille douce : le système reste capable de détecter une vraie menace, mais il n'est pas activé pour rien. C'est cette deuxième que nous allons restaurer." },
+      { label: "Zones Securite", detail: "Tu vas identifier des zones et des moments dans ta vie où tu sais, intellectuellement, que rien ne peut t'arriver. Chez toi, dans certaines pièces. Avec certaines personnes de confiance. À certains moments de la journée. Identifie au moins trois de ces contextes." },
+      { label: "Permission Zone", detail: "Dans ces contextes-là, ta vigilance peut apprendre à se mettre en veille douce. Pas la couper complètement — elle restera capable de réagir si quelque chose d'inattendu survient. Juste passer du rouge à l'orange tranquille. Tu peux te répéter intérieurement, dans ces contextes : ici, je peux relâcher. Ici, c'est sûr." },
+      { label: "Corps Apaise", detail: "Maintenant, dans cet endroit en toi, sens ce que c'est que d'être en veille douce. Ton corps n'a plus besoin d'être en alerte. Tes épaules peuvent vraiment descendre. Ta mâchoire peut se desserrer. Ton ventre peut se déplier. Ce relâchement n'est pas un abandon. C'est un repos juste, dans un contexte où il n'y a rien à surveiller." },
+      { label: "Pratique Progressive", detail: "Entre les séances, tu vas pratiquer. Dans une de tes zones de sécurité, tu vas prendre quelques minutes, et apprendre à laisser ta vigilance passer en veille douce. Au début ce sera bref. Avec la pratique, cela durera plus longtemps. Tu rééduques ton système. Il a appris à être en alerte ; il peut apprendre à être en veille douce." },
+      { label: "Recadrage Final", detail: "Tu n'es pas obligé d'aller vite. Tu n'es pas obligé d'y arriver d'un coup. Ce qui compte, c'est que tu commences à découvrir qu'il existe d'autres modes que l'alerte permanente. Et qu'à mesure que tu pratiques, ton système reprend confiance dans la possibilité de se reposer." }
       ],
     }],
   }],
@@ -1679,7 +1745,14 @@ const k_639: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour anxiété massive lors de séparations (conjoint en déplacement, enfant qui part, deuil anticipé). Travail d'intériorisation du lien, distinction entre absence physique et perte du lien." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Ancrage du lien intériorisé\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Quand la personne que tu aimes s'absente, quelque chose en toi vacille. Comme si son absence physique signifiait sa disparition complète. Cette confusion entre absence et perte n'est pas une faiblesse de ta part. Elle vient d'une époque où tu étais effectivement dépendant pour survivre, et où une absence pouvait être un vrai danger. Aujourd'hui, ton corps réagit comme si c'était encore le cas, alors que tu es devenu adulte." },
+      { label: "Distinction", detail: "Il y a une différence importante entre l'absence et la perte. L'absence, c'est quand quelqu'un n'est pas là physiquement, mais le lien existe toujours. La perte, c'est quand le lien lui-même se rompt. La plupart des absences que tu vis sont juste des absences. Le lien, lui, n'est pas en danger." },
+      { label: "Lien Interieur", detail: "Quand tu aimes quelqu'un, tu portes ce quelqu'un en toi. Pas seulement dans ta tête. Dans ton corps. Dans ta façon de respirer. Dans des sensations particulières. Ce lien intérieur, tu peux le retrouver. Pense à la personne. Sens, dans ton corps, l'endroit où elle vit en toi. Peut-être au niveau du cœur, peut-être ailleurs. Mais elle est là, à l'intérieur." },
+      { label: "Pratique Presence", detail: "Maintenant, imagine que cette personne est physiquement loin de toi. En voyage, au travail, ailleurs. Elle n'est pas là, mais le lien que tu sens en toi en ce moment, lui, ne change pas. Elle peut être à l'autre bout du monde — ce que tu as d'elle dans ta poitrine reste exactement comme maintenant." },
+      { label: "Auto Suffisance", detail: "Tu es aussi habité par toi-même. Tu n'es pas que le lien avec les autres. Il y a en toi une présence qui est seulement toi, qui ne dépend de personne. Cette présence est là quand les autres sont là, et elle est toujours là quand les autres ne sont pas là. Elle est constante. Tu peux te tenir compagnie." },
+      { label: "Dispositif", detail: "Quand l'angoisse monte au moment d'une séparation, tu peux faire trois choses. Un, te rappeler la différence entre absence et perte. Deux, te connecter au lien intériorisé que tu portes en toi de cette personne. Trois, te connecter à ta propre présence à toi-même, qui est constante." },
+      { label: "Consolidation", detail: "Avec la pratique, ton corps va apprendre que les absences ne sont pas des pertes. Ton système d'alarme va se réguler. Et tu pourras vivre les séparations comme ce qu'elles sont : des moments où l'autre est ailleurs, mais où tu restes en lien avec lui, et en lien avec toi." }
       ],
     }],
   }],
@@ -1718,7 +1791,14 @@ const k_640: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients qui se rongent pour un proche malade, en difficulté ou en danger. Travail de différenciation entre sollicitude utile et inquiétude paralysante. Recharge des aidants." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Recharge\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu portes le souci d'un être qui t'est cher. Cette inquiétude qui ne te quitte pas, elle vient de ton amour. Mais elle a pris une place qui te dépasse. Elle ne soulage pas l'autre — elle t'épuise, et un aidant épuisé ne peut plus aider longtemps." },
+      { label: "Distinction", detail: "Il y a deux choses qui se ressemblent et qui sont pourtant différentes. La sollicitude : être attentif, présent, faire ce qui est en ton pouvoir. Et l'inquiétude : ressasser, anticiper, porter mentalement ce sur quoi tu n'as pas de prise. La première aide. La deuxième fait souffrir sans aider personne." },
+      { label: "Perimetre", detail: "Tu peux faire la liste, intérieurement, des choses sur lesquelles tu as une prise réelle pour ce proche. Tu peux faire ceci, dire cela, accompagner à tel rendez-vous, être présent à tel moment. Cette liste, c'est le périmètre de ton action utile. Sur cette liste, tu peux agir." },
+      { label: "Lacher", detail: "Et il y a une autre liste, plus douloureuse. Les choses sur lesquelles tu n'as pas de prise. La maladie elle-même. Les décisions de l'autre. Le temps qui fait son œuvre. Sur cette liste, ton inquiétude ne change rien. Tu peux la déposer, doucement, comme on déposerait un fardeau qui ne nous appartient pas." },
+      { label: "Confiance", detail: "L'autre, ton proche, a en lui ses propres ressources. Sa propre force. Son propre chemin. Si tu portes tout pour lui, tu lui prends en partie ce qu'il a à porter lui-même. Lui faire confiance — même dans la difficulté — c'est aussi une forme de respect." },
+      { label: "Recharge", detail: "Maintenant, prends un moment pour toi. Pour le toi qui aide. Tu donnes beaucoup. Tu donnes peut-être trop. Reconnais cela. Et permets-toi de recevoir, en cet instant, ce dont tu as besoin pour continuer. De la chaleur, de l'air, du silence, du repos. Ton lieu sûr est là pour cela aussi : pour te rappeler que tu existes en dehors de ton rôle d'aidant." },
+      { label: "Dispositif", detail: "Tu peux maintenant te donner trois consignes simples. Premièrement, faire ce qui est dans ton périmètre d'action — vraiment, concrètement. Deuxièmement, déposer ce qui n'y est pas — pas l'oublier, le déposer. Troisièmement, prendre soin de toi régulièrement, pas comme un luxe, comme une condition pour pouvoir continuer." }
       ],
     }],
   }],
@@ -1757,7 +1837,14 @@ const k_641: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour anxiété face aux examens, attentes de résultats, traitements médicaux pesants. Travail sur la confiance corporelle, la gestion de l'attente, la différenciation entre vraie alerte et anxiété." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001 ou K-BASE-003\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Ancres pour le contexte médical\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Le contexte médical t'effraie. Les examens, l'attente des résultats, l'idée des traitements. C'est compréhensible : il s'agit de ton corps, et de ce qui pourrait t'arriver. Cette anxiété, elle veut te protéger en te tenant en alerte. Mais à force, elle te coûte plus qu'elle ne t'aide." },
+      { label: "Corps Allie", detail: "Ton corps n'est pas ton ennemi. Quoi qu'il se passe, il est de ton côté. Il t'a porté jusqu'ici, à travers tout ce que tu as déjà traversé. Il a des ressources de réparation et d'adaptation que tu sous-estimes. Même quand quelque chose ne va pas en lui, il continue à œuvrer pour toi." },
+      { label: "Signal Bruit", detail: "Quand tu attends un résultat ou que tu te demandes si tu es malade, ton mental fabrique du bruit. Chaque petite sensation devient un signal d'alarme possible. Mais la plupart de ce que tu sens est du bruit corporel ordinaire — sensations, micro-tensions, ajustements normaux. Apprends à laisser passer le bruit. Le vrai signal, s'il y en a un, sera plus net, plus persistant, plus précis." },
+      { label: "Attente", detail: "L'attente d'un résultat est l'un des moments les plus difficiles. Ton mental veut savoir, et il ne sait pas encore. Pendant cette attente, tu as deux options. Soit tu vis comme si la mauvaise nouvelle était déjà arrivée — et tu souffres avant. Soit tu vis comme si la bonne nouvelle était arrivée — et tu gardes ta vie pleine pendant l'attente. Dans les deux cas, le résultat sera ce qu'il sera. Mais entre les deux, tu auras vécu très différemment." },
+      { label: "Soins Recadrage", detail: "Si des soins t'attendent, tu peux préparer ton corps à les recevoir. Pas en les redoutant. En leur donnant un sens. Une piqûre, c'est un médicament qui entre. Un examen, c'est une information précieuse qui se fabrique. Un traitement, c'est ton corps qui reçoit de l'aide. Cette manière de voir change physiquement la manière dont ton corps reçoit les soins." },
+      { label: "Dispositif", detail: "Pour le jour des examens ou des soins, tu disposes de quelques outils. La respiration apaisante (inspire 4, expire 6). Le lieu sûr accessible en quelques secondes. La phrase intérieure : mon corps est de mon côté. Et ton geste-ancre, qui appelle le calme." },
+      { label: "Confiance Finale", detail: "Quoi qu'il arrive, tu as les ressources pour traverser. Tu n'es pas seul. Tu n'es pas démuni. Et même dans le pire des scénarios, il y a des chemins. Mais le pire arrive rarement, et il arrive certainement moins souvent que ton anxiété ne le redoute." }
       ],
     }],
   }],
@@ -1796,7 +1883,13 @@ const k_642: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour anxiété spécifique aux transports : avion, voiture, métro, train. Combine désensibilisation par hiérarchie, contrôle perçu et installation d'un voyage intérieur parallèle au voyage réel." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Lieu sûr (potentiellement à l'intérieur du transport)\n• Phase 3 — Désensibilisation par K-ANX-006\n• Phase 4 — Installation voyage intérieur (script ci-dessous)\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Te déplacer dans un moyen de transport est devenu difficile. Tu n'as pas le contrôle direct. Tu es porté par autre chose que toi. Et quelque chose en toi proteste — ton système d'alerte se met en route comme si être passager était un danger. Cette réaction, on peut la comprendre, et on peut la transformer." },
+      { label: "Controle Perçu", detail: "La sécurité d'un transport ne vient pas de ton contrôle direct. Elle vient d'autres choses : l'expertise des conducteurs, des contrôles techniques réguliers, des statistiques qui montrent que ces moyens de transport sont parmi les plus sûrs. Ton sentiment de manque de contrôle est réel ; mais il n'est pas un indicateur fiable du danger réel." },
+      { label: "Voyage Interieur", detail: "Pendant que ton corps est dans le transport, tu peux faire un autre voyage — un voyage intérieur. Pas pour fuir le réel. Pour avoir quelque chose à faire qui occupe ton esprit utilement. Tu peux te raconter intérieurement un voyage parallèle : tu te vois arrivant à destination, sortant du transport, retrouvant les gens ou les choses qui t'attendent. Ce voyage intérieur peut occuper toute la durée du transport." },
+      { label: "Corps Porte", detail: "Ton corps est porté. Au lieu de lutter contre cette idée, tu peux y trouver quelque chose de précieux. Tu n'as pas à faire d'effort pour avancer. Quelqu'un, ou quelque chose, fait ce travail à ta place. Pendant ce temps, tu peux te reposer. Tu peux laisser ton souffle s'apaiser. Tu peux profiter de ce moment où tu n'as rien à faire." },
+      { label: "Dispositif Complet", detail: "Pour un transport qui te pèse, tu disposes d'un dispositif complet. Avant : ton geste-ancre activé, trois respirations apaisantes. Pendant : ton voyage intérieur parallèle, ton lieu sûr accessible si besoin, la phrase je suis porté. Si l'anxiété monte fort : la séquence 5-4-3-2-1 d'ancrage sensoriel, en regardant autour de toi. Après : reconnaître que tu as traversé." },
+      { label: "Progression", detail: "Avec la répétition des trajets en pratiquant ces outils, ton système nerveux va apprendre. Chaque trajet réussi est une preuve que ton corps enregistre. Au bout d'un certain nombre, l'anxiété diminuera spontanément. Tu n'as pas à attendre qu'elle ait disparu pour voyager : tu voyages, et elle diminue à mesure." }
       ],
     }],
   }],
@@ -1835,7 +1928,16 @@ const k_643: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour anxiété touchant les fondamentaux : finitude, sens de la vie, solitude existentielle, liberté. Travail spécifique à l'approche thérapie-spiritualité KIIKA, avec mobilisation forte du Ka." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-004 (conversationnelle) puis K-BASE-009\n• Phase 2 — Sanctuaire intérieur K-BASE-012\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Voix sage K-BASE-023\n• Phase 5 — Clôture rituelle K-BASE-030" },
+      { label: "Accueil", detail: "Tu portes une question qui n'est pas une simple anxiété. Tu portes le vertige du sens. Pourquoi tout cela ? Que faire de cette vie ? Comment vivre quand on sait que tout finit ? Cette question est ancienne, elle est humaine, elle est même précieuse, même si elle te fait peur. Elle te traverse parce que tu es vivant et lucide." },
+      { label: "Legitimite", detail: "Ce vertige n'est pas une pathologie. C'est le revers d'une qualité : ta capacité à voir loin, à questionner, à ne pas te contenter du superficiel. Beaucoup de gens passent leur vie à éviter ces questions. Toi, tu les rencontres. C'est inconfortable, et c'est aussi une forme de courage." },
+      { label: "Essence Durable", detail: "Mais il y a quelque chose en toi qui ne tremble pas devant ces questions. Quelque chose qui est là, calme, depuis bien avant que tu commences à te poser ces questions. Ton essence — ce que KIIKA appelle le Ka. Une part de toi qui n'est pas faite de ce qui passe, mais de ce qui demeure." },
+      { label: "Demeure", detail: "Dans ton sanctuaire, tu peux rejoindre cette part. Elle se reconnaît à une qualité particulière : quand tu y es, les questions ne disparaissent pas, mais elles ne font plus peur de la même manière. Elles deviennent des compagnes plutôt que des ennemies. Tu peux les regarder en face, sans t'effondrer." },
+      { label: "Inscription Dans Le Grand", detail: "Tu n'es pas seul à te poser ces questions. Avant toi, des milliards d'êtres se sont assis avec ces mêmes vertiges. Et parmi eux, certains ont laissé des traces — pensées, pratiques, sagesses, beautés — qui peuvent t'accompagner. Tu fais partie d'une grande conversation qui dure depuis l'origine de la conscience humaine." },
+      { label: "Sens Construit", detail: "Le sens de la vie n'est pas quelque chose que l'on trouve comme un trésor caché. C'est quelque chose qui se construit, jour après jour, par ce que tu fais, par ce que tu aimes, par ce qui te traverse. Le sens est dans la trame, pas au bout du chemin. Et chaque jour, tu y ajoutes ton fil." },
+      { label: "Finitude", detail: "Et la finitude — cette idée que tout finit — peut prendre une autre couleur. Ce qui est limité dans le temps a aussi une intensité particulière. Ce que tu ne pourras pas avoir indéfiniment a une saveur que l'éternité ne donnerait pas. La finitude, qui te fait peur, est aussi ce qui rend possible la beauté de chaque instant." },
+      { label: "Consigne Quotidien", detail: "Tu peux, dans tes journées, te connecter à cette demeure intérieure brièvement. Pas chercher de réponse définitive. Juste te rappeler que cette part existe en toi. Quelques respirations, le geste de ton sanctuaire, et le rappel : il y a en moi quelque chose qui ne tremble pas." },
+      { label: "Question Finale", detail: "Avant de revenir, laisse une question habiter ton intérieur, sans réponse imposée : qu'est-ce qui en toi mérite que tu vives pleinement les jours qui te restent ? Cette question, ton inconscient va la travailler dans les jours qui viennent. Tu n'as pas besoin de répondre maintenant." }
       ],
     }],
   }],
@@ -1874,7 +1976,15 @@ const k_644: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients ayant un faible seuil de tolérance à l'incertitude : besoin compulsif de savoir, de contrôler, de prévoir. Travail sur la cohabitation possible avec le non-su." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Pratique imaginaire de l'incertitude\n• Phase 4 — Voix sage si pertinent K-BASE-023\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu as besoin de savoir. De savoir comment ça va se passer, ce que les autres pensent, si tu as bien fermé la porte, si tu vas tomber malade, si tu es à la hauteur. Et chaque fois que tu ne sais pas, quelque chose en toi se contracte. Tu cherches à savoir, à vérifier, à prévoir. Cela te coûte un temps et une énergie considérables." },
+      { label: "Constat Lucide", detail: "Voici une vérité difficile et libératrice à la fois : la plus grande partie de la vie est fondamentalement incertaine. Tu ne peux pas savoir avec certitude ce qui va se passer demain. Tu ne peux pas savoir entièrement ce que les autres pensent. Tu ne peux pas garantir tes propres réactions. La certitude est l'exception, pas la règle." },
+      { label: "Recadrage Relation", detail: "La question n'est donc pas de savoir comment éliminer l'incertitude — c'est impossible — mais comment vivre avec. Ceux qui semblent paisibles ne sont pas plus informés que toi. Ils ont juste un autre rapport au non-savoir. Pour eux, ne pas savoir n'est pas un drame. C'est juste un état." },
+      { label: "Inverse Test", detail: "Pense à toutes les choses incertaines de ta vie en ce moment. Comment va se passer la semaine, ce que les autres pensent vraiment, ce que tu seras dans dix ans. Et pourtant, tu es là, vivant. L'incertitude existe, et tu existes au milieu d'elle. Tu y survis depuis ta naissance, sans même t'en rendre compte le plus souvent." },
+      { label: "Pratique Micro", detail: "Nous allons pratiquer. Prends une chose pour laquelle tu cherches d'habitude une certitude. Quelque chose de petit. Décide intérieurement, juste pour cet exercice, de ne pas vérifier. De laisser ne-pas-savoir. De voir ce qui se passe. Tu vas peut-être ressentir un inconfort. C'est normal. Reste avec cet inconfort. Tu remarques quelque chose : il monte, et puis il redescend. Tu n'as pas vérifié, et tu vas bien." },
+      { label: "Confiance Adaptable", detail: "Quelque chose en toi est plus capable que tu ne crois. Cette part de toi qui sait s'adapter aux situations imprévues. Quand quelque chose d'inattendu survient — bon ou mauvais — tu fais face. Tu n'as peut-être pas tout prévu, mais tu es équipé pour réagir au moment où ça arrive. C'est cela ta vraie sécurité, pas la certitude." },
+      { label: "Dispositif Quotidien", detail: "À partir de maintenant, tu peux pratiquer la cohabitation avec le non-su. Une fois par jour, ne pas vérifier quelque chose que tu as l'habitude de vérifier. Une fois par jour, accepter de ne pas savoir comment quelqu'un réagit, ce qui va se passer plus tard. Tu rééduques ton système. Il a appris à avoir besoin de savoir ; il peut apprendre que ne pas savoir n'est pas un danger." },
+      { label: "Paradoxe", detail: "Tu remarqueras quelque chose d'étonnant : à mesure que tu acceptes de ne pas savoir, ta vie devient plus légère. Tu disposes d'un temps et d'une énergie que tu mettais ailleurs. Et beaucoup des choses que tu redoutais ne se passent pas, ou se passent autrement que prévu. L'incertitude, apprivoisée, devient un espace de possible plutôt qu'un gouffre." }
       ],
     }],
   }],
@@ -1913,7 +2023,14 @@ const k_645: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients qui mettent plus de 30-45 minutes à s'endormir le soir. Travail sur le rapport au sommeil, déconditionnement de la lutte, installation d'une routine du glissement." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 (relaxation progressive)\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Suggestions post-hypnotiques pour le coucher\n• Phase 4 — Retour vers sommeil K-BASE-028 (séance du soir) ou K-BASE-025 (séance de jour)" },
+      { label: "Reconnaissance", detail: "Le sommeil est devenu pour toi un sujet de bataille. Le soir, au lieu de t'endormir, tu te bats pour dormir. Et plus tu te bats, moins tu dors. Tu connais ce cercle. Ce que nous allons faire ensemble, c'est en sortir." },
+      { label: "Recadrage Paradoxal", detail: "Voici ce que tu dois apprendre : le sommeil ne se commande pas. Tu ne peux pas dire à ton corps tu dois dormir maintenant. Plus tu essaies, moins ça marche. Le sommeil est comme un animal sauvage qui ne vient pas si on l'appelle trop fort. Il vient quand on l'oublie un peu, quand on cesse de le surveiller." },
+      { label: "Intention Inverse", detail: "Le soir, ton intention ne sera plus de dormir. Ce sera de te reposer. C'est très différent. Te reposer ne demande aucune performance. C'est juste être allongé, au calme, et laisser ton corps faire ce qu'il fait quand on le laisse tranquille. Si le sommeil vient, tant mieux. S'il ne vient pas tout de suite, le repos suffit. Et c'est précisément cette absence d'enjeu qui permet au sommeil de venir." },
+      { label: "Glissement", detail: "Imagine ce qu'est un glissement vers le sommeil. Tu ne tombes pas. Tu ne plonges pas. Tu glisses. C'est lent, c'est doux, c'est presque imperceptible. Ce n'est pas un acte volontaire. C'est un consentement à laisser aller. Ton corps sait faire cela. Il l'a fait des milliers de fois." },
+      { label: "Imagerie Descente", detail: "Imagine maintenant que tu es allongé sur ton lit, le soir. Ton corps se dépose. Ta respiration ralentit. Tu n'attends rien. Tu n'espères rien. Tu es simplement là, dans la nuit, avec ton souffle qui se fait plus tranquille. Quelque part dans ce repos, sans que tu le saches, le sommeil va se glisser. Mais ce n'est pas ton problème. Ton seul rôle est de rester dans le repos." },
+      { label: "Post Hypnotique", detail: "Ce soir, quand tu te coucheras, tu peux tester ce nouveau rapport. Pose-toi avec une seule consigne : me reposer. Si le sommeil vient, tant mieux. S'il ne vient pas dans la première heure, tu te reposes encore. Le repos seul est déjà précieux pour ton corps. Tu n'as plus à courir après le sommeil — il vient quand le repos est suffisamment installé." },
+      { label: "Consigne Si Eveil Prolonge", detail: "Si vraiment, après une heure, tu ne sens aucune somnolence venir, tu peux te lever, aller dans une autre pièce, faire quelque chose de calme et peu stimulant pendant 15-20 minutes, puis retourner au lit. Cela évite que le lit devienne associé à la lutte." }
       ],
     }],
   }],
@@ -1952,7 +2069,15 @@ const k_646: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients qui s'endorment correctement mais se réveillent une ou plusieurs fois dans la nuit et peinent à se rendormir. Installation d'un protocole de retour au sommeil sans dramatisation." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Installation routine de retour\n• Phase 4 — Suggestions post-hypnotiques\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu t'endors normalement, mais en pleine nuit, ton corps se réveille. Et là, au lieu de te rendormir comme un dormeur tranquille, tu entres dans une autre bataille. Tu regardes l'heure. Tu calcules combien de temps il te reste. Tu t'inquiètes de la fatigue du lendemain. Tout cela t'éveille encore plus." },
+      { label: "Premiere Regle", detail: "Première règle pour reconquérir la nuit : ne pas regarder l'heure. Quand tu te réveilles en pleine nuit, ton seul objectif est de retourner au sommeil. Connaître l'heure exacte ne sert à rien — au contraire, cela enclenche le calcul mental qui éveille. La nuit, le temps n'existe pas pour celui qui dort. Reste dans cette absence de temps." },
+      { label: "Recadrage Eveil", detail: "Un réveil en pleine nuit n'est pas un drame. C'est même normal. Tous les humains se réveillent plusieurs fois par nuit, brièvement, sans s'en souvenir. Ton problème n'est pas le réveil — c'est la conscience qui s'installe au moment du réveil. Tu peux apprendre à laisser passer ces réveils sans qu'ils deviennent des éveils complets." },
+      { label: "Routine Retour", detail: "Voici ce que tu vas faire quand tu te réveilles en pleine nuit. Un : ne pas bouger. Rester dans la position où tu es. Deux : ne pas ouvrir les yeux. Garder les paupières fermées. Trois : ne pas regarder l'heure. Quatre : ramener doucement ton attention à ta respiration. Cinq : compter chaque expiration, lentement, de un à dix, puis recommencer." },
+      { label: "Imagerie Glissement", detail: "Pendant que tu comptes tes expirations, imagine que tu es à nouveau en train de glisser dans le sommeil. Pas chercher à dormir — glisser. Le sommeil est juste à côté de toi. Tu n'as pas à le chercher loin. Tu y étais il y a quelques minutes. Tu peux y retourner, comme on retourne dans un endroit familier qu'on vient de quitter." },
+      { label: "Si Pensees Arrivent", detail: "Si des pensées arrivent — et elles arriveront — tu ne luttes pas contre elles. Tu reviens au comptage des expirations. Une, deux, trois. Si tu te perds, tu recommences à un. Le simple fait de revenir au comptage te ramène vers le sommeil, plus efficacement que toute tentative de chasser les pensées." },
+      { label: "Post Hypnotique", detail: "Cette nuit, et toutes les nuits qui viennent, si tu te réveilles, ton inconscient se rappellera de cette routine. Ne pas bouger, ne pas ouvrir les yeux, ne pas regarder l'heure, compter les expirations. Avec la pratique, le retour au sommeil deviendra plus rapide et plus naturel." },
+      { label: "Dedramatisation", detail: "Et même si une nuit le sommeil ne revient pas immédiatement, ce n'est pas grave. Le repos compte. Une nuit avec un peu moins de sommeil n'est pas une catastrophe. Ton corps s'adapte. Le sommeil sera meilleur la nuit suivante. Tu n'as pas à dramatiser une nuit difficile." }
       ],
     }],
   }],
@@ -1991,7 +2116,14 @@ const k_647: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients qui dorment leurs heures mais se réveillent fatigués. Travail sur la qualité du sommeil profond et le sentiment de récupération, par installation d'intentions de réparation pendant la nuit." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Rituel de coucher proposé\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu dors tes heures, mais le matin, tu n'es pas reposé. Comme si la nuit avait été superficielle. Ton corps a besoin d'un sommeil qui va plus profond, qui répare vraiment. Aujourd'hui, nous allons aider ton corps à retrouver cette qualité." },
+      { label: "Intention Nocturne", detail: "Pendant le sommeil, ton corps fait un travail considérable. Il répare des cellules, consolide des apprentissages, élimine des toxines, régule des hormones. Ce travail se fait surtout dans le sommeil profond. Ton intention au coucher peut influencer la profondeur de ce travail." },
+      { label: "Pre Sommeil Rituel", detail: "Le moment où tu te couches est précieux. Pas un moment où on s'effondre épuisé. Un moment où on se prépare à recevoir ce que la nuit va donner. Quelques minutes avant le sommeil, tu peux poser ton intention : je donne à mon corps cette nuit pour qu'il répare ce qui doit être réparé. Cette phrase silencieuse change quelque chose dans la manière dont ton corps va s'endormir." },
+      { label: "Imagerie Reparation", detail: "Imagine maintenant ce que c'est qu'une nuit de réparation profonde. Ton corps est étendu, immobile, mais à l'intérieur, un travail intense se fait. Tes cellules s'activent. Tes muscles relâchent les tensions accumulées. Ton cerveau trie, range, intègre. Tes organes se régénèrent. Cette nuit, tu ne dors pas seulement — tu te restaures." },
+      { label: "Confiance Corporelle", detail: "Ton corps sait faire ce travail. Il l'a fait des milliers de fois. Tu n'as pas besoin de comprendre ni de contrôler. Tu as juste besoin de lui faire confiance et de lui donner les conditions : un environnement calme, sombre, frais, et la permission de descendre profond." },
+      { label: "Qualite Des Reveils", detail: "Et au matin, quand tu te réveilleras, ton corps aura fait ce qu'il avait à faire. Tu pourras prendre quelques instants au réveil pour sentir comment tu es, sans te lever immédiatement. Sentir ce qui s'est restauré. Apprécier ce qui est plus disponible que la veille. Ce moment de reconnaissance au réveil consolide la qualité du sommeil." },
+      { label: "Post Hypnotique", detail: "À partir de cette nuit, et chaque nuit, ton sommeil va aller plus profond. Pas d'un coup, peut-être. Progressivement. Et tu remarqueras au fil des semaines que tes réveils deviennent plus francs, ta fatigue moins lourde, ton énergie plus disponible dans la journée." }
       ],
     }],
   }],
@@ -2030,7 +2162,15 @@ const k_648: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients qui dorment trop ou qui sont somnolents en journée. Travail de structuration des cycles veille-sommeil, restauration d'une vigilance diurne pleine." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Ancrage de vivacité K-BASE-016\n• Phase 4 — Retour K-BASE-026 (rapide, tonique)" },
+      { label: "Reconnaissance", detail: "Ton corps a un rythme déréglé. Il dort trop, ou il dort à des heures qui ne te conviennent pas. La journée, tu te traînes. Le matin, tu peines à émerger. Ce n'est pas une question de paresse — c'est ton horloge interne qui s'est désorganisée. Et elle peut se réorganiser." },
+      { label: "Lumiere Matinale", detail: "La lumière du matin est le signal le plus puissant pour ton horloge interne. Dès que tu ouvres les yeux, expose-toi à la lumière du jour, même quelques minutes. Sors si tu peux. Ouvre largement les rideaux. Cette lumière dit à ton corps : c'est le matin, c'est le jour, c'est le moment d'être vivant." },
+      { label: "Activation Corps", detail: "Ton corps a besoin d'être activé pour s'éveiller pleinement. Au réveil, fais quelques mouvements simples avant même de sortir du lit. Étire-toi, bouge tes pieds, tes mains. Quand tu te lèves, prends une douche pas trop chaude, ou termine par de l'eau plus fraîche. Bouge un peu. Cette activation physique réveille ton système." },
+      { label: "Imagerie Vivacite", detail: "Imagine maintenant ce que c'est que d'être pleinement vivant dans la journée. L'énergie circule. Les yeux sont ouverts, attentifs. Le corps est tonique sans être tendu. L'esprit est disponible. Cette qualité, tu peux la retrouver. Elle est en toi. Elle attend que tu la rappelles." },
+      { label: "Micro Pauses", detail: "Pendant la journée, plutôt que de subir la somnolence, tu peux pratiquer des micro-pauses régénérantes. Toutes les heures et demie, deux ou trois minutes : tu te lèves, tu bouges, tu prends quelques respirations profondes, tu regardes au loin. Ces micro-pauses préviennent la baisse d'énergie qui te ferait sombrer." },
+      { label: "Recadrage Sieste", detail: "Si tu fais des siestes, qu'elles soient courtes : 20 minutes maximum, et avant 15h. Une sieste plus longue ou plus tardive perturbe ta nuit et entretient le cercle. Une sieste courte, en revanche, peut restaurer ta vigilance pour le reste de la journée." },
+      { label: "Horaire Coucher", detail: "Le soir, fixe-toi une heure de coucher raisonnable et tiens-la, même si tu n'as pas sommeil. Ne pas dépasser cette heure entraîne ton corps à rythmer le sommeil. Avec la régularité, l'horloge interne se restaure." },
+      { label: "Post Hypnotique", detail: "Ton corps va apprendre, jour après jour, à associer la lumière à la vivacité, l'activité à l'éveil, les heures fixes à des cycles plus stables. Sois patient avec lui — quelques semaines de régularité sont nécessaires pour que le rythme se restaure pleinement." }
       ],
     }],
   }],
@@ -2069,7 +2209,15 @@ const k_649: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients dont les rêves intenses ou anxieux perturbent le repos. Travail de pacification du contenu onirique sans le supprimer, installation d'une posture intérieure d'observateur des rêves." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Installation observateur K-BASE-020\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Demande à l'inconscient\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tes nuits sont peuplées de rêves intenses, parfois inquiétants. Ton sommeil ne se repose pas vraiment, parce que ton inconscient travaille intensément. Ce n'est pas anormal — l'inconscient utilise les rêves pour traiter ce qui doit l'être. Mais cela peut devenir trop intense." },
+      { label: "Recadrage Reves", detail: "Les rêves ont un rôle. Ils digèrent les émotions de la journée, intègrent les apprentissages, régulent ce qui n'a pas pu l'être en éveil. Tes rêves ne sont pas des ennemis. Ils essaient de faire un travail. Mais ils peuvent le faire avec moins de violence si on les y aide." },
+      { label: "Observateur Nocturne", detail: "Tu peux installer en toi un observateur des rêves. Cette part de toi qui, même pendant le sommeil, peut prendre un peu de recul par rapport à ce qui se passe dans le rêve. L'observateur ne change pas le rêve — il le regarde avec une distance bienveillante. Et cette distance change la qualité du rêve." },
+      { label: "Consigne Au Coucher", detail: "Au coucher, tu peux te dire intérieurement : si des rêves intenses viennent, je serai présent comme observateur. Je verrai sans être emporté. Cette intention, posée avant le sommeil, agit pendant la nuit. Ton inconscient l'enregistre." },
+      { label: "Demande Pacification", detail: "Tu peux aussi demander à ton inconscient quelque chose de précis : qu'il fasse son travail nocturne avec autant de douceur que possible. Pas qu'il arrête — qu'il modère. Tu peux lui dire : tu peux traiter ce que tu as à traiter, mais s'il te plaît, le moins violemment possible." },
+      { label: "Si Cauchemar", detail: "Si malgré cela tu te réveilles d'un cauchemar, tu peux faire trois choses. Un : reconnaître que c'était un rêve, et que tu es en sécurité maintenant. Deux : prendre quelques respirations longues, comme nous avons appris. Trois : si l'image persiste, modifier l'image dans ton esprit éveillé — la rendre plus petite, plus floue, plus lointaine, ou y ajouter un élément protecteur. Cette modification éveillée influence les rêves suivants." },
+      { label: "Dialogue Avec Inconscient", detail: "Si certains rêves reviennent, c'est qu'ils ont un message qui n'est pas encore reçu. Tu peux, au matin, prendre quelques minutes pour écouter ce que ton rêve voulait dire. Pas en décodant rationnellement. En sentant. Que voulait te dire cette part de toi-même qui rêve ?" },
+      { label: "Post Hypnotique", detail: "Avec la pratique de cette posture d'observateur et de cette demande à ton inconscient, tes nuits vont devenir progressivement plus pacifiées. Les rêves continueront — c'est normal — mais ils seront moins violents, moins épuisants. Ton sommeil retrouvera sa qualité de repos." }
       ],
     }],
   }],
@@ -2108,7 +2256,15 @@ const k_650: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour voyageurs traversant des fuseaux horaires ou travailleurs en horaires décalés. Aide à la resynchronisation de l'horloge interne et à la qualité du sommeil dans des conditions atypiques." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Suggestions adaptées au contexte du patient\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Ta vie t'impose des horaires que ton corps n'est pas conçu pour suivre naturellement. Voyages à l'étranger, gardes nocturnes, horaires postés. Ton horloge interne s'épuise à essayer de s'adapter. Aujourd'hui, nous allons l'aider à mieux gérer ces contraintes." },
+      { label: "Acceptation Contexte", detail: "Première chose : accepter ta situation telle qu'elle est. Lutter contre les horaires que tu n'as pas choisis ne fait qu'aggraver la fatigue. Tu as ces horaires — pour des raisons professionnelles, familiales, ou de voyage. Travaillons avec, pas contre." },
+      { label: "Synchronisateurs", detail: "Trois choses synchronisent ton horloge interne plus que tout : la lumière (surtout le matin), les repas (à des heures régulières), et l'exercice (de préférence en journée). En jouant sur ces trois leviers selon le contexte, tu peux accélérer ton adaptation." },
+      { label: "Jet Lag", detail: "Pour un voyage avec décalage horaire : dès l'arrivée, mets-toi à l'heure locale. Mange aux horaires locaux, expose-toi à la lumière du jour, évite la sieste de plus de 30 minutes le premier jour. La première nuit sera difficile, c'est normal. À partir de la deuxième, ton corps commence à s'adapter." },
+      { label: "Travail Poste", detail: "Pour le travail de nuit : ta chambre doit pouvoir être totalement obscure pendant ton sommeil de jour. Investis dans des rideaux occultants. Mange avant de dormir un repas léger. Pendant ta nuit de garde, expose-toi à la lumière vive pour rester éveillé. Au retour, lunettes de soleil pour limiter la lumière qui t'éveillerait." },
+      { label: "Suggestions Sommeil", detail: "Maintenant, pour la qualité de ton sommeil dans ces conditions : ton inconscient peut apprendre à plonger dans le sommeil profond rapidement, dès que tu te couches, même à des heures inhabituelles. Et il peut maximiser la récupération sur des durées plus courtes que d'ordinaire. Ton corps s'adapte." },
+      { label: "Imagerie Recuperation", detail: "Imagine que chaque heure de sommeil que tu obtiens dans ces conditions difficiles vaut autant qu'une heure de sommeil dans des conditions idéales. Ton corps utilise au maximum ce qui lui est donné. Une heure de sommeil profond, totalement consenti, restaure mieux que trois heures de sommeil agité." },
+      { label: "Post Hypnotique", detail: "Avec la pratique de ces principes et cette intention de plonger profond, tu vas découvrir que tu peux mieux gérer ces horaires que tu ne le pensais. La fatigue restera présente — c'est inévitable — mais elle sera plus supportable, et tu récupéreras mieux quand tu auras des plages de sommeil possibles." }
       ],
     }],
   }],
@@ -2147,7 +2303,15 @@ const k_651: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients dont le sommeil est perturbé suite à un événement marquant : deuil, séparation, déménagement, changement professionnel. Aide à traverser sans que l'insomnie ne devienne chronique." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Quelque chose d'important s'est passé dans ta vie, et ton sommeil en est perturbé. C'est normal. Quand un événement marque, ton inconscient a besoin de la nuit pour traiter ce qui s'est passé. Et ce traitement nocturne dérange parfois le sommeil. Ce n'est pas une défaillance — c'est ton psychisme qui fait son travail." },
+      { label: "Legitimation", detail: "Tu as le droit de mal dormir en ce moment. Ton corps et ton esprit traversent quelque chose. Ils s'ajustent. Lutter contre l'insomnie réactionnelle l'aggrave : il vaut mieux la traverser, en sachant qu'elle est temporaire et qu'elle a un sens." },
+      { label: "Double Intention", detail: "Au coucher, tu peux poser deux intentions à la fois. Premièrement : laisser mon inconscient traiter ce qui doit l'être pendant la nuit. Deuxièmement : me reposer autant que possible, même si le sommeil n'est pas continu. Ces deux intentions ensemble libèrent la pression de la performance du sommeil." },
+      { label: "Lit Comme Refuge", detail: "Même si tu ne dors pas comme tu voudrais, ton lit reste un refuge. Tu y es allongé, au calme, dans la nuit. C'est déjà du repos. Évite de te lever toutes les nuits — sauf si tu sens que tu vas tourner et te crisper. Reste dans le lit, en respirant tranquillement, en étant simplement présent." },
+      { label: "Pensees Surgissantes", detail: "Les pensées qui surgissent la nuit sont liées à ce que tu traverses. Plutôt que de les combattre, tu peux les laisser passer. Si certaines se montrent insistantes, tu peux te dire : je verrai cela demain, à la lumière du jour. La nuit n'est pas le moment des solutions." },
+      { label: "Temps Qui Repare", detail: "Cette période d'insomnie n'est pas pour toujours. Quelques semaines, peut-être quelques mois, mais ton sommeil va revenir. Ton inconscient finira son travail de traitement, et le sommeil reprendra ses droits. Tu n'as pas à le forcer. Tu as à attendre, en prenant soin de toi." },
+      { label: "Soin Diurne", detail: "Pendant la journée, tu peux prendre des micro-pauses régénérantes. Une sieste très courte si tu peux. Quelques minutes les yeux fermés. Ces moments compensent partiellement les nuits courtes et te permettent de tenir." },
+      { label: "Post Hypnotique", detail: "Cette nuit, et les nuits qui viennent, tu vas dormir comme tu peux dormir. Ton inconscient va faire son travail. Ton corps va recevoir le repos qu'il peut recevoir. Et progressivement, la nuit retrouvera sa fluidité, à mesure que ce que tu traverses sera intégré." }
       ],
     }],
   }],
@@ -2186,7 +2350,14 @@ const k_652: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Adaptation pour enfants de 4 à 12 ans souffrant de troubles d'endormissement, peurs nocturnes, cauchemars. Imagerie ludique, présence rassurante des parents." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Accueil avec parent présent (au moins première séance)\n• Phase 2 — Induction adaptée enfant (histoire, imagination)\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour ludique" },
+      { label: "Amorce Enfant", detail: "Je vais te raconter une histoire, et tu peux fermer les yeux ou les laisser ouverts, comme tu veux. C'est une histoire qui se passe dans un endroit que tu vas inventer toi-même." },
+      { label: "Endroit Magique", detail: "Imagine un endroit où tu te sens super bien. Cela peut être une cabane dans un arbre, un château, un sous-marin, une fusée, ce que tu veux. C'est ton endroit à toi. Personne d'autre ne peut y entrer sans que tu le permettes." },
+      { label: "Compagnon Protecteur", detail: "Dans cet endroit, il y a quelqu'un ou quelque chose qui s'occupe de toi pendant que tu dors. Cela peut être un animal magique, un super-héros, une fée, un dragon gentil. Ton gardien des nuits. Il est là toutes les nuits, et il veille sur ton sommeil. Aucun cauchemar ne peut passer par lui." },
+      { label: "Pouvoirs Speciaux", detail: "Ton gardien a des pouvoirs spéciaux. Si un mauvais rêve essaie de venir, il peut le transformer en quelque chose de drôle, ou le renvoyer d'où il vient. Il sait exactement quoi faire. Tu peux te reposer complètement parce qu'il fait son travail pendant que tu dors." },
+      { label: "Rituel Coucher", detail: "Tous les soirs, avant de dormir, tu peux faire trois choses. Premièrement : respirer profondément trois fois, comme un grand. Deuxièmement : appeler ton gardien dans ta tête, juste en pensant à lui. Troisièmement : penser à une chose chouette qui s'est passée dans la journée, même petite. Et après, tu peux te laisser glisser dans le sommeil." },
+      { label: "Si Cauchemar", detail: "Si malgré tout un mauvais rêve arrive, tu te réveilles, tu sais que tu es dans ton lit, en sécurité. Tu peux appeler ton gardien dans ta tête. Tu peux respirer trois fois. Et tu peux penser à ton endroit magique. Le cauchemar va s'éloigner. Et si tu en as vraiment besoin, tu peux appeler tes parents — ils sont là pour ça." },
+      { label: "Consigne Aux Parents", detail: "Et tes parents, quand ils te disent bonne nuit, peuvent te rappeler ton endroit, ton gardien, ta respiration. Ce sont tes outils magiques pour la nuit." }
       ],
     }],
   }],
@@ -2225,7 +2396,15 @@ const k_653: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour femmes enceintes en fin de grossesse confrontées à inconforts physiques, anxiétés, réveils fréquents. Adaptations spécifiques au contexte gravidique." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 (adaptée à la position de la femme enceinte, généralement sur le côté)\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu es à un moment particulier de ta vie. Ton corps porte un autre être, et cela transforme tes nuits. Le sommeil n'est plus comme avant. Il ne le sera pas non plus pendant un certain temps après la naissance. C'est une période de sommeil particulier — pas raté, particulier." },
+      { label: "Acceptation Inconfort", detail: "Les inconforts de fin de grossesse — le poids du ventre, les douleurs lombaires, les mouvements du bébé, les besoins fréquents d'uriner — tu ne peux pas les supprimer. Mais tu peux changer ton rapport à eux. Au lieu de les vivre comme des intrusions, tu peux les accueillir comme les signes que ton bébé est là, vivant, en train de se préparer." },
+      { label: "Connexion Bebe", detail: "La nuit est aussi un moment de connexion avec ton bébé. Quand tu te réveilles, au lieu de t'agacer, tu peux poser ta main sur ton ventre et lui dire bonjour. Sentir sa présence. Cette connexion nocturne est précieuse — c'est l'un des derniers moments où vous êtes seuls tous les deux ainsi." },
+      { label: "Position Repos", detail: "Trouve la position qui te convient le mieux pour cette nuit. Sur le côté gauche est généralement meilleur pour la circulation. Avec un coussin entre les genoux, un sous le ventre. Aménage ton lit pour qu'il accueille ton corps tel qu'il est maintenant." },
+      { label: "Repos Fragmenté", detail: "Ton sommeil sera fragmenté. C'est normal et c'est même probablement utile : ton corps se prépare à l'allaitement et aux nuits avec un nouveau-né. Plutôt que de lutter, accepte des nuits en plusieurs morceaux. Chaque morceau de sommeil compte. Et la sieste de jour devient précieuse." },
+      { label: "Anxietes Accouchement", detail: "Si des anxiétés sur l'accouchement à venir te réveillent, tu peux les déposer doucement. Ton corps sait faire ce qu'il a à faire. Des milliards de femmes l'ont fait avant toi. Tu seras accompagnée, soutenue. Tu peux te dire : je verrai cela le moment venu, je n'ai pas à le résoudre maintenant. La nuit, mon corps a besoin de repos pour se préparer." },
+      { label: "Force Qui Grandit", detail: "Pendant tu reposes, ton corps continue à se préparer. Tes muscles se renforcent pour l'accouchement. Ton bassin s'assouplit. Tes hormones se mettent en place. Le sommeil que tu trouves est utilisé au maximum par ton corps. Tu ne perds pas ton temps." },
+      { label: "Post Hypnotique", detail: "À partir de cette nuit, tu peux vivre tes nuits de grossesse avec moins de lutte. Tu acceptes ce qui est. Tu te connectes à ton bébé. Tu déposes ce que tu peux déposer. Et ton sommeil, même imparfait, te restaure." }
       ],
     }],
   }],
@@ -2264,7 +2443,15 @@ const k_654: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour seniors confrontés aux modifications physiologiques du sommeil avec l'âge : nuits plus courtes, plus fragmentées, réveils précoces. Adaptation des attentes et optimisation du repos." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 (douce et lente)\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Ton sommeil a changé avec les années. Tu dors moins longtemps qu'avant, tu te réveilles plus tôt, ta nuit est plus morcelée. Cela t'inquiète peut-être, ou te fatigue. Mais une partie de ces changements est normale, liée au temps qui passe." },
+      { label: "Dedramatisation", detail: "Avec l'âge, le besoin de sommeil diminue physiologiquement. Une personne de 70 ans n'a pas besoin des 8 heures qu'elle dormait à 30 ans. 6 heures peuvent suffire. Le sommeil profond diminue, le sommeil léger augmente. Ces changements ne sont pas pathologiques en eux-mêmes." },
+      { label: "Acceptation", detail: "Plutôt que de lutter pour retrouver le sommeil de tes 30 ans, tu peux accepter le sommeil que ton corps fait maintenant. Si tu te réveilles à 5h après t'être couché à 22h, cela fait 7 heures — c'est suffisant pour ton corps actuel. L'agitation vient parfois d'une attente qui ne correspond plus à ta physiologie." },
+      { label: "Qualite Du Temps", detail: "Le temps que tu passes éveillé tôt le matin peut devenir précieux. Le silence de l'aube, la lumière qui change, le calme avant l'agitation du monde. Beaucoup de personnes âgées trouvent dans ces heures matinales une qualité particulière. Au lieu de lutter, tu peux les habiter." },
+      { label: "Sieste Legitime", detail: "La sieste de l'après-midi, courte et préférablement en début d'après-midi, est légitime à ton âge. Une demi-heure suffit pour compléter ce qui manque à la nuit. Ne te culpabilise pas de cette sieste — elle fait partie d'un rythme adapté." },
+      { label: "Qualite Residuelle", detail: "Pour le sommeil que tu as encore, optimise sa qualité. Une chambre fraîche, sombre, calme. Un dîner léger, pas trop tardif. Pas d'écran avant le coucher. Une activité physique régulière dans la journée, à ton rythme. Ces fondamentaux restent importants à tout âge." },
+      { label: "Si Inquietude", detail: "Si tu t'inquiètes parce que tu dors moins, demande-toi : suis-je réellement fatigué dans la journée, ou est-ce que je crois devoir dormir plus parce que j'avais l'habitude ? Si tu n'es pas fatigué dans la journée, ton sommeil te suffit. C'est lui qui le dit, pas une norme abstraite." },
+      { label: "Post Hypnotique", detail: "À partir de cette nuit, tu peux vivre ton sommeil avec moins de lutte. Il sera ce qu'il sera. Tu profiteras des heures où tu dors, tu habiteras les heures où tu es éveillé, et tu compléteras avec une sieste si nécessaire. Tu vis avec le sommeil de ton âge, qui est juste." }
       ],
     }],
   }],
@@ -2303,7 +2490,15 @@ const k_655: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients qui serrent ou grincent des dents la nuit. Travail sur la relaxation de la mâchoire au coucher, dépose des tensions accumulées, suggestion de relâchement nocturne." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Suggestions post-hypnotiques pour la nuit\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu serres la nuit. Tes dents, tes mâchoires, font un travail dont tu ne te souviens pas le matin. Cette tension nocturne te coûte : les dents s'usent, la mâchoire est douloureuse, parfois la tête. Pourtant, ton inconscient continue ce mouvement de serrement, comme s'il ne savait pas faire autrement." },
+      { label: "Origine Tension", detail: "Le serrement nocturne est souvent l'expression d'une tension diurne refoulée. Ce que tu n'as pas pu serrer, retenir, mordre dans la journée, ton corps le fait la nuit, à ta place. Si tu peux mieux exprimer dans la journée — pas violemment, mais clairement — la nuit aura moins à compenser." },
+      { label: "Conscience Diurne", detail: "Plusieurs fois dans la journée, tu peux vérifier ta mâchoire. Est-elle serrée ? Tes dents sont-elles en contact ? Souvent, oui, sans que tu le saches. Quand tu remarques cela, desserre. Laisse tes dents se séparer légèrement. Laisse ta langue se poser au palais sans pression. Ce relâchement diurne réduit le besoin nocturne." },
+      { label: "Relaxation Machoire", detail: "Maintenant, porte ton attention à ta mâchoire. Sens-la. Sens où elle tient. Tes muscles temporaux sur le côté du crâne, tes muscles masséters près des oreilles, ta langue. Et doucement, propose à chaque partie de se relâcher. Pas tout d'un coup. Chaque muscle, un peu plus libre." },
+      { label: "Dents Libres", detail: "Tes dents n'ont rien à porter en ce moment. Aucun travail n'est demandé à ta mâchoire. Elle peut simplement être présente, sans tension. Tes lèvres peuvent se toucher légèrement, mais tes dents restent séparées. Ta langue peut reposer sans pousser sur le palais." },
+      { label: "Suggestion Nocturne", detail: "Cette nuit, ton inconscient va recevoir une consigne nouvelle. Pendant le sommeil, ta mâchoire reste relâchée. Tes dents ne se mettent pas en contact. Si une tension monte pendant la nuit, ton corps la dirige ailleurs que vers la mâchoire. La nuit est faite pour reposer la mâchoire, pas pour la faire travailler." },
+      { label: "Imagerie Nuit", detail: "Imagine maintenant ta mâchoire pendant la nuit. Détendue. Légèrement ouverte. Au repos complet. Tes joues sont molles, tes lèvres tranquilles. Au matin, tu te réveilles et tu sens immédiatement cette différence : la mâchoire qui a vraiment dormi." },
+      { label: "Post Hypnotique", detail: "À partir de cette nuit, ton inconscient prend en charge cette nouvelle consigne. Cela peut prendre quelques nuits pour s'installer pleinement. Au matin, tu remarqueras progressivement moins de tension, moins de douleur. Et dans la journée, tu prendras l'habitude de vérifier régulièrement la détente de ta mâchoire." }
       ],
     }],
   }],
@@ -2342,7 +2537,15 @@ const k_656: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Technique de répétition imaginaire (rehearsal) pour cauchemars récurrents non liés à un trauma identifiable. Réécriture du scénario en éveil pour modifier le contenu nocturne." }
+      { label: "Structure De Seance", detail: "• Phase 1 — En conscience normale, le patient raconte le cauchemar récurrent\n• Phase 2 — Co-construction d'une nouvelle fin/version\n• Phase 3 — Induction K-BASE-001\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Recadrage", detail: "Tu as ce cauchemar qui revient. Toujours le même, ou avec des variantes. Cela te dit que ton inconscient a un message qui n'est pas reçu, ou un scénario qui s'est figé. Aujourd'hui, nous allons proposer à ton inconscient une autre version de l'histoire." },
+      { label: "Principe", detail: "Voici comment cela fonctionne : le contenu d'un rêve n'est pas figé. Si tu modifies en éveil le scénario du rêve récurrent, et que tu répètes mentalement la nouvelle version, ton inconscient l'enregistre. Et la prochaine fois que ce contenu revient, il aura tendance à suivre le nouveau script plutôt que l'ancien." },
+      { label: "Cauchemar Observe", detail: "Maintenant, depuis ta position d'observateur, ton cauchemar va défiler sur l'écran. Mais tu n'es pas dedans — tu le regardes. Laisse-le se dérouler jusqu'au moment où tu te sens habituellement réveiller, ou jusqu'au moment de plus grande tension." },
+      { label: "Pause Creative", detail: "À ce moment-là, tu mets sur pause. Tu reprends la main. Tu décides ce qui va se passer ensuite, autrement. Comment l'histoire pourrait-elle se terminer différemment ? Avec quelle ressource, quelle aide, quelle issue inattendue ?" },
+      { label: "Reecriture", detail: "Construis cette nouvelle suite. Elle ne doit pas être irréaliste — juste différente, et meilleure pour toi. Peut-être qu'un personnage protecteur arrive. Peut-être que tu trouves une force que tu n'avais pas dans le rêve original. Peut-être que ce qui te poursuivait s'arrête, ou se transforme. Ou que tu trouves une porte de sortie que tu n'avais pas vue. Choisis ta version." },
+      { label: "Repetition Mentale", detail: "Maintenant, repasse mentalement le scénario complet, mais avec la nouvelle fin. Du début à la fin nouvelle. Trois fois. Avec le plus de détails possible. Pendant que tu fais cela, ton inconscient enregistre cette nouvelle version comme une option qui lui est désormais disponible." },
+      { label: "Message Inconscient", detail: "Et tu peux dire à ton inconscient : voici comment cette histoire peut aussi se passer. Tu as maintenant deux versions. Tu peux choisir. Et chaque fois que ce contenu reviendra, je te suggère de privilégier celle-ci." },
+      { label: "Post Hypnotique", detail: "Ce soir et les soirs qui viennent, avant de t'endormir, tu peux brièvement repasser la nouvelle version du scénario dans ta tête. Une fois suffit. Cette répétition régulière consolide la reprogrammation. Au bout de quelques jours à quelques semaines, tu remarqueras que le cauchemar a changé : il prend la nouvelle voie, ou il disparaît." }
       ],
     }],
   }],
@@ -2381,7 +2584,15 @@ const k_657: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Accompagnement hypnotique du sevrage progressif de somnifères (benzodiazépines, Z-drugs) en coordination avec le médecin prescripteur. Transition vers ressources autonomes." }
+      { label: "Structure De Seance", detail: "• Phase préparatoire — Plusieurs séances pour installer ressources sommeil avant le sevrage\n• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Renforcement des ancrages sommeil installés précédemment\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu prends depuis longtemps un médicament pour dormir. Il t'a aidé. Aujourd'hui, en accord avec ton médecin, tu commences à diminuer. Cette transition n'est pas facile : ton corps a besoin de réapprendre à dormir par lui-même. Nous allons l'accompagner." },
+      { label: "Confiance Corporelle", detail: "Avant ce médicament, tu savais dormir. Ton corps a en lui les mécanismes du sommeil. Le médicament les a partiellement remplacés, mais ne les a pas effacés. Ils sont là, en sommeil, prêts à reprendre du service. Aujourd'hui, nous allons les réveiller." },
+      { label: "Potentialisation", detail: "Pendant cette période de sevrage, ton inconscient va utiliser au maximum la dose réduite que tu prends. Il va l'orienter vers la qualité de ton sommeil, vers la profondeur, vers la continuité. Et progressivement, il va apprendre à produire les mêmes effets sans la molécule." },
+      { label: "Ressources Alternatives", detail: "Tu as installé pendant nos séances précédentes plusieurs ressources : la respiration apaisante, le lieu sûr, le glissement vers le sommeil. Ces ressources prennent maintenant une importance nouvelle. Elles vont remplacer progressivement ce que le médicament faisait. Pratique-les chaque soir, avec discipline, comme une nouvelle hygiène du coucher." },
+      { label: "Acceptation Transition", detail: "Pendant le sevrage, certaines nuits seront plus difficiles que sous médicament plein. C'est normal. Ton corps se réajuste. Ces nuits transitoires ne durent pas. Au bout de quelques semaines, tu trouveras un sommeil naturel — peut-être différent de ce que tu connaissais sous médicament, mais authentique et restaurateur." },
+      { label: "Progressivite", detail: "Le sevrage se fait pas à pas, jamais brutalement. Ton médecin t'accompagne dans la diminution. Tu n'as pas à aller plus vite que le rythme prescrit. Chaque palier est un apprentissage. Quand un palier est confortable, tu passes au suivant." },
+      { label: "Reconnexion Sommeil", detail: "Nuit après nuit, ton corps va se reconnecter à son propre sommeil. Tu vas redécouvrir des sensations que le médicament avait peut-être atténuées : la somnolence qui monte naturellement, le glissement spontané, la qualité particulière des rêves naturels. C'est ton sommeil qui revient à toi." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, et pendant toute la durée du sevrage, ton inconscient travaille avec toi. Chaque jour, il restaure un peu plus les mécanismes naturels du sommeil. Chaque nuit, même imparfaite, est un pas vers l'autonomie. Et un jour, tu te rendras compte que tu dors par toi-même, vraiment." }
       ],
     }],
   }],
@@ -2420,7 +2631,13 @@ const k_658: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Technique de sieste courte et efficace : 15-20 minutes de récupération profonde sans entrer en sommeil paradoxal. Pour patients qui peinent à faire la sieste ou qui veulent en optimiser la qualité." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Position adaptée (assis incliné, fauteuil, ou allongé bref)\n• Phase 2 — Induction rapide K-BASE-006 ou K-BASE-001 condensé\n• Phase 3 — Suggestion de durée et de profondeur (script)\n• Phase 4 — Sieste effective de 15-20 min\n• Phase 5 — Retour K-BASE-026 (rapide)" },
+      { label: "Cadrage Temporel", detail: "Tu vas faire une sieste de quinze ou vingt minutes. Pas plus. Cette durée est précise et importante : c'est le temps qu'il faut pour récupérer sans entrer dans un sommeil profond dont le réveil serait pénible." },
+      { label: "Position", detail: "Installe-toi confortablement, mais pas trop. Une position semi-allongée, ou assise dans un fauteuil avec la tête appuyée. Ferme les yeux. Tu n'as pas besoin de te déshabiller ni de te coucher comme la nuit. C'est une pause, pas une nuit." },
+      { label: "Descente Rapide", detail: "Trois ou quatre respirations profondes suffisent. Sens-toi descendre rapidement, comme si tu plongeais dans une eau calme. Tu n'as pas le temps des longs préliminaires. Ton corps a appris à plonger vite." },
+      { label: "Qualite Repos", detail: "Pendant ces minutes, ton corps va recevoir une récupération concentrée. Pas un sommeil profond — un état entre le sommeil et la veille, où ton système nerveux se restaure rapidement. Quinze minutes de cet état valent souvent plus qu'une heure de demi-sommeil agité." },
+      { label: "Suggestion Reveil", detail: "Ton inconscient sait précisément le temps imparti. Au bout de quinze ou vingt minutes, sans que tu aies besoin d'un réveil, il te ramènera doucement à la conscience. Frais, alerte, prêt à reprendre." },
+      { label: "Post Hypnotique", detail: "Avec la pratique, cette sieste deviendra de plus en plus efficace. Au début, tu auras peut-être besoin d'un timer pour rassurer ton inconscient. Mais bientôt, ton horloge interne fera le travail. Et tu disposeras d'un outil de récupération précieux pour tes journées chargées." }
       ],
     }],
   }],
@@ -2459,7 +2676,15 @@ const k_659: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Construction d'un rituel de coucher complet, à la fois pratique (hygiène du sommeil) et symbolique (rituel KIIKA). Brique fondatrice du sommeil sur le long terme." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Bilan en conscience normale des habitudes actuelles\n• Phase 2 — Co-construction du rituel personnel\n• Phase 3 — Induction K-BASE-001\n• Phase 4 — Pratique mentale du rituel construit\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Principe", detail: "La nuit n'est pas seulement le moment où on dort. Elle commence bien avant. La qualité de ton sommeil dépend grandement de ce que tu fais dans les deux heures qui le précèdent. Construire un rituel du soir, c'est construire la qualité de ta nuit." },
+      { label: "Premiere Heure", detail: "Deux heures avant l'heure prévue de ton coucher, ta journée commence à se transformer. Les écrans s'éteignent ou diminuent en luminosité. Les conversations stressantes sont reportées. Le travail intense s'arrête. Ce n'est pas encore le sommeil — c'est l'approche." },
+      { label: "Deuxieme Heure", detail: "Une heure avant le coucher, tu rentres dans la zone de transition. Lumière tamisée. Activités calmes — lecture, musique douce, tisane, étirements légers. Repas léger si tu n'as pas dîné plus tôt. Ton corps reçoit les signaux : le jour finit." },
+      { label: "Corps Qui Se Prepare", detail: "Trente minutes avant le coucher, soin du corps. Salle de bain, dents, peut-être douche tiède. Préparation du lit. Ouverture de la fenêtre quelques minutes pour rafraîchir la chambre. Tu prépares ton sanctuaire de nuit." },
+      { label: "Rituel Kiika", detail: "Et maintenant, le rituel propre. Cinq minutes avant le sommeil, tu peux faire un passage des cinq souffles : Ki, Introspection, Intuition, Ka, Alignement. Ou simplement trois respirations profondes en honorant ce qui s'est passé dans la journée. Cette pratique consciente marque le passage." },
+      { label: "Intention Finale", detail: "Au moment de t'allonger, tu poses une intention pour la nuit. Cela peut être très simple : que mon corps répare ce qu'il a à réparer, que mon esprit intègre ce qu'il a à intégrer, que je me retrouve au matin disponible pour ce qui m'attend. Cette intention oriente ton sommeil." },
+      { label: "Premiere Minute Lit", detail: "Une fois allongé, tu fais un dernier balayage corporel rapide. De la tête aux pieds. À chaque zone, tu dis intérieurement : tu peux te reposer maintenant. Et tu laisses ton souffle suivre son cours." },
+      { label: "Post Hypnotique", detail: "Ce rituel, dans sa version qui te convient, deviendra ta porte vers la nuit. Avec la pratique régulière, ton corps comprendra : quand commence ce rituel, le sommeil approche. La régularité est plus précieuse que la perfection. Quelques éléments clefs, répétés tous les soirs, ont plus d'effet qu'un rituel parfait fait une fois par semaine." }
       ],
     }],
   }],
@@ -2498,7 +2723,15 @@ const k_660: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Protocole de fond pour patients vivant avec une douleur chronique persistante. Travail sur le rapport à la douleur plutôt que sur sa suppression : différenciation douleur primaire / souffrance secondaire, restauration de zones non-douloureuses, dépose de la lutte épuisante." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 (relaxation progressive adaptée aux limites du patient)\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script ci-dessous)\n• Phase 4 — Ancrages utilisables au quotidien\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une douleur depuis longtemps. Pas un événement, pas un épisode — une présence. Elle s'est installée dans ton corps, dans tes journées, dans tes nuits. Tu la combats, tu la subis, tu la portes. C'est épuisant. Ce que nous allons faire aujourd'hui n'est pas la faire disparaître — ce serait te mentir. C'est de transformer ta relation avec elle." },
+      { label: "Distinction Essentielle", detail: "Il y a deux choses qui se mélangent dans ce que tu vis. La première, c'est la douleur elle-même — une sensation physique avec sa localisation, sa qualité, son intensité. La deuxième, c'est la souffrance qui s'ajoute — la peur qu'elle continue, la colère qu'elle soit là, la fatigue de devoir la gérer, le sentiment d'être prisonnier d'elle. La douleur, on ne peut pas toujours la supprimer. La souffrance, on peut beaucoup la diminuer." },
+      { label: "Zones Non Douloureuses", detail: "Maintenant, fais quelque chose d'inhabituel. Au lieu de porter ton attention sur ce qui te fait mal, porte-la sur ce qui ne te fait pas mal. Tu as forcément des zones où tu ne souffres pas en ce moment. Le bout de tes doigts, peut-être. Le sommet de ton crâne. La plante de tes pieds. Trouve ces zones, et reste avec elles un moment. Ces zones existent. Tu n'es pas que douleur." },
+      { label: "Amplification Ressources", detail: "Ces zones non-douloureuses peuvent prendre plus d'espace dans ta conscience. Pas chasser la douleur — elle a sa place. Mais lui rendre la place qui est la sienne, et redonner aux zones tranquilles la place qui est la leur. Sens comment ces zones tranquilles peuvent être accueillantes. Le confort qui y vit. La paix qui y règne." },
+      { label: "Depose Lutte", detail: "Tu as lutté longtemps contre ta douleur. Cette lutte t'a coûté beaucoup d'énergie, et elle n'a pas fait disparaître ce qu'elle voulait combattre. Tu peux essayer autre chose : déposer la lutte. Pas céder. Pas te résigner. Déposer le combat épuisant, pour entrer dans une autre relation. Une relation où tu acceptes que la douleur soit là, sans la valider, sans la nourrir non plus." },
+      { label: "Souffle Malgre", detail: "Pendant que la douleur est présente, ton souffle continue. Il a continué pendant tous les jours difficiles. Il continue maintenant. Ce souffle, tu peux t'y appuyer. À chaque expiration, tu peux laisser un peu de la tension qui entoure la douleur — pas la douleur elle-même, mais la crispation qui l'amplifie — se déposer. La douleur reste, mais elle prend moins d'espace." },
+      { label: "Qualite De Vie", detail: "Tu as une vie en dehors de ta douleur. Des relations, des intérêts, des projets, des plaisirs. La douleur a tendance à tout coloniser. Tu peux lui rendre son périmètre légitime — qui n'est pas l'entièreté de ta vie. Ce que tu aimes, ce qui te fait du bien, mérite ta présence pleine, même quand la douleur est là." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux pratiquer ce nouveau rapport. Sentir où ça ne te fait pas mal. Respirer en laissant la crispation se déposer. Te rappeler que la souffrance peut diminuer même quand la douleur reste. Avec la pratique, ton système nerveux apprend une nouvelle relation. La douleur ne disparaît peut-être pas — mais elle prend moins de place, et tu reprends plus de place." }
       ],
     }],
   }],
@@ -2537,7 +2770,15 @@ const k_661: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour douleur lombaire chronique non spécifique. Travail spécifique sur la décrispation de la zone lombaire, désinvestissement du cycle peur-tension-douleur, restauration progressive du mouvement." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Préparation imaginaire d'un mouvement quotidien\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Ton bas du dos te fait mal depuis longtemps. À force, tu as appris à te méfier de lui. Tu bouges moins, tu te crispes davantage en anticipant la douleur. Et plus tu te crispes, plus tu as mal. Ce cercle, on peut l'ouvrir." },
+      { label: "Decrispation Locale", detail: "Porte ton attention sur la zone lombaire. Sens-la précisément. Les muscles qui s'y tiennent. Cette zone est tendue depuis longtemps. Elle s'est habituée à être tendue, comme si c'était sa façon normale d'être. Mais ce n'est pas sa façon normale. Sa façon normale, c'est d'être souple, vivante, mobile." },
+      { label: "Visualisation Relachement", detail: "Imagine que dans cette zone tendue, quelque chose commence à se relâcher. Comme une corde qui était trop serrée, et qui se détend par paliers. Pas tout d'un coup. Maille par maille. Chaque muscle qui se laisse aller un peu. Une chaleur qui peut s'installer là, signe que la circulation revient. Une souplesse qui se redécouvre." },
+      { label: "Souffle Lombaire", detail: "Ta respiration peut atteindre cette zone. Inspire en imaginant que l'air descend jusqu'au bas de ton dos. Expire en sentant cette zone se déposer un peu plus. Quelques cycles ainsi, et le bas de ton dos commence à respirer avec toi." },
+      { label: "Kinesiophobie", detail: "Tu as peur du mouvement parce qu'il pourrait raviver la douleur. Cette peur est compréhensible — mais elle entretient le problème. Le mouvement, fait avec progressivité et conscience, est ce qui guérit le bas du dos. L'immobilité, en revanche, l'aggrave à terme." },
+      { label: "Mouvement Imaginaire", detail: "Imagine maintenant un mouvement simple que tu fais souvent — te baisser, te lever, te tourner. Vois-toi le faire en imagination, doucement, avec un bas du dos qui accompagne le mouvement, qui ne se crispe pas en anticipation. Tu ressens dans le mouvement imaginaire qu'il est possible. Que ton dos est capable. Que le mouvement nourrit la zone plutôt que de la blesser." },
+      { label: "Confiance Progressive", detail: "Ton corps a en lui les ressources pour se réparer et se renforcer. Le bas du dos est l'une des zones les plus solides du corps humain. Avec un mouvement progressif, conscient, respectueux, ton bas du dos peut récupérer plus que tu ne l'imagines." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, tu peux poser ton attention sur le bas de ton dos et lui proposer de se relâcher. Tu peux aussi, dans les mouvements quotidiens, accompagner consciemment ton dos plutôt que de le faire travailler en anticipation crispée. Et chaque mouvement bien fait répare un peu." }
       ],
     }],
   }],
@@ -2576,7 +2817,14 @@ const k_662: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour migraines récurrentes et céphalées de tension. Travail en deux temps : désamorçage de la crise installée par modification des sous-modalités, et travail préventif entre les crises sur les facteurs déclenchants." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script — variante crise ou prévention selon contexte)\n• Phase 3 — Ancrages utilisables aux premiers signes\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu connais bien ces crises qui prennent ta tête. La douleur installée, les médicaments qu'il faut prendre, les heures voire les jours d'invalidation. Tu connais aussi, peut-être, les signes avant-coureurs. Aujourd'hui, nous allons travailler aux deux moments : pendant la crise, et avant qu'elle ne s'installe." },
+      { label: "Modification Sous Modalites", detail: "Quand la douleur est installée dans ta tête, tu peux faire un travail de modification. Localise précisément la douleur. Quelle est sa forme ? Sa taille ? Sa couleur ? Sa température ? Sa texture ? Tu peux, en imagination, modifier ces paramètres un à un. Si elle est rouge brûlant, tu peux la faire tendre vers une couleur plus fraîche, vers le bleu, vers le vert. Si elle est étendue, tu peux la concentrer en un point plus petit. Si elle pulse fort, tu peux ralentir cette pulsation." },
+      { label: "Fraicheur Localisee", detail: "Imagine maintenant qu'à l'endroit le plus douloureux, une fraîcheur s'installe. Comme un linge frais posé délicatement. Pas glacé — agréablement frais. Cette fraîcheur peut s'imprégner dans la zone, traverser la peau, atteindre la profondeur. La douleur devient progressivement moins vive là où la fraîcheur prend sa place." },
+      { label: "Prodromes", detail: "Avant qu'une crise ne s'installe, ton corps émet souvent des signaux : une certaine fatigue, une sensation de tension dans la nuque, une lumière qui devient désagréable, une humeur particulière, une zone qui chauffe ou qui tire. Apprends à repérer ces signaux. Plus tôt tu les repères, plus tu peux agir." },
+      { label: "Action Precoce", detail: "Aux premiers signes, tu peux agir. Pas attendre que la crise s'installe. Trois ou quatre respirations longues. Un moment dans le calme, à l'écart du bruit et de la lumière. Quelques minutes les yeux fermés en imaginant la fraîcheur. Cette intervention précoce désamorce parfois la crise complètement, ou la diminue significativement." },
+      { label: "Facteurs Declenchants", detail: "Tu connais probablement certains de tes facteurs déclenchants : manque de sommeil, stress prolongé, certains aliments, hormones, écrans, posture. Identifier ces facteurs te permet de les anticiper, de les modérer, de te protéger quand tu sais que tu vas y être exposé." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ton attention est plus sensible aux prodromes. Quand tu les repères, tu peux agir précocement avec les outils que nous avons travaillés. Et pendant les crises, même installées, tu disposes maintenant des techniques de modification des sous-modalités et de fraîcheur localisée. Avec la pratique, ces techniques deviennent plus efficaces." }
       ],
     }],
   }],
@@ -2615,7 +2863,15 @@ const k_663: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients atteints de fibromyalgie. Travail spécifique sur l'hypersensibilisation centrale, restauration des zones de moindre douleur, gestion de la fatigue associée, dépose progressive de l'épuisement." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 (très douce, en respect des limites du patient)\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Suggestions d'auto-régulation\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Legitimation", detail: "Tu vis avec une condition que beaucoup ne comprennent pas, que certains ont mis du temps à reconnaître, et que toi-même, parfois, tu doutes de pouvoir nommer. Ta douleur est réelle. Ta fatigue est réelle. Ton système nerveux est réellement modifié. Tu n'es ni paresseux, ni hypocondriaque. Tu vis avec un système hypersensibilisé qui amplifie les signaux normaux et te coûte une énergie considérable." },
+      { label: "Explication Douce", detail: "Ton système nerveux a appris à interpréter en douleur des signaux qui chez d'autres ne le sont pas. Cette amplification est dans le système, pas dans une lésion locale. C'est pour cela qu'on ne trouve souvent rien de précis sur les examens classiques. Et c'est aussi pour cela que ce système nerveux peut, progressivement, désapprendre." },
+      { label: "Apaisement Central", detail: "Imagine ton système nerveux comme une grande arborescence qui parcourt tout ton corps. Cette arborescence est en surchauffe depuis longtemps. Aujourd'hui, nous allons proposer à cette arborescence de se rafraîchir doucement. Pas brutalement — elle ne supporterait pas le brutal. Doucement. Comme une pluie tiède qui apaise un feu lent." },
+      { label: "Zones Paisibles", detail: "Dans ton corps, cherche les zones qui sont relativement paisibles en ce moment. Pas forcément sans aucune sensation — juste moins douloureuses que d'autres. Ces zones existent. Reste avec elles. Elles montrent que ton corps n'est pas que douleur, qu'il a des capacités d'apaisement." },
+      { label: "Economie Energie", detail: "Ton énergie est précieuse, et limitée par ta condition. Tu ne peux pas faire tout ce que faisaient les personnes que tu étais avant la fibromyalgie, ou ce que font les autres. Tu peux apprendre à doser. À choisir tes priorités. À ralentir avant l'épuisement plutôt qu'à t'effondrer après. Cette économie n'est pas une lâcheté — c'est une intelligence de ta condition." },
+      { label: "Gestion Paliers", detail: "Quand tu t'engages dans une activité, tu peux apprendre à fonctionner par paliers. Faire un peu, te reposer, faire un peu, te reposer. Plutôt que de tout faire d'un coup et de payer plusieurs jours après. Ce mode de fonctionnement est moins satisfaisant immédiatement, mais permet une vie plus continue et moins ponctuée d'effondrements." },
+      { label: "Corps Allie", detail: "Ton corps n'est pas ton ennemi, même quand il te fait mal. Il essaie de fonctionner avec un système nerveux dérégulé. Il fait ce qu'il peut. Tu peux, au lieu de lui en vouloir, lui parler comme à un ami fragile dont tu prends soin. Cette qualité d'attention bienveillante diminue progressivement la sensibilisation." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, tu peux pratiquer trois choses. Un : repérer les zones moins douloureuses et y porter ton attention. Deux : poser intérieurement le message de paix à ton système nerveux. Trois : doser tes activités par paliers. Avec le temps, ton système peut se désensibiliser progressivement. Pas guérir au sens classique — se calmer." }
       ],
     }],
   }],
@@ -2654,7 +2910,15 @@ const k_664: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Préparation pré-opératoire et accompagnement post-opératoire pour réduction de la douleur, accélération de la récupération, diminution des besoins en antalgiques. Idéalement pratiqué en plusieurs séances." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique pré-opératoire (script)\n• Phase 3 — Programmation du retour à la conscience\n• Phase 4 — Programmation post-opératoire\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu te prépares à une intervention. Cela mobilise plusieurs choses en toi : l'inquiétude légitime, la confiance dans l'équipe qui va te soigner, le souhait de récupérer le plus vite possible. Aujourd'hui, nous allons préparer ton corps et ton esprit à traverser cette intervention de la meilleure manière possible." },
+      { label: "Confiance Equipe", detail: "L'équipe qui va s'occuper de toi est compétente. Elle a fait cette intervention de nombreuses fois. Pendant que tu seras endormi par l'anesthésie, ton corps sera entre des mains expertes qui veilleront à chaque détail. Tu peux te permettre, pendant ce temps, d'être complètement détendu, parce que d'autres veillent pour toi." },
+      { label: "Pendant Intervention", detail: "Pendant l'intervention, ton corps sait quoi faire. Il sait calmer les saignements, il sait commencer la cicatrisation à mesure que les chirurgiens travaillent, il sait coopérer avec les médicaments qu'on lui donne. Ton inconscient peut mettre tout cela en marche dès que tu seras endormi." },
+      { label: "Reveil", detail: "Au réveil, ton corps va revenir progressivement à la conscience. Tu te sentiras peut-être un peu groggy au début — c'est normal, c'est l'effet de l'anesthésie qui se dissipe. Mais tu vas constater quelque chose : la douleur post-opératoire est plus modérée que ce que tu craignais. Ton corps a programmé un retour confortable." },
+      { label: "Post Op Premiers Jours", detail: "Dans les premiers jours qui suivent, ton corps fait un travail intense de réparation. La cicatrisation se met en place. Les tissus se reconstruisent. Pendant ce temps, tu peux soutenir ce travail en te reposant, en te nourrissant bien, en buvant suffisamment, en dormant autant que ton corps le demande." },
+      { label: "Diminution Antalgique", detail: "Tu auras peut-être besoin de médicaments antalgiques au début — c'est normal et c'est utile. Tu n'as pas à souffrir inutilement. Mais ton corps va progressivement avoir besoin de doses moindres, plus tôt qu'on ne le pense d'habitude. Ton inconscient régule la perception de la douleur de manière à ce qu'elle reste informative sans être envahissante." },
+      { label: "Recuperation Active", detail: "À mesure que les jours passent, ta récupération progresse. Tu reprends tes activités progressivement, en respectant les consignes médicales. Chaque jour est un pas vers la pleine récupération. Ton corps te surprendra par sa capacité à se réparer." },
+      { label: "Post Hypnotique", detail: "Tu emportes avec toi cette préparation jusqu'au jour de l'intervention. La veille au soir, tu peux refaire mentalement ce parcours, en quelques minutes. Le matin, avant d'entrer en salle d'opération, tu peux activer ton geste-ancre du calme. Et tu peux faire confiance à ton corps, à l'équipe, et à ton inconscient qui va travailler pour toi." }
       ],
     }],
   }],
@@ -2693,7 +2957,15 @@ const k_665: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour douleurs neuropathiques (neuropathie diabétique, post-zostérienne, post-chimio, neuropathie périphérique). Travail spécifique sur la nature particulière de cette douleur, modification des sensations brûlantes ou électriques." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Installation d'autorégulation\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Ta douleur n'est pas comme les autres. Elle ne vient pas d'une lésion qui fait mal — elle vient d'un nerf qui envoie des signaux défaillants. Brûlures, fourmillements, décharges, sensations étranges. Ton système nerveux a perdu sa programmation normale dans cette zone. Et c'est précisément parce que c'est un problème de signal qu'on peut le modifier par la conscience." },
+      { label: "Explication", detail: "Le nerf concerné envoie des messages que ton cerveau reçoit comme douleur. Mais le cerveau a aussi la capacité de moduler ces messages. Ce travail de modulation, normalement automatique, peut être amplifié par l'hypnose. Tu vas apprendre à donner à ton cerveau des consignes qui modifient la perception de ces signaux." },
+      { label: "Localisation Precise", detail: "Localise précisément la zone touchée. Pas un vague mal partout — les contours exacts. Quelle est la qualité dominante de la sensation ? Brûlure ? Picotement ? Décharge électrique ? Pression ? Froid ? Chaque qualité peut être travaillée différemment." },
+      { label: "Modification Brulure", detail: "Si c'est une sensation de brûlure, tu peux imaginer qu'à cet endroit, une fraîcheur s'installe. Pas glacée — apaisante. Comme un baume frais qui pénètre la peau et atteint la profondeur. Cette fraîcheur prend la place de la brûlure, pas en la combattant, mais en occupant l'espace. La brûlure n'a plus la place d'être aussi intense." },
+      { label: "Modification Decharges", detail: "Si ce sont des décharges électriques, tu peux imaginer que ces décharges deviennent plus douces, comme une vague qui s'apaise. Le nerf qui les envoie peut apprendre à émettre moins fort, moins fréquemment. Tu peux lui dire intérieurement : merci pour le signal, mais tu peux baisser le volume." },
+      { label: "Modification Picotements", detail: "Si ce sont des fourmillements ou picotements, tu peux les transformer en une sensation différente — une vibration neutre, un effleurement, voire une légère chaleur. Cette transformation modifie l'interprétation du cerveau et diminue la composante désagréable." },
+      { label: "Dialogue Avec Nerf", detail: "Ce nerf qui dysfonctionne fait ce qu'il peut avec son état actuel. Tu peux établir un dialogue avec lui. Lui dire : je sais que tu envoies ces signaux. Je les reçois. Tu peux les envoyer plus doucement. Mon cerveau reçoit l'information, il n'a pas besoin que tu cries." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux pratiquer ce travail de modification. Pas tout le temps — cela serait épuisant. À des moments choisis. Quelques minutes pour proposer la fraîcheur, l'apaisement, la transformation. Avec la pratique, ton cerveau apprend à moduler de mieux en mieux ces signaux. La douleur reste — son intensité diminue." }
       ],
     }],
   }],
@@ -2732,7 +3004,15 @@ const k_666: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour douleurs aiguës répétées liées à des soins (pansements, ponctions, kinésithérapie douloureuse, soins dentaires longs). Installation rapide de dispositifs anti-douleur utilisables en soin." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Lieu sûr K-BASE-011 si pas déjà installé\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Installation d'un signal d'activation rapide\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vas régulièrement subir des soins qui sont douloureux. Tu y vas en redoutant, tu en sors épuisé. Ce n'est pas une douleur ponctuelle qu'on oublie — c'est une douleur qui revient. Aujourd'hui, nous allons installer des outils que tu pourras activer pendant chaque soin." },
+      { label: "Dissociation Lieu Sur", detail: "Pendant que ton corps reçoit le soin, ton esprit n'est pas obligé d'être pleinement présent à la sensation. Tu peux apprendre à diriger ton attention ailleurs. Ton lieu sûr, par exemple. Pendant que les soignants font leur travail sur ton corps, tu peux être, en grande partie, dans ton lieu intérieur." },
+      { label: "Anesthesie Imagee", detail: "Sur la zone qui va être travaillée, tu peux imaginer qu'une anesthésie s'installe. Pas exactement l'anesthésie médicale — une atténuation. Comme si la zone devenait plus distante, plus engourdie, comme quand on revient de chez le dentiste et qu'une partie du visage est encore endormie. Cette anesthésie imaginée, pratiquée avant le soin, prend une réalité corporelle." },
+      { label: "Imagerie Substitution", detail: "Pendant le soin, les sensations que tu reçois peuvent être réinterprétées. Une piqûre peut devenir une simple pression. Un nettoyage peut devenir une simple chaleur. Un étirement douloureux peut devenir une étirement neutre. Tu ne supprimes pas la sensation — tu modifies son interprétation." },
+      { label: "Signal Rapide", detail: "Pour activer tout cela rapidement avant chaque soin, tu vas avoir un signal personnel. Par exemple : trois respirations profondes en touchant un point précis (la pulpe d'un doigt). Au moment de ce geste, ton inconscient active le lieu sûr, l'anesthésie imagée, la modification des sensations. Tout en quelques secondes." },
+      { label: "Pendant Soin", detail: "Pendant le soin, tu peux fermer les yeux ou les laisser ouverts. Ta respiration reste calme, plus longue à l'expiration. Tu peux te répéter intérieurement ton mot personnel s'il y en a un. Et tu remarques que la douleur est là, mais qu'elle a moins d'emprise sur toi qu'avant." },
+      { label: "Apres Soin", detail: "Après le soin, tu reprends contact avec la situation. Tu remarques ce qui a fonctionné, ce qui pourrait être amélioré la prochaine fois. Tu te félicites d'avoir traversé. Avec la répétition, ton dispositif devient de plus en plus efficace." },
+      { label: "Post Hypnotique", detail: "Avant chaque prochain soin, tu peux pratiquer ton dispositif quelques minutes auparavant. Et pendant le soin, tu actives ton signal. Avec la pratique, ces soins qui te coûtaient autant d'énergie deviendront plus traversables. Tu en sortiras moins épuisé. Et tu reconquerras un peu de contrôle dans une situation où tu en avais peu." }
       ],
     }],
   }],
@@ -2771,7 +3051,15 @@ const k_667: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Accompagnement hypnotique de la douleur en contexte de cancer. Travail spécifique adapté à un parcours souvent long et complexe : douleurs liées à la maladie, aux traitements, à la fatigue, à l'angoisse. En strict complément du suivi oncologique." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction très douce K-BASE-003 ou K-BASE-004\n• Phase 2 — Lieu sûr K-BASE-011 ou sanctuaire K-BASE-012\n• Phase 3 — Travail spécifique (script — adapter selon ce qui est prioritaire)\n• Phase 4 — Suggestions de confort prolongé\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu traverses quelque chose de difficile. La maladie elle-même, les traitements qui sauvent et qui éprouvent, l'incertitude, parfois la douleur. Aujourd'hui, nous prenons un moment pour ton confort. Pas pour nier la difficulté — elle est là. Pour ouvrir des espaces de mieux-être à l'intérieur de la difficulté." },
+      { label: "Zones De Vie", detail: "Dans ton corps, il y a la zone touchée par la maladie, et il y a le reste. Le reste est plus grand que tu ne crois. Des zones de ton corps continuent à fonctionner normalement, à te soutenir, à être à ta disposition. Trouve ces zones. Sens-les. Elles te disent : je suis encore là pour toi." },
+      { label: "Diminution Douleur", detail: "Là où tu as mal, tu peux proposer une atténuation. Pas la suppression complète — ce serait un mensonge. L'atténuation. Imagine que la zone douloureuse reçoit un baume apaisant. Une fraîcheur, ou une chaleur douce, selon ce qui te convient. Ce baume travaille en profondeur. Il ne fait pas disparaître la cause, mais il diminue ce que tu en ressens." },
+      { label: "Traitements Difficiles", detail: "Si tu reçois des traitements éprouvants — chimiothérapie, radiothérapie, autres — ton corps les accueille pour combattre la maladie. Au lieu de te crisper contre eux, tu peux les recevoir comme des alliés temporairement éprouvants. Ton corps utilise ce qu'ils apportent. Les effets secondaires sont le signe qu'ils travaillent." },
+      { label: "Confort Dans La Journée", detail: "Plusieurs fois dans la journée, tu peux t'offrir des moments de confort réel. Quelques minutes les yeux fermés, dans ton lieu sûr. Une respiration plus longue qui apaise. Une présence à ce qui te fait du bien : un visage aimé, une lumière, un goût, une musique. Ces moments comptent. Ils nourrissent ce qui en toi continue à vivre pleinement." },
+      { label: "Relation Aux Proches", detail: "Les personnes qui t'aiment veulent t'accompagner. Tu peux recevoir leur présence sans culpabilité. Tu n'as pas à les épargner en cachant ta réalité. Et tu n'as pas à porter leur émotion. Vous traversez ensemble, chacun à votre place. Cette traversée partagée a sa propre beauté, même au cœur de la difficulté." },
+      { label: "Present Qui Compte", detail: "Cette journée, cet instant, sont des trésors. La maladie veut occuper toute la place. Tu peux la laisser à sa place — importante, mais pas exclusive. À côté d'elle, il y a tout ce qui continue à exister : ton souffle qui passe, la lumière qui change, une parole reçue, un goût apprécié. Ces choses simples ne sont pas des consolations — elles sont la vie qui continue à vivre en toi." },
+      { label: "Post Hypnotique", detail: "Tu peux revenir à ces ressources quand tu en as besoin. Quand la douleur monte. Quand un traitement pèse. Quand l'inquiétude prend trop de place. Quelques respirations, ton lieu sûr, le baume sur la zone qui souffre, la présence à ce qui reste vivant. Ce sont des outils précieux que tu emportes avec toi, jour après jour." }
       ],
     }],
   }],
@@ -2810,7 +3098,15 @@ const k_668: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour douleurs articulaires chroniques (arthrose, polyarthrite stabilisée, séquelles articulaires). Travail sur le confort des articulations, la lubrification imagée, la diminution de l'inflammation perçue." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Imagerie de mouvement fluide\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tes articulations te font mal depuis longtemps. Le matin elles sont raides. Le mouvement les rappelle à toi. La météo les influence. Cette douleur s'accompagne souvent d'une crispation autour de l'articulation, qui aggrave le problème." },
+      { label: "Localisation", detail: "Choisis l'articulation qui te fait le plus mal en ce moment. Sens-la précisément. Sa localisation, son volume, la qualité de la douleur. Note aussi ce qui se passe autour de l'articulation — souvent les muscles qui l'entourent sont tendus, comme s'ils essayaient de la protéger en la bloquant." },
+      { label: "Decrispation Pourtour", detail: "Commence par les muscles autour. Ces muscles tendus en permanence pour protéger l'articulation finissent par aggraver la douleur. Propose-leur de se relâcher, en sachant que l'articulation peut être protégée autrement. Sens cette décrispation autour. L'articulation, du coup, retrouve un peu d'espace." },
+      { label: "Lubrification Imagee", detail: "Imagine maintenant que dans cette articulation, un fluide précieux est en train de se renouveler. Un liquide doux, qui lubrifie, qui apaise. Ce fluide circule, atteint chaque surface articulaire, les nourrit, les protège. L'articulation reçoit ce qu'il lui faut pour fonctionner avec moins de friction, moins de douleur." },
+      { label: "Diminution Inflammation", detail: "S'il y a de la chaleur, de l'inflammation, dans cette articulation, tu peux imaginer une fraîcheur apaisante qui s'installe. Pas glacée — apaisante. Cette fraîcheur calme la zone, diminue le rouge inflammatoire, ramène l'articulation vers un état plus tranquille." },
+      { label: "Mobilite Imagee", detail: "Imagine maintenant un mouvement très simple de cette articulation. Pas un grand mouvement — un petit. Vois-toi le faire, en imagination, doucement, avec une articulation qui accepte ce mouvement, qui le reçoit comme un soin plutôt que comme une agression. Le mouvement nourrit l'articulation autant qu'il la sollicite." },
+      { label: "Repercussion Globale", detail: "L'apaisement de cette articulation se répercute sur tout ton corps. Tu te tiens un peu différemment, parce qu'elle te coûte moins. Tu bouges un peu plus, parce qu'elle te le permet. Cette amélioration, même modeste, change la qualité de tes journées." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux refaire en quelques minutes ce travail. Décrispation autour, lubrification imagée, diminution de la chaleur, mobilité douce. Avec la pratique, ton corps apprend à entretenir ses articulations avec ces ressources. La douleur reste, mais elle prend moins de place." }
       ],
     }],
   }],
@@ -2849,7 +3145,15 @@ const k_669: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour douleurs persistant longtemps après un traumatisme physique guéri (accident, fracture consolidée, blessure réparée). Travail sur le décalage entre tissu réparé et système nerveux qui continue à signaler." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Reconnexion progressive\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu as eu une blessure. Elle s'est soignée. Anatomiquement, ton corps a fait son travail. Pourtant, la douleur reste, comme si ton corps n'avait pas reçu l'information que c'était guéri. Ton système nerveux continue à émettre un signal qui n'a plus sa raison d'être actuelle." },
+      { label: "Validation Guerison", detail: "Voici un constat important : la zone est réparée. Les os, les tissus, les nerfs ont fait leur travail de cicatrisation. L'examen médical te le confirme : il n'y a plus de lésion à traiter. Mais ton système nerveux, qui avait appris à signaler intensément cette zone, n'a pas encore mis à jour ses informations." },
+      { label: "Message Au Systeme", detail: "Aujourd'hui, nous allons proposer à ton système nerveux la mise à jour. Tu peux dire intérieurement, en t'adressant à ce système : la blessure est guérie. Le travail de signalisation a été utile pendant la phase de réparation. Maintenant, tu peux te détendre. Tu peux ramener cette zone au niveau normal de signalisation." },
+      { label: "Zone Reintegrée", detail: "La zone qui te fait mal s'est, en partie, séparée du reste de ton corps. Comme si elle n'appartenait plus tout à fait à ton schéma corporel — elle est devenue une zone à part, identifiée comme problématique. Aujourd'hui, tu vas la réintégrer. La sentir comme faisant partie de ton corps, comme les autres parties." },
+      { label: "Continuite Corporelle", detail: "Sens la continuité entre la zone douloureuse et les zones voisines. Pas une coupure — une continuité. La peau qui passe sans frontière. La chair qui se continue. Les muscles qui s'étendent au-delà. Cette continuité, sentie corporellement, signale au cerveau que la zone n'est plus à isoler." },
+      { label: "Dialogue Zone", detail: "Tu peux parler à cette zone. Lui dire merci d'avoir guéri. Reconnaître qu'elle a fait un travail considérable. Et lui dire qu'elle peut maintenant participer à la vie normale du corps. Elle peut être touchée, bougée, sollicitée comme avant — elle est prête." },
+      { label: "Mouvement Normal", detail: "Imagine maintenant que tu fais un mouvement avec cette zone — un mouvement qu'elle pourrait faire normalement. Vois-toi le faire avec une zone qui répond comme avant la blessure. Pas de protection automatique, pas de crispation anticipée. Une zone qui a retrouvé sa normalité de réponse." },
+      { label: "Post Hypnotique", detail: "Avec la pratique régulière de ce travail de reconnexion et de message au système nerveux, le signal résiduel va progressivement s'apaiser. Pas du jour au lendemain. Ton système nerveux a besoin de temps pour mettre à jour des programmations qui s'étaient bien installées. Mais avec la répétition de la consigne, il se réajustera." }
       ],
     }],
   }],
@@ -2888,7 +3192,15 @@ const k_670: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour douleurs viscérales chroniques fonctionnelles : côlon irritable, dyspepsie fonctionnelle, douleurs pelviennes chroniques. Travail sur l'axe cerveau-intestin et l'apaisement des viscères." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Suggestions de régulation digestive\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Ton ventre, ton bassin, te font mal régulièrement. Crampes, ballonnements, douleurs sourdes ou aiguës. Ces douleurs ne viennent pas d'une lésion — elles viennent d'un système digestif ou pelvien hyperréactif, souvent sensible aux émotions, au stress, aux aliments, au cycle. Ton ventre parle, et il le fait fort." },
+      { label: "Axe Cerveau Intestin", detail: "Il existe un dialogue permanent entre ton cerveau et tes viscères. Quand l'un est tendu, l'autre l'est aussi. Quand tu es stressé, tes viscères se contractent. Quand tes viscères sont irrités, ton cerveau reçoit des signaux qui amplifient ton stress. C'est un cercle. On peut l'apaiser des deux côtés." },
+      { label: "Main Sur Ventre", detail: "Pose mentalement une main chaude et bienveillante sur ton ventre. Une présence qui dit à tes viscères : je suis là, je m'occupe de vous, vous pouvez vous détendre. Cette intention de bienveillance signale aux viscères qu'ils peuvent baisser leur activité défensive." },
+      { label: "Chaleur Apaisante", detail: "Une chaleur douce s'installe dans ton abdomen. Comme une bouillotte tiède, mais qui agit en profondeur. Cette chaleur traverse la peau, atteint les viscères, les enveloppe. Les muscles intestinaux relâchent leur crispation. Le tube digestif retrouve son rythme tranquille." },
+      { label: "Dialogue Viscere", detail: "Si une zone précise est plus douloureuse, tu peux dialoguer avec elle. Lui demander : qu'essaies-tu de me dire ? Que se passe-t-il en toi ? Sans chercher de réponse rationnelle. Juste écouter. Parfois la douleur diminue par le simple fait d'être écoutée plutôt que combattue." },
+      { label: "Alimentation Consciente", detail: "Beaucoup de douleurs viscérales fonctionnelles sont aggravées par une alimentation rapide ou inadaptée. Tu peux apprendre à manger en présence : t'asseoir, mâcher consciemment, reposer la fourchette entre les bouchées, donner à ton système digestif les conditions de bien faire son travail. Cette manière de manger est elle-même thérapeutique." },
+      { label: "Bassin Detendu", detail: "Pour les douleurs pelviennes, ton bassin peut s'ouvrir. Imagine que les muscles du périnée et du bassin acceptent de se relâcher. Beaucoup de tension chronique s'y est installée, sans que tu en sois conscient. Cette zone aussi mérite ton attention bienveillante." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux poser la main sur ton ventre, prendre quelques respirations profondes, et envoyer à tes viscères ce message d'apaisement. Quand une crise survient, tu peux activer immédiatement ces ressources. Avec la pratique, ton axe cerveau-intestin se rééquilibre." }
       ],
     }],
   }],
@@ -2927,7 +3239,15 @@ const k_671: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour dysménorrhée invalidante. Travail spécifique sur les douleurs des règles : préparation du cycle, gestion de la phase douloureuse, apaisement utérin par imagerie chaleur et lâcher-prise." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Programmation pour le prochain cycle\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Chaque mois, ou presque, ton corps traverse une phase qui te coûte. Crampes, douleurs, parfois invalidation de plusieurs jours. Ce n'est pas une faiblesse. C'est un cycle qui t'appartient et qui demande à être accompagné autrement que par la lutte ou les anti-inflammatoires seuls." },
+      { label: "Recadrage Cycle", detail: "Le cycle menstruel n'est pas un dysfonctionnement. C'est un mouvement naturel de ton corps. La douleur, en revanche, n'est pas obligatoire à ce point. Beaucoup de femmes ont des règles avec un inconfort modéré seulement. Ton corps peut apprendre à traverser ces jours avec moins de crispation." },
+      { label: "Preparation Pre", detail: "Quelques jours avant l'arrivée de tes règles, tu peux commencer à préparer ton corps. Une bienveillance accrue envers ton ventre. Une attention à la chaleur. Une diminution des activités stressantes si possible. Cette préparation prévient une partie de l'intensité douloureuse." },
+      { label: "Chaleur Uterine", detail: "Imagine maintenant ton ventre. La zone de l'utérus, derrière le pubis. Imagine qu'une chaleur douce s'installe à cet endroit. Comme une bouillotte intérieure. Cette chaleur détend les muscles utérins, qui se contractent moins violemment quand ils sont chauds. Plus la chaleur est présente, moins les contractions sont douloureuses." },
+      { label: "Lacher Prise", detail: "L'utérus se contracte pour évacuer son contenu mensuel. C'est son travail. Au lieu de lutter contre ces contractions, tu peux les accompagner. Lâcher prise, ne pas te crisper autour de la douleur. La crispation amplifie la douleur. Le lâcher-prise la diminue." },
+      { label: "Souffle Bassin", detail: "Ta respiration peut atteindre ton bassin. À l'inspiration, sens l'air qui descend jusque-là. À l'expiration, sens ton bassin qui se dépose, se relâche, accepte ce qui se passe en lui. Quelques cycles ainsi, et la zone retrouve un peu d'apaisement." },
+      { label: "Reconciliation", detail: "Si tu as une histoire complexe avec ton corps féminin, avec le cycle, avec ce qui s'y joue de plus intime, c'est peut-être le moment d'une réconciliation douce. Ton corps n'est pas l'adversaire. Le cycle n'est pas une malédiction. C'est une expérience qui t'appartient, qui peut être accueillie avec respect, même quand elle est inconfortable." },
+      { label: "Post Hypnotique", detail: "À l'approche de tes prochaines règles, tu peux refaire ce travail. Quelques minutes par jour pendant les jours sensibles. Pendant les règles elles-mêmes, tu peux activer la chaleur imagée, le souffle vers le bassin, le lâcher-prise. Avec la pratique sur plusieurs cycles, l'intensité diminue progressivement." }
       ],
     }],
   }],
@@ -2966,7 +3286,15 @@ const k_672: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients amputés présentant des douleurs du membre fantôme. Travail spécifique sur cette douleur particulière : reconnaissance, modification par imagerie, miroir mental, intégration progressive de l'absence." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Imagerie miroir mentale\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec un phénomène étrange : un membre que tu n'as plus continue à se manifester par des sensations, parfois douloureuses. Ce n'est pas une illusion — c'est une réalité de ton cerveau. La carte cérébrale de ce membre existe encore et continue à émettre des signaux. Aujourd'hui, nous allons travailler avec cette carte." },
+      { label: "Legitimation", detail: "Ce que tu vis est réel et a été décrit chez de nombreuses personnes amputées. Tu n'es pas en train d'imaginer. Ton cerveau a une représentation de ce membre, et cette représentation continue à fonctionner même si le membre n'est plus là. C'est un phénomène neurologique connu." },
+      { label: "Membre Imagine", detail: "Imagine maintenant ton membre fantôme. Tu le sens, peut-être, dans une certaine position — souvent crispé, souvent dans une position inconfortable. Sens-le tel qu'il est en ce moment. Sa position imaginée, sa tension imaginée." },
+      { label: "Mouvement Imagine", detail: "Tu peux maintenant proposer à ce membre fantôme de bouger. Imagine que tu peux le bouger en pensée. Tu le déplies, tu le détends. Pas comme il est figé en ce moment — librement. Le bouger en imagination détend la carte cérébrale qui le représente, et diminue la douleur fantôme." },
+      { label: "Miroir Mental", detail: "Imagine que tu peux voir ton membre intact dans un miroir mental. Le membre du côté opposé, ou ton membre tel qu'il était avant. Vois-le bouger librement. Pendant que tu vois ce mouvement, ton cerveau enregistre cette image, et applique cette liberté à la carte du membre absent. C'est l'effet miroir, qui fonctionne aussi en imagination pure." },
+      { label: "Modification Sensation", detail: "Si la douleur a une qualité particulière — brûlure, crispation, compression — tu peux la modifier en imagination. Si c'est une crispation, déplie le membre. Si c'est une brûlure, imagine de la fraîcheur. Si c'est une compression, imagine de l'espace autour. Ton cerveau modifie la sensation en suivant ces consignes imaginatives." },
+      { label: "Integration Progressive", detail: "À côté de ce travail sur le membre fantôme, ton corps présent, tel qu'il est aujourd'hui, peut être pleinement habité. Le reste de ton corps mérite ton attention bienveillante. Et progressivement, ta carte cérébrale se met à jour pour intégrer ta réalité corporelle actuelle." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux faire ce travail bref : visualisation du membre fantôme, mouvement libre en imagination, modification de la sensation, image miroir. Avec la répétition régulière, la douleur diminue chez la plupart des patients qui pratiquent." }
       ],
     }],
   }],
@@ -3005,7 +3333,16 @@ const k_673: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients devant subir des soins dentaires longs ou douloureux : implants, extractions multiples, traitements de canaux, chirurgie maxillo-faciale. Préparation et accompagnement." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Installation signal d'activation rapide\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu redoutes les soins dentaires. Le bruit du fauteuil, l'odeur du cabinet, la position couchée, la bouche ouverte qu'on ne peut pas fermer, les instruments qu'on ne voit pas mais qu'on sent. Plus une éventuelle douleur. Aujourd'hui, nous allons préparer un dispositif que tu utiliseras en fauteuil pour transformer cette épreuve." },
+      { label: "Position Securisee", detail: "Sur le fauteuil dentaire, ton corps est dans une position particulière. Mais à l'intérieur, tu peux être dans ton lieu sûr. Pendant que ton corps reçoit les soins, ton esprit peut être ailleurs, là où tu te sens en sécurité totale. Cette dissociation pendant les soins est précieuse." },
+      { label: "Main Signal", detail: "Avec ton dentiste, conviens d'un signal de la main. Si tu as besoin que les soins s'arrêtent un instant, tu lèves un doigt. Cela te donne un sentiment de contrôle qui change tout. Tu n'es pas piégé — tu peux signaler à tout moment." },
+      { label: "Anesthesie Complementaire", detail: "L'anesthésie locale que le dentiste va te poser fait son travail. Tu peux aider ton corps à recevoir cette anesthésie pleinement, en imaginant que la zone qui va être travaillée devient progressivement plus distante, plus engourdie, comme si elle ne t'appartenait plus tout à fait pendant le temps du soin." },
+      { label: "Modification Temps", detail: "Pendant le soin, tu peux modifier ta perception du temps. En transe, le temps est très souple. Une heure peut sembler quinze minutes. Cette modification du temps perçu rend les soins longs plus tolérables. Tu peux te dire intérieurement : ce sera plus court que ça ne le paraît." },
+      { label: "Modification Sensations", detail: "Les sensations du soin — pression, vibration, picotement — peuvent être réinterprétées. Une vibration peut devenir un massage. Une pression peut devenir un appui rassurant. Tu ne supprimes pas la sensation — tu l'interprètes différemment, ce qui modifie son caractère désagréable." },
+      { label: "Souffle Continu", detail: "Pendant tout le soin, ton souffle continue tranquillement. Inspirations calmes, expirations un peu plus longues. Ce souffle te garde dans le calme, et il signale à ton corps que rien d'urgent ne se passe." },
+      { label: "Signal Rapide", detail: "Pour activer tout cela rapidement avant chaque rendez-vous, ton geste-ancre. Trois respirations profondes en touchant un point précis. En quelques secondes, le lieu sûr s'active, l'anesthésie complémentaire se met en place, le temps se modifie. Tu es prêt à entrer dans le cabinet en confiance." },
+      { label: "Post Hypnotique", detail: "Avant ton prochain rendez-vous dentaire, tu pourras pratiquer ton dispositif quelques minutes auparavant. Pendant le soin, tu actives ton signal en arrivant. Tu vivras cette séance différemment de toutes les précédentes. Et chaque rendez-vous suivant deviendra plus simple." }
       ],
     }],
   }],
@@ -3044,7 +3381,19 @@ const k_674: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Protocole-pivot d'apprentissage de l'auto-hypnose anti-douleur. Pour patients avancés dans le travail anti-douleur, ayant déjà installé les ressources de base. Permet la pratique autonome quotidienne." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Bilan en conscience normale des outils acquis\n• Phase 2 — Co-construction du protocole personnel court\n• Phase 3 — Première pratique guidée (script)\n• Phase 4 — Deuxième pratique en autonomie sous regard du thérapeute\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Recadrage", detail: "Tu as fait un long chemin. Tu connais maintenant plusieurs outils contre ta douleur. Aujourd'hui, nous allons les rassembler en un dispositif court que tu pourras utiliser tout seul, plusieurs fois par jour. C'est la transition vers l'autonomie." },
+      { label: "Principe", detail: "Un dispositif d'auto-hypnose anti-douleur efficace tient en 10 à 15 minutes. Pas plus. Tu n'as pas besoin de longues séances pour obtenir un effet. La régularité est plus précieuse que la durée." },
+      { label: "Etape 1 Installation", detail: "Étape une de ton dispositif : t'installer. Trouve une position confortable, dans un endroit calme si possible. Mais avec la pratique, tu pourras le faire dans le métro, dans une salle d'attente, presque partout. Ferme les yeux ou laisse-les mi-clos." },
+      { label: "Etape 2 Descente", detail: "Étape deux : descendre. Trois ou quatre respirations profondes, avec expiration plus longue. Avec ton signal personnel — geste, mot ou les deux — tu actives ton entrée en transe. Cela peut prendre une minute, peut-être deux. Avec la pratique, c'est presque immédiat." },
+      { label: "Etape 3 Lieu Sur", detail: "Étape trois : ton lieu sûr. Tu rejoins l'endroit en toi qui t'est familier. Tu y prends quelques inspirations, le temps de bien t'y installer." },
+      { label: "Etape 4 Zone Douloureuse", detail: "Étape quatre : tu portes ton attention à la zone douloureuse. Tu la salues — au lieu de la combattre. Et tu mets en place les outils que tu as appris : modification de la sensation, fraîcheur ou chaleur, transformation par imagerie, message au système nerveux. Quelques minutes de ce travail." },
+      { label: "Etape 5 Zones Paisibles", detail: "Étape cinq : tu portes ton attention aux zones paisibles de ton corps. Tu les sens, tu les nourris d'attention. Cette étape est essentielle — elle équilibre le travail sur la zone difficile en rappelant à ton corps qu'il est plus que sa douleur." },
+      { label: "Etape 6 Consolidation", detail: "Étape six : tu intègres ce qui s'est fait. Tu prends une dernière respiration profonde. Tu donnes à ton inconscient la consigne de continuer le travail. Et tu remontes doucement." },
+      { label: "Etape 7 Retour", detail: "Étape sept : tu reviens. Quelques mouvements des doigts, des pieds. Tu ouvres les yeux. Tu reprends ta journée. Le travail continue à diffuser ses effets pendant les heures qui suivent." },
+      { label: "Premiere Pratique Guidee", detail: "Maintenant, tu vas faire ce dispositif complet, en quelques minutes, pendant que je suis silencieux. Je t'accompagne uniquement par ma présence. À toi." },
+      { label: "Post Pratique", detail: "Tu viens de faire une auto-hypnose anti-douleur complète. Tu as toutes les compétences pour le faire seul. Avec la pratique régulière, deux ou trois fois par jour, ce dispositif devient ton allié quotidien." },
+      { label: "Post Hypnotique", detail: "À partir de cette semaine, tu pratiques. Sans culpabilité si tu sautes un jour. Sans rigidité non plus. Régulièrement. Quelques minutes le matin, quelques minutes en milieu de journée, quelques minutes le soir si tu veux. Et chaque pratique nourrit ton apaisement progressif." }
       ],
     }],
   }],
@@ -3083,7 +3432,14 @@ const k_675: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients hypertendus en complément du suivi médical. Travail sur l'apaisement du système nerveux autonome, la régulation respiratoire, la gestion du stress chronique. Sans modification du traitement médicamenteux." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Ancre respiratoire K-BASE-017\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Ton corps vit depuis trop longtemps en état d'alerte. Ta tension est élevée non pas par hasard, mais parce que ton système nerveux autonome est en surchauffe permanente. Le médicament fait sa part. Mais il y a une autre part : apprendre à ton corps à se détendre vraiment, plusieurs fois par jour." },
+      { label: "Explication Douce", detail: "La tension artérielle dépend de plusieurs choses : le débit du cœur, la résistance des vaisseaux, l'état du système nerveux autonome. Sur cette dernière dimension, tu as une influence directe par la respiration et l'apaisement intérieur. C'est cette part-là que nous travaillons." },
+      { label: "Souffle Regulateur", detail: "Ta respiration est le levier le plus direct sur ton système nerveux autonome. Une expiration plus longue que l'inspiration active le système parasympathique, qui ralentit le cœur et détend les vaisseaux. Quelques minutes de respiration ainsi modifient mesurablement ta tension." },
+      { label: "Imagerie Circulatoire", detail: "Imagine maintenant que dans tout ton corps, les vaisseaux sanguins se relâchent doucement. Ils étaient un peu trop fermés, un peu trop tendus. Ils retrouvent leur souplesse naturelle. Ton sang circule avec plus de fluidité, sans avoir à forcer. Le cœur peut travailler avec moins de pression." },
+      { label: "Apaisement Systeme", detail: "Ton système nerveux autonome reçoit un message : tu peux te détendre. Il n'y a pas de menace immédiate. Tu n'as pas besoin de maintenir l'alerte. Plusieurs fois par jour, tu vas envoyer ce message. Avec la régularité, ton système réapprend la détente comme état possible." },
+      { label: "Recadrage Stress", detail: "Le stress de fond qui élève ta tension n'est pas seulement extérieur. Il est aussi dans ta manière de te rapporter aux événements. Avec la pratique, tu peux apprendre à laisser glisser ce qui n'a pas besoin d'être porté, à prendre du recul plus souvent, à choisir les moments où ton attention vaut vraiment d'être engagée." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, tu prends 3 minutes pour activer ce dispositif : trois respirations longues avec expiration prolongée, l'image de tes vaisseaux qui se détendent, le message d'apaisement à ton système. Tu continues à prendre tes médicaments comme prescrit. Ces deux niveaux travaillent ensemble." }
       ],
     }],
   }],
@@ -3122,7 +3478,15 @@ const k_676: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients souffrant de palpitations bénignes, extrasystoles, arythmies fonctionnelles validées comme non dangereuses. Travail sur la perception et la régulation du rythme cardiaque par le souffle." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Ancre respiratoire spécifique\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu sens parfois ton cœur qui s'emballe, qui bat fort, qui semble manquer un coup. Ton cardiologue t'a confirmé que ce n'était pas dangereux. Mais tu ne peux pas t'empêcher de surveiller, et cette surveillance amplifie le phénomène." },
+      { label: "Validation Cardio", detail: "Premier rappel essentiel : tes examens ont confirmé que ton cœur va bien. Les palpitations que tu ressens sont fonctionnelles, pas pathologiques. Cela ne supprime pas leur caractère désagréable, mais cela enlève la dimension d'urgence vitale qui amplifie l'angoisse." },
+      { label: "Attention Qui Amplifie", detail: "Plus tu surveilles ton cœur, plus tu remarques chaque battement particulier. Les extrasystoles existent chez tout le monde, mais la plupart des gens ne les sentent pas parce qu'ils n'y prêtent pas attention. Ton attention sélective amplifie la perception." },
+      { label: "Souffle Regulateur", detail: "Ton souffle régule directement ton rythme cardiaque. Une inspiration sur 5 temps, une expiration sur 5 temps — c'est la cohérence cardiaque, qui synchronise et apaise. Pratique cette respiration plusieurs fois par jour, et particulièrement quand les palpitations se font sentir." },
+      { label: "Apaisement Cardiaque", detail: "Imagine maintenant ton cœur. Pas avec inquiétude — avec bienveillance. Cet organe travaille pour toi sans relâche depuis ta naissance. Il bat parfois un peu plus vite, parfois un peu plus lentement, parfois avec une irrégularité bénigne. C'est sa vie de cœur. Il fait son travail." },
+      { label: "Desinvestissement", detail: "Tu peux apprendre à ne pas réagir aux palpitations comme à un signal d'alarme. Quand elles arrivent, tu peux te dire : c'est une palpitation, je sais ce que c'est, elle n'est pas dangereuse, elle va passer. Et tu redonnes ton attention à ce que tu étais en train de faire." },
+      { label: "Confiance Corps", detail: "Ton corps n'a pas besoin de ta surveillance permanente pour bien fonctionner. Il a fonctionné toute ta vie sans que tu y penses. Lui faire confiance est une libération. Tu peux poser cette confiance comme un acte volontaire, plusieurs fois par jour." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, quand tu remarques une palpitation, ton dispositif s'active : reconnaissance bienveillante, respiration cohérente, retour à ton activité. Avec la pratique, les palpitations diminueront en intensité et en fréquence, parce que le cercle attention-amplification se sera rompu." }
       ],
     }],
   }],
@@ -3161,7 +3525,15 @@ const k_677: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients asthmatiques en complément du traitement médical. Travail sur la respiration de fond, la diminution de l'anxiété face aux crises, la prévention par apaisement bronchique imagé." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Ancrage respiratoire pour usage en prévention\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu vis avec un souffle parfois fragile. Tes bronches peuvent se contracter, et chaque crise réveille la peur de manquer d'air. Cette peur, à son tour, peut déclencher ou aggraver une crise. Ton traitement médical fait son travail. Aujourd'hui, nous ajoutons une dimension complémentaire : la régulation par la conscience." },
+      { label: "Souffle Quotidien", detail: "Entre les crises, ta respiration peut s'apaiser et s'amplifier. Beaucoup de patients asthmatiques respirent superficiellement par habitude — le diaphragme bouge peu, les bronches restent partiellement contractées. Réapprendre une respiration ample sans la forcer est un travail de fond précieux." },
+      { label: "Diaphragme", detail: "Pose mentalement ton attention sur ton diaphragme — ce muscle en forme de coupole sous tes poumons. À l'inspiration, il descend, et l'air remplit le bas de tes poumons. À l'expiration, il remonte, et l'air sort. Ce mouvement diaphragmatique ample, sans effort, soutient un souffle de meilleure qualité." },
+      { label: "Bronches Detendues", detail: "Imagine maintenant tes bronches. Ces tubes qui mènent l'air dans tes poumons. Imagine qu'elles sont détendues, ouvertes, accueillantes. Leur paroi est souple. Le passage est libre. L'air circule sans obstacle. Cette imagerie, répétée quotidiennement, soutient l'état bronchique." },
+      { label: "Anti Panique Crise", detail: "Quand une crise arrive ou commence, deux choses peuvent t'aider en plus de ton traitement de secours. Premièrement, ne pas paniquer — la panique aggrave le bronchospasme. Deuxièmement, utiliser ton lieu sûr et ta respiration apprise. Tu prends ton ventoline, et en attendant qu'elle agisse, tu respires de la manière la plus calme possible." },
+      { label: "Observance Traitement", detail: "Ton traitement de fond, si tu en as un, mérite d'être pris régulièrement, même quand tu vas bien. C'est lui qui maintient l'état de tes bronches dans le calme. L'arrêter parce qu'on se sent bien est l'erreur fréquente qui ramène les crises." },
+      { label: "Corps Allie", detail: "Ton corps n'est pas brisé. Il a une particularité — des bronches plus réactives. Avec un soin attentif, un traitement adéquat, et un esprit qui ne dramatise pas, tu peux vivre pleinement avec cette particularité. Beaucoup d'asthmatiques mènent une vie complètement normale, y compris des sportifs de haut niveau." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux pratiquer ta respiration diaphragmatique ample, avec l'image de tes bronches ouvertes. Chaque pratique soutient ton état respiratoire. En cas de crise, ton dispositif anti-panique combiné au traitement de secours fait son travail." }
       ],
     }],
   }],
@@ -3200,7 +3572,16 @@ const k_678: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour diabétiques de type 2 en complément du suivi médical. Travail sur la motivation aux changements de vie, la régulation par le stress, la conscience corporelle et l'observance." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Renforcement motivationnel\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec un diabète. Cela demande des changements parfois difficiles : alimentation, activité physique, suivi médical, peut-être insuline. Tu sais ce qu'il faut faire. La difficulté n'est pas dans la connaissance — elle est dans la mise en pratique durable. C'est cela que nous allons soutenir." },
+      { label: "Recadrage Motivation", detail: "Faire les changements pour ton diabète n'est pas une privation, même si cela peut le sembler au début. C'est un soin de toi-même. Chaque choix alimentaire respectueux de ton corps, chaque activité physique, chaque prise de médicament est un acte d'attention pour toi-même. Tu te respectes en respectant ta condition." },
+      { label: "Image Equilibre", detail: "Imagine ton corps comme un système qui cherche son équilibre. Tu peux soutenir cet équilibre par tes choix. Ton inconscient peut t'aider à reconnaître ce qui te fait du bien et ce qui te fait moins de bien. Cette boussole intérieure se développe avec la pratique." },
+      { label: "Stress Glycemie", detail: "Le stress chronique élève ta glycémie. C'est un fait physiologique : le cortisol fait monter le sucre. En apprenant à apaiser ton stress de fond, tu agis directement sur ta glycémie. La détente n'est pas un luxe — c'est un soin métabolique." },
+      { label: "Alimentation Consciente", detail: "Manger en conscience change la manière dont ton corps gère ce qu'il reçoit. T'asseoir, prendre le temps, mâcher, goûter, sentir la satiété arriver. Cette manière de manger limite naturellement les excès et soutient une glycémie plus stable." },
+      { label: "Activite Juste", detail: "L'activité physique régulière, à ton rythme, est l'un des outils les plus puissants pour ton diabète. Pas du sport intense — de la marche, du mouvement quotidien, ce que tu peux tenir. Chaque pas que tu fais utilise du glucose et améliore ta sensibilité à l'insuline." },
+      { label: "Suivi Partenaire", detail: "Ton médecin et ton équipe de soin sont tes partenaires. Tu peux leur faire part de tes difficultés, sans culpabilité. Si tu n'arrives pas à suivre certaines consignes, le dire permet d'adapter plutôt que de te culpabiliser dans ton coin." },
+      { label: "Engagement Quotidien", detail: "Tu n'as pas à être parfait. Tu as à faire un peu mieux que ce que tu fais aujourd'hui, et à maintenir cette amélioration. Petit à petit. Un changement durable installé vaut mieux que dix changements parfaits abandonnés en deux semaines." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ton inconscient soutient tes choix. Quand une décision alimentaire ou d'activité se présente, quelque chose en toi penchera vers le choix qui te respecte. Pas systématiquement — tu restes humain. Mais plus souvent qu'avant. Et cette accumulation de choix justes change progressivement ton équilibre." }
       ],
     }],
   }],
@@ -3239,7 +3620,16 @@ const k_679: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en surpoids voulant changer leur rapport à l'alimentation. Travail de fond sur la conscience alimentaire, les déclencheurs émotionnels, la réconciliation corporelle. Hors troubles du comportement alimentaire pathologiques." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Programmation pour les choix alimentaires\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Ton rapport à l'alimentation est devenu compliqué. Tu manges parfois sans faim, parfois sans goût, parfois en réponse à autre chose qu'à un besoin nutritionnel. Et ton corps s'est éloigné de toi : tu le regardes avec critique plutôt qu'avec accueil." },
+      { label: "Distinction Faims", detail: "Il existe plusieurs faims qui se ressemblent. La faim physique : le ventre creux, l'énergie qui descend, le besoin réel de nourriture. Et la faim émotionnelle : l'envie de manger pour combler, calmer, occuper, se récompenser, fuir. Apprendre à les distinguer est le premier travail." },
+      { label: "Pause Avant Manger", detail: "Avant de manger, tu peux prendre 30 secondes pour te demander : ai-je faim ? Et quelle est la qualité de cette faim ? Si c'est physique, je mange. Si c'est émotionnelle, je peux choisir : manger en conscience ou faire autre chose. Cette pause ouvre un espace de choix." },
+      { label: "Conscience Alimentaire", detail: "Quand tu manges, tu peux le faire en conscience. T'asseoir. Voir ce qui est dans ton assiette. Sentir l'odeur. Prendre une bouchée. Mâcher lentement. Sentir la texture, le goût, la chaleur. Reposer la fourchette. Être présent à l'expérience. Cette manière de manger te nourrit beaucoup plus que la quantité." },
+      { label: "Satiete", detail: "Ton corps a un signal de satiété. Il met environ 20 minutes à arriver. Si tu manges vite, tu finis avant d'avoir reçu le signal. Manger lentement permet à la satiété de se manifester. Tu remarques que tu as moins faim, et tu peux t'arrêter sans frustration." },
+      { label: "Reconciliation Corps", detail: "Ton corps n'est pas l'ennemi à corriger. C'est ta maison. Il porte une histoire, des marques, des particularités. Tu peux apprendre à le regarder avec moins de critique. Pas une fausse satisfaction de tout — juste une bienveillance de fond. Il fait ce qu'il peut avec ce que tu lui donnes." },
+      { label: "Declencheurs", detail: "Certains moments, certaines émotions déclenchent chez toi l'envie de manger sans faim. Identifie-les. Le soir devant la télé. La frustration au travail. La solitude. La fatigue. Pour chacun, tu peux trouver une autre réponse que l'alimentation : un moment pour soi, un appel, une marche, un thé." },
+      { label: "Engagement Durable", detail: "Tu n'es pas dans une bataille de courte durée. Tu installes une nouvelle relation avec l'alimentation et avec ton corps. Cette relation se construit au fil des semaines et des mois. Pas de privation extrême qui craquera. Une transformation lente et durable." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ton inconscient soutient cette transformation. Avant chaque repas, la pause s'installera plus naturellement. Pendant les repas, la conscience sera plus présente. Et les déclencheurs émotionnels deviendront repérables au moment où ils se présentent, te donnant le choix." }
       ],
     }],
   }],
@@ -3278,7 +3668,14 @@ const k_680: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients souffrant de RGO chronique fonctionnel ou en complément du traitement. Travail sur l'apaisement du système digestif haut, la gestion du stress qui aggrave les symptômes, la conscience alimentaire." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Conseils intégrés en suggestion\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu vis avec ces remontées acides qui brûlent ton œsophage. Le traitement aide, mais il ne suffit pas toujours, et tu aimerais réduire ta dépendance aux médicaments. Aujourd'hui, nous allons aider ton système digestif haut à mieux fonctionner." },
+      { label: "Apaisement Estomac", detail: "Pose ton attention sur ton estomac. Cette zone, sous le sternum, légèrement à gauche. Imagine qu'elle peut s'apaiser. La sécrétion acide peut se réguler à un niveau juste — suffisant pour digérer, pas en excès. Ton inconscient connaît ce niveau juste, et peut y revenir." },
+      { label: "Cardia", detail: "Le cardia est le sphincter qui ferme la jonction entre œsophage et estomac. Quand il se relâche au mauvais moment, l'acide remonte. Imagine ce sphincter qui retrouve sa tonicité, qui se ferme correctement après chaque passage d'aliment, qui reste fermé entre les repas et la nuit." },
+      { label: "Œsophage Apaise", detail: "Ton œsophage, qui a souvent été agressé par l'acide, peut s'apaiser. Imagine sa paroi qui se répare, qui retrouve son confort. Une fraîcheur douce peut s'y installer, comme un baume après l'agression." },
+      { label: "Conscience Alimentaire", detail: "Pour soutenir ce travail, ton alimentation peut s'adapter. Manger lentement, en quantités modérées. Éviter de te coucher juste après un repas. Identifier les aliments qui te déclenchent (chocolat, café, alcool, gras, épices, tomate selon les patients) et les modérer. Soulever le tête de lit si tu as des reflux nocturnes." },
+      { label: "Stress Digestif", detail: "Le stress chronique aggrave les troubles digestifs. Quand tu es tendu, ton estomac sécrète plus d'acide, ton diaphragme se contracte, tout le système haut est sollicité. Apaiser ton stress de fond apaise ton système digestif." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, particulièrement après les repas, tu peux poser ta main sur ton sternum et envoyer le message d'apaisement à ton système digestif haut. Avec la pratique, et avec ces ajustements de vie, ton confort progresse, et le besoin de médicaments peut diminuer — toujours en accord avec ton médecin." }
       ],
     }],
   }],
@@ -3317,7 +3714,15 @@ const k_681: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients atteints de maladie de Crohn ou rectocolite hémorragique en rémission ou en activité modérée. Soutien au confort digestif, gestion du stress facteur connu d'aggravation, soutien moral." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 (douce)\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une maladie chronique de tes intestins. Elle alterne périodes calmes et poussées, traitements lourds parfois, fatigue, contraintes alimentaires. Ton corps t'a beaucoup demandé. Aujourd'hui, nous prenons un temps pour le soutenir." },
+      { label: "Intestin Inflamme", detail: "Sans nier la réalité de ta maladie, tu peux proposer à ton intestin un message d'apaisement. Imagine ton tube intestinal. Là où il s'est inflammé, tu peux imaginer une fraîcheur apaisante qui s'installe. Pas pour remplacer les médicaments — pour les soutenir." },
+      { label: "Systeme Immunitaire", detail: "Ton système immunitaire, dans ces maladies, attaque ton propre intestin. Tu ne peux pas le commander directement — mais tu peux lui proposer un message. Lui dire intérieurement : tu peux distinguer ce qui est moi de ce qui est étranger. Tu peux moduler ta réponse. Ce message, répété, soutient le travail des immunomodulateurs." },
+      { label: "Stress Poussee", detail: "Le stress est un facteur connu de déclenchement des poussées. Apaiser ton stress de fond, plusieurs fois par jour, est un acte de soin pour tes intestins. Pas comme remède magique — comme un facteur parmi d'autres que tu peux influencer." },
+      { label: "Observance Traitement", detail: "Ton traitement de fond est précieux, même quand tu te sens bien. Les arrêts intempestifs sont une cause majeure de rechute. L'observance régulière est un acte de respect pour ce que ton corps a traversé." },
+      { label: "Alimentation Personnelle", detail: "Avec ton équipe médicale, tu identifies les aliments qui te conviennent et ceux qui aggravent tes symptômes. Cette identification est personnelle — il n'y a pas de régime universel pour les MICI. Respecte ton corps qui te dit ce qui passe et ce qui ne passe pas." },
+      { label: "Qualite De Vie", detail: "Vivre avec une MICI demande des aménagements. Cela ne veut pas dire renoncer à une vie pleine. Adapter, choisir ses combats, ménager son corps quand il en a besoin, oser quand il le permet. C'est un équilibre qui s'apprend." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, tu peux envoyer le message d'apaisement à ton intestin et à ton système immunitaire. Tu prends tes traitements avec rigueur, tu écoutes ton corps, tu vis ta vie. Cette manière d'être ensemble avec ta maladie soutient ton équilibre." }
       ],
     }],
   }],
@@ -3356,7 +3761,16 @@ const k_682: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients souffrant de fatigue chronique (syndrome de fatigue chronique, post-virale, post-traitement, fibromyalgie). Travail sur l'énergie disponible, la dépose de l'épuisement, la gestion par paliers." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 (très douce, en respect des limites)\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu portes une fatigue qui ne se repose pas. Une fatigue de fond qui colore tout. Tu te lèves fatigué, tu te couches fatigué. Ce que tu pouvais faire avant te demande maintenant un effort considérable. Cette fatigue est réelle, mesurable, légitime. Elle n'est pas dans ta tête." },
+      { label: "Legitimation", detail: "Tu as peut-être entendu trop souvent qu'il fallait te bouger, te secouer, faire un effort. Mais ce que tu vis n'est pas une question de volonté. Ton corps a un fonctionnement énergétique altéré, qui demande respect plutôt qu'effort. Aujourd'hui, nous travaillons avec cette réalité." },
+      { label: "Reservoir", detail: "Imagine que tu disposes d'un réservoir d'énergie pour la journée. Ce réservoir est plus petit que celui que tu avais avant. Il ne se remplit pas comme avant — il faut du temps. Tu ne peux plus dépenser comme tu dépensais. Cette image n'est pas une fatalité — c'est une réalité actuelle qui demande une nouvelle manière de gérer." },
+      { label: "Paliers", detail: "Au lieu de tout faire d'un coup et de t'effondrer, tu peux apprendre à fonctionner par paliers. Une activité, puis un repos. Une activité, puis un repos. Ce rythme te permet de faire plus, sur la longueur, que les sprints suivis d'effondrements." },
+      { label: "Priorites", detail: "Ton réservoir limité demande des choix. Toutes les activités ne se valent pas. Identifie ce qui compte vraiment pour toi — relations essentielles, choses qui te nourrissent, obligations incompressibles. Et sache reporter ou supprimer ce qui peut l'être." },
+      { label: "Remplissage", detail: "Ton réservoir peut aussi se remplir. Pas par des activités intenses — elles le vident. Par du sommeil de qualité, par des moments de calme, par des choses qui te font du bien sans te coûter. Identifier ce qui te remplit, pour toi, est précieux : la nature, certaines musiques, le contact avec certaines personnes, la lecture, le silence." },
+      { label: "Progression Lente", detail: "La récupération, quand elle vient, est lente. Ne pas espérer un retour rapide à ton ancien niveau. Espérer une amélioration progressive, parfois en dents de scie. Chaque petit progrès compte. Et ne pas se décourager devant les rechutes — elles font partie du processus." },
+      { label: "Corps Qui Reapprend", detail: "Ton corps réapprend à produire et à gérer son énergie. Ce travail se fait dans le temps. Pendant qu'il se fait, tu peux le soutenir par ton attitude bienveillante, par tes choix respectueux, par ton refus de te culpabiliser de ce que tu ne peux pas faire en ce moment." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux poser une main sur ta poitrine et envoyer ce message à ton corps : je vais à ton rythme. Je te respecte. Je te soutiens. Cette posture intérieure favorise la récupération beaucoup plus que la pression et le forçage." }
       ],
     }],
   }],
@@ -3395,7 +3809,15 @@ const k_683: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients allergiques (rhinites, eczémas, urticaires fonctionnels) en complément du traitement médical. Travail sur la régulation de la réponse immune par imagerie, dialogue avec le système immunitaire." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Apaisement local\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Ton système immunitaire réagit fort à des choses qui ne sont pas dangereuses pour toi. Pollens, acariens, certains aliments, certaines matières — il les traite comme des menaces et déclenche une réponse qui te coûte : nez qui coule, yeux qui pleurent, peau qui démange ou s'enflamme." },
+      { label: "Recadrage", detail: "Ton système immunitaire fait son travail, mais il s'est emballé sur certaines cibles. On peut lui apprendre à mieux discerner. Ce travail vient en complément des traitements antihistaminiques ou de la désensibilisation, pas à leur place." },
+      { label: "Dialogue Immunitaire", detail: "Imagine ton système immunitaire comme une équipe de gardes. Ces gardes sont vigilants — c'est leur rôle. Mais sur certaines cibles, ils sont devenus excessifs. Tu peux leur parler intérieurement : merci pour votre vigilance. Sur les pollens [ou la cible], vous pouvez modérer votre réponse. Ils ne sont pas dangereux pour moi." },
+      { label: "Imagerie Apaisement", detail: "Pendant la saison des pollens [ou en présence du déclencheur], imagine que ton corps reçoit ces particules sans les attaquer. Elles passent, elles ne provoquent pas de réaction massive. Ton nez reste tranquille. Tes yeux ne pleurent pas. Ta peau ne démange pas." },
+      { label: "Local Eczema", detail: "[Pour eczéma] Imagine ta peau qui retrouve son confort. Là où elle est inflammée, une fraîcheur apaisante s'installe. La rougeur s'atténue. Les démangeaisons diminuent. Ton dermis se répare. Ta peau redevient une enveloppe accueillante." },
+      { label: "Local Rhinite", detail: "[Pour rhinite] Imagine tes muqueuses nasales qui retrouvent leur état normal. Plus de gonflement, plus de sécrétions excessives. L'air passe librement. Tes yeux restent clairs." },
+      { label: "Observance Complementaire", detail: "Ce travail soutient les traitements que tu prends. Antihistaminiques, désensibilisation, soins locaux — ils continuent leur effet. La régulation par la conscience s'ajoute à eux. Ne les arrête pas seul." },
+      { label: "Post Hypnotique", detail: "Pendant les périodes ou contextes à risque, plusieurs fois par jour, tu peux refaire ce dialogue avec ton système immunitaire et cette imagerie d'apaisement. Avec la pratique régulière sur plusieurs saisons, beaucoup de patients constatent une diminution de l'intensité des manifestations." }
       ],
     }],
   }],
@@ -3434,7 +3856,15 @@ const k_684: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients souffrant d'acouphènes chroniques. Travail sur la perception et la place du bruit, désinvestissement attentionnel, recadrage de la souffrance secondaire." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Modification des sous-modalités\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu entends en permanence ce bruit que les autres n'entendent pas. Il t'épuise. Tu le surveilles, et plus tu le surveilles, plus il prend de place. Ce bruit n'est probablement pas dangereux, ton ORL te l'a dit. Mais il colonise ton attention." },
+      { label: "Explication", detail: "Ce que tu entends est généré par ton système auditif. Pas une menace — un signal interne mal calibré. Beaucoup de personnes ont des acouphènes sans en souffrir, parce que leur cerveau a appris à les ignorer. Cette habituation, tu peux l'apprendre." },
+      { label: "Modification Sons", detail: "Maintenant, écoute le bruit sans lutter. Caractérise-le : tonalité aiguë ou grave ? Volume ? Constance ? Localisation (oreille, tête) ? Tu peux, en imagination, modifier ces paramètres. Si c'est aigu, le faire glisser vers le grave. Si c'est fort, le baisser progressivement. Si c'est central, le déplacer vers l'extérieur, plus loin." },
+      { label: "Distance", detail: "Imagine que ce bruit s'éloigne. Au lieu d'être au centre de ton attention, il devient comme un bruit lointain, à la périphérie. Pas supprimé — éloigné. Comme un train qui passe au loin et qu'on entend sans y prêter attention." },
+      { label: "Desinvestissement", detail: "Tu peux aussi apprendre à ne plus le surveiller. Quand tu remarques que tu lui prêtes attention, redirige doucement ton attention vers ce qui se passe autour : un son extérieur, une sensation corporelle, une activité. Le bruit reste — mais il n'occupe plus le centre." },
+      { label: "Acceptation", detail: "L'acceptation n'est pas la résignation. C'est arrêter le combat épuisant. Le bruit est là, il le restera peut-être. Tu peux vivre avec, comme on vit avec une cicatrice ou un trait permanent. Ta vie n'est pas définie par ce bruit." },
+      { label: "Environnement Sonore", detail: "Tu peux aider ton cerveau en lui offrant un environnement sonore enrichi. Pas le silence parfait qui amplifie l'acouphène. Une musique douce, un bruit de fond léger, des sons naturels (ventilateur, eau). Ces sons donnent à ton cerveau d'autres choses à traiter." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux pratiquer la modification du bruit, son éloignement, le désinvestissement attentionnel. Avec la pratique régulière sur plusieurs mois, l'habituation se consolide. Le bruit ne disparaît probablement pas — mais il prend beaucoup moins de place dans ton vécu." }
       ],
     }],
   }],
@@ -3473,7 +3903,14 @@ const k_685: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour vertiges fonctionnels (post-VPPB résolu, vertige phobique postural, anxiété vestibulaire). Travail de restauration de l'ancrage corporel, désensibilisation aux mouvements anxiogènes." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Désensibilisation imaginaire si vertige phobique\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu as eu des vertiges, ou tu en as encore. Le médecin a éliminé les causes graves. Mais tu n'oses plus bouger normalement. Tu surveilles ta tête, tes mouvements. Et cette surveillance crée elle-même de l'instabilité." },
+      { label: "Ancrage Pieds", detail: "Ton équilibre commence par le contact avec le sol. Sens tes pieds. Le contact de chaque pied avec le sol. Le poids qui s'y dépose. Cette base, large, stable. Ton corps se construit à partir de cette base." },
+      { label: "Systeme Complet", detail: "Ton équilibre repose sur trois systèmes : tes oreilles internes, ta vision, ton sens de la position de ton corps dans l'espace. Quand l'un est perturbé, les autres compensent. Ton corps est fait pour s'adapter. Tu peux lui faire confiance." },
+      { label: "Desensibilisation", detail: "Si certains mouvements t'inquiètent — pencher la tête en arrière, te lever vite, te retourner — tu peux les pratiquer en imagination d'abord. Vois-toi faire ces mouvements doucement, avec un corps qui s'adapte. La répétition imaginaire prépare la pratique réelle." },
+      { label: "Confiance Progressive", detail: "Quand tu pratiques en réel, commence par les mouvements les moins anxiogènes. Reprends-les progressivement. Chaque mouvement réussi sans incident est une preuve que ton système fonctionne. Ton cerveau enregistre ces preuves." },
+      { label: "Recadrage Sensation", detail: "Si une sensation de vertige se présente, ne pas la dramatiser. Une légère sensation passagère est normale. Elle ne signifie pas que tu vas tomber. Tu peux poser ta main contre quelque chose si besoin, prendre quelques respirations, et reprendre." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, chaque jour, tu sens consciemment tes pieds plusieurs fois. Tu pratiques en imagination puis en réel des mouvements progressifs. Et ton système retrouve sa confiance. Avec la régularité, la peur du mouvement diminue, et avec elle, les sensations vertigineuses fonctionnelles." }
       ],
     }],
   }],
@@ -3512,7 +3949,14 @@ const k_686: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patientes souffrant de SPM modéré à sévère avec composante émotionnelle marquée. Travail de soutien dans la phase prémenstruelle, anticipation, recadrage des fluctuations hormonales." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Programmation pour le prochain cycle\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu as remarqué que certains jours du mois sont systématiquement plus difficiles. Plus irritable, plus triste, plus anxieuse, plus sensible à tout. Et puis cela passe. Tu es prise dans une cyclicité hormonale qui te chahute. Cette cyclicité est physiologique, mais elle peut être beaucoup mieux accompagnée." },
+      { label: "Anticipation", detail: "Connaître ton cycle te donne un avantage : tu peux anticiper. Repère les jours où tu es le plus sensible — souvent les 5 à 10 jours avant les règles. Pendant ces jours, tu peux te préparer : moins d'engagements stressants, plus de sommeil, plus de soin de toi, et savoir d'avance que ce que tu ressentiras n'est pas la réalité de ta vie." },
+      { label: "Distinction Soi Hormone", detail: "Pendant la phase prémenstruelle, ce que tu ressens est en partie hormonal. Ce n'est pas toi qui es soudainement nulle, agacée par tout, désespérée par ta vie. C'est une vague hormonale qui te traverse. Distinguer entre toi et cette vague te protège de prendre des décisions importantes pendant cette phase." },
+      { label: "Pas De Decisions Lourdes", detail: "Une règle qui aide beaucoup : pas de décisions importantes pendant la phase prémenstruelle. Pas de rupture, pas de démission, pas de conflit majeur initié. Note ce qui t'agace et reviens-y après tes règles. Souvent, ce qui semblait insupportable est devenu gérable." },
+      { label: "Corps Pendant Phase", detail: "Pendant cette phase, ton corps a des besoins particuliers. Plus de sommeil. Une alimentation moins excitante. Moins de café et d'alcool, qui aggravent la sensibilité. De l'exercice doux. Des moments pour soi. Ces aménagements sont des soins, pas des caprices." },
+      { label: "Traversee", detail: "Cette vague hormonale a une durée. Elle monte, elle est à son pic, elle redescend, elle passe. Sache cela quand tu es au creux : ce ne sera pas comme ça pour toujours. Dans quelques jours, la chimie de ton corps aura changé, et avec elle, ta perception du monde." },
+      { label: "Post Hypnotique", detail: "À partir de cette semaine, tu peux suivre ton cycle. Chaque mois, à l'approche de la phase difficile, ton inconscient te rappellera : c'est cette phase, je vais ménager mon corps, je suspends les décisions importantes, je sais que ça va passer. Et avec la pratique sur plusieurs cycles, ton vécu de cette phase s'allège." }
       ],
     }],
   }],
@@ -3551,7 +3995,16 @@ const k_687: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour femmes en péri-ménopause ou ménopause confrontées à bouffées de chaleur, troubles du sommeil, modifications de l'humeur, vécu de transition identitaire. Accompagnement holistique." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Lieu sûr ou sanctuaire selon profil\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Clôture K-BASE-030 si dimension transitionnelle forte" },
+      { label: "Reconnaissance", detail: "Tu traverses une transition majeure. Ton corps modifie son fonctionnement hormonal. Bouffées de chaleur, nuits perturbées, humeurs changeantes, peut-être un sentiment d'identité qui vacille. Cette transition est une page de la vie qui se tourne. Tu n'es plus ce que tu étais — tu deviens autre chose." },
+      { label: "Recadrage Culturel", detail: "Notre culture parle de la ménopause comme d'une fin, d'une perte. Beaucoup de cultures la voient autrement : comme un passage vers une autre forme de puissance, plus libre, plus tournée vers soi-même, plus sage. Tu peux choisir comment tu veux vivre cette transition." },
+      { label: "Bouffees Chaleur", detail: "Les bouffées de chaleur sont des montées brusques de chaleur, parfois accompagnées de transpiration. Elles ont une durée — quelques minutes — et elles passent. Quand l'une arrive, tu peux ne pas la combattre. Respirer plus profondément, se rafraîchir si possible, savoir qu'elle va passer. Cette acceptation diminue l'inconfort." },
+      { label: "Modulation Imagee", detail: "Imagine maintenant ton système thermorégulateur. Il est devenu un peu hyperréactif. Tu peux lui parler intérieurement : tu peux te calmer. Tu n'as pas besoin de déclencher la chaleur si fort, si souvent. Ce dialogue, répété quotidiennement, soutient une régulation plus stable." },
+      { label: "Sommeil Menopause", detail: "Tes nuits ont changé. Réveils, sensations de chaleur, peut-être insomnies. Tu peux adapter ton environnement : chambre fraîche, vêtements légers, draps en matières naturelles. Et apprendre à ne pas dramatiser les nuits courtes — ton corps s'adapte progressivement." },
+      { label: "Identite Transition", detail: "Quelque chose en toi peut vivre cette transition comme une perte de féminité, ou comme une crainte de vieillir. Mais ta féminité ne dépend pas de tes hormones reproductrices. Elle est en toi, dans ta manière d'être au monde, dans ce que tu offres aux autres et à toi-même. Cette féminité-là continue, et même s'enrichit." },
+      { label: "Force Nouvelle", detail: "Beaucoup de femmes témoignent d'une force nouvelle après la ménopause. Une libération de la cyclicité contraignante. Une affirmation de soi qui devient plus naturelle. Une priorité donnée à ce qui compte vraiment. Ce que tu deviens vaut autant que ce que tu étais — et peut-être plus, à certains égards." },
+      { label: "Corps Qui Change", detail: "Ton corps change. C'est inévitable. Tu peux l'accompagner avec respect. Une activité physique adaptée, une alimentation qui te convient à cette saison, des soins de toi-même. Pas pour figer la jeunesse — pour habiter pleinement le corps que tu deviens." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux traverser cette transition en y trouvant ses propres bénéfices. Les inconforts seront mieux gérés. Les changements seront mieux acceptés. Et la femme que tu deviens trouvera sa propre forme de plénitude." }
       ],
     }],
   }],
@@ -3590,7 +4043,15 @@ const k_688: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients souffrant de dermatoses chroniques à composante psychosomatique : eczéma, psoriasis, urticaire chronique, prurit nerveux. Travail sur la régulation locale et la diminution du stress qui aggrave." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Apaisement local\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Ta peau te parle. Elle réagit, elle s'enflamme, elle démange, elle se desquame. Elle est ta plus grande surface d'expression, et chez toi, elle exprime quelque chose. Pas pour que tu te culpabilises — pour que tu lui répondes avec attention." },
+      { label: "Lien Stress Peau", detail: "Le stress et les émotions s'expriment souvent sur la peau. Ce n'est pas que tu sois plus sensible psychiquement — c'est que ta peau est ton terrain d'expression somatique. Apaiser le système intérieur soulage la peau, comme apaiser la peau soulage le système intérieur." },
+      { label: "Zone Atteinte", detail: "Choisis une zone de ta peau qui est particulièrement atteinte. Sens-la. Sa température, sa texture, ce qu'elle ressent en ce moment. Sans jugement. Juste accueil de ce qui est." },
+      { label: "Imagerie Apaisement", detail: "À cette zone, tu peux proposer un apaisement. Imagine qu'une fraîcheur douce s'y installe. Comme un baume qui pénètre. Les démangeaisons, si elles sont là, peuvent diminuer. La rougeur peut s'atténuer. La peau peut commencer à se calmer." },
+      { label: "Grattage", detail: "Si tu te grattes, tu connais ce cercle : ça démange, tu te grattes, ça soulage un instant, et ça démange plus après. Tu peux sortir de ce cercle. Quand la démangeaison arrive, plutôt que de gratter, tu poses la main sur la zone, tu prends une respiration profonde, tu lui envoies l'apaisement imagé. La démangeaison met plus de temps à reprendre ainsi." },
+      { label: "Dialogue Peau", detail: "Ta peau peut être écoutée. Tu peux lui demander, intérieurement : qu'essaies-tu de me dire ? Sans chercher de réponse immédiate. Parfois la réponse vient plus tard, ou ne vient pas en mots. Mais le simple fait d'écouter modifie souvent l'expression." },
+      { label: "Observance", detail: "Tes traitements topiques et systémiques font leur travail. Tu peux les soutenir par cette régulation par la conscience, jamais les remplacer. Une peau qui reçoit ses soins ET de l'attention bienveillante guérit mieux." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux poser ta main sur les zones atteintes et envoyer ce message d'apaisement. À chaque application de tes soins, tu peux y mettre une qualité de présence. Et progressivement, ta peau retrouvera plus de confort." }
       ],
     }],
   }],
@@ -3629,7 +4090,15 @@ const k_689: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour constipation chronique fonctionnelle (sans cause organique). Travail sur la régulation du transit, la respiration abdominale, le moment des selles, le lâcher-prise digestif." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Routine matinale\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu as un transit lent. Cela t'oblige à des stratégies, parfois à des laxatifs, et te procure des inconforts récurrents. Souvent, la constipation chronique fonctionnelle a plusieurs causes qui se cumulent : alimentation, hydratation, stress, sédentarité, mais aussi habitudes de retenue." },
+      { label: "Imagerie Peristaltisme", detail: "Imagine ton intestin. Ces longs tuyaux qui se contractent en vagues pour faire avancer leur contenu. Ce mouvement, c'est le péristaltisme. Chez toi, il s'est ralenti. Tu peux l'imaginer reprendre son rythme : des contractions douces, régulières, qui progressent du haut vers le bas." },
+      { label: "Respiration Abdominale", detail: "Ta respiration peut stimuler tes intestins. Une respiration abdominale ample, où ton ventre se gonfle et se dégonfle franchement, masse intérieurement tes viscères et stimule leur travail. Plusieurs cycles de cette respiration, plusieurs fois par jour, soutiennent le transit." },
+      { label: "Moment Dedie", detail: "Tu peux choisir un moment dans la journée — typiquement le matin après le petit-déjeuner — pour t'asseoir aux toilettes, sans pression, sans précipitation. 5 à 10 minutes. Pas en lisant ton téléphone — en présence. Ton corps apprend ce rythme." },
+      { label: "Lacher Prise", detail: "La constipation a souvent une dimension de retenue. Beaucoup de patients constipés serrent inconsciemment au mauvais moment. Apprendre à relâcher, à laisser passer, à ne pas contrôler, est une partie du travail. Ce relâchement n'est pas seulement physique — il est aussi mental." },
+      { label: "Alimentation Hydratation", detail: "Pour soutenir ton transit, ton corps a besoin de fibres (légumes, fruits, légumineuses, céréales complètes) et d'eau (1,5 litre minimum par jour). Ces éléments donnent à tes selles le volume et la consistance qui facilitent leur progression." },
+      { label: "Mouvement", detail: "L'activité physique est un stimulant majeur du transit. La marche, surtout, suffit. 30 minutes par jour, et ton intestin reçoit le message de bouger." },
+      { label: "Post Hypnotique", detail: "À partir de demain matin, ta routine s'installe : un grand verre d'eau au lever, le petit-déjeuner avec fibres, le moment dédié aux toilettes en présence, la respiration abdominale plusieurs fois dans la journée. Avec la régularité, ton transit retrouve son rythme propre, sans dépendre de laxatifs." }
       ],
     }],
   }],
@@ -3668,7 +4137,15 @@ const k_690: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour tics fonctionnels (hors syndrome de Tourette) et tremblements fonctionnels validés. Travail sur la régulation neuromusculaire, le désinvestissement attentionnel, l'apaisement du système." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Ancre de stabilité\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Ton corps fait des mouvements que tu ne commandes pas. Cela t'épuise, te gêne en société, t'oblige à expliquer ou à cacher. Plus tu te concentres pour les supprimer, souvent plus ils s'aggravent. Aujourd'hui, nous allons aborder cela autrement." },
+      { label: "Paradoxe", detail: "Le réflexe naturel est de lutter contre le mouvement. Or cette lutte demande une vigilance qui maintient le système activé. Le paradoxe : moins tu surveilles le mouvement, moins il a tendance à se manifester. C'est en cessant de combattre que tu apaises le système." },
+      { label: "Decrispation Ciblee", detail: "Pose ton attention sur la zone où le mouvement se manifeste. Sans chercher à l'empêcher. Juste sentir. Tu remarques peut-être que toute la zone est tendue en permanence, comme prête à exécuter ou à empêcher. Cette tension en arrière-plan participe au phénomène." },
+      { label: "Relachement General", detail: "Propose à cette zone de se relâcher. Pas en lui demandant de ne plus bouger — en lui permettant de se détendre tout court. Une zone vraiment détendue ne tremble pas et ne tique pas. C'est la tension de fond qui soutient le mouvement." },
+      { label: "Imagerie Stabilite", detail: "Imagine maintenant cette partie de ton corps dans un état de calme. Posée, immobile sans effort, comme une eau tranquille. Ce n'est pas un effort de retenue — c'est un état naturel d'apaisement. Ton système nerveux apprend à reconnaître cet état comme possible." },
+      { label: "Desinvestissement", detail: "Quand un mouvement involontaire se présente, tu peux ne pas y prêter attention. Le laisser passer, comme on laisse passer un bruit. Si tu ne réagis pas avec tension ou frustration, le mouvement perd de sa force." },
+      { label: "Systeme Apaise", detail: "Ton système nerveux global peut s'apaiser. Plus tu pratiques la détente — pas seulement de la zone, mais de tout ton corps — plus le seuil de déclenchement s'élève. Les facteurs qui te faisaient tiquer ou trembler ont besoin d'être plus intenses pour avoir un effet." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux pratiquer ce relâchement de la zone et ce désinvestissement attentionnel. En quelques semaines, la fréquence diminue chez la plupart des patients. Et même quand le mouvement reste, ton vécu en est transformé." }
       ],
     }],
   }],
@@ -3707,7 +4184,15 @@ const k_691: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour transpiration excessive fonctionnelle (mains, aisselles, visage) liée au stress ou idiopathique. Travail sur la régulation du système sympathique, désamorçage du cycle anxiété-transpiration." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Préparation imaginaire situations à risque\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Ton corps transpire beaucoup, parfois sans rapport avec la chaleur ou l'effort. Cela te limite : tu évites les poignées de main, tu choisis tes vêtements en fonction, tu redoutes certaines situations. Et l'anticipation elle-même déclenche la transpiration." },
+      { label: "Cercle Cause", detail: "Voici ce qui se passe : ton système sympathique est hyper-réactif. Une situation perçue comme à risque déclenche une transpiration. Cette transpiration t'angoisse, ce qui amplifie la réponse sympathique, qui amplifie la transpiration. C'est un cercle." },
+      { label: "Souffle Regulateur", detail: "Ta respiration calme directement ton système sympathique. Une expiration longue, prolongée, active le système parasympathique qui contrebalance. Pratique cette respiration plusieurs fois par jour, particulièrement avant les situations où tu redoutes de transpirer." },
+      { label: "Imagerie Fraicheur Seche", detail: "Imagine maintenant tes zones qui transpirent — mains, aisselles, visage. Imagine qu'une fraîcheur sèche s'y installe. Pas glaciale — agréablement fraîche. Et sèche. Tes glandes sudoripares peuvent se réguler à un niveau juste, suffisant pour la régulation thermique normale, sans excès." },
+      { label: "Desamorcage Anticipation", detail: "L'anticipation déclenche souvent la transpiration avant même la situation. Tu peux apprendre à interrompre cette anticipation. Quand tu sens venir une situation à risque, ton dispositif s'active : trois respirations longues, image de fraîcheur sèche, geste-ancre du calme. Tu arrives dans la situation avec un système moins activé." },
+      { label: "Recadrage Sociaux", detail: "Une part importante du problème est le regard que tu portes sur le fait de transpirer. Tu crains que les autres remarquent, jugent. La plupart du temps, les autres ne remarquent pas autant que tu le crois. Et même s'ils remarquent, cela ne dit pas grand-chose de toi." },
+      { label: "Situations Progressives", detail: "Pour les situations qui t'angoissent — entretien, présentation, rendez-vous — tu peux te préparer en amont. Quelques minutes d'auto-hypnose juste avant, ton dispositif activé en arrivant. Avec la pratique, tu remarqueras que ta transpiration dans ces situations diminue." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, tu pratiques. Ta respiration régulatrice. Ton imagerie de fraîcheur sèche. Ton geste-ancre. Et particulièrement avant les situations à enjeu. Ton système apprend une nouvelle régulation." }
       ],
     }],
   }],
@@ -3746,7 +4231,15 @@ const k_692: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients ressentant une boule dans la gorge ou difficultés de déglutition fonctionnelles, sans cause organique. Travail sur la décrispation pharyngée, le souffle, l'expression de l'avalé." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Travail expressif si pertinent\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu sens cette boule dans ta gorge. Un serrement permanent ou intermittent. Parfois la déglutition est gênée. Les examens médicaux ne montrent rien. Et pourtant, c'est bien réel, ce que tu ressens." },
+      { label: "Validation", detail: "Cette sensation est connue, fréquente, et porte un nom : globus pharyngis. Elle correspond à une crispation de la zone du cou et de la gorge, souvent liée à des tensions intérieures qui s'expriment là. Tu n'inventes rien." },
+      { label: "Decrispation Zone", detail: "Porte ton attention sur ta gorge, ton cou. Sens cette zone. Les muscles pharyngés, qui s'étendent du fond de ta bouche jusqu'au haut de ta poitrine. Cette zone est tendue depuis longtemps. Elle peut commencer à se relâcher." },
+      { label: "Souffle Qui Passe", detail: "Imagine maintenant que ton souffle traverse cette zone librement. À l'inspiration, l'air descend sans rencontrer d'obstacle. À l'expiration, il remonte de la même manière. La zone est ouverte, accueillante, libre." },
+      { label: "Image Passage", detail: "Imagine ta gorge comme un passage. Il était partiellement obstrué. Aujourd'hui, il s'ouvre. Quelque chose qui était comprimé peut respirer à nouveau. Cette ouverture imaginaire signale au corps qu'il peut relâcher la crispation réelle." },
+      { label: "Avalé Questionne", detail: "Cette zone — la gorge — est aussi celle où passent les mots et où s'avale ce qu'on n'a pas dit. Quelque chose en toi a peut-être avalé ce qui aurait dû être exprimé. Cette boule est peut-être là pour te le rappeler. Tu peux te demander, intérieurement : qu'est-ce que je n'ai pas pu dire ? Qu'est-ce qui reste coincé ?" },
+      { label: "Expression Imagee", detail: "Sans même formuler de réponse précise, tu peux donner permission à ce qui est resté coincé de circuler. Pas forcément vers la parole — vers le passage. La boule peut commencer à se dissoudre, à s'amincir, à disparaître progressivement." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux poser une main sur ta gorge avec bienveillance, et envoyer ce message d'ouverture, de passage, de libération. Si des paroles non dites te reviennent, tu peux les écrire, les dire à quelqu'un de confiance, ou les exprimer d'une manière qui te convient. La zone se libère à mesure que ce qui y était coincé trouve sa voie." }
       ],
     }],
   }],
@@ -3785,7 +4278,15 @@ const k_693: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients atteints de la maladie de Ménière, en complément du suivi ORL. Travail entre les crises pour réduire l'anxiété anticipatoire, soutenir la fonction vestibulaire, gérer les acouphènes associés." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Dispositif pour début de crise\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une maladie qui peut, à tout moment, déclencher des crises violentes : vertige rotatoire, nausées, acouphènes, sensation d'oreille bouchée. Cette imprévisibilité te pèse autant que les crises elles-mêmes. Tu vis dans l'attente." },
+      { label: "Intercrise Precieuse", detail: "La période entre les crises est précieuse. C'est elle que nous allons travailler. Pas pour empêcher les crises — la médecine s'en occupe. Pour vivre pleinement les périodes calmes, sans qu'elles soient empoisonnées par l'anticipation." },
+      { label: "Apaisement Oreille", detail: "Imagine ton oreille interne, profonde, là où s'accumule parfois trop de liquide. Tu peux lui envoyer un message d'apaisement. Que la régulation des liquides se fasse à un niveau juste. Que la pression reste équilibrée. Cette intention soutient le travail de ton corps." },
+      { label: "Anti Anticipation", detail: "L'anticipation chronique de la crise t'épuise et amplifie ton hypervigilance. Tu peux choisir de vivre le présent quand le présent est calme. Si tu as deux semaines sans crise, ces deux semaines comptent — n'en gâche pas la moitié à attendre la prochaine." },
+      { label: "Au Debut De Crise", detail: "Quand les premiers signes d'une crise arrivent — sensation d'oreille qui se bouche, acouphène qui change, légère sensation de déséquilibre — ton dispositif s'active. Tu t'allonges si possible, dans un endroit calme. Tu prends ton traitement de crise. Tu utilises ta respiration apaisante. Ton lieu sûr est accessible. La crise passera, comme elles passent toutes." },
+      { label: "Acouphenes", detail: "Les acouphènes qui accompagnent ta maladie peuvent être travaillés avec les techniques apprises pour les acouphènes en général : modification, désinvestissement, présence à autre chose." },
+      { label: "Qualite De Vie", detail: "Vivre avec Ménière, c'est aménager. Connaître ses déclencheurs (sel, stress, fatigue, certains aliments) et les éviter quand on peut. Avoir un plan en cas de crise. Et ne pas laisser la maladie occuper toute la place quand elle est silencieuse." },
+      { label: "Post Hypnotique", detail: "Tu emportes avec toi cette confiance dans les périodes calmes, ce dispositif pour le début de crise, et la capacité à vivre pleinement entre les épisodes. Ton corps continue son travail de régulation, et tu l'accompagnes du mieux possible." }
       ],
     }],
   }],
@@ -3824,7 +4325,15 @@ const k_694: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour acouphènes apparus suite à un traumatisme sonore récent (concert, explosion). Intervention précoce pour éviter la chronicisation, en complément du traitement ORL." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Suggestions de réparation\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu as développé récemment ce bruit dans l'oreille suite à une exposition sonore intense. Tu redoutes qu'il s'installe pour toujours. Cette inquiétude est légitime, et c'est précisément le moment où l'intervention peut le plus aider." },
+      { label: "Fenêtre Thérapeutique", detail: "Les premiers mois après l'apparition d'un acouphène sont une fenêtre thérapeutique précieuse. Ce qui peut chroniciser dans cette période, c'est moins l'acouphène lui-même que la spirale d'inquiétude et d'attention qui peut s'installer autour de lui. Aujourd'hui, nous coupons cette spirale avant qu'elle ne s'installe." },
+      { label: "Systeme Traumatise", detail: "Ton oreille interne a subi un choc. Comme une peau qui a été agressée, elle peut récupérer en partie ou totalement, selon l'ampleur du traumatisme et les conditions de récupération. Lui donner du calme, du silence, du repos, c'est lui donner les meilleures conditions." },
+      { label: "Imagerie Reparation", detail: "Imagine maintenant ton système auditif. Les cellules ciliées dans ta cochlée. Imagine qu'elles peuvent se réparer là où c'est possible, et que les zones intactes prennent le relais quand c'est nécessaire. Tu peux envoyer ce message de réparation à ton oreille interne." },
+      { label: "Pas De Silence", detail: "Évite paradoxalement le silence absolu, qui amplifie l'acouphène. Donne à ton cerveau d'autres sons à traiter : musique douce, sons naturels, bruit blanc léger. Cette enrichissement auditif aide ton cerveau à ne pas se focaliser sur l'acouphène." },
+      { label: "Anti Attention", detail: "Au lieu de surveiller en permanence si l'acouphène est là, tu peux délibérément orienter ton attention ailleurs. Dans tes activités, dans tes conversations, dans les sons extérieurs. Le moins tu lui prêtes attention, le moins il prend de force." },
+      { label: "Pas De Dramatisation", detail: "Beaucoup d'acouphènes post-traumatiques s'estompent ou disparaissent dans les semaines à mois qui suivent. Garder espoir n'est pas illusoire. Et même si l'acouphène persiste partiellement, il s'intègre généralement à ton bruit de fond avec le temps, sans devenir invalidant." },
+      { label: "Post Hypnotique", detail: "Pendant les semaines qui viennent, ton dispositif est en place : enrichissement sonore doux, désinvestissement attentionnel, imagerie de réparation, pas de dramatisation. Et ton oreille fait son travail de réparation autant qu'elle le peut. Le plus tôt tu installes ce dispositif, le mieux tu protèges ton avenir auditif." }
       ],
     }],
   }],
@@ -3863,7 +4372,15 @@ const k_695: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Soutien à la rééducation orthoptique chez l'enfant ou l'adulte, ou pour fatigue visuelle chronique liée au stress. Travail de détente oculaire, conscience visuelle, soutien à l'orthoptie." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-002 (fixation visuelle, paradoxalement adaptée)\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Apprentissage micro-pauses\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tes yeux te font travailler dur, ou tu sens qu'ils sont fatigués en permanence. Écrans, lecture, vie urbaine — ils sont sollicités sans cesse. Et beaucoup de patients ne savent pas que leurs yeux ont besoin de repos comme tout le reste du corps." },
+      { label: "Muscles Oculaires", detail: "Tes yeux sont mus par six petits muscles chacun. Ces muscles travaillent en permanence pour faire converger ton regard, pour suivre des objets, pour faire la mise au point. Quand ils sont en tension chronique, ils fatiguent et peuvent provoquer des troubles." },
+      { label: "Relaxation Oculaire", detail: "Maintenant, paupières fermées, sens tes yeux. Pas de regard à diriger. Juste la sensation de tes globes oculaires posés dans leurs orbites. Sens-les se reposer, se déposer dans leur logement. Les muscles autour peuvent se détendre." },
+      { label: "Palming", detail: "Tu peux pratiquer ce qu'on appelle le palming : poser doucement les paumes des mains sur les yeux fermés, sans appuyer. Cette obscurité chaude reposante donne aux yeux un vrai répit, plus profond qu'une simple fermeture." },
+      { label: "Regard Lointain", detail: "Quand tu travailles sur écran, toutes les 20 minutes, regarde au loin pendant 20 secondes. C'est la règle des 20-20. Cela permet à ton accommodation de se relâcher. Tes yeux sont conçus pour alterner regard proche et regard lointain — pas pour rester fixés à 50 cm pendant 8 heures." },
+      { label: "Imagerie Lointaine", detail: "Imagine maintenant que tu regardes au loin. Vraiment loin. Un horizon. Une montagne. Le ciel. Ce regard lointain, même imaginé, détend les muscles d'accommodation. Tu peux faire cela mentalement plusieurs fois par jour." },
+      { label: "Clignements", detail: "Le clignement des paupières lubrifie les yeux. Devant les écrans, on cligne 5 à 10 fois moins. Réapprends à cligner régulièrement, particulièrement quand tu es concentré. Cette simple habitude prévient beaucoup de troubles." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour : règle des 20-20, palming bref, clignements conscients. Ces pratiques simples, accumulées, transforment la santé de tes yeux." }
       ],
     }],
   }],
@@ -3902,7 +4419,15 @@ const k_696: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour personnes bégayant, en complément de la rééducation orthophonique. Travail sur la décrispation pharyngée, la confiance, le rapport à la parole, la diminution de l'anxiété de prise de parole." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Préparation de prise de parole\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec ce trouble de la fluence. Certains mots, certaines situations, certains interlocuteurs déclenchent l'accroc. Et l'anticipation elle-même devient un déclencheur. Tu fais un travail orthophonique. Aujourd'hui, nous ajoutons une dimension : la confiance et la décrispation." },
+      { label: "Decrispation Zone", detail: "Le bégaiement implique souvent une crispation de la zone laryngée et pharyngée. Sens cette zone. Ta gorge, le fond de ta bouche, la base de ta langue. Cette zone peut apprendre à se détendre, particulièrement avant et pendant la parole." },
+      { label: "Souffle Porte La Voix", detail: "Ta voix repose sur ton souffle. Une voix portée par un souffle ample est plus fluide qu'une voix qui doit se débrouiller avec un souffle court. Pratique la respiration abdominale ample, et particulièrement avant les moments de parole importants." },
+      { label: "Recadrage Parole", detail: "Ta parole, même quand elle bégaie, te porte. Elle dit ce que tu as à dire. Elle existe. Le bégaiement n'enlève pas la valeur de ce que tu dis. Il rend juste son chemin plus complexe. Mais le contenu, lui, vaut autant que celui d'un autre." },
+      { label: "Anti Anticipation", detail: "L'anticipation des mots difficiles ou des situations difficiles amplifie souvent le bégaiement. Tu peux apprendre à faire confiance à ta parole au moment de la dire, sans préanticiper l'accroc. Quelques respirations avant, et entrer dans la parole en présence plutôt qu'en surveillance." },
+      { label: "Acceptation", detail: "Quand un blocage survient, plus tu luttes contre, plus il s'amplifie. Une autre approche : accueillir l'accroc, le laisser être, prendre une respiration, et continuer. Cette acceptation diminue paradoxalement la fréquence et la durée des blocages." },
+      { label: "Situations Progressives", detail: "Tu peux travailler en imagination des situations de prise de parole. Te voir parler en confiance, avec des accrocs assumés, avec un message qui passe. Cette répétition imaginaire prépare l'expérience réelle." },
+      { label: "Post Hypnotique", detail: "Avant tes moments de parole, tu peux activer ton dispositif : respiration ample, décrispation de la gorge, confiance dans ta voix, acceptation des accrocs s'ils viennent. En complément de ton travail orthophonique, ces ressources soutiennent ton parcours." }
       ],
     }],
   }],
@@ -3941,7 +4466,14 @@ const k_697: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour enfants énurétiques (au-delà de l'âge habituel de propreté nocturne, généralement après 6-7 ans). Soutien hypnotique à la maturation du contrôle vésical nocturne, en complément du suivi pédiatrique." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Accueil enfant + parent (parent peut sortir si l'enfant accepte)\n• Phase 2 — Induction adaptée enfant\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Amorce Enfant", detail: "Tu fais pipi au lit la nuit. Ce n'est pas de ta faute, ce n'est pas que tu fais exprès. C'est juste que ton corps n'a pas encore tout à fait appris à te réveiller quand ta vessie est pleine. On va aider ton corps à apprendre." },
+      { label: "Explication Simple", detail: "Ta vessie, c'est comme un petit ballon dans ton ventre qui se remplit pendant la nuit. Quand il est plein, il doit envoyer un message à ton cerveau. Et ton cerveau doit te réveiller pour que tu ailles aux toilettes. Chez certains enfants, ce système prend un peu plus de temps à se mettre en place. Ce n'est pas grave, ça va venir." },
+      { label: "Messager Imagine", detail: "Imagine qu'à l'intérieur de toi, il y a un petit messager. Son travail, c'est de surveiller ta vessie pendant que tu dors. Quand elle est presque pleine, il doit aller frapper à la porte de ton cerveau et dire : il faut se réveiller, c'est l'heure d'aller aux toilettes ! Ce messager existe déjà en toi. Il a juste besoin d'un peu d'entraînement." },
+      { label: "Communication", detail: "Tu peux parler à ce messager. Lui dire : c'est important pour moi, j'ai besoin de toi. Quand tu sens ma vessie qui se remplit, n'hésite pas à me réveiller, même si je dors profondément. Je préfère me lever pour faire pipi que d'avoir un lit mouillé." },
+      { label: "Routine Soir", detail: "Le soir avant de dormir, tu peux faire trois choses. Premièrement, aller aux toilettes juste avant le lit, vraiment vider ta vessie. Deuxièmement, parler à ton messager intérieur, lui rappeler son rôle. Troisièmement, te dire que ce soir tu vas peut-être te réveiller, et que c'est très bien si ça arrive." },
+      { label: "Progression", detail: "Au début, ce sera peut-être difficile. Parfois ça marchera, parfois pas. C'est normal. Ton corps apprend à son rythme. Chaque nuit où tu te réveilles à temps, ton corps comprend mieux. Petit à petit, ce sera de plus en plus facile." },
+      { label: "Aux Parents", detail: "[Parents] Important : pas de punition, pas de moquerie, pas de drame. L'enfant ne le fait pas exprès. Plutôt encourager les nuits réussies, et minimiser les autres. Une protection imperméable du matelas évite le stress logistique. La patience est le meilleur allié." }
       ],
     }],
   }],
@@ -3980,7 +4512,15 @@ const k_698: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour cystite interstitielle, syndrome douloureux vésical, vessie hyperactive avec composante fonctionnelle. Travail d'apaisement vésical, gestion de l'urgence mictionnelle, désinvestissement attentionnel." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Dispositif gestion urgence\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Ta vessie te fait souffrir. Pas une infection — quelque chose de plus profond, dans la paroi vésicale elle-même. Brûlures, sensation de plénitude permanente, urgences fréquentes. Aujourd'hui, nous travaillons à apaiser cette zone qui est devenue hypersensible." },
+      { label: "Paroi Vesicale", detail: "Imagine ta vessie. Cette poche musculaire dans ton bas-ventre. Sa paroi, normalement souple et accueillante, est devenue hyper-sensible. Tu peux lui envoyer un message d'apaisement. Imaginer qu'une fraîcheur douce s'installe dans cette paroi. Que les terminaisons nerveuses qui sur-réagissent peuvent calmer leur signalisation." },
+      { label: "Remplissage", detail: "Ta vessie a besoin de pouvoir se remplir tranquillement avant de signaler. Chez toi, elle signale trop tôt — comme si elle disait pleine à 50% au lieu de 80%. Tu peux entraîner ton inconscient à modifier cette signalisation, à laisser la vessie se remplir un peu plus avant l'alerte." },
+      { label: "Urgence Geree", detail: "Quand l'urgence mictionnelle arrive, plutôt que de courir, tu peux faire trois respirations longues, contracter brièvement le périnée plusieurs fois, et l'urgence diminue souvent. Le besoin reste, mais devient maîtrisable. Cette technique reapprend à ta vessie qu'elle peut attendre." },
+      { label: "Bassin Detendu", detail: "Tout le bassin peut se détendre. Souvent, dans ces troubles, les muscles pelviens sont en tension chronique, ce qui aggrave les symptômes. Détends consciemment le périnée, l'intérieur du bassin. Cette détente soulage la pression sur la vessie." },
+      { label: "Desinvestissement", detail: "Tu surveilles peut-être ta vessie en permanence. Cette surveillance amplifie chaque signal. Tu peux apprendre à porter ton attention ailleurs, à ne réagir qu'aux signaux vraiment forts, à oublier ta vessie pendant des plages de la journée." },
+      { label: "Facteurs Aggravants", detail: "Certains aliments aggravent : café, alcool, agrumes, épices, aliments acides. Identifier les tiens permet d'éviter ce qui te coûte. La gestion alimentaire est importante dans ces troubles." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux poser ta main sur ton bas-ventre, envoyer le message d'apaisement à ta vessie et au bassin, pratiquer la détente pelvienne. Avec la pratique régulière sur plusieurs mois, beaucoup de patients constatent une amélioration significative." }
       ],
     }],
   }],
@@ -4019,7 +4559,16 @@ const k_699: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Protocole d'installation d'une hypoanesthésie par catalepsie de la main et transfert de fraîcheur dissociative. Pour soins, examens, petites interventions sans anesthésie locale possible. Inspiré des techniques classiques (Bishay & Lee 1984)." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Approfondissement K-BASE-007\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Maintien pendant la procédure\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Invitation Main", detail: "Lève doucement ta main droite à environ trente centimètres de ton corps. Maintenant, ta main reste en l'air. Mais pas par tension musculaire — par une autre qualité. Comme si elle flottait, soutenue par quelque chose d'invisible." },
+      { label: "Catalepsie", detail: "Tu peux remarquer que ta main, qui devrait être lourde et tomber, ne tombe pas. Quelque chose la maintient. Ce quelque chose, c'est ton inconscient qui a accepté de la tenir. Tu peux la laisser ainsi, sans effort, sans tension." },
+      { label: "Fraicheur Dans Main", detail: "Pendant que ta main est ainsi tenue, quelque chose va se produire en elle. Tu peux commencer à sentir une fraîcheur. Comme si elle était plongée dans une eau fraîche, ou dans un courant d'air froid. Cette fraîcheur s'installe progressivement. La main devient plus fraîche que le reste de ton corps." },
+      { label: "Amplification", detail: "Cette fraîcheur s'intensifie. Pas désagréable — saisissante. Comme une glace douce qui pénétrerait la peau. La main est si fraîche maintenant qu'elle commence à être un peu engourdie. Comme quand on revient d'une longue marche dans le froid. Une zone qui ressent autrement." },
+      { label: "Transfert", detail: "Maintenant, tu vas pouvoir transférer cette fraîcheur. Tu vas poser ta main fraîche sur la zone qui doit être préparée pour le soin. La fraîcheur va se transférer de ta main vers cette zone. Comme si la main donnait sa fraîcheur à la peau qu'elle touche." },
+      { label: "Installation Zone", detail: "Sens la fraîcheur passer de ta main à cette zone. La zone elle-même devient fraîche. Engourdie. La sensibilité y diminue. Pas complètement supprimée — fortement atténuée. Comme une anesthésie locale qui s'installe doucement." },
+      { label: "Consolidation", detail: "Cette zone reste fraîche et engourdie pendant tout le temps nécessaire au soin. Ta main peut redescendre normalement maintenant — la fraîcheur est restée dans la zone à traiter. Pendant le soin, tu remarqueras que cette zone répond différemment. La sensation est atténuée." },
+      { label: "Pendant Soin", detail: "Tu peux maintenant recevoir le soin. Tu restes en transe légère, ta respiration calme, ton attention sur ton lieu sûr. La zone traitée est protégée par la fraîcheur que tu as installée. Cela va se passer plus tranquillement que tu ne le pensais." },
+      { label: "Apres Soin", detail: "Quand le soin est terminé, la sensation reviendra progressivement à la zone — comme une anesthésie locale qui se dissipe. Tu retrouveras ta sensibilité normale, en ayant traversé le soin avec beaucoup plus de confort que sans cet outil." }
       ],
     }],
   }],
@@ -4058,7 +4607,15 @@ const k_700: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients avec tachycardie disproportionnée à l'effort (sans pathologie cardiaque), souvent lié à un déconditionnement et à l'anxiété de l'effort. Travail de restauration progressive et apaisement." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Imagerie d'effort confortable\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Quand tu fais un effort, ton cœur s'emballe plus que la normale. Cela t'inquiète, et cette inquiétude amplifie l'emballement. Tu te retrouves à éviter l'effort, ce qui aggrave le déconditionnement, ce qui aggrave la tachycardie au prochain effort." },
+      { label: "Validation Cardio", detail: "Premier rappel : tes examens cardiaques sont rassurants. Ton cœur est sain. Sa réponse exagérée à l'effort est fonctionnelle, pas pathologique. C'est un système qui s'est désentraîné, pas un cœur défaillant." },
+      { label: "Reentrainement", detail: "Le seul vrai remède est le réentraînement progressif. Cela peut faire peur — comment s'entraîner quand l'effort fait s'emballer le cœur ? La réponse : très progressivement. Commencer en dessous du seuil qui déclenche la peur, et avancer pas à pas." },
+      { label: "Imagerie Coeur", detail: "Imagine maintenant ton cœur. Pas avec inquiétude — avec respect. Ce muscle qui ne s'arrête jamais. Imagine-le qui pompe efficacement, à un rythme adapté à chaque effort. Pas surréactif — juste répondant à ce qu'on lui demande." },
+      { label: "Reentrainement Imagine", detail: "Imagine maintenant que tu fais un effort modéré : marche rapide, escalier, sport doux. Ton cœur accélère, normalement. Ta respiration s'amplifie. Et cela ne déclenche pas d'angoisse — c'est juste ton corps qui travaille comme il est conçu pour le faire. Tu sens cette qualité d'effort, sans excès." },
+      { label: "Anti Panique Effort", detail: "Si pendant un effort réel ton cœur s'emballe et que la peur monte, tu peux faire trois choses. Un, ralentir sans arrêter brutalement. Deux, prendre quelques respirations plus profondes. Trois, te dire : c'est mon cœur qui fait son travail, je suis en sécurité, je vais reprendre tranquillement. La peur s'apaise, le cœur aussi." },
+      { label: "Progression", detail: "Chaque semaine, tu peux augmenter légèrement l'effort. Quelques minutes de plus, un peu plus d'intensité. Ton cœur s'adapte. Au bout de quelques semaines à mois, sa réponse devient plus efficace. Plus tu t'entraînes, moins ton cœur a besoin d'accélérer pour la même intensité." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux reprendre une activité physique progressive. Avec ton dispositif d'apaisement en cas d'emballement. Et ton cœur va te surprendre par sa capacité d'adaptation, à mesure que tu lui donneras la chance de s'entraîner." }
       ],
     }],
   }],
@@ -4097,7 +4654,15 @@ const k_701: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Protocole spécifique pour syndrome du côlon irritable. L'hypnose est l'une des thérapies les plus validées scientifiquement pour le SII. Travail intensif sur l'axe cerveau-intestin, en plusieurs séances." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Suggestions personnalisées selon symptôme dominant\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec un syndrome du côlon irritable. Crampes, ballonnements, alternance diarrhée-constipation, douleurs liées aux repas ou au stress. Cette pathologie n'est pas dangereuse pour ta vie, mais elle dégrade ta qualité de vie. L'hypnose est l'une des approches les plus efficaces pour le SII, validée par de nombreuses études." },
+      { label: "Axe Cerveau Intestin", detail: "Le SII est une pathologie de l'axe cerveau-intestin. Les nerfs qui relient ton cerveau à ton ventre sont en surcommunication. Ce qui se passe dans ton ventre alarme ton cerveau plus qu'il ne devrait. Et ce qui se passe dans ton cerveau perturbe ton ventre. Nous travaillons à apaiser cet axe." },
+      { label: "Intestin Tranquille", detail: "Imagine ton intestin. Ce long tube qui descend de l'estomac, fait son chemin, jusqu'à la sortie. Imagine-le tranquille. La motilité — les contractions qui font avancer le contenu — se fait à un rythme régulier, adapté. Ni trop lente, ni trop rapide. Ni en spasmes, ni en stagnation." },
+      { label: "Paroi Apaisee", detail: "La paroi de ton intestin, qui est devenue hypersensible chez toi, peut s'apaiser. Imagine qu'une fraîcheur douce s'installe dans cette paroi. Les terminaisons nerveuses qui sur-réagissent peuvent calmer leur signalisation. Tu n'as plus à percevoir avec autant d'intensité ce qui se passe normalement dans ton intestin." },
+      { label: "Motilité", detail: "Si tu as plutôt une diarrhée, tu peux imaginer que la motilité ralentit légèrement, que les contractions se font moins vives. Si tu as plutôt une constipation, tu peux imaginer que la motilité reprend de la régularité, que les contractions deviennent plus efficaces. Ton inconscient adapte selon ton symptôme principal." },
+      { label: "Aliments", detail: "Pour soutenir ce travail, ton alimentation. Le régime FODMAP, qui limite certains sucres fermentescibles, aide beaucoup de patients. Une diététicienne formée peut t'accompagner. Et apprendre à manger lentement, en présence, est essentiel — l'estomac et l'intestin reçoivent mieux ce qui leur arrive en conscience." },
+      { label: "Stress Intestin", detail: "Le stress chronique aggrave le SII de manière mesurable. Apaiser ton stress de fond, plusieurs fois par jour, est un acte direct de soin pour ton intestin. La cohérence cardiaque, la respiration apaisante, ton lieu sûr — autant d'outils qui agissent sur ton ventre." },
+      { label: "Post Hypnotique", detail: "Ce protocole se poursuivra sur plusieurs séances. Entre les séances, tu écoutes peut-être une cassette personnalisée que je te donnerai, qui consolide ce travail. Avec la régularité, ton intestin retrouve une régulation plus tranquille. Les études montrent une amélioration durable chez la majorité des patients." }
       ],
     }],
   }],
@@ -4136,7 +4701,15 @@ const k_702: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour verrues persistantes après échecs des traitements classiques. L'hypnose dispose d'une littérature ancienne et solide sur cette indication particulière. Travail spécifique sur le système immunitaire local." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Suggestions de disparition\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu portes des verrues qui résistent aux traitements habituels. Dans la littérature de l'hypnose, c'est l'une des indications les plus surprenantes et les plus documentées : les verrues répondent souvent à l'hypnose, parfois remarquablement bien. Pourquoi ? Parce que c'est ton système immunitaire qui les fait disparaître quand il s'y met, et ton inconscient peut l'y inviter." },
+      { label: "Systeme Immunitaire", detail: "Une verrue est causée par un virus. Ton système immunitaire est capable de la faire disparaître — c'est ce qui se passe naturellement chez la plupart des gens, à un moment ou à un autre. Pour une raison ou une autre, chez toi, sur cette verrue, ton système n'a pas encore donné l'ordre de l'éliminer. Aujourd'hui, nous lui transmettons cette consigne." },
+      { label: "Localisation", detail: "Porte ton attention sur ta verrue. Sa localisation précise. Sa taille, sa forme, sa couleur. Tu peux l'observer en imagination, sans aucune émotion négative. Juste prendre note." },
+      { label: "Dialogue Immunitaire", detail: "Tu peux maintenant t'adresser à ton système immunitaire. Lui dire intérieurement : nous avons cette verrue ici. Tu sais qu'elle est causée par un virus, et tu sais comment l'éliminer. Je te demande de te mobiliser sur cette zone. Active les cellules qu'il faut, envoie ce qu'il faut, fais ton travail." },
+      { label: "Imagerie Disparition", detail: "Imagine maintenant la verrue qui commence à se modifier. Sa couleur change peut-être — devient plus claire, ou plus foncée selon le mécanisme par lequel ton corps va la faire partir. Sa taille diminue. Sa texture s'amincit. Et progressivement, elle disparaît, laissant une peau saine." },
+      { label: "Visualisation Repetee", detail: "Cette image — la verrue qui disparaît — tu peux la refaire chaque jour. Cinq minutes par jour. Tu visualises la verrue qui se modifie, qui s'amincit, qui s'estompe, qui disparaît. Cette répétition imagée semble faciliter le travail réel du système immunitaire." },
+      { label: "Engagement", detail: "Ton corps va faire ce travail. Cela peut prendre quelques jours, quelques semaines, parfois plusieurs mois. Sois patient. Continue ta visualisation. La verrue se résorbera quand ton système aura fini son travail." },
+      { label: "Post Hypnotique", detail: "À partir de demain, tu pratiques chaque jour cinq minutes de visualisation. Tu fais aussi confiance à ton corps qui travaille en arrière-plan. Et tu observeras, jour après jour, l'évolution. Beaucoup de patients constatent un changement dans les semaines qui suivent." }
       ],
     }],
   }],
@@ -4175,7 +4748,16 @@ const k_703: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Préparation hypnotique à un examen d'IRM pour patients claustrophobes ou anxieux. Installation d'outils utilisables pendant l'examen pour rendre les 20-45 minutes traversables." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Lieu sûr K-BASE-011 si pas déjà installé\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Préparation imaginaire de l'examen\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu redoutes ton examen d'IRM. L'espace clos, le bruit, l'immobilité forcée. Et l'inquiétude de ce qu'on va trouver. Aujourd'hui, nous installons un dispositif qui te permettra de traverser l'examen avec beaucoup plus de confort." },
+      { label: "Lieu Sur Portable", detail: "Pendant l'examen, ton corps sera dans la machine, mais ton esprit n'est pas obligé de l'être. Tu peux apprendre à être dans ton lieu sûr pendant que ton corps reste tranquille dans la machine. Les 30 ou 45 minutes peuvent se passer principalement dans ton lieu intérieur." },
+      { label: "Espace Mental", detail: "L'espace de la machine est étroit. L'espace de ton lieu intérieur est aussi vaste que tu le veux. En te concentrant sur ton lieu, tu remplaces la perception de l'espace réel par celle de ton espace mental. Pratique cela maintenant : tu es dans la machine en imagination, et en même temps, tu es dans ton lieu sûr largement." },
+      { label: "Bruit De L Irm", detail: "L'IRM fait beaucoup de bruit, parfois fort. Ces bruits sont prévisibles. Tu peux les transformer en imagination : un battement régulier devient le rythme d'un tambour, ou les vagues d'un océan, ou une musique électronique. Au lieu de subir le bruit, tu lui donnes un sens." },
+      { label: "Immobilite", detail: "Tu dois rester immobile. Cette consigne peut paraître contraignante, mais en hypnose, l'immobilité devient naturelle, même confortable. Ton corps est posé, et tu n'as pas envie de bouger. C'est un repos réel." },
+      { label: "Temps Compresse", detail: "En transe, le temps devient très souple. Une demi-heure peut passer comme dix minutes. Tu peux te dire avant l'examen : ce sera plus court que ça en aura l'air. Et c'est souvent ce qui arrive vraiment." },
+      { label: "Signal Appel", detail: "Tu auras une poire d'appel dans la main. Si tu en as besoin, tu peux signaler aux techniciens. Cela te donne un sentiment de contrôle. Tu n'es jamais piégé." },
+      { label: "Simulation", detail: "Imagine maintenant le déroulement complet de ton examen. L'arrivée, l'installation, l'entrée dans la machine. Tu actives ton dispositif : trois respirations, lieu sûr, transformation des bruits, sensation de temps qui glisse. L'examen se passe. Tu en sors, surpris d'avoir traversé sans la difficulté que tu redoutais." },
+      { label: "Post Hypnotique", detail: "Le jour de l'examen, tu peux pratiquer ton dispositif quelques minutes avant d'entrer. Pendant l'examen, tu actives ton lieu sûr dès l'entrée dans la machine. Tu en sortiras en ayant vécu cela bien différemment de ce que tu craignais." }
       ],
     }],
   }],
@@ -4214,7 +4796,15 @@ const k_704: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Préparation à coloscopie pour patients anxieux ou ayant mal vécu un examen précédent. Travail sur la préparation digestive (la veille), la traversée de l'examen, le réveil." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Préparation du déroulement\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu te prépares à une coloscopie. Cet examen comporte deux phases difficiles : la préparation digestive la veille et le matin, et l'examen lui-même. Aujourd'hui, nous travaillons à rendre les deux plus traversables." },
+      { label: "Preparation Digestive", detail: "La préparation consiste à boire un produit qui vide tes intestins. Ce n'est pas une expérience plaisante. Mais tu peux la traverser autrement : en imaginant que ton intestin se nettoie en profondeur, comme un grand ménage utile. En buvant à un rythme régulier, sans précipitation. En restant dans un endroit confortable, près des toilettes mais aussi avec ce que tu aimes (livre, musique)." },
+      { label: "Pendant Examen", detail: "Pendant l'examen, ton corps est sur le côté. Tu seras peut-être sous sédation légère. Si oui, tu n'auras pas grand souvenir. Si tu choisis sans sédation, tu peux utiliser ton lieu sûr pendant tout l'examen. Ton attention est ailleurs pendant que ton corps reçoit l'examen." },
+      { label: "Air Inserre", detail: "Pendant la coloscopie, l'examinateur insuffle de l'air pour mieux voir. Cela peut donner une sensation de ballonnement. Tu peux te détendre l'abdomen, accepter cette sensation transitoire, savoir qu'elle passera dès la fin de l'examen." },
+      { label: "Signal", detail: "Si quelque chose te dérange trop, tu peux toujours signaler. Tu n'es pas piégé. Cette possibilité de signaler te donne le contrôle." },
+      { label: "Apres Examen", detail: "Après l'examen, tu auras peut-être un peu de gaz à évacuer. C'est normal. Tu te sentiras peut-être un peu fatigué. Tu pourras te reposer puis rentrer chez toi accompagné. Le résultat te sera communiqué." },
+      { label: "Recadrage", detail: "Cet examen est une bonne nouvelle, dans un sens. Il te permet de savoir ce qui se passe dans ton intestin. Beaucoup de patients sont rassurés après. Et même quand on découvre quelque chose, le découvrir tôt permet d'agir tôt." },
+      { label: "Post Hypnotique", detail: "La veille de l'examen, pendant la préparation digestive, tu peux activer ton dispositif d'apaisement. Le matin, en arrivant, tu actives ton lieu sûr et ta confiance dans l'équipe. L'examen se déroulera. Tu en sortiras." }
       ],
     }],
   }],
@@ -4253,7 +4843,16 @@ const k_705: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour céphalées de tension chroniques (différentes des migraines). Travail spécifique sur la décrispation des muscles péricrâniens, cervicaux, des épaules. Décharge de la tension qui s'accumule." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 avec attention particulière à la nuque\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Ancre de décrispation pour le quotidien\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu portes une tension chronique dans la zone du crâne, du cou, des épaules. Cette tension finit par déclencher des maux de tête qui s'installent. Pas des migraines — des céphalées de tension, comme un casque qui serre, une barre dans le front, une lourdeur dans la nuque. Cette tension a une source musculaire que nous allons travailler." },
+      { label: "Cartographie", detail: "Sens d'abord où la tension est la plus présente. Le front ? Les tempes ? La base du crâne ? La nuque ? Les trapèzes ? Cette cartographie est utile : différents patients ont leur zone signature. La tienne va recevoir une attention particulière." },
+      { label: "Decrispation Progressive", detail: "Nous allons descendre progressivement, en proposant à chaque zone de se relâcher. Commence par ton front — laisse-le se déplisser, comme s'il s'aplatissait. Tes sourcils descendent légèrement. Tes tempes se déposent. Le sommet de ton crâne se laisse aller." },
+      { label: "Couronne Du Crane", detail: "La coiffe de ton crâne, ces muscles fins qui recouvrent ta boîte crânienne, peut se détendre. Souvent ces muscles sont contractés depuis si longtemps qu'on ne les remarque même plus. Sens-les se relâcher. Une chaleur douce peut s'installer. Le crâne entier devient plus souple." },
+      { label: "Nuque", detail: "Maintenant la base de ton crâne, là où il rencontre la nuque. Cette zone est cruciale — beaucoup de tension s'y accumule. Imagine que tu peux la masser intérieurement. Que les muscles sous-occipitaux se laissent aller. Que la nuque retrouve sa longueur, son espace." },
+      { label: "Trapezes", detail: "Les trapèzes — ces muscles qui partent de la nuque vers les épaules. Ils ont tendance à se contracter en permanence, à porter le stress du quotidien. Permets-leur de descendre. Les épaules se déposent. La distance entre tes oreilles et tes épaules s'allonge." },
+      { label: "Decharge Imagee", detail: "Imagine maintenant que toute la tension accumulée dans cette région peut s'écouler. Comme une eau qui aurait été retenue et qui trouve enfin son chemin. Elle descend par tes bras, sort par le bout de tes doigts. Ton crâne, ton cou, tes épaules deviennent légers, allégés." },
+      { label: "Dispositif Quotidien", detail: "Plusieurs fois par jour, tu peux pratiquer une mini-décharge. Trois respirations longues. Pendant les expirations, tu sens consciemment tes épaules descendre, ta nuque se relâcher, ton front se déplisser. 30 secondes suffisent pour interrompre l'accumulation de tension." },
+      { label: "Post Hypnotique", detail: "Avec la pratique régulière, la tension de fond diminue. Les céphalées se font moins fréquentes, moins intenses. Et même quand elles surviennent, tu disposes d'outils pour les apaiser plus vite." }
       ],
     }],
   }],
@@ -4292,7 +4891,16 @@ const k_706: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Soutien hypnotique aux patients en récupération post-AVC, en complément de la rééducation. Travail sur la motivation à la rééducation, la reprise du schéma corporel, l'acceptation des séquelles, la diminution de la spasticité." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001 (adapter selon capacités)\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu as traversé un AVC. Quelque chose a changé dans ton cerveau. Une partie de toi a été touchée. Tu fais maintenant un travail de récupération qui demande temps, patience et persévérance. Aujourd'hui, nous soutenons ce processus par l'hypnose, en complément de tout ce que ta rééducation t'apporte." },
+      { label: "Cerveau Qui Reconfigure", detail: "Ton cerveau possède une qualité remarquable : la plasticité. Cela veut dire qu'il peut se réorganiser. D'autres zones peuvent prendre en charge ce que la zone touchée faisait. Ce n'est pas magique — cela demande de la répétition, de l'engagement dans la rééducation. Mais c'est possible, et cela se voit." },
+      { label: "Rééducation Image", detail: "Quand tu fais tes exercices de rééducation, tu n'es pas en train de récupérer simplement les fonctions perdues. Tu es en train de demander à de nouveaux circuits cérébraux de prendre le relais. Chaque répétition compte, même si le résultat semble lent. Ton cerveau apprend à chaque tentative." },
+      { label: "Imagerie Motrice", detail: "Imagine maintenant le mouvement que tu cherches à récupérer. Pas en l'exécutant — en l'imaginant clairement. Si c'est lever ton bras, vois-toi le faire en imagination. Cette imagerie motrice active les mêmes zones cérébrales que le mouvement réel, et soutient leur récupération. Pratique cette imagerie plusieurs fois par jour." },
+      { label: "Spasticite", detail: "Si tu as de la spasticité — des muscles qui se contractent trop fortement — tu peux leur envoyer des messages d'apaisement. Imagine la fluidité revenir dans ces muscles. Que la commande motrice puisse se faire avec plus de précision, moins en bloc." },
+      { label: "Acceptation Etape", detail: "Tu es à une étape précise de ton parcours. Tu n'es plus celui d'avant l'AVC. Tu n'es pas encore celui que tu seras après plus de récupération. C'est un entre-deux. Cet entre-deux mérite d'être habité, pas seulement traversé en attendant. Tu fais ton chemin." },
+      { label: "Persévérance", detail: "Certains jours, tu te sentiras découragé. C'est normal. La récupération n'est pas linéaire — il y a des plateaux, parfois des reculs, et puis des progrès soudains. Continuer même dans les périodes difficiles est ce qui fait la différence sur le long terme." },
+      { label: "Qualite De Vie", detail: "À côté du travail de récupération, ta vie présente mérite d'être pleinement vécue. Tes proches, ce que tu peux faire en ce moment, les petits plaisirs — tout cela compte. Ne mets pas ta vie en pause en attendant la récupération complète qui peut prendre des mois ou des années." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, tu pratiques ton imagerie motrice. Tu fais tes exercices avec engagement, en sachant que chaque répétition nourrit la plasticité. Et tu vis pleinement ce qui peut être vécu maintenant." }
       ],
     }],
   }],
@@ -4331,7 +4939,16 @@ const k_707: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Soutien aux patients atteints de SEP. Travail sur la fatigue spécifique de la SEP, les paresthésies, la spasticité, la gestion des poussées et la qualité de vie entre elles." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 douce\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script — adapter selon symptôme dominant)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une maladie qui touche ton système nerveux et qui évolue de manière imprévisible. Poussées, rémissions, fatigue, parfois des sensations étranges, parfois des limitations. Cette maladie ne te définit pas, mais elle fait partie de ta vie. Aujourd'hui, nous accompagnons ce que tu traverses." },
+      { label: "Fatigue Sep", detail: "La fatigue de la SEP est particulière. Pas une fatigue ordinaire qu'un café réveille. Une fatigue de fond qui colore les journées, parfois écrasante. Cette fatigue est légitime et ne se discute pas. Tu peux apprendre à la respecter, à doser tes activités, à ne pas te culpabiliser quand tu dois te reposer." },
+      { label: "Paresthesies", detail: "Si tu as des paresthésies — fourmillements, picotements, sensations bizarres — tu peux les apprivoiser. Pas les supprimer, mais ne pas les laisser envahir ta conscience. Quand elles apparaissent, tu peux leur dire intérieurement : tu es là, je sais. Et continuer ce que tu faisais. Le moins tu leur prêtes attention angoissée, le moins elles dominent." },
+      { label: "Spasticite Apaisée", detail: "Si tu as de la spasticité, tu peux pratiquer l'imagerie de fluidité dans les muscles concernés. Imagine que tes muscles peuvent se relâcher entre les sollicitations. Cette pratique, en complément des étirements et des médicaments, soutient un meilleur contrôle." },
+      { label: "Poussees Redoutees", detail: "L'imprévisibilité des poussées est l'une des dimensions les plus difficiles. Vivre avec une épée de Damoclès. Tu peux apprendre à ne pas vivre dans la peur permanente. Quand une poussée survient, tu fais face avec ton équipe médicale. Quand il n'y en a pas, tu vis pleinement." },
+      { label: "Identite Au Dela Maladie", detail: "Tu n'es pas ta maladie. Tu es une personne qui vit avec une maladie. Ce que tu es — ta personnalité, tes valeurs, ce qui te tient à cœur, ce que tu apportes aux autres — n'est pas affecté par la SEP. Cette identité demeure et même peut s'enrichir de la traversée." },
+      { label: "Amenagements", detail: "Vivre avec la SEP demande des aménagements. Travail adapté si possible, activités physiques douces (yoga, natation), sommeil prioritaire, gestion de la chaleur (qui aggrave les symptômes), entourage compréhensif. Ces aménagements ne sont pas des renoncements — ce sont des intelligences de la maladie." },
+      { label: "Corps Allie Malgre", detail: "Ton corps n'est pas ton ennemi, même quand il dysfonctionne. Il fait ce qu'il peut avec une affection auto-immune qu'il subit. Lui parler avec bienveillance, le ménager quand il en a besoin, l'utiliser pleinement quand il le permet — c'est cette relation qui soutient la qualité de vie." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux pratiquer ton dispositif d'apaisement, de respect énergétique, de présence à ce qui est. Ton traitement de fond fait son travail. Toi, tu fais ce qui dépend de toi : prendre soin de ton équilibre." }
       ],
     }],
   }],
@@ -4370,7 +4987,16 @@ const k_708: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Soutien aux patients parkinsoniens en complément du traitement. Travail sur la fluidité du mouvement, la confiance dans la marche, l'apaisement des tremblements, la qualité de vie." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec la maladie de Parkinson. Le mouvement est devenu plus difficile, parfois lent, parfois maladroit, parfois tremblant. Cette maladie touche un système précis dans ton cerveau, et tes traitements compensent ce qui manque. Aujourd'hui, nous ajoutons un soutien complémentaire." },
+      { label: "Imagerie Motrice", detail: "Le simple fait d'imaginer un mouvement active des circuits cérébraux qui le préparent. Avant de te lever, avant de marcher, avant un mouvement difficile, tu peux le voir en imagination. Te voir le faire avec fluidité. Cette répétition imagée prépare le mouvement réel et le facilite souvent." },
+      { label: "Marche Confiante", detail: "Pour la marche, qui devient parfois hésitante, l'imagerie est précieuse. Imagine-toi marchant avec rythme régulier, pas après pas, en sentant le contact du pied avec le sol. Cette image, pratiquée quotidiennement, soutient ta marche réelle." },
+      { label: "Blocage Freezing", detail: "Si tu as des moments de blocage — quand le pas ne veut pas démarrer — tu peux te donner un signal. Compter un, deux, trois et y aller. Visualiser un objet à atteindre devant toi. Imaginer enjamber un obstacle imaginaire. Ces astuces aident souvent à débloquer le mouvement." },
+      { label: "Tremblement", detail: "Pour le tremblement, le paradoxe : plus tu te concentres pour l'arrêter, plus il s'amplifie souvent. Tu peux apprendre à ne pas y prêter une attention angoissée. À reconnaître qu'il est là, sans en faire un drame. Et dans certaines situations, ton inconscient peut t'aider à le diminuer en redirigeant ton attention." },
+      { label: "Voix Et Visage", detail: "Si ta voix est devenue plus basse ou ton visage moins expressif, ce sont des manifestations de la maladie. Tu peux pratiquer délibérément à parler plus fort, à varier ton expression. Ces exercices, en complément de la rééducation orthophonique, soutiennent ces fonctions." },
+      { label: "Avancee De La Vie", detail: "La maladie évolue, mais souvent moins vite qu'on ne le redoute. Beaucoup de patients vivent de longues années avec une bonne qualité de vie. Aménager ton quotidien, rester actif physiquement et intellectuellement, garder des liens — tout cela ralentit la progression fonctionnelle." },
+      { label: "Dignite Preservee", detail: "Ce que tu es ne se réduit pas à ta motricité. Ta personnalité, ta présence, ton humour, tes affections — tout cela demeure. Et même quand certaines choses deviennent plus difficiles, ta dignité fondamentale n'est pas affectée. Tu es toujours toi-même." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, tu pratiques l'imagerie motrice. Avant les mouvements difficiles, tu visualises. Tu fais tes exercices avec engagement. Tu vis ta vie avec la pleine présence dont tu es capable." }
       ],
     }],
   }],
@@ -4409,7 +5035,15 @@ const k_709: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients épileptiques en complément de leur traitement antiépileptique. Travail sur la diminution de l'anxiété entre les crises, l'identification des prodromes, le confort post-crise. Strict complément." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001 (douce, jamais flash)\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec l'épilepsie. Ton traitement réduit la fréquence des crises, mais l'imprévisibilité demeure. Tu vis avec cette possibilité, qui peut empoisonner les périodes calmes si tu n'y prends garde. Aujourd'hui, nous travaillons à reconquérir les périodes intercritiques." },
+      { label: "Intercrise Pleine", detail: "Entre les crises, tu peux vivre pleinement. Ne pas vivre comme si tu étais sur le point de faire une crise en permanence. Cette anticipation chronique gâche les périodes saines et n'empêche aucune crise. Tu peux choisir de vivre dans le présent quand le présent est calme." },
+      { label: "Prodromes", detail: "Beaucoup de patients épileptiques sentent venir leurs crises — un prodrome, une aura particulière. Si tu en as, tu peux apprendre à les repérer plus tôt. Cela te permet de te mettre en sécurité (s'asseoir, se mettre à l'écart, prévenir un proche), pas d'arrêter la crise — mais d'éviter les blessures." },
+      { label: "Post Crise", detail: "Après une crise, ton corps et ton cerveau ont besoin de récupérer. Cette phase post-critique peut être désagréable : confusion, fatigue, parfois douleur. Tu peux la traverser plus confortablement en t'autorisant le repos, en utilisant ton lieu sûr, en faisant confiance à la récupération qui se fait." },
+      { label: "Observance", detail: "Ton traitement est ta protection principale. L'observance régulière, sans oubli, est cruciale. Manquer des prises est l'une des causes principales de réapparition des crises chez les patients stabilisés. Tu peux te créer des routines, des rappels, pour t'assurer une prise fiable." },
+      { label: "Facteurs Declenchants", detail: "Certains facteurs peuvent déclencher des crises : manque de sommeil, alcool, stress aigu, parfois la lumière intermittente. Identifier les tiens te permet de les éviter. Pas vivre dans la peur — vivre en intelligence avec ta condition." },
+      { label: "Vie Qui Continue", detail: "Beaucoup de patients épileptiques vivent une vie pleine : travail, relations, voyages. Avec quelques aménagements (par exemple, pas de baignade seul, vigilance en hauteur, conduite selon la stabilité), la vie peut être vécue largement. Ne pas se priver de tout par excès de précaution." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux habiter plus pleinement les périodes calmes. Tu prends ton traitement avec rigueur. Tu repères tes prodromes si tu en as. Et tu vis ta vie." }
       ],
     }],
   }],
@@ -4448,7 +5082,16 @@ const k_710: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients atteints de BPCO en complément du traitement pneumologique. Travail sur la dyspnée, l'anxiété respiratoire, la motivation aux exercices respiratoires et à l'arrêt du tabac." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 (en respect du souffle)\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Soutien à la kiné respiratoire\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu vis avec une bronchopneumopathie chronique. Ton souffle s'est rétréci avec le temps. Tu fais peut-être de la kiné respiratoire, tu prends des inhalateurs. Aujourd'hui, nous ajoutons une dimension de conscience qui soutient ce travail." },
+      { label: "Dyspnée Anxiété", detail: "L'essoufflement déclenche souvent une anxiété qui aggrave l'essoufflement. Cercle vicieux. Quand le souffle devient court, panique, qui contracte encore plus la respiration. Apprendre à interrompre ce cercle est un outil quotidien précieux." },
+      { label: "Souffle Lent", detail: "Quand l'essoufflement monte, ne pas chercher à respirer plus fort — paradoxalement. Ralentir la respiration, allonger l'expiration. Souffler doucement par la bouche pincée, comme si tu soufflais dans une paille. Cette technique du frein labial est connue et efficace en BPCO." },
+      { label: "Bronches Imagees", detail: "Imagine maintenant tes bronches. Ces tubes qui mènent l'air dans tes poumons. Tu sais qu'ils sont rétrécis chez toi. Mais tu peux leur envoyer un message : restez aussi accueillantes que possible, ouvertes à l'air qui entre, libérant l'air qui sort." },
+      { label: "Kiné Respiratoire", detail: "Tes exercices de kinésithérapie respiratoire — drainage bronchique, techniques d'expiration — sont précieux. L'observance régulière soutient ta fonction respiratoire bien plus que des inhalateurs seuls. Tu peux les faire en présence, en sentant chaque mouvement nettoyer tes bronches." },
+      { label: "Arret Tabac", detail: "Si tu fumes encore — même un peu — l'arrêt est l'acte le plus puissant que tu peux faire pour ton souffle. Pas pour réparer le passé, mais pour préserver ce que tu as encore. Chaque cigarette en moins est un petit cadeau à ton appareil respiratoire. Le sevrage est difficile, mais possible, et profondément rentable." },
+      { label: "Activite Physique", detail: "Bouger malgré l'essoufflement est crucial. Pas du sport intense — de la marche, à ton rythme. Plus tu es sédentaire, plus l'essoufflement s'aggrave. Plus tu marches régulièrement, plus tu maintiens ta capacité. C'est un cercle vertueux à entretenir." },
+      { label: "Capital Respiratoire", detail: "Ton capital respiratoire actuel mérite d'être respecté. Tu ne peux pas remonter le temps, mais tu peux freiner la dégradation, parfois beaucoup. Avec ton traitement, ta kiné, ton activité, et l'arrêt du tabac si possible, tu prends soin de ce qui te reste." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux pratiquer ton frein labial, ta respiration consciente, ton attention à tes bronches. Quand l'essoufflement monte, tu actives ton dispositif anti-panique. Et tu prends soin de ton souffle comme d'un trésor à préserver." }
       ],
     }],
   }],
@@ -4487,7 +5130,15 @@ const k_711: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients ayant une sensation de manque d'air ou d'oppression thoracique sans cause organique identifiable, ou disproportionnée à la cause. Travail sur l'hyperventilation, la perception respiratoire, l'anxiété." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Désinvestissement de la surveillance\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu sens régulièrement que tu manques d'air. Tu soupires souvent, tu as l'impression de ne pas remplir tes poumons, tu sens parfois une oppression. Et pourtant, les examens disent que tes poumons fonctionnent normalement. Cette dyspnée est fonctionnelle — réelle dans ton vécu, mais sans cause organique." },
+      { label: "Hyperventilation", detail: "Ce qui se passe souvent : tu surveilles ta respiration. Plus tu la surveilles, plus tu la perturbes. Tu hyperventiles légèrement, ce qui modifie ta chimie respiratoire et te donne l'impression de manquer d'air. Tu compenses en respirant plus, ce qui aggrave. Voilà le cercle." },
+      { label: "Recadrage Sensation", detail: "La sensation de ne pas réussir à inspirer suffisamment, paradoxalement, vient souvent d'une expiration insuffisante. Tu es resté avec trop d'air dans les poumons, et tu as l'impression de ne pas pouvoir en faire entrer plus. La solution : expirer mieux, pas inspirer plus." },
+      { label: "Souffle Naturel", detail: "Ton corps sait respirer. Il l'a fait depuis ta naissance, sans que tu y penses. Tu peux te permettre de cesser de surveiller, de cesser de contrôler. Faire confiance à ton automatisme respiratoire qui fonctionne très bien dès que tu cesses de l'interférer." },
+      { label: "Pratique Lacher", detail: "Maintenant, ne fais rien pour ta respiration. Laisse-la complètement seule. Elle va peut-être te sembler bizarre au début, parce que tu n'as plus l'habitude de ne pas la diriger. Mais persiste — laisse-la faire son rythme. En quelques instants, elle se régularise d'elle-même." },
+      { label: "Diaphragme", detail: "Pose mentalement une main sur ton ventre, sous ton sternum. Sens ce mouvement diaphragmatique. À l'inspiration, ton ventre se gonfle légèrement. À l'expiration, il rentre. Cette respiration diaphragmatique, plus efficace que la respiration thoracique haute, calme aussi le système nerveux." },
+      { label: "Desinvestissement", detail: "Quand la sensation de manquer d'air revient dans la journée, ne pas la surveiller. Au contraire — tourner ton attention vers autre chose. Vers ce que tu fais, vers tes sens, vers une activité. Le moins tu surveilles, le moins la sensation s'amplifie." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu pratiques le lâcher de surveillance respiratoire. Plusieurs fois par jour, quelques minutes où tu laisses ta respiration faire son travail seule. Quand la sensation revient, tu détournes l'attention. Et progressivement, ton corps reprend confiance dans sa propre régulation respiratoire." }
       ],
     }],
   }],
@@ -4526,7 +5177,17 @@ const k_712: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Protocole d'accompagnement à l'arrêt du tabac. Travail sur la motivation, la gestion des envies, le rapport au geste, la libération de l'identité de fumeur. Approche en plusieurs séances." }
+      { label: "Structure De Seance", detail: "• Phase préparatoire en consultation : motivation, raisons, scénarios envies\n• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Programmation de la date d'arrêt\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu fumes depuis un certain temps, et tu as décidé d'arrêter. Cette décision te demande du courage, parce que la cigarette est tissée dans ta vie : moments de pause, gestion du stress, sociabilité, geste rituel. Aujourd'hui, nous préparons cette transformation." },
+      { label: "Raisons Personnelles", detail: "Tu as des raisons précises d'arrêter. Pas les raisons générales — les tiennes. Ta santé, ta famille, ton souffle, ton argent, ta liberté, ton image de toi. Connecte-toi à ces raisons. Sens-les vraiment. Ce sont elles qui te porteront dans les moments difficiles." },
+      { label: "Realite Tabac", detail: "La cigarette, qui semble apaiser, ne fait en réalité que combler le manque qu'elle a elle-même créé. Quand tu fumes, tu ne fais qu'apaiser temporairement le sevrage de la précédente cigarette. Les non-fumeurs ne ressentent jamais ce manque — ils sont tranquilles en permanence." },
+      { label: "Geste Questionne", detail: "Le geste de fumer — sortir le paquet, allumer, porter à la bouche, inspirer, exhaler — c'est un rituel autant qu'un effet chimique. Tu peux apprendre à différencier les deux. La nicotine elle-même ne cause pas autant de plaisir que tu le crois — c'est l'absence de manque qui te fait plaisir, et le geste qui structure tes pauses." },
+      { label: "Envies Gerees", detail: "Quand l'envie de fumer arrivera après l'arrêt, elle aura une caractéristique : elle dure 3-5 minutes, et elle passe. Si tu ne fumes pas pendant ce temps, elle redescend d'elle-même. Avec chaque envie traversée sans fumer, ton cerveau reçoit le message : on peut vivre sans, ce signal n'est plus indispensable." },
+      { label: "Outils Envies", detail: "Plusieurs outils pour traverser une envie. Boire un grand verre d'eau lentement. Faire 10 respirations profondes. Marcher 5 minutes. Mâcher un chewing-gum. Appeler quelqu'un. Faire autre chose de tes mains. Utilise celui qui te convient. L'envie passera." },
+      { label: "Corps Qui Recupere", detail: "Dès l'arrêt, ton corps commence à récupérer. En 24h, ta tension baisse. En quelques jours, ton goût et ton odorat reviennent. En quelques semaines, ton souffle s'améliore. En quelques mois, ton risque cardiovasculaire diminue significativement. Ton corps a une capacité de récupération qui te surprendra." },
+      { label: "Identite Nouvelle", detail: "Pendant les premières semaines, tu n'es plus un fumeur, mais pas encore un non-fumeur établi. Tu es en transition. Cette identité-là est légère et précieuse — chaque jour qui passe la consolide. Tu deviens, pas à pas, une personne pour qui la cigarette n'est plus une option." },
+      { label: "Date Arret", detail: "Tu vas choisir une date précise. Pas dans plusieurs semaines — dans quelques jours. Une date à laquelle tu deviens non-fumeur. Avant cette date, tu peux fumer normalement, sans culpabilité, en sachant que tu es à quelques jours de la liberté. À cette date, tu ne fumes plus." },
+      { label: "Post Hypnotique", detail: "À partir de la date que tu as choisie, tu n'es plus fumeur. Quand des envies surgiront, tu disposeras des outils pour les traverser. Ton inconscient travaillera avec toi, pas contre toi. Et chaque jour de non-tabac t'éloignera un peu plus de la cigarette comme option." }
       ],
     }],
   }],
@@ -4565,7 +5226,15 @@ const k_713: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour incontinence urinaire d'effort ou par urgenturie, en complément de la rééducation périnéale. Travail sur la conscience du périnée, la régulation de l'urgenturie, la confiance corporelle." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Dispositif gestion urgenturie\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu vis avec des fuites urinaires qui te limitent et te pèsent. Tu connais la rééducation périnéale, ou tu l'as faite. Aujourd'hui, nous ajoutons une dimension de conscience qui soutient ce travail mécanique. Le périnée a aussi une dimension de présence intérieure." },
+      { label: "Perinée Souvent Oublie", detail: "Le périnée est l'une des parties les plus négligées de notre corps. Beaucoup de patients ne savent pas vraiment où il est ni comment le contracter. Pose ton attention sur cette zone : entre le pubis devant et le coccyx derrière, entre les deux jambes. C'est ton plancher pelvien." },
+      { label: "Contraction Consciente", detail: "Maintenant, contracte doucement cette zone, comme si tu retenais une envie d'uriner. Sens-la se serrer. Garde quelques secondes. Relâche complètement. Cette alternance — contracter, garder, relâcher — c'est l'exercice de Kegel. Pratique-le souvent, dans la journée, en cachette : aucun ne le verra." },
+      { label: "Imagerie Tonicite", detail: "Imagine tes muscles périnéaux qui retrouvent leur tonicité. Comme un trampoline qui était devenu mou et qui retend. Cette tonicité ne vient pas par magie — elle vient par la pratique régulière, soutenue par cette imagerie." },
+      { label: "Urgenturie", detail: "Si tu as des urgenturies — l'envie qui arrive brutalement et qui te fait courir aux toilettes — voici une technique. Quand l'urgenturie arrive, ne cours pas. Au contraire : reste où tu es, contracte ton périnée brièvement plusieurs fois (5-10 contractions rapides), prends quelques respirations longues. L'urgenturie diminue souvent en moins d'une minute. Puis tu peux te diriger vers les toilettes tranquillement." },
+      { label: "Anti Anxiete Perte", detail: "L'anxiété de perdre le contrôle aggrave le problème. Plus tu redoutes les fuites, plus ton corps se crispe et fuit. Apprendre à te détendre dans les situations à risque (rire, éternuer, soulever) est paradoxalement protecteur." },
+      { label: "Dignite", detail: "Cette difficulté n'enlève rien à ta valeur. Elle est extrêmement fréquente, surtout après accouchements ou avec l'âge. Beaucoup de patients en parlent peu par pudeur, mais elle est partout. La traiter sans honte, en parler avec ton médecin et ton kiné, est la voie de la dignité." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu pratiques tes Kegels plusieurs fois par jour. Tu utilises la technique anti-urgenturie quand elle se présente. Tu respectes ta rééducation. Et tu peux retrouver une confiance corporelle qui s'était érodée." }
       ],
     }],
   }],
@@ -4604,7 +5273,16 @@ const k_714: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour vaginisme, contraction involontaire des muscles du vagin empêchant la pénétration. Travail délicat sur la décrispation, la confiance corporelle, le rapport à l'intime. En coordination avec gynécologue, sexologue, kiné périnéale." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 douce\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec un vaginisme. Tes muscles intimes se contractent involontairement, empêchant ce que tu voudrais pourtant pouvoir faire. Cette contraction n'est pas dans ta tête — elle est très réelle, automatique. Et elle a souvent une histoire, qu'il n'est pas toujours nécessaire de retracer pour la dénouer." },
+      { label: "Validation", detail: "Tu n'es ni anormale, ni cassée. Le vaginisme est un trouble fréquent et bien connu. Il a un mécanisme — un réflexe de protection des muscles intimes qui s'est installé et qui ne sait pas se relâcher. Ce mécanisme peut se transformer." },
+      { label: "Pas De Pression", detail: "Aucune pression aujourd'hui. Nous ne cherchons pas un résultat immédiat. Nous installons une qualité de présence à ton corps, à ton intime, qui ouvrira un chemin progressif. La transformation viendra à ton rythme." },
+      { label: "Perinée Amical", detail: "Pose ton attention sur la zone de ton périnée, sans crispation, sans crainte. Cette zone t'appartient. Elle est à toi, pour toi. Pendant longtemps, tu l'as peut-être perçue comme un problème. Aujourd'hui, tu peux commencer à la regarder autrement." },
+      { label: "Dialogue Corps", detail: "Ces muscles qui se contractent — ils essaient de te protéger. Tu peux leur parler intérieurement. Leur dire : merci pour votre vigilance. Mais aujourd'hui, dans ce contexte, vous n'avez pas besoin de protéger autant. Vous pouvez apprendre à choisir quand vous contracter, quand vous détendre." },
+      { label: "Decrispation Progressive", detail: "Imagine maintenant que ces muscles peuvent se relâcher progressivement. Pas tout d'un coup. Petit à petit. Ils retrouvent leur souplesse. Comme un poing qui était fermé depuis longtemps et qui apprend doucement à s'ouvrir." },
+      { label: "Corps Choisi", detail: "Ton corps t'appartient. Ce qui se passe dans ta vie intime se passe selon ton choix, à ton rythme, avec qui tu choisis. Cette souveraineté est fondamentale. Et c'est cette souveraineté retrouvée qui permet à ton corps de se détendre, parce qu'il sait que c'est toi qui décides." },
+      { label: "Progression Pluridisciplinaire", detail: "Tu fais ce travail avec moi, peut-être aussi avec une kinésithérapeute spécialisée, un sexologue, un gynécologue à l'écoute. Cette équipe est précieuse. Chacun apporte une dimension. Tu n'es pas seule dans ce parcours." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux poser une main sur ton bas-ventre et envoyer ce message d'apaisement et de confiance à tes muscles intimes. Tu pratiques avec tes outils de rééducation à ton rythme, sans pression, en respectant ce qui vient. Et la transformation se fait, pas à pas." }
       ],
     }],
   }],
@@ -4643,7 +5321,15 @@ const k_715: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour dyspareunie (douleurs lors des rapports sexuels) chez la femme. Travail sur l'apaisement local, la décrispation, la confiance corporelle, en complément du suivi médical pour identifier la cause." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis une douleur dans une zone qui devrait être source de plaisir, ou de neutralité. Cette douleur a peut-être une cause physique identifiée — sécheresse, cicatrices, sensibilisation — ou pas de cause précise. Dans tous les cas, elle s'auto-entretient par la crispation anticipatoire qu'elle déclenche." },
+      { label: "Cercle Douleur Crispation", detail: "Le cercle est le suivant : tu as eu mal une fois, donc tu redoutes la prochaine fois, donc tu te crispes en anticipation, donc tu as mal, donc tu redoutes encore plus. Briser ce cercle est l'un des objectifs principaux." },
+      { label: "Apaisement Zone", detail: "Imagine la zone qui te fait mal. Sans crispation, juste avec attention bienveillante. Imagine qu'une fraîcheur apaisante peut s'y installer. Que les terminaisons nerveuses qui sur-réagissent peuvent calmer leur signal. Que les muscles qui se contractent en protection peuvent relâcher." },
+      { label: "Communication Partenaire", detail: "Si tu es en couple, communiquer avec ton partenaire est essentiel. Pas seulement sur la douleur — sur ce qui te fait du bien, sur ce qui te rassure, sur ce dont tu as besoin pour aborder l'intimité avec moins d'appréhension. Cette communication est elle-même thérapeutique." },
+      { label: "Progression Consentie", detail: "L'intimité peut se reconquérir progressivement. Pas tout, tout de suite. D'abord la tendresse sans rapport. Puis des contacts choisis. Puis, à ton rythme, ce que tu sens possible. Cette progression respectueuse permet à ton corps de réapprendre sans être agressé." },
+      { label: "Lubrification Imagination", detail: "Si la sécheresse est en cause, tu peux soutenir la lubrification par l'imagerie en plus des produits utilisés. Imaginer ton corps qui répond, qui s'humidifie, qui se prépare. L'imagination active des réponses physiologiques." },
+      { label: "Plaisir Possible", detail: "Le plaisir reste possible. Cette douleur n'a pas pris ta sexualité — elle l'a juste mise en pause. Avec le travail, avec la patience, avec la communication, le plaisir peut revenir. Beaucoup de patientes témoignent d'une sexualité retrouvée, parfois plus consciente qu'avant." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux pratiquer la décrispation périnéale et l'imagerie d'apaisement régulièrement. En cas de tentative intime, tu peux activer ces ressources avant. Et tu construis avec ton partenaire un chemin de retour à l'intimité respectueuse." }
       ],
     }],
   }],
@@ -4682,7 +5368,15 @@ const k_716: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients atteints d'insuffisance cardiaque chronique en complément du traitement cardiologique. Travail sur la gestion de l'anxiété, la dyspnée, l'observance thérapeutique, la qualité de vie." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 douce\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une insuffisance cardiaque. Ton cœur ne pompe plus aussi efficacement qu'avant. Cela implique des limitations, des médicaments, une vigilance. Cette maladie est sérieuse, mais avec un bon suivi, beaucoup de patients vivent avec elle pendant de nombreuses années." },
+      { label: "Cœur Menage", detail: "Ton cœur a besoin que tu le ménages. Pas que tu le mettes dans du coton — il a besoin de marcher, de bouger modérément. Mais sans excès, sans surcharge. Apprendre la juste mesure de l'effort, en accord avec ton cardiologue, est un art." },
+      { label: "Dyspnée Gerée", detail: "Quand l'essoufflement monte, ne pas paniquer. Ralentir, t'asseoir si possible, respirer en allongeant l'expiration. La dyspnée passe quand tu cesses l'effort qui la dépasse. Tu apprends à écouter les signaux de ton corps." },
+      { label: "Observance Critique", detail: "Tes médicaments — antihypertenseurs, diurétiques, peut-être anticoagulants — sont vitaux. Pas seulement précieux : vitaux. Les manquer, même quelques jours, peut décompenser ta maladie. Crée-toi des rituels solides pour ne jamais oublier." },
+      { label: "Signes Alarme", detail: "Apprends à reconnaître les signes qui doivent t'amener à consulter en urgence : essoufflement qui s'aggrave nettement, prise de poids brutale (signe de rétention), gonflement des chevilles, fatigue inhabituelle. Ces signes, repérés tôt, permettent d'éviter l'aggravation." },
+      { label: "Vie Qui Continue", detail: "Avoir une insuffisance cardiaque ne veut pas dire vivre dans l'attente du pire. Tu peux continuer à faire des choses qui te plaisent, à voir ceux que tu aimes, à profiter du quotidien. Adapter — pas renoncer." },
+      { label: "Alimentation", detail: "Limiter le sel, c'est important pour ton cœur. Pas un drame — une habitude qui se prend. Et l'eau aussi : ton médecin t'a peut-être donné une consigne (souvent pas plus de 1,5 L par jour). Ces règles simples soulagent ton cœur." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu prends ton traitement avec une rigueur tranquille. Tu repères les signaux d'alerte sans paranoïa. Tu vis ta vie au présent. Et tu fais confiance à ton équipe médicale qui veille avec toi." }
       ],
     }],
   }],
@@ -4721,7 +5415,16 @@ const k_717: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Soutien aux patients ayant fait un infarctus, en complément de la rééducation cardiaque. Travail sur la confiance corporelle après le choc, l'anxiété de récidive, l'engagement dans les changements de vie." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu as traversé un infarctus. Cet événement a été un choc, médical et psychologique. Ton corps a été touché, ton sentiment de sécurité aussi. Tu te demandes peut-être : quand cela peut-il revenir ? Suis-je toujours en danger ? Aujourd'hui, nous accompagnons cette traversée." },
+      { label: "Traumatisme Legitime", detail: "Ce que tu as vécu est traumatique. La douleur, l'urgence, l'hôpital, la peur de mourir. Ces vécus laissent des traces. Tu peux avoir des moments d'angoisse, de relecture de l'événement, de difficulté à faire confiance à ton corps. C'est normal et cela s'apaise." },
+      { label: "Corps Qui A Repare", detail: "Ton cœur a déjà commencé à se réparer. La zone touchée cicatrise. Le reste du muscle prend en charge le travail. Avec le temps et la rééducation, ta capacité fonctionnelle se restaure souvent largement. Ton corps a une capacité de réparation que tu n'imaginais peut-être pas." },
+      { label: "Recidive Modulée", detail: "La peur de récidive est compréhensible. Mais voici les faits : tes traitements actuels (antiagrégants, statines, bêtabloquants, IEC) réduisent considérablement le risque. Et les changements de vie — alimentation, exercice, arrêt du tabac, gestion du stress — le réduisent encore plus. Tu n'es plus dans la situation qui a mené à l'infarctus." },
+      { label: "Changements Engagement", detail: "Cet événement est aussi une opportunité de changement. Beaucoup de patients post-infarctus vivent en meilleure santé après qu'avant. Ils mangent mieux, bougent davantage, gèrent leur stress. Ce que tu peux installer maintenant te protège pour les décennies à venir." },
+      { label: "Rééducation Active", detail: "La rééducation cardiaque que tu fais — exercice supervisé, éducation, soutien psychologique — n'est pas seulement utile. Elle est l'un des outils les plus efficaces pour ta protection à long terme. Mets-y de l'engagement." },
+      { label: "Vie Apres", detail: "Ta vie après l'infarctus n'est pas une vie diminuée. C'est une vie consciente. Tu sais à quel point la vie est précieuse — tu en as senti la fragilité. Cette conscience peut donner une qualité particulière à tes journées, à tes relations, à tes choix." },
+      { label: "Anxiete Corporelle", detail: "Si parfois ton cœur bat plus vite ou que tu sens une gêne thoracique, tu peux te dire : c'est un signal à observer, pas forcément à dramatiser. Tu connais maintenant tes signaux d'alerte vrais (douleur typique, irradiation, sueurs, malaise). Pour les autres sensations, tu peux respirer, te calmer, attendre. Si la sensation persiste ou s'aggrave, tu consultes." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu te reconstruis activement. Tu prends tes traitements rigoureusement. Tu fais ta rééducation. Tu installes les changements qui te protègent. Et tu vis ta vie présente, qui est précieuse, en équilibre entre vigilance et plein engagement." }
       ],
     }],
   }],
@@ -4760,7 +5463,15 @@ const k_718: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients hypothyroïdiens en complément du traitement substitutif. Travail sur la fatigue résiduelle, la régulation énergétique, la motivation aux activités." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Activation\n• Phase 4 — Retour K-BASE-026 (tonique)" },
+      { label: "Reconnaissance", detail: "Tu as une hypothyroïdie. Ton traitement substitutif te donne l'hormone qu'il faut, et ton bilan biologique est normalisé. Pourtant, une fatigue persiste. Cette fatigue résiduelle est connue : la biologie peut être normale et le vécu encore lourd. Aujourd'hui, nous travaillons cette dimension." },
+      { label: "Traitement Juste", detail: "Premier point : ton traitement doit être à la bonne dose. Si la fatigue est marquée malgré une TSH normale, parle-en à ton endocrinologue — parfois un ajustement, ou un changement de molécule, fait la différence. Ne pas accepter la fatigue comme une fatalité avant d'avoir optimisé." },
+      { label: "Metabolisme Accompagne", detail: "Ton métabolisme a tendance à être ralenti chez l'hypothyroïdien. Tu peux le soutenir par tes choix : alimentation suffisamment énergétique mais pas trop, activité physique régulière qui stimule, sommeil suffisant mais pas excessif. Ces piliers soutiennent un métabolisme actif." },
+      { label: "Activite Physique", detail: "L'activité physique régulière est l'un des outils les plus puissants pour la fatigue résiduelle. Paradoxalement : moins tu bouges, plus tu es fatigué ; plus tu bouges (raisonnablement), plus tu retrouves de l'énergie. Commence petit, marche quotidienne, progresse." },
+      { label: "Demarrage Journees", detail: "Les matins sont parfois difficiles. Tu peux installer un rituel de mise en route : lumière du jour dès le lever, douche tonique, étirements, petit-déjeuner énergétique. Ces gestes signalent à ton corps que la journée commence et que l'activité est attendue." },
+      { label: "Micro Objectifs", detail: "Si la fatigue te paralyse, fonctionne par micro-objectifs. Pas de grandes ambitions — juste la prochaine petite chose. Me lever. Me doucher. Manger. Sortir 10 minutes. Chaque micro-objectif accompli redonne un peu d'élan." },
+      { label: "Engagement", detail: "Ton corps a besoin que tu t'engages avec lui. Pas que tu attendes que la fatigue disparaisse pour vivre. C'est en vivant — modérément, intelligemment — que la fatigue diminue. C'est en attendant qu'elle s'enracine." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux mettre en place tes piliers : activité physique régulière, nutrition adaptée, sommeil structuré, rituel matinal. Tu vérifies avec ton endocrinologue que ton traitement est à la bonne dose. Et tu engages ton énergie disponible dans ce qui te tient à cœur." }
       ],
     }],
   }],
@@ -4799,7 +5510,16 @@ const k_719: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en hyperthyroïdie ou en post-traitement, en complément du suivi. Travail sur l'apaisement du système nerveux emballé, la régulation des palpitations, l'anxiété, la gestion de la fatigue paradoxale." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 (très douce, lente)\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Ton organisme est en hyperactivité. Trop d'hormones thyroïdiennes accélèrent tout : ton cœur, ton métabolisme, ton système nerveux, parfois tes émotions. Tu te sens emballé, parfois épuisé paradoxalement, anxieux. Ton traitement est en train de calmer ce feu. Aujourd'hui, nous t'aidons à traverser cette phase." },
+      { label: "Systeme Emballe", detail: "Ton système nerveux fonctionne à un régime trop élevé. Tu peux lui envoyer un message d'apaisement, sans contredire ton traitement, mais en l'accompagnant. Imagine ton système qui peut, doucement, retrouver un rythme moins frénétique." },
+      { label: "Souffle Apaisant", detail: "La respiration prolongée est ton alliée. Une expiration plus longue que l'inspiration active le frein parasympathique qui contrebalance l'emballement sympathique. Plusieurs fois par jour, prends quelques minutes pour cette respiration apaisante." },
+      { label: "Palpitations", detail: "Tes palpitations sont liées à l'hyperthyroïdie. Elles s'apaiseront à mesure que ton bilan se normalise. En attendant, ton dispositif anti-palpitations : reconnaître que c'est l'hyperthyroïdie, ne pas paniquer, respirer longuement, ne pas focaliser sur le cœur." },
+      { label: "Anxiete Thyroidienne", detail: "L'anxiété que tu ressens n'est pas seulement psychologique — elle a une cause hormonale. C'est important à comprendre : tu n'es pas devenu anxieux dans ta personnalité, c'est ta thyroïde qui dérègle ton système. Quand le bilan se normalise, l'anxiété diminue souvent significativement." },
+      { label: "Fatigue Paradoxale", detail: "Tu peux ressentir une fatigue paradoxale — tu es agité, mais épuisé. C'est normal en hyperthyroïdie. Tu utilises ton énergie à grande vitesse. Te ménager pendant cette phase est important. Pas de grandes performances pendant que ton métabolisme est emballé." },
+      { label: "Observance", detail: "Ton traitement antithyroïdien (ou la suite du traitement par iode/chirurgie selon ton parcours) est essentiel. Le prendre régulièrement, faire les bilans de contrôle, ne pas l'arrêter prématurément même si tu te sens mieux — tout cela permet la stabilisation." },
+      { label: "Qualité De Vie", detail: "Cette phase est transitoire. La plupart des patients hyperthyroïdiens retrouvent un équilibre, soit avec un traitement médical au long cours, soit après traitement définitif (iode ou chirurgie) puis substitution si nécessaire. Tu reviendras à un fonctionnement normal." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, ta respiration apaisante. Ton lieu sûr accessible quand l'anxiété monte. Tu prends ton traitement avec rigueur. Tu te ménages. Et tu attends, avec patience, le retour à l'équilibre." }
       ],
     }],
   }],
@@ -4838,7 +5558,16 @@ const k_720: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en cours de chimiothérapie souffrant d'effets secondaires : nausées, vomissements anticipatoires, fatigue, mucites, neuropathies. Travail de soutien spécifique sur chaque manifestation." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 (douce, en respect des limites)\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script — adapter selon symptôme dominant)\n• Phase 4 — Préparation au prochain cycle\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu reçois une chimiothérapie. Ce traitement combat la maladie, et il a un coût pour ton corps : nausées, fatigue, parfois douleurs, modifications du goût, mucites. Aujourd'hui, nous travaillons à atténuer ces effets secondaires, en complément des médicaments que tu reçois pour cela." },
+      { label: "Traitement Recadrage", detail: "Pendant la perfusion, tu peux changer ton rapport au traitement. Au lieu de redouter ce qui entre en toi, tu peux le recevoir comme un allié temporairement éprouvant. Il fait son travail. Ton corps utilise ce qu'il apporte. Cette manière de recevoir change physiologiquement la manière dont ton corps tolère." },
+      { label: "Nausees Anticipatoires", detail: "Si tu as développé des nausées anticipatoires — qui arrivent avant même la perfusion, à l'idée d'aller à l'hôpital — ce sont des réflexes conditionnés. Ton cerveau a appris à associer l'hôpital aux nausées. Tu peux désapprendre cette association." },
+      { label: "Lieu Sur Perfusion", detail: "Pendant la perfusion, tu peux être ailleurs en pensée. Ton lieu sûr. Un voyage imaginaire. Une activité mentale qui t'absorbe. Pendant que le traitement coule, ton esprit n'est pas obligé d'être focalisé sur les sensations corporelles." },
+      { label: "Apaisement Digestif", detail: "Pour les nausées installées, imagine que ton estomac peut s'apaiser. Une fraîcheur douce qui s'y installe. Une stabilité retrouvée. Combine avec ton antiémétique, ne le remplace pas. Cette imagerie soutient l'action du médicament." },
+      { label: "Mucite Apaisée", detail: "Si tu as une mucite — bouche douloureuse — tu peux imaginer une fraîcheur apaisante dans ta bouche. Comme un baume qui pénètre les muqueuses. Combine avec les bains de bouche prescrits." },
+      { label: "Recuperation Inter Cycles", detail: "Entre les cycles, ton corps récupère. Cette récupération mérite d'être soutenue : sommeil suffisant, alimentation possible (par petites quantités si besoin), activité légère quand tu peux, repos quand tu en as besoin. Tu n'as pas à être performant — tu as à récupérer." },
+      { label: "Engagement Traitement", detail: "Ce traitement est dur, mais il fait son travail. Chaque cycle traversé est une étape. Ton équipe oncologique veille à adapter au mieux. Et toi, tu fais ce que tu peux pour traverser, avec les outils que tu as." },
+      { label: "Post Hypnotique", detail: "Avant chaque cycle, tu peux pratiquer ton dispositif quelques minutes. Pendant la perfusion, ton lieu sûr est accessible. Entre les cycles, tu te respectes pendant que ton corps récupère. Et progressivement, tu avances dans ton parcours." }
       ],
     }],
   }],
@@ -4877,7 +5606,16 @@ const k_721: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en cours de radiothérapie. Travail sur l'immobilité durant les séances, l'apaisement de la peau qui réagit, l'anxiété claustrophobique des appareils, le fil des semaines." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu fais une radiothérapie. Plusieurs semaines de séances quotidiennes, courtes mais répétées. L'immobilité, l'appareil au-dessus de toi, la solitude pendant le traitement. Et la peau qui peut réagir au fil des séances. Aujourd'hui, nous accompagnons ce parcours." },
+      { label: "Immobilite Traversée", detail: "Pendant chaque séance, tu dois rester parfaitement immobile pendant quelques minutes. Cette immobilité peut devenir confortable plutôt que contraignante. Ton corps est posé, tu n'as rien à faire. C'est presque un repos imposé." },
+      { label: "Lieu Sur Seance", detail: "Pendant que ton corps reçoit le traitement, ton esprit peut être dans ton lieu sûr. Quelques minutes d'absence imaginaire, pendant que la machine fait son travail. Tu n'es pas vraiment seul — tu es ailleurs." },
+      { label: "Appareil Sécurisé", detail: "L'appareil au-dessus de toi est conçu pour ton soin. Les techniciens veillent depuis la salle de contrôle. Tu peux signaler à tout moment si tu as un problème — tu n'es pas piégé. Cette sécurité retrouvée diminue l'anxiété claustrophobique que certains patients ressentent." },
+      { label: "Peau Protegée", detail: "Tu peux envoyer à ta peau un message de protection. Imagine que la zone irradiée peut recevoir le rayon thérapeutique tout en se protégeant des effets secondaires. Cette intention, en complément des soins cutanés prescrits, soutient la tolérance." },
+      { label: "Apaisement Si Reaction", detail: "Si ta peau commence à réagir — rougeur, chaleur, sensibilité — tu peux imaginer une fraîcheur douce qui s'y installe. Tu suis aussi les soins recommandés (crèmes, hygiène). Ces deux niveaux soutiennent la tolérance cutanée." },
+      { label: "Fil Des Semaines", detail: "Le traitement dure plusieurs semaines. Au fil du temps, la fatigue cumulative s'installe. C'est normal et attendu. Te ménager pendant cette période, te mettre en pause sur les obligations non essentielles, est important. Ton corps fait un travail intense." },
+      { label: "Arrivee Fin", detail: "Chaque séance est un pas vers la fin. Tu peux compter les séances qui restent, plutôt que celles qui sont passées. Ce décompte donne une perspective : tu vois la fin approcher." },
+      { label: "Post Hypnotique", detail: "À chaque séance, ton dispositif s'active : confort dans l'immobilité, lieu sûr accessible, message à ta peau. Tu suis tes soins. Et tu avances, jour après jour, vers la fin du traitement." }
       ],
     }],
   }],
@@ -4916,7 +5654,16 @@ const k_722: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients atteints de maladies auto-immunes (lupus, polyarthrite rhumatoïde stabilisée, sclérodermie, etc.). Travail sur le dialogue intérieur avec le système immunitaire, la gestion du stress facteur de poussées, l'acceptation." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une maladie auto-immune. Ton système immunitaire, qui devrait te protéger, attaque par moments tes propres tissus. Cette pathologie demande des traitements parfois lourds, et un suivi régulier. Tu portes une condition qui transforme ta vie sans la définir." },
+      { label: "Dialogue Systeme", detail: "Ton système immunitaire fait son travail, mais il s'est emballé sur certaines de tes propres cellules. Tu peux établir un dialogue intérieur avec lui. Lui parler comme à un protecteur dévoué qui a perdu son discernement. Lui dire : merci de ta vigilance, mais tu peux apprendre à mieux distinguer ce qui est moi de ce qui est étranger." },
+      { label: "Message Modulé", detail: "Ce message — répété quotidiennement — ne remplace pas tes médicaments. Mais il s'inscrit dans une pratique qui semble soutenir l'équilibre immunitaire chez certains patients. Aucune promesse — une intention bienveillante." },
+      { label: "Stress Facteur", detail: "Le stress est un facteur connu de poussée dans la plupart des maladies auto-immunes. Apaiser ton stress de fond, plusieurs fois par jour, est un acte de soin direct. Pas comme remède magique — comme un facteur parmi d'autres que tu peux influencer." },
+      { label: "Observance", detail: "Ton traitement de fond est précieux, même quand tu te sens bien. Hydroxychloroquine, immunomodulateurs, biothérapies — chacun a son rôle. L'arrêt prématuré est l'une des principales causes de rechute. L'observance régulière est un acte de respect pour ton corps." },
+      { label: "Chronicite Acceptee", detail: "Cette maladie est chronique. Elle ne disparaîtra probablement pas. Mais elle peut être contrôlée, parfois remarquablement bien. Apprendre à vivre avec, plutôt qu'à attendre qu'elle disparaisse, est une libération. Tu construis ta vie en intégrant cette condition." },
+      { label: "Aménagements", detail: "Vivre avec une maladie auto-immune demande des aménagements. Repos suffisant, gestion de l'effort, alimentation parfois adaptée, protection (soleil pour le lupus, par exemple), suivi régulier. Ces aménagements sont des actes d'intelligence, pas des renoncements." },
+      { label: "Corps Qu On Accompagne", detail: "Ton corps n'est pas en guerre contre toi. Il fait ce qu'il peut avec un dérèglement qu'il subit. Lui parler avec bienveillance, le ménager quand il en a besoin, l'utiliser pleinement quand il le permet — c'est cette relation qui soutient ton équilibre." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux dialoguer intérieurement avec ton système immunitaire, lui transmettre l'intention de discernement, apaiser ton stress de fond. Tu prends tes traitements avec rigueur. Tu vis ta vie en intelligence avec ta condition." }
       ],
     }],
   }],
@@ -4955,7 +5702,15 @@ const k_723: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients atteints de vitiligo en complément du traitement dermatologique. Travail sur la régulation immunitaire locale, l'acceptation de la peau actuelle, le soutien à la repigmentation." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Visualisation à pratiquer quotidiennement\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu vis avec du vitiligo. Des zones de ta peau ont perdu leur pigmentation, créant des taches plus claires. Cette condition n'est pas dangereuse pour ta santé, mais elle peut peser sur ton estime, particulièrement si les zones sont visibles. Aujourd'hui, nous travaillons à plusieurs niveaux." },
+      { label: "Mecanisme", detail: "Le vitiligo est dû à la destruction des mélanocytes — les cellules qui fabriquent la mélanine — souvent par un mécanisme auto-immun. Aux endroits où les mélanocytes ont disparu, la peau ne peut plus se pigmenter. Repeupler ces zones est possible dans certains cas, par les traitements et par le soutien de ton corps." },
+      { label: "Dialogue Immunitaire", detail: "Tu peux parler à ton système immunitaire. Lui dire : ces mélanocytes font partie de moi. Tu peux les protéger plutôt que les attaquer. Cette intention, sans remplacer les traitements, soutient une régulation immunitaire qui protège ce qui reste." },
+      { label: "Visualisation Repopulation", detail: "Imagine maintenant les zones dépigmentées. Imagine que des mélanocytes commencent à les recoloniser, partis des bords ou de petits îlots au centre. Imagine que ces cellules se multiplient, fabriquent de la mélanine, redonnent à ta peau sa couleur. Cette imagerie quotidienne semble soutenir, chez certains patients, le processus." },
+      { label: "Acceptation Actuelle", detail: "Pendant que ce travail se fait, tu vis avec ta peau telle qu'elle est aujourd'hui. Cette peau, avec ses zones différentes, est ta peau actuelle. Tu peux la regarder avec moins de critique. Pas une fausse satisfaction — une bienveillance de fond. Cette peau t'appartient." },
+      { label: "Estime", detail: "Le regard des autres, les questions, parfois les commentaires maladroits — tout cela peut peser. Tu peux choisir comment tu y réponds. Certains patients couvrent les zones avec maquillage, d'autres assument visiblement. Aucun choix n'est meilleur — celui qui te convient l'est." },
+      { label: "Engagement Traitement", detail: "Tes traitements — protection solaire, peut-être PUVA, corticoïdes locaux, ou autres — méritent ton engagement régulier. Le vitiligo répond parfois aux traitements, parfois moins. Tu donnes à ton corps la chance de récupérer, sans garantir le résultat." },
+      { label: "Post Hypnotique", detail: "À partir de demain, tu peux pratiquer chaque jour quelques minutes de visualisation des mélanocytes qui repeuplent les zones. Tu suis tes traitements. Tu te protèges du soleil. Et tu vis ta vie avec ta peau actuelle, sans la laisser dicter ton estime." }
       ],
     }],
   }],
@@ -4994,7 +5749,15 @@ const k_724: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients atteints d'alopécie areata (pelade) en complément du traitement dermatologique. Travail sur le soutien folliculaire, la régulation immunitaire locale, le vécu de la perte capillaire." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Visualisation à pratiquer quotidiennement\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu as développé une alopécie areata. Une ou plusieurs plaques où les cheveux ne poussent plus. Cette condition est troublante, parfois traumatisante. Elle est due à un mécanisme auto-immun qui s'attaque à tes follicules pileux. Aujourd'hui, nous travaillons à plusieurs niveaux." },
+      { label: "Mecanisme Explique", detail: "Tes follicules pileux, dans les zones touchées, ne sont pas détruits — ils sont en sommeil, leur activité est inhibée par une attaque immunitaire locale. Cela signifie qu'ils peuvent reprendre leur travail si l'attaque cesse. C'est cette possibilité que nous soutenons." },
+      { label: "Dialogue Immunitaire", detail: "Tu peux dialoguer avec ton système immunitaire. Lui dire : ces follicules font partie de moi. Tu peux cesser de les attaquer. Ils méritent ta protection, pas ton agression. Cette intention soutient le travail médical." },
+      { label: "Imagerie Follicules", detail: "Imagine maintenant les zones touchées. Imagine que les follicules s'y réveillent, sortent de leur sommeil. Que la circulation sanguine y revient. Que les cellules qui fabriquent les cheveux reprennent leur activité. Cette visualisation quotidienne soutient, chez certains patients, la repousse." },
+      { label: "Acceptation Attente", detail: "La repousse, quand elle survient, prend du temps : plusieurs mois généralement. Pendant ce temps, tu vis avec les zones nues. Tu peux choisir comment : couvrir avec foulard, perruque, casquette, ou assumer visiblement. Aucun choix n'est meilleur que l'autre." },
+      { label: "Identite", detail: "Tu es plus que tes cheveux. Cette évidence est facile à dire et plus difficile à vivre quand l'apparence est touchée. Mais c'est vrai. Ton identité, ce que tu es, ce que tu offres au monde, ne dépend pas de la quantité de cheveux que tu portes." },
+      { label: "Traitement", detail: "Tes traitements — corticoïdes locaux, peut-être autres — méritent ton observance. La pelade peut répondre aux traitements, ou repousser spontanément, ou parfois rester stable longtemps. Tu donnes à ton corps les conditions de la guérison sans garantir le calendrier." },
+      { label: "Post Hypnotique", detail: "À partir de demain, tu peux pratiquer ta visualisation quotidienne, ton dialogue immunitaire, ton acceptation de la phase actuelle. Tu suis tes traitements. Tu vis ton identité au-delà de tes cheveux." }
       ],
     }],
   }],
@@ -5033,7 +5796,14 @@ const k_725: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour enfants souffrant de douleurs abdominales chroniques fonctionnelles (sans cause organique identifiée). Travail adapté avec imagerie ludique, en lien avec parents." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Accueil enfant + parent\n• Phase 2 — Induction adaptée enfant (histoire)\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Amorce Enfant", detail: "Tu as souvent mal au ventre. Le médecin a dit que tu n'as pas de maladie grave, mais ton ventre te fait quand même mal régulièrement. Aujourd'hui, on va apprendre à parler à ton ventre pour qu'il aille mieux." },
+      { label: "Metaphore Ventre", detail: "Imagine que dans ton ventre, il y a un petit monde. Avec des routes, des canaux, des choses qui doivent circuler. Quand tout se passe bien, ce petit monde fonctionne tranquillement. Mais parfois, il y a des embouteillages, ou les routes deviennent un peu bosselées. C'est ça qui te fait mal." },
+      { label: "Personnage Aidant", detail: "Imagine maintenant un personnage magique qui s'occupe de ton ventre. Tu peux choisir qui c'est : une petite fée, un super-héros, un animal magique, un capitaine de bateau. Ce personnage connaît bien ton ventre et il sait comment l'aider." },
+      { label: "Action Personnage", detail: "Quand ton ventre te fait mal, tu peux appeler ce personnage dans ta tête. Et il va dans ton ventre. Il aplanit les routes, débouche les canaux, calme ce qui s'agite. Petit à petit, ton ventre se calme parce que ton personnage fait son travail." },
+      { label: "Chaleur", detail: "Ton personnage peut aussi mettre une chaleur douce dans ton ventre, comme une petite couverture chaude. Cette chaleur fait du bien et calme la douleur. Tu peux sentir cette chaleur même les yeux fermés." },
+      { label: "Pratique Quotidienne", detail: "Tous les jours, tu peux dire bonjour à ton personnage et à ton ventre. Quelques secondes, juste pour vérifier que tout va bien. Et si ton ventre commence à faire mal, tu appelles ton personnage immédiatement, avant que ça devienne trop fort." },
+      { label: "Aux Parents", detail: "[Parents] Le rôle des parents est important : ne pas dramatiser quand l'enfant a mal, mais ne pas non plus minimiser. Encourager l'enfant à utiliser son outil hypnotique. Et coordonner avec le médecin si la douleur s'aggrave." }
       ],
     }],
   }],
@@ -5072,7 +5842,14 @@ const k_726: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Adaptation pédiatrique pour enfants asthmatiques. Travail ludique sur le souffle, l'apaisement bronchique imagé, la confiance respiratoire, en complément du traitement." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Accueil avec parent\n• Phase 2 — Induction adaptée\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Amorce Enfant", detail: "Tu as parfois des crises où tu as du mal à respirer. C'est l'asthme. Tes poumons, parfois, se contractent et l'air a du mal à passer. Aujourd'hui, on va apprendre à parler à tes poumons pour qu'ils restent tranquilles plus souvent." },
+      { label: "Imagerie Poumons", detail: "Imagine tes poumons. Ce sont comme deux grands ballons à l'intérieur de ta poitrine. Quand tu respires, ils se gonflent et se dégonflent. Et à l'intérieur, il y a plein de petits tuyaux qui amènent l'air partout. Quand tes tuyaux sont bien ouverts, l'air passe facilement." },
+      { label: "Gardien", detail: "Imagine un gardien qui s'occupe de tes poumons. Il peut être une fée, un super-héros, un animal magique. Son travail, c'est de garder tes petits tuyaux bien ouverts, et de calmer tes poumons quand ils s'énervent un peu." },
+      { label: "Souffle Pratique", detail: "Maintenant, on va respirer ensemble. Inspire par le nez, comme si tu sentais une fleur. Et expire par la bouche, comme si tu soufflais sur une bougie pour la faire vaciller sans l'éteindre. Doucement. Encore. Tu sens comme c'est calme." },
+      { label: "Si Crise Arrive", detail: "Si une crise commence, deux choses. Premièrement : tu prends ton inhalateur, comme tes parents et ton médecin t'ont appris. Le médicament fait son travail. Deuxièmement : pendant qu'il agit, tu appelles ton gardien dans ta tête. Tu respires comme on a appris : nez doucement, bouche très doucement comme si tu soufflais sur une bougie. Ton gardien aide tes poumons à se calmer." },
+      { label: "Observance", detail: "Si tu prends un médicament tous les jours, c'est important de bien le prendre, même quand tu te sens bien. C'est comme un bouclier qui te protège. Tes parents et ton médecin sont d'accord là-dessus." },
+      { label: "Pratique Quotidienne", detail: "Tous les jours, tu peux dire bonjour à tes poumons et à ton gardien. Et faire 5 belles respirations comme on a appris. Quelques secondes seulement. Tes poumons aimeront beaucoup ça." }
       ],
     }],
   }],
@@ -5111,7 +5888,15 @@ const k_727: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour enfants devant subir des soins répétés ou douloureux (ponctions, perfusions répétées, examens invasifs). Adaptation ludique des techniques de confort, dispositif rapide." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Rencontre avec enfant + parent\n• Phase 2 — Construction du lieu sûr ludique\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Amorce", detail: "Tu vas avoir des soins. Parfois cela peut faire un peu peur, ou un peu mal. Aujourd'hui on va apprendre une magie qui marche pendant les soins." },
+      { label: "Endroit Secret", detail: "Imagine un endroit super chouette où tu te sens super bien. Cela peut être inventé : ta cabane secrète, ta planète préférée, un château, un aquarium géant, ce que tu veux. Cet endroit est à toi, personne ne peut y entrer sans ta permission." },
+      { label: "Compagnon", detail: "Dans cet endroit, tu peux choisir un compagnon : un animal, un super-héros, un personnage de dessin animé que tu aimes. Ce compagnon a un super-pouvoir : il peut te protéger pendant les soins." },
+      { label: "Pendant Soin", detail: "Pendant que les médecins ou les infirmières font leur travail, tu peux aller dans ton endroit avec ton compagnon. Tu fermes les yeux, tu respires, et tu y es. Pendant ce temps, ton corps reste là, mais toi tu es ailleurs, en sécurité." },
+      { label: "Pouvoir Du Personnage", detail: "Ton compagnon a aussi le pouvoir de transformer les sensations. Si quelque chose pique un peu, il peut transformer cette sensation en autre chose : une petite vibration drôle, une chaleur agréable, un picotement comme une plume. Il choisit ce qui marche le mieux pour toi." },
+      { label: "Signal", detail: "Avec moi, on va faire un signal magique. Trois respirations profondes en serrant ton poing, et hop, tu es dans ton endroit. Ce signal marche aussi bien à l'hôpital ou chez le médecin." },
+      { label: "Avant Soin Parents", detail: "[Parents] Avant les soins, vous pouvez rappeler à votre enfant son endroit, son compagnon, son signal. Pendant le soin, le rassurer simplement, sans dramatiser ni minimiser. Après, le féliciter d'avoir traversé." },
+      { label: "Apres Soin", detail: "Après chaque soin que tu as traversé avec ta magie, tu peux te dire : j'ai réussi, j'ai utilisé ma magie. Plus tu utilises ta magie, plus elle devient puissante." }
       ],
     }],
   }],
@@ -5150,7 +5935,17 @@ const k_728: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients dans les premières semaines à mois suivant la perte d'un proche. Travail de présence à l'épreuve, légitimation des émotions, lien intériorisé avec le défunt, soutien à la traversée sans pression de durée." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Accueil en conscience normale, présence\n• Phase 2 — Induction K-BASE-003 douce\n• Phase 3 — Lieu sûr ou sanctuaire selon profil\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture rituelle K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu viens de perdre quelqu'un qui comptait pour toi. Ce que tu vis est l'une des épreuves les plus difficiles que la vie peut donner. Il n'y a pas de bonne manière de la traverser. Il y a ta manière, qui se construit jour après jour. Aujourd'hui, nous prenons un temps pour t'accompagner, sans rien imposer." },
+      { label: "Legitimation", detail: "Toutes les émotions qui te traversent sont légitimes. La tristesse, bien sûr. Mais aussi, parfois, la colère contre celui qui est parti, ou contre ce qui est arrivé. La culpabilité. Le soulagement même, quand l'épreuve a été longue avant la fin. Le vide. La peur. Ces émotions peuvent se mélanger, parfois en quelques minutes. Aucune n'est mauvaise." },
+      { label: "Pas De Calendrier", detail: "Notre culture veut souvent que le deuil soit rapide, propre, achevé en quelques mois. Cette attente est cruelle. Le deuil prend le temps qu'il prend. Des années parfois. Ce n'est pas une pathologie — c'est une transformation profonde qui demande du temps." },
+      { label: "Lieu Doux", detail: "Maintenant, tu peux te permettre d'être dans un endroit en toi qui t'accueille tel que tu es. Sans avoir besoin de faire bonne figure. Sans avoir besoin de comprendre. Juste être présent à ce qui est. Cet endroit existe en toi, même quand le reste vacille." },
+      { label: "Lien Qui Demeure", detail: "La personne que tu as perdue a laissé en toi des traces. Pas seulement des souvenirs — quelque chose de plus profond. Une manière de regarder le monde qu'elle t'a transmise. Des mots qu'elle disait et qui te reviennent. Des gestes qui sont devenus tiens. Cette présence intériorisée, le deuil ne l'enlève pas. Au contraire, c'est elle qui se construit pendant le deuil." },
+      { label: "Dialogue Intime", detail: "Tu peux, intérieurement, t'adresser à elle. Pas comme on s'adresse à un être présent — comme on s'adresse à une présence intérieure devenue. Lui dire ce que tu n'as peut-être pas pu lui dire. La remercier. Lui en vouloir si tu lui en veux. Lui dire au revoir, ou au contraire pas encore. Ce dialogue est ton dialogue, à ton rythme." },
+      { label: "Continuer Sans Oublier", detail: "Tu vas continuer à vivre. Ce n'est pas une trahison — c'est ce qu'elle aurait voulu pour toi, probablement. Continuer à vivre n'est pas oublier. C'est porter en soi ceux qu'on a perdus, et avancer avec eux. Tu peux pleurer aujourd'hui et rire demain — les deux sont possibles, parfois dans la même journée." },
+      { label: "Jours Difficiles", detail: "Certains jours seront plus durs que d'autres. Anniversaires, fêtes, lieux particuliers, odeurs, musiques. Ces vagues de chagrin ne signifient pas que tu n'avances pas. Le deuil n'est pas une ligne droite — c'est une spirale qui revient sur les mêmes thèmes, à chaque fois un peu différemment." },
+      { label: "Outils", detail: "Tu peux disposer de quelques outils. Quand l'émotion submerge, ton lieu sûr est accessible. Quand tu as besoin de parler à elle, tu peux le faire intérieurement. Quand le quotidien devient trop lourd, tu peux te permettre d'alléger ce qui peut l'être. Tu n'as pas à être performant pendant cette traversée." },
+      { label: "Cloture Douce", detail: "Tu peux maintenant porter une main sur ton cœur. Tu portes en toi celle ou celui que tu as perdu. Et tu portes en toi ta propre vie qui continue. Ces deux choses cohabitent, fragilement parfois, mais réellement." }
       ],
     }],
   }],
@@ -5189,7 +5984,17 @@ const k_729: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients portant un deuil ancien (années) qui ne s'est pas pleinement traversé. Reprise du travail de deuil resté en suspens, retrouvailles avec le défunt intérieur, libération progressive." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Sanctuaire intérieur K-BASE-012\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Clôture rituelle K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu portes un deuil qui ne s'est pas pleinement traversé. Pour des raisons qui te sont propres — survie, contexte, immaturité d'alors, surcharge — tu n'as pas pu vivre cette perte au moment où elle est arrivée. Et elle est restée, en toi, comme un nœud qui demande maintenant à se dénouer." },
+      { label: "Validation Gel", detail: "Ce gel émotionnel n'est pas une faiblesse. C'est une protection. Quand on ne peut pas affronter quelque chose, on le met de côté pour pouvoir continuer à fonctionner. Ce mécanisme t'a sauvé à l'époque. Aujourd'hui, tu peux choisir de revenir à ce qui est resté en suspens." },
+      { label: "Sanctuaire Lieu", detail: "Dans ton sanctuaire intérieur, tu peux maintenant inviter celui ou celle que tu as perdue. Pas comme un fantôme effrayant — comme une présence qui attend depuis longtemps que tu reviennes vers elle. Cette présence est en toi depuis le début. Tu reprends le fil maintenant." },
+      { label: "Emotions Qui Montent", detail: "À mesure que tu te connectes à cette présence, des émotions peuvent monter. Tristesse, colère, culpabilité, regret. Toutes celles qui n'ont pas pu s'exprimer au moment de la perte. Laisse-les venir. Elles ont attendu longtemps. Ton sanctuaire les accueille toutes." },
+      { label: "Paroles Non Dites", detail: "Y a-t-il des choses que tu n'as pas pu lui dire ? Tu peux les dire maintenant. Intérieurement. Sans censure. Ce que tu as gardé sur le cœur. Ce que tu regrettes. Ce que tu voudrais qu'elle sache. Ces paroles, même non entendues physiquement, ont une fonction libératrice profonde." },
+      { label: "Ecouter", detail: "Tu peux aussi imaginer ce qu'elle te dirait. Pas inventer — laisser monter en toi ce que ta connaissance d'elle te permet d'imaginer. Ce qu'elle dirait pour t'apaiser, pour te libérer, pour te bénir dans la vie qui continue. Cette parole intérieure est la sienne autant que la tienne." },
+      { label: "Pardon Si Pertinent", detail: "Si tu as quelque chose à te pardonner — une dispute non résolue, une absence au moment crucial, des choses que tu n'as pas faites — tu peux te pardonner doucement. Tu as fait ce que tu as pu avec qui tu étais à ce moment-là. Et elle, où qu'elle soit, t'a probablement déjà pardonné." },
+      { label: "Passage", detail: "Maintenant, tu peux choisir : la garder dans ton sanctuaire comme une présence vivante en toi, ou lui donner doucement la permission de partir, ou les deux à la fois. Ces choix t'appartiennent. Ce qui compte, c'est que le nœud se dénoue." },
+      { label: "Libération", detail: "Pendant que tu fais ce travail, quelque chose en toi se libère. Une énergie qui était immobilisée depuis des années peut recommencer à circuler. Cette énergie, tu en as besoin pour ta vie présente. Elle te revient maintenant, transformée par ce que tu as traversé." },
+      { label: "Consolidation", detail: "Cette personne que tu as perdue continuera à faire partie de toi. Pas comme un fardeau — comme une richesse. Tu portes son meilleur, et tu vis ta vie. Le deuil traversé devient une force plutôt qu'un poids." }
       ],
     }],
   }],
@@ -5228,7 +6033,18 @@ const k_730: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour deuils suite à mort traumatique : suicide, accident, mort violente, perte d'enfant. Travail spécifique sur la dimension traumatique de la perte avant ou en parallèle du travail de deuil. Prudence accrue." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation préalable en conscience normale\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Lieu sûr K-BASE-011\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture renforcée K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu as perdu quelqu'un dans des conditions terribles. Pas seulement une perte — une perte qui a été violente, soudaine, ou intolérable dans sa nature. Cette spécificité demande un accompagnement particulier. Le deuil ne peut pas se faire pleinement tant que la dimension traumatique n'est pas apaisée." },
+      { label: "Distinction Essentielle", detail: "Il y a deux choses qui se sont passées et qui se mélangent en toi. Le trauma : ce que tu as appris, vu, vécu, qui était insupportable. Et le deuil : la perte de cette personne, l'absence qui s'installe. Il faut souvent travailler le trauma avant de pouvoir vraiment vivre le deuil. Tant que l'image violente domine, le lien doux reste empêché." },
+      { label: "Lieu Sur Essential", detail: "Ton lieu sûr est particulièrement important aujourd'hui. C'est de là que nous travaillerons. Tu n'es pas obligé d'aller dans la mémoire intolérable — nous travaillerons à distance, par des voies indirectes." },
+      { label: "Image A Distance", detail: "Si une image traumatique reste imprimée en toi, tu peux la mettre à distance. La voir comme une photographie qui s'éloigne, qui devient floue, qui perd ses couleurs. Cette image a fait son travail de marquage. Elle peut maintenant prendre moins de place." },
+      { label: "Personne Avant", detail: "Cette personne que tu as perdue, elle n'est pas que sa mort. Elle est tout ce qui a précédé la mort. Des années de vie, de relation, de présence. La mort traumatique a tendance à effacer ce qui précède, à colorer toute la mémoire avec la fin terrible. Tu peux retrouver tout ce qui était avant." },
+      { label: "Souvenirs Doux", detail: "Cherche dans ta mémoire un moment doux, paisible, lumineux que tu as partagé avec elle. Un moment qui te ressemble, qui lui ressemble. Ce moment est aussi vrai que la fin terrible. Plus vrai même, parce qu'il dure dans ce qu'elle t'a transmis." },
+      { label: "Reconnexion Lien", detail: "Cette personne, à travers ce moment doux retrouvé, est encore là d'une certaine manière. Pas physiquement. Mais dans ce que tu portes d'elle. Cette part-là, le trauma ne peut pas l'atteindre. Elle est plus profonde que ce qui s'est passé à la fin." },
+      { label: "Revolte Legitime", detail: "Ce que tu ressens — colère, révolte, incompréhension, parfois envie d'abandonner — est légitime. Une mort traumatique provoque des émotions qu'aucune sagesse ne dissout. Tu n'as pas à les transformer en sérénité. Tu peux juste apprendre à vivre avec, à mesure que le temps fait son travail." },
+      { label: "Culpabilite Si Pertinent", detail: "Si tu te sens coupable — d'avoir survécu, de n'avoir pas pu empêcher, de n'avoir pas su — cette culpabilité est presque toujours injustifiée et écrasante. Tu as fait ce que tu pouvais avec ce que tu savais à ce moment-là. La culpabilité du survivant peut être déposée, doucement, fois après fois." },
+      { label: "Engagement Long", detail: "Le travail de deuil traumatique est long. Plus long que les autres deuils. Pas parce qu'il y a quelque chose qui ne va pas chez toi — parce que c'est plus difficile. Donne-toi le temps. Cherche le soutien dont tu as besoin. Tu n'as pas à traverser seul." },
+      { label: "Cloture", detail: "Tu emportes avec toi un peu plus de paix qu'au début de cette séance. Pas la paix totale — c'est trop tôt, peut-être pour toujours. Mais une paix relative, qui ouvre un peu plus d'espace pour vivre." }
       ],
     }],
   }],
@@ -5267,7 +6083,17 @@ const k_731: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients accompagnant un proche en fin de vie. Travail sur la traversée anticipatoire, la présence dans les derniers moments, la culpabilité de continuer à vivre, la préparation au passage." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Sanctuaire K-BASE-012\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Recharge de l'aidant\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu accompagnes quelqu'un qui va partir. Tu vis dans une attente terrible et précieuse à la fois. Chaque jour est précieux parce qu'il est peut-être l'un des derniers. Et chaque jour est lourd parce que la fin approche. Cette double charge n'est pas facile à porter." },
+      { label: "Present Qui Reste", detail: "Le temps qui reste avec cette personne est précieux. Pas parce qu'il faut en faire quelque chose de grand. Parce qu'il est ce qu'il y a. Une main qu'on tient. Un regard. Un silence partagé. Une parole. Ces moments simples sont ce qui restera de plus précieux après." },
+      { label: "Emotions Ambivalentes", detail: "Ce que tu ressens est complexe. Tristesse profonde. Mais aussi parfois fatigue de l'accompagnement. Parfois soulagement anticipé que cela finisse, suivi de culpabilité d'avoir pensé cela. Parfois colère contre la maladie, contre la situation, parfois contre la personne elle-même. Tout cela est humain. Aucune émotion n'est mauvaise." },
+      { label: "Culpabilite Aidant", detail: "Tu fais ce que tu peux. Probablement déjà plus que ce que tu pensais pouvoir faire. La culpabilité de ne pas en faire assez est une compagne fréquente des aidants. Mais tu n'es pas omnipotent. Tu n'as pas à porter ce qu'aucun humain ne peut porter. Faire ce que tu peux, c'est déjà énorme." },
+      { label: "Preparation Douce", detail: "Tu peux te préparer à ce qui vient, doucement. Pas pour précipiter. Pour ne pas être complètement submergé quand cela arrivera. Imaginer parfois la suite. Penser aux choses pratiques quand tu en as la force. Identifier qui tu pourras appeler après. Cette préparation n'est pas un manque de loyauté — c'est de l'intelligence pour le toi qui devra continuer." },
+      { label: "Paroles A Dire", detail: "Y a-t-il des choses que tu voudrais dire à cette personne pendant qu'il est encore temps ? Des reconnaissances. Des merci. Des pardons. Des au revoir. Tu n'es pas obligé d'attendre la fin pour les dire. Beaucoup de proches en deuil regrettent de n'avoir pas dit avant. Toi, tu peux dire maintenant." },
+      { label: "Recharge Aidant", detail: "Tu as besoin de recharger tes propres ressources pour continuer à accompagner. Cela n'est pas égoïste. Un aidant épuisé ne peut plus aider longtemps. Quelques minutes pour toi chaque jour, dans ton sanctuaire, à ne rien faire d'autre qu'exister, sans rôle." },
+      { label: "Lien Qui Demeurera", detail: "Cette personne va partir. Mais le lien que tu as avec elle, lui, ne part pas avec son corps. Il continue, transformé. Elle restera en toi, dans ce qu'elle t'a transmis, dans ce que vous avez vécu. La mort ne brise pas tout. Elle change la forme du lien." },
+      { label: "Force Dans La Traversee", detail: "Tu trouves dans cette traversée des forces que tu ne connaissais pas. Une capacité d'amour quotidien. Une présence à l'essentiel. Une lucidité sur ce qui compte. Ces forces, tu les emporteras dans la suite de ta vie. Cette épreuve te transforme, douloureusement mais profondément." },
+      { label: "Cloture", detail: "Tu emportes avec toi un peu plus d'espace pour vivre les jours qui restent avec présence et tendresse, et un peu plus de force pour traverser ce qui vient." }
       ],
     }],
   }],
@@ -5306,7 +6132,17 @@ const k_732: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour rupture amoureuse, divorce, fin de relation significative. Travail sur le travail de deuil amoureux, la libération du lien, la reconstruction de l'identité, l'estime de soi." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Restauration de l'identité\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu vis une rupture, un divorce, une fin de relation. Quelque chose qui te paraissait fondateur se brise ou s'est brisé. La douleur que tu ressens est réelle, comparable à celle d'un deuil. La société minimise parfois ces souffrances — tu n'as pas à minimiser ta propre épreuve." },
+      { label: "Validation Souffrance", detail: "Une rupture amoureuse mobilise des zones cérébrales semblables à celles de la douleur physique. Tu ne 'fais pas un drame' — tu vis une véritable perte. Toutes les émotions que tu traverses — tristesse, colère, soulagement parfois, espoir absurde, désespoir — sont légitimes." },
+      { label: "Lien A Defaire", detail: "Quelque chose qui s'était tissé doit se défaire. Une vie commune, des projets communs, des habitudes, une identité de couple. Ce démaillage prend du temps. Chaque morceau qui se défait peut faire mal. C'est normal. Ce n'est pas que tu ne progresses pas — c'est que le lien était profond." },
+      { label: "Phases Du Deuil Amoureux", detail: "Le deuil amoureux a ses phases. Le déni, la colère, le marchandage (et si je faisais autrement, et si je revenais...), la dépression, l'acceptation. Ces phases ne sont pas linéaires — tu peux passer par toutes en une journée, et y revenir. C'est normal." },
+      { label: "Qui Tu Es", detail: "Pendant la relation, tu étais aussi quelqu'un en couple. Cette part de ton identité doit se transformer. Tu redécouvres qui tu es seul, en dehors de cette relation. Cette redécouverte peut être désorientante au début, libératrice ensuite. Tu n'es pas que cette relation perdue — tu es plus large que cela." },
+      { label: "Estime Blessee", detail: "L'estime de soi est souvent blessée par une rupture, surtout si elle vient de l'autre. Tu peux te sentir 'pas assez', rejeté, indésirable. Mais une rupture ne dit pas ta valeur. Elle dit que cette relation-là, dans ce contexte-là, n'a pas pu continuer. Cela ne dit rien de fondamental sur qui tu es." },
+      { label: "Libération Lien", detail: "Tu peux, intérieurement, commencer à libérer le lien. Pas l'effacer — le transformer. Cette personne a fait partie de ta vie. Elle continuera à en avoir fait partie, même quand elle n'en fera plus partie au présent. Tu peux lui souhaiter bonne suite, même si cela demande du temps. Ou pas — tu n'es pas obligé d'être plus généreux que tu ne peux." },
+      { label: "Pas D Acceleration", detail: "Ne te laisse pas dire 'il faut tourner la page'. La page se tourne quand elle peut. Forcer crée des rebonds. Lui donner le temps qu'elle prend permet une vraie traversée. Quelques mois pour les ruptures plus simples. Plus long pour les relations longues, les divorces avec enfants, les abandons." },
+      { label: "Avenir Possible", detail: "Ta vie ne s'arrête pas avec cette relation. D'autres rencontres viendront, d'autres formes d'amour, d'autres aventures. Ce n'est peut-être pas ce que tu peux entendre aujourd'hui. C'est pourtant ce qui se passera. En attendant, tu peux te reconstruire seul, devenir plus toi-même." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux te traiter avec bienveillance, comme tu traiterais un ami qui traverse cela. Tu peux pleurer quand cela vient, rire quand cela vient. Tu peux demander de l'aide. Tu peux prendre soin de toi. Et progressivement, chaque jour, un peu plus de toi se reconstruit." }
       ],
     }],
   }],
@@ -5345,7 +6181,17 @@ const k_733: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour pertes liées à l'emploi : licenciement, retraite, fermeture d'entreprise, reconversion forcée, fin d'une carrière marquante. Travail sur le deuil identitaire, la transformation, l'avenir." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Identification des compétences transférables\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis une perte importante. Pas la perte d'une personne — la perte d'un statut, d'un rôle, d'une activité qui te donnait une place dans le monde. Cette perte est réelle, et le deuil qu'elle nécessite est légitime. Notre culture le minimise souvent — toi, tu peux le prendre au sérieux." },
+      { label: "Dimension Identitaire", detail: "Le travail occupe souvent une grande place dans l'identité. Quand on perd son travail, on peut se demander : qui suis-je sans cela ? C'est une question profonde, et c'est aussi une chance — celle de redécouvrir ce qu'on est en dehors de la fonction." },
+      { label: "Distinction Essentielle", detail: "Tu n'es pas ton travail. Ce que tu faisais — médecin, ouvrier, enseignant, dirigeant, artisan — était une expression de ce que tu es. Mais ce n'était pas ce que tu es. Ce que tu es — ta personnalité, tes valeurs, tes capacités, ce que tu offres aux autres — n'est pas perdu avec le travail." },
+      { label: "Emotions", detail: "Toutes les émotions sont légitimes. Tristesse de la fin. Colère contre les circonstances ou les responsables. Honte parfois, surtout avec un licenciement. Peur de l'avenir, des finances, du regard des autres. Soulagement aussi peut-être, quand le travail était devenu pesant. Ce mélange est normal." },
+      { label: "Compétences Demeurent", detail: "Dans cette activité que tu quittes, tu as développé des compétences. Pas seulement techniques — humaines, organisationnelles, créatives. Ces compétences, tu les emportes avec toi. Elles ne disparaissent pas avec le poste. Elles peuvent s'investir ailleurs, autrement." },
+      { label: "Temps De Pause", detail: "Cette transition mérite un temps de pause. Ne pas se précipiter dans le suivant. Laisser le temps de digérer ce qui finit avant de construire ce qui suit. Quelques semaines, quelques mois selon le cas. Cette pause n'est pas un luxe — c'est une nécessité pour construire la suite avec lucidité." },
+      { label: "Redecouverte", detail: "Tu peux redécouvrir des parts de toi qui étaient mises de côté pendant l'activité professionnelle. Des intérêts, des passions, des relations négligées par manque de temps. Cette redécouverte peut nourrir la suite, professionnelle ou non." },
+      { label: "Avenir A Construire", detail: "Ce qui vient ensuite n'est pas écrit. Tu peux construire quelque chose qui te ressemble plus. Ou retrouver quelque chose qui ressemble à ce qui finit. Ou inventer une voie nouvelle. Tu n'as pas à le décider tout de suite. Mais tu peux savoir que cela viendra, à mesure que tu auras digéré ce qui s'achève." },
+      { label: "Ressources Pratiques", detail: "Cette transition demande aussi de la stratégie pratique : finances à organiser, droits à connaître, réseau à mobiliser, formations possibles. Ne néglige pas cet aspect. Plus le concret est en place, plus l'esprit peut faire le travail intérieur." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux honorer ce qui finit, te donner du temps, et explorer doucement ce qui peut venir. Tu n'es pas réduit à ce que tu perds. Tu es une personne en transition, et cette transition peut devenir, avec le temps, une page riche de ta vie." }
       ],
     }],
   }],
@@ -5384,7 +6230,17 @@ const k_734: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients confrontés à l'annonce d'une maladie chronique, à la perte d'une fonction physique ou cognitive, à un handicap installé. Travail sur le deuil du corps d'avant et l'accueil du corps actuel." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 douce\n• Phase 2 — Sanctuaire intérieur K-BASE-012\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu apprends que ton corps a changé, ou va changer, et que cela ne se résoudra pas. Maladie chronique, handicap, perte d'une fonction. C'est un choc qui demande à être traversé comme un deuil. Le corps que tu avais, la vie que tu pensais avoir, doit faire place à autre chose." },
+      { label: "Choc Legitime", detail: "Le choc de l'annonce, ou de l'acceptation progressive de la réalité, est légitime. Sidération, déni, révolte, marchandage avec la maladie, dépression, et finalement une forme d'acceptation. Ces étapes sont celles du deuil. Tu fais le deuil d'un corps, d'une vie, d'une identité que tu pensais éternelle." },
+      { label: "Corps D Avant", detail: "Tu peux, dans ton sanctuaire, honorer le corps d'avant. Pas l'idéaliser — le reconnaître. Ce qu'il te permettait. Les sensations qu'il offrait. Les capacités qui étaient les siennes. Ce corps-là a existé, et il fait partie de ton histoire. Lui dire au revoir, ou au revoir à une partie de lui, est légitime." },
+      { label: "Emotions", detail: "Toutes les émotions sont là, parfois en même temps. Tristesse de ce qui est perdu. Colère contre ce qui arrive. Peur de l'avenir, des limitations, du regard. Honte parfois. Soulagement aussi, parfois, d'enfin avoir un nom pour ce qui se passait. Ce mélange est humain." },
+      { label: "Distinction Identite", detail: "Tu n'es pas ton corps. Ton corps est une partie de toi, mais ton identité dépasse les limites de ton corps. Ce que tu es — ce que tu offres au monde, ta sensibilité, tes capacités d'aimer, tes pensées, ton humour — n'est pas réduit par ce qui change dans ton corps." },
+      { label: "Corps Actuel", detail: "Le corps actuel demande à être accueilli, progressivement. Pas adoré tout de suite — accueilli. Lui parler avec moins de critique. Lui demander ce dont il a besoin. Reconnaître ce qu'il peut encore faire, qui est souvent plus que ce qu'on croit. Cette nouvelle relation se construit jour après jour." },
+      { label: "Adaptation Creative", detail: "Vivre avec ta nouvelle condition demande de l'adaptation. Trouver ce qui reste possible. Adapter ce qui peut l'être. Inventer parfois. Beaucoup de personnes témoignent qu'à terme, cette contrainte est devenue une source de créativité, voire de richesse." },
+      { label: "Communauté", detail: "Tu n'es pas seul. D'autres vivent ce que tu vis. Des associations existent, des groupes de pairs. Ces liens avec d'autres qui comprennent peuvent être précieux. Pas pour comparer les souffrances — pour ne pas être seul à porter." },
+      { label: "Avenir Redefini", detail: "Ton avenir n'est pas effacé — il est redéfini. Certaines choses que tu projetais ne seront peut-être pas possibles. D'autres, que tu n'avais pas imaginées, pourront l'être. Ta vie continue, sous une autre forme, et cette forme peut être pleine." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux honorer le deuil, accueillir le présent, et explorer doucement les possibles. Sans précipitation. Avec ton équipe médicale, avec tes proches, avec toi-même. Cette traversée est longue, et elle est tienne." }
       ],
     }],
   }],
@@ -5423,7 +6279,17 @@ const k_735: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients dont l'estime de soi a été abîmée par des événements de vie : ruptures, échecs, jugements, parcours difficiles. Travail de reconstruction de l'estime, distinction valeur/performance, voix intérieure bienveillante." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Voix sage K-BASE-023\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu portes en toi un regard sévère sur toi-même. Cette voix qui te juge, qui te trouve insuffisant, qui te rappelle tes manquements. Cette voix s'est installée à un moment, par des paroles entendues, des comparaisons subies, des échecs marqués. Aujourd'hui, nous allons travailler à transformer cette voix." },
+      { label: "Distinction Essentielle", detail: "Il y a une confusion fondamentale dans l'estime basse : la confusion entre la valeur de la personne et la performance qu'elle produit. Ce que tu fais — bien ou mal — ne dit pas ce que tu es. Tu peux échouer une fois, dix fois, mille fois, sans que cela affecte ta valeur intrinsèque comme être humain." },
+      { label: "Valeur Inconditionnelle", detail: "Tu as une valeur qui ne se gagne pas. Elle ne dépend ni de ce que tu réussis, ni de ce que tu produis, ni de ce que les autres pensent de toi. Cette valeur est là, depuis le début. Elle est ton héritage humain. Personne ne peut te l'enlever, même si beaucoup ont essayé." },
+      { label: "Origine Voix", detail: "La voix critique qui te juge n'est pas la tienne fondamentalement. Elle est la voix de quelqu'un — un parent, un enseignant, un autre proche — qui a fini par s'installer en toi. Tu peux maintenant la repérer comme extérieure à ton vrai toi." },
+      { label: "Voix Sage Alternative", detail: "À côté de cette voix critique, il existe en toi une autre voix — une voix bienveillante. Une voix qui reconnaît tes efforts, qui voit tes qualités, qui te traite comme tu traiterais un ami que tu aimes. Cette voix sage existe en toi, peut-être étouffée par la critique, mais bien vivante." },
+      { label: "Inventaire Qualites", detail: "Sans modestie ni vantardise, fais l'inventaire intérieur de quelques qualités qui sont les tiennes. Pas des grandes choses extraordinaires — des qualités humaines simples. Ta capacité à être présent pour les autres. Ton humour. Ta créativité. Ta loyauté. Ta sensibilité. Ces qualités sont tiennes, ne les oublie pas." },
+      { label: "Inventaire Traversees", detail: "Pense maintenant à ce que tu as déjà traversé dans ta vie. Difficultés que tu as surmontées. Périodes que tu as tenues. Apprentissages que tu as faits. Ce parcours, qui a demandé du courage et de la force, est aussi un témoignage de ta valeur. Tu n'es pas resté sur place — tu as marché." },
+      { label: "Pardon De L Imperfection", detail: "Tu n'es pas parfait. Personne ne l'est. L'attente de perfection est un piège qui rend l'estime impossible. Apprendre à se pardonner ses limites, ses erreurs, ses moments difficiles, est essentiel. Tu peux te traiter avec la même indulgence que tu as pour les personnes que tu aimes." },
+      { label: "Pratique Voix Bienveillante", detail: "Plusieurs fois par jour, quand la voix critique se manifestera, tu peux la remarquer, et choisir d'activer la voix bienveillante à la place. Pas une voix flagorneuse — une voix juste, qui reconnaît ce qui est et qui ne juge pas." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux te traiter comme tu traites les personnes que tu aimes. Avec patience pour les difficultés, reconnaissance pour les efforts, bienveillance pour les imperfections. Cette nouvelle relation à toi-même se construit jour après jour." }
       ],
     }],
   }],
@@ -5462,7 +6328,17 @@ const k_736: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients porteurs d'une culpabilité chronique, fondée ou non, qui pèse sur leur vie. Travail de différenciation responsabilité réelle / culpabilité excessive, dépose progressive, pardon de soi." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Sanctuaire K-BASE-012\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu portes une culpabilité qui ne te quitte pas. Pour quelque chose que tu as fait, ou pas fait. Pour les conséquences. Pour des dommages, réels ou imaginés. Cette culpabilité te suit comme une ombre, et elle pèse sur tout ce que tu fais." },
+      { label: "Distinction Essentielle", detail: "Il y a la responsabilité — qui te concerne pour ce qui dépendait de toi. Et il y a la culpabilité — qui peut être disproportionnée par rapport à la responsabilité réelle. La première peut conduire à des actions de réparation. La seconde se contente de souffrir, sans réparer rien." },
+      { label: "Examen Lucide", detail: "Examinons ce que tu portes. Quel est l'événement, l'acte, l'omission qui t'a installé dans cette culpabilité ? Sans nier ce qui s'est passé. En le regardant lucidement. Quelle était la situation à ce moment-là ? Que savais-tu ? Quelles étaient tes ressources ? Qu'aurait fait, à ta place, dans cette situation, une autre personne raisonnable ?" },
+      { label: "Humanite Imparfaite", detail: "L'humain est imparfait. Tu as le droit d'avoir fait des erreurs, d'avoir manqué de courage, d'avoir choisi mal sous la pression. Cela ne fait pas de toi un monstre. Cela fait de toi un humain, comme tous les autres humains. La culpabilité disproportionnée nie cette humanité partagée." },
+      { label: "Culpabilite Du Survivant", detail: "[Si pertinent] La culpabilité du survivant — d'avoir survécu quand d'autres sont morts, d'aller bien quand d'autres souffrent — est presque toujours injustifiée. Tu n'as pas choisi de survivre, ou d'aller bien. Cela t'a été donné. Le porter comme une faute est une cruauté envers toi-même." },
+      { label: "Reparation Si Possible", detail: "Si une réparation est possible et appropriée, elle peut alléger ta culpabilité. Pas tout effacer — alléger. Une parole dite. Une action faite. Une lettre. Une présence. Ce qui peut concrètement diminuer le dommage, fais-le si tu peux." },
+      { label: "Si Pas Possible", detail: "Si la réparation n'est pas possible — la personne est partie, le temps a effacé, la situation n'est plus réversible — alors une autre voie existe : le pardon de soi. Pas en oubliant. En reconnaissant que tu ne peux pas changer le passé, et que continuer à te flageller ne sert plus rien ni personne." },
+      { label: "Pardon Progressif", detail: "Le pardon de soi se construit progressivement. Il commence par : je reconnais ce qui s'est passé. Il se poursuit par : j'ai fait ce que j'ai pu, ou je n'ai pas fait ce que j'aurais pu, mais je n'étais pas la même personne qu'aujourd'hui. Il s'achève par : je peux continuer à vivre sans porter ce poids écrasant." },
+      { label: "Lien Avec Les Concernes", detail: "Si quelqu'un a été affecté par ce que tu portes, tu peux maintenant t'adresser intérieurement à cette personne. Lui dire ce que tu n'as pas pu lui dire. Demander pardon. Et imaginer ce qu'elle te dirait, en retour, si elle pouvait le dire. Souvent, ce qu'elle te dirait est moins dur que ce que tu te dis à toi-même." },
+      { label: "Post Hypnotique", detail: "Tu peux maintenant déposer une partie du poids. Pas effacer ce qui s'est passé. Reconnaître que tu n'as plus à le porter à ce niveau d'intensité. Cette légèreté nouvelle, tu en as le droit, et même peut-être le devoir, pour vivre la vie qui te reste." }
       ],
     }],
   }],
@@ -5501,7 +6377,18 @@ const k_737: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients gelés par une honte chronique, qu'elle soit liée à un événement particulier ou à un sentiment diffus d'indignité. Travail délicat de réintégration et de restauration." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003 très douce\n• Phase 2 — Sanctuaire renforcé K-BASE-012\n• Phase 3 — Travail spécifique (script — délicat)\n• Phase 4 — Clôture rituelle K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu portes une honte. Pour quelque chose que tu as vécu, fait, subi. Cette honte te gèle, t'isole, t'empêche d'être pleinement présent à toi-même et aux autres. Aujourd'hui, nous allons doucement, à la vitesse que tu peux, créer un espace pour cela." },
+      { label: "Distinction Emotions", detail: "Trois émotions se ressemblent et sont différentes. La culpabilité dit : j'ai fait quelque chose de mal. Le regret dit : j'aurais voulu faire autrement. La honte dit : je suis quelque chose de mal. C'est cette dernière, la honte, qui est la plus douloureuse parce qu'elle attaque l'identité." },
+      { label: "Specificite", detail: "La honte gèle. Elle empêche même d'en parler. Elle pousse à se cacher. Elle dit : si les autres savaient, ils me rejetteraient. Cette voix de la honte est puissante mais elle ment. La plupart des choses dont nous avons honte sont communes, humaines, parfois universelles." },
+      { label: "Sanctuaire Renforce", detail: "Dans ton sanctuaire intérieur, aujourd'hui, l'accueil est total. Aucun jugement. Aucune attente. Juste présence à ce qui est. Tu peux y déposer, sans nommer si tu ne veux pas, ce qui te fait honte. Le simple fait de ne plus être seul avec, dans ce lieu sécurisé, allège." },
+      { label: "Humanite Partagee", detail: "Ce qui te fait honte, d'autres l'ont vécu, fait, subi. Tu n'es pas seul. La honte vient souvent du sentiment d'être seul à porter ceci. En réalité, presque tout ce qui fait honte est partagé, plus ou moins, par d'innombrables humains. Cette communauté silencieuse de la honte, quand on en prend conscience, allège." },
+      { label: "Separation De L Acte", detail: "Ce qui s'est passé est une partie de ton histoire, pas la totalité de qui tu es. Si tu as fait quelque chose, tu n'es pas réductible à ce que tu as fait. Si tu as subi, tu n'es pas réductible à ce que tu as subi. Il y a en toi tellement plus que cela." },
+      { label: "Si Subi", detail: "Si la honte vient d'une humiliation, d'un abus, d'une violence subie, voici une vérité importante : la honte appartient à celui qui a humilié, abusé, violenté. Pas à toi. Pourtant, par un mécanisme cruel, c'est souvent la victime qui porte la honte. Tu peux commencer à rendre cette honte à qui elle appartient vraiment." },
+      { label: "Si Acte Propre", detail: "Si la honte vient de ce que tu as fait, regarde la situation à l'époque. Quel âge avais-tu ? Que savais-tu ? Quelles ressources avais-tu ? Que faisaient les autres autour de toi ? Ces conditions atténuent souvent ce qui semble impardonnable au présent." },
+      { label: "Dignite Intrinseque", detail: "Ta dignité humaine n'a pas été perdue par ce qui s'est passé. Elle n'est jamais perdue, jamais. Elle peut être recouverte par la honte, oubliée, niée. Mais elle demeure intacte en dessous. Aujourd'hui, tu peux commencer à la retrouver." },
+      { label: "Partage Si Pertinent", detail: "Le secret nourrit la honte. La parole, donnée à un confident sûr, allège. Tu n'as pas à révéler à qui que ce soit. Mais si un jour tu rencontres un cadre sécurisé pour en parler — thérapeute, ami profond, groupe — cette parole peut être libératrice." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux progressivement sortir de ton gel. Pas tout de suite — la honte ne se déloge pas en une séance. Mais quelque chose a commencé. Tu n'es plus tout à fait seul avec ce que tu portais. Et ta dignité, qui n'a jamais été perdue, commence à se laisser sentir." }
       ],
     }],
   }],
@@ -5540,7 +6427,17 @@ const k_738: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients submergés par une colère chronique ou des accès de colère disproportionnés. Travail sur la reconnaissance de la fonction de la colère, l'identification des déclencheurs, les modes d'expression sains." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Ancre de désamorçage\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une colère qui te déborde, ou qui couve en permanence. Cela te coûte dans tes relations, parfois au travail, dans ton couple, avec tes enfants. Et tu te reproches ces accès. Aujourd'hui, nous allons aborder cette colère autrement — pas pour l'éteindre, mais pour la transformer." },
+      { label: "Fonction De La Colere", detail: "La colère a une fonction utile : signaler que quelque chose ne va pas. Une limite franchie, un besoin ignoré, une injustice perçue. La colère elle-même n'est pas mauvaise. Ce qui devient problématique, c'est quand elle déborde au mauvais moment, ou quand elle devient permanente, ou quand elle blesse les mauvaises personnes." },
+      { label: "Origine Souvent", detail: "La colère chronique a presque toujours une histoire. Une accumulation de frustrations non exprimées. Des limites souvent franchies sans que tu aies pu les défendre. Parfois des blessures anciennes qui se ravivent. Reconnaître cette histoire ne supprime pas la colère, mais éclaire son sens." },
+      { label: "Signaux Corporels", detail: "Avant que la colère explose, ton corps t'envoie des signaux. Une chaleur qui monte. Une tension dans les épaules. Une crispation des mâchoires. Une accélération du souffle. Apprendre à repérer ces signaux précocement te donne un espace pour agir avant l'explosion." },
+      { label: "Pause Juste Avant", detail: "Quand tu repères les signaux, tu peux faire une pause. Quitter l'espace si possible. Trois respirations très longues. Faire descendre l'énergie. Cette pause, qui peut sembler impossible au premier abord, devient possible avec la pratique. Et elle change tout." },
+      { label: "Qu Est Ce Que Te Dit Colere", detail: "Quand la colère monte, plutôt que de la subir ou de l'éteindre, tu peux l'écouter. Que te dit-elle ? Quelle limite a été franchie ? Quel besoin n'est pas entendu ? Quelle blessure ancienne se réveille ? Cette écoute transforme l'énergie de la colère en information utile." },
+      { label: "Expression Juste", detail: "Une fois calmé, tu peux exprimer ce qui doit l'être, mais autrement. Pas en explosion. En parole posée. 'Je n'ai pas apprécié...', 'J'ai besoin de...', 'Je voudrais que...'. Cette expression assertive obtient souvent ce que la colère explosive n'obtient pas." },
+      { label: "Limites A Poser", detail: "Si tu te sens souvent en colère, c'est parfois que tes limites ne sont pas claires, ou pas respectées. Apprendre à poser des limites tôt, sans attendre l'explosion, prévient l'accumulation. Dire non, dire ce qui ne te convient pas, demander ce dont tu as besoin — ces compétences se pratiquent." },
+      { label: "Canalisation Energie", detail: "L'énergie de la colère peut aussi se canaliser dans l'action. Sport, activité physique intense, projet créatif, action militante pour ce qui te révolte. Cette énergie n'a pas à se perdre — elle peut nourrir des engagements importants." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux observer tes signaux corporels précoces. Tu peux faire la pause juste avant l'explosion. Tu peux écouter ce que la colère te dit. Et tu peux exprimer autrement, plus efficacement. Cette transformation prend du temps — sois patient avec toi-même." }
       ],
     }],
   }],
@@ -5579,7 +6476,17 @@ const k_739: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients porteurs d'une blessure d'abandon récurrente : peur abandonnique, hyperdépendance, choix relationnels répétitifs douloureux. Travail délicat sur la blessure ancienne et la sécurité intérieure." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Sanctuaire renforcé K-BASE-012\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu portes une blessure profonde. Une crainte que ceux que tu aimes te quittent. Un besoin parfois envahissant de leur présence. Une difficulté à supporter la solitude, ou les absences mêmes courtes. Cette blessure a une histoire — elle n'est pas une faiblesse, c'est une cicatrice ancienne qui n'a pas pu se refermer." },
+      { label: "Origine Blessure", detail: "Cette blessure s'est inscrite tôt, généralement dans l'enfance. Une absence parentale, parfois physique, parfois émotionnelle. Une déstabilisation des liens fondateurs. Ces premières expériences ont configuré ton système d'attachement à fonctionner en alerte permanente. Ce n'est pas ta faute." },
+      { label: "Distinction Passe Present", detail: "L'enfant que tu étais avait raison de se sentir en danger quand les figures d'attachement étaient absentes ou imprévisibles. La survie en dépendait. Aujourd'hui, tu es adulte. Tu disposes de capacités, de ressources, d'autonomie. Mais ton système d'attachement, lui, n'a pas mis à jour cette information. Il fonctionne encore en mode survie infantile." },
+      { label: "Enfant Interieur", detail: "Dans ton sanctuaire, tu peux maintenant rencontrer cet enfant en toi. L'enfant qui a vécu cette blessure. Il est encore là, en toi, avec sa peur de l'abandon. Il a besoin de quelqu'un qui prenne soin de lui. Et ce quelqu'un, ce peut être toi-même, l'adulte que tu es devenu." },
+      { label: "Adulte Protecteur", detail: "Tu peux, intérieurement, t'adresser à cet enfant. Lui dire : je suis là maintenant. Je suis l'adulte que tu es devenu. Je ne te quitterai pas. Tu n'as plus à craindre la solitude — je suis avec toi, à l'intérieur. Cette parole adressée à l'enfant en toi est une réparation profonde." },
+      { label: "Securite Interieure", detail: "La sécurité que tu cherchais à l'extérieur — chez les autres — peut maintenant se construire à l'intérieur. Ce n'est pas que les autres deviennent inutiles. C'est que tu n'es plus dépendant d'eux pour exister. Cette autonomie intérieure, paradoxalement, te permet d'être en relation plus saine." },
+      { label: "Solitude Apprivoise", detail: "La solitude, qui te terrifiait, peut devenir habitable. Pas immédiatement, mais progressivement. En restant avec toi-même, en découvrant que tu es bonne compagnie pour toi-même, en construisant des moments de qualité seul." },
+      { label: "Relations Renouvellees", detail: "À mesure que tu construis cette sécurité intérieure, tes relations changent. Tu deviens moins dans la peur, moins dans le besoin envahissant. Les autres peuvent venir vers toi sans pression. Et toi, tu peux choisir des relations plus saines, parce que tu n'es plus en demande désespérée." },
+      { label: "Patience", detail: "Ce travail est long. Une blessure ancienne ne se répare pas en une séance. Mais chaque séance, chaque pratique entre les séances, dépose un peu. Sois patient avec toi-même. L'enfant en toi a besoin de temps pour faire confiance que tu es vraiment là." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux dire intérieurement à l'enfant en toi : je suis là. Particulièrement quand la peur de l'abandon se manifeste. Cette présence à toi-même, répétée, construit progressivement la sécurité qui te manquait. Et ta vie relationnelle s'apaise." }
       ],
     }],
   }],
@@ -5618,7 +6525,17 @@ const k_740: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour tristesse persistante n'atteignant pas les critères de dépression majeure. Mélancolie diffuse, perte d'élan, manque de joie. Travail de soutien et de relance sans pathologisation." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation préalable importante\n• Phase 2 — Induction K-BASE-003 douce\n• Phase 3 — Lieu sûr\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu portes depuis quelque temps une tristesse qui ne te quitte pas. Pas une grande détresse — une grisaille. Un manque d'élan. Les choses qui te faisaient plaisir avant t'en font moins. Tu fonctionnes, mais sans la vivacité d'avant. Cet état mérite d'être pris au sérieux sans être dramatisé." },
+      { label: "Pas De Pathologie", detail: "Cette tristesse n'est pas forcément une dépression. C'est peut-être une réaction légitime à des événements de ta vie, à une période, à des accumulations. La tristesse a sa place — pas à côté de la joie, mais en complément. Elle dit quelque chose, elle a une fonction." },
+      { label: "Ecoute De La Tristesse", detail: "Plutôt que de chercher à la chasser, tu peux l'écouter. Que te dit-elle ? Sur quoi porte-t-elle ? Y a-t-il quelque chose qui n'a pas été pleuré, accueilli, traversé ? Y a-t-il un ajustement à faire dans ta vie ? La tristesse est parfois une invitation à transformer." },
+      { label: "Facteurs Alimentant", detail: "Plusieurs choses peuvent alimenter une tristesse persistante. Manque de sommeil. Manque de lumière naturelle. Manque d'activité physique. Manque de liens sociaux nourrissants. Surcharge professionnelle. Décalage entre ta vie et tes valeurs profondes. Identifier les facteurs te donne des leviers." },
+      { label: "Petites Lumieres", detail: "Même dans la grisaille, il y a souvent de petites lumières. Un moment dans la journée. Une personne. Une activité. Un lieu. Un goût. Identifier ces petites lumières, et y porter attention consciemment, les renforce. Ne pas attendre les grands moments — accueillir les petits." },
+      { label: "Corps Qui A Besoin", detail: "Ton corps demande des choses concrètes. Sortir au soleil, même quelques minutes. Bouger un peu, même peu. Manger des choses qui le nourrissent. Dormir ce dont il a besoin. Ces gestes simples, accumulés, soutiennent l'humeur d'une manière puissante." },
+      { label: "Lien A Renouer", detail: "Si tu te sens isolé, même au milieu d'autres, c'est peut-être qu'un lien doit se renouer. Avec un proche que tu as un peu perdu de vue. Avec un ami. Ou parfois avec toi-même. Un appel, un café, une lettre — petit geste qui peut beaucoup." },
+      { label: "Sens A Retrouver", detail: "Parfois la tristesse vient d'un manque de sens. Tu fais ce qu'il faut, mais sans que cela te porte. Renouer avec ce qui te tient à cœur — un projet, une cause, une création, une présence à quelque chose de plus grand — peut redonner de l'élan." },
+      { label: "Pas De Precipitation", detail: "Il n'y a pas d'urgence à aller mieux. La tristesse fait son travail à son rythme. Pas la combattre, l'accompagner. Comme un visiteur qui restera un temps puis s'en ira. Cette patience avec soi-même est elle-même thérapeutique." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux écouter ce que la tristesse te dit, prendre soin des fondamentaux de ton corps, soigner les liens, t'ouvrir aux petites lumières, renouer avec le sens. Cette tristesse passera, à mesure que tu fais ces gestes simples avec patience." }
       ],
     }],
   }],
@@ -5657,7 +6574,17 @@ const k_741: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour épisode dépressif léger en complément du suivi médical/psychiatrique. Travail de soutien à la sortie, mobilisation douce, identification des leviers, prévention des rechutes." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation continue importante\n• Phase 2 — Induction K-BASE-003\n• Phase 3 — Lieu sûr\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu traverses un épisode dépressif. Tu fais ce qu'il faut médicalement — un suivi, peut-être un traitement. Aujourd'hui, je t'accompagne en complément. La dépression est un état médical réel, et tu y traverses ce qui est sans doute l'un des moments les plus difficiles de ta vie." },
+      { label: "Validation", detail: "Tu n'es pas faible. Tu n'es pas paresseux. Tu n'es pas en train de te plaindre. Tu vis une maladie qui touche le fonctionnement de ton cerveau. Cette maladie peut s'aggraver ou s'apaiser, et plusieurs leviers peuvent aider l'apaisement. Aujourd'hui, nous explorons ces leviers." },
+      { label: "Traitement Observé", detail: "Si tu prends un traitement, son observance régulière est essentielle. L'effet met plusieurs semaines à se manifester pleinement. Ne pas l'arrêter sans accord médical — la rechute est fréquente lors d'arrêts intempestifs. Tu donnes au traitement le temps de faire son travail." },
+      { label: "Petits Pas", detail: "Pendant la dépression, les grandes choses sont impossibles. Mais les petites choses, parfois, sont accessibles. Te lever à une heure régulière. Sortir 10 minutes. Manger un peu. Appeler une personne. Ces petits pas comptent. Ils maintiennent une dynamique minimale, qui à terme se densifie." },
+      { label: "Activation Comportementale", detail: "Un principe : agir d'abord, attendre l'envie ensuite. Dans la dépression, l'envie ne vient pas. Si tu attends d'avoir envie, tu attendras longtemps. Si tu fais une petite action, l'envie suit parfois. Pas toujours. Mais souvent." },
+      { label: "Lumière Corporelle", detail: "Ton corps a des besoins qui soutiennent l'humeur : lumière du jour (sortir, ouvrir les rideaux), mouvement même léger (marche), alimentation régulière, sommeil structuré. Ces fondamentaux ne sont pas du luxe — ce sont des médicaments simples." },
+      { label: "Liens Qui Nourrissent", detail: "Identifier les liens qui te nourrissent vraiment, et les cultiver — même modestement. La dépression isole. Cet isolement aggrave la dépression. Renouer un lien, même bref, peut être un acte thérapeutique. Pas avec tout le monde — avec ce qui te fait du bien." },
+      { label: "Pensees Qui Descendent", detail: "Pendant la dépression, tu peux remarquer des pensées particulièrement noires, déformées, sévères avec toi-même. Ces pensées sont des symptômes de la maladie, pas la vérité. Tu peux les remarquer, les entendre comme tu entendrais le bruit de la maladie, sans les croire." },
+      { label: "Recherche De Petites Joies", detail: "Chercher activement des petites joies. Une tasse de thé chaud. Un rayon de soleil. Une chanson. Un sourire d'enfant. Une bonne odeur. Ces micro-plaisirs, dans la dépression, sont précieux. Les noter même, à la fin de chaque journée. Cette pratique soutient la sortie progressive." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux faire un petit pas chaque jour. Sortir un peu. Bouger un peu. Manger un peu. Voir un peu. Et croire que ce que tu vis a une fin. La dépression, traitée, s'apaise dans la grande majorité des cas. Tu reverras la lumière." }
       ],
     }],
   }],
@@ -5696,7 +6623,17 @@ const k_742: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en panne de motivation, sans dépression caractérisée. Travail sur la reconnexion aux désirs profonds, la mobilisation du Ki, la reprise progressive d'élan." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Identification action concrète\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu n'as plus envie. Pas une grande détresse — un manque d'élan. Les choses te paraissent fades, sans relief. Tu fais ce qu'il faut, mais sans porter. Cette panne d'élan est l'une des conditions les plus pernicieuses parce qu'elle ne déclenche pas l'alarme — elle te pousse juste à fonctionner sans vivre vraiment." },
+      { label: "Pas De Pathologie", detail: "Cette apathie n'est pas une maladie en soi. Elle peut avoir plusieurs causes : épuisement après période intense, manque d'alignement avec ce que tu fais, étouffement de tes désirs profonds, monotonie installée. Aucune de ces causes ne nécessite de médicament — elles demandent une transformation." },
+      { label: "Ki Endormi", detail: "Le Ki, l'énergie vitale, peut être endormi. Pas mort — endormi. Comme un feu sous des cendres. Aujourd'hui, nous allons souffler doucement sur les cendres pour voir s'il reste des braises." },
+      { label: "Qu Est Ce Qui Te Porte", detail: "Pense à des moments dans ta vie où tu te sentais vivant. Vraiment vivant. Pas seulement fonctionnant. Quels moments ? Avec qui ? Dans quels contextes ? Que faisais-tu ? Que ressentais-tu ? Ces souvenirs ne sont pas seulement des regrets — ils sont des indices." },
+      { label: "Désirs Souterrains", detail: "Sous l'apathie, des désirs sont parfois enterrés. Pas reconnus. Étouffés par la pression du quotidien, les obligations, les choix anciens. Tu peux maintenant, en silence, te demander : si je m'écoutais vraiment, que voudrais-je ? Pas des choses immenses ou irréalistes. Des choses authentiques." },
+      { label: "Freins", detail: "Il y a des freins à ces désirs. Peurs, contraintes, jugements anticipés, identité figée. Identifier ces freins ne veut pas dire les supprimer — mais les nommer permet de voir ce qui peut être transformé." },
+      { label: "Micro Engagement", detail: "L'apathie ne se déloge pas par grandes décisions héroïques. Elle se déloge par des micro-engagements. Une action minuscule qui te ressemble vraiment. Demain, ou cette semaine. Pas un grand projet — une petite action concrète, qui dit oui à un désir authentique." },
+      { label: "Activation Par Action", detail: "Comme dans la dépression, l'élan suit l'action plutôt que l'inverse. Si tu attends de te sentir motivé pour bouger, tu attendras longtemps. Si tu bouges un peu — vers quelque chose qui te ressemble — l'envie peut suivre. Pas toujours, mais souvent." },
+      { label: "Corps Qui Porte", detail: "Ton corps a besoin d'être sollicité pour se réveiller. Une marche dans la nature. Un mouvement plus rythmé. Une respiration plus ample. Cette mobilisation corporelle nourrit aussi le Ki. Le mouvement physique précède souvent le mouvement intérieur." },
+      { label: "Post Hypnotique", detail: "Avant la fin de cette semaine, tu peux faire une petite chose qui te ressemble vraiment. Pas pour bien faire, pas pour quelqu'un d'autre, pas pour cocher une case. Pour toi. Cette action minuscule peut être le début d'un réveil progressif." }
       ],
     }],
   }],
@@ -5735,7 +6672,17 @@ const k_743: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients porteurs d'un mal-être diffus, sans cause identifiable, lié à un sentiment de vide existentiel ou de questionnement sur le sens. Travail à la lisière du psychologique et du spirituel, mobilisant fortement le Ka." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-004 (conversationnelle)\n• Phase 2 — Sanctuaire K-BASE-012\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Voix sage K-BASE-023\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu portes un mal-être qui n'a pas de nom précis. Pas de drame particulier. Pas de raison évidente. Et pourtant quelque chose, en arrière-plan, ne va pas. Un vide. Une absence. Comme si la vie passait à côté de toi, ou toi à côté d'elle. Ce mal-être est l'un des plus difficiles à nommer, et l'un des plus profonds." },
+      { label: "Legitimation", detail: "Ce que tu vis n'est pas de la complaisance, ni de l'ingratitude pour ce que tu as. C'est une question profondément humaine que les sages, les philosophes, les chercheurs spirituels ont abordée à toutes les époques. Tu rencontres en toi quelque chose que les humains attentifs rencontrent à un moment ou à un autre." },
+      { label: "Pas A Resoudre", detail: "Cette question ne se résout pas avec une recette. Elle se traverse, se vit, se transforme avec le temps. Mais elle peut s'apaiser, à mesure que tu trouves des manières d'y répondre — pas par des mots, par ta vie même." },
+      { label: "Essence Durable", detail: "Quelque part en toi, il y a une part qui ne tremble pas devant ces questions. Une essence — ce que KIIKA appelle le Ka. Cette essence n'est pas faite de tes réussites, de tes possessions, de tes liens. Elle est plus profonde. Elle est ce qui est là depuis le début et qui demeurera." },
+      { label: "Sanctuaire Existentiel", detail: "Dans ton sanctuaire, tu peux rejoindre cette part. Elle se reconnaît à une qualité particulière : quand tu y es, le mal-être ne disparaît pas, mais il prend une autre couleur. Il devient une compagne plutôt qu'un ennemi. Tu peux le regarder en face sans te perdre." },
+      { label: "Inscription Dans Le Grand", detail: "Tu n'es pas seul à porter ces questions. Avant toi, des milliards d'êtres se sont assis avec ces mêmes vertiges. Tu fais partie d'une grande conversation qui dure depuis l'origine de la conscience humaine. Cette communauté silencieuse, à travers les âges, est un soutien." },
+      { label: "Sens A Tisser", detail: "Le sens n'est pas une vérité unique à découvrir. C'est une trame que tu tisses, jour après jour, par ce que tu fais, par ce que tu aimes, par ce qui te traverse. Tu ne trouves pas le sens — tu le construis. Et cette construction, modeste, peut suffire." },
+      { label: "Petits Actes Porteurs", detail: "Cherche dans ta vie ce qui, malgré le mal-être, continue à te porter, même un peu. Une présence. Une activité. Une création. Un engagement. Ces choses qui survivent à ton interrogation sont précieuses — elles sont peut-être les pierres de ton chemin." },
+      { label: "Pas De Pression De Resolution", detail: "Tu n'as pas à résoudre cette question avant la fin de cette semaine, ni de cette année. Elle peut t'accompagner toute ta vie, sous différentes formes. Ce qui change, c'est ta relation avec elle. De peur, vers familiarité. De vide, vers espace habitable." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux te rendre régulièrement à ton sanctuaire intérieur. Tu peux accueillir le mal-être sans paniquer. Tu peux tisser, par tes actes, le sens qui te ressemble. Et tu peux savoir que cette traversée, faite avec présence, transforme." }
       ],
     }],
   }],
@@ -5774,7 +6721,18 @@ const k_744: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour anxiété spécifique de la mort, qu'elle survienne à un âge avancé, après une maladie, ou de manière plus jeune et inattendue. Travail délicat mêlant psychologique et spirituel." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Sanctuaire K-BASE-012\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Voix sage K-BASE-023\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu portes une peur de mourir qui dépasse la vigilance ordinaire. Une peur qui s'invite, parfois en pleine vie, et qui te paralyse. Cette peur n'est pas anormale — elle est l'une des plus humaines qui soient. Mais quand elle envahit, elle empêche de vivre, paradoxalement." },
+      { label: "Universalite", detail: "Tous les humains qui ont vécu ont dû composer avec la mort. Ceux qui partent. La leur, à venir. Cette compagnie de la mort fait partie de l'expérience humaine. Tu n'es pas seul à la rencontrer dans toi." },
+      { label: "Pas Eviter", detail: "Beaucoup essaient d'éviter de penser à la mort, et cette stratégie augmente la peur. Plus tu évites quelque chose, plus elle devient effrayante. Aujourd'hui, nous allons doucement, dans le sanctuaire, pouvoir y penser sans être envahi." },
+      { label: "Distinction", detail: "Il y a plusieurs peurs derrière la peur de la mort. Peur de la souffrance avant. Peur de quitter ceux qu'on aime. Peur du néant ou de l'inconnu. Peur de n'avoir pas vécu pleinement. Chacune mérite d'être identifiée. Souvent, ce qui fait peur est plus précis qu'un grand 'la mort'." },
+      { label: "Souffrance Dejouée", detail: "Pour la peur de la souffrance — la médecine d'aujourd'hui sait soulager. Soins palliatifs, antalgiques, accompagnement. Tu n'as pas à t'imaginer souffrant atrocement. Cette peur peut être désamorcée par information." },
+      { label: "Partir De Ceux Aimes", detail: "Pour la peur de quitter ceux qu'on aime — cette peur dit quelque chose de précieux : ton amour. Mais aussi, elle peut s'apaiser quand tu sais que les liens se transmettent au-delà de ta présence. Ce que tu donnes à tes proches, en présence, vit en eux après ton passage." },
+      { label: "Inconnu Apprivoise", detail: "Pour la peur de l'inconnu d'après — c'est la peur la plus profonde, et la plus universelle. Personne ne sait avec certitude. Différentes traditions proposent différentes réponses. Tu peux te connecter, dans ton sanctuaire, à ce qui te porte le plus — sans avoir à choisir une croyance définitive." },
+      { label: "Pas Assez Vecu", detail: "Pour la peur de n'avoir pas assez vécu — cette peur peut devenir un appel. À vivre plus pleinement maintenant. À soigner les liens. À faire ce qui te tient à cœur. À ne pas reporter à des demains incertains. Cette peur, écoutée, transforme la vie présente." },
+      { label: "Present Precieux", detail: "La conscience de la finitude rend, paradoxalement, le présent plus précieux. Ce qui est limité dans le temps a une saveur que l'éternité ne donnerait pas. Chaque jour vécu pleinement est un don. Cette conscience est ce que la peur peut t'offrir, si tu sais la transformer." },
+      { label: "Force Dans Traversee", detail: "Tu ne peux pas faire que la mort n'existe pas. Tu peux apprendre à la regarder en face, fois après fois, sans t'effondrer. Cette force se construit. Elle ne t'enlève pas l'émotion — elle te permet de continuer à vivre malgré l'émotion." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, quand la peur monte, tu peux la regarder, la nommer, la laisser être. Sans la combattre, sans la fuir. Et puis revenir à ce qui est devant toi : ce moment, cette personne, cette tâche. La vie continue, et toi avec elle, jusqu'à son terme — qui n'est pas pour aujourd'hui." }
       ],
     }],
   }],
@@ -5813,7 +6771,17 @@ const k_745: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients hypocondriaques modérés, surveillant leur corps avec anxiété, multipliant les consultations, redoutant des maladies graves. Travail sur la régulation de la surveillance et la confiance corporelle." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Désinvestissement progressif\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu surveilles ton corps en permanence. Chaque sensation devient un possible signal de maladie grave. Tu consultes, tu cherches sur internet, tu fais des examens, et même quand on te rassure, l'inquiétude revient. Cette anxiété de la santé est épuisante, et elle ne te protège pas vraiment." },
+      { label: "Paradoxe", detail: "Voici un paradoxe : plus tu surveilles ton corps, plus tu remarques des sensations, et plus l'inquiétude grandit. La surveillance amplifie ce qu'elle prétend prévenir. Et même quand un examen te rassure, le soulagement est court — l'inquiétude se réinstalle sur autre chose." },
+      { label: "Corps Bavard", detail: "Ton corps émet en permanence des sensations diverses. Battements cardiaques irréguliers, contractions musculaires, gargouillements, picotements, tensions, douleurs passagères. Tout cela est NORMAL. C'est le bruit de fond corporel. La plupart des gens n'y prêtent pas attention. Toi, tu y prêtes une attention angoissée, et chaque sensation devient un signal d'alarme." },
+      { label: "Distinction Signal Bruit", detail: "Apprendre à distinguer le signal du bruit est un apprentissage. Le vrai signal d'alarme est généralement net, persistant, accompagné d'autres signes. Le bruit corporel ordinaire est variable, passager, isolé. Avec la pratique, tu apprends à laisser passer le bruit sans réagir." },
+      { label: "Confiance Corps", detail: "Ton corps fonctionne bien. Il l'a fait toute ta vie. Il a des capacités d'adaptation et de réparation considérables. Lui faire confiance est libérateur. Cette confiance ne signifie pas négligence — tu peux toujours consulter quand un signal est vraiment net. Mais tu n'as pas à le surveiller en permanence." },
+      { label: "Désinvestissement", detail: "À partir de maintenant, tu vas pratiquer le désinvestissement attentionnel. Quand tu te surprends à surveiller une sensation, tu peux dire intérieurement : c'est du bruit, je passe. Et tu rediriges ton attention vers ce que tu fais, vers ce qui est autour de toi." },
+      { label: "Internet Dangereux", detail: "La cyberchondrie est un piège majeur. Chercher des symptômes sur internet trouve toujours des maladies graves possibles. Cette recherche n'apaise pas — elle aggrave. Tu peux décider, comme règle d'hygiène, de ne plus chercher tes symptômes sur internet." },
+      { label: "Consultations Juste Dose", detail: "Tu peux convenir avec un médecin référent d'un suivi régulier — par exemple un bilan annuel — qui te donne le cadre de la juste vigilance. Entre ces rendez-vous, tu n'as pas besoin de multiplier les consultations pour des symptômes mineurs et passagers." },
+      { label: "Anxiete Fond", detail: "Cette hyper-surveillance vient souvent d'une anxiété de fond. La travailler en parallèle est précieux. Ce n'est pas que tu fabriques tes peurs — c'est qu'un terrain anxieux les amplifie. Apaiser ce terrain change la perception." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux pratiquer le désinvestissement, faire confiance à ton corps, te limiter sur internet, accepter le bruit corporel comme normal. Avec la régularité, l'anxiété de santé diminue progressivement. Et tu retrouves de l'espace pour vivre." }
       ],
     }],
   }],
@@ -5852,7 +6820,17 @@ const k_746: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients qui ne savent pas refuser, qui s'épuisent à satisfaire les autres, qui craignent les conflits. Travail sur l'assertivité, le droit de dire non, la légitimité des limites." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Voix sage K-BASE-023\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Pratique imaginaire\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu as du mal à dire non. Tu acceptes ce qui te coûte, par peur de décevoir, par crainte du conflit, par habitude d'aider. Cette générosité a son prix : épuisement, ressentiment caché, sentiment d'être pris pour acquis. Et souvent, les autres prennent l'habitude que tu dises oui." },
+      { label: "Origine", detail: "Cette difficulté vient souvent de loin. D'une enfance où dire non était dangereux ou mal vu. D'un rôle d'aidant familial. D'une éducation qui valorisait la conformité aux attentes des autres. Ce n'est pas ta faute — c'est un apprentissage qui s'est installé. Et qui peut se transformer." },
+      { label: "Legitimite Du Non", detail: "Dire non est ton droit fondamental. Pas un cadeau qu'on te ferait. Un droit. Tu n'as pas à mériter de dire non. Tu peux refuser ce qui ne te convient pas, ce qui te coûte trop, ce qui ne s'aligne pas avec tes valeurs. Cette permission, tu te la donnes à toi-même." },
+      { label: "Peurs Du Non", detail: "Quelles peurs t'empêchent de dire non ? Peur de blesser. Peur d'être rejeté. Peur de la colère de l'autre. Peur de ne plus être aimé. Peur de paraître égoïste. Examine ces peurs — elles sont souvent surdimensionnées par rapport à la réalité." },
+      { label: "Realite Du Non", detail: "Voici la réalité : la plupart des gens acceptent un non posé avec respect. Ils peuvent être déçus brièvement, mais le lien ne se brise pas. Et souvent, ils respectent davantage les personnes qui savent poser leurs limites que celles qui disent toujours oui de manière inauthentique." },
+      { label: "Non Avec Bienveillance", detail: "Dire non n'est pas dire 'fous-le camp'. Tu peux dire non avec chaleur. 'Je ne pourrai pas', 'Cela ne me convient pas', 'Je préfère ne pas'. Ces formulations posent une limite tout en respectant l'autre. Pas besoin d'agressivité." },
+      { label: "Pas D Explication Excessive", detail: "Souvent, quand tu dis non, tu sur-justifies. Tu donnes mille raisons. Cette sur-justification est un signe que tu cherches l'approbation. Tu peux apprendre à dire non sans justifier longuement. 'Non, je ne pourrai pas' suffit. Pas besoin d'expliquer ta vie." },
+      { label: "Pratique Imaginaire", detail: "Maintenant, imagine une situation récente où tu aurais voulu dire non et où tu as dit oui. Imagine que tu reviennes dans cette situation. Cette fois, tu dis non. Avec calme, avec respect. Vois la situation se dérouler. Tu remarqueras que ce qui se passe est moins terrible que ce que tu redoutais." },
+      { label: "Premiere Fois", detail: "Choisis une situation à venir cette semaine où tu pratiqueras. Pas la plus difficile — une situation modérée. Là, tu vas oser un non. Petit, mais ferme. Cette première fois ouvre une brèche. Les suivantes seront plus faciles." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux te donner la permission de dire non. Tu peux exprimer tes limites avec calme et respect. Et tu peux faire confiance que les vraies relations supportent ces limites — au contraire, elles s'en trouvent souvent renforcées." }
       ],
     }],
   }],
@@ -5891,7 +6869,17 @@ const k_747: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients submergés par la charge mentale (souvent femmes, parents, professions de soin). Travail sur la conscience de la charge, le délestage légitime, la délégation, le droit à l'oubli." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Identification de ce qui peut être délégué\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu portes une charge mentale énorme. Pas seulement les choses que tu fais — toutes les choses que tu PENSES, ANTICIPES, COORDONNES. Les rendez-vous, les courses, les anniversaires, les vêtements à laver, les devoirs à vérifier, les papiers, les nourritures, mille détails que tu portes seul ou seule. Cette charge invisible te coûte autant que les actions visibles." },
+      { label: "Specificite", detail: "Cette charge mentale n'est pas reconnue à sa juste valeur. Souvent, ceux autour de toi voient ce que tu fais, mais pas ce que tu portes en pensée. Pour eux, le système familial ou professionnel fonctionne. Pour toi, ton cerveau ne s'arrête jamais." },
+      { label: "Pas Universel", detail: "Cette charge est portée majoritairement par les femmes dans les couples hétérosexuels, par les responsables dans les équipes, par les soignants dans les familles, par les parents seuls. Tu n'es pas seul à la porter — beaucoup la portent. Et cela ne va pas de soi." },
+      { label: "Consequence Corporelle", detail: "Une charge mentale chronique a des conséquences réelles. Difficulté à se reposer même quand le corps est immobile. Sommeil moins réparateur. Fatigue inexpliquée. Irritabilité. Sentiment de ne jamais finir. Ces symptômes sont la rançon d'une charge non partagée." },
+      { label: "Decharge Imagee", detail: "Imagine maintenant cette charge comme un sac que tu portes sur les épaules. Lourd. Toujours là. Tu peux, en imagination, le poser un instant. Voir ce que c'est de ne pas le porter. Cette expérience imaginaire est précieuse — elle rappelle à ton corps qu'il existe sans la charge." },
+      { label: "Qu Est Ce Qui Peut Etre Delegue", detail: "Examine maintenant ta charge. Qu'est-ce qui peut être délégué à quelqu'un d'autre ? Qu'est-ce qui peut être supprimé tout simplement ? Qu'est-ce qui peut être organisé pour ne plus être à porter mentalement (listes, applications, calendriers partagés) ?" },
+      { label: "Difficulte A Deleguer", detail: "Souvent, déléguer est difficile parce que tu crains que cela soit moins bien fait, ou que cela ne soit pas fait du tout. Cette crainte n'est pas absurde, mais elle te piège. Apprendre à déléguer imparfaitement est mieux que de tout porter parfaitement et s'épuiser. Le mieux est l'ennemi du bien." },
+      { label: "Droit A Oublier", detail: "Tu as le droit, parfois, de simplement oublier des choses. De ne pas tout porter. De laisser une chose dérailler de temps en temps, sans drame. Cette imperfection assumée est libératrice. Tu n'es pas la machine à tout coordonner." },
+      { label: "Communication Avec Proches", detail: "Si tu es en couple ou en famille, communiquer sur ta charge mentale est un acte essentiel. Beaucoup de proches ne savent pas. Pas parce qu'ils sont malveillants — parce que la charge est invisible. La nommer, la décrire concrètement, négocier un partage, est une voie." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux prendre conscience de ta charge, identifier ce qui peut être allégé, déléguer ce qui peut l'être, accepter une certaine imperfection, et te donner régulièrement des temps de vraie pause mentale. Ton esprit a le droit de se reposer." }
       ],
     }],
   }],
@@ -5930,7 +6918,16 @@ const k_748: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients souffrant de jalousie chronique en couple ou face à la réussite d'autres. Travail sur la sécurité intérieure, le rapport à la valeur de soi, le désinvestissement de la comparaison toxique." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Ancrage de sécurité intérieure\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une jalousie qui te ronge. Que ce soit dans ton couple, ou face à la réussite des autres, ou face à ce que les autres semblent avoir et que tu n'as pas — quelque chose en toi prend feu, te trouble, te fait souffrir. Tu sais que cette jalousie t'abîme, et pourtant elle revient." },
+      { label: "Distinction Jalousie Amour", detail: "Pour la jalousie amoureuse : on confond souvent la jalousie avec l'amour. La jalousie n'est pas la preuve que tu aimes — c'est la preuve que tu as peur. Peur de perdre, peur d'être trahi, peur de ne pas être à la hauteur. L'amour véritable repose sur la confiance, la jalousie repose sur l'insécurité. Apprendre à les distinguer est un premier pas." },
+      { label: "Origine Insecurite", detail: "La jalousie chronique vient souvent d'une insécurité intérieure ancienne. Pas forcément liée à la situation présente. Une part de toi qui ne se sent pas tout à fait digne, pas tout à fait sûre d'être aimable, et qui projette cette insécurité sur l'extérieur. Cette part-là mérite ton attention bienveillante, pas ton mépris." },
+      { label: "Securite Interieure", detail: "Ta sécurité, fondamentalement, ne peut pas venir des autres. Pas de la fidélité de ton partenaire, pas de la garantie que tu seras toujours préféré, pas de l'absence de gens plus brillants que toi. Elle ne peut venir que d'un endroit en toi. Cet endroit existe — c'est l'endroit qui sait que tu as ta valeur propre, indépendamment de comparaison." },
+      { label: "Dans Lieu Sur", detail: "Dans ton lieu sûr, tu peux te connecter à cette part de toi qui n'a pas besoin de comparer. Cette part qui sait que tu es ce que tu es, avec ta valeur, avec tes qualités, avec tes manques aussi. Pas un autre. Pas en compétition. Toi." },
+      { label: "Pour Jalousie Amoureuse", detail: "Pour la jalousie amoureuse spécifiquement : tu peux distinguer ce qui dépend de toi et ce qui ne dépend pas de toi. Ton partenaire est libre. Sa fidélité est un choix qu'il fait, pas une garantie que tu peux extorquer. Vouloir tout contrôler chez lui ne te sécurise pas — cela t'épuise et l'éloigne. La vraie sécurité est de pouvoir aimer sans posséder." },
+      { label: "Pour Jalousie Reussite", detail: "Pour la jalousie face à la réussite des autres : ce qu'ils ont ne te prend rien. Le succès n'est pas un gâteau dont les parts se réduisent quand quelqu'un en prend. Ta vie a son propre chemin, ses propres rythmes, ses propres formes de réussite. Apprendre à célébrer la joie des autres, même imparfaitement, libère." },
+      { label: "Pratique Quotidienne", detail: "Quand la jalousie monte, tu peux prendre quelques respirations et te demander : qu'est-ce que je crains vraiment ? De quoi cette émotion est-elle le signal ? Cette pause transforme la jalousie réflexe en information sur tes propres insécurités, que tu peux alors travailler." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, quand la jalousie monte, tu disposes d'outils. Tu peux identifier l'insécurité sous-jacente. Tu peux te reconnecter à ta valeur propre. Tu peux distinguer ce qui dépend de toi de ce qui ne dépend pas de toi. Et progressivement, ta sécurité intérieure se renforce, et la jalousie perd de son emprise." }
       ],
     }],
   }],
@@ -5969,7 +6966,17 @@ const k_749: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients portant un ressentiment ancien et lourd contre une personne ou un événement. Travail de différenciation entre rancune toxique et reconnaissance d'une injustice subie, voie de la libération sans déni." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Écoute en conscience normale\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu portes en toi une rancune qui te pèse depuis longtemps. Une personne, un événement, une injustice. À chaque fois que tu y penses, quelque chose se serre, s'enflamme, se referme. Tu sais que cette rancune ne te fait pas du bien. Mais elle est là, comme un nœud qui ne veut pas se défaire." },
+      { label: "Pas De Pardon Force", detail: "Une chose importante d'emblée : nous n'allons pas te demander de pardonner. Le pardon imposé ne fonctionne pas, et il n'est pas toujours juste. Ce que nous allons faire, c'est différent : alléger ce que tu portes, sans pour autant nier ce qui a été." },
+      { label: "Reconnaissance Injustice", detail: "Si quelque chose d'injuste a été commis envers toi, ton ressentiment est en partie une reconnaissance de cette injustice. Cette reconnaissance est légitime. La rancune dit : ce qui s'est passé n'était pas acceptable. Cette part-là, on la garde. On ne la trahit pas." },
+      { label: "Cout Du Ressentiment", detail: "Mais le ressentiment chronique, lui, te coûte. Il occupe de l'espace mental. Il colore tes émotions. Il limite ta liberté. Plus tu portes la rancune, moins tu vis. Et la personne contre qui tu en veux, souvent, ne se rend pas compte ou ne souffre pas autant que toi de ce que tu portes contre elle." },
+      { label: "Differencier Pardon Oubli", detail: "Voici une distinction essentielle : pardonner et oublier sont deux choses très différentes. Tu peux te libérer du ressentiment sans pour autant oublier ce qui s'est passé. Ce qui s'est passé reste un fait. Mais l'énergie que tu mets à le porter peut être récupérée pour autre chose. Ce n'est pas une faveur que tu fais à l'autre — c'est un cadeau que tu te fais à toi-même." },
+      { label: "Image Porter", detail: "Imagine que ce ressentiment est un poids que tu portes. Tu le porteras peut-être encore un peu — mais tu peux commencer à voir à quel point il pèse. Et te demander : ai-je envie de continuer à porter cela jusqu'au bout de ma vie ? Ou y a-t-il quelque chose à reposer, doucement, à ton rythme ?" },
+      { label: "Image Dialogue", detail: "Tu peux, dans ton esprit, t'adresser à la personne ou à l'événement source du ressentiment. Lui dire ce qui n'a pas été dit. Tout ce qui demande à être dit. Pas pour réconcilier — pour exprimer. Cette expression intérieure permet souvent à quelque chose de se déposer." },
+      { label: "Recuperer Energie", detail: "L'énergie que tu mets à ressasser, à te raconter intérieurement la même histoire d'injustice, peut être récupérée. Pas pour effacer le passé — pour investir le présent. Ce que tu pourrais faire, créer, vivre, aimer, si cette énergie était disponible à autre chose ?" },
+      { label: "Pas A Pas", detail: "Cela ne se fait pas en une séance. Pas même en plusieurs. C'est un travail qui se déroule dans le temps. Mais à partir d'aujourd'hui, tu peux commencer. Reconnaître ce que tu as porté. Décider de ne plus en porter autant. Récupérer un peu de l'énergie investie. Et chaque pas dans cette direction est une libération." },
+      { label: "Post Hypnotique", detail: "Dans les jours qui viennent, quand le ressentiment monte, tu peux te demander : combien d'énergie ai-je envie d'y consacrer aujourd'hui ? Et tu peux choisir d'en consacrer un peu moins. Pas de mépriser ta blessure — de protéger ta vitalité présente. Et progressivement, le poids s'allège." }
       ],
     }],
   }],
@@ -6008,7 +7015,16 @@ const k_750: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients souffrant de solitude chronique, qu'elle soit objective ou subjective. Travail de différenciation entre solitude vécue et solitude choisie, restauration du rapport à soi, capacité à être seul et à se relier." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Lieu sûr\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis une solitude qui te pèse. Cela peut être que tu vis effectivement seul, ou que tu te sens seul même entouré de gens. Cette solitude n'est pas un défaut moral. Elle est une expérience humaine difficile. Aujourd'hui, nous regardons comment elle peut se transformer." },
+      { label: "Deux Solitudes", detail: "Il y a deux solitudes très différentes. La solitude pesante : celle qu'on subit, qui creuse, qui rappelle qu'on n'est pas relié. Et la solitude habitée : celle qu'on choisit ou qu'on accepte, qui devient un espace de soi avec soi, parfois précieux. La transformation entre les deux est possible." },
+      { label: "Compagnie De Soi", detail: "Tu peux apprendre à être en compagnie de toi-même. Pas comme un pis-aller en attendant les autres, mais comme une qualité réelle. Cela demande de pouvoir habiter ton propre espace intérieur sans t'y sentir vide ou perdu. Ton lieu sûr est un endroit où tu peux pratiquer cela." },
+      { label: "Pratique Seul Et Present", detail: "Maintenant, sens-toi seul dans ton lieu sûr. Pas un seul de manque. Un seul de présence. Toi, présent à toi-même, à ce qui se passe en toi, à tes sensations, à ton souffle. Cette présence à soi est une compagnie. Tu n'es pas vide quand tu es avec toi-même — tu es plein de toi." },
+      { label: "Lien Qui Demande Du Soi", detail: "Paradoxalement, c'est en cultivant cette compagnie de soi que les liens avec les autres deviennent plus possibles et plus libres. Quand on est dévoré par la solitude, on s'accroche aux autres avec une avidité qui souvent les fait fuir. Quand on est en paix avec soi, on peut se relier sans avidité, et cela attire." },
+      { label: "Dimension Objective", detail: "Si ta solitude est aussi objective — peu de relations, peu de contacts — tu peux la travailler concrètement. Pas par activisme social fébrile, mais par engagement progressif : reprendre contact avec quelqu'un, t'inscrire à une activité, accepter une invitation que tu aurais déclinée. Petit à petit. Le lien social se cultive." },
+      { label: "Qualite Du Lien", detail: "Mieux vaut quelques liens vrais que beaucoup de relations superficielles. Identifie quelques personnes avec qui tu pourrais approfondir, et investis-les. La qualité d'un lien vient du temps partagé, de la sincérité, de la réciprocité. Cela demande engagement." },
+      { label: "Age Et Solitude", detail: "Si tu es à une étape de vie où la solitude objective augmente — retraite, vieillissement, départ des enfants, deuils accumulés — il y a un travail particulier. Ne pas attendre que les liens viennent à toi, parce que le mouvement social ralentit. Aller chercher, créer, initier. Cela demande effort, mais c'est possible." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, deux directions à cultiver. Premièrement, ta présence à toi-même : moments quotidiens où tu es vraiment avec toi, attentif, présent. Deuxièmement, l'engagement dans le lien : un geste par jour vers quelqu'un, un contact maintenu, une présence offerte. Ces deux mouvements ensemble transforment progressivement ce que la solitude est pour toi." }
       ],
     }],
   }],
@@ -6047,7 +7063,17 @@ const k_751: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients porteurs d'une blessure de rejet ancienne (parents, fratrie, groupe scolaire, premier amour) qui continue à colorer les relations adultes. Travail spécifique sur cette blessure typique." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Anamnèse douce\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Sanctuaire K-BASE-012\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu portes une blessure de rejet ancienne. Quelque part dans ton histoire, tu as été rejeté — par un parent, dans la fratrie, à l'école, en amour. Et cette blessure-là, depuis, colore tes relations. Le moindre signe ambigu te fait penser au rejet. Tu peux te retirer avant qu'on te rejette, ou au contraire t'accrocher pour ne pas l'être." },
+      { label: "Blessure Qui Continue", detail: "Cette blessure ne reste pas dans le passé. Elle s'active à chaque situation qui ressemble, même de loin, à la situation originelle. Une parole, un silence, une absence d'invitation, un message non répondu — et la blessure se rouvre, comme si tu retombais dans la situation ancienne." },
+      { label: "Part Blesse", detail: "Quelque part en toi, il y a une part — souvent une part très jeune, une part d'enfant — qui porte cette blessure originelle. Cette part n'a pas grandi en même temps que toi. Elle est restée à l'âge où le rejet a eu lieu. Et c'est elle qui réagit fort dans tes situations adultes." },
+      { label: "Aller La Voir", detail: "Dans ton sanctuaire, tu peux maintenant aller à la rencontre de cette part. La voir telle qu'elle est : peut-être petite, peut-être triste, peut-être en colère, peut-être recroquevillée. Quel âge a-t-elle ? Que fait-elle ? Comment se présente-t-elle à toi ?" },
+      { label: "Etre Avec Elle", detail: "Sans précipitation, juste être avec elle. Lui montrer ta présence. Que tu es là. Que tu la vois. Que tu sais qu'elle a été blessée. Que tu n'es pas venu pour la juger ni la presser de guérir. Juste pour être avec elle." },
+      { label: "Ce Qu Elle A Subi", detail: "Tu peux écouter ce qu'elle a vécu. Pas l'analyser — l'accueillir. Le rejet qu'elle a subi n'était pas mérité. Elle n'avait pas à le porter. Mais elle l'a porté, faute de pouvoir faire autrement. Et depuis, elle attend." },
+      { label: "Ce Dont Elle A Besoin", detail: "Tu peux lui demander ce dont elle a besoin maintenant. Souvent, elle a besoin de présence, de reconnaissance, d'être tenue, d'être écoutée, d'être protégée. Tu peux lui offrir cela, en imagination. Pas comme un substitut au passé qui ne peut être changé. Comme une réparation présente de ce qui a manqué." },
+      { label: "Grandir Ensemble", detail: "Cette part peut, petit à petit, grandir avec toi. Sentir que tu es là, adulte, capable de la protéger. Que les situations actuelles ne sont pas les situations originelles. Que tu disposes de ressources qu'elle n'avait pas. Cette intégration progressive transforme la sensibilité au rejet." },
+      { label: "Present Ne Repete Pas", detail: "Quand tu vis aujourd'hui une situation qui réveille cette blessure, tu peux te dire : ce qui se passe maintenant n'est pas ce qui s'est passé alors. Je ne suis plus cette enfant ou ce jeune. J'ai des ressources. Je peux interpréter autrement, attendre avant de réagir, vérifier les signes plutôt que de les amplifier en rejet imaginé." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois, tu peux revenir à cette part en toi, l'accueillir, lui offrir présence. Cette pratique régulière transforme dans la durée. La blessure ne disparaît pas complètement — mais sa charge s'allège, et ta sensibilité présente devient plus juste, moins automatique." }
       ],
     }],
   }],
@@ -6086,7 +7112,16 @@ const k_752: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients pris dans des conflits récurrents (couple, famille, travail) où les mêmes scénarios se rejouent. Travail de prise de recul, identification des automatismes, ouverture de nouveaux possibles relationnels." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification du pattern\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Préparation d'une situation\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu te retrouves régulièrement dans les mêmes conflits. Avec ton partenaire, ton parent, ton collègue, peu importe — c'est toujours le même scénario qui se rejoue. Une étincelle, un emballement, des paroles qui blessent, parfois une rupture du lien, puis une réconciliation, et le cycle recommence quelques semaines plus tard." },
+      { label: "Pattern", detail: "Ces patterns récurrents ne sont pas dus au hasard. Ils sont l'expression d'automatismes — chez toi, chez l'autre, et dans la dynamique entre vous. Comme une danse qui s'est ancrée. Chacun joue son rôle sans même y penser. Pour que la danse change, il faut d'abord la voir." },
+      { label: "Vue Meta", detail: "Imagine que tu peux prendre un peu de hauteur par rapport à votre conflit type. Comme si tu le regardais d'en haut. Tu vois deux personnes qui dansent leur danse habituelle. Que se passe-t-il ? Quelle est la séquence ? Qui dit quoi en premier ? Quelle est la réaction ? Comment ça monte ?" },
+      { label: "Ton Role Dans La Danse", detail: "Cette vue d'en haut te permet de voir aussi ta propre part dans la danse. Pas pour te culpabiliser — pour repérer ce qui dépend de toi. Comment tu réagis quand l'autre dit cela. Ce que tu fais pour entretenir ou aggraver la spirale. Cette part de toi, tu peux la modifier — l'autre part ne dépend pas de toi." },
+      { label: "Moment De Choix", detail: "Dans toute spirale, il y a des moments où un choix est possible. Un instant où tu peux faire autrement que la fois précédente. Identifie ces moments dans votre conflit type. Quel est le premier moment où, si tu agissais différemment, la spirale ne s'enclencherait pas comme d'habitude ?" },
+      { label: "Nouveau Possible", detail: "Imagine maintenant ce que tu pourrais faire à ce moment de bascule. Pas une grande transformation — un petit pas de côté. Te taire au lieu de répondre. Demander une pause. Reformuler ce que tu as compris. Reconnaître la part de l'autre. Reporter la discussion. Choisis une option qui te paraît tenable." },
+      { label: "Repetition Imaginaire", detail: "Maintenant, imagine la prochaine fois où ce conflit type se présente. Tu actives ton nouveau choix au moment de bascule. Comment ça se passe ? Ce n'est pas magique — l'autre peut être surpris, voire désorienté. Mais quelque chose dans la dynamique change. La spirale habituelle ne s'enclenche pas pareil." },
+      { label: "Responsabilite De Sa Part", detail: "Tu n'es responsable que de ta part. L'autre fait ce qu'il fait. Tu ne peux pas le changer ni l'obliger à changer. Mais en changeant ta part de la danse, tu invites l'autre à changer la sienne — il sera obligé de s'adapter. Parfois cela débouche sur une nouvelle danse. Parfois cela révèle que la relation ne peut pas évoluer. Les deux résultats sont des informations." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, dans tes conflits récurrents, ton inconscient va repérer les moments de bascule. Tu pourras choisir de faire un petit pas de côté plutôt que de répéter. Pas à chaque fois — tu restes humain. Mais plus souvent qu'avant. Et chaque fois que tu le fais, tu ouvres un possible nouveau." }
       ],
     }],
   }],
@@ -6125,7 +7160,16 @@ const k_753: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour intégration d'un événement récent éprouvant mais non dévastateur : accident sans gravité, agression verbale, témoin d'événement difficile, scène choquante. Travail d'intégration sans replonger." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation (vraie indication trauma léger ou ESPT ?)\n• Phase 2 — Lieu sûr K-BASE-011 stabilisé\n• Phase 3 — Induction K-BASE-001\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu as vécu récemment un événement qui t'a marqué. Pas un trauma majeur, mais quelque chose d'éprouvant : un accident sans gravité réelle, une agression verbale, une scène que tu as vue, un événement choquant. Et depuis, ça revient. Images, pensées, parfois sensations. Tu te demandes si c'est normal et si ça va passer." },
+      { label: "Processus Normal", detail: "Ce que tu vis est un processus normal d'intégration. Quand on traverse un événement chargé, le psychisme a besoin de temps pour le digérer. C'est pour cela que tu y reviens involontairement. Ce n'est pas une pathologie — c'est ton inconscient qui fait son travail. Notre rôle aujourd'hui : accompagner ce travail pour qu'il aille à son terme." },
+      { label: "Lieu Sur D Abord", detail: "Avant tout, ton lieu sûr est solidement présent. Quoi que nous fassions, tu peux y revenir en quelques secondes. Vérifie : tu es là, en sécurité, le présent est calme. Ce qui s'est passé s'est passé dans le passé, et tu en as physiquement émergé. Tu es là maintenant." },
+      { label: "Ecran De Cinema", detail: "Imagine maintenant un écran de cinéma. Toi, tu es dans la salle, à distance. Sur cet écran, tu vas pouvoir regarder l'événement, mais à distance. Comme un film qui passe. Tu n'es pas dedans — tu es spectateur, dans la salle, en sécurité." },
+      { label: "Film Traverse", detail: "Quand tu es prêt, sur cet écran, le film de ce qui s'est passé peut commencer. Lentement. Tu peux le voir se dérouler. Tu n'as pas à revivre — tu observes. Si l'émotion monte, tu peux mettre sur pause, ou mettre l'image en noir et blanc, ou la rendre plus floue, ou diminuer le son. C'est toi qui contrôles." },
+      { label: "Jusquau Bout", detail: "Tu peux laisser le film aller jusqu'au moment où l'événement s'est terminé. Et même un peu après. Jusqu'au moment où tu as effectivement émergé de la situation. Vu jusqu'à la fin, l'événement ne reste pas en boucle." },
+      { label: "Recadrage Securisant", detail: "Maintenant, tu peux ajouter au film des éléments qui auraient été aidants. Quelqu'un qui te dirait : ça va aller, c'est passé. Une présence rassurante. La conscience que tu vas survivre, intacte. Cette intégration de la sécurité dans le souvenir change la qualité du souvenir." },
+      { label: "Emotion Apaisee", detail: "Sur ton écran, l'événement est maintenant un événement passé, et non plus une menace présente. Il a sa place dans ton histoire — mais il n'occupe plus tout l'écran de ta conscience. Il est devenu un souvenir parmi d'autres, certes marquant, mais intégré." },
+      { label: "Post Hypnotique", detail: "Dans les jours qui viennent, si l'événement remonte, tu peux le remettre sur ton écran. Mentalement, tu es dans la salle, à distance. L'événement passe. Et il s'éloigne un peu plus chaque fois. Si après plusieurs séances le travail n'avance pas, ou si les symptômes s'aggravent, je t'orienterai vers un travail trauma plus spécifique." }
       ],
     }],
   }],
@@ -6164,7 +7208,16 @@ const k_754: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients confrontés à une réalité durable qu'ils ne peuvent pas changer (maladie chronique, handicap d'un proche, décision irrévocable, perte définitive). Travail délicat sur l'acceptation sans résignation." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Accueil de ce qui ne peut être changé\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Sanctuaire K-BASE-012\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu vis avec une situation que tu ne peux pas changer. Une maladie chronique, un handicap chez un proche, une décision prise par d'autres et irrévocable, une perte définitive. Tu luttes contre cette réalité depuis longtemps. Et la lutte t'épuise sans changer ce qu'elle voudrait changer." },
+      { label: "Acceptation Pas Resignation", detail: "Acceptation n'est pas résignation. Cette distinction est essentielle. Résigner, c'est s'écraser, accepter passivement, perdre vigueur. Accepter, c'est reconnaître ce qui est, sans s'écraser, en gardant ta vitalité, en cessant juste de lutter contre la réalité elle-même. Tu peux accepter ce qui est et continuer à te battre pour ce qui peut encore changer." },
+      { label: "Cout De La Lutte", detail: "Lutter contre une réalité durable a un coût. Énergie dépensée à vouloir que ce soit autrement. Esprit accaparé par le ressassement. Présent gâché par le refus de ce qui est. Cette lutte ne change pas la réalité — elle te ronge en plus de la réalité." },
+      { label: "Dans Le Sanctuaire", detail: "Dans ton sanctuaire, tu peux maintenant regarder cette réalité. Pas pour t'y soumettre. Pour la regarder. La voir telle qu'elle est. C'est. C'est ainsi. Sans jugement immédiat, sans révolte, juste constat." },
+      { label: "Dire Oui A Ce Qui Est", detail: "Tu peux dire intérieurement : c'est. Ceci est ma réalité actuelle. Je ne l'ai pas choisie. Je ne l'aime pas. Mais elle est. Je peux cesser de gaspiller mon énergie à la nier, à la combattre dans son existence même. Je peux la reconnaître. Cela ne veut pas dire l'aimer — cela veut dire cesser de la nier." },
+      { label: "Energie Recuperée", detail: "Toute l'énergie que tu mettais à lutter contre la réalité, à la maudire, à l'imaginer autrement, à protester intérieurement — cette énergie peut être récupérée. Pour autre chose. Pour habiter ce qui peut être habité dans cette réalité. Pour les choses qui peuvent encore changer. Pour le présent qui mérite d'être vécu." },
+      { label: "Dans Le Present", detail: "Cette réalité contient encore beaucoup. Pas tout ce que tu voudrais. Mais beaucoup. Des relations, des moments, des saveurs, des activités, des sens, des liens. Quand tu cesses de lutter contre ce qui ne peut changer, tu reprends contact avec ce qui est encore vivant et accessible." },
+      { label: "Serenite De La Priere", detail: "Une vieille prière de la sagesse populaire dit : donne-moi la sérénité d'accepter ce que je ne peux changer, le courage de changer ce que je peux, et la sagesse de discerner l'un de l'autre. Cette sagesse-là vaut autant que des milliers de mots. Elle est l'art de vivre face au réel." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, dans cette réalité que tu ne peux changer, tu peux choisir de cesser la lutte contre son existence même. Tu peux reconnaître ce qui est. Tu peux récupérer ton énergie. Tu peux habiter ce qui peut l'être. Et continuer à te battre, avec discernement, pour ce qui peut encore évoluer." }
       ],
     }],
   }],
@@ -6203,7 +7256,16 @@ const k_755: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en transition majeure (déménagement, changement professionnel radical, fin d'une relation longue, devenir parent, retraite, expatriation). Travail d'intégration psychique de la transition." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification de la transition\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu traverses une transition majeure. Tu n'es plus dans le monde d'avant, et tu n'es pas encore pleinement installé dans le monde d'après. Cette phase intermédiaire est étrange : tu as quitté quelque chose, mais tu n'es pas arrivé. Tu es entre deux. Et cet entre-deux a sa propre difficulté." },
+      { label: "Seuil Legitimite", detail: "Les anciennes cultures avaient un mot pour cette phase : le seuil. Un espace qui n'est ni l'ancien ni le nouveau, qui demande son propre temps, ses propres rituels. Aujourd'hui, on a tendance à vouloir traverser ce seuil le plus vite possible. Mais le seuil mérite d'être habité, pas seulement traversé en courant." },
+      { label: "Deuil De L Avant", detail: "Pour aller pleinement vers l'après, il faut souvent faire le deuil de l'avant. Pas oublier ce que tu étais ou ce que tu avais — mais reconnaître que cela appartient désormais au passé. Ce que tu étais avant cette transition continuera à vivre en toi sous forme de mémoire, de bagage, de qualités acquises." },
+      { label: "Continuite Identite", detail: "Une chose importante : à travers toutes les transitions, tu restes toi-même. Ton corps change, ta vie change, parfois tes rôles changent radicalement. Mais le fil conducteur de qui tu es demeure. Cette continuité intérieure est ton ancre dans la traversée." },
+      { label: "Dans L Entre Deux", detail: "L'entre-deux est inconfortable. Tu peux te sentir en perte de repères, sans savoir qui tu deviens, sans pouvoir nommer encore ce que tu es maintenant. Cette désorientation est normale dans les transitions majeures. Ce n'est pas un défaut chez toi — c'est la nature même de la phase." },
+      { label: "Pas De Precipitation", detail: "Tu n'as pas à savoir tout de suite qui tu deviens, ni comment ta nouvelle vie va prendre forme. La transition demande son temps. Souvent plusieurs mois. Parfois plusieurs années pour les transitions très majeures. Te précipiter à reconstruire avant d'avoir traversé le seuil ne fonctionne généralement pas." },
+      { label: "Construire Le Nouveau", detail: "Petit à petit, tu peux commencer à construire ton nouveau monde. Pas en grand. En petit. Une nouvelle routine. Un nouveau lien. Un nouveau lieu apprivoisé. Une nouvelle activité. Ces petits points d'ancrage finissent par former une nouvelle vie, comme les pierres d'un chemin." },
+      { label: "Qui Tu Deviens", detail: "Cette transition est aussi une opportunité. Pas une opportunité forcée — une vraie possibilité de redevenir un peu différent. Qui veux-tu être dans ta nouvelle vie ? Quelles dimensions de toi veux-tu cultiver davantage ? Cette question peut t'accompagner pendant la traversée." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux habiter ton seuil avec moins de hâte et plus de présence. Reconnaître la perte de l'avant, sans t'y enfermer. Construire petit à petit ton après, sans te précipiter. Et continuer d'être toi-même pendant que tout change autour." }
       ],
     }],
   }],
@@ -6242,7 +7304,16 @@ const k_756: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients adultes portant des manques affectifs anciens (parents froids, distants, absents, défaillants sans malveillance majeure). Travail de soin différé à l'enfant intérieur, pas de remplacement des parents mais réparation possible." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Anamnèse de l'enfance\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Sanctuaire K-BASE-012\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu portes en toi une enfance qui n'a pas eu tout ce dont elle aurait eu besoin. Tes parents — ou ceux qui se sont occupés de toi — ont fait ce qu'ils pouvaient avec ce qu'ils étaient, mais quelque chose a manqué. Pas forcément de la malveillance — peut-être de la distance, de l'indisponibilité, de l'incompréhension, ou simplement leur propre limites." },
+      { label: "Pas D Accusation", detail: "Aujourd'hui, nous n'allons pas accuser tes parents. Ils ont eu eux-mêmes leur propre histoire, leurs propres manques, leurs propres limites. Ils ont donné ce qu'ils avaient, et parfois ce qu'ils avaient ne suffisait pas à un enfant qui en demandait plus. Cette compréhension n'efface pas ton manque, mais elle évite la spirale stérile de la rancune." },
+      { label: "Enfant Qui Demeure", detail: "L'enfant que tu as été existe encore en toi. Il a grandi extérieurement, mais intérieurement, certaines parts de lui sont restées avec ses besoins non rencontrés. Ces parts attendent. Toujours. Et elles s'expriment, parfois, dans tes émotions adultes disproportionnées, dans ton hypersensibilité dans certaines situations." },
+      { label: "Aller A La Rencontre", detail: "Dans ton sanctuaire, tu peux aller à la rencontre de cet enfant que tu as été. À l'âge où le manque a été le plus aigu, peut-être. Vois-le. Comment est-il ? Que ressent-il ? De quoi avait-il besoin et qui n'est pas venu ?" },
+      { label: "Offrir Ce Qui A Manque", detail: "L'adulte que tu es maintenant peut offrir à cet enfant ce qui a manqué. Pas en lui mentant en disant que les parents étaient parfaits — il sait que non. En lui offrant, toi, ce que tu peux offrir maintenant. De la présence. De l'écoute. De la chaleur. De la reconnaissance de sa souffrance. De l'amour, vraiment." },
+      { label: "Auto Parentalisation", detail: "Tu deviens, pour cet enfant en toi, le parent que tu aurais voulu avoir. Pas comme un substitut imposé — comme une réparation différée. Tu peux faire ce que tes parents n'ont pas pu faire. Le tenir, l'écouter, le rassurer, lui dire qu'il a sa valeur, qu'il est aimable, qu'il a sa place." },
+      { label: "Les Parents Reconnus", detail: "Tes parents, intérieurement, peuvent garder leur place — celle de ceux qui ne pouvaient pas. Tu peux reconnaître leurs limites. Pas pour leur trouver des excuses faciles. Pour cesser de leur demander ce qu'ils n'avaient pas à donner. Cette reconnaissance libère ton attente." },
+      { label: "Aussi Pour Les Relations Actuelles", detail: "À mesure que tu prends soin de l'enfant en toi, tes relations adultes changent. Tu n'attends plus des autres ce que tes parents n'ont pas donné. Tu cesses de remettre tes proches dans la position de réparer. Tu deviens ton propre soutien, et tu peux entrer en relation avec moins d'avidité." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois, tu peux revenir à cet enfant en toi. Lui dire bonjour. Lui demander comment il va. Lui offrir un peu de présence. Cette pratique régulière, sur des semaines et des mois, transforme intérieurement ce qui était figé. Et progressivement, tu te sens plus entier, plus autonome, plus libre." }
       ],
     }],
   }],
@@ -6281,7 +7352,16 @@ const k_757: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour syndrome de l'imposteur : peur d'être démasqué malgré des compétences réelles, attribution des succès à la chance, terreur d'être jugé incompétent. Travail sur l'intégration des succès, la compétence reconnue." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification du pattern\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu as réussi des choses dans ta vie professionnelle, ou dans tes études, ou dans un domaine. Et pourtant, tu n'arrives pas à sentir que ces réussites t'appartiennent vraiment. Tu attribues à la chance, au hasard, à la bienveillance des autres, à une erreur d'évaluation. Et tu vis avec la peur permanente d'être démasqué." },
+      { label: "Validation Paradoxe", detail: "Ce phénomène a un nom : le syndrome de l'imposteur. Il est très répandu, particulièrement chez les personnes compétentes. Paradoxalement, ce sont souvent celles qui auraient le moins à craindre qui le ressentent le plus. Les vrais incompétents ne se posent pas la question." },
+      { label: "Dissociation", detail: "Quelque chose en toi a appris à dissocier ce que tu fais et qui tu es. Tu peux faire des choses très bien, et en même temps ne pas te sentir capable. Comme si l'auteur des réussites n'était pas vraiment toi, mais une enveloppe de toi qui simule." },
+      { label: "Inventaire Objectif", detail: "Pendant un instant, fais l'inventaire objectif de ce que tu as accompli. Pas modestement, pas en minimisant. Liste tes diplômes, tes promotions, tes projets menés à bien, tes responsabilités confiées. Ces faits sont des faits. Tu ne peux pas les attribuer entièrement à la chance — tu n'as pas eu de la chance pendant 10 ou 20 ans d'affilée." },
+      { label: "Attribution Normalisee", detail: "Tu as la tendance à attribuer tes succès à des causes externes (chance, autres), et tes échecs à des causes internes (incompétence). C'est l'inverse exact du fonctionnement sain. Une attribution juste reconnaît que les succès sont en grande partie tes succès, et que les échecs ne sont en grande partie pas ta faute seule." },
+      { label: "Competence Integree", detail: "Imagine maintenant que tu peux laisser entrer en toi la reconnaissance de ta compétence réelle. Pas par arrogance — par justice envers toi-même. Tu sais des choses que tu as appris. Tu sais faire des choses que tu as pratiquées. Cette compétence t'appartient." },
+      { label: "Autorisation De Savoir", detail: "Tu peux te donner la permission de savoir ce que tu sais. De faire ce que tu fais avec confiance. Cela ne veut pas dire que tu sais tout, ni que tu es parfait. Cela veut dire que dans ton domaine, dans ta fonction, tu as ta légitimité." },
+      { label: "Continuer A Apprendre", detail: "L'humilité saine n'est pas le syndrome de l'imposteur. L'humilité saine reconnaît qu'on a toujours à apprendre, sans pour autant nier ce qu'on sait. Tu peux continuer à apprendre, à te former, à grandir, en habitant en même temps avec sécurité ta compétence actuelle." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, quand l'imposture intérieure murmure, tu peux te rappeler les faits objectifs. Tu peux te dire : ce que je sais, je le sais. Ce que je fais, je le fais avec une vraie compétence. La perfection n'est pas demandée — la légitimité, oui, et elle est mienne." }
       ],
     }],
   }],
@@ -6320,7 +7400,16 @@ const k_758: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients hypersensibles débordés par leurs émotions ou par celles des autres. Travail sur la régulation, la juste distance, sans pathologiser une qualité qui peut aussi être une ressource." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Bulle K-BASE-024\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une intensité émotionnelle que d'autres semblent ne pas avoir. Les ambiances te traversent. Les humeurs des autres deviennent les tiennes. Une scène poignante, une œuvre, une parole — tout te marque profondément. Cette qualité a sa beauté, et elle a aussi son coût quand elle déborde." },
+      { label: "Pas De Pathologie", detail: "L'hypersensibilité n'est pas une pathologie. C'est une caractéristique. Certaines personnes sont naturellement plus perméables aux émotions, aux ambiances, aux subtilités relationnelles. Cette qualité te permet une finesse, une empathie, une profondeur que d'autres n'ont pas. Elle te rend aussi plus vulnérable au débordement." },
+      { label: "Distinction Soi Autre", detail: "Une difficulté fréquente : tu confonds tes émotions et celles des autres. Quelqu'un est triste près de toi, et tu te sens triste, sans savoir si c'est ta tristesse ou la sienne. Cette absorption émotionnelle t'épuise et te confond." },
+      { label: "Questions De Discernement", detail: "Tu peux apprendre à te demander, devant une émotion : est-ce la mienne, ou est-ce que je l'ai prise à quelqu'un ? D'où vient-elle ? Que disait mon état avant que je sois exposé à cette personne ou à cette ambiance ? Cette pause de discernement t'aide à séparer." },
+      { label: "Bulle Filtrante", detail: "Ta bulle protectrice est précieuse pour toi, plus que pour beaucoup. Elle filtre. Ce qui est trop fort glisse dessus. Ce qui peut t'enrichir entre. Tu peux apprendre à activer cette bulle dans les contextes émotionnellement chargés : foule, conflit, séances avec des personnes en grande souffrance, scènes intenses." },
+      { label: "Distance Juste", detail: "Tu peux rester proche émotionnellement sans absorber tout. Une distance juste : assez près pour comprendre et accompagner, assez distant pour ne pas devenir l'autre. Cette distance se cultive. Avec la pratique, elle devient naturelle." },
+      { label: "Decharge", detail: "Comme tu reçois beaucoup, tu as besoin de décharger. Pas par vide ou abus de soi-même, mais par évacuation saine. Activité physique. Nature. Solitude restauratrice. Création artistique. Sommeil suffisant. Sans cela, ton réservoir se sature et déborde." },
+      { label: "Qualite A Cultiver", detail: "Plutôt que de chercher à être moins sensible, tu peux apprendre à être bien sensible. Ta sensibilité, bien régulée, devient une ressource précieuse — pour comprendre, créer, accompagner, percevoir. Beaucoup de métiers, d'arts, de relations, ont besoin de personnes comme toi." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ta sensibilité reste, mais elle est mieux encadrée. Tu actives ta bulle quand le contexte l'exige. Tu pratiques le discernement entre tes émotions et celles des autres. Tu décharges régulièrement. Et progressivement, ta sensibilité devient un atout vécu plutôt qu'un fardeau subi." }
       ],
     }],
   }],
@@ -6359,7 +7448,16 @@ const k_759: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en hypercontrôle qui s'épuisent à vouloir tout maîtriser. Travail sur la confiance, le lâcher-prise progressif, la distinction entre vigilance utile et contrôle compulsif." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Pratique d'un micro-lâcher-prise\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une volonté permanente de tout contrôler. Les détails, les autres, les événements, ton corps, tes émotions, ton avenir. Tu te dis que c'est sécurisant — mais en réalité, ce contrôle t'épuise et ne te sécurise pas vraiment. La vie est trop grande pour être contrôlée. Et tu le sais, en arrière-plan." },
+      { label: "Origine Protection", detail: "Le besoin de contrôle vient souvent d'une histoire où il a fallu se débrouiller seul, où l'imprévisible a été trop violent, où il a fallu tenir pour tout le monde. Cette part-là de toi mérite de la reconnaissance. Elle t'a aidé à survivre. Mais aujourd'hui, elle peut te coûter plus qu'elle ne te sert." },
+      { label: "Difference Vigilance", detail: "Il y a une différence entre la vigilance utile et le contrôle compulsif. La vigilance s'active quand il y a un vrai signal, et se relâche entre temps. Le contrôle est en alerte permanente, sur tout, indistinctement. La vigilance est intelligente, le contrôle est épuisant." },
+      { label: "Ce Qui Ne Depend Pas", detail: "Une grande partie de la vie ne dépend pas de toi. Le comportement des autres. Les événements imprévus. Les humeurs des proches. La météo. Le résultat de tes efforts. Vouloir contrôler ce qui ne dépend pas de toi est une lutte contre une muraille. Tu peux choisir de cesser cette lutte sans pour autant abandonner ce qui dépend vraiment de toi." },
+      { label: "Confiance Au Vivant", detail: "Au-delà du contrôle, il existe une autre posture : la confiance dans le vivant. Dans le fait que la vie continue à se faire même quand tu ne la pilotes pas à chaque instant. Ton corps respire sans que tu le commandes. Ton cœur bat sans que tu décides chaque battement. La vie a son propre mouvement, et il est bon." },
+      { label: "Pratique Lacher", detail: "Tu peux pratiquer le lâcher-prise par micro-doses. Une chose, aujourd'hui, que tu vas laisser être sans la contrôler. Une décision qui revient à quelqu'un d'autre — tu laisses. Un détail dans ta journée — tu laisses. Et tu remarques que la vie continue, sans catastrophe, sans dégradation majeure. Cette accumulation de preuves transforme." },
+      { label: "Energie Recuperée", detail: "L'énergie que tu mettais à contrôler peut être récupérée. C'est une énergie considérable. Elle peut servir à autre chose : à profiter, à créer, à aimer, à te reposer. Beaucoup de patients en hypercontrôle découvrent une vitalité nouvelle quand ils déposent leur fardeau auto-imposé." },
+      { label: "Dans L Inconnu", detail: "Vivre sans tout contrôler, c'est vivre dans une part d'inconnu. Cette part est inconfortable au début. Mais elle est aussi le lieu de tout ce qui est neuf, vivant, surprenant. Sans elle, tu n'as que la répétition de ce que tu maîtrises déjà. Avec elle, la vie redevient une aventure." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux pratiquer le lâcher-prise par micro-doses quotidiennes. Une chose chaque jour que tu laisses être. Tu remarques que la vie continue, et que tu retrouves de l'air. Et progressivement, ton rapport au contrôle se transforme — tu redeviens vigilant quand il faut, et libre le reste du temps." }
       ],
     }],
   }],
@@ -6398,7 +7496,16 @@ const k_760: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en mauvaise relation avec leur corps : critique chronique, déconnexion, dégoût, sentiment d'étrangeté. Travail de réhabitation bienveillante de son propre corps." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-003\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Pratique de bienveillance corporelle\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Ton rapport à ton corps est devenu compliqué. Tu le critiques, tu le juges, tu t'en éloignes, tu lui en veux. Peut-être qu'il a changé d'une manière que tu n'as pas voulue. Peut-être qu'il ne correspond pas à ce que tu voudrais. Peut-être qu'il t'a déjà fait souffrir, ou qu'il porte des marques. Quelle qu'en soit la raison, tu n'es plus en paix avec lui." },
+      { label: "Corps Qui Te Porte", detail: "Ce corps que tu critiques porte ta vie depuis ta naissance. Il t'a permis de marcher, de parler, de manger, d'aimer, de travailler, de te déplacer, de sentir le monde. Sans lui, tu ne serais pas. Quelle que soit ta plainte contre lui, il te porte, et il fait son travail." },
+      { label: "Decouverte Sensorielle", detail: "Maintenant, sans jugement, prends conscience de ton corps tel qu'il est en ce moment. Ses sensations. Sa température. Son contact avec ce sur quoi il est posé. Sa respiration qui passe. Ses mille micromouvements involontaires qui le maintiennent vivant. Cette présence sensorielle est le premier acte de réconciliation." },
+      { label: "Corps Pas Image", detail: "Ton corps est plus qu'une image dans le miroir. Il est aussi celui qui sent, qui ressent, qui vibre, qui digère, qui respire, qui régénère. La plupart de ce que ton corps fait n'est pas visible. Et c'est précisément ce qui n'est pas visible qui le maintient en vie. Le réduire à son apparence, c'est passer à côté de l'essentiel." },
+      { label: "Dialogue Bienveillant", detail: "Tu peux maintenant parler à ton corps. Pas pour le critiquer. Pour le reconnaître. Lui dire merci de te porter. Reconnaître ce qu'il a traversé. Ses blessures, ses changements, ses adaptations. Et lui exprimer que tu vas, désormais, tenter de mieux le traiter." },
+      { label: "Zones Amies", detail: "Dans ton corps, identifie une zone qui te convient. Une zone qui te paraît à peu près acceptable, voire belle. Cela peut être tes mains, tes yeux, le creux de ton cou, ton dos. Quelque part. Reste avec cette zone. Sens-la avec bienveillance. Cette zone est un point de départ." },
+      { label: "Etendre Bienveillance", detail: "Petit à petit, tu peux étendre cette bienveillance à d'autres parties. Pas en force. Au rythme où tu peux. Une zone à la fois. Avec celle qui te pose problème, tu peux simplement lui dire : tu es là, tu fais partie de moi, je tente de t'accueillir. Ce n'est pas tout aimer en bloc — c'est progresser dans la réconciliation." },
+      { label: "Corps Qui Change", detail: "Ton corps va continuer à changer. Avec l'âge, avec les expériences, avec les saisons. Tu peux soit lutter contre ces changements à chaque étape, soit accompagner ton corps dans son devenir. La deuxième posture est moins épuisante et plus juste à la réalité." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, tu peux poser une main sur ton cœur et dire à ton corps : merci. Tu peux pratiquer la présence sensorielle quelques minutes. Tu peux étendre la bienveillance, zone par zone. Et progressivement, ton corps redevient ta maison plutôt que ton fardeau." }
       ],
     }],
   }],
@@ -6437,7 +7544,16 @@ const k_761: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients dont le travail occupe toute la place identitaire et émotionnelle. Travail de différenciation soi/fonction, restauration d'autres dimensions de la vie, prévention du burn-out." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation de l'état (pas burn-out constitué)\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Ton travail occupe presque toute la place dans ta vie. Pas seulement en heures — aussi en place mentale, émotionnelle, identitaire. Quand on te demande qui tu es, tu réponds par ce que tu fais professionnellement. Et hors du travail, il y a un certain vide." },
+      { label: "Difference Soi Fonction", detail: "Tu es plus que ce que tu fais professionnellement. Cette évidence est facile à dire et plus difficile à habiter. Ta valeur, ton existence, ne se réduisent pas à ta fonction. Si ton travail s'arrêtait demain — par licenciement, maladie, retraite — tu continuerais à exister. La question est : qu'est-ce qui resterait visible et habité de toi ?" },
+      { label: "Origine Du Pattern", detail: "Ce surinvestissement a souvent une origine. Peut-être une famille où la valeur dépendait de la performance. Peut-être un soulagement de retrouver dans le travail une reconnaissance qui manquait ailleurs. Peut-être une fuite d'autre chose. Tu n'as pas à juger ton pattern — juste à le voir." },
+      { label: "Dimensions Oubliees", detail: "Quelles dimensions de toi as-tu négligées en faisant grandir le travail à ce point ? Tes relations personnelles. Tes loisirs. Ton corps. Tes amitiés. Tes plaisirs simples. Tes engagements personnels. Ces dimensions existent, mais elles attendent que tu leur redonnes de l'espace." },
+      { label: "Imagination D Un Jour", detail: "Imagine une journée sans travail, sans pensée pour le travail. Une vraie journée libre. Que ferais-tu ? Avec qui ? Pour quoi ? Si la réponse vient avec difficulté, c'est l'indice que ces dimensions ont besoin d'être réveillées en toi. Tu peux commencer à reconnecter, petit à petit." },
+      { label: "Pratique De Separation", detail: "Dans tes journées, tu peux instaurer des micro-séparations. Un moment où tu n'es plus en train de penser au travail. Quand tu rentres chez toi : un rituel symbolique de quitter le travail mentalement. Pendant les repas : pas de mails. Le week-end : au moins une journée sans aucune incursion professionnelle. Ces séparations restaurent." },
+      { label: "Avertissements Corps", detail: "Ton corps t'envoie peut-être des signaux que tu ignores. Fatigue qui ne se repose pas. Tensions chroniques. Sommeil perturbé. Troubles digestifs. Irritabilité. Ces signaux ne sont pas des défaillances — ce sont des messages. Ton corps te demande de te ménager avant qu'il ne te ménage de force." },
+      { label: "Valeur Intrinseque", detail: "Ta valeur ne dépend pas de ta productivité. Tu es valable en tant que tel, sans avoir à le prouver. Cette idée peut sembler étrange ou évidente selon où tu en es. Si tu sens en toi qu'elle n'est pas vraiment intégrée, c'est l'un des chantiers à explorer." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux installer progressivement des séparations entre toi et ton travail. Restaurer une dimension à la fois — tes relations, ton corps, tes plaisirs, tes engagements. Et redécouvrir, derrière ta fonction, le toi qui demeure et qui mérite d'exister pleinement, indépendamment de ce que tu produis." }
       ],
     }],
   }],
@@ -6476,7 +7592,17 @@ const k_762: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients vivant un sentiment de vide, d'absurdité, de perte de cap. Pas une dépression mais une crise de sens. Travail d'écoute intérieure, retour aux valeurs, ouverture à ce qui appelle." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Sanctuaire K-BASE-012\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Voix sage K-BASE-023\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu portes une question qui pèse plus que tu ne l'avoues facilement. Ta vie va, sur le papier — peut-être tu as ce qu'il fallait avoir, ce qu'il fallait obtenir, ce qu'on dit qu'il fallait viser. Et pourtant, quelque chose en toi murmure que cela n'a pas le sens que tu attendais. Que ce que tu fais, ce que tu vis, t'apparaît parfois absurde ou vide." },
+      { label: "Pas De Pathologie", detail: "Cette expérience n'est pas une pathologie. Elle est une expérience humaine profonde, qui touche beaucoup de personnes à certaines étapes : mi-vie, après l'atteinte d'un objectif majeur, après une perte, après une fatigue prolongée. Quelque chose en toi demande un réajustement." },
+      { label: "Question De Sens", detail: "Le sens n'est pas une chose qu'on trouve une fois pour toutes. C'est quelque chose qui se construit, et qui peut s'éroder. Quand le sens s'érode, c'est souvent que ta vie extérieure et tes valeurs profondes se sont éloignées. Tu fais peut-être ce que tu fais par habitude, par devoir, par confort, mais sans plus que cela ne nourrisse ce qui en toi demande à être nourri." },
+      { label: "Dans Le Sanctuaire", detail: "Dans ton sanctuaire intérieur, tu peux poser la question : qu'est-ce qui, profondément, m'importe ? Pas ce qu'il faudrait que j'aime — ce qui en moi appelle vraiment. Quelles sont les valeurs qui me sont précieuses, même quand le monde dit autre chose ? Quelles sont les expériences qui m'ont vraiment fait sentir vivant ?" },
+      { label: "Ka Boussole", detail: "Ton Ka — ton essence — porte une boussole. Cette boussole indique ce qui te ressemble vraiment. Quand tu vis aligné avec elle, le sens est là, simplement, sans avoir à le chercher. Quand tu en es désaligné, le sens fuit, peu importe ce que tu accomplis extérieurement. Aujourd'hui, nous tentons de réécouter cette boussole." },
+      { label: "Silence Pour Entendre", detail: "Pour entendre ce qui en toi appelle, le bruit doit baisser. Le bruit du quotidien, des obligations, des opinions des autres, de ce que tu te répètes que tu devrais vouloir. Ce silence intérieur est précieux. Tu peux y rester un instant. Et écouter. Pas avec ton mental qui calcule. Avec ton intuition qui sent." },
+      { label: "Voix Sage", detail: "La voix sage en toi peut te parler. Pas en grandes phrases — souvent en sensations, en images, en élans subtils. Que sens-tu, en cet instant ? Vers quoi quelque chose en toi se tourne, comme un tournesol vers la lumière ? Cette indication, même floue, est précieuse." },
+      { label: "Pas De Revolution", detail: "La crise de sens ne demande pas forcément une révolution extérieure. Pas forcément tout changer. Souvent, elle demande de changer le rapport à ce qui est. De réinvestir consciemment ce que tu faisais machinalement. De donner du temps à ce que tu négligeais. De cesser de faire ce qui ne te ressemble pas. Ces ajustements, accumulés, restaurent le sens." },
+      { label: "Pas De Reponse Immediate", detail: "Tu n'as pas à avoir une réponse claire en sortant de cette séance. Le sens met du temps à émerger. Ce qui compte, c'est que tu rouvres l'écoute. Que tu redonnes voix à cette question. Que tu prennes soin de l'inquiétude qu'elle porte. Et que tu fasses confiance au processus." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois dans les semaines qui viennent, tu peux revenir dans ton sanctuaire et écouter. Quelques minutes. Sans demander de réponse. Juste ouvert. Et progressivement, des indications viendront. Petites au début. Plus claires ensuite. Et tu pourras commencer à réajuster ta vie pour qu'elle corresponde mieux à ce que ton Ka demande." }
       ],
     }],
   }],
@@ -6515,7 +7641,16 @@ const k_763: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Rituel hypnotique court à utiliser dans les heures précédant une compétition. Met l'athlète dans un état mental optimal : calme intense, focus, confiance, prêt à donner le meilleur sans crispation." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Apprentissage du rituel en consultation calme\n• Phase 2 — Induction K-BASE-006 (rapide)\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Geste-ancre installé K-BASE-016\n• Phase 5 — Retour K-BASE-026 (tonique mais centré)" },
+      { label: "Principe", detail: "Je vais t'apprendre un rituel court, à activer dans les heures avant la compétition. L'objectif n'est pas de te calmer — un athlète trop calme manque d'énergie. L'objectif est de te placer dans un état précis : un calme tendu, vigilant, où ton énergie est présente mais canalisée." },
+      { label: "Etape 1 Souffle", detail: "Étape une : ton souffle. Trois respirations longues, par le nez à l'inspiration, et une expiration plus longue, contrôlée. Pas pour t'endormir — pour signaler à ton système nerveux que tu es en contrôle. Cette respiration baisse le seuil de panique sans toucher à ton énergie." },
+      { label: "Etape 2 Corps Pret", detail: "Étape deux : ton corps prêt. Pendant que tu respires, tu sens ton corps. Non pas tendu, non pas mou — disponible. Comme un instrument bien accordé qui attend de jouer. Tes muscles ont la juste tension. Tes appuis sont là. Ton énergie circule." },
+      { label: "Etape 3 Focus", detail: "Étape trois : ton focus. Tu te demandes intérieurement, en quelques secondes : qu'est-ce qui est essentiel maintenant ? Pas mille choses — la chose ou les deux choses qui comptent vraiment dans cette épreuve. Cette question recentre ton attention." },
+      { label: "Etape 4 Confiance", detail: "Étape quatre : ta confiance. Pas une confiance de bavardage intérieur — une confiance corporelle. Ton corps a fait le travail. Il sait. Tes entraînements sont en lui. Tu n'as pas à te convaincre — tu as juste à laisser ton corps faire ce qu'il sait faire." },
+      { label: "Etape 5 Geste Ancre", detail: "Étape cinq : ton geste-ancre. Un geste simple que tu vas associer à cet état. Cela peut être serrer brièvement ton poing droit, toucher ton plexus, presser le pouce contre l'index. Choisis-en un et exécute-le maintenant. Ce geste deviendra le déclencheur instantané de cet état." },
+      { label: "Etape 6 Dans L Action", detail: "Étape six : transition vers l'action. Tu sais que tu ne resteras pas dans cet état méditatif pendant la compétition. Mais tu emportes cette qualité — calme tendu, focus, confiance corporelle, geste-ancre — dans l'action. Quand tu démarres, tu es dans cette qualité." },
+      { label: "Repetition", detail: "Maintenant, ferme les yeux et repasse dans ta tête le rituel complet : souffle, corps prêt, focus, confiance, geste-ancre. En 90 secondes maximum. Tu peux le faire dans les vestiaires, dans la voiture, sur le terrain juste avant. Adapté à ton sport." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ton geste-ancre déclenchera cet état d'optimum. Avant chaque compétition, tu actives le rituel complet. Pendant la compétition, si tu sens que tu décroches mentalement, tu actives juste le geste-ancre, et l'état revient. Cela devient un réflexe." }
       ],
     }],
   }],
@@ -6554,7 +7689,15 @@ const k_764: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour athlètes qui décrochent mentalement en compétition (pensées parasites, anticipation du résultat, rumination sur erreur passée). Travail sur la qualité d'attention pendant l'épreuve." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification des décrochages\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Pratique imaginaire d'une compétition\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "En compétition, tu as parfois remarqué que ton attention décroche. Tu te mets à penser au résultat, à imaginer la suite, à ressasser une erreur que tu viens de faire, à observer les autres concurrents. Et pendant ce temps, ton corps n'est plus tout à fait dans ce qu'il fait. La performance baisse." },
+      { label: "Attention Dans L Action", detail: "L'optimum mental en compétition est un état où ton attention est totalement dans l'action présente. Pas dans le passé, pas dans le futur. Dans ce mouvement, dans ce coup, dans ce point, dans ce mètre. Cet état est ce que les chercheurs appellent le flow. Il est apprenable." },
+      { label: "L Instant Seul", detail: "Pendant l'épreuve, l'instant qui se déroule maintenant est tout ce qui existe vraiment. Le point précédent est dans le passé — tu n'y peux plus rien. Le point suivant n'est pas encore là — tu ne peux pas le jouer en avance. Seul l'instant présent est jouable. C'est lui qui mérite ton attention totale." },
+      { label: "Apres Erreur", detail: "Quand tu fais une erreur en cours d'épreuve, voici ce qui se passe souvent : tu rumines mentalement l'erreur, et pendant ce temps, tu joues mal le point suivant. Une seule erreur devient trois ou quatre. Tu peux apprendre à réinitialiser instantanément. L'erreur passée, j'y reviendrai après l'épreuve. Maintenant, retour à l'action." },
+      { label: "Geste De Reinitialisation", detail: "Tu peux te créer un geste de réinitialisation. Quelque chose de très court — secouer brièvement la tête, toucher quelque chose, prendre une respiration marquée, te dire un mot intérieur. Ce geste signale à ton mental : on passe au suivant. Avec la pratique, il fonctionne en moins d'une seconde." },
+      { label: "Resultat Pas Pendant", detail: "Pendant l'épreuve, le résultat ne se joue pas. Le résultat est la conséquence d'une accumulation d'instants bien joués. Si tu penses au résultat pendant l'action, tu n'es plus dans l'action. Le paradoxe : pour bien jouer le résultat, il faut oublier le résultat et être totalement dans l'instant." },
+      { label: "Pratique Imaginaire", detail: "Imagine maintenant que tu es en compétition. Une compétition importante. Tu démarres. Et pour chaque action, tu es totalement dans cette action. Une erreur survient — tu fais ton geste de réinitialisation, et tu es dans l'action suivante. Une distraction extérieure — tu reviens à ton focus. À la fin, tu remarques que tu as donné le meilleur de toi-même, parce que tu as été présent à chaque instant." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, en compétition, ton attention saura mieux rester dans l'action présente. Quand elle décroche, ton geste de réinitialisation la ramène. Et tu construis tes performances un instant après l'autre, comme un mur se construit pierre par pierre." }
       ],
     }],
   }],
@@ -6593,7 +7736,15 @@ const k_765: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour athlètes qui doutent de leur corps en compétition, qui se crispent par excès de contrôle conscient, ou qui ont perdu confiance après une blessure. Travail de réactivation de la confiance corporelle profonde." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Travail spécifique (script)\n• Phase 3 — Pratique gestuelle imaginée\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu as un corps entraîné. Des centaines, des milliers d'heures de répétition, de gestes, d'efforts, de précision. Ce corps sait. Mais en compétition, parfois, ton mental conscient s'inquiète, vérifie, contrôle, et c'est cela qui crispe le geste. Plus tu essaies de bien faire consciemment, moins ton corps fait bien." },
+      { label: "Paradoxe Du Savoir", detail: "Voilà le paradoxe : ton corps sait des choses que ton mental conscient ne peut pas formuler. Comment exactement orienter le poignet à tel moment, comment déplacer le poids sur tel appui, comment sentir le timing — tout cela est dans tes muscles, tes nerfs, ton équilibre. Pas dans tes pensées. Quand tu essaies de penser ce que ton corps sait faire, tu interfères." },
+      { label: "Memoire Corporelle", detail: "Toute la mémoire de tes entraînements est inscrite en toi. Pas comme un disque dur que tu pourrais consulter — comme une compétence intégrée qui s'active sans demande consciente. Cette mémoire est fiable. Elle a été construite répétition après répétition. Elle ne disparaît pas en compétition." },
+      { label: "Confiance Origine", detail: "La vraie confiance d'un athlète n'est pas une autopersuasion. Ce n'est pas se dire que c'est bien. C'est le sentiment, profond, que ton corps a fait le travail nécessaire et qu'il connaît son métier. Cette confiance se laisse, plus qu'elle ne se construit dans l'instant." },
+      { label: "Lacher Le Controle", detail: "En compétition, tu peux apprendre à lâcher le contrôle conscient des détails. Pas tout lâcher — l'intention reste. Mais sur l'exécution, tu fais confiance à ton corps. Tu lui dis intérieurement : tu sais. Vas-y. Et ton corps fait, mieux que si tu le pilotais détail par détail." },
+      { label: "Apres Blessure", detail: "Si tu as eu une blessure, ton corps porte une mémoire de précaution. Il peut reprendre confiance progressivement. Pas en se forçant — en accumulant des expériences positives. Chaque mouvement bien fait, sans douleur, sans rechute, est une preuve que ton corps reconstruit. Ces preuves accumulées restaurent la confiance." },
+      { label: "Pratique Geste", detail: "Imagine maintenant un geste technique de ton sport que tu maîtrises. Pas le plus difficile — un geste solide. Vois-toi le faire en imagination, non pas en pilotant chaque détail, mais en laissant ton corps le faire. Tu es spectateur de ton propre geste. Et il est précis, fluide, juste. Cette pratique installe la confiance." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux te rappeler en compétition que ton corps sait. Tu n'as pas à le piloter consciemment dans le détail. Tu peux lui faire confiance, et le laisser faire. Cette posture libère ton geste, et tu joues plus juste." }
       ],
     }],
   }],
@@ -6632,7 +7783,17 @@ const k_766: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Apprentissage de l'imagerie motrice de qualité pour répéter en imagination des gestes techniques. Méthode validée scientifiquement, particulièrement utile en complément de l'entraînement physique." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Choix du geste à travailler\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Pratique guidée puis autonome\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "L'imagerie motrice est l'une des techniques les mieux validées en psychologie du sport. Le principe : imaginer précisément un geste active des zones cérébrales très proches de celles activées lors de l'exécution réelle. Cela permet d'apprendre, de perfectionner, ou de maintenir une compétence même sans bouger." },
+      { label: "Qualite De L Image", detail: "Pour que l'imagerie soit efficace, elle doit être détaillée et multisensorielle. Pas seulement voir le geste — le sentir. Sentir la position du corps, les tensions musculaires, le contact avec le sol, l'air qui passe, le poids du matériel, les bruits autour, l'effort." },
+      { label: "Perspective Interne", detail: "Particulièrement important : la perspective. Mieux vaut imaginer le geste de l'intérieur de ton corps, comme si tu le vivais, que de te voir de l'extérieur. La perspective interne active mieux les circuits moteurs. Tu vois ce que tu verrais en faisant le geste, pas ce que verrait un spectateur." },
+      { label: "Choix Du Geste", detail: "Choisis maintenant le geste que tu veux travailler. Un geste précis, pas trop long. Une frappe, un service, un saut, un départ, une transition. Tu vas le visualiser plusieurs fois, avec de plus en plus de précision." },
+      { label: "Premier Passage", detail: "Premier passage : visualise ce geste à vitesse normale. Du début à la fin. Sens-toi le faire. Note ce qui te vient — la position de départ, le mouvement, l'arrivée. Ce premier passage est une exploration." },
+      { label: "Passage Lent", detail: "Deuxième passage : ralenti. Le même geste, mais en très lent. Cela te permet de sentir des détails que la vitesse normale escamote. La séquence d'activation des muscles. La trajectoire précise de la main, du pied. Le moment où le poids passe d'un appui à l'autre. Ce ralenti enrichit la qualité de l'image." },
+      { label: "Passage Juste", detail: "Troisième passage : à vitesse normale, mais avec la précision que tu as gagnée. Le geste se déroule, parfait dans son exécution, fluide, juste. Tu sens chaque seconde. Tu sens la qualité du geste réussi." },
+      { label: "Pratique Quotidienne", detail: "Tu peux pratiquer cette imagerie 5-10 minutes par jour, en complément de ton entraînement physique. Plusieurs études montrent que l'addition entraînement + imagerie donne de meilleurs résultats que l'entraînement seul. C'est un investissement à coût faible et bénéfice élevé." },
+      { label: "Pendant Blessure", detail: "Si tu es blessé et empêché de t'entraîner physiquement, l'imagerie devient particulièrement précieuse. Elle permet de maintenir la compétence pendant que ton corps récupère. Beaucoup d'athlètes témoignent d'avoir évité la régression grâce à elle." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu disposes d'un outil supplémentaire pour ton entraînement. 5-10 minutes d'imagerie quotidienne, ciblée sur les gestes que tu travailles. Cette pratique régulière, accumulée sur des semaines et des mois, fait une différence mesurable." }
       ],
     }],
   }],
@@ -6671,7 +7832,16 @@ const k_767: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour athlètes qui s'effondrent mentalement après une erreur (point perdu, faute technique, mauvais départ). Travail spécifique sur la capacité à rebondir instantanément, à ne pas amplifier l'erreur." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification du pattern d'effondrement\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Pratique du geste-ancre de reset\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu as remarqué un pattern : quand tu fais une erreur en compétition, tu en fais souvent une deuxième juste après, puis une troisième. La première erreur déclenche un effondrement mental qui produit les suivantes. Une compétition peut basculer ainsi en quelques secondes." },
+      { label: "L Erreur Isolee", detail: "L'erreur en elle-même n'est presque jamais le problème. Tous les athlètes, même au plus haut niveau, font des erreurs. Ce qui distingue les meilleurs des autres, c'est leur capacité à rebondir vite. Ne pas amplifier. Ne pas spiraler. Repartir comme si l'erreur n'avait pas eu lieu, mentalement." },
+      { label: "Separation Temporelle", detail: "Tu peux apprendre à mettre une frontière nette entre l'instant de l'erreur et l'instant suivant. Comme si tu fermais une porte. L'erreur est dans la pièce d'avant. Maintenant, tu es dans une nouvelle pièce, avec une nouvelle action à jouer. Cette séparation est mentale, et elle peut s'apprendre." },
+      { label: "Geste De Reset", detail: "Tu vas créer un geste de reset. Quelque chose de bref, qui marque la fermeture. Cela peut être une expiration marquée, secouer brièvement les épaules, taper le poing dans la paume, frotter les mains. Choisis-en un et exécute-le maintenant. Ce geste devient le marqueur du reset." },
+      { label: "Phrase Intérieure", detail: "Tu peux aussi associer une phrase intérieure courte. Quelque chose comme : passé. Suivant. Ou : reset. Maintenant. Ou : une seule à la fois. Cette phrase, en deux mots, dit à ton mental que la page est tournée." },
+      { label: "Acceptation Imperfection", detail: "Une chose importante : la perfection n'existe pas en compétition. Aucun athlète ne fait zéro erreur. Vouloir être parfait crée de la tension qui produit des erreurs. Accepter que tu vas faire des erreurs te paradoxalement de la légèreté qui en réduit le nombre." },
+      { label: "Pratique Imaginaire", detail: "Imagine maintenant une compétition. Tu joues bien. Et puis une erreur survient. Tu fais ton geste de reset, ta phrase intérieure, et tu es dans l'action suivante. Sans rumination. Sans charge. Une nouvelle action vierge. Tu peux la jouer aussi bien que la précédente." },
+      { label: "Apres Competition", detail: "L'analyse des erreurs se fait après la compétition, pas pendant. Pendant, tu joues. Après, tu peux regarder ce qui s'est passé, en tirer des enseignements, ajuster pour l'entraînement. Cette séparation des temps protège tes performances." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, en compétition, ton geste de reset s'activera après chaque erreur. La page se tourne. Tu rebondis vite. Et tes erreurs ponctuelles cessent de se transformer en spirales d'effondrement. Tu joues une action après l'autre, fraîche." }
       ],
     }],
   }],
@@ -6710,7 +7880,16 @@ const k_768: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour athlètes qui sous-performent dans les compétitions à fort enjeu. Travail sur le rapport au résultat, la transformation de la pression en énergie, l'investissement du processus plutôt que de la finalité." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Exploration des sources de pression\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Préparation imaginaire d'une compétition à enjeu\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Plus l'enjeu est important, plus tu te crispes, plus tu sous-performes. C'est paradoxal : précisément quand tu voudrais le plus donner ton meilleur, ton mental te bloque. Cette mécanique a une logique, et elle peut être transformée." },
+      { label: "Logique Paradoxale", detail: "Voici la logique paradoxale : quand tu te concentres sur le résultat — gagner, te qualifier, ne pas décevoir — tu sors du processus. Or c'est en habitant le processus que les meilleurs résultats émergent. La pression sur le résultat te fait sortir de ce qui produit le résultat." },
+      { label: "Resultat Consequence", detail: "Le résultat est une conséquence, pas une cible directe. Tu ne peux pas viser directement la victoire — tu peux viser la qualité de chaque action, et la victoire émerge si la qualité est suffisante. Cette compréhension change la posture mentale." },
+      { label: "Processus Habite", detail: "Pendant la compétition, ton attention totale doit être sur le processus. Pas sur ce qui sortira à la fin. Sur ce que tu fais maintenant. Cette posture demande paradoxalement de lâcher ce que tu veux le plus, pour pouvoir l'obtenir." },
+      { label: "Pression Energie", detail: "La pression elle-même peut être transformée. Au lieu de la subir comme une menace, tu peux la recevoir comme une énergie. Le corps en pression est en fait dans un état d'activation physiologique élevée — qui peut servir la performance autant qu'elle peut la bloquer. La différence est dans la perception." },
+      { label: "Recadrage Pression", detail: "Quand tu sens monter la pression, tu peux te dire intérieurement : c'est de l'énergie, pas une menace. Mon corps se prépare à donner. Cette pression est le signe que c'est important, et c'est précieux. La même activation physiologique vécue comme alliée plutôt qu'ennemie change tout." },
+      { label: "Attentes Des Autres", detail: "Une part de la pression vient des attentes des autres : entraîneur, famille, supporters, sponsors. Tu peux apprendre à reconnaître ces attentes sans les porter. Elles sont à eux, pas à toi. Tu joues pour toi-même, dans ton processus. Ce que les autres feront du résultat est leur affaire." },
+      { label: "Imagination Situation", detail: "Imagine maintenant la compétition la plus importante de ta saison. L'enjeu est élevé. Tu actives ta préparation : souffle, corps prêt, focus. Et au lieu de te crisper sur le résultat, tu te connectes à ton processus. Chaque geste, totalement habité. La pression est là — mais elle est ton alliée, l'énergie qui te porte." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, dans tes compétitions à enjeu, tu peux choisir d'investir le processus plus que le résultat. Tu peux recevoir la pression comme une énergie. Et paradoxalement, c'est cette posture qui te permettra de produire tes meilleures performances justement quand cela compte." }
       ],
     }],
   }],
@@ -6749,7 +7928,16 @@ const k_769: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour faciliter l'entrée dans l'état de flow (expérience optimale décrite par Csikszentmihalyi). Travail sur les conditions mentales d'apparition du flow, ancrage des états vécus, conditions facilitantes." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Exploration d'un flow vécu\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Ancrage K-BASE-016\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu as vécu, dans ta carrière, des moments où tout devenait fluide. Où ton corps faisait sans que tu aies à y penser. Où le temps semblait s'altérer. Où tu étais totalement dans l'action, sans observateur intérieur, sans calcul, sans inquiétude. Cet état s'appelle le flow. C'est l'expérience optimale en performance." },
+      { label: "Caracteristiques", detail: "Le flow a des caractéristiques précises : concentration totale sur l'action, fusion entre toi et le geste, perte de la conscience de soi en tant qu'observateur, perception altérée du temps, sentiment de contrôle sans contrôle conscient, expérience vécue comme valeur en soi. Quand on l'a vécu, on s'en souvient. Quand on l'a goûté, on y aspire." },
+      { label: "Remembrance", detail: "Souviens-toi maintenant d'un moment de flow que tu as vécu. Une compétition, un entraînement, peu importe — un moment où tu y étais. Reviens à ce moment. Ce que tu voyais, sentais, faisais. La qualité particulière de cet instant. Reconnecte-toi à cet état." },
+      { label: "Ancrage Flow", detail: "Pendant que tu es connecté à ce souvenir, tu peux activer un geste-ancre. Quelque chose qui restera lié à cet état. Un toucher, une posture brève, un mouvement subtil. Cet ancrage te permettra de réactiver cet état dans le futur." },
+      { label: "Conditions Du Flow", detail: "Le flow a des conditions facilitantes. Premièrement, l'équilibre entre défi et compétence — pas trop facile (ennui), pas trop difficile (anxiété), juste à ton niveau ou un peu au-dessus. Deuxièmement, des objectifs clairs et un feedback immédiat. Troisièmement, l'absorption totale, sans interruption. Tu peux préparer ces conditions." },
+      { label: "Invitation Pas Force", detail: "Le flow ne se commande pas — il s'invite. Plus tu essaies de le forcer, moins il vient. Tu peux simplement créer les conditions et te placer dans une qualité de présence qui le rend possible. Et accepter que parfois il vienne, parfois non. Sa visite reste un don." },
+      { label: "Transition Competition", detail: "En compétition, tu peux activer la qualité du flow par ton ancrage et par ta préparation. Tu ne garantis pas son entrée pleine, mais tu en augmentes la probabilité. Et même quand tu n'atteins pas le flow complet, tu en captures certaines dimensions : la concentration totale, l'absence d'observateur intérieur, la fluidité." },
+      { label: "Pratique Recurrente", detail: "Le flow se cultive aussi à l'entraînement. Si tu t'entraînes en présence totale, sans pensées parasites, dans la qualité d'attention que tu cherches en compétition, tu installes les circuits qui faciliteront son émergence en compétition. L'entraînement de la qualité mentale est aussi important que l'entraînement physique." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu disposes d'une mémoire ancrée du flow. Tu peux l'activer par ton geste, en compétition comme à l'entraînement. Et tu peux travailler les conditions qui le facilitent. Le flow reste un état précieux et pas garanti — mais tu deviens son meilleur invitant." }
       ],
     }],
   }],
@@ -6788,7 +7976,16 @@ const k_770: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour athlètes en phase de retour après blessure significative. Travail sur la confiance corporelle restaurée, la peur de la rechute, la reprise progressive psychique en parallèle de la reprise physique." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation reprise physique validée\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Pratique imaginaire de reprise progressive\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu reviens d'une blessure. Physiquement, tu es prêt — tes médecins, ton kiné, ta préparation l'ont validé. Mais quelque chose en toi reste précautionneux. Tu surveilles, tu retiens, tu hésites. Cette part-là est légitime — elle te protège. Mais elle peut t'empêcher de revenir pleinement." },
+      { label: "Corps Qui A Appris", detail: "Pendant ta blessure, ton corps a appris à se protéger. Il a évité certains mouvements, certaines amplitudes. Cette protection est mémorisée. Elle a sa raison d'être, mais elle peut désormais devenir un frein si elle reste activée alors que la guérison est faite." },
+      { label: "Signal D Alerte", detail: "Tu peux apprendre à distinguer un vrai signal d'alerte d'une fausse alarme. Un vrai signal est une vraie douleur, dans la zone blessée, à la limite de ce qui est tolérable. Une fausse alarme est une appréhension, une sensation diffuse de prudence, le souvenir de la douleur passée. Cette distinction est cruciale." },
+      { label: "Reprise Progressive Imaginaire", detail: "Imagine maintenant que tu reprends, progressivement, les mouvements de ton sport. Pas tous d'un coup. Un mouvement à la fois. Pour chacun, tu te demandes : ce mouvement est-il validé médicalement ? Si oui, tu peux le faire. Tu sens tes appuis, tu fais le mouvement, et il se passe sans incident. Cette répétition imaginaire prépare la pratique réelle." },
+      { label: "Amplitude Reconquise", detail: "Pour les amplitudes ou intensités qui te font particulièrement peur, tu peux les visualiser graduellement. Des petites amplitudes d'abord. Puis un peu plus. Puis encore un peu plus. Chaque étape franchie en imagination, sans incident, est une preuve mentale qui prépare la vraie reprise." },
+      { label: "Distinction Avant Apres", detail: "Tu n'es pas exactement le même athlète qu'avant la blessure. Tu as peut-être appris des choses pendant cette période — sur ton corps, sur ta technique, sur ta vie. Plutôt que de chercher à redevenir exactement comme avant, tu peux intégrer ce que tu as appris, et revenir parfois différemment, mieux à certains égards." },
+      { label: "Peur Apprivoisée", detail: "La peur de la rechute peut diminuer avec l'accumulation d'expériences réussies. Chaque entraînement sans incident, chaque match terminé, chaque progression franchie — autant de preuves que ton corps a vraiment guéri. Cette accumulation est le vrai chemin de la confiance restaurée." },
+      { label: "Ecoute Corps", detail: "Pendant ta reprise, tu peux apprendre à écouter ton corps avec une qualité particulière. Pas hypervigilance qui crée de la tension. Pas négligence qui ignore les signaux. Une attention bienveillante qui distingue les vrais messages des fausses alarmes." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ta reprise se poursuit. Tu actives ce dispositif : pratique imaginaire avant pratique réelle, distinction signal/alarme, accumulation de preuves rassurantes. Et progressivement, ta confiance corporelle se restaure pleinement, et tu retrouves ton niveau." }
       ],
     }],
   }],
@@ -6827,7 +8024,16 @@ const k_771: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour sports d'endurance ou efforts longs (marathon, trail, cyclisme longue distance, triathlon). Travail sur la gestion de l'inconfort durable, la division mentale de l'effort, la résistance au décrochage." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification du type d'effort\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Préparation imaginaire d'un effort long\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu pratiques un sport d'endurance. Marathon, trail, cyclisme long, triathlon. L'effort dure des heures. Et au-delà du physique, le mental est mis à rude épreuve. Tu vas connaître des moments où ton corps te dit d'arrêter, où ton mental cherche les excuses pour ralentir, où la souffrance demande à être écoutée. Aujourd'hui, nous préparons ton mental à cette traversée." },
+      { label: "Pas De Combat Global", detail: "Une erreur classique : aborder l'effort dans son ensemble. Penser au marathon entier au kilomètre 5 est démoralisant. Penser à 100 km au 30e est paralysant. Tu peux apprendre à diviser mentalement l'effort en segments digestibles." },
+      { label: "Decoupage", detail: "Pendant l'effort, tu vis seulement le segment présent. Le prochain ravito. Le prochain kilomètre. La prochaine bosse. Le prochain quart d'heure. Quand un segment est franchi, tu passes au suivant. Tu n'as à habiter que le segment présent, jamais l'ensemble." },
+      { label: "Inconfort Pas Souffrance", detail: "Il y a une différence entre l'inconfort et la souffrance. L'inconfort fait partie de l'effort — il est désagréable mais traversable. La souffrance est ce qu'on en fait : la dramatisation, le combat, la rumination. Tu peux apprendre à habiter l'inconfort sans le transformer en souffrance amplifiée." },
+      { label: "Dialogue Avec Corps", detail: "Pendant l'effort long, ton corps te parle constamment. Plaintes, signaux, demandes. Tu peux apprendre à dialoguer avec lui plutôt que de subir ses messages. Lui dire intérieurement : je t'entends. Je sais. Mais nous continuons. Tu es plus capable que tu ne le crois." },
+      { label: "Moments Difficiles", detail: "Tu connaîtras des moments difficiles — souvent, dans le marathon, autour du 30e km. Ces moments sont prévisibles. Quand ils arrivent, tu peux te dire : c'est le moment difficile, je le sais, il était attendu, je vais le traverser. La prévisibilité de la difficulté désarme une partie de son effet." },
+      { label: "Petits Objectifs", detail: "Quand tu es en difficulté, ton objectif rétrécit. Ne plus penser à l'arrivée — penser au prochain virage, au prochain pas, à la prochaine respiration. Tenir 10 secondes de plus. Puis 10 secondes encore. Cette miniaturisation des objectifs permet de tenir quand l'objectif lointain semble inaccessible." },
+      { label: "Dimension De Sens", detail: "Pour les efforts très longs, le sens importe. Pourquoi tu fais cela ? Pour qui ? Quelle valeur incarnes-tu ? Cette dimension Ka, accessible dans les moments difficiles, te donne accès à des ressources que la simple volonté n'a pas." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, dans tes efforts longs, ton mental dispose d'outils pour tenir. Découpage en segments. Distinction inconfort/souffrance. Dialogue avec le corps. Anticipation des moments difficiles. Miniaturisation quand c'est dur. Et le sens qui te porte. Avec ces outils, tu peux aller plus loin que tu ne le crois." }
       ],
     }],
   }],
@@ -6866,7 +8072,16 @@ const k_772: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour athlètes en sports collectifs (foot, basket, hand, rugby, volley). Travail sur la posture mentale dans le collectif, la gestion des relations avec coéquipiers, la performance individuelle au service de l'équipe." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Clarification du rôle dans l'équipe\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Visualisation d'un match en équipe\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu joues en équipe. Cela ajoute une dimension à la performance — il ne s'agit pas seulement de toi, mais de toi en relation avec les autres. Cette dimension peut multiplier la performance ou la diviser, selon comment tu la habites." },
+      { label: "Clarte Du Role", detail: "D'abord la clarté de ton rôle. Que demande-t-on de toi sur le terrain ? Quelles sont tes responsabilités précises, par phase de jeu, par configuration ? Cette clarté est la base. Quand tu sais précisément ce qu'il y a à faire, tu peux t'y investir totalement." },
+      { label: "Role Pas Juste Tache", detail: "Ton rôle n'est pas qu'une liste de tâches techniques. C'est aussi une posture, une présence, une qualité que tu apportes à l'équipe. Tu peux être celui qui rassure, qui dynamise, qui structure, qui stabilise. Cette qualité au-delà des tâches fait souvent la différence." },
+      { label: "Confiance Collective", detail: "L'équipe fonctionne sur la confiance entre coéquipiers. Quand tu fais confiance à ton coéquipier, tu joues différent — plus libre, plus en risque, plus créatif. Quand tu doutes des autres, tu te crispes, tu compenses, tu épuises. Cette confiance se cultive activement, par les paroles, les gestes, les regards." },
+      { label: "Frictions Normales", detail: "Une équipe sans frictions n'existe pas. Caractères différents, ego, fatigues, frustrations — autant de sources de tension. Tu peux apprendre à gérer ces frictions sans qu'elles dégradent la performance. Reconnaître qu'elles existent. Ne pas les laisser empoisonner sur le terrain. Les régler aux bons moments, hors action." },
+      { label: "Apres Erreur Coequipier", detail: "Quand un coéquipier fait une erreur, ta réaction compte. Si tu lui reproches, tu enfonces. Si tu l'encourages, tu construis. Souvent, après une erreur, le coéquipier est déjà en train de se reprocher — il a besoin que tu le relèves, pas que tu l'écrases." },
+      { label: "Au Service Du Jeu", detail: "Le meilleur niveau collectif émerge quand chaque joueur joue au service du jeu, pas pour briller individuellement. Tu peux désirer ta performance personnelle — mais aussi la mettre au service de l'objectif collectif. Cette posture, paradoxalement, élève souvent ta propre performance." },
+      { label: "Imagination Match", detail: "Imagine maintenant un match avec ton équipe. Ton rôle est clair en toi. Tu joues avec confiance — en toi, en eux. Une erreur survient — la tienne, la d'un autre — et tu rebondis vite, et tu encourages. L'équipe joue ensemble, en synergie. Et la performance collective dépasse la somme des individus." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, sur le terrain, tu peux habiter ton rôle avec clarté et engagement. Faire confiance à tes coéquipiers, soutenir après leurs erreurs, mettre ta performance au service du jeu. Cette posture transforme ton expérience d'équipe et souvent les résultats." }
       ],
     }],
   }],
@@ -6905,7 +8120,16 @@ const k_773: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour athlètes préparant un objectif majeur sur plusieurs mois (championnat, Jeux Olympiques, qualification). Travail de structuration mentale sur la durée, gestion des phases, prévention de l'épuisement." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Clarification de l'objectif et de la durée\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Visualisation longue du parcours\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vises un objectif majeur dans plusieurs mois. Cette préparation longue exige autre chose qu'une préparation courte. La motivation initiale ne suffit pas — elle s'érode. Le mental doit être structuré pour tenir, traverser les phases, arriver le jour J avec ce qu'il faut." },
+      { label: "Vision Du Jour J", detail: "Tu peux t'imaginer le jour J. Le contexte précis. Toi sur la ligne, sur le terrain, sur le tatami. Comment tu te sens. Comment tu performs. Cette vision n'est pas une rêverie — c'est un point d'ancrage. Tu y reviendras dans les moments où la motivation faiblit." },
+      { label: "Decoupage En Phases", detail: "Une préparation longue se découpe en phases. Phase de fondation, où on construit largement. Phase de spécialisation, où on cible. Phase d'affûtage, où on raffine. Phase de récupération, où on précompetition. Chaque phase a ses logiques, ses qualités attendues. Comprendre où tu en es te permet de respecter ce que cette phase demande." },
+      { label: "Motivation Sur La Duree", detail: "La motivation initiale n'est pas une réserve infinie. Elle s'épuise. Tu peux apprendre à la régénérer périodiquement. Te reconnecter à ton pourquoi profond. Marquer les progrès accomplis. Visualiser le jour J. Échanger avec d'autres qui partagent l'objectif. Ces ressources entretiennent la flamme." },
+      { label: "Traversee Des Creux", detail: "Dans toute préparation longue, il y a des creux. Périodes où tout te paraît plus dur, moins enthousiasmant, parfois absurde. Ces creux sont normaux. Quand tu en es au cœur, tu peux te dire : c'est un creux, ils existent dans toute préparation longue, je vais le traverser. Cette normalisation t'évite la spirale du doute." },
+      { label: "Corps Qui Se Construit", detail: "Pendant cette préparation, ton corps se construit progressivement. Pas tout d'un coup. Les adaptations physiologiques prennent du temps. Tu peux faire confiance au processus, même quand les progrès semblent lents. La courbe d'évolution n'est pas linéaire, mais cumulative." },
+      { label: "Recuperation Strategique", detail: "La récupération n'est pas une faiblesse — c'est une partie active de la préparation. Tu progresses pendant que tu récupères, autant que pendant que tu travailles. Apprendre à respecter les phases de récupération, à les habiter pleinement, est une compétence d'athlète mature." },
+      { label: "Jour J Preparation", detail: "À l'approche du jour J, ton dispositif change. Moins de quantité, plus de qualité. Plus de soin de soi. Plus d'attention à ce qui te place dans l'état optimal. La phase d'affûtage est un art en soi. Tu peux l'aborder avec présence consciente." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ta préparation sur la durée est portée par une vision claire, un découpage en phases respectées, une gestion intelligente de la motivation, l'acceptation des creux, et la confiance dans le processus. Tu arrives au jour J avec ce qu'il fallait — pas par hasard." }
       ],
     }],
   }],
@@ -6944,7 +8168,16 @@ const k_774: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour athlètes pris dans une spirale négative : enchaînement de contre-performances, doutes massifs, perte d'estime, blocage qui s'installe. Travail de remise à zéro et reconstruction progressive." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Écoute en conscience normale\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Induction K-BASE-001\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu es dans une spirale. Performances décevantes qui s'enchaînent. Doute qui s'amplifie. Estime de soi en chute. Et plus tu doutes, plus tu performes mal, plus tu doutes. Tu te demandes parfois si tu es encore le bon athlète, si tu n'as pas perdu quelque chose qui ne reviendra pas." },
+      { label: "Normalisation", detail: "Premier rappel important : ce que tu vis arrive. Tous les athlètes connaissent des spirales négatives à un moment. Les meilleurs comme les autres. C'est une expérience inscrite dans la pratique sportive de haut niveau. Tu n'es pas en train de devenir un mauvais athlète — tu traverses une spirale." },
+      { label: "Pas Lutter Dans Spirale", detail: "Dans une spirale, lutter ne fonctionne souvent pas. Forcer pour bien jouer aggrave. Vouloir absolument inverser la tendance crée plus de tension. Une autre voie : t'arrêter mentalement. Sortir de la spirale par un mouvement vertical, pas par un effort horizontal." },
+      { label: "Reconnexion Fondations", detail: "Reviens à tes fondations. Pourquoi as-tu commencé ce sport ? Qu'est-ce qui te faisait vibrer aux débuts ? Quelles sont tes valeurs profondes en tant qu'athlète ? Cette reconnexion à ton Ka, à ton essence sportive, te ramène sous la spirale, à un endroit qui demeure quoi qu'il arrive." },
+      { label: "Reset Profond", detail: "Tu peux décider, intérieurement, de tourner la page. Pas par force — par décision. Les contre-performances passées sont passées. Elles font partie de ton histoire, mais pas de ton avenir. À partir de cette séance, tu commences un nouveau chapitre. C'est mental, mais cela suffit pour amorcer." },
+      { label: "Petits Objectifs", detail: "Pour reconstruire, ne vise pas haut tout de suite. Vise petit. Une qualité particulière à l'entraînement aujourd'hui. Un aspect technique précis demain. Un effort mental sur une situation. Ces petits succès accumulés rebâtissent progressivement la confiance que les grandes ambitions ne peuvent restaurer dans cet état." },
+      { label: "L Estime Au Dela", detail: "Ta valeur en tant que personne ne dépend pas de tes performances sportives actuelles. C'est une distinction essentielle, particulièrement dans les périodes difficiles. Tu es plus que tes résultats. Et même un athlète professionnel n'est pas réduit à ses chiffres. Cette distinction te protège de l'effondrement personnel." },
+      { label: "Un Jour Apres L Autre", detail: "Tu sortiras de cette spirale. Pas en un jour. Par accumulation. Un jour mieux, un jour moins bien, mais une trajectoire qui progressivement remonte. Cette accumulation demande du temps. Pendant ce temps, tu peux t'accorder de la patience, du soin, et la confiance dans le processus." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu sors de la spirale par le haut, pas par le côté. Tu te reconnectes à tes fondations. Tu vises petit, tu accumules. Tu protèges ton estime au-delà des résultats. Et tu fais confiance au temps de la reconstruction." }
       ],
     }],
   }],
@@ -6983,7 +8216,16 @@ const k_775: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour athlètes dont le perfectionnisme excessif paralyse la performance. Travail sur le rapport à l'erreur, l'autorisation de l'imperfection, la libération du geste de la contrainte du parfait." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification du pattern perfectionniste\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Pratique de l'imperfection autorisée\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Ton perfectionnisme te sert et te coûte à la fois. Il te pousse à travailler dur, à exiger beaucoup de toi-même. Mais il te paralyse aussi. La peur de mal faire bloque le geste. La sur-analyse empêche la fluidité. Tu vises trop haut, et l'écart entre l'idéal et le réel te démoralise." },
+      { label: "Excellence Pas Perfection", detail: "L'excellence et la perfection sont deux choses différentes. L'excellence est un haut niveau de qualité, atteignable, qui permet la performance. La perfection est un absolu inatteignable, qui paralyse la quête. Viser l'excellence libère ; viser la perfection enferme." },
+      { label: "Imperfection Des Meilleurs", detail: "Les meilleurs athlètes du monde ne sont pas parfaits. Ils font des erreurs régulièrement. Ce qui les distingue, ce n'est pas l'absence d'erreur — c'est la qualité globale, la régularité, et leur capacité à rebondir. Accepter l'imperfection, paradoxalement, libère pour atteindre l'excellence." },
+      { label: "Geste Libre Geste Perfectionniste", detail: "Quand tu vises la perfection, ton geste se charge. Tu surveilles, tu vérifies pendant l'exécution, tu te crispes. Ton geste devient plus contrôlé, mais moins fluide, moins libre. Quand tu acceptes l'imperfection, ton geste se libère. Il peut faire confiance à la mémoire corporelle, prendre des risques, créer." },
+      { label: "Droit A L Erreur", detail: "Tu peux te donner intérieurement le droit de faire des erreurs. Pas comme une démission — comme une libération. Cela ne veut pas dire que tu vas jouer mal. Cela veut dire que tu vas jouer libre, et que paradoxalement, tu joueras mieux que sous le poids de l'exigence parfaite." },
+      { label: "Post Match Analyse", detail: "L'analyse approfondie de tes erreurs se fait après le match, à tête reposée. Pas pendant. Pendant, tu joues et tu lâches. Cette séparation des temps protège ta performance et permet l'apprentissage authentique." },
+      { label: "Faire Confiance", detail: "Faire confiance à ton corps qui sait. Faire confiance à ton entraînement qui est en toi. Faire confiance au processus qui produit des résultats même imparfaits. Cette confiance est le contraire du contrôle perfectionniste." },
+      { label: "Pratique Imperfection", detail: "À l'entraînement, tu peux pratiquer délibérément l'imperfection. Choisir une session où tu joues sans chercher à être parfait. Où tu autorises tes erreurs. Où tu prends des risques que ton perfectionnisme habituel t'interdirait. Cette pratique libère progressivement." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux viser l'excellence sans la perfection. Te donner le droit à l'erreur. Libérer ton geste de la surveillance excessive. Et progressivement, ta performance s'élève, pas par effort de plus, mais par lâcher de moins. Le geste juste émerge dans la liberté, pas dans la contrainte." }
       ],
     }],
   }],
@@ -7022,7 +8264,17 @@ const k_776: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour préparation à des moments isolés à très fort enjeu (tir au but, penalty, dernier coup, putt décisif, dernier service). Dispositif court à activer juste avant." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Apprentissage de la routine\n• Phase 2 — Induction K-BASE-006 (rapide)\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Pratique en imagination\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Certains moments en sport ont une intensité particulière : un tir au but pour gagner, un penalty décisif, un putt à 1 mètre pour le titre, un service pour le match. Quelques secondes qui peuvent tout changer. Aujourd'hui, nous installons un dispositif pour ces moments-là." },
+      { label: "Routine Reproductible", detail: "La clé des moments décisifs est une routine reproductible. Toujours la même séquence avant l'action. Cette routine fait deux choses : elle met ton mental dans un état précis, et elle court-circuite la rumination sur l'enjeu en occupant ton attention par des éléments familiers." },
+      { label: "Etape 1 Souffle", detail: "Étape une : ton souffle. Une grande respiration profonde, expiration complète. Cette respiration baisse l'activation à un niveau gérable. Ne pas l'oublier — beaucoup d'athlètes oublient de respirer dans ces moments, ce qui amplifie la crispation." },
+      { label: "Etape 2 Corps", detail: "Étape deux : ton corps. Tu te poses, tu sens tes appuis, tu te connectes physiquement. Si tu peux, un geste-ancre court — toucher la balle, ajuster la tenue, fixer un point précis. Ce geste signale à ton corps : on entre dans l'action." },
+      { label: "Etape 3 Visualisation", detail: "Étape trois : la visualisation rapide du résultat. Une image claire, brève — la balle qui rentre, la flèche au centre, le mouvement parfait. Cette image, plantée dans ton esprit, oriente le système." },
+      { label: "Etape 4 Geste", detail: "Étape quatre : tu fais le geste. Sans plus penser. Tu as répété ce geste des milliers de fois — tu peux lui faire confiance. Ne pilote pas chaque détail. Laisse ton corps faire ce qu'il sait faire." },
+      { label: "Pas De Seconde Chance", detail: "Beaucoup de moments décisifs n'ont pas de seconde chance. Cela peut paralyser, ou au contraire libérer. Quand tu sais que tu n'as qu'un essai, tu peux te dire : alors je vais le donner pleinement. Pas de retenue. Pas de demi-engagement. Cette acceptation libère paradoxalement." },
+      { label: "Apres L Action", detail: "Quoi que soit le résultat, après l'action, tu prends une respiration et tu lâches. Si réussi : célébrer brièvement et passer à la suite. Si raté : reset rapide, le passé est passé, le suivant attend si suivant il y a. Pas de spirale." },
+      { label: "Pratique En Imagination", detail: "Maintenant, imagine un moment décisif dans ton sport. Active la routine complète : souffle, corps, visualisation, geste. Refais-le plusieurs fois en imagination. Chaque répétition installe le pattern. Le jour où le moment réel arrive, ton inconscient déroulera la routine sans hésiter." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, dans les moments décisifs de ton sport, ta routine s'activera. Souffle, corps, visualisation, geste. Et entre l'enjeu et toi, cette routine fait le pont. Tu joues le geste, pas l'enjeu." }
       ],
     }],
   }],
@@ -7061,7 +8313,16 @@ const k_777: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour athlètes en fin de carrière (choisie ou subie : retraite, blessure de carrière, non-renouvellement). Travail spécifique sur cette transition majeure, identité au-delà du sport, deuil et reconstruction." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Accueil de la situation\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Sanctuaire K-BASE-012\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu arrives à la fin de ta carrière sportive. Choisie ou subie, cette fin est une transition majeure. Tu vas quitter ce qui a été, pour beaucoup, le centre de ta vie pendant des années. Cette transition mérite tout l'espace et le soin que mérite un grand passage." },
+      { label: "Deuil Sportif", detail: "Quitter un sport de haut niveau, c'est faire un deuil. Pas le deuil d'une personne — le deuil d'une vie. Du quotidien d'athlète, des entraînements, des compétitions, du staff, du corps qui répondait, des moments d'intensité. Ce deuil est légitime. Tu peux te permettre de le ressentir, sans le minimiser." },
+      { label: "Identite Qui Demeure", detail: "Pendant tes années de sport, ton identité a peut-être fortement coïncidé avec ton statut d'athlète. Aujourd'hui, il est temps de redécouvrir ce que tu es au-delà de cela. Ton caractère, tes valeurs, tes intérêts hors-sport, tes relations, tes rêves. Ces dimensions de toi ont continué à exister pendant ta carrière, parfois en arrière-plan. Elles peuvent maintenant prendre l'avant-scène." },
+      { label: "Acquis Qui Demeurent", detail: "Le sport t'a donné des choses qui ne disparaissent pas avec la fin de ta carrière. La discipline. La capacité d'effort. Le mental endurant. La gestion de la pression. La rigueur du préparation. La capacité à apprendre. Ces qualités sont des atouts pour la suite, dans n'importe quel domaine que tu choisiras." },
+      { label: "Construction Progressive", detail: "Construire ton après ne se fait pas en un jour. Plusieurs mois, parfois années pour les athlètes ayant eu des carrières longues. Tu peux t'accorder ce temps, sans précipiter une reconversion qui ne te conviendrait pas. Explorer, tester, sentir ce qui t'appelle." },
+      { label: "Relations Qui Changent", detail: "Tes relations changent souvent à la fin d'une carrière. Coéquipiers, staff, fédération — beaucoup de ces liens vont s'éloigner naturellement. Cela peut être douloureux. Tu peux choisir de garder ce qui mérite d'être gardé, et accepter la mutation des autres relations." },
+      { label: "Corps Qui Change", detail: "Ton corps va changer aussi. Plus le même volume d'entraînement, plus la même condition, peut-être des transformations physiques. Tu peux apprendre à habiter ce nouveau corps avec bienveillance. Pas le forcer à être ce qu'il était. Lui permettre d'être ce qu'il devient." },
+      { label: "Difficulte Subie", detail: "Si ta fin de carrière est subie — blessure grave, non-renouvellement, exclusion — la dimension de blessure est plus aiguë. La colère, l'injustice ressentie sont légitimes. Tu peux les exprimer, les traverser. Et progressivement, tu peux travailler à ne pas laisser cette fin amère définir tout ton après." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux habiter cette transition avec présence. Faire le deuil de ce qui a été, pleinement. Reconnaître ce que le sport t'a apporté et qui demeure en toi. Explorer ce qui t'appelle pour la suite. Et construire progressivement un chapitre nouveau, avec autant d'engagement que tu en as mis dans le précédent." }
       ],
     }],
   }],
@@ -7100,7 +8361,16 @@ const k_778: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour étudiants ou patients préparant un examen important. Travail sur la confiance dans le travail accompli, l'apaisement de l'anxiété, la mobilisation des ressources le jour J." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation du travail effectué\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Visualisation de l'épreuve\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu approches d'un examen important. Tu as travaillé. Mais l'anxiété monte, et avec elle, le doute : ai-je assez préparé ? Vais-je me souvenir le jour J ? Vais-je tenir mentalement ? Aujourd'hui, nous mobilisons tes ressources mentales pour que ton travail puisse pleinement se traduire en performance." },
+      { label: "Confiance Travail", detail: "Premier point essentiel : tu as travaillé. Cette base existe. Beaucoup d'étudiants qui échouent ne sont pas en manque de connaissances — ils sont en panique qui leur fait perdre l'accès à ce qu'ils savent. Faire confiance à ce que tu as appris est le premier acte de la performance." },
+      { label: "Connaissance Disponible", detail: "Imagine maintenant tout ce que tu as étudié comme un savoir disponible en toi. Pas un savoir parfaitement organisé — beaucoup de choses, parfois mêlées, parfois floues. Mais cette masse de connaissances est là. Le jour J, ce qu'il te faudra ressortira, à la demande de la question." },
+      { label: "Apaisement Anticipation", detail: "L'anxiété anticipatoire dans les jours qui précèdent ne sert à rien d'utile. Elle ne te fait pas mieux apprendre — elle te fatigue. Tu peux apprendre à mettre cette anxiété en pause. À te dire : pour l'instant, je travaille ; le jour J, je ferai face. Pas d'avantage à anticiper la difficulté." },
+      { label: "La Veille", detail: "La veille au soir, tu peux ne plus travailler. Ton cerveau a besoin de la nuit pour intégrer. Une lecture rapide des points clés peut suffire. Plus important : un bon sommeil, une nourriture adaptée, ton dispositif d'apaisement activé. Le matin du jour J, un petit-déjeuner correct, une marche pour réveiller le corps." },
+      { label: "Jour J Arrivee", detail: "Le jour J, tu arrives à l'examen. Tu actives ton dispositif : trois respirations longues, ton corps prêt, ta confiance dans ton travail, ton focus. Tu n'es pas en panique — tu es en mobilisation. Cette différence change tout." },
+      { label: "Pendant L Epreuve", detail: "Pendant l'épreuve, tu lis l'énoncé deux fois. Tu identifies ce qu'on te demande exactement. Tu prends quelques secondes pour structurer ta réponse avant de te lancer. Si une question te bloque, tu la mets de côté et tu y reviens. Tu ne te laisses pas paralyser par un trou." },
+      { label: "Oral Specifique", detail: "Pour un oral : tu prends le temps de respirer avant de commencer. Tu acceptes d'avoir 2-3 secondes de pause si besoin. Tu parles plus lentement que tu ne le penses. Tu regardes le jury — pas en défi, en présence. Tu es là pour partager ton savoir, pas pour subir un interrogatoire." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ta préparation se poursuit avec confiance. Le jour J, ton dispositif s'active naturellement. Tu accèdes à ton savoir. Tu donnes la performance dont ton travail t'a rendu capable. Et quel que soit le résultat, tu auras donné ce que tu pouvais donner." }
       ],
     }],
   }],
@@ -7139,7 +8409,16 @@ const k_779: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour étudiants ou patients ayant des difficultés de concentration durant l'apprentissage. Travail sur la qualité d'attention, l'absence de distraction interne, l'apprentissage en présence pleine." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification des distracteurs\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Pratique d'une plage de concentration\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu travailles, mais tu sens que tu ne te concentres pas vraiment. Ton attention dérive. Tu te retrouves à penser à autre chose, à vérifier ton téléphone, à ressasser des préoccupations. Le résultat : tu passes des heures sur ton travail mais tu en retiens peu. C'est cette qualité d'attention que nous allons travailler." },
+      { label: "Distinction Temps Travail", detail: "Une heure d'étude concentrée vaut souvent plus que trois heures éparpillées. La performance n'est pas linéaire avec le temps. Plus important que le temps total, c'est la qualité d'attention pendant ce temps. Optimiser cette qualité multiplie l'efficacité." },
+      { label: "Distractions Internes", detail: "La distraction principale n'est pas externe (téléphone, bruit) — elle est interne. Tes propres pensées qui partent. Ruminations sur autre chose. Vérifications mentales (ai-je oublié quelque chose ?). Ces distractions internes sont gérables par un dispositif que nous allons installer." },
+      { label: "Bulle D Etude", detail: "Imagine que pendant tes plages d'étude, tu peux activer une bulle. Une zone de présence dans laquelle tu es entièrement à ta tâche. Hors de cette bulle, le reste du monde existe, mais il attend. Tu y reviendras à la fin de la plage. Pendant la plage, il n'a pas accès à toi." },
+      { label: "Plages Courtes Intenses", detail: "Plutôt que de longues sessions où l'attention finit par chuter, pratique des plages courtes mais intenses. 25 à 50 minutes d'étude pleinement concentrée, suivies de 5-10 minutes de vraie pause. Cette structure (proche de la technique Pomodoro) maintient une qualité d'attention élevée." },
+      { label: "Pendant La Plage", detail: "Pendant la plage, tu es dans la bulle. Si une distraction interne surgit (pensée, inquiétude), tu la notes brièvement — pas pour t'y plonger, juste pour la reconnaître — et tu reviens à ta tâche. La pratique répétée de ce retour entraîne ton attention." },
+      { label: "Objectif De Plage", detail: "Avant chaque plage, fixe-toi un objectif clair. Pas vague. Concret. Lire et comprendre ce chapitre. Faire ces exercices. Mémoriser cette liste. Cet objectif structure la plage et te donne un sentiment d'accomplissement quand elle est terminée." },
+      { label: "Pendant Pause Vraie", detail: "Pendant les pauses, fais vraiment pause. Ne fais pas autre chose qui demande attention (réseaux sociaux). Marche. Bouge. Bois de l'eau. Regarde par la fenêtre. Ton cerveau a besoin de cette respiration pour intégrer ce qui vient d'être travaillé et se préparer à la suite." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tes plages d'étude peuvent gagner en qualité. Active ta bulle, fixe ton objectif, plonge dans la tâche. Quand l'attention dérive, ramène-la doucement. Et tes pauses sont de vraies pauses. Cette manière de travailler te fait apprendre plus en moins de temps." }
       ],
     }],
   }],
@@ -7178,7 +8457,16 @@ const k_780: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients ayant des difficultés à mémoriser ou à restituer ce qu'ils ont appris. Travail sur l'encodage, le ressouvenir, la lutte contre les blocages mnésiques liés au stress." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification du type de difficulté\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Pratique de restitution sereine\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu as l'impression que ta mémoire te fait défaut. Soit tu n'arrives pas à mémoriser de manière efficace, soit tu n'arrives pas à restituer ce que tu as pourtant appris. Ces deux dimensions sont différentes et travaillent différemment. Aujourd'hui, nous travaillons les deux." },
+      { label: "Encodage Qualite", detail: "Pour mémoriser efficacement, ce qui compte n'est pas le temps de travail mais la qualité de présence. Un texte lu en présence, en cherchant à comprendre, en faisant des liens, en s'imageant les éléments, s'inscrit beaucoup mieux qu'un texte parcouru en pensant à autre chose." },
+      { label: "Associations", detail: "Ta mémoire fonctionne par associations. Plus tu peux relier une nouvelle information à des choses que tu sais déjà, plus elle s'inscrit solidement. Au lieu de mémoriser passivement, cherche activement des liens : avec ce que tu connais, avec des images, avec ta vie. Ces ponts fixent." },
+      { label: "Imagerie Associative", detail: "Pour mémoriser une liste ou des notions abstraites, l'imagerie associative est puissante. Transforme l'information en images mentales fortes, parfois absurdes, et associe-les. Le cerveau retient mieux les images vives que les mots abstraits. C'est la base des techniques mnémotechniques." },
+      { label: "Blocage Stress", detail: "Le trou de mémoire en examen ou en oral est rarement un manque de savoir — c'est un blocage de l'accès. Le stress active le système d'urgence, qui rétrécit l'accès aux ressources cognitives larges. Tu sais — mais tu ne peux pas accéder à ce que tu sais." },
+      { label: "Dispositif Acces", detail: "Quand un trou survient, tu disposes d'un dispositif. Trois respirations longues. Te dire intérieurement : c'est là, je vais le retrouver. Et orienter ton attention vers le contexte de ce que tu cherches plutôt que vers le contenu directement. Souvent, le souvenir revient par la périphérie quand tu cesses de pousser fort sur le centre." },
+      { label: "Pratique Oral", detail: "Pour les oraux, pratique-toi à l'avance sur la qualité de présence et le débit. Parler plus lentement, accepter les pauses brèves, reprendre la respiration. Cette manière de parler donne au cerveau le temps d'accéder. Une présentation rapide stress, et le stress bloque." },
+      { label: "Confiance Dans Savoir", detail: "Plus tu fais confiance à ton savoir, plus il devient accessible. Cela peut sembler paradoxal, mais c'est vrai. Quand tu vas en examen avec : je sais ce que je sais, j'aurai accès à ce que j'ai appris — l'accès est meilleur. Quand tu y vas avec : je vais sûrement oublier, je vais avoir des trous — les trous viennent." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ta mémoire devient ton alliée. Tu encodes en présence et avec associations. Tu fais confiance à l'accès. Et si un trou survient, ton dispositif d'accès s'active sans paniquer. Et progressivement, ta restitution devient plus fluide, plus fiable." }
       ],
     }],
   }],
@@ -7217,7 +8505,18 @@ const k_781: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients devant faire une présentation, conférence, soutenance, intervention publique. Travail sur la qualité de présence sur scène, la gestion de l'anxiété, la connexion avec l'auditoire." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Préparation du contenu (hors hypnose)\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Visualisation complète de la présentation\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu vas parler devant un public. Que ce soit dix personnes ou cinq cents, le principe est le même : tu vas te tenir devant des regards, et tu vas devoir transmettre quelque chose. Cette situation peut paniquer ou exalter — souvent les deux. Aujourd'hui, nous préparons ta présence sur scène." },
+      { label: "Pas Acteur", detail: "Important d'emblée : tu n'as pas à devenir un orateur professionnel. Tu vas être toi sur scène, simplement. Mais une version de toi qui est pleinement présente, qui sait ce qu'elle veut transmettre, qui peut établir un lien avec l'auditoire. Cette présence-là est apprenable." },
+      { label: "Corps Sur Scene", detail: "Quand tu arrives sur scène, ton corps doit s'ancrer. Tes pieds sentent le sol. Ton bassin est posé. Tes épaules ne sont pas remontées. Ton regard parcourt l'auditoire en arrivant. Cette présence physique, avant même les premières paroles, donne le ton." },
+      { label: "Souffle Pour La Voix", detail: "Ta voix repose sur ton souffle. Une respiration ample, à partir du ventre, donne à ta voix puissance et stabilité. Avant de commencer, prends 2-3 respirations profondes. Pendant la présentation, n'oublie pas de respirer. Beaucoup d'orateurs anxieux respirent à peine, ce qui rend leur voix faible et tremblante." },
+      { label: "Premier Minute", detail: "La première minute est la plus difficile. Ton corps est en activation maximale. Accepte cette activation — ne la combats pas. Quelques minutes après, elle baisse naturellement et tu rentres dans ton sujet. Sache que ces premières secondes inconfortables vont passer, et fonce." },
+      { label: "Regard Qui Connecte", detail: "Ton regard est ton outil principal pour créer du lien. Pas un regard fuyant, pas un regard fixe sur une seule personne. Un regard qui circule, qui s'arrête brièvement sur des visages, qui revient. Trois ou quatre points dans la salle suffisent. Cette circulation du regard transforme ta présentation en conversation." },
+      { label: "Pause Qui Porte", detail: "Les pauses sont précieuses. Elles donnent le temps à ton auditoire d'intégrer. Elles te donnent le temps de respirer. Elles ponctuent ton discours. N'aie pas peur des silences brefs — ils donnent du poids à ce qui les précède et à ce qui les suit." },
+      { label: "Si Blanc", detail: "Si tu as un blanc, ne paniques pas. Reprends ta respiration, reformule ta dernière phrase, et continue. L'auditoire ne perçoit jamais aussi fort que toi tes hésitations. Ce que tu vis comme un trou de plusieurs secondes peut paraître à peine perceptible vu de l'extérieur." },
+      { label: "Passion Du Sujet", detail: "Connecte-toi à ce qui te passionne dans le sujet. Pas la peur de mal faire — l'envie de partager. Quand tu es connecté à ce qui te passionne, ta présence devient communicative. L'auditoire sent quand l'orateur croit à ce qu'il dit, et cela seul change tout." },
+      { label: "Visualisation Globale", detail: "Visualise maintenant ta présentation entière. Ton arrivée sur scène. Tes premiers mots. Le déroulement. Quelques moments forts que tu as préparés. La fin. L'applaudissement. Tu te sors avec sentiment d'avoir donné. Cette visualisation, refaite plusieurs fois, prépare puissamment." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ta présentation est inscrite mentalement. Le jour J, ton corps saura s'ancrer, ta voix saura porter, ton regard saura connecter. Les premières secondes inconfortables passeront. Et tu transmettras ce que tu avais à transmettre, dans une présence qui te ressemble." }
       ],
     }],
   }],
@@ -7256,7 +8555,17 @@ const k_782: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour préparation à un entretien d'embauche, évaluation professionnelle, ou rencontre déterminante. Travail sur la posture, la confiance, la qualité de présence, la valorisation juste de soi." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification du contexte et enjeux\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Visualisation de l'entretien\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu te prépares à un entretien important. C'est une situation où l'enjeu est élevé, où tu dois te présenter, te valoriser, convaincre. Et où l'anxiété peut te faire sous-performer alors que tu serais capable de bien plus. Aujourd'hui, nous préparons ton mental pour cette rencontre." },
+      { label: "Realite De L Entretien", detail: "L'entretien n'est pas seulement une évaluation à sens unique. C'est aussi une rencontre. L'employeur ou évaluateur a besoin de quelqu'un — il cherche, lui aussi. Cette compréhension change la posture : tu ne mendies pas, tu te présentes. Tu n'es pas seulement évalué, tu évalues aussi ce que ce poste ou cette situation te conviendrait." },
+      { label: "Confiance En Valeur", detail: "Tu as une valeur. Pas une valeur de prétention — une valeur d'expérience, de compétences, de personnalité, de potentiel. Cette valeur existe avant l'entretien, indépendamment de son issue. Tu n'as pas à te survendre — tu as à te présenter justement." },
+      { label: "Avant L Entretien", detail: "Le jour J, prépare-toi avec soin mais sans rigidité. Connais le contexte de la structure. Aie quelques exemples concrets de ce que tu as fait. Anticipe quelques questions probables. Mais surtout, soigne ton état mental : sommeil, repas léger, respiration calme, vêtement qui te met à l'aise." },
+      { label: "Arrivee", detail: "Quand tu arrives, ta présence physique parle avant tes mots. Tiens-toi droit, sans rigidité. Sourire bref, regard franc. Une poignée de main ferme mais non écrasante. Ces premiers instants posent le climat." },
+      { label: "Pendant L Entretien", detail: "Pendant l'entretien, tu es en présence. Tu écoutes vraiment les questions avant de répondre. Tu prends 2-3 secondes pour structurer ta réponse si besoin — ce n'est pas un défaut, c'est un signe de réflexion. Tu réponds par des éléments concrets, des exemples, pas par des généralités." },
+      { label: "Si Question Difficile", detail: "Si une question te déstabilise, tu peux respirer brièvement et la reformuler avant de répondre. Tu peux dire : si je comprends bien, vous me demandez... Cela te donne le temps et clarifie. Si tu ne sais pas, tu peux le dire calmement plutôt que d'inventer." },
+      { label: "Questions A Poser", detail: "À la fin, on te demandera souvent si tu as des questions. Aies-en deux ou trois préparées. Cela montre ton intérêt et te permet aussi d'évaluer ton intérêt à toi. Pas de questions sur le salaire en premier rendez-vous, sauf si l'autre partie l'aborde." },
+      { label: "Apres L Entretien", detail: "Après l'entretien, lâche prise. Tu as fait ce que tu pouvais. La décision dépend de nombreux facteurs dont certains hors de ton contrôle. Si c'est positif, ce sera un bon match. Si c'est négatif, c'était peut-être pour une raison qui te servira ailleurs. Cette posture protège ton estime quoi qu'il arrive." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux te présenter à cet entretien dans la confiance de ce que tu vaux. Tu seras présent, à l'écoute, ajusté. Tu présenteras le meilleur de toi sans te survendre. Et tu accueilleras l'issue avec la sérénité de qui a donné ce qu'il pouvait." }
       ],
     }],
   }],
@@ -7295,7 +8604,17 @@ const k_783: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients préparant le permis de conduire (code et conduite), avec anxiété spécifique. Travail sur la maîtrise de l'examen, la confiance au volant, la décrispation pour la conduite quotidienne." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification du type de difficulté\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Visualisation d'un examen\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu prépares ton permis. Peut-être que tu as déjà passé l'examen une ou plusieurs fois sans succès. Peut-être que la conduite elle-même t'angoisse. Le permis est plus qu'un papier — c'est aussi un accès à l'autonomie, et l'enjeu peut peser. Aujourd'hui, nous travaillons sur le mental." },
+      { label: "Competence Acquise", detail: "Tu as appris des choses. Le code, la conduite, les manœuvres. Ces acquis sont en toi. L'enjeu n'est pas tant d'en savoir plus que de pouvoir y accéder le jour J sous pression. C'est cet accès que nous travaillons." },
+      { label: "Examen Comme Trajet", detail: "Le jour de l'examen, oublie que c'est un examen. Considère-le comme un trajet ordinaire. Tu conduis comme tu as appris. L'examinateur observe, mais cela ne change pas ce que tu fais. Cette posture mentale réduit le poids de l'enjeu." },
+      { label: "Au Volant Present", detail: "Pendant la conduite, ton attention est dans la conduite. Pas dans ce que pense l'examinateur. Pas dans la peur de rater. Dans la route, les rétroviseurs, la signalisation. Cette présence à la tâche est ce qui fait la bonne conduite, et elle vient quand on cesse de surveiller mentalement le jugement." },
+      { label: "Erreur Ne Signe Pas Echec", detail: "Une petite erreur en cours de conduite ne signe pas l'échec. Beaucoup d'examinateurs valorisent la capacité à se reprendre, à réagir intelligemment. Si tu fais une erreur mineure, ne te désorganise pas. Reprends ta concentration et continue. La fin du trajet importe autant que les points intermédiaires." },
+      { label: "Decrispation Volant", detail: "Au volant, ton corps doit être détendu. Mains posées sans crispation, épaules basses, respiration ample. Une crispation excessive fait baisser la qualité de la conduite. Plus tu es détendu en conduisant, plus tu réagis bien aux situations." },
+      { label: "Apprehension Situations", detail: "Si certaines situations t'apprehendent (ronds-points, autoroute, manœuvres précises), tu peux les pratiquer en imagination calmement. Te voir les exécuter avec présence et fluidité. Cette répétition imagée prépare l'exécution réelle." },
+      { label: "Apres Eventuel Echec", detail: "Si tu as déjà échoué, tu peux laisser cet échec à sa place — un événement qui s'est passé, sans plus. Ne pas le revivre indéfiniment, ne pas en faire un présage. Chaque examen est un nouveau départ. Tu y vas avec ce que tu sais maintenant." },
+      { label: "Visualisation Calme", detail: "Imagine maintenant ton examen. Tu arrives, tu salues l'examinateur, tu démarres. La conduite est fluide. Tu fais peut-être une petite imperfection, sans drame, et tu continues. Tu réussis les manœuvres. Tu termines le trajet. L'examinateur te dit que c'est bon. Cette image, refaite, prépare le réel." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ta préparation continue avec confiance. Le jour de l'examen, tu actives ton dispositif : présence à la conduite, décrispation, examen comme un trajet ordinaire. Et tu donnes le meilleur de ce que tu as appris." }
       ],
     }],
   }],
@@ -7334,7 +8653,16 @@ const k_784: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients créatifs (artistes, écrivains, musiciens, designers, entrepreneurs) en blocage créatif. Travail sur les conditions de la créativité, le désinvestissement de l'auto-jugement, l'accès au flux." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification du type de blocage\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Sanctuaire K-BASE-012\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu es créatif. Et pourtant, depuis quelque temps, ton processus créatif est bloqué. La page reste blanche. Les idées ne viennent plus. Tu fixes ton outil ou ton instrument et rien n'émerge. Ou tu produis, mais tu rejettes immédiatement, rien ne te satisfait. Cette panne créative te désempare." },
+      { label: "Jugement Qui Paralyse", detail: "Souvent, ce qui bloque la créativité n'est pas l'absence d'idées — c'est le juge intérieur qui les écrase au moment où elles émergent. Avant qu'une idée ait le temps de prendre forme, elle est jugée nulle, banale, prétentieuse. Ce jugement précoce assèche la source." },
+      { label: "Distinction Creer Juger", detail: "Créer et juger sont deux activités différentes, qui demandent des états différents. Les meilleurs créatifs alternent ces phases. Phase de création : on génère, sans juger, on accepte tout ce qui vient. Phase de jugement : on évalue, on garde, on jette. Mélanger les deux paralyse les deux." },
+      { label: "Sanctuaire De Creation", detail: "Dans ton sanctuaire intérieur, tu peux créer un espace particulier — un atelier, un studio, une scène, un bureau. Cet espace est un espace sans jugement. Aucun critique n'y entre. Aucun standard. Aucune attente. Juste l'émergence libre." },
+      { label: "Acces A La Source", detail: "Dans cet espace, tu peux te connecter à ce qui en toi est la source. Pas le mental qui calcule, mais une dimension plus profonde. L'inconscient créatif, dirait-on. Cette source produit en permanence — elle ne tarit pas. Quand tu n'as plus rien, ce n'est pas que la source s'est tarie : c'est que l'accès est obstrué." },
+      { label: "Lacher Le Qualificatif", detail: "Pendant un temps, tu peux décider de produire sans qualifier. Écrire mal, peindre mal, jouer mal. Pourquoi pas ? L'objectif n'est pas le résultat — c'est de remettre l'eau qui coule. La qualité reviendra ensuite. Mais d'abord, il faut que ça coule à nouveau, n'importe comment." },
+      { label: "Pratique Quotidienne", detail: "Beaucoup de créatifs témoignent de l'utilité d'une pratique quotidienne courte, sans enjeu. Trois pages le matin, dix minutes d'instrument, une esquisse rapide. Pas pour produire — pour entretenir le canal. Cette régularité libère plus que les sessions intenses occasionnelles." },
+      { label: "Pas Attendre L Inspiration", detail: "L'inspiration ne vient pas avant le travail — elle vient dans le travail. Attendre l'inspiration en restant inactif est généralement une impasse. Beaucoup de grands créatifs ont insisté : ils s'asseyaient à leur poste qu'ils soient inspirés ou pas. C'est en commençant que l'inspiration s'éveille." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux retrouver l'accès à ta source créative. Ton sanctuaire de création est disponible. Tu peux pratiquer la séparation des phases : créer sans juger, puis juger sans créer. Tu peux tenter une pratique quotidienne sans enjeu. Et progressivement, le flux se restaure." }
       ],
     }],
   }],
@@ -7373,7 +8701,17 @@ const k_785: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en perte de motivation pour des objectifs qu'ils valorisent pourtant. Travail sur la connexion au pourquoi profond, la division des objectifs, l'élan régénéré." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification de l'objectif valorisé\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Plan d'action minimal\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu as un objectif qui te tient à cœur. Pas un objectif imposé — quelque chose que tu valorises vraiment. Et pourtant, tu n'arrives pas à t'y mettre, ou tu n'arrives plus à y avancer. La motivation s'est dissipée. Et plus le temps passe, plus tu te culpabilises, ce qui te démotive davantage." },
+      { label: "Pas La Volonte", detail: "La motivation durable ne tient pas par la volonté seule. La volonté est une ressource limitée, qui s'épuise. Si tu te bats contre toi-même pour te forcer à avancer, tu perds. Il y a un autre chemin : retrouver le moteur intérieur qui rend l'effort moins coûteux." },
+      { label: "Pourquoi Profond", detail: "Pour cet objectif, demande-toi : pourquoi profondément cela m'importe-t-il ? Pas la réponse de surface. Plus profond. Qu'est-ce qui en moi appelle vers cet objectif ? Quelle valeur, quel désir, quelle vision ? Cette connexion au pourquoi profond — à ton Ka — est le carburant durable." },
+      { label: "Si Pourquoi Flou", detail: "Si tu n'arrives pas à connecter à un pourquoi vivant, c'est peut-être que cet objectif n'est pas vraiment le tien. Peut-être qu'il vient d'attentes extérieures, de ce qu'il faudrait vouloir, de comparaisons. Dans ce cas, il faut soit redécouvrir une raison d'y tenir authentique, soit accepter de l'abandonner." },
+      { label: "Ka Qui Porte", detail: "Quand tu es connecté à ton Ka, à ton essence profonde, l'effort devient autre. Pas absent — mais porté. Tu fais parce que cela correspond à qui tu es, à ce qui t'importe. Cette posture est inépuisable, contrairement à la volonté pure." },
+      { label: "Division De L Objectif", detail: "Un grand objectif intimide. Tu peux le diviser. Quel est le sous-objectif suivant ? Et le sous-sous-objectif ? Et la prochaine action concrète, à ta portée ? Cette descente jusqu'à l'action immédiatement faisable rend le démarrage possible." },
+      { label: "Action Minimale", detail: "Souvent, le blocage est sur le démarrage. L'inertie est plus forte au repos qu'en mouvement. Tu peux te dire : aujourd'hui, je fais juste cette petite action. Cinq minutes. Une page. Un appel. Souvent, une fois engagé, tu continueras au-delà. Mais même si tu ne fais que les cinq minutes, tu as fait un pas." },
+      { label: "Progres Visibles", detail: "Marque tes progrès. Pas seulement la grande arrivée — les petits jalons. Cocher une étape, enregistrer une avancée, observer la transformation. Ces marques visibles entretiennent la motivation, parce que ton cerveau a besoin de signal de progrès pour continuer à investir." },
+      { label: "Relation Au Temps", detail: "La motivation durable demande aussi un rapport sain au temps. Ne pas vouloir tout, tout de suite. Accepter la lenteur des grands objectifs. Tenir dans la durée plutôt que sprinter et s'épuiser. Ce rythme tenable produit plus que les bursts intenses suivis d'effondrements." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux te reconnecter à ton pourquoi profond pour cet objectif. Tu peux le diviser jusqu'à l'action minimale, et la faire. Tu peux marquer tes progrès. Et tu peux tenir le rythme, plutôt que viser le sprint. Ton élan se restaure quand tu cesses de te violenter et que tu te connectes à ce qui te porte vraiment." }
       ],
     }],
   }],
@@ -7412,7 +8750,16 @@ const k_786: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients qui reportent systématiquement des tâches importantes. Travail sur les mécanismes du report, l'identification des évitements émotionnels, le passage à l'action." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification d'une tâche reportée\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Plan d'action immédiate\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu reportes des choses importantes. Pas par paresse — souvent tu travailles dur sur d'autres tâches pendant que tu reportes celle-ci. Un mécanisme particulier est à l'œuvre. La procrastination n'est pas un défaut moral — c'est un système qu'on peut comprendre et modifier." },
+      { label: "Evitement Emotionnel", detail: "Au cœur de la procrastination, il y a souvent une émotion qu'on évite. La tâche reportée déclenche en toi une émotion désagréable : peur de mal faire, ennui, sentiment d'incompétence, anxiété, irritation. Repousser la tâche, c'est éviter cette émotion. C'est un mécanisme protecteur, mais coûteux." },
+      { label: "Identifier Emotion", detail: "Pour la tâche que tu reportes, identifie l'émotion sous-jacente. Quand tu penses à t'y mettre, qu'est-ce qui se serre en toi ? Quelle est la sensation désagréable ? Cette identification est déjà un grand pas, parce qu'elle rend conscient ce qui agissait en arrière-plan." },
+      { label: "Emotion Accueillie", detail: "Cette émotion désagréable, tu peux apprendre à l'accueillir plutôt que la fuir. Pas la combattre, pas l'éviter. Juste la reconnaître : oui, cette tâche m'angoisse, m'ennuie, me confronte. C'est désagréable, mais c'est gérable. Cette reconnaissance affaiblit le besoin d'évitement." },
+      { label: "Action 5 Minutes", detail: "Une technique puissante : t'engager juste 5 minutes. Pas plus. 5 minutes sur la tâche reportée. Cette toute petite porte d'entrée est franchissable même quand la grande porte semble close. Et souvent, après les 5 minutes, tu continues — l'inertie est passée du repos au mouvement." },
+      { label: "Pas Le Perfectionnisme", detail: "Beaucoup de procrastination est liée au perfectionnisme. Tu reportes parce que tu veux que ce soit parfait, et la tâche te paraît impossible à faire parfaitement. Tu peux te donner la permission de faire imparfaitement. Une chose mal faite vaut mieux qu'une chose pas faite." },
+      { label: "Culpabilite Aggrave", detail: "La culpabilité que tu ressens à reporter ne t'aide pas à passer à l'action — elle aggrave la procrastination. Ton mental, débordé par la culpabilité, fuit la tâche encore plus. La bienveillance envers toi-même est paradoxalement plus efficace que la dureté." },
+      { label: "Planning Concret", detail: "Sors maintenant de la séance avec un plan. Pas un plan complexe — un plan minimal. Aujourd'hui, ou demain matin, à telle heure, je passe 5 minutes sur cette tâche. Je note l'engagement. Et au moment dit, j'y vais, sans plus négocier intérieurement." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, quand une tâche te bloque, tu peux identifier l'émotion fuie, l'accueillir, et t'engager juste 5 minutes. Cette série de gestes, pratiquée régulièrement, transforme ton rapport à l'action. Et progressivement, ce que tu reportais devient ce que tu fais." }
       ],
     }],
   }],
@@ -7451,7 +8798,17 @@ const k_787: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients confrontés à une décision importante qu'ils n'arrivent pas à prendre. Travail sur l'écoute intérieure, la clarification des valeurs en jeu, le dépassement de la paralysie analytique." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Présentation de la décision en consultation\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Sanctuaire K-BASE-012\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Voix sage K-BASE-023\n• Phase 6 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu portes une décision importante. Plusieurs voies se présentent, et tu hésites depuis un temps qui devient long. Le mental tourne en rond. Les arguments pour et contre s'accumulent sans trancher. Tu te demandes si tu prendras un jour la décision, ou si elle sera prise par défaut, par épuisement." },
+      { label: "Paralysie Analytique", detail: "Quand le mental tourne sans trancher, c'est souvent que la décision ne peut pas se prendre uniquement avec la raison. Les options ont chacune leurs forces et leurs faiblesses, et aucun calcul rationnel ne donne la réponse claire. Quelque chose d'autre est nécessaire : l'écoute de ton intuition, de ton Ka, de tes valeurs profondes." },
+      { label: "Clarification Valeurs", detail: "Avant de chercher la réponse, clarifie les valeurs en jeu. Pour chaque option, demande-toi : quelle valeur est servie ? Quelle valeur est sacrifiée ? La sécurité, la liberté, l'amour, la croissance, la stabilité, l'aventure — chaque option arbitre différemment ces valeurs. Connaître les arbitrages te rapproche de la décision." },
+      { label: "Visualisation Futur A", detail: "Imagine maintenant que tu as choisi l'option A. Tu te projettes 5 ans plus tard. Comment va ta vie ? Que ressens-tu ? Quels sont les plaisirs et les regrets ? Habite cette projection — pas en mental, en sensations. Que te dit cette projection sur le bonheur dans cette voie ?" },
+      { label: "Visualisation Futur B", detail: "Maintenant, l'option B. 5 ans plus tard. Comment va ta vie ? Que ressens-tu ? Habite. Compare avec la première projection. Souvent, l'une des deux est plus chargée d'élan, l'autre plus chargée de regret. Cette information est précieuse." },
+      { label: "Voix Sage Consultee", detail: "Tu peux consulter ta voix sage intérieure. Pas pour te dicter une réponse — pour t'aider à entendre ce que tu sais déjà sans le savoir. Que dirait à propos de cette décision la part la plus sage de toi ? Pas la plus prudente — la plus sage. Qui prend en compte le long terme et tes valeurs profondes." },
+      { label: "Corps Sait Souvent", detail: "Ton corps sait souvent avant ton mental. Quand tu envisages une option, ton corps répond : se contracte ou s'ouvre, sent un poids ou une légèreté. Cette information corporelle est précieuse, parce qu'elle court-circuite le bavardage mental. Que te dit ton corps sur chaque option ?" },
+      { label: "Acceptation De La Perte", detail: "Toute décision implique une perte — celle des options non choisies. Cette perte est inévitable. Refuser la perte conduit à ne jamais décider. Accepter qu'on perdra quelque chose en choisissant libère pour le choix. Tu ne peux pas tout avoir — tu peux choisir ce qui te ressemble le plus." },
+      { label: "Decision Prise Dans Corps", detail: "Quand la décision se prend, tu la sens dans le corps. Une certaine clarté, une certaine paix. Pas une absence de doute — un doute apaisé. Tu peux savoir que tu choisis avec ce que tu sais maintenant, pas avec ce que tu sauras plus tard. Et cela peut suffire pour avancer." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu disposes d'éléments pour ta décision. Les valeurs en jeu sont clarifiées. Les futurs alternatifs sont visualisés. Ta voix sage et ton corps ont été consultés. Tu peux laisser maturer encore un peu, puis trancher. Et quand tu auras tranché, tu pourras t'engager pleinement dans la voie choisie, sans regretter celles qui ne sont pas prises." }
       ],
     }],
   }],
@@ -7490,7 +8847,17 @@ const k_788: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en position de responsabilité ayant du mal à s'affirmer ou à incarner leur leadership. Travail sur la posture, l'autorité juste, la prise de place sans agression." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification du défi spécifique\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Visualisation d'une situation\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu es en position de responsabilité. Cette position demande quelque chose de toi que tu n'as peut-être pas pleinement intégré : prendre ta place, exercer une autorité, incarner un leadership. Cette posture peut sembler étrangère, particulièrement si tu viens d'un milieu où l'on ne t'a pas appris à prendre une place haute." },
+      { label: "Autorite Pas Autoritarisme", detail: "L'autorité juste n'est pas l'autoritarisme. L'autoritarisme s'impose par la force, écrase, contrôle. L'autorité juste se fonde sur la légitimité, l'écoute, la clarté. Elle laisse exister ceux qu'elle dirige tout en assumant les choix difficiles. Cette distinction est cruciale." },
+      { label: "Legitimite Interieure", detail: "Ton autorité commence en toi, par le sentiment intérieur que tu es légitime à occuper ta place. Si tu doutes intérieurement, ton équipe le sent et la confiance s'érode. Si tu habites ta place, ton équipe le sent et la confiance se construit. Ce travail intérieur précède la posture extérieure." },
+      { label: "Droit A La Place", detail: "Tu as le droit d'occuper ta place. On t'a confié cette responsabilité parce que quelqu'un a vu en toi la capacité à le faire. Tu n'as pas à mendier ta légitimité — tu peux la prendre. Pas avec arrogance — avec acceptation simple : c'est ma place, je l'occupe." },
+      { label: "Posture Corporelle", detail: "Le leadership s'incarne aussi corporellement. Posture droite mais pas raide. Voix qui porte sans crier. Regard qui établit le contact. Geste posé. Cette présence corporelle communique à ton entourage avant tes paroles." },
+      { label: "Decisions Difficiles", detail: "Une partie du leadership est de prendre des décisions difficiles. Donner un mauvais retour, refuser une demande, trancher entre des options qui mécontenteront certains. Cette dimension fait partie de ta fonction. Évitement de ces moments te fait perdre en autorité réelle." },
+      { label: "Ecoute Qui Legitime", detail: "Mais l'autorité juste écoute aussi. Avant de trancher, tu prends le temps d'entendre les points de vue. Pas pour décider démocratiquement quand le rôle est de trancher — pour décider en connaissance. Cette écoute préalable, même quand la décision finale n'est pas celle que les autres voulaient, est ce qui rend l'autorité légitime." },
+      { label: "Pas Etre Aime De Tous", detail: "Une difficulté du leadership : tu ne peux pas être aimé de tous. Tes décisions mécontenteront certains. Si tu cherches à être aimé de tous, tu décideras mal — tu privilégieras la popularité plutôt que la justesse. Accepter de ne pas être aimé de tous est une condition du bon leadership." },
+      { label: "Visualisation Situation", detail: "Imagine maintenant une situation de leadership qui te défie. Une réunion difficile, une décision à annoncer, un conflit à arbitrer. Habite cette situation avec la posture que nous installons : présence corporelle, légitimité intérieure, écoute préalable, décision claire. Tu y es. C'est ta place. Tu fais ton travail." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux occuper ta place avec plus d'aisance. Ton autorité s'incarne dans ton corps, dans ta voix, dans ton regard. Tu prends les décisions difficiles parce qu'elles sont dans ton rôle. Tu écoutes, mais tu tranches. Et progressivement, ton leadership devient une posture naturelle, plus qu'une fonction à effort." }
       ],
     }],
   }],
@@ -7529,7 +8896,17 @@ const k_789: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en pré-burn-out (surcharge, premiers signes d'épuisement) ne nécessitant pas encore d'arrêt médical. Travail de prévention, restauration progressive, modification du rapport au travail." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation du niveau d'épuisement\n• Phase 2 — Induction K-BASE-003 douce\n• Phase 3 — Lieu sûr\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu approches d'un seuil. Tu n'es pas encore en burn-out, mais tu sens que tu vas dans cette direction. Fatigue qui ne se repose pas. Irritabilité grandissante. Plaisir au travail en diminution. Difficultés de concentration. Sommeil perturbé. Ces signaux sont précieux — ils te disent qu'il est temps d'agir avant la chute." },
+      { label: "Signaux Corporels", detail: "Ton corps t'envoie des messages. Tensions qui ne lâchent plus. Maux de tête plus fréquents. Troubles digestifs. Insomnie. Ces signaux ne sont pas des défaillances — ce sont des appels au soin. Les ignorer, c'est risquer qu'ils deviennent des défaillances." },
+      { label: "Signaux Emotionnels", detail: "Émotionnellement aussi, des signaux. Cynisme grandissant envers ton travail ou tes collègues. Sentiment d'incompétence alors que tu es compétent. Détachement de ce qui te tenait à cœur. Ces signaux montrent que ta relation au travail s'altère, et qu'il faut intervenir." },
+      { label: "Restauration Avant Chute", detail: "À ce stade, la restauration est encore possible sans arrêt prolongé. Mais elle demande des actions concrètes. Pas des bonnes intentions — des changements effectifs. Sommeil rallongé. Coupures dans les soirées. Activité physique. Soutien social. Ces piliers reconstituent." },
+      { label: "Limites A Poser", detail: "Le burn-out vient souvent d'une absence de limites. Tu prends en charge plus que tu ne peux. Tu réponds aux mails à toute heure. Tu travailles le week-end. Tu acceptes des demandes qu'il faudrait refuser. Poser des limites — claires et tenues — est une condition de la prévention." },
+      { label: "Pause Dans La Journee", detail: "Dans tes journées, tu peux installer des micro-pauses. Pas de travail au déjeuner. Une marche courte dans l'après-midi. Quelques minutes de respiration entre deux réunions. Ces espaces, anodins en apparence, font la différence pour le système nerveux." },
+      { label: "Qualite Des Relations", detail: "Vérifier la qualité de tes relations au travail et hors-travail. Le soutien social est l'un des plus puissants protecteurs contre le burn-out. Les relations authentiques, où tu peux être toi-même sans performer, restaurent plus que tu ne le crois." },
+      { label: "Pourquoi Revisité", detail: "Reconnecte-toi à ton pourquoi initial. Pourquoi tu fais ce travail ? Quel sens il a pour toi ? Si la connexion est perdue, c'est un signal majeur. Et si elle ne peut être restaurée, peut-être qu'un changement plus profond est à envisager." },
+      { label: "Demande Aide", detail: "Tu n'as pas à porter cela seul. Parle avec ta hiérarchie si possible (de la charge, pas de toi en faillite). Vois un médecin pour un bilan. Continue ce travail thérapeutique. Demander aide n'est pas faillir — c'est intelligence." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux respecter les signaux de ton corps et de ton esprit. Tu peux poser des limites. Tu peux installer des micro-pauses. Tu peux soigner tes relations. Tu peux te reconnecter à ton sens. Cette série d'actions, prises au stade actuel, peut éviter la chute." }
       ],
     }],
   }],
@@ -7568,7 +8945,16 @@ const k_790: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en reconversion professionnelle, choisie ou subie. Travail sur l'identité professionnelle qui se transforme, le passage de l'ancien au nouveau métier, la confiance dans la transition." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Clarification du contexte\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Visualisation du nouveau\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu changes de métier. Soit par choix réfléchi, soit parce que tu ne pouvais plus, soit parce que c'est devenu nécessaire. Ce changement n'est pas anodin — c'est une transformation qui touche ton identité, ta sécurité, ton quotidien. Aujourd'hui, nous accompagnons cette traversée." },
+      { label: "Identite Qui Change", detail: "Pendant des années, tu étais identifié à un métier. Quand on te demandait ce que tu faisais, ta réponse situait. Aujourd'hui, cette identité se transforme. Tu n'es plus pleinement l'ancien, pas encore pleinement le nouveau. Cet entre-deux a sa propre difficulté." },
+      { label: "Acquis Transferables", detail: "Mais tu ne pars pas de rien. Tes années précédentes t'ont donné des compétences, des qualités, des manières d'être qui sont transférables. Discipline, capacité de travail, relations clients, gestion de projet, expertise technique — autant de choses qui te suivent dans le nouveau, même si elles s'appliquent différemment." },
+      { label: "Legitimite Du Choix", detail: "Si la reconversion est choisie, elle a une raison. Quelque chose en toi appelait vers ce nouveau. Cet appel mérite confiance, même quand le mental rationnel doute. Tu ne fais pas cela par caprice — tu réponds à un mouvement intérieur qui sait quelque chose." },
+      { label: "Si Subie", detail: "Si la reconversion est subie, c'est plus douloureux. Il y a une perte qui n'a pas été choisie. Cette perte mérite son deuil. Mais elle peut aussi devenir une opportunité : faire ce que tu n'aurais peut-être jamais osé sans la contrainte. Beaucoup de patients en reconversion subie témoignent ensuite que c'était finalement une bonne chose." },
+      { label: "Apprentissage Humilite", detail: "Dans le nouveau métier, tu seras à nouveau apprenant. Cette position d'apprenant peut être inconfortable après des années d'expertise. Tu peux l'accepter avec humilité. Personne n'attend de toi que tu sois expert dès le premier jour. Tu vas réapprendre, et c'est normal." },
+      { label: "Temps De Transition", detail: "La reconversion prend du temps. Plusieurs mois, parfois années pour les changements profonds. Pendant ce temps, tu vas alterner phases d'enthousiasme et phases de doute. Cette alternance est normale. Tenir la trajectoire au-delà des fluctuations est ce qui construit le nouveau." },
+      { label: "Visualisation Nouveau", detail: "Imagine maintenant ton nouveau toi professionnel. Dans 2 ans, 5 ans. Tu fais ce nouveau métier. Tu en maîtrises les ficelles. Tu en tires un sentiment d'accomplissement. Cette projection, sans être garantie, est un point d'ancrage qui te porte dans la traversée." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux habiter ta reconversion avec plus de présence. Reconnaître ce qui se transforme. Identifier tes acquis transférables. Accepter la position d'apprenant. Tenir dans la durée. Et progressivement, le nouveau métier devient ton nouveau toi professionnel." }
       ],
     }],
   }],
@@ -7607,7 +8993,17 @@ const k_791: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour entrepreneurs, créateurs, porteurs de projet personnel ayant des doutes sur leur capacité à mener à bien. Travail sur la confiance en sa vision, la persévérance, la résilience face aux obstacles." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Présentation du projet\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Sanctuaire K-BASE-012\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu portes un projet qui te tient à cœur. Une création, une entreprise, une cause, une œuvre. Tu y as investi du temps, de l'énergie, parfois de l'argent. Et tu doutes par moments — de ta capacité à le mener à bien, de sa valeur, de sa pertinence. Ces doutes sont normaux dans tout projet personnel d'envergure." },
+      { label: "Doute Normal", detail: "Le doute fait partie du chemin. Tous les porteurs de projets connaissent ces phases. Plus le projet est ambitieux, plus le doute est intense par moments. Le doute n'est pas le signe que tu dois abandonner — c'est le signe que tu prends le projet au sérieux." },
+      { label: "Reconnexion Vision", detail: "Reconnecte-toi maintenant à la vision originelle. Pourquoi as-tu commencé ce projet ? Qu'est-ce qui t'a attiré vers lui ? Quelle nécessité intérieure ou extérieure il répondait ? Cette vision est ton carburant dans les moments difficiles. Elle peut s'éroder si tu ne la nourris pas." },
+      { label: "Capacite De Porteur", detail: "Tu peux te demander : suis-je capable de porter ce projet ? La réponse n'est pas dans le passé, dans tes diplômes ou ton expérience. Elle est dans ta capacité à apprendre, à persister, à rebondir, à mobiliser des aides. Ces capacités, tu les développes en faisant. Beaucoup d'entrepreneurs n'avaient pas de qualifications particulières — ils avaient cette capacité d'engagement." },
+      { label: "Obstacles Inevitables", detail: "Sur le chemin de tout projet, il y aura des obstacles. Refus, échecs partiels, problèmes inattendus, périodes de découragement. Ces obstacles ne sont pas des signes que le projet est mauvais — ils sont la matière même de tout projet d'envergure. La question n'est pas de les éviter, mais de pouvoir les traverser." },
+      { label: "Resilience", detail: "La résilience se cultive. Chaque obstacle traversé renforce ta confiance en ta capacité d'en traverser d'autres. Au début, un petit obstacle peut sembler insurmontable. Plus tard, après quelques traversées, tu vois les obstacles différemment — comme des étapes plutôt que comme des fins." },
+      { label: "Pas Seul", detail: "Tu n'es pas obligé de porter seul. Identifier les soutiens — mentors, partenaires, amis, professionnels — démultiplie tes capacités. Beaucoup d'entrepreneurs solitaires se brûlent. Ceux qui s'entourent tiennent mieux la durée." },
+      { label: "Durée Du Projet", detail: "Les projets ambitieux prennent du temps. Souvent plus que prévu initialement. Cette durée demande une présence dans la durée que les efforts courts n'exigent pas. Tu peux apprendre à habiter le long terme, à célébrer les petites victoires, à tenir entre les jalons." },
+      { label: "Continuite Dans Les Doutes", detail: "Quand le doute monte, tu peux te dire : c'est une phase de doute, ils existent dans tout projet, je vais la traverser. Cette normalisation t'évite de prendre le doute pour un signal d'arrêt. Et tu continues, malgré le doute, en faisant simplement le pas suivant." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux porter ton projet avec plus de stabilité. Reconnexion à la vision quand elle s'érode. Confiance dans ta capacité à apprendre et à rebondir. Acceptation des obstacles comme matière du parcours. Soutiens identifiés et activés. Et présence dans la durée du projet, sans précipiter ni abandonner." }
       ],
     }],
   }],
@@ -7646,7 +9042,17 @@ const k_792: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Protocole transversal de cultivation de la présence pleine dans toute activité. Approche du quotidien comme champ de performance — pas seulement les grands moments. Très KIIKA dans son esprit." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Induction K-BASE-001\n• Phase 2 — Sanctuaire K-BASE-012\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Pratique guidée\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "La performance n'est pas seulement ce qui se passe dans les grands moments — compétitions, examens, présentations. Elle est aussi dans la qualité avec laquelle tu habites tes journées. Manger, marcher, écouter, travailler, aimer — tout cela peut se faire en absence ou en présence pleine. Et la différence transforme la vie." },
+      { label: "Temps Distrait", detail: "Beaucoup de personnes vivent une grande part de leurs journées en absence. Le corps fait, le mental est ailleurs. On mange en pensant à autre chose. On écoute sans entendre. On agit sans habiter ce qu'on fait. Le temps passe, mais peu de cette vie laisse vraiment trace." },
+      { label: "Temps Present", detail: "Le temps présent est la seule réalité. Le passé n'est plus, le futur n'est pas encore. Pourtant, la plupart de notre attention est dans le passé ou le futur. Ramener l'attention dans le présent ne demande aucune compétence rare — juste l'intention et la pratique." },
+      { label: "Engagement Total", detail: "Quand tu fais quelque chose, fais-le pleinement. Pas en surface, en multitâche, en pensant à autre chose. Engagement total. Si tu manges, tu manges. Si tu marches, tu marches. Si tu écoutes, tu écoutes. Cet engagement total transforme l'expérience en présence." },
+      { label: "Qualite Pas Quantite", detail: "Mieux vaut une heure pleinement vécue que six heures distraites. La qualité d'engagement détermine plus que la quantité de temps. Cette compréhension change ce qui mérite d'être valorisé : pas tout ce que tu accomplis, mais ce que tu accomplis bien, pleinement." },
+      { label: "Instants Simples", detail: "Les moments les plus précieux ne sont souvent pas les moments grandioses — ce sont les instants simples vécus en présence pleine. Une tasse de thé qu'on goûte vraiment. Un coucher de soleil qu'on regarde vraiment. Une conversation qu'on écoute vraiment. Ces instants, accumulés, font la qualité d'une vie." },
+      { label: "Le Corps Present", detail: "Ton corps est ton ancre dans le présent. Quand tu reviens à tes sensations corporelles — appui, souffle, contact — tu es dans le présent. Plusieurs fois par jour, prends quelques secondes pour revenir à ton corps. Cette pratique, accumulée, transforme." },
+      { label: "Intentions Pour La Journee", detail: "Tu peux choisir, chaque matin, une intention pour la journée. Pas une liste de tâches — une qualité que tu veux cultiver. Présence. Patience. Bienveillance. Curiosité. Cette intention oriente la journée d'une manière que les listes de tâches ne peuvent pas." },
+      { label: "L Instant Qui Arrive", detail: "Maintenant, dans ce moment précis, tu es là. Dans ce lieu. Dans ton corps. Dans ton souffle. Dans ce que tu vis. Plus complet qu'une liste de tâches accomplies, plus précieux qu'une multitude d'événements traversés sans être ressentis. Habiter cet instant est en soi une performance." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux pratiquer la présence pleine dans ton quotidien. Pas comme une discipline supplémentaire — comme un art de vivre. Quelques fois par jour, tu reviens au présent. Quand tu fais quelque chose, tu le fais pleinement. Cette accumulation transforme progressivement ta vie en performance habitée." }
       ],
     }],
   }],
@@ -7685,7 +9091,15 @@ const k_1000: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour enfants 4-10 ans souffrant d'anxiété de séparation (école, garde, sortie sans parent). Travail ludique sur la sécurité intérieure et le lien qui demeure malgré la distance." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Accueil enfant + parent\n• Phase 2 — Induction adaptée enfant (histoire)\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Amorce Enfant", detail: "Tu te sens triste ou inquiet quand papa ou maman partent. Tu as l'impression qu'il manque quelque chose, que tu ne te sens pas bien tout seul. C'est parce que tu aimes très fort tes parents. Aujourd'hui, on va apprendre une magie qui marche même quand ils ne sont pas là." },
+      { label: "Amour Qui Voyage", detail: "L'amour de tes parents pour toi, c'est comme un fil invisible. Ce fil ne se casse jamais. Il est là, même quand tu es à l'école et que maman est au travail. Même quand tu dors et que papa est dans une autre pièce. L'amour voyage à toute vitesse, beaucoup plus vite que tout. Il est tout le temps avec toi." },
+      { label: "Petit Objet Magique", detail: "Tu peux choisir un objet ou une image dans ta tête qui représente cet amour. Ça peut être un petit cœur que tu imagines dans ta poche. Ou un super-héros ami qui te suit partout. Ou un petit oiseau magique sur ton épaule qui voit ce que tu fais et qui rapporte les nouvelles à tes parents par la pensée. Choisis ce qui te plaît." },
+      { label: "Force Dans Le Ventre", detail: "Maintenant, sens ton ventre. Là, juste sous ton nombril, il y a une petite lumière. C'est ta force intérieure. C'est ta lumière à toi, qui t'appartient. Cette lumière brille même quand tes parents ne sont pas là. Même mieux : elle apprend à briller plus fort à chaque fois que tu te débrouilles tout seul." },
+      { label: "Et Si Les Larmes Viennent", detail: "Parfois, des larmes peuvent quand même venir. C'est normal. Tu peux les laisser couler un peu, c'est ok. Et puis tu peux poser ta main sur ton ventre, sentir ta lumière, et te rappeler ton objet magique. Et petit à petit, ça va aller mieux." },
+      { label: "Dire Au Revoir", detail: "Quand papa ou maman partent, tu peux apprendre à dire au revoir d'une manière spéciale. Un câlin court mais fort. Un mot à toi (un mot magique que vous inventez ensemble). Un signe avec la main. Et puis tu pars dans ton aventure, sachant qu'ils reviendront." },
+      { label: "Grandir", detail: "Plus tu réussis à être seul ou avec d'autres personnes que papa et maman, plus tu grandis. Pas en taille — en force. Tu deviens un peu plus capable de voler de tes propres ailes. Et quand papa et maman te retrouvent, ils sont fiers de toi, et toi aussi tu es fier de toi." },
+      { label: "Aux Parents", detail: "[Parents] Quelques principes essentiels : dire au revoir clairement (ne pas partir en cachette qui aggrave), être chaleureux mais bref, ne pas rallonger la séparation par votre propre angoisse. Les rituels prévisibles rassurent. Faire des séparations courtes au début, allonger progressivement." }
       ],
     }],
   }],
@@ -7724,7 +9138,15 @@ const k_1001: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour enfants 4-12 ans souffrant de peurs nocturnes, terreurs nocturnes, cauchemars répétés. Travail ludique sur le sentiment de sécurité au coucher, le contrôle imaginé sur les rêves." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Accueil et exploration (avec parent au début)\n• Phase 2 — Induction adaptée (histoire de coucher)\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Amorce Enfant", detail: "La nuit, parfois, tu as peur. Peur du noir, peur que des choses arrivent, peur des cauchemars. C'est très normal — beaucoup d'enfants ont ces peurs. Aujourd'hui, on va apprendre à fabriquer une magie qui te protège la nuit." },
+      { label: "Bouclier Protecteur", detail: "Imagine un grand bouclier magique qui t'entoure complètement quand tu es dans ton lit. Ce bouclier est invisible pour les autres mais très réel pour toi. Il t'entoure de partout — au-dessus, en dessous, devant, derrière, à droite, à gauche. À l'intérieur du bouclier, tu es complètement en sécurité. Rien ne peut entrer." },
+      { label: "Couleur Bouclier", detail: "Quelle est la couleur de ton bouclier ? Choisis celle que tu veux. Bleu profond ? Doré ? Argenté ? Multicolore ? Chaque enfant a la couleur qui lui va le mieux. Cette couleur, c'est la tienne, et elle te protège particulièrement bien." },
+      { label: "Gardien", detail: "Dans ton bouclier, tu peux aussi avoir un gardien. Un personnage qui veille sur toi pendant que tu dors. Ça peut être une fée, un dragon gentil, un super-héros, un animal magique, un ange protecteur. Ce gardien est près de toi toute la nuit. Il chasse les choses qui pourraient te déranger." },
+      { label: "Pour Les Cauchemars", detail: "Si un cauchemar essaie de venir, voici la magie : tu sais maintenant que c'est juste un rêve, pas la réalité. Et ton gardien peut intervenir dans le rêve. Il peut transformer les choses qui font peur en choses drôles ou amicales. Le monstre devient un gros chat câlin. La sorcière devient une dame qui te donne des bonbons. La nuit noire devient un ciel plein d'étoiles." },
+      { label: "Changer Le Reve", detail: "Tu sais que tu peux changer la fin de tes rêves ? Si tu fais un cauchemar, en te réveillant, tu peux raconter le rêve dans ta tête mais en changeant la fin. Tu inventes une fin où tout va bien. Le héros gagne. Le monstre s'en va. Tu trouves une solution. Cette nouvelle fin remplace l'ancienne dans ta tête." },
+      { label: "Rituel Du Coucher", detail: "Au moment de te coucher, tu peux faire ton rituel de sécurité. D'abord, tu installes ton bouclier autour de toi. Tu choisis sa couleur de la nuit. Tu appelles ton gardien. Tu prends trois grandes respirations. Et tu te dis intérieurement : je suis en sécurité, ma nuit va bien se passer." },
+      { label: "Aux Parents", detail: "[Parents] Pour les terreurs nocturnes (différent des cauchemars : enfant qui crie sans être vraiment réveillé), ne pas réveiller pendant l'épisode. Pour cauchemars : ne pas dramatiser le matin, encourager à raconter (et à changer la fin), éviter écrans avant le coucher." }
       ],
     }],
   }],
@@ -7763,7 +9185,16 @@ const k_1002: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour enfants 5-12 ans avec phobies spécifiques (animaux, insectes, médecin, dentiste, eau, hauteur). Travail de désensibilisation ludique avec progression douce." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification de la phobie\n• Phase 2 — Induction adaptée enfant\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Amorce Enfant", detail: "Tu as peur de [chose précise]. Cette peur est tellement grande qu'elle te bloque parfois pour faire des choses que tu voudrais. Aujourd'hui, on va l'apprivoiser doucement. Pas tout d'un coup — petit à petit, à ton rythme." },
+      { label: "Pouvoir Dans Imagination", detail: "Dans ton imagination, c'est toi le chef. Tu peux faire arriver les choses comme tu veux, et les arrêter quand tu veux. C'est important : tu gardes toujours le contrôle. Si quelque chose te fait trop peur, tu peux dire stop et nous passons à autre chose." },
+      { label: "Compagnon De Courage", detail: "Choisis un compagnon qui va t'accompagner dans cet apprivoisement. Cela peut être un super-héros, un animal magique, un personnage que tu aimes, ou même un parent en version magique qui t'accompagne. Ce compagnon est avec toi tout le temps de notre travail." },
+      { label: "Etape 1 Au Loin", detail: "On commence très loin. Imagine que [la chose qui te fait peur] est très très loin, à 100 mètres de toi. Tu la vois à peine. Tu peux à peine la distinguer. À cette distance-là, c'est gérable, n'est-ce pas ? Sens-toi bien à cette distance. Avec ton compagnon, tu te sens en sécurité." },
+      { label: "Progressif", detail: "Maintenant, doucement, on va se rapprocher un tout petit peu. À 80 mètres. Toujours loin. Tu vois mieux, mais tu es toujours loin. Si ça va, on continue. Sinon, on reste là. À ton rythme. À 50 mètres. À 30 mètres. À chaque étape, tu sens ton compagnon avec toi." },
+      { label: "Chose Apprivoisée", detail: "Imagine maintenant que [la chose] devient un peu différente. Plus petite. Moins effrayante. Peut-être même un peu sympathique. Comme quand on apprend à connaître quelque chose qu'on craignait, et qu'on découvre que ce n'est pas si terrible." },
+      { label: "Situation Reelle", detail: "Maintenant, imagine une situation réelle où tu pourrais rencontrer [la chose]. Mais tu y vas avec ton compagnon, avec ce que tu sais maintenant. La situation se passe bien. Tu es un peu impressionné peut-être, mais tu y arrives. Tu te sens fier après." },
+      { label: "Pouvoir Et Force", detail: "Chaque fois que tu réussis une étape — en imagination ou dans la vraie vie — ta force grandit. Tu deviens un peu plus courageux. Pas du courage qui n'a peur de rien, mais du courage qui sait que la peur peut être traversée." },
+      { label: "Aux Parents", detail: "[Parents] Ne pas forcer brutalement. Ne pas minimiser non plus la peur. Encourager les petits succès. Accompagner sans surprotéger. Pour phobies graves : exposition réelle progressive avec encadrement professionnel." }
       ],
     }],
   }],
@@ -7802,7 +9233,15 @@ const k_1003: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour préparation rapide d'un enfant 4-10 ans à un acte médical court mais redouté (vaccin, prise de sang, examen). Dispositif court avec lieu sûr ludique et transformation des sensations." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Brève présentation à l'enfant et au parent\n• Phase 2 — Induction ludique courte\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Amorce", detail: "Tu vas avoir [vaccin / prise de sang / examen]. Ce sera court, mais ça peut faire un peu peur ou un petit pinçon. Aujourd'hui on apprend une magie pour que ce soit beaucoup plus facile." },
+      { label: "Endroit Special", detail: "Imagine un endroit super chouette pour toi. Cela peut être inventé : une plage, un château, un vaisseau spatial, un sous-marin, ton coin secret dans la forêt. Choisis. Cet endroit est à toi." },
+      { label: "Compagnon", detail: "Dans cet endroit, tu choisis un compagnon. Un super-héros, un animal magique, un personnage que tu aimes. Ce compagnon va t'accompagner pendant le soin. Il a un super-pouvoir : il peut transformer les sensations." },
+      { label: "Pendant Le Soin", detail: "Quand le médecin ou l'infirmière fera son travail, ton corps reste là, mais toi, tu peux aller dans ton endroit avec ton compagnon. Tu fermes les yeux, tu respires comme on a appris (un, deux, trois grandes respirations) et tu y es." },
+      { label: "Transformation Sensation", detail: "Et le pouvoir de ton compagnon : si tu sens un petit pinçon ou quelque chose de bizarre, il peut transformer cette sensation. Le pinçon devient un chatouillis amusant. La sensation bizarre devient une drôle de vibration. Comme un super-pouvoir qui change ce que tu ressens." },
+      { label: "Signal Geste", detail: "On va inventer ensemble un signal magique. Quand tu serres ton poing fort en disant un mot dans ta tête (choisis ton mot), tu actives ta magie. Trois grandes respirations en serrant le poing, et hop, tu es en mode héros." },
+      { label: "Apres Soin", detail: "Quand c'est fini, tu reviens. Tu auras peut-être à peine senti. Et tu peux te dire : j'ai utilisé ma magie, j'ai été un héros. Plus tu utilises ta magie, plus elle devient puissante." },
+      { label: "Aux Parents", detail: "[Parents] Avant le soin, rappeler le compagnon, l'endroit, le signal. Pendant : présence calme sans dramatisation ni minimisation. Après : féliciter d'avoir utilisé sa magie. Pour soins répétés : la magie peut servir à chaque fois." }
       ],
     }],
   }],
@@ -7841,7 +9280,15 @@ const k_1004: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour enfants 5-12 ans avec difficultés alimentaires sélectives (refus de catégories d'aliments, sensibilité texture, néophobie). Travail ludique sans pression. PAS pour TCA pathologiques." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation (pas TCA pathologique)\n• Phase 2 — Induction adaptée\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Amorce", detail: "Il y a beaucoup d'aliments que tu ne veux pas manger. Pour toi, c'est dégoûtant ou bizarre. Et quand on te demande d'essayer, tu as envie de refuser. C'est normal — beaucoup d'enfants sont comme ça. Aujourd'hui, on va voir comment ça pourrait devenir plus facile, à ton rythme." },
+      { label: "Aucune Pression", detail: "Important d'abord : on ne va pas te forcer. Personne ne va te dire que tu dois manger ce que tu n'aimes pas. Aujourd'hui, on joue avec l'idée des aliments. Tu choisis ce que tu acceptes d'imaginer." },
+      { label: "Explorateur", detail: "Imagine que tu es un explorateur du monde des goûts. Comme un explorateur de la nature ou de l'espace, mais pour les aliments. Un explorateur ne mange pas tout ce qu'il trouve immédiatement — il observe d'abord, sent, touche, et puis peut-être goûte un tout petit peu." },
+      { label: "Imagination Aliment", detail: "Choisis un aliment qui ne t'attire pas trop, mais pas le pire. Imagine-le dans ta tête. Sa couleur, sa forme. Imagine que tu peux l'observer comme un explorateur : c'est intéressant, c'est différent, c'est nouveau. Sans avoir à le manger maintenant." },
+      { label: "Petits Pas", detail: "Pour de vrai, dans la cuisine, tu peux faire des petits pas. Étape un : il est dans ton assiette, tu le regardes. Étape deux : tu le touches avec un doigt. Étape trois : tu le sens. Étape quatre : tu le poses sur ta langue très brièvement. Étape cinq : tu en croques un tout petit morceau." },
+      { label: "Droit De Pas Aimer", detail: "Et si tu goûtes et que tu n'aimes pas, c'est ton droit ! Tu peux le dire. Personne ne va se fâcher. Goûter ne veut pas dire être obligé d'aimer. Mais goûter te fait découvrir." },
+      { label: "Le Temps Change Les Gouts", detail: "Sais-tu que tes goûts changent au fil des années ? Plein de choses que tu n'aimes pas aujourd'hui, peut-être que dans un an ou deux, tu les adoreras. Et plein de choses que les adultes adorent, ils ne les aimaient pas quand ils avaient ton âge. Le goût grandit avec toi." },
+      { label: "Aux Parents", detail: "[Parents] Critères du succès : pas la quantité mangée, mais la baisse des conflits. Servir les aliments difficiles régulièrement sans pression. Manger devant l'enfant ce qu'on voudrait qu'il mange. Pas de chantage, pas de récompense systématique." }
       ],
     }],
   }],
@@ -7880,7 +9327,15 @@ const k_1005: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour enfants 6-12 ans avec difficultés d'attention ou agitation (sans diagnostic TDAH, ou en complément). Travail sur la régulation, la qualité d'attention courte, le calme accessible." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Brève accueil\n• Phase 2 — Induction très brève\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Amorce", detail: "Tu as parfois beaucoup d'énergie qui bouge dans ton corps, et c'est difficile de te poser. À l'école, c'est compliqué de rester concentré longtemps. Aujourd'hui, on va apprendre une magie pour avoir un peu plus de contrôle sur ton attention. Pas pour te transformer en statue — juste pour avoir un outil quand tu en as besoin." },
+      { label: "Le Faisceau", detail: "Imagine que ton attention, c'est comme un faisceau de lampe-torche. Quand tu es agité, ton faisceau bouge dans tous les sens, il éclaire un peu de tout sans s'arrêter. Tu peux apprendre à pointer ton faisceau sur une seule chose à la fois." },
+      { label: "Pratique Focus Court", detail: "Choisis un objet près de toi. Maintenant, ton faisceau d'attention est posé entièrement sur cet objet. Pendant trente secondes seulement. Tu remarques sa couleur, sa forme, les détails. Si ton faisceau bouge, doucement tu le ramènes. Trente secondes, c'est ton défi." },
+      { label: "Progression", detail: "Trente secondes, c'est facile. Avec la pratique, tu pourras faire une minute. Puis deux. Puis cinq. Comme un muscle qu'on entraîne. Le muscle de l'attention. Plus tu l'entraînes, plus il devient fort." },
+      { label: "Le Calme Par Le Souffle", detail: "Quand l'agitation est grande dans ton corps, tu as un outil : trois respirations spéciales. Tu inspires en gonflant ton ventre comme un ballon. Tu expires lentement en faisant un petit son comme un dragon. Trois fois. Cette respiration calme ton corps, comme un super-pouvoir." },
+      { label: "Outils Pour Classe", detail: "À l'école, quand tu sens que tu n'arrives pas à te concentrer, tu peux utiliser ces outils discrètement. Trois respirations dragon dans ta tête. Pointer ton faisceau sur ce que la maîtresse explique. Ces outils, personne ne les voit, mais ils marchent." },
+      { label: "Droit A La Pause", detail: "Tu n'es pas obligé de te concentrer en permanence. Le cerveau a besoin de pauses. Demande-en si tu peux. Bouge un peu si on te le permet. L'important n'est pas d'être un robot — c'est d'avoir des moments d'attention de qualité." },
+      { label: "Aux Parents", detail: "[Parents] Bilan TDAH si difficultés majeures (neuropsy, médecin spécialisé). Activité physique régulière essentielle. Sommeil suffisant. Cadre clair, prévisible. Reconnaissance des progrès, même petits." }
       ],
     }],
   }],
@@ -7919,7 +9374,16 @@ const k_1006: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour enfants 6-12 ans avec faible estime de soi, hypersensibilité à la critique, peur de l'échec. Travail ludique sur la lumière intérieure, les forces de l'enfant, le droit à l'imperfection." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Accueil et exploration\n• Phase 2 — Induction adaptée\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Amorce", detail: "Tu te dis souvent que tu es nul, ou pas assez bien, ou moins bien que les autres. Cette pensée fait mal. Aujourd'hui, on va découvrir quelque chose d'important : ta valeur, ta lumière intérieure, qui est là même quand tu ne la vois pas." },
+      { label: "Lumiere Dans Le Coeur", detail: "Pose ta main sur ton cœur. Sens-le battre. Là, dans ton cœur, il y a une lumière. C'est ta lumière à toi. Elle est là depuis ta naissance, elle t'appartient pour toujours. Personne ne peut te la prendre. Cette lumière, c'est ta valeur de petit humain." },
+      { label: "Lumiere Qui Brille", detail: "Cette lumière brille même quand tu rates quelque chose. Elle brille même quand on te gronde. Elle brille même quand tu te dis des choses méchantes sur toi. Elle ne s'éteint pas. Parfois tu as l'impression qu'elle s'éteint, mais c'est juste qu'elle est cachée par les nuages des pensées tristes." },
+      { label: "Mes Forces", detail: "Tu as des forces. Pas forcément les mêmes que ton frère, ta sœur, ton copain — les tiennes. Pense à trois choses que tu sais faire, ou trois qualités que tu as. Pas besoin que ce soit grand. Tu sais bien dessiner ? Tu fais rire les autres ? Tu es gentil avec les animaux ? Tu sais raconter des histoires ? Toutes les forces comptent." },
+      { label: "Pas Grave De Se Tromper", detail: "Personne n'est bon à tout. Personne. Même les plus grands champions, les plus grands savants, les plus grandes stars, ratent des choses. Se tromper fait partie du chemin. Quand tu te trompes, tu n'es pas nul — tu es en train d'apprendre. Le seul vrai échec, c'est de ne pas essayer." },
+      { label: "Pas Se Comparer", detail: "Comparer, c'est piégé. Si tu te compares aux meilleurs dans chaque chose, tu te trouveras toujours moins bien. Mais tu n'es pas obligé d'être le meilleur. Tu es obligé d'être toi. Et toi, c'est unique. Personne d'autre n'est exactement comme toi." },
+      { label: "Phrase Magique", detail: "Avant de t'endormir le soir, tu peux te dire dans ta tête : 'Je suis [ton prénom]. Ma lumière est là. Je suis suffisant. Je suis aimable.' Tu peux choisir ta phrase. Cette phrase, répétée chaque soir, fait grandir ta lumière intérieure." },
+      { label: "Si Quelqu Un Est Mechant", detail: "Si quelqu'un te dit des choses méchantes — un copain, un adulte, ou même toi-même dans ta tête — souviens-toi : ces paroles n'ont pas le pouvoir d'éteindre ta lumière. Ce qu'on dit de toi, ce n'est pas ce que tu es. Tu sais qui tu es, à l'intérieur." },
+      { label: "Aux Parents", detail: "[Parents] Valoriser l'effort plus que le résultat. Pointer les forces spécifiques de l'enfant. Éviter les comparaisons frères/sœurs ou autres enfants. Permettre l'erreur sans drame. Reconnaître les émotions. Donner de la place et de l'écoute." }
       ],
     }],
   }],
@@ -7958,7 +9422,16 @@ const k_1007: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour enfants victimes de harcèlement scolaire (en complément des actions sur le harcèlement lui-même). Travail sur la sécurité intérieure, la légitimité, la non-intériorisation des mots blessants." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation gravité et actions en cours\n• Phase 2 — Induction adaptée\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Legitimite D Abord", detail: "Avant tout, je veux que tu saches : ce qui t'arrive n'est pas de ta faute. Ceux qui se moquent ou qui t'embêtent ont un problème — eux, pas toi. Tu n'as pas mérité ce qui t'arrive. Cette vérité est importante : grave-la dans ta tête." },
+      { label: "Actions En Cours", detail: "Tes parents et l'école sont en train d'agir pour faire arrêter cela. C'est leur travail. Ton travail à toi, c'est de tenir le coup à l'intérieur pendant que les choses se règlent. Et c'est ce qu'on travaille aujourd'hui." },
+      { label: "Bouclier Des Paroles", detail: "Imagine un bouclier autour de toi. Pas un bouclier qui empêche les paroles d'arriver à tes oreilles — ça, on ne peut pas. Un bouclier qui empêche les paroles d'entrer à l'intérieur de toi. Les paroles arrivent, elles touchent le bouclier, et elles glissent. Elles n'entrent pas dans ton cœur." },
+      { label: "Paroles Pas Verite", detail: "Quand quelqu'un dit des choses méchantes sur toi, ces choses ne sont pas vraies. Même si elles sont dites avec force. Même si elles sont dites par plusieurs. Ce que les autres disent de toi n'est pas ce que tu es vraiment. Tu sais qui tu es, à l'intérieur." },
+      { label: "Lumiere Qui Demeure", detail: "À l'intérieur de ton bouclier, ta lumière intérieure reste intacte. Elle ne s'abîme pas avec les paroles méchantes. Elle reste toi. Plusieurs fois par jour, tu peux poser ta main sur ton cœur et te rappeler : ma lumière est là, je suis encore moi." },
+      { label: "Courage De Parler", detail: "Tu peux et tu dois parler de ce qui se passe. À tes parents. À un adulte de l'école en qui tu as confiance. À un grand qui peut t'aider. Parler n'est pas être faible — c'est être courageux. Garder le silence laisse les harceleurs gagner." },
+      { label: "Alliés", detail: "Identifie qui est de ton côté. Peut-être pas dans ta classe, mais ailleurs. Tes parents, un cousin, un ami d'autres lieux, un adulte. Dans le pire moment, tu n'es pas seul. Ces personnes existent." },
+      { label: "Temporaire", detail: "Cette période est terrible, mais elle est temporaire. L'école changera, les classes changeront, ta vie continuera. Beaucoup d'enfants harcelés ont une vie d'adulte heureuse, parfois même particulièrement heureuse, parce qu'ils ont appris des choses fortes. Cette période passera." },
+      { label: "Aux Parents", detail: "[Parents] Action sur le harcèlement obligatoire (école, signalement). Soutien quotidien à l'enfant. Activités hors-école pour rééquilibrer. Suivi psychologique si retentissement majeur. Pour rappel : pHARe (programme Éducation Nationale), ligne 3018." }
       ],
     }],
   }],
@@ -7997,7 +9470,15 @@ const k_1008: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour enfants 6-12 ans avec tics nerveux fonctionnels ou TOC débutants légers (rituels de vérification, pensées intrusives). Travail d'apaisement et de désinvestissement." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation gravité\n• Phase 2 — Induction adaptée\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Amorce Tics", detail: "Tu fais des petits gestes que tu n'arrives pas à empêcher [cligner, gratter, secouer]. Ou tu as des pensées qui reviennent encore et encore [vérifier, compter, certaines idées]. C'est ton système nerveux qui s'est mis en mode trop tendu. Aujourd'hui on apprend à l'aider à se calmer." },
+      { label: "Pas Lutter", detail: "Important : on ne va pas lutter contre les tics ou les pensées. Quand on lutte, ils deviennent plus forts. C'est paradoxal, mais c'est comme ça. On va apprendre à ne plus s'en occuper, à les laisser passer." },
+      { label: "Systeme Qui Se Calme", detail: "Imagine que dans ta tête et dans ton corps, il y a un système qui s'est mis en mode trop allumé. Comme une lampe qui clignote alors qu'elle pourrait juste éclairer doucement. On va apprendre à ce système à passer en mode plus calme." },
+      { label: "Respiration Dragon", detail: "Trois grandes respirations dragon. Inspire en gonflant le ventre. Expire en faisant un petit son de dragon, longuement. Trois fois. Cette respiration parle directement à ton système et lui dit : tu peux te calmer." },
+      { label: "Pensee Qui Passe", detail: "Pour les pensées qui reviennent : imagine qu'elles sont comme des nuages dans le ciel. Le ciel, c'est toi. Les nuages, c'est les pensées. Les nuages passent. Tu n'as pas à les attraper, à les analyser, à les vérifier. Tu les regardes passer, et un autre arrive, et il passe aussi." },
+      { label: "Pas Repondre Au Rituel", detail: "Si une pensée te dit 'vérifie encore', tu peux apprendre à ne pas obéir. Pas tout de suite, à ton rythme. Une fois, tu vérifies. La deuxième fois, tu peux te dire : non, j'ai déjà vérifié. C'est dur au début, l'envie reste. Mais elle finit par diminuer si tu n'obéis pas." },
+      { label: "Tics Desinvestis", detail: "Pour les tics : quand tu sens venir le geste, tu peux te dire : c'est mon système trop allumé. Trois respirations dragon. Et le geste passe parfois sans avoir besoin de se faire. Si le geste se fait quand même, ce n'est pas grave — il finira par s'apaiser quand le système se calmera." },
+      { label: "Aux Parents", detail: "[Parents] Pour TOC ou tics installés : suivi médical et neuropsychologique conseillé. Ne pas dramatiser ni focaliser sur les tics (qui aggrave). Sommeil suffisant, activité physique, baisse du stress global. Coordination avec école si gêne majeure." }
       ],
     }],
   }],
@@ -8036,7 +9517,17 @@ const k_1009: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour adolescents 12-17 ans en mal-être diffus, perte de repères, fluctuations émotionnelles intenses. Adaptation registre adolescent. PAS pour dépression majeure ni risque suicidaire." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation rigoureuse (dépression ? suicidaire ?)\n• Phase 2 — Établissement du lien thérapeutique\n• Phase 3 — Induction adaptée à l'âge\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Legitimite De La Periode", detail: "Tu traverses l'adolescence. C'est probablement la période la plus mouvementée de ta vie. Ton corps change, tes émotions sont en montagnes russes, tu cherches qui tu es vraiment, tu testes ta liberté, tu redéfinis ta place. Tout cela est normal — et tout cela est intense." },
+      { label: "Pas Juge", detail: "Aujourd'hui, dans cet espace, je ne te juge pas. Pas comme tes parents qui s'inquiètent peut-être. Pas comme tes enseignants qui ont des attentes. Je suis là pour toi, pour t'accompagner dans cette traversée. Tu peux dire ce que tu veux dire, ou ne rien dire si tu préfères. Cet espace est à toi." },
+      { label: "Fluctuations Normales", detail: "Tes émotions partent dans tous les sens — tristesse profonde, joie intense, colère, ennui, exaltation, vide. Ces fluctuations ne sont pas un problème de toi — elles sont l'adolescence. Ton cerveau et ton corps sont en pleine refonte. Une fois passée cette période, ça se stabilisera." },
+      { label: "Identite En Construction", detail: "Tu te demandes peut-être qui tu es vraiment. Pas la version d'enfant qu'on connaissait. Pas encore l'adulte que tu seras. Quelque chose entre les deux, qui se cherche. Cette quête est précieuse. Tu n'as pas à savoir tout de suite. Tu as à explorer, à tester, à sentir ce qui te ressemble." },
+      { label: "Lien Intérieur", detail: "Au-dessus des fluctuations, il y a un toi qui demeure. Pose ta main sur ton cœur. Sens-le battre. Là, à l'intérieur, il y a une partie de toi qui demeure stable, sous toute la tempête. Tu peux te connecter à cette partie quand tout part dans tous les sens à la surface." },
+      { label: "Corps Qui Change", detail: "Ton corps change vite et parfois bizarrement. Tu peux ne pas le reconnaître. Tu peux ne pas l'aimer. Cette période passe. Le corps trouvera son équilibre. En attendant, tu peux apprendre à habiter ce corps en transition avec un peu de bienveillance, pas de critique." },
+      { label: "Amitiés Intenses", detail: "Tes amis comptent énormément à cet âge. Plus que la famille parfois. Les conflits avec eux te dévastent, les complicités te portent. C'est normal. Mais tu peux aussi te rappeler : ces relations intenses changent souvent à l'âge adulte. Garde ce qui en vaut la peine, sans en faire l'absolu." },
+      { label: "Adultes Ressources", detail: "Identifie un ou deux adultes en qui tu as vraiment confiance. Pas forcément tes parents. Un autre membre de la famille, un parent d'ami, un prof, un coach, un thérapeute. Quand ça va vraiment mal, tu peux leur en parler. Tu n'as pas à porter seul tout ce qui te traverse." },
+      { label: "Pas Seul", detail: "L'adolescence peut donner l'impression d'être seul, incompris, différent. Cette impression est elle-même une expérience adolescente — quasi tout le monde la vit. Tu n'es pas l'exception malheureuse. Tu es dans une expérience humaine partagée, même si chacun la vit à sa manière." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux traverser cette période avec un peu plus de présence à toi-même. Reconnaître que les tempêtes passent. Te connecter à ce qui demeure stable en toi. Identifier tes ressources. Et tenir, tout simplement tenir, en sachant que cette traversée mène à autre chose." }
       ],
     }],
   }],
@@ -8075,7 +9566,17 @@ const k_1010: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour adolescents préparant brevet, bac, partiels, concours. Travail sur la confiance, l'apaisement de l'anxiété, la mobilisation des ressources le jour J. Adaptation registre." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Brève évaluation\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Visualisation jour J\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Amorce", detail: "Tu prépares un examen important. Tu as travaillé. Et l'anxiété monte, avec son lot de doutes : et si je n'avais pas assez bossé, et si je faisais un blanc, et si je ratais, et si... Aujourd'hui, on prépare ton mental pour le jour J." },
+      { label: "Pas Le Savoir Qui Manque", detail: "La plupart des élèves qui ratent un examen ne ratent pas par manque de connaissances — ils ratent par panique qui leur fait perdre l'accès à ce qu'ils savent. Tu as travaillé. Cette base existe. Le travail aujourd'hui, c'est de t'assurer que tu pourras y accéder le jour venu." },
+      { label: "Savoir Disponible", detail: "Tout ce que tu as étudié est en toi. Pas forcément organisé parfaitement — c'est normal. Mais c'est là, accessible. Le jour J, à la lecture des questions, ce qu'il te faut ressortira. Fais confiance à ton cerveau qui a travaillé." },
+      { label: "Anxiete Avant", detail: "Dans les jours et semaines avant, l'anxiété te fait croire qu'il faut travailler plus, plus, plus. C'est un piège. Au-delà d'un certain seuil, le travail supplémentaire ne sert à rien — la fatigue te fait perdre plus que tu ne gagnes. Mieux vaut un travail régulier et raisonnable, avec sommeil et pause, qu'un bourrage stressé et stérile." },
+      { label: "La Veille", detail: "La veille au soir, arrête de travailler. Vraiment. Ton cerveau a besoin de la nuit pour intégrer. Une lecture rapide des points clés peut suffire. Plus important : sommeil correct, pas d'écran tard, repas léger, activité physique douce dans la journée." },
+      { label: "Jour J Arrivée", detail: "Le matin du jour J : lever pas trop tôt, petit-déjeuner correct, arrivée en avance pour ne pas paniquer. À l'arrivée, tu actives ton dispositif : trois respirations longues, ton corps prêt, ta confiance dans ton travail. Tu es prêt." },
+      { label: "Pendant L Epreuve", detail: "Pendant l'épreuve, lis l'énoncé deux fois. Identifie ce qu'on demande exactement. Prends quelques minutes pour structurer avant d'écrire. Si une question te bloque, mets-la de côté et reviens-y. Ne te laisse pas paralyser par un trou." },
+      { label: "Si Blanc", detail: "Si tu fais un blanc en cours d'épreuve : trois respirations longues, ne panique pas. Le blanc est temporaire. Pendant qu'il est là, tu peux passer à autre chose et y revenir plus tard. Souvent, en arrêtant de pousser, le souvenir revient." },
+      { label: "Apres L Epreuve", detail: "Une fois l'épreuve terminée, ne ressasse pas. Ce qui est fait est fait. Tu ne peux plus rien y changer. Si une autre épreuve arrive, focus dessus. Si non, vraie pause." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ta préparation continue avec confiance. Le jour J, ton dispositif s'active. Tu accèdes à ton savoir. Tu donnes ce que ton travail te permet de donner. Et quel que soit le résultat, tu auras donné le meilleur de ce que tu pouvais." }
       ],
     }],
   }],
@@ -8114,7 +9615,16 @@ const k_1011: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour adolescents 12-17 ans en difficulté avec leur image corporelle (acné, corpulence, transformation pubertaire mal vécue, comparaison sur réseaux sociaux). PAS pour TCA pathologiques." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation (pas de TCA)\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Legitimite De La Difficulte", detail: "Tu vis mal ton corps. Tu te trouves trop ceci, pas assez cela. Tu te compares à ce que tu vois sur les réseaux. Tu te critiques sans cesse. Cette difficulté est très partagée à ton âge — tu n'es pas le ou la seule. Mais elle peut peser lourd, et elle mérite d'être travaillée." },
+      { label: "Corps En Construction", detail: "Ton corps est en pleine transformation. Pas encore l'adulte qu'il deviendra. Plus l'enfant qu'il était. Une étape de transition qui peut sembler bizarre, disproportionnée, gênante. C'est normal — la puberté n'est pas une période où le corps est dans son équilibre final." },
+      { label: "Temps Du Corps", detail: "Ton corps va continuer à évoluer pendant des années encore. Ce que tu détestes peut-être aujourd'hui peut devenir tout autre dans 2-3 ans. Beaucoup d'adultes regardent leurs photos d'ado et se disent : pourquoi je me trouvais si moche, j'étais bien en fait. La perspective change." },
+      { label: "Reseaux Pas Realite", detail: "Sur les réseaux, tu vois des images filtrées, retouchées, choisies parmi des centaines. Tu ne vois pas la vraie vie. Tu te compares à des images qui n'existent pas vraiment. Personne, dans la vraie vie, ne ressemble à son selfie filtré. Cette comparaison est piégée." },
+      { label: "Corps Pas Image", detail: "Ton corps n'est pas une image. C'est aussi celui qui sent, qui marche, qui respire, qui aime, qui rit. La plupart de ce que ton corps fait n'est pas visible sur une photo. Le réduire à son apparence, c'est ne voir que la coque et oublier ce qu'il y a dedans." },
+      { label: "Critique Chronique Coute", detail: "Te critiquer en permanence te coûte. Ça consomme une énergie énorme. Ça gâche tes journées. Et ça ne change rien — au contraire, ça fixe ton attention sur ce qui te déplaît. Tu peux décider de cesser cette critique chronique, sans pour autant prétendre tout aimer en bloc." },
+      { label: "Bienveillance Progressive", detail: "Tu peux apprendre à regarder ton corps avec moins de jugement. Pas en disant 'je suis parfait' — ce serait faux. En reconnaissant : c'est mon corps, il fait ce qu'il peut, il est en transition, il mérite de la bienveillance. Cette posture, plus juste, allège énormément." },
+      { label: "Valeur Au Dela", detail: "Ta valeur en tant que personne ne dépend pas de ton physique. Ce qui te rend aimable, intéressant, ce que tu apportes aux autres — tout cela existe indépendamment de ton apparence. Beaucoup de personnes physiquement très belles sont malheureuses, et beaucoup de personnes 'ordinaires' rayonnent." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux apprendre à regarder ton corps autrement. Pas immédiatement avec amour — mais avec moins de critique. Reconnaître que c'est une transition. Désinvestir les comparaisons toxiques. Cultiver ta valeur au-delà de l'apparence." }
       ],
     }],
   }],
@@ -8153,7 +9663,17 @@ const k_1012: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour couples ou femmes en désir de grossesse depuis quelques mois, sans diagnostic d'infertilité avéré. Travail de détente, désamorçage de la pression, confiance dans le processus naturel." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Écoute attentive\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Sanctuaire K-BASE-012\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu désires un enfant. Cela ne vient pas tout de suite. Et chaque mois qui passe sans résultat alourdit l'attente. Le chronomètre intérieur tourne. Et paradoxalement, plus la pression monte, moins le corps est dans des conditions optimales pour concevoir." },
+      { label: "Pas Promesse", detail: "Aucune promesse aujourd'hui. Personne ne peut garantir le résultat — ni la médecine, ni l'hypnose. Ce que nous pouvons travailler, c'est la qualité de l'état dans lequel ton corps se trouve. Apaiser ce qui peut être apaisé. Et tu es libre de faire ce travail médical en parallèle, en complément." },
+      { label: "Corps En Pression", detail: "Quand le corps est en stress chronique, certaines fonctions se mettent en pause. Le système reproductif n'est pas une fonction d'urgence — il est une fonction de luxe biologique. Les hormones de stress peuvent perturber les cycles, affecter l'ovulation, modifier la qualité des conditions. Apaiser le stress de fond, c'est créer des conditions plus favorables." },
+      { label: "Dans Le Sanctuaire Corporel", detail: "Dans ton sanctuaire intérieur, tu peux dialoguer avec ton corps. Lui dire intérieurement : tu peux te détendre. La pression que je te mets ne te sert pas. Tu sais ce qu'il faut faire — c'est inscrit en toi. Je te fais confiance." },
+      { label: "Femme Lien Au Cycle", detail: "Si tu es la femme : ton cycle est précieux. Pas seulement comme outil de conception — comme rythme propre. Apprendre à le connaître, l'observer sans surveiller anxieusement, lui donner de l'espace, peut soutenir la fertilité. Beaucoup de femmes en désir d'enfant développent une hypervigilance qui paradoxalement perturbe." },
+      { label: "Pression Du Chronometre", detail: "L'âge avance — c'est une réalité, surtout après 35 ans. Cette pression peut paralyser. Tu peux apprendre à l'accueillir sans la nier ni te laisser dévorer par elle. Faire ce qui dépend de toi (vie saine, suivi médical), et lâcher ce qui n'en dépend pas (le calendrier exact)." },
+      { label: "Couple", detail: "Si tu es en couple, la sexualité peut devenir un acte planifié plutôt qu'un moment partagé. Cela tue souvent ce que cela cherchait à servir. Tu peux essayer de protéger des moments où la sexualité est juste pour vous, sans la fonction reproductive en avant-plan." },
+      { label: "Acceptation Du Temps", detail: "La conception peut prendre du temps. Plusieurs mois, parfois plus, sans qu'il y ait de problème particulier. Cette durée peut user. Tu peux choisir d'habiter le présent au lieu de vivre toujours dans l'attente du résultat. Vivre, profiter, faire des projets — sans mettre ta vie entre parenthèses pendant cette période." },
+      { label: "Si Pas De Grossesse", detail: "Et si la grossesse ne vient pas, à un moment, il faudra envisager des examens. Ce n'est pas un échec, c'est une étape. Beaucoup de couples qui ont eu besoin d'aide médicale ont réussi à avoir leurs enfants. Mais cette étape, le moment venu, demande sa propre traversée." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux dépose la pression chaque jour, plusieurs fois. Faire confiance à ton corps. Vivre ta vie présente. Et accueillir ce qui vient, à son rythme, en faisant ce qui dépend de toi sans t'épuiser sur ce qui ne t'appartient pas." }
       ],
     }],
   }],
@@ -8192,7 +9712,16 @@ const k_1013: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour couples ou femmes en parcours d'aide médicale à la procréation (FIV, IAC, IVG médicamenteuse). Travail spécifique sur la traversée psychologique, l'attente, les échecs possibles, le maintien du couple." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Écoute du parcours en cours\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Lieu sûr K-BASE-011\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu es engagé dans un parcours d'aide médicale à la procréation. Ce parcours, par sa nature, est éprouvant : injections, examens répétés, attentes interminables, espoir et déception qui alternent. Aujourd'hui, nous accompagnons cette traversée psychologique." },
+      { label: "Realite Du Parcours", detail: "La PMA n'est pas un raccourci. C'est un long chemin avec ses propres difficultés. Le corps est sollicité par les traitements hormonaux. L'esprit est sollicité par l'attente. Le couple est sollicité par cette fonction médicalisée. Toutes ces dimensions méritent leur soin." },
+      { label: "Les Phases Du Cycle", detail: "Chaque cycle de PMA a ses phases : stimulation, ponction ou insémination, attente de l'embryon ou du transfert, attente du résultat. Chaque phase a sa propre charge émotionnelle. Comprendre où tu es te permet d'habiter chaque phase pour ce qu'elle est, plutôt que de tout vivre comme une longue attente indifférenciée." },
+      { label: "Attente Des Resultats", detail: "L'attente du résultat est souvent la phase la plus dure — les fameuses deux semaines. Le corps peut envoyer des signaux ambigus. L'esprit interprète tout, oscille entre espoir et désespoir. Tu peux apprendre à habiter cette attente sans la décrypter en permanence. Vivre, occuper l'esprit, faire confiance à ce qui se passe ou non." },
+      { label: "Les Echecs", detail: "Les échecs en PMA sont réels et fréquents. Chaque échec est un mini-deuil. Tu peux te permettre de pleurer, de crier, de te révolter. Et puis, après ce temps de deuil, tu peux décider si tu reprends ou non. Pas dans la panique de l'instant — dans le temps qu'il faut." },
+      { label: "Le Couple En Pma", detail: "La PMA met le couple à l'épreuve. La sexualité peut être affectée. Les rôles changent (la femme porte souvent plus le médical). Les vécus diffèrent : tu et ton partenaire ne ressentez pas forcément les mêmes choses au même moment. Communiquer, avec honnêteté et bienveillance, est essentiel." },
+      { label: "Pas La Seule Definition", detail: "Tu n'es pas réduit à ton parcours PMA. Ta vie continue : ton travail, tes amis, tes loisirs, tes autres engagements. Garder ces dimensions actives est protecteur. Ne pas mettre toute ta vie entre parenthèses — sinon, en cas d'échec prolongé, il ne te reste plus rien d'autre." },
+      { label: "Savoir Arreter", detail: "Il y a un moment, parfois, où il faut savoir arrêter. Pas comme un échec — comme une décision. Soit la grossesse arrive et le parcours prend fin par le succès. Soit il faut envisager d'autres voies (adoption, vie sans enfant). Cette possibilité d'arrêt n'est pas un abandon — c'est une décision de vie qui peut être prise sereinement quand le moment vient." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux traverser ton parcours avec un peu plus de présence. Habiter chaque phase. Vivre les attentes sans les décrypter sans cesse. Accueillir les échecs avec leur deuil. Maintenir ton couple et ta vie. Et savoir, le moment venu, soit célébrer la réussite, soit décider d'autres voies." }
       ],
     }],
   }],
@@ -8231,7 +9760,17 @@ const k_1014: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour femmes enceintes en anxiété (peur de complications, hypervigilance corporelle, stress récurrent). Travail d'apaisement, de présence à la grossesse, de confiance dans le corps qui sait." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation contexte obstétrical\n• Phase 2 — Induction K-BASE-003 douce\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu portes un enfant et tu vis cette grossesse dans l'anxiété. Peurs des complications, hypervigilance corporelle, ruminations sur les risques. Cette anxiété ne te fait pas du bien, ni à toi, ni à ton bébé. Aujourd'hui, nous travaillons à apaiser ce qui peut l'être." },
+      { label: "Grossesse Normale", detail: "La grossesse est un état physiologique normal. Pas une maladie. Ton corps est conçu pour porter un enfant. Cette compétence, intégrée à ton biologie, fonctionne sans que tu aies à la commander. Tu peux lui faire confiance." },
+      { label: "Corps Qui Sait", detail: "Pendant ces neuf mois, ton corps fait un travail extraordinaire. Il fabrique tous les organes, tous les systèmes, jusqu'à un être complet. Ce travail se fait sans que tu y penses. Tu n'as pas à le piloter — tu as à lui donner les conditions (alimentation, repos, activité douce, suivi)." },
+      { label: "Lien Au Bebe", detail: "Pose ta main sur ton ventre. Sens cet enfant que tu portes. Tu peux lui parler intérieurement. Lui dire que tu l'attends, que tu veilles sur lui à ta manière, que tu vas faire ton mieux. Ce dialogue, simple, apaise — toi et lui." },
+      { label: "Anxiete Qui Passe", detail: "Quand l'anxiété monte, plutôt que de la nourrir par les recherches sur internet ou les listes de complications possibles, tu peux apprendre à la laisser passer. Trois respirations longues. Ta main sur le ventre. Le rappel : mon corps fait son travail, je suis suivie, ce qui doit être fait est fait." },
+      { label: "Hypervigilance Apaisée", detail: "Si tu surveilles chaque sensation de ton corps en interprétant chaque variation comme un risque, tu vis dans l'anxiété permanente. Les sensations de la grossesse sont nombreuses et variées. La plupart sont normales. Tu peux apprendre à ne consulter que sur des signaux clairs (saignement, contractions douloureuses, baisse de mouvements après un certain stade) plutôt que sur chaque ressenti." },
+      { label: "Examens Suffisants", detail: "Tes examens de suivi (échographies, prises de sang, consultations) sont là pour vérifier ce qui doit l'être. Entre les examens, ton corps continue son travail. Tu n'as pas à compenser le manque d'examen par une hypervigilance permanente. Le médical fait ce qu'il y a à faire au bon rythme." },
+      { label: "Si Antecedents", detail: "Si tu as eu un antécédent obstétrical difficile (fausse couche, perte, complication), il est normal d'être plus anxieuse. Cette anxiété est compréhensible. Elle peut être adoucie sans être supprimée. Reconnais-la sans la laisser dominer toute la grossesse." },
+      { label: "Qualite Du Temps", detail: "Cette grossesse est une période unique. Tu peux la vivre dans l'anxiété ou dans la présence. Ces neuf mois ne reviendront pas. Choisir, autant que possible, d'habiter cette expérience plutôt que de la subir, est un cadeau pour toi et pour ton bébé." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, tu peux poser ta main sur ton ventre, dialoguer brièvement avec ton bébé, et faire confiance à ton corps. L'anxiété ne disparaîtra peut-être pas complètement — mais elle ne dominera plus toute ton expérience." }
       ],
     }],
   }],
@@ -8270,7 +9809,16 @@ const k_1015: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour femmes enceintes souffrant de nausées et vomissements gravidiques (premier trimestre principalement). Travail spécifique d'apaisement digestif, en complément éventuel du suivi médical." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation gravité\n• Phase 2 — Induction K-BASE-003 douce\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Geste-ancre installé\n• Phase 5 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu as des nausées, peut-être des vomissements. Cette manifestation est très fréquente au début de la grossesse. Désagréable, parfois épuisante. Aujourd'hui, nous travaillons à les apaiser, en complément de ce que ton médecin ou sage-femme peut te proposer." },
+      { label: "Pourquoi Les Nausees", detail: "Les nausées de grossesse sont liées à des variations hormonales importantes en début de grossesse. Ton corps s'adapte. Cette adaptation passe par des bouleversements digestifs et hormonaux. Avec le temps (souvent autour de 12-14 semaines), le corps trouve son équilibre et les nausées s'estompent." },
+      { label: "Apaisement Estomac", detail: "Pose ton attention sur ton estomac. Imagine qu'il peut s'apaiser. Que la sensation de nausée peut diminuer. Que ton système digestif s'adapte progressivement. Cette intention envoyée à ton corps n'est pas un remède magique — mais elle s'inscrit dans un dispositif qui apaise." },
+      { label: "Cycle Anxiete Nausee", detail: "Souvent, l'anxiété d'avoir une nausée déclenche elle-même la nausée. C'est un cercle. Quand tu sens venir une vague, plutôt que de paniquer, tu peux te dire : c'est une vague, elle va passer. Cette posture, paradoxalement, en réduit souvent l'intensité." },
+      { label: "Geste Ancre", detail: "On va installer un geste-ancre. Quelque chose de simple — toucher ton plexus, presser un point sur le poignet, te dire un mot intérieur. Ce geste, associé à l'état apaisé que tu vis maintenant, deviendra un déclencheur d'apaisement à activer quand les nausées montent." },
+      { label: "Pratique", detail: "Maintenant, sens-toi bien, calme. Active ton geste. Dis le mot. Cet état d'apaisement est associé à ce geste. Plusieurs fois par jour, tu peux activer ce geste pour rappeler ton corps à cet état." },
+      { label: "Quelques Principes", detail: "Quelques principes pratiques en complément : manger en petites quantités fréquentes plutôt que des gros repas, éviter les odeurs qui te déclenchent, se lever doucement le matin avec un biscuit avant de bouger, gingembre (sous forme tolérée). Ces gestes simples soulagent." },
+      { label: "Temps Qui Passe", detail: "Cette période a une durée. Pour la plupart des femmes, les nausées s'estompent largement vers 12-14 semaines, parfois plus tard. Tu n'es pas dans cet état pour toujours. Cette vue à un peu plus long terme aide à traverser." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour ou quand les nausées montent, tu peux activer ton geste-ancre. Combiner avec les principes pratiques. Et savoir que cette période passera, ton corps trouvera son équilibre." }
       ],
     }],
   }],
@@ -8309,7 +9857,17 @@ const k_1016: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Préparation hypnotique à l'accouchement (en complément des cours de préparation classiques ou hypnonatal). Travail sur la confiance dans le processus, les outils pour le travail, la gestion de la douleur." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Échange sur les attentes et craintes\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Lieu sûr K-BASE-011 stabilisé\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu te prépares à donner la vie. Cet événement est l'un des plus puissants que tu vivras. Ton corps va faire un travail considérable. Aujourd'hui, nous installons des ressources mentales pour t'accompagner pendant ce travail, en complément de ta préparation classique." },
+      { label: "Corps Qui Sait Accoucher", detail: "Ton corps sait accoucher. C'est inscrit en toi depuis l'aube de l'humanité. Toutes les femmes qui t'ont précédée dans ta lignée ont fait ce travail. Tu n'as pas à apprendre comment faire — tu as à laisser ton corps faire son travail. Cette confiance dans le corps physiologique est l'une des bases." },
+      { label: "Les Contractions", detail: "Les contractions sont des vagues. Chacune monte, atteint un sommet, et redescend. Entre deux contractions, le corps se repose. Tu peux apprendre à habiter chaque vague pour ce qu'elle est, sachant qu'elle passera, sachant qu'il y aura un répit après." },
+      { label: "Souffle Qui Porte", detail: "Ta respiration est ton outil principal pendant le travail. Une respiration ample, pendant la contraction. Tu peux imaginer ton souffle qui descend, qui ouvre, qui accompagne. Cette respiration porte le travail bien plus que la résistance ne peut le faire." },
+      { label: "Lieu Sur Pendant Travail", detail: "Pendant les contractions, tu peux te connecter à ton lieu sûr entre les vagues. Ce lieu est accessible même au cœur du travail. Tu y vas pour reprendre, pour te ressourcer, et tu en sors pour habiter la vague suivante." },
+      { label: "Imagerie Ouverture", detail: "Imagine ton corps qui s'ouvre. Le col qui s'efface, qui s'ouvre, qui laisse passer. Cette imagerie n'est pas magique, mais elle accompagne ce qui se passe physiologiquement. Le corps répond aux images mentales — moins il y a de résistance mentale, mieux le corps fait son travail." },
+      { label: "Desamorcage Des Peurs", detail: "Si tu as des peurs spécifiques (douleur, complications, ne pas y arriver), tu peux les déposer. Pas les nier — les déposer. Tu seras suivie. Tu seras accompagnée. Tu auras des ressources. Tu n'es pas seule. Et ton corps, lui, sait ce qu'il a à faire." },
+      { label: "Si Intervention Medicale", detail: "Si une intervention médicale s'avère nécessaire (péridurale, monitoring, voire césarienne), ce ne sera pas un échec. Ce sera ce qui doit être fait pour ton bien et celui de ton bébé. Tu peux accueillir ce qui vient, plutôt que de te crisper sur un scénario idéal." },
+      { label: "Rencontrer Son Enfant", detail: "Au bout du travail, il y a la rencontre. Ce moment unique où tu vas voir, toucher, sentir ton enfant pour la première fois. Cette image, tu peux la garder en horizon pendant les moments difficiles du travail. Chaque vague te rapproche de cette rencontre." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois jusqu'à l'accouchement, tu peux pratiquer ton dispositif : respiration, lieu sûr, imagerie d'ouverture, geste-ancre de ressourcement. Le jour J, ton corps fera son travail, et toi, tu disposeras d'outils pour l'accompagner." }
       ],
     }],
   }],
@@ -8348,7 +9906,17 @@ const k_1017: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour femmes ayant vécu un accouchement difficile ou traumatique (urgences, césarienne en urgence, complications, sentiment d'avoir été dépossédée). Travail d'intégration sans précipiter, pas de retraumatisation." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Écoute prolongée\n• Phase 2 — Lieu sûr STABILISÉ avant tout\n• Phase 3 — Induction K-BASE-001\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu as vécu un accouchement difficile. Que ce soit une césarienne en urgence, des complications, un sentiment de ne pas avoir été respectée dans tes choix, une issue effrayante — quelle que soit la forme, ce vécu reste en toi. Et il mérite d'être accueilli, pas balayé." },
+      { label: "Pas Minimisation", detail: "On entend parfois : 'tu as un beau bébé, c'est l'essentiel'. C'est vrai et c'est faux. Le bébé est essentiel — et ton vécu compte aussi. Ce que tu as traversé peut laisser des traces. Ces traces n'enlèvent rien à ton amour pour ton enfant — elles méritent leur propre traitement." },
+      { label: "Lieu Sur D Abord", detail: "Avant tout, ton lieu sûr est solide. Tu peux y aller en quelques secondes. Pendant ce travail, si quelque chose devient trop, tu peux y revenir. C'est toi qui choisis le rythme." },
+      { label: "Recit A Ton Rythme", detail: "Tu peux raconter ton accouchement, ou simplement le revisiter intérieurement, à ton rythme. Pas pour le revivre — pour le ré-élaborer. Comme un film que tu peux mettre sur pause, avancer, reculer. Tu en es la spectatrice, pas la victime." },
+      { label: "Les Moments Difficiles", detail: "Identifie les moments les plus difficiles. Le moment où tu as senti que ça basculait. Le moment où tu as eu peur. Le moment où tu t'es sentie dépossédée. Pour chaque moment, tu peux y aller calmement, le regarder, sans replonger dedans." },
+      { label: "Ce Qui T Aurait Aidée", detail: "Pour chaque moment difficile, demande-toi : qu'est-ce qui m'aurait aidée à ce moment-là ? Quelqu'un qui me parle, un geste rassurant, plus d'information, du temps, autre chose. Ce que tu aurais voulu et qui n'a pas eu lieu. Cette identification est précieuse." },
+      { label: "Redonner Au Recit", detail: "Tu peux maintenant ajouter à ton récit, en imagination, ce qui aurait dû y être. La présence rassurante. Les paroles qui auraient soulagé. Le respect de ton rythme. Cette ré-écriture intérieure ne change pas le passé — mais elle permet à une part de toi de recevoir ce qui n'avait pas été donné." },
+      { label: "Corps Reconcilié", detail: "Ton corps a fait quelque chose d'extraordinaire malgré les difficultés. Il a porté, il a accouché, il a donné la vie. Tu peux lui adresser un mot de remerciement. Et lui pardonner si tu lui en veux pour ce qui s'est passé." },
+      { label: "Lien Au Bebe", detail: "Si ce vécu a perturbé ton lien à ton bébé (ce qui arrive et qui se travaille), tu peux maintenant aller à sa rencontre intérieurement, librement, sans la charge de l'accouchement. Le voir, lui dire bonjour, reconnaître la personne qu'il est, indépendamment de comment il est arrivé au monde." },
+      { label: "Post Hypnotique", detail: "Ce travail va se poursuivre. Ce qui a été accueilli peut s'intégrer. Plusieurs séances permettront d'aller plus loin si besoin. Et progressivement, ton accouchement, sans cesser d'être ce qu'il a été, prendra une place dans ton histoire qui ne t'occupera plus comme une plaie ouverte." }
       ],
     }],
   }],
@@ -8387,7 +9955,17 @@ const k_1018: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour mères en post-partum difficile (baby blues prolongé, fatigue extrême, doute sur soi, difficulté à investir le bébé). PAS pour dépression post-partum constituée." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation rigoureuse (dépression ?)\n• Phase 2 — Induction K-BASE-003 douce\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Legitimite De La Difficulte", detail: "Tu vis un post-partum difficile. Cette période est rarement à la hauteur des images idéalisées qu'on entend. Ce n'est pas que tu fais mal les choses — c'est que cette période est intrinsèquement difficile : changements hormonaux massifs, sommeil dévasté, corps qui récupère, charge nouvelle, identité qui bascule." },
+      { label: "Pas Seule", detail: "Tu n'es pas seule. Beaucoup de jeunes mères vivent ce que tu vis et n'osent pas le dire à cause des images de bonheur post-naissance qui dominent. Ton vécu est partagé. Cette normalisation peut alléger une partie du fardeau de la culpabilité." },
+      { label: "La Fatigue", detail: "Le sommeil dévasté est probablement la dimension la plus invalidante. Cette fatigue n'est pas de la faiblesse — c'est l'impact d'un manque de sommeil structurel. Tout te paraît plus dur, tu pleures plus facilement, tes émotions sont à fleur de peau. Cela passera quand le sommeil reviendra." },
+      { label: "Corps Qui Recupere", detail: "Ton corps a accouché — c'est un événement majeur qui demande des semaines à mois de récupération. Hormones, organes, plancher pelvien, fatigue accumulée. Tu peux te respecter dans cette récupération. Pas te demander de fonctionner comme avant tout de suite." },
+      { label: "Apprendre A Etre Mere", detail: "Tu apprends à être mère. Personne ne sait être mère naturellement de cet enfant précis. Tu apprends jour après jour. Tu vas faire des erreurs, tâtonner, douter. Tout cela fait partie de l'apprentissage. Tu n'as pas à être parfaite — tu as à être présente et apprenante." },
+      { label: "Lien Progressif", detail: "Le lien avec ton bébé peut prendre du temps à se construire. Toutes les mères ne tombent pas immédiatement et viscéralement amoureuses de leur enfant à la naissance. Pour beaucoup, le lien se construit jour après jour, dans les soins, les regards, la familiarité. Cette progressivité est normale." },
+      { label: "Demander Aide", detail: "Tu n'as pas à porter cela seule. Demande aide. À ton partenaire, à ta famille, à des amies. Pour les courses, pour le ménage, pour garder le bébé pendant que tu dors. Ce n'est pas une faiblesse — c'est de l'intelligence. Toutes les civilisations entourent les jeunes mères. La nôtre l'oublie souvent." },
+      { label: "Dépression Qu On Évalue", detail: "Si la difficulté s'aggrave, persiste au-delà de quelques semaines, devient invalidante, ou si tu as des pensées noires sur toi ou ton bébé : ce n'est plus un baby blues mais peut-être une dépression post-partum, qui se soigne très bien. N'hésite pas à consulter, en parler à ton médecin ou à ta sage-femme." },
+      { label: "Qualite Pas Quantite", detail: "Tu n'as pas à être disponible 100% du temps pour ton bébé. Mieux vaut une mère qui prend soin d'elle et qui est présente quand elle est avec son bébé, qu'une mère qui s'épuise et qui devient indisponible psychiquement même quand elle est physiquement là." },
+      { label: "Post Hypnotique", detail: "Dans les jours qui viennent, tu peux te permettre de respecter ce que tu vis. Demander aide. Te ménager. Faire confiance au temps qui passe. Et savoir que cette période, aussi difficile soit-elle, n'est pas pour toujours." }
       ],
     }],
   }],
@@ -8426,7 +10004,16 @@ const k_1019: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour mères en difficulté avec l'allaitement (douleurs, refus du bébé, lactation insuffisante perçue, anxiété de manque). Soutien sans jugement sur le choix d'allaiter ou non." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation contexte allaitement\n• Phase 2 — Induction K-BASE-003 douce\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-025" },
+      { label: "Reconnaissance", detail: "Tu allaites ou tu essaies, et c'est compliqué. Douleurs, doutes sur la quantité, bébé qui semble ne pas être satisfait, fatigue. L'allaitement, présenté comme naturel, peut être très difficile dans la réalité. Aujourd'hui, nous travaillons à apaiser ce qui peut l'être." },
+      { label: "Legitimite Difficulte", detail: "L'allaitement est un apprentissage — pour toi et pour ton bébé. Personne ne naît compétent. Tu apprends à donner, ton bébé apprend à téter. Cet apprentissage prend du temps, parfois plusieurs semaines. Les premières semaines sont souvent les plus difficiles." },
+      { label: "Pression Qui Bloque", detail: "Si tu es en pression pour 'réussir l'allaitement', cette pression peut paradoxalement le compliquer. La lactation est sensible au stress. Plus tu es détendue, mieux le lait coule. Plus tu te crispes en surveillant, plus tu peux compliquer le processus." },
+      { label: "Confiance Dans Corps", detail: "Ton corps est conçu pour produire du lait pour ton bébé. Cette compétence existe en toi. Sauf situation médicale précise, ton corps fait son travail. Lui faire confiance, plutôt que mesurer chaque tétée avec angoisse, soutient le processus." },
+      { label: "Anxiete Quantite", detail: "L'anxiété de manque de lait est très répandue et souvent infondée. Beaucoup de mères croient ne pas avoir assez parce que leur bébé pleure, demande souvent, semble agité — alors que tout va bien. Les vrais signes de manque sont peu de poids pris, urines réduites, léthargie. Pour le reste, fais confiance." },
+      { label: "Si Douleurs", detail: "Si tu as des douleurs (mauvaise position, crevasses), ces dimensions sont techniques et doivent être travaillées avec une consultante en lactation ou sage-femme. L'hypnose ne remplace pas l'aide technique. Mais elle peut accompagner la traversée des semaines de mise en place." },
+      { label: "Liberte Du Choix", detail: "Si à un moment tu décides d'arrêter l'allaitement, total ou partiel, ce n'est pas un échec. C'est ton choix de mère. Beaucoup de femmes témoignent de pression considérable pour allaiter, et de culpabilité énorme à arrêter. Tu peux choisir librement, pour ton équilibre et celui de ton bébé." },
+      { label: "Lien Au Bebe", detail: "L'amour de ton bébé ne se mesure pas en millilitres de lait. Le lien se construit dans tous les moments — pas seulement les tétées. Câlins, regards, soins, présence. Ces moments comptent autant que la nourriture, peut-être plus pour la dimension psychique." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux allaiter (ou non) avec moins de pression. Faire confiance à ton corps. Ne pas dramatiser chaque tétée. Demander aide technique si besoin. Et te rappeler que tu es une bonne mère quel que soit ton choix d'allaitement." }
       ],
     }],
   }],
@@ -8465,7 +10052,17 @@ const k_1020: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patientes (et patients) en perte de désir sexuel. Travail sur les conditions du désir, la reconnexion à soi, la dimension du plaisir possible. Pour individus ou en couple." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Anamnèse délicate\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Ton désir s'est retiré. Tu n'as plus envie, ou bien moins. Cette absence ou diminution te questionne, te culpabilise peut-être, peut peser dans ton couple si tu en as un. Aujourd'hui, nous explorons cette dimension avec délicatesse." },
+      { label: "Pas De Performance", detail: "Le désir n'est pas une performance. On ne peut pas se l'ordonner. Plus on essaie de forcer le désir à venir, moins il vient. C'est une dimension qui demande des conditions, pas une commande. Comprendre cela enlève déjà beaucoup de pression." },
+      { label: "Conditions Du Desir", detail: "Le désir a des conditions. Pour la plupart des humains : un état de détente (le stress chronique tue le désir), une certaine liberté intérieure, un sentiment de sécurité, parfois une certaine distance dans la relation, du temps non pressé, parfois un toucher non sexuel qui éveille progressivement. Sans ces conditions, le désir reste discret." },
+      { label: "Reconnexion A Soi", detail: "Pour réveiller le désir, il faut souvent commencer par se reconnecter à soi-même. À son corps, à ses sensations, à ce qui te procure du plaisir au sens large (pas forcément sexuel). Le désir naît dans un corps habité, pas dans un corps absent à lui-même." },
+      { label: "Pratique Sensorielle", detail: "Tu peux pratiquer une reconnexion sensorielle quotidienne. Quelques minutes où tu es attentive à ce que tu sens. Le contact de l'eau dans la douche. La texture d'un tissu. La saveur d'un aliment. Cette présence sensorielle ré-éveille la sensualité au sens large, qui peut nourrir progressivement le désir." },
+      { label: "Apres Evenement", detail: "Si ton désir s'est éteint après un événement (post-partum, maladie, deuil, période de stress), c'est une réaction adaptée. Ton système met en pause cette fonction quand l'énergie va ailleurs. Le désir reviendra quand ton corps et ton esprit auront récupéré l'énergie. Tu peux soutenir le processus sans le forcer." },
+      { label: "Couple Intimite", detail: "Si tu es en couple, l'absence de désir peut peser. Tu peux apprendre à maintenir une intimité non sexuelle pendant les périodes de creux : tendresse, complicité, gestes affectueux sans attente. Cette intimité préservée crée les conditions où le désir peut revenir. La pression de devoir performer, à l'inverse, l'éloigne." },
+      { label: "Communication Partenaire", detail: "Communiquer avec ton/ta partenaire est précieux. Lui dire honnêtement où tu en es, sans la peur de blesser. Beaucoup de couples se ferment dans le silence et le malentendu autour de cette dimension. Une parole vraie crée plus d'espace que des semblants." },
+      { label: "Plaisir Redecouvert", detail: "Si tu te donnes l'espace, le désir peut revenir. Pas immédiatement. Pas selon un calendrier. Mais souvent, quand on cesse de le pourchasser et qu'on crée les conditions, il finit par se manifester à nouveau. Différent peut-être, mais présent." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux pratiquer la reconnexion sensorielle quotidienne. Communiquer avec partenaire si pertinent. Créer les conditions. Et faire confiance au temps. Le désir reviendra à son rythme, ou il prendra une nouvelle forme." }
       ],
     }],
   }],
@@ -8504,7 +10101,16 @@ const k_1021: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour hommes avec difficultés d'érection à composante psychogène (pression de performance, anxiété, blocage situationnel). Pas pour causes organiques pures." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation médicale en parallèle\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu as des difficultés d'érection. Probablement, après une ou des occasions où ça n'a pas marché, l'anxiété s'est installée. Et plus tu redoutes que ça ne marche pas, moins ça marche. Ce cercle est très fréquent et bien connu — et il est traversable." },
+      { label: "Explication Du Cycle", detail: "Voici le cycle : un événement (fatigue, stress, alcool) provoque une difficulté ponctuelle. Tu interprètes comme un problème grave. Tu redoutes la fois suivante. Cette redoute déclenche une activation sympathique qui s'oppose physiologiquement à l'érection. Échec à nouveau. Le cycle s'auto-alimente." },
+      { label: "Pression Qui Bloque", detail: "L'érection est une fonction du système parasympathique — elle nécessite la détente. La pression et l'anxiété activent le sympathique, qui empêche l'érection. C'est physiologique, pas psychologique au sens flou — c'est un mécanisme nerveux précis." },
+      { label: "Desinvestir Performance", detail: "Pour sortir du cycle, il faut désinvestir la performance. Tant que tu vis chaque rapport sexuel comme un test à réussir, ton corps reçoit le signal d'urgence et bloque. Quand tu peux déposer cette pression, le corps reçoit le signal de détente et la fonction revient." },
+      { label: "Focalisation Sensorielle", detail: "Une approche connue : la focalisation sensorielle. Pendant un temps, tu peux convenir avec ta partenaire qu'il n'y a pas d'objectif de pénétration. Vous vous touchez, vous explorez, vous prenez du plaisir, mais sans le but. Cette suppression d'objectif paradoxalement libère." },
+      { label: "Corps Qui Repond", detail: "Quand tu cesses de surveiller, ton corps répond. L'érection vient quand elle veut, parfois, parce que le système est en détente. Si elle ne vient pas, ce n'est pas grave — vous avez quand même partagé un moment d'intimité. Ce changement de rapport transforme." },
+      { label: "Communication Partenaire", detail: "Parler avec ta partenaire de ce qui se passe est libérateur. Beaucoup d'hommes cachent, fuient, évitent — ce qui aggrave. Dire honnêtement : 'j'ai des difficultés en ce moment, ce n'est pas toi, c'est moi, voici ce qu'on peut essayer' enlève une partie du fardeau." },
+      { label: "Traitements Medicaux", detail: "Si ton médecin a prescrit un traitement (Viagra, Cialis ou autres), tu peux l'utiliser comme un soutien temporaire. Ce traitement ne te rend pas dépendant — il rétablit la confiance, et progressivement tu peux t'en passer si la cause était psychologique." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux pratiquer la dépose de pression. Communiquer avec ta partenaire. Pratiquer la focalisation sensorielle si pertinent. Faire confiance à ton corps qui sait. Et progressivement, le cycle s'inverse — moins tu redoutes, mieux ça marche." }
       ],
     }],
   }],
@@ -8543,7 +10149,17 @@ const k_1022: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour femmes ayant difficulté à atteindre l'orgasme. Travail sur l'écoute du corps, le désinvestissement de la performance, la reconnexion au plaisir." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation délicate\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Sanctuaire K-BASE-012\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu as des difficultés à atteindre l'orgasme. Cette difficulté pèse, particulièrement si elle est ancienne. Tu peux te poser des questions sur toi, sur ton corps, sur ta normalité. Aujourd'hui, nous travaillons ce point avec délicatesse." },
+      { label: "Normalité Diversite", detail: "L'orgasme féminin est varié, complexe, et certaines femmes mettent du temps à le découvrir. Beaucoup ne l'atteignent pas par pénétration vaginale seule (c'est très commun, presque la norme). Cette diversité ne dit rien de problématique sur toi. Tu n'es pas anormale." },
+      { label: "Pression Aggrave", detail: "Plus tu cherches l'orgasme, plus il fuit. Cette dimension est paradoxale. L'orgasme arrive quand le corps est en lâcher-prise total. La poursuite consciente active le mental qui empêche le lâcher." },
+      { label: "Explorer Seule", detail: "Une étape précieuse : explorer ton propre corps, seule. Sans partenaire, sans pression, sans temps limité. Découvrir ce qui te procure du plaisir, ce qui te touche, ce qui te fait du bien. Cette connaissance de toi est la base — comment partager avec quelqu'un d'autre ce que tu ne sais pas toi-même ?" },
+      { label: "Dans Sanctuaire", detail: "Dans ton sanctuaire intérieur, tu peux te donner permission d'explorer le plaisir. Sans culpabilité. Sans honte. Le plaisir est une dimension légitime de l'humain. Tu y as droit, quel que soit ton histoire ou ce qu'on t'a transmis." },
+      { label: "Corps Qui Se Dévoile", detail: "Ton corps a des zones de plaisir. Pas seulement les zones supposées. À toi de découvrir lesquelles te touchent. Le clitoris pour la majorité des femmes est central. Mais d'autres zones aussi : seins, cou, intérieur cuisse, etc. Ton corps est unique — tes zones aussi." },
+      { label: "Lacher Prise", detail: "L'orgasme demande un lâcher-prise. Beaucoup de femmes ont du mal à lâcher dans la sexualité — par éducation, par peur de se voir, par crainte de paraître bizarre. Ce lâcher-prise s'apprend. Progressivement, tu peux t'autoriser à laisser sortir ce qui veut sortir, sans te juger." },
+      { label: "Avec Partenaire", detail: "Avec un partenaire, communiquer ce que tu découvres sur toi est essentiel. Lui dire ce qui te fait du bien, ce qui ne te fait pas, oser guider. Beaucoup de partenaires sont avides de cette information mais ne savent pas demander. Ta parole les libère, eux aussi." },
+      { label: "Temps Qui Apporte", detail: "Pour beaucoup de femmes, l'accès à l'orgasme s'améliore avec l'âge et l'expérience. Pas avant, mais après. Connaissance de soi, baisse de l'anxiété, plus grande aisance avec son corps — autant de facteurs qui favorisent. Si ce n'est pas là maintenant, cela peut venir." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux explorer ton corps avec moins de pression. T'autoriser le plaisir. Communiquer avec partenaire si pertinent. Et faire confiance au temps et à la pratique. Pas comme un objectif à atteindre — comme un chemin à habiter." }
       ],
     }],
   }],
@@ -8582,7 +10198,16 @@ const k_1023: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour couples vivant un déséquilibre de désir (l'un demande, l'autre se retire). Travail sur la communication, la dépose des dynamiques toxiques, la création d'espaces nouveaux." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Idéalement séance individuelle de chaque partenaire\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script — adapté selon position dans le couple)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis dans un couple où le désir n'est pas symétrique. Soit tu es celui ou celle qui demande plus que l'autre n'est disponible. Soit tu es celui ou celle qui n'a plus envie alors que l'autre demande. Cette asymétrie crée souvent un cercle qui s'auto-renforce." },
+      { label: "Le Cycle", detail: "Le cycle classique : l'un demande, l'autre refuse. Le demandant insiste, parfois mendie. Le refusant se rétracte encore plus, par sentiment d'être objectifié. Le demandant ressent le rejet et se ferme à son tour. Et la sexualité devient un terrain miné où plus rien n'arrive." },
+      { label: "Pour Le Demandant", detail: "[Si demandant] Plus tu insistes, moins tu obtiendras. C'est paradoxal mais vrai. La pression que tu mets sur ton partenaire active chez lui ou elle un système de retrait, pas d'envie. Pour sortir du pattern, il faut souvent que tu déposes la pression, totalement. Pas par tactique — vraiment." },
+      { label: "Pour Le Retiré", detail: "[Si retiré] Plus tu te retires, plus l'autre insiste. Et plus tu te retires. Pour sortir du pattern, il faut souvent que tu reprennes une part d'initiative — pas pour faire plaisir à l'autre, mais pour reprendre ta propre place active dans la sexualité. Ne plus seulement subir une demande." },
+      { label: "Communication Vraie", detail: "Beaucoup de couples ne se parlent jamais vraiment de leur sexualité. Hors des moments charnels, dans un cadre calme, parler de ce qui se passe pour chacun, des peurs, des envies, des malentendus, transforme. Pas en accusations — en partage." },
+      { label: "Creation D Espaces", detail: "Vous pouvez créer ensemble des espaces différents. Des moments d'intimité non sexuelle, juste tendres. Des moments de jeu sans pression. Des moments de partage. Ces espaces, en dehors du cycle demande/refus, permettent souvent au désir de revenir, parce que la peur du chantage est levée." },
+      { label: "Pas D Obligation", detail: "Le sexe en couple n'est pas un dû. Personne ne doit à personne. Cette base saine est importante. Le sexe est une rencontre que chacun peut accepter ou non, selon où il en est. Cette liberté, paradoxalement, ouvre l'espace." },
+      { label: "Si Chronique", detail: "Si l'asymétrie est chronique et qu'aucune avancée ne se fait, c'est aussi une question : est-ce que ce couple peut tenir sur le long terme dans cette configuration ? Cette question peut paraître brutale, mais elle est honnête. Parfois, des couples doivent se réinventer profondément, ou se séparer." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux décoder la dynamique sans la juger. Choisir de modifier ta part. Communiquer plus authentiquement. Créer de nouveaux espaces. Et accepter que la transformation prenne du temps, ou que d'autres décisions s'avèrent nécessaires." }
       ],
     }],
   }],
@@ -8621,7 +10246,16 @@ const k_1024: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients confrontés aux changements de la sexualité avec l'âge (ménopause, andropause, modifications physiologiques, du désir, du corps). Travail de réinvention plutôt que de deuil." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Écoute du contexte\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Ton corps change avec l'âge. Et avec lui, ta sexualité. Les mécaniques d'avant ne fonctionnent plus pareil. Le désir peut être moins automatique, l'érection moins fiable, la lubrification réduite, l'énergie différente. Cette transformation peut être vécue comme un appauvrissement — ou comme une invitation à réinventer." },
+      { label: "Pas La Même Sexualité", detail: "Vouloir reproduire à 60 ans la sexualité qu'on avait à 30 est une impasse. Le corps n'est plus le même. Cette comparaison est piégée et conduit au sentiment de déclin. Une autre approche : accueillir une sexualité différente, qui peut avoir ses propres richesses." },
+      { label: "Changements Physiques", detail: "Pour les femmes : la ménopause apporte sécheresse, parfois douleurs, modifications hormonales. Pour les hommes : érection moins fiable, latence, souvent moins forte. Ces changements sont biologiques et largement traitables (lubrifiants, traitements locaux, médicaments si pertinent). Beaucoup d'aides existent." },
+      { label: "Intimite Approfondie", detail: "Avec l'âge, l'intimité peut s'approfondir. Pas dans la performance, mais dans la qualité de présence. Vous vous connaissez. Vous savez ce qui touche l'autre. Le temps n'est plus aussi compté. Cette dimension peut compenser largement les pertes mécaniques." },
+      { label: "Lenteur Qui Devient Richesse", detail: "Le rythme change. Plus lent, plus présent, plus tendre. Cette lenteur, qu'on aurait pu vivre comme une diminution dans la jeunesse, peut devenir une qualité. Prendre le temps. Sentir vraiment. Habiter chaque moment plutôt que de courir vers la fin." },
+      { label: "Plaisir Redefinie", detail: "Le plaisir peut prendre des formes différentes. Moins centré sur l'orgasme dans certains cas. Plus diffus, plus tendre. Plus connecté à l'ensemble de la personne aimée. Cette redéfinition n'est pas un appauvrissement — c'est une expansion." },
+      { label: "Communication Essentielle", detail: "À cet âge, communiquer dans le couple est plus important que jamais. Ce qui marche, ce qui ne marche plus, ce qu'on aimerait essayer. Beaucoup de couples vieillissent dans le silence, avec des malentendus accumulés. La parole vraie est libératrice." },
+      { label: "Aide Medicale", detail: "N'hésite pas à utiliser les aides médicales. Hormones de substitution si pertinentes (avec ton médecin). Traitements locaux (œstrogènes vaginaux pour les femmes par exemple). Médicaments d'aide à l'érection. Lubrifiants. Tous ces outils existent — les utiliser n'est pas faillir." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux accueillir cette transformation. Non comme déclin — comme nouvelle saison de ta sexualité. Différente, possiblement plus profonde. Avec ses outils, ses adaptations, ses richesses propres. Tu réinventes plutôt que de regretter." }
       ],
     }],
   }],
@@ -8660,7 +10294,16 @@ const k_1025: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour femmes devant subir une chirurgie gynécologique (hystérectomie, ablation kyste, conisation, ovariectomie). Travail sur l'apaisement, la dimension symbolique de l'organe, la récupération." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Présentation de l'intervention\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Visualisation guérison\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu te prépares à une chirurgie qui touche un organe féminin. Cette intervention est plus qu'une intervention médicale — elle a souvent une dimension symbolique. L'utérus, les ovaires, ne sont pas des organes neutres dans la psyché féminine. Aujourd'hui, nous accompagnons les deux dimensions." },
+      { label: "Dimension Symbolique", detail: "Ces organes ont parfois représenté pour toi : la fertilité, la féminité, la maternité, le cycle. Selon ton histoire, certaines de ces dimensions sont actuelles, d'autres déjà passées. La chirurgie peut toucher ces représentations. Tu peux prendre un moment pour reconnaître ce que cet organe a représenté pour toi." },
+      { label: "Si Hysterectomie", detail: "[Si hystérectomie] L'utérus part. Cette nouvelle peut être vécue diversement. Soulagement si l'utérus était source de souffrance (fibromes, règles invalidantes). Deuil si questions de fertilité. Pour beaucoup de femmes en post-ménopause, c'est largement neutre. Tu peux accueillir ton ressenti propre, sans jugement." },
+      { label: "Corps Qui Continue", detail: "Même si une partie est retirée, ton corps continue à être ton corps. Tu n'es pas réduite à tes organes reproducteurs. Ta féminité, ton identité, ton désir, ton sexualité — ces dimensions ne se réduisent pas à la présence de tel ou tel organe. Beaucoup de femmes après hystérectomie témoignent d'aucune perte d'identité." },
+      { label: "Apaisement Preoperatoire", detail: "Pour l'intervention elle-même, tu peux activer ton dispositif d'apaisement. Trois respirations longues. Lieu sûr accessible. Confiance dans l'équipe médicale. Confiance dans ton corps qui va recevoir le soin et qui va guérir." },
+      { label: "Pendant L Intervention", detail: "Pendant l'intervention, tu seras endormie. Mais ton corps reçoit. Tu peux poser intérieurement, avant, l'intention que tout se passe bien. Que ton corps reçoive le soin avec confiance. Cette intention n'est pas magique mais elle place ton corps dans un état physiologique plus favorable." },
+      { label: "Recuperation Visualisée", detail: "Imagine maintenant ta récupération. Tu sors du bloc. Tu te réveilles. La douleur post-opératoire est gérée. Les jours qui suivent, ton corps répare. Une semaine, deux, trois — tu te sens mieux progressivement. Six semaines après, tu retrouves ton fonctionnement. Cette image, plantée maintenant, soutient le réel." },
+      { label: "Apres La Chirurgie", detail: "Après, tu peux ritualiser intérieurement le départ de cet organe. Lui dire au revoir. Le remercier pour ce qu'il a donné. Reconnaître que cette page se tourne. Cette dimension symbolique, prise au sérieux, accompagne la guérison physique." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, jusqu'à l'intervention et après, tu peux activer ton dispositif d'apaisement. Reconnaître la dimension symbolique. Faire confiance à ton corps qui va recevoir le soin. Et te préparer à une récupération soutenue." }
       ],
     }],
   }],
@@ -8699,7 +10342,16 @@ const k_1026: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patientes atteintes d'endométriose. Travail sur la gestion de la douleur, l'apaisement de l'inflammation imagée, la qualité de vie, la relation au corps et à la fertilité." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation parcours\n• Phase 2 — Induction K-BASE-003\n• Phase 3 — Lieu sûr\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une endométriose. Cette maladie a longtemps été méconnue, sous-diagnostiquée, minimisée. Tu as peut-être souffert pendant des années avant qu'on prenne au sérieux ta douleur. Aujourd'hui, nous travaillons à plusieurs dimensions de cette maladie." },
+      { label: "Validation De La Souffrance", detail: "Ta douleur est réelle. Elle a une cause organique précise — du tissu qui réagit aux hormones là où il ne devrait pas être, qui s'inflamme, qui crée des adhérences. Tu n'imagines pas, tu ne dramatises pas. Cette validation, simple, répare souvent ce que des années de minimisation ont abîmé." },
+      { label: "Gestion Douleur", detail: "Pour la douleur cyclique, tu disposes des outils du cercle douleur (K-DOUL). Imagerie d'apaisement local, transformation de la sensation, dialogue avec la zone. Ces outils, en complément des traitements médicaux, peuvent apporter soulagement." },
+      { label: "Inflammation Imagee", detail: "Imagine les zones touchées. Tu peux leur envoyer un message d'apaisement. Imagine que l'inflammation peut diminuer. Que les tissus peuvent se calmer. Cette intention soutient le travail médical, sans le remplacer." },
+      { label: "Corps Pas Ennemi", detail: "L'endométriose peut faire vivre ton corps comme un ennemi qui te trahit. Tu peux reconfigurer cette relation. Ton corps fait ce qu'il peut avec une condition qu'il subit. Lui parler avec bienveillance plutôt qu'avec colère ne change pas la maladie, mais change ton vécu d'elle." },
+      { label: "Si Fertilite", detail: "Si l'endométriose impacte ta fertilité, c'est une dimension supplémentaire de souffrance. Tu peux travailler à plusieurs niveaux : suivi médical adapté (PMA si pertinent), acceptation de l'incertitude, réflexion sur tes priorités, possible recours à d'autres voies (adoption, vie sans enfant biologique)." },
+      { label: "Qualite De Vie", detail: "Vivre avec l'endométriose demande des aménagements. Repos pendant les phases douloureuses. Adaptation alimentaire pour beaucoup. Activité physique douce. Sommeil prioritaire. Suivi médical régulier. Soutien psychologique si besoin. Ces aménagements ne sont pas des renoncements — ce sont des intelligences." },
+      { label: "Droit A La Colere", detail: "Tu as le droit d'être en colère contre cette maladie. Contre les années de minimisation. Contre la perte de jours de vie. Cette colère est légitime. Tu peux la reconnaître, l'exprimer dans des cadres adaptés, sans la laisser t'occuper en permanence." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux pratiquer le dialogue avec ton corps, l'apaisement local, le soutien à ton bien-être. Tu prends tes traitements et fais ton suivi. Tu vis ta vie le plus pleinement possible malgré la maladie. Et tu n'es pas seule — beaucoup de femmes vivent ce que tu vis et avancent." }
       ],
     }],
   }],
@@ -8738,7 +10390,17 @@ const k_1027: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients désireux d'arrêter le tabac ou consolider un arrêt récent. Travail sur la motivation profonde, les ancrages comportementaux, la gestion des envies, la prévention de rechute. Alternative ou complément aux substituts nicotiniques." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Anamnèse approfondie (consommation, tentatives, motivation)\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Geste-ancre pour gestion envie\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu fumes. Et tu veux arrêter. Cette décision t'appartient. Aujourd'hui, nous mobilisons tes ressources mentales pour cet arrêt. Pas comme une punition que tu t'imposes — comme une libération que tu te donnes." },
+      { label: "Pourquoi Profond", detail: "Pour tenir, ton arrêt doit reposer sur un pourquoi profond. Pas seulement 'c'est mauvais pour la santé' — chacun le sait. Quelque chose qui te touche personnellement. Ta santé future. Tes enfants ou petits-enfants. La liberté de ne plus dépendre. Le respect de ton corps. L'argent économisé pour autre chose. Identifie le tien, le vrai." },
+      { label: "Pas Un Fumeur", detail: "Pendant des années, tu t'es identifié comme fumeur. Cette identité fait partie de comment tu te penses. Aujourd'hui, tu peux te repenser comme quelqu'un qui ne fume pas. Pas 'qui essaie d'arrêter' — qui ne fume pas. Cette transformation d'identité est précieuse pour la stabilité de l'arrêt." },
+      { label: "Corps Qui Repare", detail: "Dès le moment où tu arrêtes, ton corps commence à réparer. En 20 minutes, ton cœur ralentit. En 24 heures, le monoxyde de carbone est éliminé. En 48 heures, le goût et l'odorat reviennent. En 2 semaines, ta circulation s'améliore. En 1 mois, tes poumons se nettoient. Cette récupération est rapide et puissante. Ton corps t'attend pour faire ce travail." },
+      { label: "Envies Qui Passent", detail: "Les envies de fumer reviendront. Surtout au début. Ce n'est pas un signe d'échec — c'est un signe que ton corps se déshabitue. Une envie monte, atteint un sommet, et redescend. Si tu ne fumes pas pendant la vague, elle passe en quelques minutes. Chaque vague traversée affaiblit la suivante." },
+      { label: "Geste Ancre", detail: "Installe un geste-ancre pour gérer les envies. Cela peut être : trois respirations longues, presser fort un point sur ta main, te dire un mot intérieur. Active-le maintenant. Ce geste devient ton outil pour traverser une vague d'envie sans céder." },
+      { label: "Declencheurs", detail: "Identifie tes déclencheurs : le café du matin, la pause au travail, après le repas, la sortie, le stress, certaines personnes. Pour chaque déclencheur, prévois une stratégie : changer le café pour un thé, prendre un autre type de pause, faire autre chose après le repas. Ces aménagements préviennent l'automatisme." },
+      { label: "Si Rechute", detail: "Si tu rechutes, ce n'est pas la fin. Tu peux te lever et reprendre. Beaucoup d'arrêts définitifs ont été précédés de plusieurs tentatives. Une cigarette n'est pas un retour à fumer — sauf si tu décides que c'est. Ne pas dramatiser, ne pas culpabiliser excessivement, et reprendre." },
+      { label: "Corps Qui Se Choisit", detail: "Tu fais le choix de ton corps. De ta liberté. De ta santé. À chaque vague d'envie traversée, tu confirmes ce choix. Tu deviens ce non-fumeur que tu es désormais. Cette identité, jour après jour, se consolide." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu es quelqu'un qui ne fume pas. Quand une envie monte, tu actives ton geste-ancre, tu respires, et la vague passe. Ton corps répare. Ta liberté s'étend. Et chaque jour sans cigarette est une victoire et un cadeau que tu te fais." }
       ],
     }],
   }],
@@ -8777,7 +10439,17 @@ const k_1028: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en réduction ou abstinence d'alcool, en COMPLÉMENT du suivi addictologique. Travail sur la motivation, les déclencheurs, la gestion des envies, la reconstruction d'une vie sans. JAMAIS substitution au sevrage médicalisé pour dépendance physique." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Anamnèse approfondie + vérification suivi médical\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Lieu sûr K-BASE-011\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Cadre", detail: "Tu es engagé dans une démarche par rapport à l'alcool. Cette démarche est courageuse. Elle s'inscrit dans un cadre médical et possiblement associatif (CSAPA, médecin, AA, autres). L'hypnose est un complément à ce cadre, pas un remplacement. Cette précision posée, nous travaillons aujourd'hui les ressources mentales qui soutiendront ta démarche." },
+      { label: "Pourquoi Qui Porte", detail: "Pour tenir, ton choix doit reposer sur un pourquoi qui te porte vraiment. Tes raisons à toi, profondes. Ta santé, ta famille, ta dignité, la peur de perdre ce qui te reste, la liberté que tu envisages. Connecte-toi à ce pourquoi. C'est ton ancre dans les moments difficiles." },
+      { label: "La Dependance Qui Ment", detail: "L'addiction te ment. Elle te dit qu'une fois suffira. Que tu peux gérer. Que cette occasion est différente. Que tu mérites une pause. Ces voix sont celles de l'addiction qui cherche à survivre. Apprendre à les reconnaître comme des mensonges, pas comme tes propres pensées, est une compétence essentielle." },
+      { label: "Envies Qui Traversent", detail: "Les envies — les craving — vont arriver. Ce sont des vagues. Chacune monte, atteint un sommet, et redescend. Si tu ne consommes pas pendant la vague, elle passe. En 15-20 minutes maximum. Tu peux apprendre à surfer ces vagues plutôt que de leur céder." },
+      { label: "Outil Envie", detail: "Quand une envie monte, tu disposes d'outils. Trois respirations longues. Boire un grand verre d'eau. Bouger physiquement (marche, sport bref). Appeler quelqu'un. Te rappeler ton pourquoi. Aller dans ton lieu sûr quelques minutes. Ces outils, utilisés au moment de l'envie, la traversent." },
+      { label: "Declencheurs", detail: "Identifie tes déclencheurs : moments, lieux, personnes, émotions. L'apéro entre amis. La fin de journée fatiguée. Le conflit. La fête. Les vacances. Pour chaque déclencheur à risque, prévois une stratégie d'évitement (au début) ou de gestion. Cette préparation prévient." },
+      { label: "Reconstruction Vie", detail: "Au-delà de l'arrêt, c'est une vie sans alcool que tu reconstruis. De nouvelles routines, parfois de nouvelles relations, de nouvelles activités. Cela prend du temps. Au début, le manque peut sembler immense. Avec le temps, une autre vie se dessine, qui peut être plus pleine que celle qu'occupait l'alcool." },
+      { label: "Relations Qui Changent", detail: "Certaines relations vont changer. Les amis de soirée alcoolisée. Les contextes où tu buvais. Tu peux découvrir qui sont tes vrais soutiens, et qui n'étaient là que dans ce contexte. Ces transformations relationnelles sont parfois douloureuses, parfois libératrices." },
+      { label: "Si Rechute", detail: "Si une rechute survient, ce n'est pas la fin. Tu peux te relever, comprendre ce qui a déclenché, ajuster, et reprendre. La plupart des trajectoires d'abstinence durable comportent des rechutes. Ce qui distingue, c'est de ne pas s'effondrer définitivement après. Reprendre rapidement, parler de ce qui s'est passé, ajuster." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux activer ton dispositif quand l'envie monte. Te connecter à ton pourquoi profond. Identifier les pensées de l'addiction comme des mensonges. Utiliser tes outils. Et avancer, jour après jour, dans cette vie que tu reconstruis. Tu n'es pas seul — ton équipe médicale et associative est avec toi." }
       ],
     }],
   }],
@@ -8816,7 +10488,16 @@ const k_1029: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients avec consommation excessive de sucre, grignotages compulsifs entre repas, addiction au sucré. Pas pour TCA pathologiques. Travail sur la régulation, les déclencheurs émotionnels, la satiété." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation (pas TCA)\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu manges du sucre, tu grignotes, tu te jettes parfois sur des aliments alors que tu n'as pas faim physiquement. Ce comportement te dépasse, et après, tu te culpabilises. Aujourd'hui, nous travaillons sur cette mécanique, sans culpabilité supplémentaire mais avec lucidité." },
+      { label: "Pas De Faim Souvent", detail: "La plupart de tes grignotages ne sont pas liés à la faim physique. Ils sont liés à autre chose. Une émotion à apaiser. Un ennui à combler. Un stress à anesthésier. Une fatigue à compenser. La nourriture devient outil émotionnel, pas seulement nourriture." },
+      { label: "Distinction Faim Envie", detail: "Apprendre à distinguer la faim et l'envie est une compétence essentielle. La faim physique : sensation dans le ventre, vide, pouvant attendre, satisfaite par n'importe quel aliment. L'envie compulsive : sensation dans la tête, urgente, ciblée sur un aliment précis (souvent sucré), soulagée brièvement puis revient." },
+      { label: "Pause Avant Compulsion", detail: "Quand l'envie monte, tu peux installer une pause. Avant de te diriger vers la nourriture, demande-toi : suis-je vraiment affamé, ou est-ce autre chose ? Si c'est autre chose, qu'est-ce qui se passe en moi ? Ennui, stress, fatigue, tristesse, colère, ennui, vide ? Cette identification est déjà thérapeutique." },
+      { label: "Emotion Accueille", detail: "L'émotion sous-jacente mérite d'être accueillie, pas anesthésiée par la nourriture. Si tu es triste, la tristesse a quelque chose à dire. Si tu es stressé, le stress signale quelque chose. Manger pour endormir l'émotion ne règle pas son origine. Et l'émotion revient, encore et encore." },
+      { label: "Outils Alternatifs", detail: "À la place du grignotage, tu peux développer d'autres outils selon ce que tu ressens. Pour le stress : respiration profonde, marche, parler à quelqu'un. Pour l'ennui : activité, lecture, contact humain. Pour la fatigue : se reposer vraiment plutôt que stimuler par le sucre. Pour la tristesse : exprimer, ne pas anesthésier." },
+      { label: "Pas D Interdit", detail: "Une approche qui marche souvent mieux que les interdits stricts : pas d'aliment interdit, mais une présence pleine quand tu manges. Tu peux manger ce que tu veux, mais avec attention. Goûter vraiment. T'arrêter quand tu n'as plus faim. Cette approche dénoue la spirale interdit/transgression caractéristique des régimes." },
+      { label: "Corps Qui Sait", detail: "Ton corps sait quelle quantité de nourriture lui convient. Cette intelligence a été perdue avec les régimes, les comptages, les règles externes. Tu peux la retrouver progressivement. Manger en présence, écouter ton corps, lui faire confiance. Cette réconciliation prend du temps mais elle libère durablement." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, avant un grignotage, tu peux installer une pause. Identifier l'émotion. Choisir une réponse adaptée. Et si tu manges, le faire en présence. Cette série de gestes, pratiquée régulièrement, transforme progressivement ton rapport à la nourriture." }
       ],
     }],
   }],
@@ -8855,7 +10536,16 @@ const k_1030: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients avec usage compulsif des écrans (smartphone, réseaux sociaux, séries, défilement infini). Travail sur la conscience de l'usage, la dépose des ancrages compulsifs, la reconquête du temps." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation usage\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Plan concret\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu passes plus de temps que tu ne voudrais sur tes écrans. Smartphone, réseaux, séries, scrolling. Tu prends ton téléphone pour 5 minutes et te retrouves une heure plus tard sans savoir comment. Tu termines tes journées avec le sentiment d'avoir perdu du temps précieux." },
+      { label: "Systeme Qui Capture", detail: "Important d'abord : ce n'est pas un manque de volonté de ta part. Les applications et plateformes sont conçues par des équipes d'ingénieurs spécialisés pour capturer ton attention. Mécanismes de récompense aléatoire, notifications, infinite scroll, autoplay — autant de techniques validées scientifiquement pour te garder. Tu te bats contre un système conçu pour t'avoir." },
+      { label: "Circuit Recompense", detail: "Ton cerveau fonctionne avec des circuits de récompense. La dopamine est libérée quand quelque chose de nouveau ou agréable arrive. Les apps exploitent cela : chaque notification, chaque like, chaque nouvelle vidéo libère une petite dose. Ton cerveau apprend à chercher cette stimulation, même quand elle te coûte plus qu'elle ne te donne." },
+      { label: "Conscience De L Usage", detail: "Premier travail : conscience. Pendant quelques jours, observe sans juger. Quand prends-tu ton téléphone ? Pourquoi ? Que cherchais-tu ? Que ressens-tu après ? Cette observation, simple, commence à modifier le comportement. L'automatisme inconscient devient choix conscient." },
+      { label: "Declencheurs", detail: "Identifie tes déclencheurs principaux. L'ennui. L'attente. Le moment d'effort à venir (procrastination). L'inconfort émotionnel. Le réveil le matin. Le coucher le soir. Pour chaque déclencheur à risque, prévois une alternative." },
+      { label: "Amenagements Concrets", detail: "Quelques aménagements concrets puissants : couper les notifications non essentielles, mettre les apps les plus chronophages dans un dossier difficile d'accès, installer un compteur de temps d'écran, mettre l'écran en gris (moins addictif), pas de téléphone dans la chambre, pas de téléphone à table, périodes off (week-ends, vacances)." },
+      { label: "Temps Repris", detail: "Imagine ce que tu pourrais faire avec le temps repris. Une heure par jour économisée, c'est 365 heures par an, soit l'équivalent de plusieurs semaines de travail. Apprendre une langue, lire 30 livres, te mettre au sport, créer, voir tes proches. Cette projection donne du sens à l'effort." },
+      { label: "Ennui Redecouvert", detail: "L'ennui n'est pas un ennemi. C'est même précieux : c'est dans l'ennui que naissent souvent les idées, les rêveries, la créativité. Le smartphone a tué l'ennui, et avec lui une partie de notre intériorité. Réapprendre à supporter l'ennui sans le combler immédiatement par un écran est une compétence à retrouver." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux observer tes usages avec conscience. Mettre en place les aménagements concrets. Et progressivement, reconquérir ton temps et ton attention. Tu ne deviens pas anti-écran — tu deviens choisi dans ton usage." }
       ],
     }],
   }],
@@ -8894,7 +10584,17 @@ const k_1031: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en addiction aux jeux d'argent (paris sportifs, machines à sous, casinos, poker en ligne) en COMPLÉMENT du suivi addictologique. Travail sur la motivation, l'identification du circuit de la récompense, la prévention rechute." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification suivi spécialisé\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Lieu sûr K-BASE-011\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Cadre", detail: "Tu es engagé dans une démarche par rapport aux jeux d'argent. Cette démarche s'inscrit dans un cadre spécialisé (CSAPA, addictologue, possiblement Joueurs Anonymes). L'hypnose est complément. Cette précision posée, nous travaillons aujourd'hui les ressources mentales." },
+      { label: "Pas D Illusion", detail: "L'addiction aux jeux d'argent repose sur une illusion fondamentale : l'idée que tu vas gagner, que la chance va tourner, que cette fois sera la bonne. Cette illusion est le carburant de l'addiction. Ta lucidité aujourd'hui est ton premier pas hors de cette illusion." },
+      { label: "Realite Des Pertes", detail: "Statistiquement, sur le long terme, le joueur perd. C'est conçu ainsi. Les casinos, les sites de paris ne seraient pas des entreprises rentables si les joueurs gagnaient en moyenne. Les apparentes victoires sont des ré-injections du système pour maintenir la dépendance. Ta lucidité sur ce mécanisme protège." },
+      { label: "Chasing", detail: "Le chasing — vouloir récupérer ses pertes — est l'un des pièges principaux. Tu as perdu 100, tu joues pour récupérer, tu perds 200, tu joues pour récupérer plus, tu perds 500. Cette spirale s'enfonce. Reconnaître la pensée 'je vais récupérer' comme un mensonge de l'addiction est essentiel." },
+      { label: "Pertes Reelles", detail: "Fais face aux pertes réelles. Combien as-tu perdu en cumulé ? Que cela représente-t-il ? Ce que tu aurais pu faire avec cet argent ? Cette confrontation à la réalité, désagréable, est protectrice. L'addiction prospère dans le déni des pertes." },
+      { label: "Envies Traversees", detail: "Les envies de jouer reviendront. Comme pour toutes les addictions, ce sont des vagues. 15-20 minutes maximum. Si tu ne joues pas pendant la vague, elle passe. Tes outils : trois respirations, t'éloigner de ton téléphone ou ordinateur, appeler quelqu'un, te rappeler tes pertes réelles." },
+      { label: "Blocage Des Acces", detail: "Au-delà de la motivation mentale, des blocages concrets sont nécessaires. Auto-exclusion des sites de jeu (procédure officielle). Suppression des apps. Confier l'accès aux comptes bancaires à un proche dans les premières semaines. Ces blocages externes complètent ce que la volonté seule ne peut pas garantir." },
+      { label: "Dimensions Emotionnelles", detail: "Souvent, le jeu compulsif compense quelque chose : ennui, vide, fuite, sentiment d'inexister, recherche d'excitation manquante ailleurs. Cette dimension émotionnelle mérite son propre travail. Sans elle, le risque de rechute reste élevé même avec les meilleures barrières." },
+      { label: "Reconstruction", detail: "Il y a la reconstruction financière (souvent longue), et la reconstruction de vie (relations, confiance en soi, projets). Ces deux reconstructions vont de pair. Patience nécessaire. Étape par étape. Pas de précipitation." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu disposes d'outils pour traverser les envies. Tu reconnais les pensées de l'addiction comme des mensonges. Tu maintiens tes blocages concrets. Tu travailles avec ton équipe spécialisée. Et progressivement, tu reconstruis une vie qui n'est plus dévorée par le jeu." }
       ],
     }],
   }],
@@ -8933,7 +10633,16 @@ const k_1032: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients (adolescents et adultes) avec usage problématique des jeux vidéo, plateformes de streaming. Travail de régulation, pas d'interdit moral, restauration d'autres dimensions de la vie." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation usage et fonctions\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Plan concret\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu passes beaucoup de temps sur les jeux vidéo, ou sur les plateformes de streaming. Tu te connectes pour une heure, et tu termines à 3h du matin. Tu sais que d'autres dimensions de ta vie sont négligées. Aujourd'hui, nous travaillons à reprendre le pilotage." },
+      { label: "Pas De Diabolisation", detail: "Les jeux vidéo et les séries ne sont pas des ennemis en soi. Ils peuvent apporter du plaisir, de la détente, du lien social, de la stimulation cognitive. Le problème n'est pas leur existence — c'est quand l'usage devient déséquilibré au point de coloniser les autres dimensions de ta vie." },
+      { label: "Fonctions De L Usage", detail: "Demande-toi : qu'est-ce que cela t'apporte ? Évasion d'un quotidien morose ? Sentiment de réussite manquant ailleurs ? Lien social via les jeux multijoueurs ? Anesthésie d'émotions difficiles ? Excitation manquante par ailleurs ? Identifier la fonction est éclairant." },
+      { label: "Si Evasion D Un Mal", detail: "Si l'usage excessif compense quelque chose de difficile dans ta vie réelle (insatisfaction professionnelle, solitude, déprime, ennui chronique), traiter cette difficulté est plus important que de couper l'usage. Couper sans traiter la cause expose à compensations encore plus problématiques." },
+      { label: "Systeme Qui Capture", detail: "Comme pour les écrans en général, ces jeux et plateformes sont conçus pour te garder. Quêtes infinies, autoplay, prochain épisode automatique, micro-récompenses, FOMO sur le contenu nouveau. Ton 'manque de volonté' n'est pas la vraie histoire — tu te bats contre un design optimisé." },
+      { label: "Limites Concretes", detail: "Au lieu d'interdire (qui crée tension et transgression), pose des limites concrètes. Une heure par jour. Pas avant 19h. Pas le jour avant un examen. Ces limites, choisies en amont à tête reposée, sont plus tenables que les décisions prises au moment où tu es déjà tenté." },
+      { label: "Restauration Autres Dimensions", detail: "Identifie les dimensions négligées : sport, relations, sommeil, lecture, sortie, projets, etc. Investis-les progressivement. À mesure que ces dimensions reprennent vie, le besoin compulsif des jeux ou séries diminue souvent naturellement." },
+      { label: "Pour Adolescents", detail: "Si tu es jeune et lis cela, sache que beaucoup d'adultes ont vécu ce que tu vis et ont trouvé un équilibre. La période adolescente est particulièrement à risque (cerveau en développement plus sensible aux récompenses immédiates). Il faut un cadre — extérieur ou intérieur — pour traverser sans laisser tout le reste s'effondrer." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux observer ton usage avec conscience. Identifier ses fonctions. Poser des limites concrètes. Restaurer d'autres dimensions de ta vie. Et progressivement, retrouver un usage choisi plutôt que subi." }
       ],
     }],
   }],
@@ -8972,7 +10681,16 @@ const k_1033: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients avec achats compulsifs (vêtements, gadgets, e-commerce). Travail sur les déclencheurs émotionnels, le bref soulagement vs vide post-achat, la régulation." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation contexte\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu achètes compulsivement. Vêtements, gadgets, objets dont tu n'as pas vraiment besoin. Le passage à l'acte procure un soulagement bref. Et puis arrive le vide, parfois la culpabilité, et plus tard le compte qui s'allège. Aujourd'hui, nous travaillons sur cette mécanique." },
+      { label: "Objet Substitut", detail: "Souvent, l'achat compulsif est un substitut. Substitut à un manque. À un vide. À une émotion difficile. À un sentiment de manque de soi. L'objet acheté représente, brièvement, quelque chose à combler. Mais l'objet lui-même ne peut combler ce vide — ce n'est pas pour cela qu'il est conçu." },
+      { label: "Circuit Recompense", detail: "Comme pour d'autres addictions, le circuit de la récompense est en jeu. Le moment de l'achat libère une dose de dopamine. Cette satisfaction est brève — quelques minutes ou heures. Et puis le manque revient, et il faut acheter à nouveau pour retrouver la dose. La quête est sans fin." },
+      { label: "Emotion Avant Achat", detail: "Quand l'envie d'acheter monte, demande-toi : qu'est-ce que je ressens là, juste avant ? Ennui ? Tristesse ? Frustration ? Vide ? Excitation à canaliser ? Cette identification est précieuse. Elle te montre que l'achat n'est pas la solution — c'est l'émotion qu'il y a en dessous qui mérite attention." },
+      { label: "Delai De 24H", detail: "Une stratégie efficace : la règle des 24 heures. Quand tu vois quelque chose qui déclenche l'envie d'acheter, tu n'achètes pas immédiatement. Tu mets de côté, et tu attends 24 heures. Si après 24 heures, l'envie est toujours là et le besoin reste, tu peux acheter. Souvent, l'envie sera passée — c'était une vague de désir, pas un vrai besoin." },
+      { label: "Explorer Le Vide", detail: "Quand tu n'achètes pas et que l'envie passe, tu peux te trouver face au vide qui était sous l'envie. Ce vide est désagréable, mais il est précieux à habiter. Il dit quelque chose de toi, de ta vie, de ce qui te manque vraiment. Acheter le couvre — l'écouter peut te conduire à des changements profonds." },
+      { label: "Obstacles Concrets", detail: "Au-delà de l'effort mental, des obstacles concrets aident. Désinscription des newsletters de magasins. Suppression des cartes enregistrées sur les sites e-commerce. Pas de carte bancaire dans le portefeuille pour les sorties (que du liquide). Limite de découvert basse. Ces friction matérielles freinent l'impulsivité." },
+      { label: "Se Combler Autrement", detail: "Les besoins réels sous l'achat compulsif (sécurité, amour, reconnaissance, plaisir, sens) ne se comblent pas par des objets. Ils se comblent par des relations, des engagements, des pratiques, du soin de soi. Investir ces dimensions, à la place des objets, transforme durablement." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, avant un achat, tu peux installer la pause. Identifier l'émotion. Appliquer la règle des 24 heures. Et progressivement, ton rapport à l'achat se transforme — tu redeviens choisi dans tes acquisitions plutôt que poussé." }
       ],
     }],
   }],
@@ -9011,7 +10729,17 @@ const k_1034: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en addiction affective (besoin compulsif de l'autre, dépendance amoureuse, incapacité à être seul, relations toxiques répétées). Travail sur la reconquête de soi, la sécurité intérieure, la sortie progressive." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Anamnèse de la dynamique\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Sanctuaire K-BASE-012\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu vis une forme de dépendance dans tes relations affectives. Tu ne supportes pas d'être seul, ou tu reproduis les mêmes patterns toxiques, ou tu te perds dans l'autre, ou tu ne peux pas te détacher d'une personne pourtant douloureuse. Cette dépendance ressemble à une addiction — et elle peut être travaillée comme telle." },
+      { label: "Addiction Au Lien", detail: "Comme pour les autres addictions, il y a un circuit de récompense impliqué. Le manque quand l'autre est absent. Le soulagement intense quand le lien est restauré. Cette mécanique chimique te lie à l'autre comme une drogue. Reconnaître cela, sans honte, ouvre la possibilité de travailler." },
+      { label: "Origine Souvent Ancienne", detail: "L'addiction affective vient souvent d'une histoire ancienne. Insécurité d'attachement dans l'enfance. Manque affectif. Hyperresponsabilisation envers un parent. Cette part de toi qui n'a pas reçu ce qu'elle attendait cherche dans l'adulte ce qui a manqué. Mais l'autre adulte ne peut pas combler ce manque ancien — c'est une mission impossible qui te lie à lui sans solution." },
+      { label: "Dans Sanctuaire", detail: "Dans ton sanctuaire intérieur, tu peux aller à la rencontre de la part de toi qui a faim de l'autre. Cette part est souvent jeune, parfois enfantine. Elle a peur d'être seule. Elle pense ne pas pouvoir survivre sans présence. Cette part mérite ta compassion, pas ton mépris." },
+      { label: "Etre Avec Part Blesse", detail: "Tu peux maintenant être avec cette part. Lui montrer que tu es là, adulte. Que tu peux la tenir, l'écouter, la rassurer. Pas la faire disparaître — elle existe, elle est légitime. Mais lui montrer qu'elle a un autre interlocuteur que l'autre extérieur dont elle pensait dépendre." },
+      { label: "Securite Interieure", detail: "Cette sécurité que tu cherchais dans l'autre, tu peux progressivement la trouver en toi. Pas en théorie — par pratique. Apprendre à être seul. Apprendre à te tenir compagnie. Apprendre à te soutenir intérieurement. Cette compétence, qu'on n'enseigne pas, se développe avec patience." },
+      { label: "Relation Qui Change", detail: "Si tu es dans une relation actuelle, le travail intérieur change la relation aussi. Soit ton partenaire évolue avec toi, et la relation devient plus saine. Soit la relation ne supporte pas ton évolution (parce qu'elle reposait sur ta dépendance), et alors une question se pose. Cette transformation prend du temps." },
+      { label: "Si Relation Toxique", detail: "Si tu es dans une relation manifestement toxique (manipulation, dévalorisation, violence), le travail intérieur prépare la sortie. Pas de précipitation, mais pas d'illusion non plus. Une relation toxique ne peut pas devenir saine par ton seul travail. Au mieux tu te protèges, au plus juste tu sors quand ce sera possible." },
+      { label: "Lien Sain Possible", detail: "Au bout du chemin — qui peut être long — un lien sain devient possible. Un lien où tu existes pleinement avec quelqu'un qui existe pleinement aussi. Pas une fusion qui te dévore. Pas une dépendance qui t'enchaîne. Un partage qui enrichit deux personnes complètes." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux pratiquer la rencontre avec la part de toi qui a faim. Lui offrir ta présence d'adulte. Cultiver ta sécurité intérieure. Observer tes patterns relationnels. Et avancer, à ton rythme, vers des liens plus sains." }
       ],
     }],
   }],
@@ -9050,7 +10778,17 @@ const k_1035: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients codépendants (proches d'addicts, sauveurs chroniques, hyper-responsables d'autrui). Travail sur la limite, la responsabilité de l'autre, la reconquête de soi." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification du pattern\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu portes l'autre. Quelqu'un de ta vie — partenaire, parent, enfant adulte, ami — a un problème (addiction souvent, mais pas toujours), et tu t'es positionné en sauveur. Tu portes plus que tu ne devrais. Tu compenses. Tu protèges. Tu t'épuises. Et au fond, malgré tes efforts, l'autre ne va pas mieux durablement." },
+      { label: "Amour Qui Se Perd", detail: "Cette posture vient souvent de l'amour. Tu aimes cette personne et tu veux la protéger, l'aider, la sauver. Cet amour est légitime. Mais dans la codépendance, l'amour se perd — il devient un fardeau pour toi et un piège pour l'autre. L'amour peut prendre une autre forme, qui sert mieux les deux personnes." },
+      { label: "Responsabilite De L Autre", detail: "Voici une vérité dure : tu ne peux pas sauver quelqu'un qui ne se sauve pas lui-même. Tu peux soutenir, accompagner, aimer — pas faire à sa place. Quand tu portes ce qui devrait revenir à l'autre, tu lui enlèves la possibilité de se prendre en charge. Et tu l'enfermes dans la dépendance à toi." },
+      { label: "Limite De Responsabilite", detail: "Tu as une responsabilité envers les autres — elle existe. Mais elle a une limite. Tu n'es pas responsable des choix d'un adulte. Tu n'es pas responsable des conséquences de l'addiction de quelqu'un. Tu n'es pas responsable de réparer la vie de quelqu'un d'autre. Reconnaître cette limite n'est pas un abandon — c'est de la justesse." },
+      { label: "Se Perdre N Aide Pas", detail: "Te détruire en sauvant l'autre n'aide pas l'autre. Beaucoup de codépendants épuisés finissent par s'effondrer, et alors plus personne ne va bien. Te préserver, paradoxalement, te rend plus disponible et plus utile que t'épuiser." },
+      { label: "Qu Est Ce Qui T Appartient", detail: "Demande-toi, dans cette relation : qu'est-ce qui m'appartient à moi, et qu'est-ce qui appartient à l'autre ? Mes émotions sont à moi. Les siennes sont à lui. Mes choix sont à moi. Les siens sont à lui. Mes responsabilités sont les miennes. Les siennes sont les siennes. Cette clarification, simple, libère." },
+      { label: "Lacher Sans Abandonner", detail: "Lâcher l'autre à sa propre vie n'est pas l'abandonner. C'est le respecter comme adulte capable de faire ses choix, même mauvais. C'est cesser de prendre sa place. C'est rester présent comme proche aimant, sans être responsable du bien-être qu'il devrait gérer lui-même." },
+      { label: "Pour Toi", detail: "Reprends ta vie. Tes activités délaissées. Tes relations négligées. Tes projets reportés. Tes plaisirs oubliés. Cette reconquête de toi est urgente. Tu existes au-delà de l'autre que tu sauves." },
+      { label: "Groupes Pour Proches", detail: "Pour beaucoup de codépendances liées à l'addiction d'un proche, il existe des groupes (Al-Anon, Naranon, etc.). Ces espaces permettent de comprendre la dynamique, de partager avec d'autres dans la même situation, de retrouver des ressources. Très précieux." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux progressivement clarifier ce qui t'appartient et ce qui appartient à l'autre. Cesser de porter ce qui n'est pas à toi. Reconquérir ta vie. Et redonner à ton amour pour cette personne une forme qui ne te détruit pas et qui ne l'enferme pas." }
       ],
     }],
   }],
@@ -9089,7 +10827,16 @@ const k_1036: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en hypersexualité, addiction à la pornographie, compulsions sexuelles. En complément du suivi spécialisé. Travail sur la régulation, les déclencheurs, la reconstruction d'une sexualité intégrée." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Anamnèse rigoureuse + suivi médical/sexologue\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Cadre", detail: "Tu es engagé dans une démarche autour d'une sexualité qui te dépasse. Pornographie compulsive, multiples partenaires non choisis, comportements répétitifs malgré conséquences négatives. Cette démarche s'inscrit dans un cadre spécialisé. L'hypnose est complément." },
+      { label: "Pas De Jugement", detail: "Aujourd'hui, dans cet espace, pas de jugement moral sur ta sexualité. Le travail concerne le caractère compulsif — quand ce qui devrait être plaisir devient contrainte, quand tu ne choisis plus mais subis, quand les conséquences sont préjudiciables et que tu continues quand même. C'est ce dérèglement qui est le sujet, pas la sexualité elle-même." },
+      { label: "Circuit Recompense", detail: "Comme pour d'autres addictions, c'est un circuit de récompense déréglé. La sexualité libère des neurotransmetteurs puissants. Quand le système est sur-stimulé répétitivement (pornographie facile d'accès, multiples partenaires), il s'adapte et demande toujours plus pour la même satisfaction. Cette tolérance pousse à l'escalade." },
+      { label: "Fonctions Du Comportement", detail: "Souvent, l'hypersexualité compulsive remplit une fonction non sexuelle. Anesthésie d'émotions difficiles. Compensation d'un vide. Sentiment éphémère de validation. Évitement d'autres difficultés. Identifier la vraie fonction permet de la traiter autrement." },
+      { label: "Envies Qui Passent", detail: "Les envies compulsives reviendront. Ce sont des vagues. Elles montent intensément, et redescendent en 15-30 minutes si tu ne cèdes pas. Tes outils : trois respirations, te lever et bouger, sortir si tu peux, appeler quelqu'un, pratiquer une activité absorbante." },
+      { label: "Pour Pornographie", detail: "Pour la pornographie spécifiquement : abstinence totale est souvent nécessaire au moins pendant plusieurs mois pour permettre au système de se réinitialiser (ce qu'on appelle parfois 'reboot'). Pendant cette période, le cerveau retrouve sa sensibilité naturelle. La sexualité réelle redevient excitante et satisfaisante." },
+      { label: "Sexualite Integree", detail: "Au bout du chemin, la sexualité peut redevenir intégrée. Pas exilée comme un mal. Pas dévorante comme une drogue. Une dimension de la vie, choisie, partagée, plaisante. Cette sexualité juste demande du temps pour émerger. Patience." },
+      { label: "Si Partenaire", detail: "Si tu es en couple, l'hypersexualité a souvent abîmé la relation. Réparer demande honnêteté, parfois aide professionnelle de couple. Ne pas mentir sur la trajectoire. Reconnaître les blessures causées. Reconstruire progressivement." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux activer ton dispositif quand l'envie monte. Identifier les fonctions sous-jacentes. Te connecter à ton pourquoi profond pour cette démarche. Et progressivement, retrouver une sexualité qui te ressemble plutôt que de te dévorer." }
       ],
     }],
   }],
@@ -9128,7 +10875,16 @@ const k_1037: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en démarche de réduction ou arrêt du cannabis. Travail sur la motivation, la reconquête des fonctions cognitives, la gestion des envies, la reconstruction." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation, vérification suivi spécialisé\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu fumes du cannabis et tu veux arrêter ou réduire. Cette consommation, qui peut paraître banale dans certains environnements, peut devenir un poids qui pèse sur toi : motivation altérée, mémoire moins fiable, sentiment d'apathie chronique, dépendance qui s'installe." },
+      { label: "Pas Minimisation", detail: "Le cannabis n'est pas anodin pour ceux qui en consomment régulièrement. Il modifie le fonctionnement cérébral, particulièrement chez les jeunes en développement. La dépendance, longtemps niée, est désormais bien documentée. Arrêter peut être plus difficile qu'on ne le pense, surtout pour les usages quotidiens prolongés." },
+      { label: "Cerveau Qui Recupere", detail: "Quand tu arrêtes, ton cerveau récupère progressivement. Mémoire qui s'améliore. Concentration qui revient. Motivation qui réapparaît. Sommeil qui se restructure (souvent perturbé les premières semaines). Émotions qui reviennent en pleine intensité. Cette récupération demande patience — plusieurs semaines à mois." },
+      { label: "Reveil Des Emotions", detail: "Beaucoup de consommateurs réguliers utilisent le cannabis pour anesthésier des émotions difficiles. À l'arrêt, ces émotions reviennent — parfois fortes. Cette traversée est nécessaire et passagère. Tu peux apprendre à les accueillir autrement, sans les anesthésier à nouveau." },
+      { label: "Motivation Qui Revient", detail: "L'amotivation chronique est l'une des conséquences les plus reconnues. Apathie, projets reportés, vie ralentie. À l'arrêt, la motivation revient progressivement. Les premières semaines peuvent être encore difficiles. Puis quelque chose se réveille — l'envie, l'élan, le désir d'agir." },
+      { label: "Envies Traversees", detail: "Les envies de fumer reviendront. Surtout dans les contextes habituels : soir, week-end, certaines personnes, certains lieux. Tes outils : trois respirations, changer d'environnement, activité physique, contacter un soutien, te rappeler ton pourquoi. Les envies passent, en quelques minutes à plusieurs dizaines de minutes au début." },
+      { label: "Relations Qui Changent", detail: "Si ton entourage consomme aussi, la sortie est plus difficile. Tu peux avoir à mettre de la distance avec certaines relations. Cette transformation peut être douloureuse mais souvent nécessaire. Tes vrais amis te soutiendront dans ton choix." },
+      { label: "Reconstruction", detail: "Au-delà de l'arrêt, c'est une vie qui se reconstruit. Activités, projets, relations qui n'avaient plus la place. Cette reconstruction prend du temps. Au début, le manque peut sembler immense, comme un vide. Avec le temps, ce vide se comble par autre chose de plus solide." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux activer ton dispositif quand l'envie monte. Te connecter à ton pourquoi profond. Habiter le retour des émotions sans les anesthésier. Et progressivement, retrouver l'esprit clair, la motivation, et la vie qui pousse à nouveau." }
       ],
     }],
   }],
@@ -9167,7 +10923,16 @@ const k_1038: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en addiction au travail (workaholisme), incapables de poser le travail, qui s'épuisent dans la performance. Travail sur les fonctions du surinvestissement, la restauration d'autres dimensions." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation et reconnaissance\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu travailles trop. Pas seulement beaucoup — trop. Tu ne peux pas t'arrêter. Le week-end te pèse. Les vacances te stressent. Sans tâche à accomplir, tu te sens inutile, vide, anxieux. Cette intensité a des conséquences sur ta santé, tes relations, ta vie en général. Aujourd'hui, on regarde ce qui se passe." },
+      { label: "Addiction A La Validation", detail: "Le workaholisme est souvent une addiction à la validation que le travail apporte. Production = reconnaissance = sentiment d'exister = soulagement bref. Sans production, le sentiment d'inexister revient. Cette mécanique est très semblable aux autres addictions." },
+      { label: "Origine Souvent", detail: "Souvent, derrière le workaholisme, il y a une histoire. Une famille où la valeur dépendait des résultats. Une difficulté à se sentir aimable sans accomplir. Une fuite d'autres dimensions de la vie qui paraissent menaçantes (relations, intériorité). Cette origine mérite attention." },
+      { label: "Valeur Intrinseque", detail: "Ta valeur en tant qu'humain ne dépend pas de ta productivité. Cette idée peut paraître évidente ou révolutionnaire selon où tu en es. Si tu ne peux pas exister tranquillement sans produire, c'est cette idée qui n'est pas vraiment intégrée. Ce n'est pas que tu ne le crois pas intellectuellement — c'est que ton corps et ton inconscient ne le savent pas." },
+      { label: "Silence Qui Fait Peur", detail: "Beaucoup de workaholiques ont peur du silence, du repos, de ne rien faire. Quand l'activité s'arrête, qu'est-ce qui remonte ? Souvent : émotions évitées, vide intérieur, questions sur le sens, solitude. Le travail compulsif est en partie une fuite de cela. Apprendre à habiter le silence sans paniquer est une compétence cruciale." },
+      { label: "Corps Qui Paye", detail: "Ton corps paie ton excès. Fatigue chronique. Tensions. Troubles divers. Sommeil dégradé. À long terme, risque cardiovasculaire, burn-out, autres pathologies. Ces signaux ne sont pas des défaillances — ce sont des appels au changement." },
+      { label: "Dimensions Oubliees", detail: "Identifie ce qui a été négligé : relations proches, amitiés, loisirs, corps, intériorité. Pour chaque dimension, tu peux poser un acte concret cette semaine pour la réinvestir. Petit à petit. Ces dimensions, restaurées, redonnent une assise à ta vie qui ne dépend plus que du travail." },
+      { label: "Limites Fermes", detail: "Pose des limites fermes. Pas modulables selon urgences. Pas de mails après 19h. Pas de travail le week-end (au moins une journée). Vacances qui sont vraiment des vacances. Ces limites tenues, même imparfaites, transforment progressivement." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux observer ton rapport au travail avec lucidité. Identifier les fonctions sous-jacentes. Restaurer les dimensions négligées. Poser des limites. Et progressivement, retrouver une vie où le travail a sa place — importante mais pas totale." }
       ],
     }],
   }],
@@ -9206,7 +10971,18 @@ const k_1039: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Protocole transversal pour prévention de la rechute dans toute addiction. À utiliser en consolidation, après quelques semaines à mois d'abstinence. Travail spécifique sur l'identification précoce, les outils, le filet de sécurité." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Bilan de la trajectoire\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Plan d'urgence concret\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu es dans une phase de consolidation. Tu as franchi le cap initial. Quelques semaines, peut-être quelques mois sans la consommation ou le comportement. Cette phase est précieuse — et elle a ses propres défis. La rechute reste possible, particulièrement à certains moments. Aujourd'hui, on prépare ton dispositif de prévention." },
+      { label: "Rechute Pas Inevitable", detail: "Soyons clairs : la rechute n'est pas inévitable. Beaucoup de personnes maintiennent leur abstinence ou leur changement durablement. Mais elle reste un risque, surtout dans les premiers mois et années. Bonne nouvelle : elle peut largement être prévenue par un dispositif solide." },
+      { label: "Phases Qui Arrivent", detail: "Tu vas peut-être traverser plusieurs phases. La lune de miel — les premières semaines où tu te sens bien, fier, motivé. Le mur — où la difficulté monte, l'envie revient, le doute s'installe. La maturation — où l'abstinence s'intègre durablement. Connaître ces phases t'aide à ne pas te désespérer dans les passages difficiles." },
+      { label: "Signaux Precoces", detail: "La rechute arrive rarement d'un coup. Elle est précédée de signaux. Émotionnels (irritabilité, déprime, vide). Comportementaux (isolement, abandon des soutiens, retour dans des contextes à risque). Cognitifs (rationalisations comme 'je peux gérer une fois', minimisations, comparaisons). Apprendre à reconnaître ces signaux tôt te permet d'agir avant que ce ne soit trop tard." },
+      { label: "Situations A Risque", detail: "Identifie tes situations à risque. Émotionnelles (stress, conflit, déception, ennui chronique). Sociales (certaines personnes, certains contextes, fêtes spécifiques). Temporelles (anniversaires, fins de période difficiles, vacances). Pour chaque situation, prévois une stratégie : éviter, traverser avec soutien, plan B disponible." },
+      { label: "Outils Eprouves", detail: "Tu as développé des outils. Geste-ancre. Respirations. Lieu sûr. Pourquoi profond. Réseau. Ces outils sont à toi. Continue à les utiliser, pas seulement quand l'envie est forte mais aussi en prévention. Plus tu les pratiques régulièrement, plus ils sont efficaces le moment venu." },
+      { label: "Reseau De Soutien", detail: "Identifie clairement ton réseau de soutien. Une ou deux personnes que tu peux appeler dans un moment de vulnérabilité. Ton groupe de pairs si tu en as un. Ton thérapeute. Ton médecin. N'attends pas la crise pour les contacter — entretiens le lien régulièrement." },
+      { label: "Plan D Urgence", detail: "Construis maintenant un plan d'urgence. Si une envie très forte monte : étape 1 (3 respirations), étape 2 (geste-ancre), étape 3 (changer d'environnement), étape 4 (appeler X), étape 5 (Y si X non joignable). Ce plan, écrit, accessible facilement, est ton filet de sécurité." },
+      { label: "Si Petit Ecart", detail: "Si un petit écart survient — un verre, une bouffée, un comportement bref — ce n'est pas obligatoirement une rechute totale. La différence se joue dans ce que tu fais après. Soit tu te dis 'c'est foutu' et tu reprends à fond — c'est la rechute. Soit tu te dis 'incident, j'arrête là, je parle à mon soutien, j'analyse ce qui s'est passé' — c'est un apprentissage, pas une défaite." },
+      { label: "Qualite De Vie", detail: "À long terme, ce qui protège le mieux contre la rechute, c'est une vie qui te plaît. Plus ta vie sans la consommation est riche, plus la consommation devient peu attrayante. Investis cette qualité de vie : relations, projets, santé, plaisir, sens. C'est ton meilleur protecteur." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu disposes d'un dispositif solide. Connaissance des signaux. Identification des situations à risque. Outils éprouvés. Réseau actif. Plan d'urgence. Et au-delà, l'investissement dans une vie qui te plaît. Tu n'es pas garanti contre tout — mais tu es bien équipé pour tenir." }
       ],
     }],
   }],
@@ -9245,7 +11021,17 @@ const k_1040: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Protocole INDISPENSABLE en première étape de tout travail trauma. Construit la stabilisation interne (lieu sûr, ressources, régulation) AVANT toute approche du contenu traumatique. Ne pas brûler cette étape." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation rigoureuse, alliance thérapeutique\n• Phase 2 — Induction K-BASE-003 douce\n• Phase 3 — Lieu sûr K-BASE-011 stabilisé profondément\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Pourquoi Stabiliser", detail: "Avant toute approche d'un contenu douloureux ou traumatique, nous devons construire ce qui te permettra d'y aller sans te perdre. Comme un plongeur a besoin de son équipement avant de descendre, comme un alpiniste a besoin de son point d'ancrage avant d'avancer. Cette stabilisation n'est pas une perte de temps — elle est la condition pour que le travail soit sûr et efficace." },
+      { label: "Lieu Sur Profond", detail: "Ton lieu sûr existe en toi. Pas comme une simple visualisation rapide — comme un endroit que tu peux habiter pleinement. Aujourd'hui, nous l'approfondissons. Tu peux y entrer en quelques secondes. Tu connais ses sons, ses odeurs, ses textures. Tu y respires différemment. Ton corps reconnaît cet endroit comme un lieu de paix." },
+      { label: "Ressources Inventoriees", detail: "Tu disposes de ressources, même si tu ne les vois pas toujours. Des forces que tu as développées dans ta vie. Des personnes qui t'ont aimé, te soutiennent. Des compétences que tu as acquises. Des moments où tu as traversé du difficile et émergé. Ces ressources sont en toi, accessibles. Faisons-en l'inventaire intérieur." },
+      { label: "Regulation Par Souffle", detail: "Ton souffle est l'outil le plus immédiat de régulation. Quand tout dérape intérieurement, ton souffle peut te ramener. Inspirations longues, expirations encore plus longues, par le nez si possible. Ce rythme parle à ton système nerveux dans une langue qu'il comprend : tout va bien, tu es en sécurité, tu peux te poser." },
+      { label: "Fenetre De Tolerance", detail: "Il existe en toi une fenêtre de tolérance — un état où tu es présent, vivant, ni en sur-activation (panique) ni en sous-activation (dissociation). Dans cette fenêtre, tu peux travailler, ressentir, intégrer. Hors d'elle, le travail devient nocif. Apprendre à reconnaître ta fenêtre, à y revenir quand tu en sors, est une compétence essentielle." },
+      { label: "Signaux De Dysregulation", detail: "Tu peux apprendre à reconnaître les signaux qui te disent que tu sors de la fenêtre. Vers le haut : accélération du cœur, respiration courte, sensations envahissantes, panique. Vers le bas : engourdissement, sensation de flottement, distance avec ton corps, vide intérieur. Ces signaux sont précieux — ils te disent qu'il faut revenir." },
+      { label: "Outils De Retour", detail: "Pour revenir dans la fenêtre, tu disposes d'outils. Ton lieu sûr. Ton souffle. Tes appuis (sentir tes pieds, tes points de contact). Tes 5 sens (nommer 5 choses que tu vois, 4 que tu entends, 3 que tu touches). Une boisson chaude. Une marche. Ces outils ramènent en quelques minutes." },
+      { label: "Pas De Precipitation", detail: "Cette stabilisation se construit dans la durée. Plusieurs séances peuvent être consacrées uniquement à la stabilisation, avant tout autre travail. Ce n'est pas perdre du temps — c'est gagner en sécurité et en efficacité pour la suite. Un travail trauma sans stabilisation préalable peut faire plus de mal que de bien." },
+      { label: "Alliance Thérapeutique", detail: "Notre relation thérapeutique est aussi un élément de stabilisation. Tu peux faire confiance au cadre. Je t'accompagne, pas au-dessus de ton rythme. Tu peux dire stop à tout moment. Tu gardes le contrôle. Cette sécurité de la relation soutient tout le reste." },
+      { label: "Post Hypnotique", detail: "Ce travail de stabilisation se poursuit. Plusieurs fois par jour, tu peux pratiquer ton lieu sûr. Reconnaître les signaux de dysrégulation. Activer tes outils de retour. Cette pratique régulière construit en toi une base solide. Quand le moment sera venu d'aborder le contenu plus difficile, tu seras équipé." }
       ],
     }],
   }],
@@ -9284,7 +11070,17 @@ const k_1041: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour approche progressive et sécurisée d'un contenu traumatique chez patient stabilisé. Utilisation de la double dissociation par l'écran de cinéma. UNIQUEMENT après stabilisation solide (K-AVA-001)." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification stabilisation, contrat de séance\n• Phase 2 — Lieu sûr pleinement actif\n• Phase 3 — Induction K-BASE-001\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Re-stabilisation OBLIGATOIRE\n• Phase 6 — Clôture K-BASE-030" },
+      { label: "Contrat", detail: "Avant de commencer, posons le cadre. Nous n'allons pas revivre ce qui s'est passé. Nous allons l'approcher à distance, par l'image. À tout moment, tu peux dire stop. Si tu sors de ta fenêtre de tolérance, nous arrêtons et nous re-stabilisons. Tu gardes le contrôle. Cela te convient-il ?" },
+      { label: "Dans Le Lieu Sur", detail: "Tu es dans ton lieu sûr. Pleinement présent. Sécurité ressentie corporellement. Souffle ample. Appuis solides. C'est de là que nous allons partir, et c'est là que nous reviendrons à tout moment de besoin." },
+      { label: "Double Dissociation", detail: "Imagine maintenant un cinéma. Pas un cinéma quelconque — un cinéma protégé. Tu es dans la salle, dans un fauteuil confortable. Sur l'écran, tu vas pouvoir voir un film. Mais avant, je t'invite à monter encore un cran : imagine qu'au-dessus de toi, dans la salle, il y a une cabine de projection. Et que dans cette cabine, il y a une autre version de toi qui te regarde, toi qui es dans la salle, qui regardes l'écran. Cette double dissociation crée deux niveaux de protection." },
+      { label: "Film A Distance", detail: "Sur l'écran, le film de l'événement peut commencer. Tu n'es pas dedans — tu es spectateur. Et au-dessus, dans la cabine, l'autre toi observe le tout. Le film est en noir et blanc si tu préfères. Plus loin que ce qui est confortable, tu peux le rendre plus petit, plus flou, plus distant. C'est toi qui contrôles tous les paramètres." },
+      { label: "Si Montee Intensité", detail: "Si à un moment l'intensité monte trop, tu actives ton signal stop. Le film s'arrête immédiatement. L'écran devient noir. Tu reviens au lieu sûr. Nous nous re-stabilisons. Pas de précipitation, pas d'obligation de continuer. Le travail peut se faire en plusieurs séances, par petits morceaux." },
+      { label: "Film Jusqu Au Bout", detail: "Si tu peux, laisse le film aller jusqu'au moment où l'événement s'est terminé, et même un peu après. Jusqu'au moment où tu as effectivement émergé. Ce point de fin est important. Souvent, le trauma reste en boucle parce que le système ne sait pas que c'est fini. Voir la fin permet à l'inconscient d'enregistrer : c'est passé." },
+      { label: "Ajouts Securisants", detail: "Si tu le souhaites, tu peux maintenant ajouter au film des éléments qui n'étaient pas là à l'époque mais qui auraient été aidants. Une présence rassurante, ton toi adulte qui dit à ton toi de l'époque que cela va passer, des soutiens, ce qui te convient. Ces ajouts modifient la mémoire dans un sens plus intégré." },
+      { label: "Retour Au Lieu Sur", detail: "Maintenant, l'écran s'éteint progressivement. Tu reviens dans ton lieu sûr. Tu prends quelques respirations longues. Tu sens ton corps, tes appuis. Tu es là, en sécurité. L'événement est resté sur l'écran — il est dans le passé." },
+      { label: "Re Stabilisation", detail: "Re-stabilisation obligatoire avant de sortir de la séance. Nous prenons le temps. Tes appuis. Ton souffle. Ton lieu sûr. Tes ressources. Tu n'es pas le contenu du film — tu es la personne complète, ressourcée, qui est ici dans ce moment." },
+      { label: "Post Hypnotique", detail: "Dans les jours qui viennent, le travail se poursuit en toi. Possibilité de fluctuations émotionnelles. Pratique régulière de ton lieu sûr et de tes outils de stabilisation. Toute difficulté importante : me contacter sans hésiter. Nous reverrons cela ensemble en séance suivante." }
       ],
     }],
   }],
@@ -9323,7 +11119,18 @@ const k_1042: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients ayant fait un travail d'approche du trauma. Travail d'intégration : faire de l'événement une part du récit sans qu'il occupe toute la vie, restaurer la continuité narrative." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification phase d'intégration appropriée\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Sanctuaire K-BASE-012\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "D Integration", detail: "Tu es dans une phase précieuse : l'intégration. L'événement traumatique a été approché. Il commence à appartenir au passé. Maintenant, le travail consiste à lui donner sa juste place dans ton récit de vie — ni effacé comme s'il n'avait pas existé, ni dominant comme s'il était toute ta vie." },
+      { label: "Recit De Vie Complet", detail: "Ta vie, c'est plus que cet événement. Avant, il y a eu ton enfance, ton adolescence, des moments lumineux, des relations qui t'ont construit, des expériences variées. Pendant et après, il y a eu ta traversée, ce que tu as appris, comment tu as résisté, ce que tu portes maintenant. Tout cela compose ton récit, pas seulement le moment de l'événement." },
+      { label: "Dans Le Sanctuaire", detail: "Dans ton sanctuaire intérieur, tu peux contempler ton récit de vie comme un long fil. Du début jusqu'à maintenant. Cet événement traumatique est un nœud sur ce fil — un nœud important, marquant. Mais il y a du fil avant lui, du fil après lui, et le fil dans son ensemble n'est pas réductible à ce nœud." },
+      { label: "Ce Que L Evenement A Pris", detail: "Reconnais d'abord ce que l'événement t'a pris. Une partie d'innocence peut-être. Une certaine confiance. Du temps, des années même. Une image de toi-même. Des relations. Cette reconnaissance fait partie de l'intégration. Tu ne minimises pas la perte." },
+      { label: "Ce Qui Demeure", detail: "Et reconnais ce qui demeure malgré. Ta capacité à aimer, à être aimé. Ton intelligence, ton humour, tes goûts, tes valeurs. Tes relations qui résistent. Ta capacité de croissance. L'événement n'a pas tout pris, même quand il en avait l'air. Une partie de toi est restée intacte, indomptable." },
+      { label: "Ce Qui T A Construit", detail: "Cette traversée t'a aussi construit, parfois. Des compétences nouvelles : capacité à reconnaître la souffrance d'autrui, finesse de perception, force tranquille acquise dans la difficulté. Pas une glorification du trauma — une reconnaissance que tu en sors avec quelque chose de plus, en plus de quelque chose de moins." },
+      { label: "Identite Au Dela", detail: "Tu n'es pas réduit à ce qui t'est arrivé. Tu es une personne avec une histoire complexe, dont fait partie cet événement. Beaucoup d'autres dimensions te composent. Cette compréhension, intégrée corporellement, te libère de l'identification à la victime de l'événement." },
+      { label: "Evenement Passe", detail: "L'événement est passé. Ne plus le revivre quotidiennement. Le savoir là, dans le passé, sans qu'il colonise le présent. C'est cela, l'intégration. L'événement a sa place — et il y reste." },
+      { label: "Sens Eventuellement", detail: "Tu n'es pas obligé de trouver un sens à ce qui s'est passé. Certains traumas sont absurdes et ne portent aucun sens. Mais si, dans la traversée, du sens a émergé — sur toi, sur ce que tu veux faire de ta vie, sur ce que tu veux transmettre — tu peux l'honorer. Pas pour glorifier ce qui a été — pour ne pas que ce soit pour rien." },
+      { label: "Continuer A Vivre", detail: "Tu peux maintenant vraiment continuer à vivre. Pas malgré l'événement — avec lui, comme partie de ton histoire. Faire des projets. Aimer. Créer. Profiter. Tu n'es pas obligé de rester en deuil indéfiniment. La vie qui continue est une victoire sur ce qui voulait t'arrêter." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, l'événement reste dans le passé, à sa place. Tu prends ta place dans ton récit complet — riche, complexe, pas réductible. Et ta vie continue, pleinement, vers ce qui t'appelle." }
       ],
     }],
   }],
@@ -9362,7 +11169,17 @@ const k_1043: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en ESPT avec flashbacks, reviviscences intrusives, cauchemars répétitifs. Outil d'auto-régulation immédiate. À enseigner dans le cadre d'un travail trauma plus large." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Apprentissage en consultation calme\n• Phase 2 — Induction K-BASE-006 rapide\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Pratique guidée plusieurs fois\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Principe", detail: "Les flashbacks et les reviviscences ramènent ton corps et ton mental dans le moment du trauma. Une partie de toi vit comme si c'était maintenant. Aujourd'hui, je vais t'apprendre un dispositif court à activer dès qu'un flashback monte, pour ramener rapidement ton système au présent." },
+      { label: "Etape 1 Signal", detail: "Étape une : reconnaître. Quand tu sens monter une intrusion — image qui s'impose, sensation corporelle de ce moment-là, sentiment que cela arrive maintenant — tu peux apprendre à te dire intérieurement : c'est un flashback, c'est passé, je suis en train de me souvenir, pas de revivre. Cette nomination est déjà un premier ancrage." },
+      { label: "Etape 2 Pieds", detail: "Étape deux : tes pieds. Sens immédiatement le sol sous tes pieds. Le poids. La pression. Le contact ferme. Ce sol existe maintenant, ici. Pas dans le passé. Tes pieds te disent : je suis dans cet endroit, dans ce moment." },
+      { label: "Etape 3 5 Sens", detail: "Étape trois : les 5 sens. Active-les un par un, rapidement. Cinq choses que tu vois autour de toi. Quatre choses que tu peux toucher. Trois sons que tu entends. Deux odeurs. Une saveur (ou ton souffle). Cette activation des sens dans le présent occupe l'attention et ramène le système." },
+      { label: "Etape 4 Date", detail: "Étape quatre : la date. Dis intérieurement la date d'aujourd'hui. Année, mois, jour. Ton âge actuel. Où tu es. Ce que tu fais. Ces données concrètes du présent contredisent factuellement le 'maintenant' du flashback. Tu n'es pas dans l'événement — tu es dans ce moment précis." },
+      { label: "Etape 5 Lieu Sur", detail: "Étape cinq : ton lieu sûr accessible. Si tu peux, prends quelques secondes pour aller dans ton lieu sûr. Pas pour fuir — pour reprendre souffle. Tu reviens ensuite à ton activité. Si tu ne peux pas faire ces secondes, ton lieu sûr est juste là, en arrière-plan, accessible." },
+      { label: "Pratique Guidée", detail: "Maintenant, on pratique. Pense à un souvenir un peu chargé — pas le pire, juste un peu chargé. Laisse-le venir un instant. Puis active la séquence : nomme (c'est passé), pieds, 5 sens, date. Voilà. Tu vois — la séquence ramène. Le corps revient au présent." },
+      { label: "Pour La Nuit", detail: "Pour les cauchemars : au réveil, applique la même séquence. Pieds au sol, 5 sens, date. Lumière allumée si besoin. Le réveil reconnu comme réveil. Le rêve identifié comme rêve. Pas un démenti permanent, mais une reprise de contact avec le maintenant." },
+      { label: "Pas Se Punir", detail: "Si tu n'arrives pas à activer la séquence à temps, ne te punis pas. Les flashbacks sont des phénomènes neurobiologiques puissants. Avec la pratique, ton réflexe se renforce. Au début, tu peux mettre du temps à activer — c'est normal. Plus tu pratiques, plus c'est rapide." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, ton système connaît cette séquence. Quand un flashback monte, ton inconscient peut l'activer. Pieds, 5 sens, date, lieu sûr. Et progressivement, les intrusions deviennent plus gérables. Pas forcément moins fréquentes au début — mais moins envahissantes, parce que tu as un outil pour y répondre." }
       ],
     }],
   }],
@@ -9401,7 +11218,19 @@ const k_1044: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour ESPT complexe (traumas répétés ou précoces). Approche par les parts dissociées (modèle parts works/IFS-compatible). UNIQUEMENT en cadre psychothérapeutique structuré, formation indispensable." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification cadre psychothérapeutique structuré\n• Phase 2 — Stabilisation préalable\n• Phase 3 — Induction K-BASE-001\n• Phase 4 — Sanctuaire K-BASE-012\n• Phase 5 — Travail spécifique (script)\n• Phase 6 — Re-stabilisation\n• Phase 7 — Clôture K-BASE-030" },
+      { label: "Principe", detail: "L'ESPT complexe se caractérise souvent par des parts intérieures qui se sont formées pendant les traumas. Des parts d'enfance restées figées dans la souffrance. Des parts protectrices qui se sont mises en place pour survivre. Aujourd'hui, nous explorons ces parts avec respect et délicatesse." },
+      { label: "Pas De Pathologisation", detail: "Ces parts ne sont pas un problème pathologique — elles sont une intelligence du système psychique. Quand quelque chose d'insupportable est arrivé, ton psychisme a fait ce qu'il pouvait pour survivre. Il a séparé. Il a créé des parts qui ont porté ce qui ne pouvait pas être intégré. Ce mécanisme t'a sauvé." },
+      { label: "Dans Sanctuaire", detail: "Dans ton sanctuaire intérieur, en présence de la part la plus large de toi — ce que certains appellent le Self, ou le Soi profond, ou l'observateur sage — tu peux sentir d'autres parts en toi." },
+      { label: "Part Blessee", detail: "Tu peux sentir, peut-être, une part en souffrance. Une part qui porte le poids de ce qui s'est passé. Cette part peut être jeune, parfois très jeune. Elle peut être en colère, terrifiée, repliée, gelée. Sans la juger, tu peux te rapprocher d'elle, à distance respectueuse." },
+      { label: "Etre Avec", detail: "Pas de précipitation. Tu n'es pas là pour la faire changer. Tu es là pour être avec elle. Lui montrer ta présence d'adulte, de Self bienveillant. Que tu vois sa souffrance. Que tu reconnais ce qu'elle a porté pour toi. Que tu n'es pas venu juger." },
+      { label: "Part Protectrice", detail: "Tu peux aussi sentir une part protectrice. Celle qui a mis en place des mécanismes pour empêcher la souffrance de revenir. Hypervigilance, contrôle, rage, retrait, addictions, dissociation. Cette part t'a protégé. Elle mérite ta reconnaissance, pas ton mépris, même si ses méthodes te coûtent aujourd'hui." },
+      { label: "Communication Interne", detail: "Tu peux dialoguer avec ces parts. Leur dire que tu vois leur intention de protection. Leur demander de quoi elles ont peur. Ce qu'elles cherchent à empêcher. Cette communication interne, simple, transforme progressivement le système. Elles n'ont plus à porter seules ce qu'elles portent." },
+      { label: "Leadership Du Self", detail: "Le Self — la part la plus large, la plus bienveillante, la plus stable de toi — peut prendre progressivement le leadership du système. Pas en chassant les autres parts — en les reconnaissant, en les écoutant, en les apaisant. Le système se réharmonise." },
+      { label: "Apaiser Pas Supprimer", detail: "L'objectif n'est pas de faire disparaître les parts — elles sont des parties intégrales de toi. L'objectif est qu'elles soient apaisées, intégrées, qu'elles puissent assumer leurs rôles dans des conditions plus saines. La part blessée peut commencer à guérir. La part protectrice peut se détendre quand le Self est aux commandes." },
+      { label: "Processus Long", detail: "Ce travail est long. Plusieurs mois, parfois années. Pas une seule séance ne suffit. Mais à chaque séance, quelque chose se modifie en toi. Le système se réorganise, doucement. La souffrance se transforme en possibilité." },
+      { label: "Re Stabilisation", detail: "Re-stabilisation obligatoire. Tu reviens dans ton lieu sûr, dans ton souffle, dans tes appuis. Tu n'es pas la part — tu es le Self qui contient toutes les parts. Tu es la personne complète qui est ici, maintenant, en sécurité." },
+      { label: "Post Hypnotique", detail: "Dans les jours qui viennent, tu peux pratiquer la communication intérieure. Reconnaître quand une part s'active. Lui parler depuis le Self. Pas la combattre — la rencontrer. Cette pratique régulière transforme dans la durée." }
       ],
     }],
   }],
@@ -9440,7 +11269,18 @@ const k_1045: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients ayant peur de leurs propres ressentis, émotions, parts intérieures (phobie d'attachement à soi). Travail délicat de réconciliation avec les dimensions de soi rejetées." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation et sécurisation\n• Phase 2 — Stabilisation maximale\n• Phase 3 — Induction K-BASE-001\n• Phase 4 — Travail spécifique (script — très progressif)\n• Phase 5 — Re-stabilisation" },
+      { label: "Reconnaissance", detail: "Tu as peur de toi-même. Pas de qui tu es au sens superficiel — peur de ton intériorité, de tes émotions, de certaines parts de toi qui te paraissent menaçantes. Cette phobie de soi est souvent une conséquence d'événements anciens où ton intériorité est devenue dangereuse à habiter." },
+      { label: "Pas De Force", detail: "Important : nous n'allons pas te forcer à descendre dans ce qui te terrifie. Cela serait contre-productif. Nous allons construire patiemment une capacité à habiter ton intériorité, à ton rythme, par approche très progressive." },
+      { label: "Lieu Sur Tres Solide", detail: "Ton lieu sûr est ton allié central dans ce travail. Plus solide qu'ailleurs encore. Quoi que nous explorions, tu peux y revenir en quelques secondes. Vérifie : tu y es bien. Sécurité ressentie corporellement. Cette base soutient tout." },
+      { label: "Compagnon De Route", detail: "Tu peux t'imaginer un compagnon de route intérieur. Une figure bienveillante, sage, protectrice. Cela peut être une représentation de toi-même plus sage, ou une figure symbolique, ou une présence générique d'aide. Ce compagnon t'accompagnera dans les approches de toi-même." },
+      { label: "Approche Par Etape", detail: "Tu peux maintenant tourner doucement ton attention vers un aspect très léger de ton intériorité. Pas le plus difficile. Une sensation corporelle simple : la respiration, le contact avec le siège, la température. Cette présence à soi est déjà un acte de réconciliation." },
+      { label: "Si Panique", detail: "Si la moindre panique monte, tu reviens immédiatement dans ton lieu sûr. Pas de honte. Pas d'échec. Juste une étape qui mérite plus de préparation. La phobie de soi est sérieuse et exige patience." },
+      { label: "Compassion Pour Soi", detail: "À mesure que tu peux habiter brièvement ton intériorité, tu peux y rencontrer de la compassion pour toi-même. Pas un jugement. Pas une exigence. Juste un peu de bienveillance pour cette part de toi qui a tant souffert qu'elle s'est rendue inhabitable. Cette part mérite douceur, pas mépris." },
+      { label: "Intermittence Qui Construit", detail: "Habiter ton intériorité, au début, peut se faire seulement par flashs. Quelques secondes. Puis revenir au lieu sûr. Puis y retourner brièvement. Cette intermittence permet à ton système de se déshabituer progressivement de la peur de soi. Pas de précipitation." },
+      { label: "Compagnon Qui Accompagne", detail: "Avec ton compagnon de route, tu n'es jamais seul dans ton intériorité. Sa présence interne te permet ce que la solitude rendait impossible. Tu peux le consulter, le sentir présent, lui demander de t'accompagner dans ce que tu explores." },
+      { label: "Processus Qui Se Construit", detail: "Cette capacité d'habiter soi-même se construit dans le temps. Mois, parfois années pour les phobies les plus sévères. Mais à chaque exercice, quelque chose se déplace. La peur de soi cède peu à peu à une présence à soi possible." },
+      { label: "Post Hypnotique", detail: "Plusieurs fois par jour, tu peux pratiquer brièvement la présence à toi. Quelques secondes. Avec ton compagnon. Avec ton lieu sûr accessible. Cette pratique progressive transforme dans la durée. Et progressivement, ton intériorité devient un endroit plus habitable." }
       ],
     }],
   }],
@@ -9479,7 +11319,18 @@ const k_1046: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en dépression majeure avec suivi médical et antidépresseur. L'hypnose comme complément au traitement, pas substitut. Travail de soutien à la traversée, restauration progressive." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification suivi médical\n• Phase 2 — Évaluation phase de la dépression\n• Phase 3 — Induction K-BASE-003 douce\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Cadre", detail: "Tu vis une dépression majeure. Cette maladie est traitée — tu prends ton traitement, tu vois ton médecin et/ou psychiatre. L'hypnose vient en complément, pas en remplacement. Cette précision posée, nous travaillons ce qui peut être travaillé sur le plan psychique." },
+      { label: "Pas Un Choix", detail: "La dépression n'est pas un choix. Tu n'as pas décidé d'aller mal. Beaucoup de personnes autour de toi peuvent ne pas comprendre — 'fais un effort', 'sors un peu'. Ces injonctions trahissent une méconnaissance de la maladie. La dépression touche le neurobiologique en plus du psychologique. Sortir n'est pas une question de volonté." },
+      { label: "Traitement Qui Aide", detail: "Ton traitement antidépresseur fait son travail. Il met du temps — souvent plusieurs semaines avant les premiers effets, plusieurs mois pour effet plein. Cette lenteur est frustrante mais normale. Ne pas l'arrêter parce que les effets tardent. Continuer le suivi." },
+      { label: "Apathie Qui N Est Pas Toi", detail: "L'apathie, le vide, l'absence d'intérêt — ces dimensions de la dépression peuvent te faire croire qu'elles sont devenues toi. Ce n'est pas vrai. Elles sont des manifestations de la maladie. La personne que tu es vraiment existe sous la dépression, attendant que la maladie s'estompe pour reparaître." },
+      { label: "Petits Actes", detail: "Pendant la dépression, tu n'as pas l'énergie pour de grandes choses. Mais tu peux faire des petits actes. Te lever de ton lit. Prendre une douche. Ouvrir un volet. Manger un peu. Marcher cinq minutes. Ces petits actes, sous-estimés, sont des victoires quand la maladie pèse. Ils ne te guérissent pas — ils maintiennent un lien à la vie en attendant que la maladie cède." },
+      { label: "Corps Qui Existe", detail: "Ton corps continue à exister même quand la psyché est éteinte. Le sentir, par petites doses, peut être un appui. Sentir ton souffle. Sentir tes mains. Sentir une douche chaude. Cette présence corporelle minimale ne te demande pas d'effort psychique. Elle est un point d'ancrage." },
+      { label: "Lien Aux Proches", detail: "Maintenir un fil minimal avec quelques proches est protecteur. Pas obligation de longues conversations. Un message court. Une présence brève. Ces fils maintiennent le lien quand l'isolement total est dangereux." },
+      { label: "Lumiere Qui Revient", detail: "La dépression a une durée. Elle ne dure pas toujours. Avec le traitement, le suivi, le temps, elle s'estompe progressivement. Beaucoup de personnes ayant traversé une dépression majeure témoignent ensuite : 'je n'imaginais pas pouvoir aller aussi mieux'. La lumière revient. Pas tout de suite. Pas en ligne droite. Mais elle revient." },
+      { label: "Pas La Seule Dimension", detail: "Cette période est terrible mais elle n'est pas toute ta vie. Tu as eu d'autres périodes, tu auras d'autres périodes. La dépression n'est pas ta définition — c'est un épisode dans une histoire bien plus large." },
+      { label: "Si Idees Noires", detail: "Si à un moment tu as des idées noires, des pensées suicidaires, parle. Ton médecin, ton psychiatre, le 3114 (numéro national de prévention du suicide). Ces idées sont des symptômes de la maladie, pas des solutions. Elles passent quand la maladie cède." },
+      { label: "Post Hypnotique", detail: "Dans les jours qui viennent, tu peux maintenir tes petits actes. Les liens minimaux. Ton suivi médical. Et faire confiance — pas dans une amélioration immédiate, mais dans le processus qui travaille en toi. Cette traversée a une fin, même si tu ne la vois pas encore." }
       ],
     }],
   }],
@@ -9518,7 +11369,17 @@ const k_1047: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour Trouble Anxieux Généralisé sévère, en complément du suivi médical et possible traitement. Approche d'apaisement profond, restauration de la sécurité corporelle de base." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification suivi médical\n• Phase 2 — Induction K-BASE-003 douce\n• Phase 3 — Lieu sûr K-BASE-011\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec un trouble anxieux généralisé sévère. Pas une simple anxiété passagère — une anxiété qui occupe ta vie depuis longtemps, qui te ronge, qui altère ta santé physique et ton fonctionnement quotidien. Aujourd'hui, nous travaillons à un apaisement plus profond, en complément de ton traitement." },
+      { label: "Systeme D Alarme Dysfonctionnel", detail: "Dans le TAG, ton système d'alarme corporel est déréglé. Il s'active sur des choses qui ne le justifient pas. Il reste activé même quand le danger n'existe pas. Ce dérèglement neurobiologique ne dépend pas de ta volonté — c'est ton système qui dysfonctionne. Cette compréhension enlève la culpabilité." },
+      { label: "Corps Qui A Oublie Securite", detail: "Ton corps a, à force d'être en alerte, oublié ce qu'est la sécurité corporelle. Aujourd'hui, nous travaillons à le lui rappeler. Pas par injonction — par expérience. Lui donner à vivre quelques minutes de sécurité corporelle vraie, et que cette expérience laisse une trace." },
+      { label: "Souffle Qui Parle", detail: "Ton souffle est l'outil le plus direct pour parler à ton système nerveux. Une expiration plus longue que l'inspiration active le parasympathique — la branche qui calme. Pratique : 4 secondes d'inspiration, 6 à 8 secondes d'expiration. Plusieurs cycles. Ton système écoute ce signal." },
+      { label: "Appui Qui Porte", detail: "Sens-toi posé. Tes appuis sur le siège. Le sol qui te porte. Cette base qui ne lâche pas. Ton corps est tenu par ce qui le supporte. Tu n'as pas à te tenir activement — ce qui te porte le fait. Cette dimension de soutien externe, ressentie corporellement, apaise." },
+      { label: "Present Qui Est La", detail: "Dans ce moment précis, ce qui est, c'est ce qui est. Le siège. Le souffle. La pièce. Ce que tes 5 sens captent maintenant. Pas ce qui pourrait arriver. Pas ce qui pourrait mal tourner. Juste ce qui est, là, ici, en cet instant. Cet ancrage dans le présent affaiblit l'anticipation." },
+      { label: "Anticipation Désinvestie", detail: "L'anxiété se nourrit d'anticipation. Et si... Et si... Et si... Cette projection dans le futur — où le pire est anticipé — alimente le système d'alarme. Quand tu reviens dans le présent, simplement, l'anticipation perd son carburant." },
+      { label: "Pas De Promesse De Disparition", detail: "Le TAG ne disparaîtra peut-être pas complètement. C'est une réalité. Mais il peut s'apaiser, devenir gérable, te laisser plus de vie habitable. Pour beaucoup de patients, le traitement plus le travail psychique aboutit à une vie où l'anxiété est présente mais ne domine plus tout." },
+      { label: "Outils Quotidiens", detail: "Tu peux pratiquer plusieurs fois par jour ce dispositif d'apaisement. Quelques minutes. Pas une fois par jour pendant longtemps — plusieurs fois courtes. Ces micro-doses régulières restaurent progressivement ce que l'anxiété a abîmé." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu disposes d'un outil mobilisable quotidiennement. Ton corps réapprendre la sécurité par petites doses. Ton système se calme progressivement. Et tu retrouves, jour après jour, plus d'espace pour vivre malgré la maladie." }
       ],
     }],
   }],
@@ -9557,7 +11418,17 @@ const k_1048: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour TOC sévère en complément du suivi spécialisé (TCC, traitement). Pas substitut. Travail de soutien, désinvestissement attentionnel des obsessions." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification suivi TCC\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Cadre", detail: "Tu vis avec un TOC sévère. Cette maladie est traitée par TCC (probablement EPR — exposition avec prévention de la réponse), parfois traitement médicamenteux. L'hypnose est complément, pas remplacement. Cette précision posée, nous travaillons les ressources mentales qui soutiennent ton parcours." },
+      { label: "Distinction Pensee Realite", detail: "Une pensée n'est pas une action. Une pensée n'est pas une vérité. Une pensée n'est pas un signal absolu d'agir. Cette distinction simple est centrale dans le TOC. Beaucoup de TOC reposent sur la fusion pensée-réalité — penser quelque chose semble équivalent à le faire ou à ce que ça arrive. Cette fusion est précisément ce que le travail vise à dénouer." },
+      { label: "Pensees Qui Passent", detail: "Tes pensées intrusives sont comme des nuages qui passent. Tu ne les contrôles pas. Tu n'as pas à les chasser — paradoxalement, plus tu cherches à les chasser, plus elles reviennent. Tu peux les laisser être, sans réagir. Elles passent." },
+      { label: "Doute Qui Revient", detail: "Le TOC est souvent appelé le 'doute pathologique'. Le doute est son carburant. Et si... Et si... Et si je n'avais pas bien fermé... Et si j'avais touché... Ce doute, alimenté par les vérifications et les rituels, ne se résout jamais — chaque réponse génère un nouveau doute. La sortie passe par cesser de répondre, pas par mieux répondre." },
+      { label: "Pas Repondre Au Rituel", detail: "Quand l'obsession monte et que le rituel demande à être fait, voici ce qu'on appelle l'EPR : l'exposition (rester avec l'obsession sans la fuir) avec prévention de la réponse (ne pas faire le rituel). C'est dur. Très dur au début. Mais c'est ce qui désapprend au système le lien obsession-rituel." },
+      { label: "Outils Pour Traverser", detail: "Quand tu choisis de ne pas faire un rituel, l'angoisse monte fort. Tu peux la traverser avec tes outils : respiration, lieu sûr, observer la vague qui monte sans paniquer, savoir qu'elle redescendra. Cette traversée, pratiquée dans ton cadre TCC, fait progressivement reculer le TOC." },
+      { label: "Pas La Certitude", detail: "Le TOC cherche la certitude absolue. Mais la certitude absolue n'existe pas dans la vie. Tu ne peux pas être certain à 100% que la porte est bien fermée, que tu n'as rien renversé, que telle chose terrible n'arrivera pas. Apprendre à vivre avec une part d'incertitude est ce que tous les humains font — c'est ce que le TOC empêche, et que tu réapprends." },
+      { label: "Systeme Qui Se Reapaise", detail: "À mesure que tu pratiques l'EPR, ton système nerveux apprend que les obsessions ne sont pas suivies de catastrophes. Le lien s'affaiblit. Les rituels deviennent moins nécessaires. Le système se réapaise. Ce processus est progressif et demande pratique régulière." },
+      { label: "Si Difficulté", detail: "Si à un moment tu rechutes, ce n'est pas la fin. Tu reprends, tu continues. Le TOC se travaille dans la durée. Les fluctuations sont normales. Ce qui compte, c'est la trajectoire générale, pas chaque jour pris isolément." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux soutenir ton travail TCC. Reconnaître les pensées comme des pensées. Traverser les vagues d'angoisse quand tu ne fais pas le rituel. Faire confiance au processus. Et continuer ton parcours, jour après jour, vers un système apaisé." }
       ],
     }],
   }],
@@ -9596,7 +11467,17 @@ const k_1049: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour phobie sociale sévère en complément TCC (avec exposition). Soutien à la traversée des expositions, restauration de la sécurité dans le regard de l'autre." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification suivi TCC\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Cadre", detail: "Tu vis avec une phobie sociale sévère. Cette maladie est traitée par TCC, qui inclut probablement des expositions progressives. L'hypnose est complément. Aujourd'hui, nous travaillons les ressources mentales qui soutiennent ton parcours." },
+      { label: "Systeme De Menace", detail: "Dans la phobie sociale, ton système d'alarme s'active dans des situations sociales — comme si elles étaient des dangers physiques. Cette activation est neurobiologique, pas un manque de courage. Ton corps ne distingue pas le danger physique du jugement potentiel." },
+      { label: "Regard Imagine", detail: "Une dimension centrale : ce que tu imagines que les autres pensent. Le plus souvent, ce que tu imagines est plus dur, plus jugeant, plus défavorable que la réalité. Les autres sont moins occupés de toi que tu ne le crois. Ils ont leurs propres préoccupations. Cette compréhension, intégrée, allège." },
+      { label: "Securite Interieure Independante", detail: "Ta sécurité ne peut pas dépendre du jugement des autres. Si elle en dépend, tu seras toujours en insécurité, parce que tu ne peux pas contrôler ce que les autres pensent. Ta sécurité doit s'enraciner en toi, dans ton lieu sûr intérieur, dans ta connaissance de qui tu es. Cette indépendance se construit." },
+      { label: "Dans Le Lieu Sur", detail: "Dans ton lieu sûr, tu peux te sentir libéré du regard. Aucun jugement. Juste toi, à qui tu es, sans avoir à plaire ni performer. Cette qualité, ressentie pleinement, peut être emportée vers l'extérieur. Pas comme un mur — comme une assise intérieure." },
+      { label: "Exposition Avec Outil", detail: "Quand tu vas en exposition, dans le cadre de ta TCC, tu peux activer un dispositif. Ton lieu sûr présent en arrière-plan. Trois respirations longues à l'arrivée. Te rappeler : ma sécurité n'est pas dépendante de ce qu'ils pensent. Et y aller, traverser, comme ta TCC te le demande." },
+      { label: "Sensations Qui Passent", detail: "Pendant l'exposition, des sensations vont monter. Cœur qui bat, mains qui tremblent, rougeur, voix qui s'altère. Tu peux apprendre à les laisser être sans paniquer. Elles ne sont pas dangereuses. Elles ne te font pas de mal. Elles passent. Et tu restes intact." },
+      { label: "Apres Exposition", detail: "Après chaque exposition, marquage du succès. Tu es allé. Tu as traversé. Tu n'es pas mort. Tu n'as pas été humilié au point de ne plus pouvoir vivre. Cette accumulation de preuves est ce qui fait reculer la phobie. Chaque exposition est une victoire, même si tu l'as vécue mal." },
+      { label: "Processus Long", detail: "La phobie sociale sévère ne disparaît pas en quelques séances. Plusieurs mois, parfois années pour un changement profond. Mais à mesure que tu pratiques, ton système se déshabitue progressivement. La vie sociale redevient possible, puis acceptable, puis parfois plaisante." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux soutenir ton travail TCC par ton dispositif intérieur. Activer ton lieu sûr en amont. Traverser tes expositions avec tes outils. Marquer chaque succès. Et continuer le chemin, à ton rythme, vers une vie sociale habitable." }
       ],
     }],
   }],
@@ -9635,7 +11516,17 @@ const k_1050: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients bipolaires en phase de stabilité, en complément du suivi psychiatrique. Travail de prévention rechute, gestion du stress, hygiène de vie. JAMAIS en phase aiguë." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification phase de stabilité, suivi psychiatrique\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Cadre", detail: "Tu vis avec un trouble bipolaire. Tu es en phase de stabilité actuellement. Tu as un suivi psychiatrique régulier, un traitement (probablement régulateur de l'humeur). L'hypnose vient en complément, pour soutenir ta stabilité, pas pour traiter la maladie. Cette précision est essentielle." },
+      { label: "Pas De Aigu", detail: "Si tu sentais monter une phase maniaque, hypomaniaque ou dépressive aiguë, ce n'est pas le moment de l'hypnose seule. Il faut contacter ton psychiatre rapidement. L'hypnose est compagne de la stabilité, pas remède aux phases aiguës." },
+      { label: "Signaux Precoces", detail: "L'une des compétences cruciales est de reconnaître les signaux précurseurs. Pour la phase haute : sommeil qui diminue sans fatigue, idées qui s'accélèrent, projets qui prolifèrent, dépenses excessives, sentiment d'être au-dessus, irritabilité. Pour la phase basse : sommeil qui se dérègle vers l'excès, fatigue inhabituelle, perte d'intérêt, pensées sombres. Connaître tes signaux personnels est protecteur." },
+      { label: "Sommeil Pilier", detail: "Le sommeil est l'un des piliers majeurs de la stabilité. Couchers et levers réguliers. 7-8 heures. Pas de bouleversements (décalage horaire, nuits blanches). Cette régularité du sommeil est presque aussi importante que ton traitement. Toute perturbation du sommeil mérite vigilance." },
+      { label: "Rythme Quotidien", detail: "Au-delà du sommeil, ton rythme de vie en général soutient la stabilité. Activité physique régulière modérée. Repas à des heures stables. Vie sociale équilibrée. Ces routines protègent ton système qui est plus sensible que la moyenne aux variations." },
+      { label: "Stress Qui Dereglepar", detail: "Le stress est un déclencheur majeur d'épisodes. Apprendre à le réguler est protecteur. Ce que tu ressens comme stress (changements importants, conflits, surmenage, événements forts) mérite d'être pris au sérieux. Pas par évitement de la vie — par ajustement intelligent." },
+      { label: "Alcool Substances", detail: "Alcool et substances sont à risque. Ils déstabilisent ton système, peuvent déclencher des phases. Pour beaucoup de patients bipolaires, l'abstinence ou la grande modération sont protectrices. Cette limite n'est pas une privation — c'est une intelligence par rapport à ta biologie." },
+      { label: "Observance", detail: "Ton traitement est ton allié. Ne pas l'arrêter en phase de bonne humeur (la tentation classique). Ne pas le diminuer sans avis médical. Cette observance, dans la durée, est la base de la stabilité." },
+      { label: "Entourage Informé", detail: "Avoir des proches informés de ta maladie est précieux. Ils peuvent te signaler des signaux que tu ne perçois pas (notamment en phase de montée). Cette aide externe complète ta vigilance interne." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux maintenir ta vigilance bienveillante. Reconnaître tes signaux. Préserver ton sommeil et ton rythme. Réguler le stress. Suivre ton traitement. Ces piliers, pratiqués au quotidien, soutiennent ta stabilité dans la durée." }
       ],
     }],
   }],
@@ -9674,7 +11565,18 @@ const k_1051: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour personnalités borderline en suivi psychothérapeutique structuré (DBT, MBT, TFP). Hypnose en complément pour régulation émotionnelle, stabilisation, gestion des crises non aiguës." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification cadre psychothérapeutique structuré\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Lieu sûr K-BASE-011\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Re-stabilisation" },
+      { label: "Cadre", detail: "Tu vis avec un fonctionnement borderline. Tu es en suivi psychothérapeutique structuré (DBT, MBT, TFP). L'hypnose vient en complément, pour soutenir entre les séances, renforcer certaines compétences. Pas en substitution. Cette clarté posée, nous travaillons." },
+      { label: "Intensite Emotionnelle", detail: "Tes émotions sont intenses. Plus que la moyenne. Ce qui pour les autres est un agacement, pour toi peut être une rage. Ce qui pour les autres est une tristesse, pour toi peut être un effondrement. Cette intensité n'est pas un défaut — c'est une caractéristique de ton fonctionnement. Le travail consiste à apprendre à la traverser sans s'y perdre." },
+      { label: "Vague Qui Passe", detail: "Une émotion forte est comme une vague. Elle monte, atteint un sommet, et redescend. Toujours. Même les plus intenses redescendent. Pendant la vague, tu peux croire qu'elle ne passera jamais — c'est faux. Toutes les vagues passent. Cette compréhension, intégrée corporellement, est protectrice." },
+      { label: "Pas Agir Dans La Vague", detail: "Une règle d'or : ne pas agir dans la vague. Pas de décisions importantes pendant une émotion intense. Pas de messages envoyés. Pas de ruptures décidées. Pas de gestes vers soi. La vague va passer. Ce que tu décideras après la vague sera plus juste que ce que tu ferais pendant." },
+      { label: "Outils De Traversee", detail: "Pendant la vague, tu disposes d'outils. La respiration glacée (eau froide sur le visage, qui active le réflexe plongeur et calme le système). L'activité physique intense brève. La distraction (5 sens). Le contact avec ton thérapeute si possible. Le lieu sûr. Pas un seul outil — plusieurs, selon la vague et le moment." },
+      { label: "Soi Qui Demeure", detail: "Sous l'émotion intense, il y a un toi qui demeure. Pas l'émotion — toi qui ressens l'émotion. Cette distinction est cruciale. L'émotion passe — tu restes. Tu n'es pas l'émotion qui te traverse, même quand elle te submerge. Cette compréhension, pratiquée régulièrement, devient un point d'ancrage." },
+      { label: "Relations Intenses", detail: "Dans tes relations, l'intensité s'exprime aussi. Adoration et désillusion, idéalisation et dévaluation. Apprendre à reconnaître ces oscillations, à attendre avant d'agir, à donner du temps avant de couper, est ce que tes thérapies travaillent. L'hypnose soutient ce travail." },
+      { label: "Vide Qui Remplit", detail: "Le vide intérieur que tu peux ressentir parfois est l'une des dimensions les plus difficiles. Plutôt que de le combler par n'importe quoi (impulsions, comportements à risque), tu peux apprendre à l'habiter brièvement. Pas indéfiniment — assez pour que la vague d'urgence passe. Et puis, choisir une réponse plus saine." },
+      { label: "Pratique Quotidienne", detail: "La régulation se pratique tous les jours, pas seulement en crise. Plusieurs micro-pauses dans la journée. Ton lieu sûr brièvement. Quelques respirations conscientes. Cette pratique régulière construit progressivement une capacité de régulation." },
+      { label: "Re Stabilisation", detail: "Re-stabilisation. Tu reviens dans ton lieu sûr. Dans ton souffle. Dans tes appuis. Tu sors de cette séance avec ton dispositif activable. Et avec la certitude — pas dans la tête seulement, mais ressentie corporellement — que les vagues passent et que tu demeures." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux pratiquer ce dispositif quotidiennement. Pas seulement en crise — en prévention. Cette pratique régulière, combinée avec ton suivi structuré, construit dans la durée. Et progressivement, ta capacité de régulation s'accroît, ta vie devient plus habitable." }
       ],
     }],
   }],
@@ -9713,7 +11615,16 @@ const k_1052: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients atteints de TDI en suivi spécialisé. Approche TRÈS prudente, présence sécurisante, pas de tentative d'unification ou de hiérarchisation des parts. Cadre spécialisé absolument indispensable." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification cadre spécialisé TDI\n• Phase 2 — Induction très douce\n• Phase 3 — Lieu sûr accessible à toutes les parts\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Re-stabilisation" },
+      { label: "Principe Tdi", detail: "Je m'adresse à l'ensemble du système. Je ne cherche pas à privilégier une part, à en hiérarchiser, à en fusionner certaines. Mon rôle est de proposer une présence sécurisante à l'ensemble du système, en complément de votre travail thérapeutique principal." },
+      { label: "Systeme Legitime", detail: "Le système qui s'est formé en vous a sa raison d'être. Il vous a permis de survivre. Chacune des parts présentes a sa fonction, sa place, sa légitimité. Aucune n'est à éliminer ou à minimiser. Cette reconnaissance est centrale." },
+      { label: "Lieu Sur Partage", detail: "Un lieu sûr, accessible à toutes les parts si elles le souhaitent. Pas un lieu imposé — un lieu offert. Chaque part qui veut peut y avoir une place, à sa manière. Ce lieu n'efface pas les différences entre les parts — il offre un espace de respiration commun." },
+      { label: "Communication Interne Respectueuse", detail: "Si certaines parts ne se parlent pas, ne se reconnaissent pas, c'est ainsi. Avec le temps, dans votre travail thérapeutique principal, des communications peuvent se construire — ou non. Ce n'est pas l'objet de cette séance." },
+      { label: "Chaque Part Protege", detail: "Chaque part qui a porté quelque chose lourd peut savoir qu'elle est reconnue. Pas demandée à se défaire de son rôle. Pas pressée de changer. Reconnue dans son existence, dans sa fonction, dans sa contribution à la survie." },
+      { label: "Partsen Difficulte", detail: "Si certaines parts sont en grande difficulté — terrifiées, en colère, gelées — elles peuvent savoir qu'il existe en système des ressources. Pas pour les supprimer. Pour les soutenir dans ce qu'elles portent." },
+      { label: "Pas De Changement Force", detail: "Aucune transformation forcée. Aucune fusion suggérée. Aucune hiérarchie imposée. Le système évoluera selon son propre rythme, dans le cadre de votre travail thérapeutique principal. Mon rôle est plus modeste — offrir présence et soutien." },
+      { label: "Corps Partage", detail: "Le corps que vous partagez peut être un point commun. Le souffle qui passe. Les appuis qui portent. Cette base corporelle, neutre, peut être un terrain où toutes les parts peuvent retrouver une certaine présence, même brièvement." },
+      { label: "Post Hypnotique", detail: "Cette séance s'achève. Le système poursuit son travail dans ses cadres habituels. Ce qui a été vécu ici reste à disposition pour qui en aura usage. Et chaque part, dans sa place, est reconnue." }
       ],
     }],
   }],
@@ -9752,7 +11663,18 @@ const k_1053: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients avec idéations suicidaires chroniques HORS PHASE DE CRISE, en suivi psychiatrique. Travail de soutien, restauration du lien à la vie, identification des protecteurs. JAMAIS en crise." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation rigoureuse phase (PAS de crise)\n• Phase 2 — Vérification suivi psychiatrique\n• Phase 3 — Induction K-BASE-001\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Plan de sécurité\n• Phase 6 — Clôture K-BASE-030" },
+      { label: "Cadre", detail: "Tu vis avec des idéations suicidaires. Pas en phase de crise actuellement, mais ces pensées te visitent régulièrement. Tu es en suivi psychiatrique. L'hypnose vient en complément, pour soutenir le lien à la vie. Cette précision est essentielle — en cas de crise, ce serait l'urgence psychiatrique, pas l'hypnose." },
+      { label: "Pas De Jugement", detail: "Aujourd'hui, dans cet espace, pas de jugement sur tes pensées. Pas de minimisation non plus. Tes idéations sont une réalité de ta souffrance. Elles méritent d'être prises au sérieux, sans honte." },
+      { label: "Pensees Pas Solutions", detail: "Une distinction importante : ces pensées sont des symptômes de ta souffrance, pas des solutions. Quand on souffre énormément, le cerveau cherche des sorties, et ces idées surgissent. Mais elles ne sont pas la sortie réelle — elles sont l'expression de la souffrance qui cherche une fin." },
+      { label: "Souffrance Traverse", detail: "Ce qui te fait souffrir au point de vouloir disparaître mérite attention. Pas pour que tu disparaisses — pour que la souffrance soit traitée. Beaucoup de personnes qui ont eu des idéations suicidaires sévères, traitées, témoignent ensuite : 'je suis content de ne pas être passé à l'acte, ma vie est devenue habitable'." },
+      { label: "Les Protecteurs", detail: "Identifie ce qui te garde en vie aujourd'hui. Pas seulement ce qui te fait souffrir. Ce qui te retient. Une personne qui compte sur toi. Un projet qui t'importe. Une responsabilité. Une croyance. Un animal. Un lien encore fragile mais réel. Ces protecteurs sont précieux." },
+      { label: "Dans Le Lieu Sur", detail: "Ton lieu sûr est un endroit où la souffrance, sans disparaître, peut prendre une autre forme. Un endroit où tu peux te poser, respirer, te rappeler que tu existes au-delà de ce qui pèse. Plusieurs minutes par jour dans ce lieu, c'est précieux." },
+      { label: "Plan De Securite", detail: "Construisons maintenant un plan de sécurité. Si tu sens que tu basculerais vers une crise : étape 1 — me contacter. Étape 2 — appeler ton psychiatre. Étape 3 — 3114 (numéro national de prévention du suicide). Étape 4 — urgences psychiatriques. Étape 5 — quelqu'un de confiance. Ce plan, écrit, accessible, est ton filet." },
+      { label: "Distance Avec Moyens", detail: "Si tu as accès à des moyens potentiels, prends de la distance avec eux. Confier les médicaments à un proche. Pas d'arme à portée. Pas de stock dangereux. Cette distance physique est une mesure de sécurité reconnue. Elle ne dit pas que tu vas passer à l'acte — elle protège dans les moments de plus grande vulnérabilité." },
+      { label: "Traitement De La Souffrance", detail: "L'objectif central est de traiter ta souffrance, pas de te forcer à vivre malgré elle. Cette souffrance se traite. Avec ton psychiatre, ton thérapeute, peut-être un traitement adapté. La douleur que tu vis n'est pas une fatalité." },
+      { label: "Lien Qui Demeure", detail: "Tant que tu es là, le lien à la vie demeure, même fragile. Ce fil mérite d'être préservé. Pas en force — en soin. Te ménager. Demander aide. Tenir sans avoir à tout supporter seul." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux activer ton plan de sécurité si nécessaire. Ton lieu sûr est disponible. Tes protecteurs identifiés. Et tu sais : ce que tu vis se traite. La souffrance n'est pas pour toujours, même quand elle pèse aujourd'hui." }
       ],
     }],
   }],
@@ -9791,7 +11713,17 @@ const k_1054: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients schizophrènes en rémission stabilisée, en suivi psychiatrique. Hypnose comme soutien à la qualité de vie, gestion du stress, hygiène. JAMAIS en phase aiguë, JAMAIS approfondie." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification rigoureuse phase de rémission, suivi psychiatrique\n• Phase 2 — Induction TRÈS LÉGÈRE (jamais profonde)\n• Phase 3 — Travail spécifique (script — ancrage réalité)\n• Phase 4 — Retour très clair et net K-BASE-026" },
+      { label: "Cadre Strict", detail: "Tu es en suivi psychiatrique pour ta maladie. Tu es en phase de rémission. Tu prends ton traitement. L'hypnose vient comme un soutien, pas comme un traitement de ta maladie. Et nous restons dans une approche très ancrée — pas d'hypnose profonde, pas d'exploration intérieure approfondie. Le travail est plus modeste : soutenir ta qualité de vie au quotidien." },
+      { label: "Realite Ancree", detail: "Aujourd'hui, ce qui compte est de te sentir ancré dans le réel. Cette pièce. Ce moment. Ton corps assis. Cette présence simple et stable. Pas de voyages mentaux complexes. Pas d'imagination débordante. Une présence ancrée, calme." },
+      { label: "Corps Qui Calme", detail: "Ton souffle. Quelques respirations longues, conscientes. Ton corps qui s'installe dans le siège. Tes appuis qui te portent. Cette base corporelle, simple, est un soutien. Elle calme le système sans demander d'effort mental." },
+      { label: "Stress Qui Dereglepar", detail: "Le stress est l'un des facteurs qui peut déstabiliser. Apprendre à le réguler quotidiennement protège ta stabilité. Pas seulement quand la pression est forte — au quotidien. Quelques minutes de présence calme par jour, plusieurs fois." },
+      { label: "Signaux A Partager Avec Psychiatre", detail: "Si tu ressens des changements — sommeil qui se dérègle, voix qui reviennent, idées étranges, anxiété qui monte — partage avec ton psychiatre rapidement. Ne pas attendre. Cette communication précoce permet d'ajuster avant que les choses se compliquent." },
+      { label: "Hygiene De Vie", detail: "Ton hygiène de vie soutient ta stabilité. Sommeil régulier. Activité physique modérée. Pas d'alcool, pas de cannabis (déstabilisants pour ta condition). Liens sociaux maintenus. Routines protectrices. Ces piliers, simples mais essentiels, soutiennent ce que ton traitement fait." },
+      { label: "Observance Traitement", detail: "Ton traitement est ton allié. Le prendre régulièrement, comme prescrit. Ne pas l'arrêter parce que tu vas bien — c'est précisément parce que tu le prends que tu vas bien. Cette observance, dans la durée, protège." },
+      { label: "Proches Informes", detail: "Avoir un ou deux proches informés et bienveillants est précieux. Ils peuvent te signaler des changements que tu ne perçois pas. Ils peuvent t'aider en cas de difficulté. Ce filet humain complète ton suivi médical." },
+      { label: "Pas De Promesse De Guerison", detail: "L'hypnose ne guérit pas la schizophrénie. Personne ne le prétend. Ce que nous faisons est plus modeste — soutenir ta qualité de vie autour de la maladie. Et c'est précieux dans cette modestie même." },
+      { label: "Post Hypnotique", detail: "Tu peux pratiquer ces quelques minutes de présence ancrée chaque jour. Maintenir ton hygiène. Communiquer avec ton psychiatre. Et vivre la vie qui est la tienne, dans ses possibles, dans son cadre, avec dignité." }
       ],
     }],
   }],
@@ -9830,7 +11762,17 @@ const k_1055: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients confrontés récemment à un diagnostic de cancer (jours à semaines après l'annonce). Travail d'accompagnement du choc, mobilisation des ressources pour la suite, sans précipiter aucune étape." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Écoute prolongée du vécu\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Induction K-BASE-003 douce\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu as reçu un diagnostic qui a tout bouleversé. Cancer. Ce mot, dans ton corps, dans ta vie, change tout. Tu vis depuis quelque chose entre la sidération, la peur, la révolte, l'incrédulité, la fatigue émotionnelle. Cette tempête est normale après un tel choc." },
+      { label: "Legitimation Du Choc", detail: "Aucune réaction n'est anormale. Pleurer beaucoup, ou pas du tout. Vouloir agir tout de suite, ou être paralysé. Vouloir parler à tout le monde, ou ne rien dire. Tout cela fait partie du paysage légitime de la traversée d'un tel diagnostic. Tu n'as pas à juger ta réaction." },
+      { label: "Pas De Precipitation", detail: "Tu n'es pas obligé de tout comprendre, tout planifier, tout décider en quelques jours. Le système médical a son rythme — qui peut paraître lent, ou trop rapide. Tu as ton rythme aussi. Pour les décisions importantes, tu peux prendre le temps nécessaire (sauf urgence vraie), et tu peux toujours demander une seconde opinion." },
+      { label: "Present Qui Reste", detail: "Aujourd'hui, en cet instant, tu es ici. Ton corps respire. Ton cœur bat. Tu es vivant. Le diagnostic n'enlève pas ce présent. Cette présence à l'instant, simple, peut être un point d'ancrage quand tout semble basculer." },
+      { label: "Lieu Sur Qui Protege", detail: "Ton lieu sûr est particulièrement précieux dans cette période. Pas pour fuir ce qui se passe — pour avoir un endroit où reprendre souffle. Quelques minutes par jour, un endroit en toi qui n'est pas atteint par la maladie. Un endroit où tu es entier." },
+      { label: "Ressources A Identifier", detail: "Tu disposes de ressources — extérieures et intérieures. Extérieures : ton entourage proche, certains soignants, possibles associations de patients. Intérieures : ce qui en toi a tenu dans d'autres épreuves, tes valeurs profondes, tes appuis. Identifier ces ressources est précieux pour la suite." },
+      { label: "Pas Seul", detail: "Tu n'es pas seul, même quand l'épreuve te le fait sentir. Beaucoup de personnes ont traversé ce que tu commences à traverser. Beaucoup d'aides existent. Tu n'as pas à porter cela seul. Demander aide n'est pas faillir — c'est intelligence." },
+      { label: "Pas D Obligation Combat", detail: "Tu vas peut-être entendre l'expression 'mener un combat'. Tu n'es pas obligé d'être un combattant si ce vocabulaire ne te convient pas. Tu peux traverser comme tu le sens, à ta manière. Certains se battent énergiquement, d'autres accueillent, d'autres encore suivent simplement le traitement. Toutes ces postures sont légitimes." },
+      { label: "Jour Apres Jour", detail: "Pour la suite, tu peux fonctionner jour après jour. Ne pas vivre par anticipation, mais traverser ce qui est à traverser dans la journée. Cette posture, simple, soulage. Le futur arrivera à son rythme." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, tu peux revenir à ton lieu sûr. Te connecter au présent qui demeure. Mobiliser tes ressources. Et avancer pas à pas dans cette traversée qui commence. Tu n'es pas obligé de tout comprendre tout de suite — tu es invité à habiter ce qui est, jour après jour." }
       ],
     }],
   }],
@@ -9869,7 +11811,17 @@ const k_1056: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour préparation à un acte médical lourd : chirurgie d'exérèse oncologique, biopsie complexe, ponction médullaire, mise en place de chambre implantable. Travail spécifique d'apaisement, de visualisation positive de la guérison post-opératoire." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Présentation médicale de l'acte\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Visualisation récupération\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vas subir un acte médical lourd. Cette intervention est nécessaire, et elle s'inscrit dans le cadre de tes soins. Aujourd'hui, nous préparons ton corps et ton mental à recevoir cet acte dans les meilleures conditions, et à récupérer ensuite avec efficacité." },
+      { label: "Confiance Equipe", detail: "Tu seras pris en charge par une équipe qualifiée. Chirurgien, anesthésiste, infirmiers — chacun a son rôle, son expertise. Pendant l'intervention, tu seras endormi (si anesthésie générale) ou anesthésié localement. L'équipe veillera sur toi à chaque instant." },
+      { label: "Avant L Acte", detail: "Dans les heures précédant l'acte, tu peux activer ton dispositif d'apaisement. Trois respirations longues. Lieu sûr accessible. Confiance dans le processus. Cette préparation mentale change la qualité de l'expérience et facilite la récupération." },
+      { label: "Pendant L Acte", detail: "Pendant l'acte, ton corps reçoit le soin. Tu es dans un état particulier — endormi ou détendu. Pendant ce temps, intérieurement, tu peux poser une intention de bonne réception. Ton corps coopère avec les soins, accepte ce qui se fait pour son bien." },
+      { label: "Corps Qui Guerit", detail: "Ton corps a une capacité extraordinaire de guérison. Les cellules cicatrisent. Les tissus se réparent. L'organisme remet en place ce qui a été touché. Tu peux faire confiance à cette capacité. Elle est inscrite dans ton biologie." },
+      { label: "Visualisation Recuperation", detail: "Imagine maintenant ta récupération post-opératoire. Tu sors du bloc. Tu te réveilles dans un environnement de soin. La douleur est gérée par les médicaments. Les premiers jours sont passés à récupérer. Une semaine, deux, trois — tu vas progressivement mieux. La cicatrisation se fait. L'énergie revient. Tu retrouves graduellement tes capacités." },
+      { label: "Corps Qui Repare", detail: "Pendant la récupération, ton corps fait un travail intense de réparation. Il a besoin de soutien : nourriture adaptée, repos, hydratation, mobilisation douce dès que possible. Tu peux écouter ce dont il a besoin et le lui donner." },
+      { label: "Pour Anesthesie", detail: "Pour l'anesthésie : tu dormiras profondément pendant l'acte. À ton réveil, tu seras un peu groggy — c'est normal. Cette sensation passe en quelques heures. Pour les nausées post-anesthésie possibles : ton équipe a des médicaments. Tu peux demander." },
+      { label: "Pour Douleur Post Op", detail: "La douleur post-opératoire est gérée. Tu auras des antalgiques selon protocole. N'hésite pas à signaler si tu as mal — c'est important pour les soignants de savoir. La douleur bien gérée favorise une meilleure récupération." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, jusqu'à ton intervention, tu peux activer plusieurs fois par jour ton dispositif d'apaisement. Le jour J, tu y arrives préparé. L'équipe fait son travail. Ton corps reçoit. Et tu récupères dans les meilleures conditions possibles." }
       ],
     }],
   }],
@@ -9908,7 +11860,17 @@ const k_1057: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en cycles de chimiothérapie. Travail spécifique sur la préparation à chaque cycle, la gestion des effets secondaires (nausées surtout, fatigue), le maintien de la qualité de vie pendant le traitement." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation du protocole et des effets\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Geste-ancre installé\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu suis une chimiothérapie. Ce traitement, indispensable pour combattre la maladie, demande beaucoup à ton corps. Nausées, fatigue, parfois autres effets. Aujourd'hui, nous mobilisons tes ressources mentales pour accompagner les cycles avec moins de difficulté." },
+      { label: "Traitement Qui Aide", detail: "Important d'abord : ce traitement t'aide. Il agit sur les cellules malades. C'est ton allié, même quand il est désagréable. Cette posture mentale — recevoir le traitement comme une aide plutôt que comme une agression — change la qualité de l'expérience." },
+      { label: "Pendant L Administration", detail: "Pendant la séance de chimio, tu peux être dans une bulle d'apaisement. Tes outils sont actifs : respiration, lieu sûr, geste-ancre. Pendant que le produit passe, tu peux te dire intérieurement : ce produit travaille pour moi. Il agit là où il faut. Cette intention soutient l'expérience." },
+      { label: "Anticipation Des Nausees", detail: "Beaucoup de patients développent une anticipation conditionnée — le simple fait d'arriver à l'hôpital déclenche les nausées avant même l'administration. Ce conditionnement est apprenable, et déconditionnable. Tes médicaments anti-émétiques aident — et tes outils mentaux complètent." },
+      { label: "Geste Ancre Anti Nausee", detail: "Installe maintenant un geste-ancre spécifique. Pendant que tu es dans cet état apaisé, tu actives un geste précis (presser un point sur le poignet par exemple). Ce geste devient associé à l'apaisement digestif. Quand les nausées montent, tu actives ce geste, et ton inconscient mobilise l'apaisement." },
+      { label: "Jours Apres", detail: "Dans les jours suivant le cycle, ton corps travaille. Tu peux ressentir fatigue, parfois nausées, possibles autres effets. Cette période est temporaire. Donne à ton corps ce dont il a besoin : repos quand tu peux, hydratation, alimentation adaptée, contact bienveillant." },
+      { label: "Qualite De Vie Entre", detail: "Entre les cycles, tu peux retrouver des fenêtres de qualité de vie. Profite de ces moments. Vois les personnes qui te font du bien. Fais ce qui te fait plaisir, même petit. Cette préservation de moments lumineux te porte à travers la trajectoire." },
+      { label: "Cycle Apres Cycle", detail: "Chaque cycle te rapproche de la fin du traitement. Tu peux compter à rebours. Cette comptabilité — un de moins, deux de moins — te donne un repère. Le traitement a un terme, même quand il paraît long." },
+      { label: "Corps Qui Recupere", detail: "Après la fin des cycles, ton corps récupérera. Pas tout de suite — la chimio met du temps à s'éliminer. Mais progressivement, l'énergie revient, le goût revient, les cheveux repoussent (si concerné), les fonctions altérées se restaurent." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, avant chaque cycle, tu peux activer ta préparation. Pendant, ton dispositif est actif. Ton geste-ancre est disponible. Et progressivement, tu traverses les cycles avec ce que tu peux donner, en faisant confiance au traitement et à ton corps qui le reçoit." }
       ],
     }],
   }],
@@ -9947,7 +11909,17 @@ const k_1058: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en radiothérapie. Travail sur la présence pendant les séances quotidiennes (immobilité requise, isolement temporaire), gestion de la fatigue, présence pleine." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation contexte radio\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Pratique de la séance\n• Phase 5 — Retour K-BASE-026" },
+      { label: "Reconnaissance", detail: "Tu suis une radiothérapie. Chaque séance demande de toi de rester immobile, parfois dans une position inconfortable, dans une machine qui peut paraître impressionnante, pendant plusieurs minutes. Cette répétition quotidienne, sur des semaines, peut peser. Aujourd'hui, nous travaillons à habiter ces séances." },
+      { label: "Machine Qui Aide", detail: "Cette machine, qui peut sembler intimidante, est ton alliée. Elle dirige les rayons précisément où il faut. Pendant qu'elle fonctionne, elle agit pour ta guérison. Cette compréhension change la qualité de la présence : tu reçois quelque chose de précieux, pas tu subis quelque chose de menaçant." },
+      { label: "Position Immobile", detail: "L'immobilité requise est précise — elle permet aux rayons d'aller exactement à la cible. Tu peux apprendre à habiter cette immobilité. Pas la subir avec tension — l'occuper par la présence à toi-même. Sentir ton corps en place. Sentir ton souffle, qui est le seul mouvement permis." },
+      { label: "Lieu Sur Pendant Seance", detail: "Pendant que la machine fonctionne, tu peux te transporter intérieurement dans ton lieu sûr. Tes yeux peuvent rester fermés. Ton corps reste en place pour les rayons. Mais ton esprit, lui, peut être ailleurs — dans cet endroit que tu connais, qui est à toi, qui n'est pas dans la machine." },
+      { label: "Temps Qui Passe", detail: "Une séance dure quelques minutes. Pas plus. Ce temps, qui peut sembler long quand on attend, peut être habité avec présence. Tu peux compter tes respirations. Tu peux être dans ton lieu sûr. Tu peux te visualiser après, à la sortie. Cette occupation mentale fait passer le temps." },
+      { label: "Si Anxiete Montee", detail: "Si l'anxiété monte pendant la séance, tu peux activer ton geste-ancre (si compatible avec l'immobilité). Trois respirations plus profondes. La phrase intérieure : ce moment passe, je vais bien. Cette stabilisation rapide est suffisante pour traverser le pic." },
+      { label: "Repetition Quotidienne", detail: "La radiothérapie demande répétition — souvent 5 séances par semaine pendant plusieurs semaines. Cette régularité peut peser. Tu peux la voir autrement : chaque séance te rapproche de la fin. Compter à rebours peut aider — il en reste tant, il en reste tant." },
+      { label: "Fatigue Radio Induite", detail: "Les rayons fatiguent ton corps. Cette fatigue est un phénomène connu, pas un signe d'aggravation. Elle peut s'intensifier vers la fin du protocole. Tu peux respecter cette fatigue : sieste si possible, activité réduite, repos privilégié. Pas comme une faillite — comme une intelligence." },
+      { label: "Apres La Seance", detail: "Après chaque séance, tu peux te féliciter d'en avoir fait une de plus. Petit rituel : sortir, respirer l'air, marcher un peu, te dire que c'est fait pour aujourd'hui. Cette ponctuation positive de chaque jour soutient la traversée." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, chaque séance peut être abordée avec ton dispositif. Présence dans l'immobilité. Lieu sûr accessible. Geste-ancre si besoin. Ponctuation positive après. Et compte à rebours qui te porte vers la fin du protocole." }
       ],
     }],
   }],
@@ -9986,7 +11958,17 @@ const k_1059: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour douleurs cancéreuses complexes (douleurs neuropathiques, douleurs résistant aux antalgiques, douleurs en fin de vie). Approche complémentaire au traitement antalgique médical, jamais en substitution." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Coordination avec équipe douleur\n• Phase 2 — Induction K-BASE-003 douce\n• Phase 3 — Lieu sûr\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une douleur qui résiste. Cette douleur est complexe — elle a des composantes que les antalgiques classiques ne couvrent pas entièrement. Ton équipe médicale fait son travail avec les médicaments. Aujourd'hui, nous ajoutons une dimension complémentaire pour t'aider à mieux vivre malgré la douleur." },
+      { label: "Pas Substitution", detail: "Important : ce travail ne remplace pas tes traitements. Tu continues à les prendre selon prescription. L'hypnose ajoute, n'enlève pas. Cette précision posée, voyons ce que nous pouvons travailler." },
+      { label: "Lieu Sur D Abord", detail: "Avant la douleur elle-même, ton lieu sûr. Cet endroit en toi qui n'est pas atteint par la douleur. Cet endroit existe — toujours. Même quand la douleur est forte ailleurs, cet endroit reste accessible. Quelques minutes par jour passées là, en pure présence sans douleur, sont un répit précieux." },
+      { label: "Imagerie Locale", detail: "Pour la zone de douleur, tu peux travailler avec l'imagerie. Pas pour faire disparaître la douleur — souvent ce n'est pas réaliste. Pour la transformer. Imagine que la zone reçoit quelque chose d'apaisant : une lumière douce, une fraîcheur, une chaleur enveloppante, ce qui te parle." },
+      { label: "Dialogue Avec Zone", detail: "Tu peux dialoguer avec cette zone douloureuse. Lui dire intérieurement : je sais que tu fais mal. Je ne te combats pas. Je t'envoie de la bienveillance. Cette posture non-conflictuelle modifie souvent la perception de la douleur." },
+      { label: "Distinction Douleur Souffrance", detail: "La douleur est physique. La souffrance est ce que ton mental en fait : la peur de la douleur future, la rumination sur la douleur passée, l'amplification dans la pensée. Tu peux apprendre à vivre la douleur sans la totalité de la souffrance ajoutée. Cette distinction soulage." },
+      { label: "Dimension Temporelle", detail: "La douleur n'est jamais constante. Elle a des pics, des creux, des moments où elle est plus supportable. Tu peux apprendre à habiter ces fluctuations, à profiter des moments où elle baisse, plutôt que de vivre tout dans la pire intensité par anticipation." },
+      { label: "Present Habitable", detail: "Au-delà de la douleur, le présent contient autre chose. Une lumière, un parfum, une voix aimée, une saveur, un souvenir. Ces dimensions du présent restent accessibles, même quand la douleur est là. T'y connecter ne fait pas disparaître la douleur — mais cela élargit ton vécu au-delà d'elle." },
+      { label: "Dignite Preservee", detail: "Vivre avec la douleur n'enlève rien à ta dignité ni à ta valeur. Tu restes pleinement toi-même, même quand le corps souffre. Cette part de toi qui demeure est le cœur de qui tu es, indépendamment de l'état de ton corps." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, tu peux activer ces ressources. Lieu sûr quelques minutes. Imagerie d'apaisement local. Dialogue bienveillant avec la zone. Distinction douleur/souffrance. Présence à ce qui dans le présent est encore beau ou bon. Ces pratiques, ajoutées aux traitements, allègent ce qui peut l'être." }
       ],
     }],
   }],
@@ -10025,7 +12007,16 @@ const k_1060: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour fatigue oncologique persistante (pendant ou après traitements). Travail sur l'acceptation de la limite, la préservation des forces, la qualité du repos, le maintien de moments de vie pleine." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation de la fatigue\n• Phase 2 — Induction K-BASE-003\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une fatigue qui ne ressemble à rien d'autre. Pas la fatigue d'une journée intense que le sommeil répare. Une fatigue de fond, qui résiste au repos, qui modifie ton rapport au temps et à l'effort. Cette fatigue n'est pas une faiblesse — c'est l'expression d'un corps qui combat ou récupère d'un combat majeur." },
+      { label: "Legitimation", detail: "Cette fatigue est réelle, validée scientifiquement, fréquente dans le cancer et les traitements. Elle peut persister longtemps après la fin des traitements pour certains. Tu n'es pas paresseux — tu portes une fatigue spécifique, légitime." },
+      { label: "Acceptation De La Limite", detail: "Lutter contre cette fatigue par la volonté seule épuise plus encore. Une autre voie : reconnaître la limite, et travailler avec elle plutôt que contre elle. Pas par résignation — par intelligence économique de tes ressources." },
+      { label: "Qualite Du Repos", detail: "Quand tu te reposes, repose-toi vraiment. Pas un repos haché par l'inquiétude, par les écrans, par les pensées qui tournent. Un repos plein, où ton corps reçoit ce dont il a besoin. Cette qualité de repos est plus restaurative qu'un repos léger prolongé." },
+      { label: "Hierarchisation", detail: "Toutes les activités ne se valent pas en coût énergétique. Identifie ce qui demande beaucoup, ce qui demande peu. Et choisis. Tu n'es pas obligé de tout faire. Garde ton énergie pour ce qui compte vraiment pour toi : les personnes qui te font du bien, les activités qui te nourrissent, ce qui doit être fait." },
+      { label: "Moments De Vie Pleine", detail: "Même fatigué, tu peux préserver des moments de vie pleine. Quelques minutes, parfois plus. Un échange chaleureux. Une saveur. Un coucher de soleil. Un mot lu. Ces moments, brefs mais habités, contrastent avec la fatigue grise et te rappellent que tu vis encore pleinement, même limité." },
+      { label: "Corps Qui Recupere", detail: "Pour la fatigue post-traitement, ton corps récupère lentement. Cette récupération peut prendre mois ou années. Sois patient. Donne-lui ce qui aide : sommeil, alimentation, activité physique douce et régulière (paradoxalement, l'inactivité totale aggrave souvent la fatigue), soutien psychologique si besoin." },
+      { label: "Pas Culpabilite", detail: "Tu peux te permettre de te reposer sans culpabilité. Tu n'es pas paresseux — tu es en récupération. Cette permission, intérieure, change la qualité du repos. Le repos pris avec culpabilité ne restaure pas autant que le repos pris en paix." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux respecter ce que ton corps demande. Te reposer pleinement quand c'est ce qu'il faut. Hiérarchiser tes activités. Préserver des moments de vie pleine. Et faire confiance à la récupération qui se fait, à son rythme, jour après jour." }
       ],
     }],
   }],
@@ -10064,7 +12055,17 @@ const k_1061: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients confrontés à une récidive de cancer, à une aggravation, ou à un changement de pronostic. Travail sur la traversée de ce nouveau choc, distinct du choc initial." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Écoute prolongée\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Induction K-BASE-003 douce\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu reçois une nouvelle qui rouvre la blessure. Récidive. Aggravation. Quelque chose qui semblait arrivé revient ou s'aggrave. Ce choc est différent du premier — et à la fois aussi violent, parfois plus." },
+      { label: "Pas Le Meme Choc", detail: "Le premier choc t'avait surpris dans ta vie d'avant le cancer. Celui-ci te surprend dans ta vie d'après — la rémission, le retour à une certaine normalité, l'espoir reconstruit. Cette deuxième fois a sa propre douleur : la trahison de l'espoir, le sentiment d'injustice cumulée, parfois la fatigue de devoir recommencer." },
+      { label: "Legitimation Effondrement", detail: "Si tu t'effondres à nouveau, c'est légitime. Tu n'es pas censé être plus fort cette fois. Tu n'es pas censé prendre cela mieux parce que tu as déjà traversé. C'est même parfois plus dur, parce que tu sais ce qui vient." },
+      { label: "Ressources Accumulees", detail: "Tu as des ressources que tu n'avais pas la première fois. Connaissance du système médical. Soutiens identifiés. Outils mentaux développés. Compétence à traverser. Ces ressources ne diminuent pas la douleur, mais elles facilitent le pratique de la traversée." },
+      { label: "Pas De Combat Obligatoire", detail: "Comme la première fois, tu n'es pas obligé d'être en mode combat. Tu peux traverser cette nouvelle phase à ta manière. Avec colère, avec tristesse, avec acceptation, avec révolte — toutes les postures sont légitimes. Cherche celle qui te ressemble cette fois." },
+      { label: "Pronostic Qui Evolue", detail: "Le pronostic peut avoir évolué. C'est une réalité à accueillir. Tu peux choisir de l'aborder progressivement, à ton rythme. Tu peux aussi choisir de le mettre temporairement à distance pour ne pas être dominé par l'anticipation. Les deux postures peuvent alterner." },
+      { label: "Jour Apres Jour", detail: "Comme la première fois, jour après jour. Habiter le présent autant que possible. Ne pas vivre par projection sur le futur. Cette posture est encore plus précieuse maintenant." },
+      { label: "Qualite Du Temps", detail: "Le temps que tu as devant toi — quelle que soit sa durée — est précieux. Tu peux choisir de l'investir avec présence. Ce qui compte vraiment, ce que tu veux vivre, ce que tu veux partager, ce que tu veux dire. Cette qualité de présence donne de la densité à chaque jour." },
+      { label: "Proches", detail: "Tes proches sont impactés aussi. Ils peuvent réagir diversement — soutenants, débordés, dans le déni. Tu n'as pas à porter leur réaction. Tu peux communiquer ce dont tu as besoin, autant que possible. Et accepter que tous ne pourront pas être ce que tu voudrais qu'ils soient." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu traverses ce nouveau passage avec ce que tu es maintenant. Avec les ressources accumulées. Avec ta vulnérabilité légitime. Jour après jour. Et avec la dignité de qui n'a pas choisi son destin mais qui choisit comment l'habiter." }
       ],
     }],
   }],
@@ -10103,7 +12104,17 @@ const k_1062: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en cancérologie habitant une longue zone d'incertitude (attente de résultats, traitements expérimentaux, pronostic flou). Travail sur l'habitation de l'incertitude sans l'écraser ni s'y résigner." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Identification de la zone d'incertitude\n• Phase 2 — Induction K-BASE-001\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis dans une zone d'incertitude prolongée. Pas de certitude de guérison, pas de certitude d'aggravation. Tu attends des résultats. Ou tu reçois des messages contradictoires. Ou tu vis avec un pronostic flou. Cette incertitude prolongée a sa propre fatigue." },
+      { label: "Difficulte Specifique", detail: "L'incertitude est parfois plus difficile que la certitude. Avec une mauvaise nouvelle confirmée, tu peux commencer à travailler avec. Dans l'incertitude, tu oscilles, tu ne peux pas vraiment investir une direction, tu vis suspendu. Cette suspension épuise." },
+      { label: "Pas De Solution De Certitude", detail: "Tu ne peux pas forcer la certitude. Les résultats viennent quand ils viennent. Le pronostic se précise ou non. Tu n'as pas le contrôle là-dessus. La question n'est pas comment sortir de l'incertitude — c'est comment habiter cette zone le plus humainement possible." },
+      { label: "Espoir Libre", detail: "Tu peux espérer sans certitude. Cet espoir-là n'est pas un engagement à un résultat — c'est une posture intérieure qui maintient une ouverture vers le possible favorable. Cet espoir libre n'est ni naïveté ni résignation. C'est une intelligence émotionnelle qui te porte." },
+      { label: "Pas Obligation D Optimisme", detail: "Tu n'es pas obligé d'être optimiste. Si tu ne ressens pas l'espoir, c'est légitime. Tu peux traverser dans une autre posture : acceptation, lutte, résignation, indifférence. Toutes ces postures sont possibles, à différents moments. Pas de bonne réaction obligatoire." },
+      { label: "Present Qui Demeure", detail: "Pendant que tu attends, le présent continue. Aujourd'hui s'écoule. Cet aujourd'hui contient des choses — petites ou grandes. Investir le présent, malgré l'incertitude future, est paradoxalement libérateur. Tu vis aujourd'hui, pas dans la projection." },
+      { label: "Choses Qui Comptent", detail: "Demande-toi : qu'est-ce qui compte vraiment pour moi maintenant ? Pas ce qu'il faudrait — ce qui résonne en toi. Les personnes que tu veux voir. Les activités qui te nourrissent. Les paroles que tu veux dire. Cette clarification rend le présent plus dense." },
+      { label: "Si Attente Specifique", detail: "Si tu attends un résultat précis, tu peux fixer une date. D'ici cette date, je ne ressasse pas, je ne projette pas, je vis ce que je peux vivre. Quand le résultat arrivera, je le recevrai et j'aviserai. Cette discipline mentale économise." },
+      { label: "Dignité Dans L Incertitude", detail: "Vivre dans l'incertitude avec dignité est un art. Pas être au-dessus de tes émotions — t'autoriser à fluctuer. Mais maintenir, à travers les fluctuations, une certaine cohérence : tes valeurs, ce qui compte, ce que tu choisis d'incarner même quand tu ne sais pas ce qui vient." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, plusieurs fois par jour, tu peux te ramener au présent. Investir aujourd'hui plutôt que dans la projection. Maintenir un espoir libre sans contrainte de certitude. Et habiter cette zone d'incertitude avec autant de présence que possible. Tu n'es pas garant du résultat — tu es garant de comment tu traverses." }
       ],
     }],
   }],
@@ -10142,7 +12153,18 @@ const k_1063: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en soins palliatifs (pronostic vital engagé). Travail spécifique d'accompagnement, présence, apaisement, dimension existentielle. Adaptation à l'état du patient." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation état clinique et capacité\n• Phase 2 — Induction adaptée à l'état (souvent K-BASE-003 très douce)\n• Phase 3 — Travail spécifique (script — souple selon contexte)\n• Phase 4 — Sortie progressive ou laisser dans l'apaisement" },
+      { label: "Reconnaissance", detail: "Tu es dans une période particulière de ta vie. Le pronostic est engagé. Le temps qui te reste est précieux. Aujourd'hui, je suis avec toi pour ce moment, dans le respect de ce que tu vis et de ce que tu souhaites traverser." },
+      { label: "Presence Offerte", detail: "Ma présence aujourd'hui n'est pas pour te demander quelque chose. Elle est pour t'offrir un espace. Tu peux l'utiliser comme tu veux : pour te reposer, pour parler, pour écouter, pour pleurer, pour te taire. Il n'y a pas de programme imposé." },
+      { label: "Apaisement Corporel", detail: "Si la douleur ou l'inconfort sont présents, nous pouvons travailler à apaiser ce qui peut l'être. Tes médicaments font leur travail. Ma voix peut accompagner cet apaisement. Nous pouvons aller dans un endroit en toi où le corps souffre moins." },
+      { label: "Lieu Sur Dans La Traversee", detail: "Ton lieu sûr est avec toi. Cet endroit en toi qui demeure quoi qu'il arrive. Tu peux y aller maintenant. Peu importe l'état de ton corps — cet endroit reste accessible. Y aller te donne un répit." },
+      { label: "Dimension Existentielle", detail: "Si tu as des questions, des peurs, des regrets, des choses à dire — tu peux les exprimer. Ou les garder pour toi. Pas d'obligation. Beaucoup de personnes en fin de vie disent que ce qui les a aidées, c'est d'être autorisées à tout dire ou rien dire, sans attente." },
+      { label: "Proches", detail: "Tes proches sont là, ou peuvent être là. Le lien avec eux est précieux. Tu peux choisir de leur dire des choses. Ou de simplement être en présence sans paroles. Les deux sont précieux. Beaucoup de personnes témoignent que le lien silencieux compte autant que les paroles." },
+      { label: "Paroles Essentielles", detail: "S'il y a des paroles essentielles que tu veux adresser — à un proche présent ou imaginé, à toi-même, à la vie, à ce qui te dépasse — tu peux les formuler. Intérieurement ou à voix haute. Ces paroles, si elles viennent, ont leur place ici." },
+      { label: "Dignite Qui Demeure", detail: "Quel que soit l'état de ton corps, tu restes pleinement toi-même. Ta dignité ne dépend pas de ta capacité physique. Ce qui fait ta valeur — qui tu es, ce que tu as donné, ce que tu portes en toi — demeure entièrement." },
+      { label: "Temps Present", detail: "En cet instant, ici, maintenant, tu es vivant. Cette respiration. Ce battement. Cette présence. Le présent contient tout ce qui est. Pas le futur incertain. Pas le passé révolu. Le présent, simple, ample." },
+      { label: "Paix Si Elle Vient", detail: "Si une paix se présente, tu peux l'accueillir. Pas la forcer. Mais l'accueillir si elle vient. Beaucoup de personnes en fin de vie témoignent de moments de paix profonde. Ces moments sont possibles, et précieux." },
+      { label: "Post Hypnotique Adapte", detail: "Cette présence aujourd'hui restera avec toi. Tu peux y revenir intérieurement quand tu en ressens le besoin. Et notre prochaine rencontre sera ce qu'elle sera — selon ton état, selon ton désir, selon ce qui sera juste à ce moment-là." }
       ],
     }],
   }],
@@ -10181,7 +12203,17 @@ const k_1064: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour proches d'une personne en soins palliatifs ou en fin de vie. Soutien spécifique : accompagner sans s'épuiser, dire l'essentiel, traverser l'accompagnement ultime." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Écoute prolongée du proche\n• Phase 2 — Lieu sûr K-BASE-011 stabilisé\n• Phase 3 — Induction K-BASE-001\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Clôture K-BASE-030" },
+      { label: "Reconnaissance", detail: "Tu accompagnes une personne aimée en fin de vie. Cette présence demande beaucoup de toi. Tu donnes du temps, de l'énergie, du cœur. Tu portes aussi la douleur de ce qui vient. Cet accompagnement ultime est l'un des plus difficiles de la vie. Aujourd'hui, nous travaillons sur comment le tenir." },
+      { label: "Aidant Qui Dure", detail: "Pour accompagner dans la durée, tu dois te ménager. Un aidant épuisé ne peut plus accompagner. Te reposer, te nourrir, prendre des moments pour toi, accepter de l'aide — ce n'est pas de l'égoïsme, c'est ce qui te permet d'être présent pleinement quand tu y es." },
+      { label: "Pas Etre Partout", detail: "Tu ne peux pas être présent à chaque instant. Et ce n'est pas attendu de toi. Tu peux être là dans des moments choisis, et te retirer dans d'autres. La personne que tu accompagnes le sait, le comprend. Ton amour ne se mesure pas en heures de présence." },
+      { label: "Qualite De La Presence", detail: "Quand tu es là, sois pleinement là. Pas distrait par tes téléphones, tes inquiétudes, tes calendriers. Cette présence qualitative compte plus que la quantité d'heures. Quelques minutes de vraie présence valent plus que des heures à demi." },
+      { label: "Paroles Essentielles", detail: "S'il y a des paroles que tu veux dire — pardons, mercis, je t'aime, reconnaissance pour ce qui a été — c'est le moment, pendant que la personne peut t'entendre. Ne pas attendre la dernière minute qui peut ne pas arriver. Dire ce qui peut être dit. C'est précieux pour la personne et pour toi qui n'auras pas à porter le regret." },
+      { label: "Silence Qui Compte", detail: "Au-delà des paroles, le silence partagé compte. Être assis à côté. Tenir une main. Lire à voix basse. Cette présence sans paroles est puissante. Beaucoup de personnes en fin de vie témoignent que ce silence partagé fut ce qui les a portées." },
+      { label: "Si La Personne Est Inconsciente", detail: "Même si la personne paraît inconsciente, l'audition reste souvent fonctionnelle. Tu peux lui parler. Lui dire ce que tu as à lui dire. Beaucoup de soignants attestent que les mourants entendent bien plus longtemps qu'on ne le croit." },
+      { label: "Le Moment Du Passage", detail: "Le moment du décès peut arriver pendant que tu es là, ou pendant que tu n'y es pas. Ce n'est pas toi qui choisis. Si tu es là — c'est précieux. Si tu n'y es pas — ce n'est pas une faute. Beaucoup de mourants 'attendent' que leurs proches s'absentent pour partir, parce que la présence des aimés peut les retenir." },
+      { label: "Apres Le Passage", detail: "Après le décès, tu auras à traverser. Le choc de l'absence définitive. La fatigue accumulée qui se révèle. Les démarches administratives. Les jours qui s'écoulent autrement. Cette phase a sa propre traversée — qui commence à peine. Tu pourras t'y consacrer après. Pour l'instant, tu accompagnes encore." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux accompagner avec plus de présence et moins d'épuisement. Te ménager pour durer. Choisir des moments de présence pleine. Dire ce qui peut être dit. Recevoir le silence partagé. Et savoir, quoi qu'il arrive, que tu auras donné ce que tu pouvais donner." }
       ],
     }],
   }],
@@ -10220,7 +12252,17 @@ const k_1065: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en début de maladie neurodégénérative (Alzheimer, Parkinson, SLA) gardant des capacités cognitives et de communication. Travail sur l'apaisement de l'anxiété, la qualité de vie, la dimension de sens." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Évaluation capacités du jour\n• Phase 2 — Induction K-BASE-003 douce\n• Phase 3 — Lieu sûr K-BASE-011\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Retour K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu vis avec une maladie qui transforme progressivement ton fonctionnement. Cette annonce a été un choc, et chaque jour qui passe peut amener son lot d'inquiétudes sur ce qui se transforme. Aujourd'hui, nous travaillons à habiter le présent, dans ce qui demeure et qui est précieux." },
+      { label: "Validation", detail: "Cette maladie n'est pas un échec personnel. Elle ne dit rien de toi en tant que personne. Elle est un événement qui te traverse, comme tant d'autres événements traversent les humains. Ta dignité, ta valeur, ton humanité demeurent entièrement." },
+      { label: "Present Qui Demeure", detail: "Aujourd'hui, en ce moment, tu es là. Tu m'écoutes. Tu comprends. Tu sens. Cette capacité présente est précieuse. Elle peut être habitée pleinement, sans te précipiter dans l'anxiété de ce qui pourrait se transformer plus tard. Le présent compte, le présent suffit." },
+      { label: "Capacites Qui Existent", detail: "Tu disposes encore de capacités. Lesquelles te sont les plus précieuses ? Marcher peut-être. Reconnaître tes proches. Savourer un repas. Échanger. Te souvenir d'un moment heureux. Ces capacités, présentes, peuvent être pleinement vécues. Pas en deuil de celles qui pourraient changer — en pleine présence à celles qui sont là." },
+      { label: "Anxiete Apaisee", detail: "L'anxiété de la maladie peut être apaisée. Pas évacuée totalement — elle a son sens. Mais réduite quand elle envahit. Ton lieu sûr est accessible. Quelques respirations longues. Te connecter à ce qui en toi est encore capable de paix. Cette pratique, simple, soulage." },
+      { label: "Proches Present", detail: "Tes proches sont là. Cette maladie n'efface pas le lien. Au contraire — souvent, elle le transforme et l'approfondit. Les regards échangés. Les présences silencieuses. Les souvenirs partagés. Ces dimensions du lien peuvent prendre une qualité nouvelle." },
+      { label: "Dimension De Sens", detail: "Tu as eu une vie. Une histoire. Des relations. Des œuvres. Cette traversée est une dernière étape, qui ne diminue pas ce qui a été. Tu peux te connecter à ce que tu as construit, transmis, aimé. Cette dimension de sens demeure, quoi qu'il arrive à ton cerveau ou à ton corps." },
+      { label: "Aujourd Hui Compte", detail: "Aujourd'hui compte. Ce moment compte. Tu peux choisir de ne pas vivre dans l'anticipation de la perte mais dans la présence à ce qui est. Vivre vraiment chaque jour qui se présente, dans ce qui te reste. Cette posture, choisie, transforme la qualité de l'expérience." },
+      { label: "Si Perte Progressive", detail: "Avec le temps, certaines capacités vont changer. Tu peux ressentir des deuils — de la mémoire, du mouvement, de l'expression. Ces deuils sont légitimes. Ils méritent d'être traversés. Et même quand certaines capacités diminuent, quelque chose en toi demeure : ta dignité, ta valeur, ta capacité à recevoir et donner du lien." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux pratiquer l'habitation du présent. Activer ton lieu sûr quand l'anxiété monte. Te connecter à ce qui demeure et qui est précieux. Recevoir ceux qui t'aiment. Vivre, jour après jour, dans ce qui est possible aujourd'hui." }
       ],
     }],
   }],
@@ -10259,7 +12301,15 @@ const k_1066: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en sortie de coma, en soins intensifs, en post-réanimation. Travail de présence rassurante, d'orientation, de récupération psychique. Coordination avec équipe de réa." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Coordination équipe + accord\n• Phase 2 — Présence simple et orientation\n• Phase 3 — Travail spécifique (script court)\n• Phase 4 — Sortie douce" },
+      { label: "Presence Rassurante", detail: "Tu reviens. Tu as traversé quelque chose de très profond. Tu te réveilles dans un lieu qui peut sembler étrange, plein de bruits, de personnes, de machines. Ne t'inquiète pas — tu es en sécurité ici. Des personnes prennent soin de toi." },
+      { label: "Orientation", detail: "Tu es à [lieu]. Nous sommes le [date]. Tu as eu [événement]. Maintenant, tu es en train de reprendre. Cette information, simple, t'aide à revenir. Tu peux ne pas tout retenir d'un coup — c'est normal après ce que tu as traversé. Petit à petit, l'orientation revient." },
+      { label: "Corps Qui Revient", detail: "Ton corps revient à lui. Il a été en mode survie, parfois inconscient. Maintenant il se réorganise. Tu peux ressentir des sensations bizarres, des douleurs, des engourdissements, des fatigues immenses. Ces sensations sont normales. Ton corps reprend son fonctionnement." },
+      { label: "Lien Retrouve", detail: "Tes proches sont là, ou ils viennent. Ils ont été là pendant ce temps difficile. Ils sont avec toi maintenant. Tu n'es pas seul. Le lien est intact. Tu peux te laisser recevoir leur présence, sans te sentir obligé de réagir fort. Juste recevoir." },
+      { label: "Repos Qui Repare", detail: "Tu vas dormir beaucoup dans cette période. Le sommeil est ton allié. Pendant que tu dors, ton corps répare. Ton cerveau réintègre ce qu'il a vécu. Tu peux te laisser dormir sans culpabilité — c'est ce dont tu as besoin." },
+      { label: "Si Souvenirs Difficiles", detail: "Si des images, des souvenirs, des sensations de la période de coma ou de soins intensifs reviennent et te perturbent, tu peux le dire à l'équipe. Ces vécus existent et méritent d'être accompagnés. Tu n'es pas obligé de tout porter seul." },
+      { label: "Temps De Recuperation", detail: "La récupération prend du temps. Pas un retour immédiat à comme avant. Une reconstruction progressive. Tu peux rencontrer des limites — fatigue, faiblesse, troubles cognitifs temporaires. Ces limites passent souvent avec le temps. La rééducation est ta alliée." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux te laisser recevoir ce qui se passe. L'attention de l'équipe, la présence des proches, le repos. Tu n'as pas à tout maîtriser. Tu reviens, à ton rythme. Tu es en sécurité." }
       ],
     }],
   }],
@@ -10298,7 +12348,17 @@ const k_1067: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients venant de recevoir une annonce de mauvais pronostic ou récidive grave. Travail d'accompagnement du choc initial, sans précipiter le travail de deuil ni nier la réalité." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Écoute prolongée prioritaire\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Induction K-BASE-003 très douce\n• Phase 4 — Travail spécifique (script)\n• Phase 5 — Sortie K-BASE-027" },
+      { label: "Reconnaissance", detail: "Tu viens d'apprendre quelque chose qui te bouleverse profondément. Le sol s'est dérobé. Le futur que tu envisageais s'est transformé en quelques mots. Aujourd'hui, dans cet espace, je suis simplement présent à ce que tu vis. Pas pour te dire quoi faire ou quoi penser. Pour être là." },
+      { label: "Pas De Precipitation", detail: "Tu n'es pas obligé de comprendre tout de suite. Pas obligé de réagir d'une certaine manière. Pas obligé de faire le deuil immédiatement. Pas obligé d'être courageux. Ce que tu vis demande du temps pour être assimilé. Quelques heures, jours, semaines pour laisser l'information descendre." },
+      { label: "Choc Legitime", detail: "Le choc que tu ressens est normal. Sidération, déni momentané, vagues de tristesse, colère, peur, parfois absence d'émotion identifiable — toutes ces réactions sont possibles. Aucune n'est anormale. Aucune n'est meilleure qu'une autre. Tu vis ce que ton organisme vit en réponse à un choc majeur." },
+      { label: "Lieu Sur Au Milieu", detail: "Au milieu de cette tempête, ton lieu sûr est accessible. Quelques minutes par jour pour reprendre souffle. Pas pour fuir la réalité — pour avoir un endroit où le poids n'écrase pas tout. Cette pause n'est pas trahir ce que tu vis. Elle est nécessaire pour porter dans la durée." },
+      { label: "Proches A Distance Juste", detail: "Tes proches vivent aussi le choc à leur manière. Certains seront extraordinaires de présence. D'autres maladroits. Certains te submergeront de leur propre angoisse. Tu as le droit de choisir qui te ressource et qui te coûte trop dans cette période. Doser. Mettre à distance certaines présences si elles t'épuisent." },
+      { label: "Decisions Pas Immediates", detail: "Les grandes décisions n'ont pas à être prises tout de suite. Les options thérapeutiques. Les questions de qualité de vie. Ces choix méritent du temps. Tant que ce n'est pas urgent médicalement, tu peux te laisser quelques jours pour assimiler avant de devoir trancher." },
+      { label: "Questions Qui Viennent", detail: "Des questions vont venir, peut-être des questions qui te terrifient. Quelle qualité de vie pendant le temps qui me reste ? Combien de temps ? Comment dire à mes proches ? Que faire des choses non finies ? Ces questions ont leur place. Pas toutes à la fois. Une à la fois, à mesure que tu peux les porter." },
+      { label: "Pas Seul Dans La Traversee", detail: "Tu n'es pas seul. Ton équipe médicale t'accompagne pour la dimension thérapeutique. Tes proches, à leur manière. Possiblement un psychologue, un soutien spirituel si cela résonne avec toi. Cette traversée n'a pas à être faite en solo." },
+      { label: "Un Jour A La Fois", detail: "Tu n'as pas à porter toute la trajectoire d'un coup. Aujourd'hui, juste aujourd'hui. Demain, on verra. Cette miniaturisation de l'horizon temporel est précieuse quand l'horizon long est devenu insupportable. Habiter aujourd'hui, et seulement aujourd'hui." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, tu peux te permettre de traverser ce que tu traverses, à ton rythme. Sans devoir réagir d'une certaine manière. Sans devoir comprendre tout de suite. En te ménageant. En recevant ceux qui te font du bien. Et en sachant que cette traversée, aussi terrible soit-elle, n'est pas faite seul." }
       ],
     }],
   }],
@@ -10337,7 +12397,17 @@ const k_1068: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour patients en soins palliatifs avancés ouverts à une dimension spirituelle (religieuse ou non). Travail sur le sens, la traversée, l'apaisement existentiel. Très KIIKA dans son esprit." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Vérification de la demande et du cadre spirituel du patient\n• Phase 2 — Lieu sûr K-BASE-011\n• Phase 3 — Induction K-BASE-001\n• Phase 4 — Sanctuaire K-BASE-012\n• Phase 5 — Travail spécifique (script)\n• Phase 6 — Clôture K-BASE-030" },
+      { label: "Cadre Personnel", detail: "Tu m'as demandé d'aborder la dimension spirituelle de cette traversée. Je vais le faire dans un cadre qui respecte ton univers — religieux si tu l'es, laïque si tu l'es, autre selon ton chemin propre. Je n'imposerai aucun cadre. C'est le tien qui guide." },
+      { label: "Vie Qui A Eu Lieu", detail: "Tu as vécu une vie. Avec ses joies, ses peines, ses rencontres, ses œuvres, ses regrets, ses transmissions. Cette vie a eu lieu. Elle ne s'efface pas. Tout ce que tu as donné, reçu, été — demeure dans la trame du monde. Cette permanence est l'une des dimensions qui peut apporter de la paix." },
+      { label: "Sens De L Histoire", detail: "Quand tu regardes ta vie maintenant, depuis le seuil où tu te tiens, qu'est-ce qui en émerge comme sens ? Pas la liste des accomplissements. Le fil qui traversait — ce que tu as cherché, ce que tu as aimé, ce qui te tenait debout dans les moments difficiles. Ce fil de sens, tu peux le contempler." },
+      { label: "Reconciliations", detail: "S'il y a des réconciliations qui demandent à être faites — avec quelqu'un, avec toi-même, avec une part de ta vie — ce moment est précieux. Pas obligation. Possibilité. Beaucoup de patients en fin de vie témoignent de la paix profonde qui vient de réconciliations même tardives." },
+      { label: "Au Dela De Soi", detail: "Quelque chose en toi peut s'ouvrir à plus grand que toi. Selon ton univers : Dieu, le sacré, la nature, l'humanité, la conscience universelle, les générations qui suivent. Cette ouverture transcende la peur de la mort individuelle. Tu participes à quelque chose qui t'inclut et te dépasse." },
+      { label: "Traversee Acceptee", detail: "La mort qui approche n'est pas un échec. Elle est l'autre face de la vie, sa conclusion naturelle. Aucun être vivant n'y échappe. Tu rejoins la vaste communauté de tous ceux qui sont partis, et de ceux qui partiront. Cette dimension partagée n'enlève pas la spécificité de ton expérience, mais elle la situe dans plus grand qu'elle." },
+      { label: "Proches Qui Continuent", detail: "Tes proches vont continuer après toi. Tu as semé en eux, par ta présence, tes paroles, tes gestes. Ce que tu as transmis continue. Cette continuité n'efface pas le manque — mais elle dit que tu n'es pas effacé du monde. Tu y demeures, autrement." },
+      { label: "Apaisement Profond", detail: "Dans cet espace de présence à ce qui est, un apaisement peut survenir. Pas la disparition de la difficulté physique ou émotionnelle. Une dimension plus profonde qui peut coexister avec elles. Cette dimension est ce que beaucoup de traditions appellent la paix de l'âme — une paix qui n'est pas de ce monde au sens habituel, mais qui s'ouvre dans les passages." },
+      { label: "Pour Les Athees", detail: "[Si patient laïc] Cette dimension n'est pas religieuse pour toi. Elle est humaine, profonde. La paix qui peut venir quand on accepte ce qui est, quand on se relie à la grande aventure humaine dont tu fais partie, quand on se connecte à ceux qui restent et à ce qu'on a transmis. Cette paix est universelle, pas confessionnelle." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, dans les jours qui te restent à vivre, cette dimension peut t'accompagner. Tu peux y revenir quand tu en as besoin. Te connecter au sens, à ta vie qui a eu lieu, à ce qui te dépasse. Et cette présence à plus grand que toi peut soutenir ta traversée." }
       ],
     }],
   }],
@@ -10376,7 +12446,19 @@ const k_1069: ProtocolDetail = {
       num: 1,
       title: "Phases du protocole",
       steps: [
-      { label: "Travail thérapeutique", detail: "Pour soignants en soins palliatifs (équipes, médecins, infirmiers, aides-soignants, psychologues). Travail spécifique sur l'usure de compassion, le deuil cumulatif, la séparation entre soi et le matériel patient, le maintien de la qualité d'accompagnement." }
+      { label: "Structure De Seance", detail: "• Phase 1 — Auto-induction K-BASE-006 ou avec accompagnement\n• Phase 2 — Lieu sûr personnel\n• Phase 3 — Travail spécifique (script)\n• Phase 4 — Retour K-BASE-026" },
+      { label: "Dedicace", detail: "Ce protocole est pour toi, soignant en soins palliatifs ou en oncologie. Tu accompagnes des personnes dans des passages que beaucoup ne pourraient pas porter. Cette mission est précieuse, et elle est exigeante. Aujourd'hui, c'est toi que nous accompagnons." },
+      { label: "Validation Du Metier", detail: "Ce que tu fais est rare. Beaucoup de gens ne pourraient pas. Tenir près de la mort, près de la souffrance, près des familles dévastées. Cette capacité est un don que tu offres au monde. Et elle a un coût qui mérite reconnaissance." },
+      { label: "Deuils Cumulatifs", detail: "Tu accompagnes la mort de patients régulièrement. Chaque mort, même quand elle est attendue, laisse une trace. Pas le grand chagrin du deuil personnel, mais une trace. Cumulées sur des années, ces traces forment quelque chose de réel — un poids qui mérite reconnaissance et soin." },
+      { label: "Decharge Des Accumulations", detail: "Imagine maintenant que tu peux décharger ce que tu portes. Tous les patients accompagnés, leurs souffrances qui ont résonné en toi, leurs morts qui ont laissé une trace. Pas pour les oublier — pour ne pas les porter en permanence dans ton corps et ton esprit. Une expiration longue. Tu déposes." },
+      { label: "Separation Soi Patient", detail: "Une distinction essentielle : tu n'es pas tes patients. Leur souffrance n'est pas la tienne. Leur mort n'est pas la tienne. Cette distinction, qui peut sembler évidente, mérite d'être réaffirmée régulièrement. Tu es un humain qui accompagne d'autres humains dans leur traversée. Tu n'es pas embarqué dans la traversée à leur place." },
+      { label: "Lieu Sur Personnel", detail: "Ton lieu sûr personnel est précieux. Pas le lieu sûr de tes patients. Le tien. Un endroit où tu te ressources, à toi seul. Visite-le régulièrement. C'est ton ressourcement intime, qui demeure quoi qu'il se passe au travail." },
+      { label: "Corps Qui Porte", detail: "Ton corps porte beaucoup. Position d'écoute prolongée. Bras qui soutiennent. Voix qui apaise. Énergie déployée pendant les heures avec les patients et les familles. Ton corps mérite soin. Étirements, mouvement, bains, massages, sport. Pas une option — une nécessité professionnelle." },
+      { label: "Supervision Indispensable", detail: "Au-delà de l'auto-soin, les supervisions sont indispensables. Pour les cas qui te marquent. Pour les résonances personnelles. Pour la qualité de l'accompagnement. Si ton service n'en propose pas, en chercher individuellement. Cette dimension professionnelle protège." },
+      { label: "Vocation Preservee", detail: "Tu as choisi ce métier pour une raison. Une dimension qui résonnait en toi. Cette vocation peut s'éroder avec l'usure. La nourrir régulièrement — par les retours positifs des familles, par les moments de grâce avec les patients, par le sens que ce métier porte — est ce qui te permet de continuer dans la durée." },
+      { label: "Droit A La Pause", detail: "Tu as le droit de pauses. De congés. De vacances. De jours difficiles où tu es moins disponible. De périodes où tu prends de la distance. Ces aménagements ne sont pas des trahisons de ta mission. Ils sont les conditions de ta continuité dans la mission." },
+      { label: "Si Signaux Alerte", detail: "Si tu sens monter les signaux : fatigue qui ne se repose pas, cynisme grandissant, irritabilité avec patients, troubles du sommeil, perte de plaisir dans le métier — ces signaux disent qu'il faut ralentir. Supervision intensifiée. Voire pause. Voire changement temporaire. Pas des défaillances — des messages." },
+      { label: "Post Hypnotique", detail: "À partir de maintenant, après chaque journée chargée, tu pratiques ta décharge. Tu maintiens la séparation soi/patient. Tu fréquentes ton lieu sûr personnel. Tu prends soin de ton corps. Tu vas en supervision. Tu protèges ta vocation. Cette hygiène, entretenue, te permet de continuer à accompagner sur la durée." }
       ],
     }],
   }],

@@ -280,11 +280,35 @@ for db_id, p in all_protocols:
     duration_min = p.get('duree_seance_estimee_min', 30)
     color = COLOR_BY_CAT.get(category, DEFAULT_COLOR)
 
-    # Steps from script phases
-    script = p.get('script', {})
+    # Steps from script phases.
+    # Cercle 1 fiches use `script:` (phase_accueil / phase_respiration / ...).
+    # Cercle 2-7 fiches use `script_specifique:` (phase_reconnaissance /
+    # phase_permission / ...). Both schemas are valid; merge them.
+    script_phases = {}
+    for key in ('script', 'script_specifique'):
+        block = p.get(key) or {}
+        if isinstance(block, dict):
+            for k, v in block.items():
+                if isinstance(v, str) and v.strip():
+                    script_phases[k] = v
+
+    # Optional: prepend the seance structure (high-level phase outline that
+    # references K-BASE-xxx induction bricks) when present.
+    structure_seance = p.get('structure_seance') or []
+    if isinstance(structure_seance, list) and structure_seance:
+        outline_text = "\n• ".join(s for s in structure_seance if isinstance(s, str))
+        if outline_text:
+            # Only prepend when we already have script phases (otherwise the
+            # outline becomes the only step which is less useful).
+            if script_phases:
+                script_phases = {
+                    "phase_structure_de_seance": "• " + outline_text,
+                    **script_phases,
+                }
+
     steps = []
-    for phase_key, phase_text in script.items():
-        # Convert phase_accueil → "Accueil", phase_respiration → "Respiration"
+    for phase_key, phase_text in script_phases.items():
+        # Convert phase_accueil → "Accueil", phase_souffle_regulateur → "Souffle Régulateur"
         label = phase_key.replace('phase_', '').replace('_', ' ').title()
         steps.append((label, phase_text))
     if not steps:
