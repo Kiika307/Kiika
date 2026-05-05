@@ -1,36 +1,18 @@
 import type { NextConfig } from "next";
 
-// SHA-256 hash of the inline theme-detection script in src/app/layout.tsx.
-// If that script changes, recompute via:
-//   node -e "console.log('sha256-'+require('crypto').createHash('sha256').update(SCRIPT).digest('base64'))"
-const INLINE_THEME_SCRIPT_HASH = "'sha256-DI0l3YjRl48PMkQq/mskYFV+VYz9vGNST/bae6NooXU='";
-
-const SUPABASE_HOST = "https://*.supabase.co";
-
-const cspDirectives = [
-  "default-src 'self'",
-  `script-src 'self' ${INLINE_THEME_SCRIPT_HASH}`,
-  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  "font-src 'self' data: https://fonts.gstatic.com",
-  `img-src 'self' data: blob: ${SUPABASE_HOST}`,
-  `connect-src 'self' ${SUPABASE_HOST} wss://*.supabase.co https://api.anthropic.com`,
-  `media-src 'self' blob: ${SUPABASE_HOST}`,
-  "frame-src 'none'",
-  "object-src 'none'",
-  "base-uri 'self'",
-  "form-action 'self'",
-  "frame-ancestors 'none'",
-  "upgrade-insecure-requests",
-].join("; ");
+// NOTE: Content-Security-Policy temporarily removed.
+// The previous static CSP (with sha256 hash for the theme script) blocked
+// Next.js streaming inline scripts injected per request for RSC hydration,
+// breaking the entire app (skeleton stuck loading).
+//
+// To re-introduce CSP safely we need a request-scoped nonce via Next.js
+// middleware (read it back in layout.tsx with `headers()` and apply it to
+// the inline script). Tracked separately.
 
 const securityHeaders = [
   {
     key: "Strict-Transport-Security",
     value: "max-age=63072000; includeSubDomains; preload",
-  },
-  {
-    key: "Content-Security-Policy",
-    value: cspDirectives,
   },
   {
     key: "X-Frame-Options",
