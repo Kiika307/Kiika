@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { ErrorState } from "@/components/ui/ErrorState";
+import { logClientRouteError } from "@/lib/client-error-log";
 
 export default function MessagerieError({
   error,
@@ -11,7 +12,7 @@ export default function MessagerieError({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error("Messagerie route error:", error);
+    logClientRouteError("Messagerie route error", error);
   }, [error]);
 
   return (

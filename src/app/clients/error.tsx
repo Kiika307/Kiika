@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { ErrorState } from "@/components/ui/ErrorState";
+import { logClientRouteError } from "@/lib/client-error-log";
 
 export default function ClientsError({
   error,
@@ -11,7 +12,7 @@ export default function ClientsError({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error("Clients route error:", error);
+    logClientRouteError("Clients route error", error);
   }, [error]);
 
   return (

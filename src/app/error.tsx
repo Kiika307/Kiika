@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { ErrorState } from "@/components/ui/ErrorState";
+import { logClientRouteError } from "@/lib/client-error-log";
 
 interface ErrorProps {
   error: Error & { digest?: string };
@@ -10,7 +11,7 @@ interface ErrorProps {
 
 export default function GlobalRouteError({ error, reset }: ErrorProps) {
   useEffect(() => {
-    console.error("Route error:", error);
+    logClientRouteError("Route error", error);
   }, [error]);
 
   return (

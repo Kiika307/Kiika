@@ -770,17 +770,21 @@ export async function exportClientData(
 
   if (!client) return { ok: false, error: "Client introuvable" };
 
+  // Defence-in-depth: each sub-query is filtered by therapist_id in addition to
+  // the RLS policies, so a misconfigured RLS policy on any one table cannot leak
+  // another therapist's client data.
+  const tid = auth.user.id;
   const [notes, plans, snapshots, tasks, appointments, invoices, documents, consents, messages] =
     await Promise.all([
-      supabase.from("client_notes").select("*").eq("client_id", clientId),
-      supabase.from("client_protocols").select("*").eq("client_id", clientId),
-      supabase.from("client_profile_snapshots").select("*").eq("client_id", clientId),
-      supabase.from("client_tasks").select("*").eq("client_id", clientId),
-      supabase.from("appointments").select("*").eq("client_id", clientId),
-      supabase.from("invoices").select("*").eq("client_id", clientId),
-      supabase.from("client_documents").select("*").eq("client_id", clientId),
-      supabase.from("client_consents").select("*").eq("client_id", clientId),
-      supabase.from("messages").select("*").eq("client_id", clientId),
+      supabase.from("client_notes").select("*").eq("client_id", clientId).eq("therapist_id", tid),
+      supabase.from("client_protocols").select("*").eq("client_id", clientId).eq("therapist_id", tid),
+      supabase.from("client_profile_snapshots").select("*").eq("client_id", clientId).eq("therapist_id", tid),
+      supabase.from("client_tasks").select("*").eq("client_id", clientId).eq("therapist_id", tid),
+      supabase.from("appointments").select("*").eq("client_id", clientId).eq("therapist_id", tid),
+      supabase.from("invoices").select("*").eq("client_id", clientId).eq("therapist_id", tid),
+      supabase.from("client_documents").select("*").eq("client_id", clientId).eq("therapist_id", tid),
+      supabase.from("client_consents").select("*").eq("client_id", clientId).eq("therapist_id", tid),
+      supabase.from("messages").select("*").eq("client_id", clientId).eq("therapist_id", tid),
     ]);
 
   return {

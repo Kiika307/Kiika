@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { ErrorState } from "@/components/ui/ErrorState";
+import { logClientRouteError } from "@/lib/client-error-log";
 
 export default function AgendaError({
   error,
@@ -11,7 +12,7 @@ export default function AgendaError({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error("Agenda route error:", error);
+    logClientRouteError("Agenda route error", error);
   }, [error]);
 
   return (

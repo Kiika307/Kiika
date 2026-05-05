@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { ErrorState } from "@/components/ui/ErrorState";
+import { logClientRouteError } from "@/lib/client-error-log";
 
 export default function ProtocolesError({
   error,
@@ -11,7 +12,7 @@ export default function ProtocolesError({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error("Protocoles route error:", error);
+    logClientRouteError("Protocoles route error", error);
   }, [error]);
 
   return (

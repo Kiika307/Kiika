@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createPublicClient } from "@/lib/supabase/public";
 import { calculateSeleneScores, buildSeleneProfile } from "@/lib/selene-scoring";
 import type { SeleneDimension } from "@/lib/selene-data";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 
 // ============================================================
 // Génération de lien d'invitation au test (thérapeute)
@@ -72,6 +73,13 @@ export interface SeleneInvitationContext {
 }
 
 export async function loadSeleneInvitation(token: string): Promise<SeleneInvitationContext> {
+  // Rate limit: 30 lookups per minute per IP. Protects against brute-force
+  // enumeration of invitation tokens.
+  const ip = await clientIp();
+  if (!rateLimit.consume(`selene:load:${ip}`, 30, 60_000)) {
+    return { ok: false, error: "Trop de requêtes. Réessayez dans une minute." };
+  }
+
   const supabase = await createPublicClient();
   const { data, error } = await supabase
     .rpc("get_selene_invitation", { p_token: token })
@@ -102,6 +110,12 @@ export async function submitSeleneResponses(
   token: string,
   responses: Record<string, number>,
 ): Promise<{ ok: boolean; error?: string; dominante?: string }> {
+  // Rate limit: 5 attempts per IP per hour for a costly write+RPC path.
+  const ip = await clientIp();
+  if (!rateLimit.consume(`selene:submit:${ip}`, 5, 60 * 60 * 1000)) {
+    return { ok: false, error: "Trop de tentatives de soumission. Réessayez plus tard." };
+  }
+
   // Validation basique côté serveur
   const ids = Object.keys(responses);
   if (ids.length < 100) return { ok: false, error: "Réponses incomplètes" };

@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { ErrorState } from "@/components/ui/ErrorState";
+import { logClientRouteError } from "@/lib/client-error-log";
 
 export default function VisioError({
   error,
@@ -11,7 +12,7 @@ export default function VisioError({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error("Visio route error:", error);
+    logClientRouteError("Visio route error", error);
   }, [error]);
 
   return (
