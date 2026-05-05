@@ -1,9 +1,18 @@
--- Test seed for Laurent Martini (f8b161fa-3c12-4cf9-9e26-009af8bcaaf8)
--- 5 varied clients + 3 upcoming appointments + 1 plan + 2 notes
+-- Test seed for a single therapist account.
+-- Provide the target therapist UUID via the THERAPIST_UUID psql variable, e.g.:
+--   psql "$SUPABASE_DB_URL" -v THERAPIST_UUID="'00000000-0000-0000-0000-000000000000'" \
+--                          -f supabase/seed_laurent_test_clients.sql
+-- 5 varied clients + 3 upcoming appointments + 1 plan + 2 notes.
+
+\if :{?THERAPIST_UUID}
+\else
+\warn 'THERAPIST_UUID not provided. Set it via psql -v THERAPIST_UUID="''<uuid>''"'
+\quit
+\endif
 
 DO $$
 DECLARE
-  v_therapist uuid := 'f8b161fa-3c12-4cf9-9e26-009af8bcaaf8';
+  v_therapist uuid := :THERAPIST_UUID::uuid;
   v_camille uuid := gen_random_uuid();
   v_marc uuid := gen_random_uuid();
   v_sophie uuid := gen_random_uuid();

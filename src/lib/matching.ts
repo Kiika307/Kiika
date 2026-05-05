@@ -439,10 +439,47 @@ function anonymizeForLLM(client: Client) {
           axes: client.profile.axes,
         }
       : null,
-    themes: client.profile?.themes ?? [],
-    objectifs: client.profile?.objectifs ?? [],
-    blocages: client.profile?.blocages ?? [],
+    themes: (client.profile?.themes ?? []).map(sanitizeForPrompt),
+    objectifs: (client.profile?.objectifs ?? []).map(sanitizeForPrompt),
+    blocages: (client.profile?.blocages ?? []).map(sanitizeForPrompt),
   };
+}
+
+/**
+ * Sanitize free-text strings before injecting them into an LLM prompt.
+ *
+ * - Strips control characters and zero-width chars.
+ * - Removes lines that look like prompt-injection attempts (system/user role
+ *   markers, instruction overrides, JSON delimiters trying to escape the
+ *   surrounding payload).
+ * - Caps the length to MAX_FIELD_LEN to bound the attack surface and cost.
+ *
+ * Defence-in-depth only — the LLM is also instructed via systemPrompt to ignore
+ * instructions found in the client payload.
+ */
+const MAX_FIELD_LEN = 500;
+const INJECTION_PATTERNS = [
+  /^\s*(?:system|assistant|user)\s*[:>]/i,
+  /ignore\s+(?:all\s+)?previous\s+instructions/i,
+  /disregard\s+(?:the\s+)?(?:above|previous|system)/i,
+  /^\s*```/,
+  /<\|im_(?:start|end)\|>/i,
+  /<\/?(?:system|instructions?)>/i,
+];
+
+function sanitizeForPrompt(input: string): string {
+  if (typeof input !== "string") return "";
+  // Strip control chars (incl. NUL, BEL, BS, DEL) and zero-width markers.
+  let out = input.replace(/[\x00-\x1f\x7f\u200b-\u200f\u2028\u2029\ufeff]/g, " ");
+  // Drop lines that match prompt-injection signatures.
+  out = out
+    .split(/\r?\n/)
+    .filter((line) => !INJECTION_PATTERNS.some((re) => re.test(line)))
+    .join(" ");
+  // Collapse repeated whitespace.
+  out = out.replace(/\s{2,}/g, " ").trim();
+  if (out.length > MAX_FIELD_LEN) out = out.slice(0, MAX_FIELD_LEN) + "…";
+  return out;
 }
 
 export async function deepAnalyzeWithLLM(

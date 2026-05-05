@@ -26,7 +26,7 @@ export function SignupForm() {
         type="password"
         required
         autoComplete="new-password"
-        helper="Au moins 8 caractères"
+        helper="Au moins 10 caractères, mélangeant minuscules, majuscules, chiffres et symboles."
       />
 
       <div className="flex items-start gap-2.5 pt-1">
