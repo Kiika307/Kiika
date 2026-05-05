@@ -1,9 +1,9 @@
 import type { ProtocolDetail } from "./types";
 
 /**
- * Fiches détaillées KIIKA Hammond (IDs 600-792 + 1000-1039) — remplacent les anciens Hammond.
- * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3+4+5+6).
- * 233 protocoles avec scripts complets, structure technique, dimensions KIIKA.
+ * Fiches détaillées KIIKA Hammond (IDs 600-792 + 1000-1069) — remplacent les anciens Hammond.
+ * Source : Varinka Robert — fiches KIIKA v3 (Cercles 1+2+3+4+5+6+7).
+ * 263 protocoles avec scripts complets, structure technique, dimensions KIIKA.
  */
 
 const k_600: ProtocolDetail = {
@@ -9226,6 +9226,1176 @@ const k_1039: ProtocolDetail = {
   croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur prévention rechute ne fonctionne pas pour moi"],
 };
 
+const k_1040: ProtocolDetail = {
+  protocolId: 1040,
+  efficacite: "KIIKA",
+  efficaciteSub: "Trauma / Stabilisation",
+  description: "Protocole INDISPENSABLE en première étape de tout travail trauma. Construit la stabilisation interne (lieu sûr, ressources, régulation) AVANT toute approche du contenu traumatique. Ne pas brûler cette étape.",
+  indications: ["Patients en parcours trauma", "Première étape OBLIGATOIRE avant tout retour sur le contenu", "Patients en ESPT, complexe ou non", "Préalable à K-AVA-002 et suivants"],
+  contraindications: ["Aucune (au contraire, à privilégier toujours)"],
+  programs: [{
+    id: "principal",
+    title: "Stabilisation préalable au travail trauma — Construire le port d'attache",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Stabilisation préalable au travail trauma — Construire le port d'attache",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Protocole INDISPENSABLE en première étape de tout travail trauma. Construit la stabilisation interne (lieu sûr, ressources, régulation) AVANT toute approche du contenu traumatique. Ne pas brûler cette étape." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Lieu sûr profondément ancré", type: "Levier", icon: "🎯", desc: "Stabilisation préalable" },
+    { name: "Ressources internes activées", type: "Levier", icon: "🎯", desc: "Stabilisation préalable" },
+    { name: "Régulation par le souffle", type: "Levier", icon: "🎯", desc: "Stabilisation préalable" },
+    { name: "Port d'attache", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Sécurité ressentie", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur stabilisation ne fonctionne pas pour moi"],
+};
+
+const k_1041: ProtocolDetail = {
+  protocolId: 1041,
+  efficacite: "KIIKA",
+  efficaciteSub: "Trauma / Approche du contenu",
+  description: "Pour approche progressive et sécurisée d'un contenu traumatique chez patient stabilisé. Utilisation de la double dissociation par l'écran de cinéma. UNIQUEMENT après stabilisation solide (K-AVA-001).",
+  indications: ["ESPT avec stabilisation préalable solide", "Patient demandeur et préparé", "Trauma identifié et délimité", "Cadre thérapeutique structuré"],
+  contraindications: ["Stabilisation insuffisante", "ESPT complexe sévère sans cadre psychothérapeutique global", "Dissociation pathologique active", "Comorbidités psychiatriques non stabilisées"],
+  programs: [{
+    id: "principal",
+    title: "Approche du contenu traumatique — Écran de cinéma sécurisé",
+    icon: "◑",
+    duration: "60 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Approche du contenu traumatique — Écran de cinéma sécurisé",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour approche progressive et sécurisée d'un contenu traumatique chez patient stabilisé. Utilisation de la double dissociation par l'écran de cinéma. UNIQUEMENT après stabilisation solide (K-AVA-001)." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Double dissociation par l'écran", type: "Levier", icon: "🎯", desc: "Approche dissociée du trauma" },
+    { name: "Maintien de la fenêtre de tolérance", type: "Levier", icon: "🎯", desc: "Approche dissociée du trauma" },
+    { name: "Possibilité d'arrêt à tout moment", type: "Levier", icon: "🎯", desc: "Approche dissociée du trauma" },
+    { name: "Distance protectrice", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Spectateur en sécurité", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "60 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur approche du contenu ne fonctionne pas pour moi"],
+};
+
+const k_1042: ProtocolDetail = {
+  protocolId: 1042,
+  efficacite: "KIIKA",
+  efficaciteSub: "Trauma / Intégration",
+  description: "Pour patients ayant fait un travail d'approche du trauma. Travail d'intégration : faire de l'événement une part du récit sans qu'il occupe toute la vie, restaurer la continuité narrative.",
+  indications: ["Après travail d'approche trauma réussi", "Patients commençant à vivre l'événement comme passé", "Restauration du récit de vie", "Phase de consolidation"],
+  contraindications: ["Pas de stabilisation préalable", "Trauma encore actif sans travail d'approche"],
+  programs: [{
+    id: "principal",
+    title: "Intégration post-trauma — Reprendre sa place dans le récit de vie",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Intégration post-trauma — Reprendre sa place dans le récit de vie",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients ayant fait un travail d'approche du trauma. Travail d'intégration : faire de l'événement une part du récit sans qu'il occupe toute la vie, restaurer la continuité narrative." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Récit de vie restauré", type: "Levier", icon: "🎯", desc: "Intégration post-trauma" },
+    { name: "Événement intégré sans dominer", type: "Levier", icon: "🎯", desc: "Intégration post-trauma" },
+    { name: "Identité au-delà du trauma", type: "Levier", icon: "🎯", desc: "Intégration post-trauma" },
+    { name: "Récit habité", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Trauma intégré", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur intégration ne fonctionne pas pour moi"],
+};
+
+const k_1043: ProtocolDetail = {
+  protocolId: 1043,
+  efficacite: "KIIKA",
+  efficaciteSub: "Trauma / Flashbacks",
+  description: "Pour patients en ESPT avec flashbacks, reviviscences intrusives, cauchemars répétitifs. Outil d'auto-régulation immédiate. À enseigner dans le cadre d'un travail trauma plus large.",
+  indications: ["ESPT avec flashbacks fréquents", "Reviviscences intrusives diurnes", "Cauchemars répétitifs", "Outil d'urgence à mobiliser entre séances"],
+  contraindications: ["Substitution au cadre psychothérapeutique global"],
+  programs: [{
+    id: "principal",
+    title: "Flashbacks et reviviscences — Sortir de la boucle intrusive",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Flashbacks et reviviscences — Sortir de la boucle intrusive",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en ESPT avec flashbacks, reviviscences intrusives, cauchemars répétitifs. Outil d'auto-régulation immédiate. À enseigner dans le cadre d'un travail trauma plus large." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Ancrage immédiat dans le présent", type: "Levier", icon: "🎯", desc: "Outil de gestion des flashbacks" },
+    { name: "Différenciation passé / présent", type: "Levier", icon: "🎯", desc: "Outil de gestion des flashbacks" },
+    { name: "5 sens activés", type: "Levier", icon: "🎯", desc: "Outil de gestion des flashbacks" },
+    { name: "Présent ancré", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Passé identifié comme passé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur flashbacks ne fonctionne pas pour moi"],
+};
+
+const k_1044: ProtocolDetail = {
+  protocolId: 1044,
+  efficacite: "KIIKA",
+  efficaciteSub: "Trauma / ESPT complexe",
+  description: "Pour ESPT complexe (traumas répétés ou précoces). Approche par les parts dissociées (modèle parts works/IFS-compatible). UNIQUEMENT en cadre psychothérapeutique structuré, formation indispensable.",
+  indications: ["ESPT complexe (DSM-5 ou CIM-11)", "Traumas répétés ou précoces", "Patient en cadre psychothérapeutique structuré", "Travail sur les parts dissociées identifiées"],
+  contraindications: ["TDI (Trouble Dissociatif de l'Identité) — cadre encore plus spécialisé", "Stabilisation insuffisante", "Phase aiguë"],
+  programs: [{
+    id: "principal",
+    title: "ESPT complexe — Travail sur les parts dissociées",
+    icon: "◑",
+    duration: "60 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — ESPT complexe — Travail sur les parts dissociées",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour ESPT complexe (traumas répétés ou précoces). Approche par les parts dissociées (modèle parts works/IFS-compatible). UNIQUEMENT en cadre psychothérapeutique structuré, formation indispensable." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Identification des parts", type: "Levier", icon: "🎯", desc: "Travail par les parts (modèle Internal Family Systems compatible)" },
+    { name: "Communication interne", type: "Levier", icon: "🎯", desc: "Travail par les parts (modèle Internal Family Systems compatible)" },
+    { name: "Soin des parts blessées", type: "Levier", icon: "🎯", desc: "Travail par les parts (modèle Internal Family Systems compatible)" },
+    { name: "Parts reconnues", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Self qui guide", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "60 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "0/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur espt complexe ne fonctionne pas pour moi"],
+};
+
+const k_1045: ProtocolDetail = {
+  protocolId: 1045,
+  efficacite: "KIIKA",
+  efficaciteSub: "Trauma / Phobie de soi",
+  description: "Pour patients ayant peur de leurs propres ressentis, émotions, parts intérieures (phobie d'attachement à soi). Travail délicat de réconciliation avec les dimensions de soi rejetées.",
+  indications: ["Évitement de ses propres émotions", "Peur de certaines parts internes", "Patients qui ne supportent pas leur intériorité", "Souvent conséquence d'ESPT complexe"],
+  contraindications: ["Phase aiguë", "Stabilisation insuffisante"],
+  programs: [{
+    id: "principal",
+    title: "Phobie de soi — Quand certaines parts intérieures font peur",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Phobie de soi — Quand certaines parts intérieures font peur",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients ayant peur de leurs propres ressentis, émotions, parts intérieures (phobie d'attachement à soi). Travail délicat de réconciliation avec les dimensions de soi rejetées." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Approche très progressive", type: "Levier", icon: "🎯", desc: "Phobie de soi" },
+    { name: "Lieu sûr renforcé", type: "Levier", icon: "🎯", desc: "Phobie de soi" },
+    { name: "Compagnon de route intérieur", type: "Levier", icon: "🎯", desc: "Phobie de soi" },
+    { name: "Soi apprivoisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Présence à soi possible", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "0/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur phobie de soi ne fonctionne pas pour moi"],
+};
+
+const k_1046: ProtocolDetail = {
+  protocolId: 1046,
+  efficacite: "KIIKA",
+  efficaciteSub: "Troubles complexes / Dépression",
+  description: "Pour patients en dépression majeure avec suivi médical et antidépresseur. L'hypnose comme complément au traitement, pas substitut. Travail de soutien à la traversée, restauration progressive.",
+  indications: ["Dépression majeure traitée médicalement", "Soutien complémentaire au traitement", "Phase de récupération", "Prévention rechute en post-épisode"],
+  contraindications: ["Substitution au traitement antidépresseur", "Risque suicidaire actif (urgence psychiatrique)", "Mélancolie sévère"],
+  programs: [{
+    id: "principal",
+    title: "Dépression majeure en complément — Soutien à la traversée",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Dépression majeure en complément — Soutien à la traversée",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en dépression majeure avec suivi médical et antidépresseur. L'hypnose comme complément au traitement, pas substitut. Travail de soutien à la traversée, restauration progressive." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Soutien à la traversée", type: "Levier", icon: "🎯", desc: "Soutien dépression majeure" },
+    { name: "Réveil progressif des ressources", type: "Levier", icon: "🎯", desc: "Soutien dépression majeure" },
+    { name: "Reconnexion à la vie", type: "Levier", icon: "🎯", desc: "Soutien dépression majeure" },
+    { name: "Traversée soutenue", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Lumière qui revient", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur dépression ne fonctionne pas pour moi"],
+};
+
+const k_1047: ProtocolDetail = {
+  protocolId: 1047,
+  efficacite: "KIIKA",
+  efficaciteSub: "Troubles complexes / Anxiété",
+  description: "Pour Trouble Anxieux Généralisé sévère, en complément du suivi médical et possible traitement. Approche d'apaisement profond, restauration de la sécurité corporelle de base.",
+  indications: ["TAG sévère diagnostiqué", "Suivi médical en cours", "Patients épuisés par l'anxiété chronique", "Complément au traitement"],
+  contraindications: ["Substitution au traitement", "Comorbidité psychiatrique grave non stabilisée"],
+  programs: [{
+    id: "principal",
+    title: "TAG sévère — Apaisement profond",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — TAG sévère — Apaisement profond",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour Trouble Anxieux Généralisé sévère, en complément du suivi médical et possible traitement. Approche d'apaisement profond, restauration de la sécurité corporelle de base." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Restauration de la sécurité corporelle", type: "Levier", icon: "🎯", desc: "Apaisement profond TAG sévère" },
+    { name: "Régulation parasympathique", type: "Levier", icon: "🎯", desc: "Apaisement profond TAG sévère" },
+    { name: "Désinvestissement de l'anticipation", type: "Levier", icon: "🎯", desc: "Apaisement profond TAG sévère" },
+    { name: "Sécurité corporelle", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Présent suffisant", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur anxiété ne fonctionne pas pour moi"],
+};
+
+const k_1048: ProtocolDetail = {
+  protocolId: 1048,
+  efficacite: "KIIKA",
+  efficaciteSub: "Troubles complexes / TOC",
+  description: "Pour TOC sévère en complément du suivi spécialisé (TCC, traitement). Pas substitut. Travail de soutien, désinvestissement attentionnel des obsessions.",
+  indications: ["TOC sévère en suivi TCC", "Soutien complémentaire", "Phases de difficulté avec rituels"],
+  contraindications: ["Substitution à la TCC ou au traitement", "Phase aiguë sans cadre"],
+  programs: [{
+    id: "principal",
+    title: "TOC sévère en complément — Apaiser le système",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — TOC sévère en complément — Apaiser le système",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour TOC sévère en complément du suivi spécialisé (TCC, traitement). Pas substitut. Travail de soutien, désinvestissement attentionnel des obsessions." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désinvestissement attentionnel", type: "Levier", icon: "🎯", desc: "Soutien TOC sévère" },
+    { name: "Acceptation pensée intrusive", type: "Levier", icon: "🎯", desc: "Soutien TOC sévère" },
+    { name: "Non-réponse au rituel", type: "Levier", icon: "🎯", desc: "Soutien TOC sévère" },
+    { name: "Pensée qui passe", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Rituel non nourri", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur toc ne fonctionne pas pour moi"],
+};
+
+const k_1049: ProtocolDetail = {
+  protocolId: 1049,
+  efficacite: "KIIKA",
+  efficaciteSub: "Troubles complexes / Phobie sociale",
+  description: "Pour phobie sociale sévère en complément TCC (avec exposition). Soutien à la traversée des expositions, restauration de la sécurité dans le regard de l'autre.",
+  indications: ["Phobie sociale sévère en TCC", "Soutien aux expositions progressives", "Difficulté majeure dans la vie sociale"],
+  contraindications: ["Substitution au cadre TCC", "Phase aiguë sans cadre"],
+  programs: [{
+    id: "principal",
+    title: "Phobie sociale sévère — Soutien à l'exposition",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Phobie sociale sévère — Soutien à l'exposition",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour phobie sociale sévère en complément TCC (avec exposition). Soutien à la traversée des expositions, restauration de la sécurité dans le regard de l'autre." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Désamorçage de la peur du regard", type: "Levier", icon: "🎯", desc: "Soutien phobie sociale sévère" },
+    { name: "Sécurité intérieure", type: "Levier", icon: "🎯", desc: "Soutien phobie sociale sévère" },
+    { name: "Soutien aux expositions", type: "Levier", icon: "🎯", desc: "Soutien phobie sociale sévère" },
+    { name: "Présent à soi", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Regard juste", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur phobie sociale ne fonctionne pas pour moi"],
+};
+
+const k_1050: ProtocolDetail = {
+  protocolId: 1050,
+  efficacite: "KIIKA",
+  efficaciteSub: "Troubles complexes / Bipolarité",
+  description: "Pour patients bipolaires en phase de stabilité, en complément du suivi psychiatrique. Travail de prévention rechute, gestion du stress, hygiène de vie. JAMAIS en phase aiguë.",
+  indications: ["Bipolarité en stabilité (euthymie)", "Suivi psychiatrique régulier", "Prévention de rechute", "Gestion du stress complémentaire"],
+  contraindications: ["Phase maniaque ou hypomaniaque (NE PAS travailler)", "Phase dépressive aiguë sévère (cadre médical avant)", "Substitution au traitement"],
+  programs: [{
+    id: "principal",
+    title: "Trouble bipolaire — Hypnose en stabilité",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Trouble bipolaire — Hypnose en stabilité",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients bipolaires en phase de stabilité, en complément du suivi psychiatrique. Travail de prévention rechute, gestion du stress, hygiène de vie. JAMAIS en phase aiguë." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Soutien à la stabilité", type: "Levier", icon: "🎯", desc: "Hypnose en bipolarité stabilisée" },
+    { name: "Reconnaissance des signaux précoces", type: "Levier", icon: "🎯", desc: "Hypnose en bipolarité stabilisée" },
+    { name: "Hygiène de vie", type: "Levier", icon: "🎯", desc: "Hypnose en bipolarité stabilisée" },
+    { name: "Stabilité préservée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Signaux reconnus", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur bipolarité ne fonctionne pas pour moi"],
+};
+
+const k_1051: ProtocolDetail = {
+  protocolId: 1051,
+  efficacite: "KIIKA",
+  efficaciteSub: "Troubles complexes / Borderline",
+  description: "Pour personnalités borderline en suivi psychothérapeutique structuré (DBT, MBT, TFP). Hypnose en complément pour régulation émotionnelle, stabilisation, gestion des crises non aiguës.",
+  indications: ["Trouble borderline en suivi psychothérapeutique", "Apprentissage de la régulation émotionnelle", "Soutien entre les séances de psychothérapie"],
+  contraindications: ["Sans cadre psychothérapeutique structuré", "Crise aiguë (urgence)", "Idéation suicidaire active"],
+  programs: [{
+    id: "principal",
+    title: "Trouble borderline — Régulation émotionnelle complémentaire",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Trouble borderline — Régulation émotionnelle complémentaire",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour personnalités borderline en suivi psychothérapeutique structuré (DBT, MBT, TFP). Hypnose en complément pour régulation émotionnelle, stabilisation, gestion des crises non aiguës." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Tolérance à la détresse", type: "Levier", icon: "🎯", desc: "Régulation borderline" },
+    { name: "Régulation émotionnelle", type: "Levier", icon: "🎯", desc: "Régulation borderline" },
+    { name: "Pleine conscience", type: "Levier", icon: "🎯", desc: "Régulation borderline" },
+    { name: "Vague qui passe", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Soi qui demeure", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur borderline ne fonctionne pas pour moi"],
+};
+
+const k_1052: ProtocolDetail = {
+  protocolId: 1052,
+  efficacite: "KIIKA",
+  efficaciteSub: "Troubles complexes / TDI",
+  description: "Pour patients atteints de TDI en suivi spécialisé. Approche TRÈS prudente, présence sécurisante, pas de tentative d'unification ou de hiérarchisation des parts. Cadre spécialisé absolument indispensable.",
+  indications: ["TDI diagnostiqué en cadre spécialisé", "Présence soutenante en complément", "Stabilisation entre séances spécialisées"],
+  contraindications: ["Sans cadre spécialisé TDI", "Diagnostic incertain", "Tentative d'unification ou de fusion (CONTRE-INDIQUÉ)"],
+  programs: [{
+    id: "principal",
+    title: "Trouble dissociatif identitaire (TDI) — Présence respectueuse",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Trouble dissociatif identitaire (TDI) — Présence respectueuse",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients atteints de TDI en suivi spécialisé. Approche TRÈS prudente, présence sécurisante, pas de tentative d'unification ou de hiérarchisation des parts. Cadre spécialisé absolument indispensable." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Présence sécurisante pour le système", type: "Levier", icon: "🎯", desc: "Soutien TDI" },
+    { name: "Lieu sûr partagé entre parts", type: "Levier", icon: "🎯", desc: "Soutien TDI" },
+    { name: "Communication interne respectueuse", type: "Levier", icon: "🎯", desc: "Soutien TDI" },
+    { name: "Système respecté", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Présence sécurisante", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur tdi ne fonctionne pas pour moi"],
+};
+
+const k_1053: ProtocolDetail = {
+  protocolId: 1053,
+  efficacite: "KIIKA",
+  efficaciteSub: "Troubles complexes / Suicide",
+  description: "Pour patients avec idéations suicidaires chroniques HORS PHASE DE CRISE, en suivi psychiatrique. Travail de soutien, restauration du lien à la vie, identification des protecteurs. JAMAIS en crise.",
+  indications: ["Idéations suicidaires chroniques hors crise", "Suivi psychiatrique régulier", "Patients ayant survécu à des tentatives passées", "Restauration progressive du lien à la vie"],
+  contraindications: ["CRISE SUICIDAIRE ACTIVE (urgence absolue)", "Sans suivi psychiatrique", "Plan suicidaire élaboré (urgence)"],
+  programs: [{
+    id: "principal",
+    title: "Idéations suicidaires hors crise — Soutien et lien à la vie",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Idéations suicidaires hors crise — Soutien et lien à la vie",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients avec idéations suicidaires chroniques HORS PHASE DE CRISE, en suivi psychiatrique. Travail de soutien, restauration du lien à la vie, identification des protecteurs. JAMAIS en crise." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Lien à la vie restauré", type: "Levier", icon: "🎯", desc: "Soutien hors crise suicidaire" },
+    { name: "Identification des protecteurs", type: "Levier", icon: "🎯", desc: "Soutien hors crise suicidaire" },
+    { name: "Contrats de sécurité", type: "Levier", icon: "🎯", desc: "Soutien hors crise suicidaire" },
+    { name: "Vie qui appelle", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Protecteurs identifiés", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur suicide ne fonctionne pas pour moi"],
+};
+
+const k_1054: ProtocolDetail = {
+  protocolId: 1054,
+  efficacite: "KIIKA",
+  efficaciteSub: "Troubles complexes / Schizophrénie",
+  description: "Pour patients schizophrènes en rémission stabilisée, en suivi psychiatrique. Hypnose comme soutien à la qualité de vie, gestion du stress, hygiène. JAMAIS en phase aiguë, JAMAIS approfondie.",
+  indications: ["Schizophrénie stabilisée avec traitement", "Suivi psychiatrique régulier", "Soutien à la qualité de vie", "Gestion du stress en complément"],
+  contraindications: ["Phase aiguë (NE JAMAIS travailler)", "Hallucinations actives", "Idéations délirantes actives", "Hypnose profonde (RISQUE majeur)"],
+  programs: [{
+    id: "principal",
+    title: "Schizophrénie en rémission — Soutien à la qualité de vie",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Schizophrénie en rémission — Soutien à la qualité de vie",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients schizophrènes en rémission stabilisée, en suivi psychiatrique. Hypnose comme soutien à la qualité de vie, gestion du stress, hygiène. JAMAIS en phase aiguë, JAMAIS approfondie." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Présence ancrée dans le réel", type: "Levier", icon: "🎯", desc: "Soutien schizophrénie en rémission" },
+    { name: "Régulation du stress", type: "Levier", icon: "🎯", desc: "Soutien schizophrénie en rémission" },
+    { name: "Hygiène de vie", type: "Levier", icon: "🎯", desc: "Soutien schizophrénie en rémission" },
+    { name: "Réel ancré", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Stress régulé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "1/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur schizophrénie ne fonctionne pas pour moi"],
+};
+
+const k_1055: ProtocolDetail = {
+  protocolId: 1055,
+  efficacite: "KIIKA",
+  efficaciteSub: "Avancé / Oncologie / Annonce",
+  description: "Pour patients confrontés récemment à un diagnostic de cancer (jours à semaines après l'annonce). Travail d'accompagnement du choc, mobilisation des ressources pour la suite, sans précipiter aucune étape.",
+  indications: ["Annonce récente de cancer", "Patient en sidération ou détresse aiguë", "Avant le démarrage des traitements", "Premiers temps post-annonce"],
+  contraindications: ["Décompensation psychiatrique majeure (cadre psychiatrique)"],
+  programs: [{
+    id: "principal",
+    title: "Annonce diagnostique en cancérologie — Traverser le choc",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Annonce diagnostique en cancérologie — Traverser le choc",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients confrontés récemment à un diagnostic de cancer (jours à semaines après l'annonce). Travail d'accompagnement du choc, mobilisation des ressources pour la suite, sans précipiter aucune étape." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Légitimation du choc", type: "Levier", icon: "🎯", desc: "Accompagnement post-annonce diagnostique" },
+    { name: "Stabilisation immédiate", type: "Levier", icon: "🎯", desc: "Accompagnement post-annonce diagnostique" },
+    { name: "Mobilisation des ressources", type: "Levier", icon: "🎯", desc: "Accompagnement post-annonce diagnostique" },
+    { name: "Choc accueilli", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Présent stabilisé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur oncologie / annonce ne fonctionne pas pour moi"],
+};
+
+const k_1056: ProtocolDetail = {
+  protocolId: 1056,
+  efficacite: "KIIKA",
+  efficaciteSub: "Avancé / Oncologie / Acte invasif",
+  description: "Pour préparation à un acte médical lourd : chirurgie d'exérèse oncologique, biopsie complexe, ponction médullaire, mise en place de chambre implantable. Travail spécifique d'apaisement, de visualisation positive de la guérison post-opératoire.",
+  indications: ["Préparation chirurgie oncologique programmée", "Actes invasifs anxiogènes", "Patients en pré-opératoire de procédures lourdes"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Préparation à un acte invasif lourd — Chirurgie majeure, prélèvement",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Préparation à un acte invasif lourd — Chirurgie majeure, prélèvement",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour préparation à un acte médical lourd : chirurgie d'exérèse oncologique, biopsie complexe, ponction médullaire, mise en place de chambre implantable. Travail spécifique d'apaisement, de visualisation positive de la guérison post-opératoire." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement préopératoire intense", type: "Levier", icon: "🎯", desc: "Préparation acte invasif lourd" },
+    { name: "Confiance dans l'équipe", type: "Levier", icon: "🎯", desc: "Préparation acte invasif lourd" },
+    { name: "Visualisation guérison post-op", type: "Levier", icon: "🎯", desc: "Préparation acte invasif lourd" },
+    { name: "Soin reçu", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Corps qui guérit", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur oncologie / acte invasif ne fonctionne pas pour moi"],
+};
+
+const k_1057: ProtocolDetail = {
+  protocolId: 1057,
+  efficacite: "KIIKA",
+  efficaciteSub: "Avancé / Oncologie / Chimiothérapie",
+  description: "Pour patients en cycles de chimiothérapie. Travail spécifique sur la préparation à chaque cycle, la gestion des effets secondaires (nausées surtout, fatigue), le maintien de la qualité de vie pendant le traitement.",
+  indications: ["Cycles de chimiothérapie en cours ou imminents", "Nausées chimio-induites", "Fatigue de chimio", "Anxiété anticipatoire avant chaque cycle"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Chimiothérapie — Préparation et accompagnement des cycles",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Chimiothérapie — Préparation et accompagnement des cycles",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en cycles de chimiothérapie. Travail spécifique sur la préparation à chaque cycle, la gestion des effets secondaires (nausées surtout, fatigue), le maintien de la qualité de vie pendant le traitement." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Préparation à chaque cycle", type: "Levier", icon: "🎯", desc: "Accompagnement chimiothérapie" },
+    { name: "Gestion des nausées (geste-ancre)", type: "Levier", icon: "🎯", desc: "Accompagnement chimiothérapie" },
+    { name: "Préservation de la qualité de vie", type: "Levier", icon: "🎯", desc: "Accompagnement chimiothérapie" },
+    { name: "Cycle traversé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Corps qui reçoit", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur oncologie / chimiothérapie ne fonctionne pas pour moi"],
+};
+
+const k_1058: ProtocolDetail = {
+  protocolId: 1058,
+  efficacite: "KIIKA",
+  efficaciteSub: "Avancé / Oncologie / Radiothérapie",
+  description: "Pour patients en radiothérapie. Travail sur la présence pendant les séances quotidiennes (immobilité requise, isolement temporaire), gestion de la fatigue, présence pleine.",
+  indications: ["Radiothérapie en cours", "Difficulté avec l'immobilité requise", "Anxiété pendant les séances", "Fatigue radio-induite"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Radiothérapie — Présence pendant les séances",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Radiothérapie — Présence pendant les séances",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en radiothérapie. Travail sur la présence pendant les séances quotidiennes (immobilité requise, isolement temporaire), gestion de la fatigue, présence pleine." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Présence pendant immobilité", type: "Levier", icon: "🎯", desc: "Accompagnement radiothérapie" },
+    { name: "Lieu sûr accessible en quelques secondes", type: "Levier", icon: "🎯", desc: "Accompagnement radiothérapie" },
+    { name: "Désamorçage anxiété machine", type: "Levier", icon: "🎯", desc: "Accompagnement radiothérapie" },
+    { name: "Immobilité habitée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Soin reçu", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur oncologie / radiothérapie ne fonctionne pas pour moi"],
+};
+
+const k_1059: ProtocolDetail = {
+  protocolId: 1059,
+  efficacite: "KIIKA",
+  efficaciteSub: "Avancé / Oncologie / Douleur",
+  description: "Pour douleurs cancéreuses complexes (douleurs neuropathiques, douleurs résistant aux antalgiques, douleurs en fin de vie). Approche complémentaire au traitement antalgique médical, jamais en substitution.",
+  indications: ["Douleurs cancéreuses complexes", "Patient sous traitement antalgique en complément", "Soins palliatifs en cours", "Recherche d'apaisement complémentaire"],
+  contraindications: ["Substitution au traitement médical antalgique", "Stabilisation insuffisante en fin de vie"],
+  programs: [{
+    id: "principal",
+    title: "Douleur cancéreuse complexe — Approche multimodale",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Douleur cancéreuse complexe — Approche multimodale",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour douleurs cancéreuses complexes (douleurs neuropathiques, douleurs résistant aux antalgiques, douleurs en fin de vie). Approche complémentaire au traitement antalgique médical, jamais en substitution." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Imagerie de transformation locale", type: "Levier", icon: "🎯", desc: "Approche douleur cancéreuse complexe" },
+    { name: "Apaisement complémentaire", type: "Levier", icon: "🎯", desc: "Approche douleur cancéreuse complexe" },
+    { name: "Lieu sûr accessible", type: "Levier", icon: "🎯", desc: "Approche douleur cancéreuse complexe" },
+    { name: "Douleur transformée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Présent habitable", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur oncologie / douleur ne fonctionne pas pour moi"],
+};
+
+const k_1060: ProtocolDetail = {
+  protocolId: 1060,
+  efficacite: "KIIKA",
+  efficaciteSub: "Avancé / Oncologie / Fatigue",
+  description: "Pour fatigue oncologique persistante (pendant ou après traitements). Travail sur l'acceptation de la limite, la préservation des forces, la qualité du repos, le maintien de moments de vie pleine.",
+  indications: ["Fatigue chronique liée au cancer ou aux traitements", "Patients en post-traitement avec fatigue persistante", "Difficulté à accepter la limite imposée"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Fatigue oncologique chronique — Préserver les forces",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Fatigue oncologique chronique — Préserver les forces",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour fatigue oncologique persistante (pendant ou après traitements). Travail sur l'acceptation de la limite, la préservation des forces, la qualité du repos, le maintien de moments de vie pleine." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Acceptation de la limite", type: "Levier", icon: "🎯", desc: "Gestion fatigue oncologique" },
+    { name: "Qualité du repos", type: "Levier", icon: "🎯", desc: "Gestion fatigue oncologique" },
+    { name: "Hiérarchisation des activités", type: "Levier", icon: "🎯", desc: "Gestion fatigue oncologique" },
+    { name: "Énergie respectée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Limite acceptée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur oncologie / fatigue ne fonctionne pas pour moi"],
+};
+
+const k_1061: ProtocolDetail = {
+  protocolId: 1061,
+  efficacite: "KIIKA",
+  efficaciteSub: "Avancé / Oncologie / Récidive",
+  description: "Pour patients confrontés à une récidive de cancer, à une aggravation, ou à un changement de pronostic. Travail sur la traversée de ce nouveau choc, distinct du choc initial.",
+  indications: ["Annonce de récidive", "Aggravation diagnostique", "Changement de pronostic", "Patients précédemment en rémission"],
+  contraindications: ["Décompensation aiguë (cadre psychiatrique)"],
+  programs: [{
+    id: "principal",
+    title: "Récidive ou aggravation — Faire face à un nouveau choc",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Récidive ou aggravation — Faire face à un nouveau choc",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients confrontés à une récidive de cancer, à une aggravation, ou à un changement de pronostic. Travail sur la traversée de ce nouveau choc, distinct du choc initial." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Légitimation de l'effondrement", type: "Levier", icon: "🎯", desc: "Accompagnement choc de récidive" },
+    { name: "Distinction du premier choc", type: "Levier", icon: "🎯", desc: "Accompagnement choc de récidive" },
+    { name: "Ressources accumulées", type: "Levier", icon: "🎯", desc: "Accompagnement choc de récidive" },
+    { name: "Choc traversé à nouveau", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Ressources éprouvées", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur oncologie / récidive ne fonctionne pas pour moi"],
+};
+
+const k_1062: ProtocolDetail = {
+  protocolId: 1062,
+  efficacite: "KIIKA",
+  efficaciteSub: "Avancé / Oncologie / Incertitude",
+  description: "Pour patients en cancérologie habitant une longue zone d'incertitude (attente de résultats, traitements expérimentaux, pronostic flou). Travail sur l'habitation de l'incertitude sans l'écraser ni s'y résigner.",
+  indications: ["Périodes d'attente longues en oncologie", "Pronostic incertain", "Traitements expérimentaux", "Patients usés par l'incertitude"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Espoir et incertitude — Habiter l'entre-deux",
+    icon: "◑",
+    duration: "45 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Espoir et incertitude — Habiter l'entre-deux",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en cancérologie habitant une longue zone d'incertitude (attente de résultats, traitements expérimentaux, pronostic flou). Travail sur l'habitation de l'incertitude sans l'écraser ni s'y résigner." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Reconnaissance de l'incertitude", type: "Levier", icon: "🎯", desc: "Habitation de l'incertitude oncologique" },
+    { name: "Présence dans le non-savoir", type: "Levier", icon: "🎯", desc: "Habitation de l'incertitude oncologique" },
+    { name: "Espoir sans certitude", type: "Levier", icon: "🎯", desc: "Habitation de l'incertitude oncologique" },
+    { name: "Incertitude habitée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Espoir libre", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "45 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur oncologie / incertitude ne fonctionne pas pour moi"],
+};
+
+const k_1063: ProtocolDetail = {
+  protocolId: 1063,
+  efficacite: "KIIKA",
+  efficaciteSub: "Avancé / Soins palliatifs",
+  description: "Pour patients en soins palliatifs (pronostic vital engagé). Travail spécifique d'accompagnement, présence, apaisement, dimension existentielle. Adaptation à l'état du patient.",
+  indications: ["Patients en soins palliatifs", "Pronostic vital engagé court ou moyen terme", "Patients lucides demandant accompagnement"],
+  contraindications: ["État cognitif altéré majeur (adapter)", "Sans coordination équipe palliative"],
+  programs: [{
+    id: "principal",
+    title: "Soins palliatifs — Présence et apaisement",
+    icon: "◑",
+    duration: "Variable selon état (15-45 min) min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Soins palliatifs — Présence et apaisement",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en soins palliatifs (pronostic vital engagé). Travail spécifique d'accompagnement, présence, apaisement, dimension existentielle. Adaptation à l'état du patient." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Présence respectueuse", type: "Levier", icon: "🎯", desc: "Accompagnement soins palliatifs" },
+    { name: "Apaisement physique et émotionnel", type: "Levier", icon: "🎯", desc: "Accompagnement soins palliatifs" },
+    { name: "Dimension existentielle accueillie", type: "Levier", icon: "🎯", desc: "Accompagnement soins palliatifs" },
+    { name: "Présence offerte", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Apaisement reçu", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "Variable selon état (15-45 min) min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur soins palliatifs ne fonctionne pas pour moi"],
+};
+
+const k_1064: ProtocolDetail = {
+  protocolId: 1064,
+  efficacite: "KIIKA",
+  efficaciteSub: "Avancé / Soins palliatifs / Proches",
+  description: "Pour proches d'une personne en soins palliatifs ou en fin de vie. Soutien spécifique : accompagner sans s'épuiser, dire l'essentiel, traverser l'accompagnement ultime.",
+  indications: ["Proches accompagnant un mourant", "Aidants en soins palliatifs", "Préparation au décès imminent", "Soutien des aidants"],
+  contraindications: ["Aucune"],
+  programs: [{
+    id: "principal",
+    title: "Questions de fin de vie pour les proches — Soutien aux accompagnants",
+    icon: "◑",
+    duration: "50 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Questions de fin de vie pour les proches — Soutien aux accompagnants",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour proches d'une personne en soins palliatifs ou en fin de vie. Soutien spécifique : accompagner sans s'épuiser, dire l'essentiel, traverser l'accompagnement ultime." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Préservation énergétique de l'aidant", type: "Levier", icon: "🎯", desc: "Soutien aux proches en soins palliatifs" },
+    { name: "Présence qualitative", type: "Levier", icon: "🎯", desc: "Soutien aux proches en soins palliatifs" },
+    { name: "Paroles essentielles possibles", type: "Levier", icon: "🎯", desc: "Soutien aux proches en soins palliatifs" },
+    { name: "Aidant ménagé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Présence offerte", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "50 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur soins palliatifs / proches ne fonctionne pas pour moi"],
+};
+
+const k_1065: ProtocolDetail = {
+  protocolId: 1065,
+  efficacite: "KIIKA",
+  efficaciteSub: "Neurodégénératif / Adjuvant",
+  description: "Pour patients en début de maladie neurodégénérative (Alzheimer, Parkinson, SLA) gardant des capacités cognitives et de communication. Travail sur l'apaisement de l'anxiété, la qualité de vie, la dimension de sens.",
+  indications: ["Alzheimer débutant (MMS > 18)", "Parkinson en début ou phase moyenne", "SLA en phase initiale", "Patient capable de communication et de coopération"],
+  contraindications: ["Démence avancée (compréhension altérée)", "Phase confusionnelle aiguë", "Praticien sans connaissance du tableau"],
+  programs: [{
+    id: "principal",
+    title: "Maladies neurodégénératives — Accompagner Alzheimer et Parkinson débutants",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Maladies neurodégénératives — Accompagner Alzheimer et Parkinson débutants",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en début de maladie neurodégénérative (Alzheimer, Parkinson, SLA) gardant des capacités cognitives et de communication. Travail sur l'apaisement de l'anxiété, la qualité de vie, la dimension de sens." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Apaisement de l'anxiété de la maladie", type: "Levier", icon: "🎯", desc: "Soutien aux maladies neurodégénératives" },
+    { name: "Présence à ce qui demeure", type: "Levier", icon: "🎯", desc: "Soutien aux maladies neurodégénératives" },
+    { name: "Qualité de vie soutenue", type: "Levier", icon: "🎯", desc: "Soutien aux maladies neurodégénératives" },
+    { name: "Présent habité", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Capacités présentes", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur adjuvant ne fonctionne pas pour moi"],
+};
+
+const k_1066: ProtocolDetail = {
+  protocolId: 1066,
+  efficacite: "KIIKA",
+  efficaciteSub: "Soins intensifs / Coma",
+  description: "Pour patients en sortie de coma, en soins intensifs, en post-réanimation. Travail de présence rassurante, d'orientation, de récupération psychique. Coordination avec équipe de réa.",
+  indications: ["Sortie de coma récente", "Patient en soins intensifs", "Post-réanimation avec séquelles psychiques", "Confusion post-réveil"],
+  contraindications: ["Patient inconscient (autre approche)", "Pathologie aiguë instable", "Sans accord équipe médicale"],
+  programs: [{
+    id: "principal",
+    title: "Réveil de coma et soins intensifs — Présence à l'émergence",
+    icon: "◑",
+    duration: "25 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Réveil de coma et soins intensifs — Présence à l'émergence",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en sortie de coma, en soins intensifs, en post-réanimation. Travail de présence rassurante, d'orientation, de récupération psychique. Coordination avec équipe de réa." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Présence rassurante", type: "Levier", icon: "🎯", desc: "Accompagnement post-coma" },
+    { name: "Orientation temporelle et spatiale", type: "Levier", icon: "🎯", desc: "Accompagnement post-coma" },
+    { name: "Lien retrouvé", type: "Levier", icon: "🎯", desc: "Accompagnement post-coma" },
+    { name: "Présent retrouvé", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Lien rétabli", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "25 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "1/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur coma ne fonctionne pas pour moi"],
+};
+
+const k_1067: ProtocolDetail = {
+  protocolId: 1067,
+  efficacite: "KIIKA",
+  efficaciteSub: "Annonce / Pronostic",
+  description: "Pour patients venant de recevoir une annonce de mauvais pronostic ou récidive grave. Travail d'accompagnement du choc initial, sans précipiter le travail de deuil ni nier la réalité.",
+  indications: ["Annonce récente de pronostic réservé", "Récidive avec aggravation", "Patient en état de sidération", "Soutien immédiat à l'annonce"],
+  contraindications: ["Annonce non encore comprise (pas de consentement)", "Patient en déni protecteur (laisser le temps)", "Crise psychiatrique aiguë"],
+  programs: [{
+    id: "principal",
+    title: "Annonce de mauvais pronostic — Accompagner le passage",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Annonce de mauvais pronostic — Accompagner le passage",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients venant de recevoir une annonce de mauvais pronostic ou récidive grave. Travail d'accompagnement du choc initial, sans précipiter le travail de deuil ni nier la réalité." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Accueil du choc sans précipiter", type: "Levier", icon: "🎯", desc: "Accompagnement post-annonce mauvais pronostic" },
+    { name: "Lieu sûr stabilisé", type: "Levier", icon: "🎯", desc: "Accompagnement post-annonce mauvais pronostic" },
+    { name: "Présence sans solution", type: "Levier", icon: "🎯", desc: "Accompagnement post-annonce mauvais pronostic" },
+    { name: "Choc accueilli", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Présence offerte", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "0/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur pronostic ne fonctionne pas pour moi"],
+};
+
+const k_1068: ProtocolDetail = {
+  protocolId: 1068,
+  efficacite: "KIIKA",
+  efficaciteSub: "Soins palliatifs / Spiritualité",
+  description: "Pour patients en soins palliatifs avancés ouverts à une dimension spirituelle (religieuse ou non). Travail sur le sens, la traversée, l'apaisement existentiel. Très KIIKA dans son esprit.",
+  indications: ["Patient en soins palliatifs", "Demande explicite de dimension spirituelle", "Questions existentielles vives", "Ouverture à une dimension transcendante"],
+  contraindications: ["Sans demande du patient (jamais imposer)", "Patient en déni nécessaire", "Crise psychiatrique"],
+  programs: [{
+    id: "principal",
+    title: "Dimension spirituelle en fin de vie — Sens et transcendance",
+    icon: "◑",
+    duration: "40 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Dimension spirituelle en fin de vie — Sens et transcendance",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour patients en soins palliatifs avancés ouverts à une dimension spirituelle (religieuse ou non). Travail sur le sens, la traversée, l'apaisement existentiel. Très KIIKA dans son esprit." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Sens de la vie traversée", type: "Levier", icon: "🎯", desc: "Accompagnement spirituel en fin de vie" },
+    { name: "Connexion à plus grand que soi", type: "Levier", icon: "🎯", desc: "Accompagnement spirituel en fin de vie" },
+    { name: "Réconciliations possibles", type: "Levier", icon: "🎯", desc: "Accompagnement spirituel en fin de vie" },
+    { name: "Sens vivant", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Au-delà de soi", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "40 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "0/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur spiritualité ne fonctionne pas pour moi"],
+};
+
+const k_1069: ProtocolDetail = {
+  protocolId: 1069,
+  efficacite: "KIIKA",
+  efficaciteSub: "Profession / Palliatifs",
+  description: "Pour soignants en soins palliatifs (équipes, médecins, infirmiers, aides-soignants, psychologues). Travail spécifique sur l'usure de compassion, le deuil cumulatif, la séparation entre soi et le matériel patient, le maintien de la qualité d'accompagnement.",
+  indications: ["Soignants en soins palliatifs", "Membres d'équipes mobiles douleur/palliatifs", "Médecins en oncologie", "Bénévoles en accompagnement"],
+  contraindications: ["Burn-out constitué (cadre médical d'arrêt)"],
+  programs: [{
+    id: "principal",
+    title: "Soutien aux soignants en soins palliatifs — Pour ceux qui accompagnent",
+    icon: "◑",
+    duration: "35 min",
+    color: "#7C5CBF",
+    recommended: true,
+    description: "Protocole KIIKA v3 — Soutien aux soignants en soins palliatifs — Pour ceux qui accompagnent",
+    seances: [{
+      num: 1,
+      title: "Phases du protocole",
+      steps: [
+      { label: "Travail thérapeutique", detail: "Pour soignants en soins palliatifs (équipes, médecins, infirmiers, aides-soignants, psychologues). Travail spécifique sur l'usure de compassion, le deuil cumulatif, la séparation entre soi et le matériel patient, le maintien de la qualité d'accompagnement." }
+      ],
+    }],
+  }],
+  outils: [
+    { name: "Décharge des accumulations", type: "Levier", icon: "🎯", desc: "Soin de soi des soignants palliatifs" },
+    { name: "Deuils cumulatifs reconnus", type: "Levier", icon: "🎯", desc: "Soin de soi des soignants palliatifs" },
+    { name: "Séparation soi/patient", type: "Levier", icon: "🎯", desc: "Soin de soi des soignants palliatifs" },
+    { name: "Charge déposée", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" },
+    { name: "Deuils reconnus", type: "Valeur KIIKA", icon: "✨", desc: "Mot-clé thérapeutique" }
+  ],
+  stats: [
+    { val: "35 min", label: "Durée séance", sub: "estimation", color: "#7C5CBF" },
+    { val: "2/3", label: "Dim. Ki", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "3/3", label: "Dim. Introspection", sub: "KIIKA v3", color: "#C8A030" },
+    { val: "2/3", label: "Dim. Intuition", sub: "KIIKA v3", color: "#C8A030" }
+  ],
+  croyances: ["Je ne peux pas mobiliser cette approche sur moi-même", "Le travail sur palliatifs ne fonctionne pas pour moi"],
+};
+
 export const kiikaHammondDetails: Record<number, ProtocolDetail> = {
   600: k_600,
   601: k_601,
@@ -9460,4 +10630,34 @@ export const kiikaHammondDetails: Record<number, ProtocolDetail> = {
   1037: k_1037,
   1038: k_1038,
   1039: k_1039,
+  1040: k_1040,
+  1041: k_1041,
+  1042: k_1042,
+  1043: k_1043,
+  1044: k_1044,
+  1045: k_1045,
+  1046: k_1046,
+  1047: k_1047,
+  1048: k_1048,
+  1049: k_1049,
+  1050: k_1050,
+  1051: k_1051,
+  1052: k_1052,
+  1053: k_1053,
+  1054: k_1054,
+  1055: k_1055,
+  1056: k_1056,
+  1057: k_1057,
+  1058: k_1058,
+  1059: k_1059,
+  1060: k_1060,
+  1061: k_1061,
+  1062: k_1062,
+  1063: k_1063,
+  1064: k_1064,
+  1065: k_1065,
+  1066: k_1066,
+  1067: k_1067,
+  1068: k_1068,
+  1069: k_1069,
 };
