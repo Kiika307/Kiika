@@ -1,14 +1,17 @@
 "use client";
 
+import { User } from "lucide-react";
 import type { Appointment, Client } from "@/lib/types";
 
 const HOURS = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+const DAY_LONG = ["DIM", "LUN", "MAR", "MER", "JEU", "VEN", "SAM"];
 const DAY_SHORT = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
 const HOUR_HEIGHT = 62;
 const TIME_COL = 64;
 
 interface DayCell {
   short: string;
+  long: string;
   num: number;
   today: boolean;
   isWeekend: boolean;
@@ -34,6 +37,7 @@ function buildDays(weekStartIso: string): DayCell[] {
     const dow = d.getDay();
     out.push({
       short: DAY_SHORT[dow],
+      long: DAY_LONG[dow],
       num: d.getDate(),
       today: key === todayKey,
       isWeekend: dow === 0 || dow === 6,
@@ -68,17 +72,24 @@ export function WeekView({ appointments, clients, weekStart, onSelect }: WeekVie
         {DAYS.map((d) => (
           <div
             key={d.num}
-            className="px-4 py-3 text-center"
+            className="px-4 py-4 text-center"
             style={{
               backgroundColor: d.today
-                ? "var(--color-gold-light)"
+                ? "var(--color-cream)"
                 : d.isWeekend
                   ? "rgba(0,0,0,0.025)"
                   : undefined,
             }}
           >
-            <div className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)]">{d.short}</div>
-            <div className="font-serif text-[24px] font-semibold text-[var(--color-navy)]">{d.num}</div>
+            <div
+              className="text-[10px] uppercase tracking-[0.18em] mb-1"
+              style={{ color: d.today ? "var(--color-gold)" : "var(--color-gray-soft)" }}
+            >
+              {d.long}
+            </div>
+            <div className="font-serif text-[26px] font-semibold leading-none text-[var(--color-navy)]">
+              {d.num}
+            </div>
           </div>
         ))}
       </div>
@@ -122,21 +133,28 @@ export function WeekView({ appointments, clients, weekStart, onSelect }: WeekVie
             <button
               key={a.id}
               onClick={() => onSelect?.(a)}
-              className="absolute left-1 right-1 rounded-lg px-2 py-1.5 text-left transition-transform hover:scale-[1.02]"
+              className="absolute left-1 right-1 rounded-[10px] px-2.5 py-2 text-left transition-transform hover:scale-[1.02]"
               style={{
                 top,
                 height,
                 backgroundColor: client.color,
-                boxShadow: `0 4px 12px ${client.color}55`,
+                boxShadow: `0 4px 14px ${client.color}55`,
                 gridColumn: dayIdx + 2,
                 position: "absolute",
                 left: `calc(${TIME_COL}px + ${(dayIdx * 100) / DAYS.length}% + 4px)`,
                 width: `calc(${100 / DAYS.length}% - 8px)`,
               }}
             >
-              <div className="text-[10px] font-bold text-white/85 tabular">{a.time}</div>
-              <div className="text-[11px] font-bold text-white truncate">{client.name.split(" ")[0]}</div>
-              {a.protocol && <div className="text-[10px] text-white/80 truncate">{a.protocol}</div>}
+              <div className="flex items-start justify-between gap-1.5">
+                <div className="text-[10px] font-semibold text-white/85 tabular">{a.time}</div>
+                <User size={11} strokeWidth={1.8} className="text-white/75 shrink-0 mt-px" aria-hidden="true" />
+              </div>
+              <div className="font-serif text-[13px] font-semibold text-white leading-tight truncate mt-0.5">
+                {client.name.split(" ")[0]}
+              </div>
+              {a.protocol && (
+                <div className="text-[10.5px] text-white/85 truncate leading-tight mt-0.5">{a.protocol}</div>
+              )}
             </button>
           );
         })}

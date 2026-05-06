@@ -37,6 +37,14 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Server Actions have a 1MB body limit by default, which is too small for
+  // avatar uploads (we accept up to 5MB). Without this override, FormData
+  // submissions over 1MB throw and surface to the user as the global error page.
+  experimental: {
+    serverActions: {
+      bodySizeLimit: "6mb",
+    },
+  },
   async headers() {
     return [
       {
