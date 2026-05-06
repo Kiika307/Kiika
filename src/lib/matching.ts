@@ -490,6 +490,49 @@ function sanitizeForPrompt(input: string): string {
   return out;
 }
 
+/**
+ * Best-effort repair of a JSON string that was truncated mid-output (typical
+ * when an LLM hits its max_tokens budget). Closes a dangling string then any
+ * unclosed `[` / `{` so the partial response can still be parsed.
+ *
+ * Not a general-purpose JSON fixer — only handles truncation, not structural
+ * corruption. Returns the input unchanged if no repair seems applicable.
+ */
+function repairTruncatedJson(s: string): string {
+  let out = s;
+  // Count quotes that are not escaped to detect an open string.
+  let inString = false;
+  let escape = false;
+  const stack: string[] = [];
+  for (let i = 0; i < out.length; i++) {
+    const c = out[i];
+    if (escape) {
+      escape = false;
+      continue;
+    }
+    if (c === "\\") {
+      escape = true;
+      continue;
+    }
+    if (c === '"') {
+      inString = !inString;
+      continue;
+    }
+    if (inString) continue;
+    if (c === "{" || c === "[") stack.push(c);
+    else if (c === "}" || c === "]") stack.pop();
+  }
+  if (inString) {
+    // Strip trailing comma artefacts inside an open string then close it.
+    out = out.replace(/[,\s]+$/u, "") + '"';
+  }
+  while (stack.length) {
+    const open = stack.pop();
+    out += open === "{" ? "}" : "]";
+  }
+  return out;
+}
+
 export async function deepAnalyzeWithLLM(
   client: Client,
   topCandidates: ScoredProtocol[],
@@ -585,7 +628,11 @@ Re-classe ce panel pour ce profil, puis livre ton analyse.`;
       },
       body: JSON.stringify({
         model: "claude-sonnet-4-6",
-        max_tokens: 1500,
+        // 4000 leaves enough headroom for: 5-7 recommended reasonings (~70w each)
+        // + insight 350-500w + 3-4 angles + 1-3 cautions, with margin so the
+        // response never truncates mid-JSON (which would otherwise surface as
+        // "Unterminated string in JSON at position X" on parse).
+        max_tokens: 4000,
         system: systemPrompt,
         messages: [{ role: "user", content: userPrompt }],
       }),
@@ -598,6 +645,7 @@ Re-classe ce panel pour ce profil, puis livre ton analyse.`;
 
     const data = (await res.json()) as {
       content: Array<{ type: string; text: string }>;
+      stop_reason?: string;
     };
     const text = data.content.find((c) => c.type === "text")?.text ?? "";
 
@@ -608,12 +656,32 @@ Re-classe ce panel pour ce profil, puis livre ton analyse.`;
       .replace(/\s*```$/i, "")
       .trim();
 
-    const parsed = JSON.parse(cleaned) as {
+    let parsed: {
       insight?: string;
       alternativeAngles?: string[];
       cautionPoints?: string[];
       recommended?: Array<{ protocolId?: number; rank?: number; reasoning?: string }>;
     };
+    try {
+      parsed = JSON.parse(cleaned);
+    } catch {
+      // Best-effort recovery when the model output got truncated mid-string
+      // (stop_reason "max_tokens") — close the dangling string + close any
+      // open brackets so we still surface the recommendations + whatever
+      // insight made it through.
+      const repaired = repairTruncatedJson(cleaned);
+      try {
+        parsed = JSON.parse(repaired);
+      } catch {
+        return {
+          ok: false,
+          error:
+            data.stop_reason === "max_tokens"
+              ? "Réponse trop longue — réessayez, le budget tokens a été élargi."
+              : "Réponse IA illisible — réessayez dans quelques secondes.",
+        };
+      }
+    }
 
     // Validate the LLM's recommended list — only keep entries whose protocolId
     // actually exists in the candidate pool we sent. This prevents hallucinated
