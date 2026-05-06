@@ -7,7 +7,9 @@ import {
   deepAnalyzeWithLLM,
   type ScoredProtocol,
   type LLMDeepAnalysis,
+  type LLMRecommendation,
 } from "@/lib/matching";
+import type { Protocol } from "@/lib/types";
 import { getClientsRich, getProtocols } from "@/lib/data";
 import type {
   ClientInfo,
@@ -842,9 +844,19 @@ export async function analyzeClientWithKiika(
   };
 }
 
+export interface LLMRecommendedProtocol extends LLMRecommendation {
+  protocol: Protocol;
+}
+
+export interface DeepAnalysisResult {
+  ok: boolean;
+  error?: string;
+  analysis?: LLMDeepAnalysis & { recommendedDetailed?: LLMRecommendedProtocol[] };
+}
+
 export async function deepAnalyzeClientWithLLM(
   clientId: string,
-): Promise<{ ok: boolean; error?: string; analysis?: LLMDeepAnalysis }> {
+): Promise<DeepAnalysisResult> {
   const supabase = await createClient();
   const { data: auth } = await supabase.auth.getUser();
   if (!auth.user) return { ok: false, error: "Non authentifié" };
@@ -853,10 +865,24 @@ export async function deepAnalyzeClientWithLLM(
   const client = clients.find((c) => c.id === clientId);
   if (!client) return { ok: false, error: "Client introuvable" };
 
-  const ranked = rankProtocolsForClient(client, protocols, { topN: 5 });
+  // Wider candidate pool for the LLM: it will re-rank and pick its own top.
+  const ranked = rankProtocolsForClient(client, protocols, { topN: 30 });
   const analysis = await deepAnalyzeWithLLM(client, ranked);
 
-  return { ok: analysis.ok, error: analysis.error, analysis };
+  // Resolve LLM-recommended protocolIds back to full Protocol objects so the
+  // UI can render rich cards without re-fetching anything.
+  const recommendedDetailed: LLMRecommendedProtocol[] = (analysis.recommended ?? [])
+    .map((r) => {
+      const protocol = protocols.find((p) => p.id === r.protocolId);
+      return protocol ? { ...r, protocol } : null;
+    })
+    .filter((x): x is LLMRecommendedProtocol => x !== null);
+
+  return {
+    ok: analysis.ok,
+    error: analysis.error,
+    analysis: { ...analysis, recommendedDetailed },
+  };
 }
 
 // ============================================================

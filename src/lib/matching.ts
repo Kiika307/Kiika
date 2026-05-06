@@ -398,11 +398,19 @@ function buildReasoning(client: Client, p: Protocol, motifsCommon: string[]): st
 //
 // Activation requise : ANTHROPIC_API_KEY + KIIKA_ENABLE_LLM_ANALYSIS=true
 
+export interface LLMRecommendation {
+  protocolId: number;
+  rank: number;
+  reasoning: string;
+}
+
 export interface LLMDeepAnalysis {
   ok: boolean;
   insight?: string;          // markdown, ~400-600 mots
   alternativeAngles?: string[];
   cautionPoints?: string[];
+  /** LLM-curated re-ranking of the candidate pool. Empty when not provided. */
+  recommended?: LLMRecommendation[];
   error?: string;
 }
 
@@ -501,13 +509,18 @@ export async function deepAnalyzeWithLLM(
   }
 
   const anonClient = anonymizeForLLM(client);
-  const candidates = topCandidates.slice(0, 5).map((c) => ({
+  // We send a wider pool (top 25) without the long descriptions, so the model
+  // has enough breadth to surface non-obvious choices but stays within a tight
+  // token budget. Heuristic score is shared as a hint, not a verdict.
+  const candidates = topCandidates.slice(0, 25).map((c) => ({
+    id: c.protocol.id,
     name: c.protocol.name,
     practice: c.protocol.practice,
     category: c.protocol.category,
-    description: c.protocol.description,
+    level: c.protocol.level,
     motifs_couverts: c.motifsCommon,
-    score: c.score,
+    motifs_protocole: c.protocol.motifs ?? [],
+    heuristic_score: c.score,
   }));
 
   const systemPrompt = `Tu es KIIKA, un assistant pour praticiens et accompagnants holistiques (hypnose, sophrologie, PNL, EMDR, énergétique). Ton rôle : analyser le profil d'un client et proposer une lecture nuancée du matching de protocoles.
@@ -534,22 +547,33 @@ Les 9 dimensions et leur essence :
 
 Lis le top 3 + les scores normalisés (0-100, ≥85 = Dominant). Le profil "legacy_profile" 4-axes est secondaire et ancien.
 
+TÂCHE :
+On te fournit un panel de 25 protocoles candidats déjà filtrés par un algorithme de matching local.
+Ton travail : RE-CLASSER ce panel pour produire ton propre top 5-7 le plus pertinent pour ce profil
+spécifique, puis livrer une lecture qualitative de ton choix.
+
 FORMAT DE RÉPONSE — JSON STRICT :
 {
-  "insight": "Analyse en français, 400-600 mots, markdown léger. Structure : (1) Lecture du profil Selene (dimensions dominantes, tensions, ressources) (2) Pourquoi ces protocoles ont du sens pour CE profil (3) Ordre conseillé d'engagement.",
-  "alternativeAngles": ["3-4 angles alternatifs courts en une phrase chacun, qui sortent du top 5 algorithmique"],
-  "cautionPoints": ["1-3 points de vigilance ou contre-indications relatives"]
+  "recommended": [
+    { "protocolId": <int>, "rank": 1, "reasoning": "1-2 phrases expliquant pourquoi CE protocole pour CE profil." },
+    { "protocolId": <int>, "rank": 2, "reasoning": "..." },
+    ...jusqu'à 5-7 protocoles
+  ],
+  "insight": "Analyse en français, 350-500 mots, markdown léger. Structure : (1) Lecture du profil Selene (dimensions dominantes, tensions, ressources) (2) Pourquoi ce parcours plutôt qu'un autre (3) Ordre conseillé d'engagement et signaux à observer.",
+  "alternativeAngles": ["3-4 angles courts en une phrase chacun — protocoles ou approches que tu n'as pas mis dans ton top mais qui mériteraient d'être considérés selon le retour du client"],
+  "cautionPoints": ["1-3 points de vigilance, contre-indications relatives, ou éléments qui nécessitent une réorientation médicale"]
 }
 
+Le champ "recommended" est OBLIGATOIRE — n'utilise QUE des protocolId présents dans la liste fournie.
 Réponds UNIQUEMENT avec ce JSON, rien d'autre.`;
 
   const userPrompt = `Profil client (anonymisé) :
 ${JSON.stringify(anonClient, null, 2)}
 
-Top 5 protocoles candidats (pré-sélection algorithmique) :
+Panel de ${candidates.length} protocoles candidats (pré-filtrés par l'algorithme local) :
 ${JSON.stringify(candidates, null, 2)}
 
-Analyse ce profil et donne ta lecture des protocoles candidats.`;
+Re-classe ce panel pour ce profil, puis livre ton analyse.`;
 
   try {
     const res = await fetch("https://api.anthropic.com/v1/messages", {
@@ -588,13 +612,34 @@ Analyse ce profil et donne ta lecture des protocoles candidats.`;
       insight?: string;
       alternativeAngles?: string[];
       cautionPoints?: string[];
+      recommended?: Array<{ protocolId?: number; rank?: number; reasoning?: string }>;
     };
+
+    // Validate the LLM's recommended list — only keep entries whose protocolId
+    // actually exists in the candidate pool we sent. This prevents hallucinated
+    // protocols from appearing in the UI.
+    const validIds = new Set(candidates.map((c) => c.id));
+    const recommended: LLMRecommendation[] = (parsed.recommended ?? [])
+      .filter(
+        (r): r is { protocolId: number; rank: number; reasoning: string } =>
+          typeof r.protocolId === "number" &&
+          validIds.has(r.protocolId) &&
+          typeof r.reasoning === "string",
+      )
+      .map((r, i) => ({
+        protocolId: r.protocolId,
+        rank: typeof r.rank === "number" ? r.rank : i + 1,
+        reasoning: r.reasoning,
+      }))
+      .sort((a, b) => a.rank - b.rank)
+      .slice(0, 7);
 
     return {
       ok: true,
       insight: parsed.insight ?? "",
       alternativeAngles: parsed.alternativeAngles ?? [],
       cautionPoints: parsed.cautionPoints ?? [],
+      recommended,
     };
   } catch (e) {
     return {

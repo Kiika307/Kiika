@@ -24,6 +24,7 @@ import {
   analyzeClientWithKiika,
   deepAnalyzeClientWithLLM,
   type KiikaAnalysisResult,
+  type LLMRecommendedProtocol,
 } from "@/lib/actions";
 import type { Client, ClientStatus } from "@/lib/types";
 
@@ -36,6 +37,7 @@ interface DeepAnalysis {
   insight?: string;
   alternativeAngles?: string[];
   cautionPoints?: string[];
+  recommendedDetailed?: LLMRecommendedProtocol[];
 }
 
 const STATUS_LABEL: Record<ClientStatus, string> = {
@@ -110,6 +112,7 @@ export function KiikaAssistant({ clients, llmEnabled }: KiikaAssistantProps) {
         insight: res.analysis.insight,
         alternativeAngles: res.analysis.alternativeAngles,
         cautionPoints: res.analysis.cautionPoints,
+        recommendedDetailed: res.analysis.recommendedDetailed,
       });
       toast.success("Analyse approfondie générée");
     });
@@ -377,7 +380,8 @@ export function KiikaAssistant({ clients, llmEnabled }: KiikaAssistantProps) {
                   <div
                     className="rounded-[18px] p-5"
                     style={{
-                      background: "linear-gradient(135deg, var(--color-navy) 0%, #2A3F5C 100%)",
+                      background:
+                        "linear-gradient(135deg, var(--gradient-feature-from) 0%, var(--gradient-feature-to) 100%)",
                       boxShadow: "var(--shadow-card)",
                     }}
                   >
@@ -419,6 +423,63 @@ export function KiikaAssistant({ clients, llmEnabled }: KiikaAssistantProps) {
                       </div>
                     )}
                   </div>
+
+                  {deep && deep.recommendedDetailed && deep.recommendedDetailed.length > 0 && (
+                    <div
+                      className="rounded-[18px] p-5 sm:p-6"
+                      style={{
+                        backgroundColor: "var(--color-white-soft)",
+                        boxShadow: "var(--shadow-card)",
+                      }}
+                    >
+                      <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                        <div className="flex items-center gap-2">
+                          <Brain
+                            size={16}
+                            className="text-[var(--color-gold)]"
+                            aria-hidden="true"
+                          />
+                          <h3 className="font-serif text-[16px] font-semibold text-[var(--color-navy)]">
+                            Sélection KIIKA
+                          </h3>
+                        </div>
+                        <Badge color="#7C5CBF">IA · re-classement</Badge>
+                      </div>
+                      <ol className="space-y-3">
+                        {deep.recommendedDetailed.map((r) => (
+                          <li
+                            key={r.protocolId}
+                            className="rounded-[12px] border border-[var(--color-light-gray)] p-3.5"
+                          >
+                            <div className="flex items-start gap-3">
+                              <div
+                                className="flex-shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-full font-serif text-[15px] font-bold text-white"
+                                style={{ backgroundColor: r.protocol.color }}
+                                aria-hidden="true"
+                              >
+                                {r.rank}
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <Link
+                                  href={`/protocoles/${r.protocol.id}`}
+                                  className="font-serif text-[15px] font-semibold text-[var(--color-navy)] hover:text-[var(--color-gold)] transition-colors"
+                                >
+                                  {r.protocol.name}
+                                </Link>
+                                <div className="mt-0.5 text-[11px] text-[var(--color-gray-soft)]">
+                                  {r.protocol.practice} · {r.protocol.category} ·{" "}
+                                  {r.protocol.level}
+                                </div>
+                                <p className="mt-2 text-[12.5px] text-[var(--color-navy)] leading-[1.6]">
+                                  {r.reasoning}
+                                </p>
+                              </div>
+                            </div>
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
+                  )}
 
                   {deep && (
                     <div
