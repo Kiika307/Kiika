@@ -20,7 +20,7 @@ const statusStyle: Record<Client["status"], { color: string; label: string }> = 
 export function ClientList({ clients, selectedId, onSelect }: ClientListProps) {
   return (
     <aside
-      className="w-full md:w-[272px] shrink-0 h-[calc(100dvh-3.5rem)] md:h-[calc(100vh-64px)] overflow-y-auto md:border-r md:border-[var(--color-light-gray)]"
+      className="w-full md:w-[272px] shrink-0 h-[calc(100dvh-3.5rem)] md:h-[100dvh] md:sticky md:top-0 overflow-y-auto md:border-r md:border-[var(--color-light-gray)]"
       style={{ backgroundColor: "var(--color-white-soft)" }}
       aria-label="Liste des clients"
     >

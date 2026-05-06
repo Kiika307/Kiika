@@ -81,7 +81,7 @@ export function ClientDetail({
   const [tab, setTab] = useState<Tab>("informations");
 
   return (
-    <section className="flex-1 px-4 py-5 sm:px-6 sm:py-6 md:px-9 md:py-8 overflow-y-auto md:h-[calc(100vh-64px)]">
+    <section className="flex-1 px-4 py-5 sm:px-6 sm:py-6 md:px-9 md:py-8 overflow-y-auto md:h-[100dvh]">
       <header className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-5 mb-6 sm:mb-7">
         <div className="flex items-start gap-4 sm:gap-5 flex-1 min-w-0">
           <Avatar initials={client.initials} color={client.color} size={56} />
