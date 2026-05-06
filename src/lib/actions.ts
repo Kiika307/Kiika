@@ -859,3 +859,134 @@ export async function deepAnalyzeClientWithLLM(
   return { ok: analysis.ok, error: analysis.error, analysis };
 }
 
+// ============================================================
+// Profil thérapeute (édition + upload avatar)
+// ============================================================
+
+const ALLOWED_AVATAR_MIME = new Set<string>(["image/jpeg", "image/png", "image/webp"]);
+const MAX_AVATAR_BYTES = 5 * 1024 * 1024; // 5 MB
+
+export interface UpdateProfileInput {
+  fullName: string;
+  role?: string | null;
+}
+
+export async function updateProfile(input: UpdateProfileInput): Promise<{ ok: boolean; error?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const fullName = input.fullName.trim();
+  if (fullName.length < 2 || fullName.length > 120) {
+    return { ok: false, error: "Le nom doit faire entre 2 et 120 caractères." };
+  }
+  // Optional role: free text up to 80 chars (defaults to "Thérapeute holistique" via UI).
+  const role = (input.role ?? "").trim().slice(0, 80) || null;
+
+  const { error } = await supabase
+    .from("profiles")
+    .update({
+      full_name: fullName,
+      ...(role ? { role } : {}),
+      updated_at: new Date().toISOString(),
+    })
+    .eq("id", auth.user.id);
+
+  if (error) return { ok: false, error: error.message };
+
+  // Mirror the name in auth.users metadata so other parts of Supabase Auth
+  // (emails, etc.) see the same display name.
+  await supabase.auth.updateUser({ data: { full_name: fullName } });
+
+  revalidatePath("/", "layout");
+  return { ok: true };
+}
+
+export interface UploadAvatarResult {
+  ok: boolean;
+  error?: string;
+  avatarUrl?: string;
+}
+
+export async function uploadAvatar(formData: FormData): Promise<UploadAvatarResult> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const file = formData.get("file");
+  if (!(file instanceof File)) return { ok: false, error: "Aucun fichier fourni." };
+
+  if (!ALLOWED_AVATAR_MIME.has(file.type)) {
+    return { ok: false, error: "Format non supporté. Utilisez JPEG, PNG ou WebP." };
+  }
+  if (file.size > MAX_AVATAR_BYTES) {
+    return { ok: false, error: "Image trop lourde (max 5 Mo)." };
+  }
+
+  // Path: {uid}/avatar-{timestamp}.{ext}
+  // Timestamp avoids CDN cache collisions when the user re-uploads.
+  const ext = file.type === "image/png" ? "png" : file.type === "image/webp" ? "webp" : "jpg";
+  const path = `${auth.user.id}/avatar-${Date.now()}.${ext}`;
+
+  const { error: uploadError } = await supabase.storage
+    .from("avatars")
+    .upload(path, file, { contentType: file.type, cacheControl: "3600", upsert: false });
+
+  if (uploadError) return { ok: false, error: uploadError.message };
+
+  const { data: publicUrl } = supabase.storage.from("avatars").getPublicUrl(path);
+  const avatarUrl = publicUrl.publicUrl;
+
+  // Best-effort cleanup of any older avatar files for this user (keep storage tidy).
+  // We don't fail the request if listing/deletion errors out.
+  try {
+    const { data: existing } = await supabase.storage.from("avatars").list(auth.user.id);
+    if (existing) {
+      const stale = existing
+        .filter((f) => `${auth.user.id}/${f.name}` !== path)
+        .map((f) => `${auth.user.id}/${f.name}`);
+      if (stale.length) await supabase.storage.from("avatars").remove(stale);
+    }
+  } catch {
+    // ignore — non-blocking housekeeping
+  }
+
+  // Persist on profile.
+  const { error: profileError } = await supabase
+    .from("profiles")
+    .update({ avatar_url: avatarUrl, updated_at: new Date().toISOString() })
+    .eq("id", auth.user.id);
+
+  if (profileError) return { ok: false, error: profileError.message };
+
+  revalidatePath("/", "layout");
+  return { ok: true, avatarUrl };
+}
+
+export async function removeAvatar(): Promise<{ ok: boolean; error?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  // Wipe Storage objects.
+  try {
+    const { data: existing } = await supabase.storage.from("avatars").list(auth.user.id);
+    if (existing && existing.length) {
+      await supabase.storage
+        .from("avatars")
+        .remove(existing.map((f) => `${auth.user.id}/${f.name}`));
+    }
+  } catch {
+    // non-blocking
+  }
+
+  const { error } = await supabase
+    .from("profiles")
+    .update({ avatar_url: null, updated_at: new Date().toISOString() })
+    .eq("id", auth.user.id);
+
+  if (error) return { ok: false, error: error.message };
+  revalidatePath("/", "layout");
+  return { ok: true };
+}
+

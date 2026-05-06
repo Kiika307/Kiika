@@ -36,9 +36,15 @@ interface SidebarProps {
   therapistName: string;
   therapistInitials: string;
   therapistRole: string;
+  therapistAvatarUrl?: string | null;
 }
 
-export function Sidebar({ therapistName, therapistInitials, therapistRole }: SidebarProps) {
+export function Sidebar({
+  therapistName,
+  therapistInitials,
+  therapistRole,
+  therapistAvatarUrl,
+}: SidebarProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -86,7 +92,12 @@ export function Sidebar({ therapistName, therapistInitials, therapistRole }: Sid
         <div className="scale-90 origin-center">
           <Logo />
         </div>
-        <Avatar initials={therapistInitials} color="#C8A030" size={36} />
+        <Avatar
+          initials={therapistInitials}
+          color="#C8A030"
+          size={36}
+          photoUrl={therapistAvatarUrl}
+        />
       </div>
 
       {/* Backdrop mobile */}
@@ -171,11 +182,23 @@ export function Sidebar({ therapistName, therapistInitials, therapistRole }: Sid
         </nav>
 
         <div className="px-4 py-5 border-t border-white/10 flex items-center gap-3">
-          <Avatar initials={therapistInitials} color="#C8A030" size={36} />
-          <div className="min-w-0 flex-1">
-            <div className="text-[13px] font-semibold text-white truncate">{therapistName}</div>
-            <div className="text-[11px] text-white/55 truncate">{therapistRole}</div>
-          </div>
+          <Link
+            href="/settings/profile"
+            aria-label="Modifier mon profil"
+            title="Modifier mon profil"
+            className="flex items-center gap-3 flex-1 min-w-0 rounded-[10px] -mx-2 px-2 py-1.5 hover:bg-white/5 transition-colors"
+          >
+            <Avatar
+              initials={therapistInitials}
+              color="#C8A030"
+              size={36}
+              photoUrl={therapistAvatarUrl}
+            />
+            <div className="min-w-0 flex-1">
+              <div className="text-[13px] font-semibold text-white truncate">{therapistName}</div>
+              <div className="text-[11px] text-white/55 truncate">{therapistRole}</div>
+            </div>
+          </Link>
           <div className="flex items-center gap-1">
             <div className="text-white">
               <ThemeToggle />

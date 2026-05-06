@@ -17,6 +17,7 @@ export async function AppShell({ children }: AppShellProps) {
         therapistName={therapist?.fullName ?? "—"}
         therapistInitials={therapist?.initials ?? "?"}
         therapistRole={therapist?.role ?? "Thérapeute"}
+        therapistAvatarUrl={therapist?.avatarUrl ?? null}
       />
       <main
         id="main-content"

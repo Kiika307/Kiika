@@ -43,6 +43,7 @@ export interface TherapistInfo {
   fullName: string;
   initials: string;
   role: string;
+  avatarUrl: string | null;
 }
 
 export async function getTherapist(): Promise<TherapistInfo | null> {
@@ -52,16 +53,27 @@ export async function getTherapist(): Promise<TherapistInfo | null> {
 
   const { data: profile } = await supabase
     .from("profiles")
-    .select("id, full_name, role")
+    .select("id, full_name, role, avatar_url")
     .eq("id", auth.user.id)
     .maybeSingle();
 
   if (!profile) return null;
+  // Roles either come from a small known set ("admin") or from the user's own
+  // free-text title (e.g. "Hypnothérapeute"). Display the verbatim title when
+  // it's not a system role, else map to a friendly label.
+  const rawRole = profile.role ?? "";
+  const role =
+    rawRole === "admin"
+      ? "Administrateur"
+      : rawRole === "user" || rawRole === ""
+        ? "Thérapeute holistique"
+        : rawRole;
   return {
     id: profile.id,
     fullName: profile.full_name,
     initials: initials(profile.full_name),
-    role: profile.role === "admin" ? "Administrateur" : "Thérapeute holistique",
+    role,
+    avatarUrl: profile.avatar_url ?? null,
   };
 }
 
