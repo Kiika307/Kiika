@@ -10,6 +10,7 @@ const PUBLIC_PREFIXES = [
   "/mentions-legales",
   "/confidentialite",
   "/selene",
+  "/playground",
   "/_next",
   "/favicon",
 ];
