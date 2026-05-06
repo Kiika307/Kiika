@@ -12,12 +12,20 @@ import {
   updateClientProtocol,
   removeClientProtocol,
 } from "@/lib/actions";
-import type { ClientProtocolPlan, PlanStatus, Protocol } from "@/lib/types";
+import { KiikaCarePlanCard } from "./KiikaCarePlanCard";
+import type {
+  ClientKiikaCarePlan,
+  ClientProtocolPlan,
+  PlanStatus,
+  Protocol,
+} from "@/lib/types";
 
 interface PlanTabProps {
   clientId: string;
+  clientFirstName: string;
   plans: ClientProtocolPlan[];
   protocols: Protocol[];
+  carePlans: ClientKiikaCarePlan[];
 }
 
 const STATUS_LABEL: Record<PlanStatus, string> = {
@@ -34,7 +42,13 @@ const STATUS_COLOR: Record<PlanStatus, string> = {
   abandoned: "#999999",
 };
 
-export function PlanTab({ clientId, plans, protocols }: PlanTabProps) {
+export function PlanTab({
+  clientId,
+  clientFirstName,
+  plans,
+  protocols,
+  carePlans,
+}: PlanTabProps) {
   const [adding, setAdding] = useState(false);
   const [pending, startTransition] = useTransition();
   const [error, setError] = useState<string | null>(null);
@@ -47,7 +61,14 @@ export function PlanTab({ clientId, plans, protocols }: PlanTabProps) {
   );
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
+      <KiikaCarePlanCard
+        clientId={clientId}
+        clientFirstName={clientFirstName}
+        carePlans={carePlans}
+        protocols={protocols}
+      />
+
       <div className="flex items-center justify-between">
         <h2 className="font-serif text-[18px] font-semibold text-[var(--color-navy)]">
           Plan de soin

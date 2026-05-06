@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import {
   rankProtocolsForClient,
   deepAnalyzeWithLLM,
+  generateCarePlanWithLLM,
   type ScoredProtocol,
   type LLMDeepAnalysis,
   type LLMRecommendation,
@@ -1051,3 +1052,59 @@ export async function removeAvatar(): Promise<{ ok: boolean; error?: string }> {
   return { ok: true };
 }
 
+
+// ============================================================
+// KIIKA Care Plan — "Donne-moi un conseil" (parcours 10 séances)
+// ============================================================
+
+export async function generateKiikaCarePlanForClient(
+  clientId: string,
+): Promise<{ ok: boolean; error?: string; carePlanId?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const [clients, protocols] = await Promise.all([getClientsRich(), getProtocols()]);
+  const client = clients.find((c) => c.id === clientId);
+  if (!client) return { ok: false, error: "Client introuvable" };
+
+  // Wider candidate pool than the matching analysis — the model needs real
+  // choice across 10 sessions.
+  const ranked = rankProtocolsForClient(client, protocols, { topN: 50 });
+  const plan = await generateCarePlanWithLLM(client, ranked);
+
+  if (!plan.ok) return { ok: false, error: plan.error };
+  if (!plan.sessions || plan.sessions.length === 0) {
+    return { ok: false, error: "L'IA n'a pas réussi à construire un parcours valide." };
+  }
+
+  const context = {
+    themes: client.profile?.themes ?? [],
+    objectifs: client.profile?.objectifs ?? [],
+    blocages: client.profile?.blocages ?? [],
+    dominante: client.selene?.dominante ?? client.profile?.dominante ?? null,
+  };
+
+  const { data: inserted, error: insertError } = await supabase
+    .from("client_kiika_care_plans")
+    .insert({
+      therapist_id: auth.user.id,
+      client_id: clientId,
+      context,
+      diagnostic: plan.diagnostic ?? null,
+      direction: plan.direction ?? null,
+      sessions: plan.sessions,
+      metrics: plan.metrics ?? [],
+      red_flags: plan.redFlags ?? [],
+      model: "claude-sonnet-4-6",
+    })
+    .select("id")
+    .single();
+
+  if (insertError) {
+    return { ok: false, error: `Conseil généré mais non sauvegardé : ${insertError.message}` };
+  }
+
+  revalidatePath("/clients");
+  return { ok: true, carePlanId: inserted.id };
+}

@@ -21,8 +21,10 @@ import type {
   ClientConsent,
   SignatureMethod,
   ClientKiikaAnalysis,
+  ClientKiikaCarePlan,
   KiikaAnalysisObjectives,
   KiikaAnalysisRecommendation,
+  KiikaCarePlanSession,
 } from "@/lib/types";
 
 const PALETTE = ["#7C5CBF", "#D4622A", "#2E8A7B", "#5B8FB9", "#C8A030"];
@@ -1016,4 +1018,97 @@ export async function getLatestKiikaAnalysis(
     .maybeSingle();
   if (!data) return null;
   return mapKiikaAnalysisRow(data as KiikaAnalysisRow);
+}
+
+// ============================================================
+// KIIKA care plans (parcours 10 séances)
+// ============================================================
+
+interface KiikaCarePlanRow {
+  id: string;
+  client_id: string;
+  generated_at: string;
+  context: unknown;
+  diagnostic: string | null;
+  direction: string | null;
+  sessions: unknown;
+  metrics: unknown;
+  red_flags: unknown;
+  model: string;
+}
+
+function mapCarePlanRow(row: KiikaCarePlanRow): ClientKiikaCarePlan {
+  const ctxRaw =
+    row.context && typeof row.context === "object"
+      ? (row.context as Record<string, unknown>)
+      : {};
+  const context: KiikaAnalysisObjectives = {
+    themes: safeStringArray(ctxRaw.themes),
+    objectifs: safeStringArray(ctxRaw.objectifs),
+    blocages: safeStringArray(ctxRaw.blocages),
+    dominante: typeof ctxRaw.dominante === "string" ? ctxRaw.dominante : null,
+  };
+
+  const sessionsRaw = Array.isArray(row.sessions) ? row.sessions : [];
+  const sessions: KiikaCarePlanSession[] = sessionsRaw
+    .filter(
+      (s): s is {
+        num: number;
+        title: string;
+        objective: string;
+        protocolIds: number[];
+        homework: string | null;
+        signals: string[];
+      } =>
+        typeof s === "object" &&
+        s !== null &&
+        typeof (s as Record<string, unknown>).num === "number" &&
+        typeof (s as Record<string, unknown>).title === "string" &&
+        typeof (s as Record<string, unknown>).objective === "string" &&
+        Array.isArray((s as Record<string, unknown>).protocolIds),
+    )
+    .map((s) => ({
+      num: s.num,
+      title: s.title,
+      objective: s.objective,
+      protocolIds: (s.protocolIds as unknown[]).filter(
+        (x): x is number => typeof x === "number",
+      ),
+      homework: typeof s.homework === "string" ? s.homework : null,
+      signals: safeStringArray(s.signals),
+    }))
+    .sort((a, b) => a.num - b.num);
+
+  return {
+    id: row.id,
+    clientId: row.client_id,
+    generatedAt: row.generated_at,
+    context,
+    diagnostic: row.diagnostic,
+    direction: row.direction,
+    sessions,
+    metrics: safeStringArray(row.metrics),
+    redFlags: safeStringArray(row.red_flags),
+    model: row.model,
+  };
+}
+
+export async function getAllKiikaCarePlansByClient(
+  clientIds: string[],
+): Promise<Record<string, ClientKiikaCarePlan[]>> {
+  if (clientIds.length === 0) return {};
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("client_kiika_care_plans")
+    .select(
+      "id, client_id, generated_at, context, diagnostic, direction, sessions, metrics, red_flags, model",
+    )
+    .in("client_id", clientIds)
+    .order("generated_at", { ascending: false });
+  const out: Record<string, ClientKiikaCarePlan[]> = {};
+  for (const row of (data ?? []) as KiikaCarePlanRow[]) {
+    const cp = mapCarePlanRow(row);
+    (out[cp.clientId] ??= []).push(cp);
+  }
+  return out;
 }

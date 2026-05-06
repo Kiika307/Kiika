@@ -7,6 +7,7 @@ import { ClientDetail } from "./ClientDetail";
 import type {
   Client,
   ClientKiikaAnalysis,
+  ClientKiikaCarePlan,
   ClientNote,
   ClientProtocolPlan,
   ClientTask,
@@ -30,6 +31,7 @@ interface ClientsClientProps {
   documentsByClient: Record<string, ClientDocument[]>;
   consentsByClient: Record<string, ClientConsent[]>;
   kiikaAnalysesByClient: Record<string, ClientKiikaAnalysis[]>;
+  kiikaCarePlansByClient: Record<string, ClientKiikaCarePlan[]>;
   therapistName: string;
   initialId?: string;
 }
@@ -46,6 +48,7 @@ export function ClientsClient({
   documentsByClient,
   consentsByClient,
   kiikaAnalysesByClient,
+  kiikaCarePlansByClient,
   therapistName,
   initialId,
 }: ClientsClientProps) {
@@ -91,6 +94,7 @@ export function ClientsClient({
             documents={documentsByClient[selected.id] ?? []}
             consents={consentsByClient[selected.id] ?? []}
             kiikaAnalyses={kiikaAnalysesByClient[selected.id] ?? []}
+            kiikaCarePlans={kiikaCarePlansByClient[selected.id] ?? []}
             therapistName={therapistName}
           />
         </div>

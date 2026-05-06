@@ -716,3 +716,218 @@ Re-classe ce panel pour ce profil, puis livre ton analyse.`;
     };
   }
 }
+
+// =====================================================================
+// LLM Care Plan — parcours 10 séances
+// =====================================================================
+//
+// One-shot prompt: the model reads the anonymised client profile + a
+// pre-filtered protocol catalog (~40 candidates) and returns a
+// structured 10-session journey. Same gating + sanitisation as the
+// matching analysis above.
+
+export interface LLMCarePlanSession {
+  num: number;
+  title: string;
+  objective: string;
+  protocolIds: number[];
+  homework: string | null;
+  signals: string[];
+}
+
+export interface LLMCarePlan {
+  ok: boolean;
+  diagnostic?: string;
+  direction?: string;
+  sessions?: LLMCarePlanSession[];
+  metrics?: string[];
+  redFlags?: string[];
+  error?: string;
+}
+
+export async function generateCarePlanWithLLM(
+  client: Client,
+  candidates: ScoredProtocol[],
+): Promise<LLMCarePlan> {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const enabled = process.env.KIIKA_ENABLE_LLM_ANALYSIS === "true";
+  if (!enabled) {
+    return {
+      ok: false,
+      error: "Conseil KIIKA désactivé. Activez KIIKA_ENABLE_LLM_ANALYSIS côté serveur.",
+    };
+  }
+  if (!apiKey) return { ok: false, error: "Clé API Anthropic manquante côté serveur." };
+
+  const anonClient = anonymizeForLLM(client);
+  // Send a broader catalog (top 40) — the model needs real choice across
+  // 10 sessions. We strip descriptions to keep the input tight.
+  const catalog = candidates.slice(0, 40).map((c) => ({
+    id: c.protocol.id,
+    name: c.protocol.name,
+    practice: c.protocol.practice,
+    category: c.protocol.category,
+    level: c.protocol.level,
+    motifs: c.protocol.motifs ?? [],
+    heuristic_score: c.score,
+  }));
+
+  const systemPrompt = `Tu es KIIKA, assistant pour praticiens et accompagnants holistiques.
+On te demande de bâtir un PARCOURS COMPLET D'ACCOMPAGNEMENT SUR 10 SÉANCES pour un client donné.
+
+CONTEXTE CRITIQUE :
+- Tu n'es PAS un médecin, tu n'établis aucun diagnostic médical.
+- Tu n'as PAS accès aux données identifiantes du client (initiales seulement).
+- Tu suggères des pistes d'accompagnement holistique, pas une prescription.
+- Si le profil contient des signaux dépassant le cadre coaching/holistique (idéations suicidaires, dépression sévère, trauma complexe non traité, dissociation pathologique), tu le signales clairement dans "redFlags" et tu adaptes le parcours pour stabiliser plutôt que creuser.
+
+PRINCIPES DE CONSTRUCTION DU PARCOURS :
+1. Les 1-2 premières séances sécurisent : alliance, ressources internes, ancres corporelles.
+2. Les séances suivantes ciblent le cœur du problème par approches complémentaires (jamais 10 fois la même chose).
+3. Les 1-2 dernières consolident : intégration, métacompétences, autonomisation.
+4. Chaque séance combine 1-3 protocoles cohérents (au moins 1, jusqu'à 3 si vraiment justifiés).
+5. Tu n'utilises QUE les protocolId présents dans la liste fournie. Ne JAMAIS inventer un id.
+6. "homework" est une amorce simple entre séances (5-10 min/jour) — peut être null si pas pertinent.
+7. "signals" = 2-4 indicateurs courts à observer dans la séance pour ajuster.
+
+FORMAT — JSON STRICT, RIEN D'AUTRE :
+{
+  "diagnostic": "Markdown 200-300 mots. Lecture du profil : dimensions dominantes, tensions internes, ressources disponibles, hypothèses cliniques (au sens holistique).",
+  "direction": "1-2 phrases : la trajectoire d'accompagnement en une ligne stratégique.",
+  "sessions": [
+    {
+      "num": 1,
+      "title": "Titre court de la séance",
+      "objective": "Objectif spécifique à cette séance (1 phrase)",
+      "protocolIds": [<int>, ...],
+      "homework": "Devoir d'intersession (ou null)",
+      "signals": ["signal 1", "signal 2", "signal 3"]
+    },
+    ... 10 séances au total, num: 1 à 10
+  ],
+  "metrics": ["3-5 indicateurs d'évolution mesurables sur la durée du parcours"],
+  "redFlags": ["1-3 signaux qui justifieraient une réorientation médicale/psychologique (laisse vide [] si rien)"]
+}`;
+
+  const userPrompt = `Profil client (anonymisé) :
+${JSON.stringify(anonClient, null, 2)}
+
+Bibliothèque de protocoles disponibles (${catalog.length} entrées, pré-filtrées par pertinence locale) :
+${JSON.stringify(catalog, null, 2)}
+
+Construis un parcours complet sur 10 séances.`;
+
+  try {
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-6",
+        // Generous budget: 10 sessions × ~150 tokens each + diagnostic 300w
+        // + metrics + red flags ≈ 3500-4500 tokens. 6000 leaves headroom.
+        max_tokens: 6000,
+        system: systemPrompt,
+        messages: [{ role: "user", content: userPrompt }],
+      }),
+    });
+    if (!res.ok) {
+      const errText = await res.text();
+      return { ok: false, error: `API Anthropic ${res.status} : ${errText.slice(0, 200)}` };
+    }
+    const data = (await res.json()) as {
+      content: Array<{ type: string; text: string }>;
+      stop_reason?: string;
+    };
+    const text = data.content.find((c) => c.type === "text")?.text ?? "";
+    const cleaned = text
+      .replace(/^```json\s*/i, "")
+      .replace(/^```\s*/i, "")
+      .replace(/\s*```$/i, "")
+      .trim();
+
+    let parsed: {
+      diagnostic?: string;
+      direction?: string;
+      sessions?: Array<{
+        num?: number;
+        title?: string;
+        objective?: string;
+        protocolIds?: number[];
+        homework?: string | null;
+        signals?: string[];
+      }>;
+      metrics?: string[];
+      redFlags?: string[];
+    };
+    try {
+      parsed = JSON.parse(cleaned);
+    } catch {
+      try {
+        parsed = JSON.parse(repairTruncatedJson(cleaned));
+      } catch {
+        return {
+          ok: false,
+          error:
+            data.stop_reason === "max_tokens"
+              ? "Réponse trop longue — réessayez."
+              : "Réponse IA illisible — réessayez.",
+        };
+      }
+    }
+
+    // Validate the sessions: only keep entries whose protocolIds all exist
+    // in the catalog we sent. Drop unknown ids; drop sessions left empty.
+    const validIds = new Set(catalog.map((c) => c.id));
+    const sessions: LLMCarePlanSession[] = (parsed.sessions ?? [])
+      .filter(
+        (s): s is {
+          num: number;
+          title: string;
+          objective: string;
+          protocolIds: number[];
+          homework: string | null;
+          signals: string[];
+        } =>
+          typeof s.num === "number" &&
+          typeof s.title === "string" &&
+          typeof s.objective === "string" &&
+          Array.isArray(s.protocolIds),
+      )
+      .map((s) => ({
+        num: s.num,
+        title: s.title,
+        objective: s.objective,
+        protocolIds: s.protocolIds.filter((id) => validIds.has(id)),
+        homework:
+          typeof s.homework === "string" && s.homework.trim() !== "" ? s.homework : null,
+        signals: Array.isArray(s.signals)
+          ? s.signals.filter((x): x is string => typeof x === "string")
+          : [],
+      }))
+      .filter((s) => s.protocolIds.length > 0)
+      .sort((a, b) => a.num - b.num)
+      .slice(0, 10);
+
+    return {
+      ok: true,
+      diagnostic: parsed.diagnostic ?? "",
+      direction: parsed.direction ?? "",
+      sessions,
+      metrics: Array.isArray(parsed.metrics)
+        ? parsed.metrics.filter((x): x is string => typeof x === "string")
+        : [],
+      redFlags: Array.isArray(parsed.redFlags)
+        ? parsed.redFlags.filter((x): x is string => typeof x === "string")
+        : [],
+    };
+  } catch (e) {
+    return {
+      ok: false,
+      error: e instanceof Error ? e.message : "Erreur inconnue lors de l'appel LLM",
+    };
+  }
+}

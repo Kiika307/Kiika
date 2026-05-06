@@ -296,3 +296,25 @@ export interface ClientKiikaAnalysis {
   candidatesCount: number;
   model: string;
 }
+
+export interface KiikaCarePlanSession {
+  num: number;
+  title: string;
+  objective: string;
+  protocolIds: number[];
+  homework: string | null;
+  signals: string[];
+}
+
+export interface ClientKiikaCarePlan {
+  id: string;
+  clientId: string;
+  generatedAt: string;
+  context: KiikaAnalysisObjectives;
+  diagnostic: string | null;
+  direction: string | null;
+  sessions: KiikaCarePlanSession[];
+  metrics: string[];
+  redFlags: string[];
+  model: string;
+}
