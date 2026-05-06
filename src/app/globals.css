@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 @theme {
+  /* Featured card gradient — overridden per theme */
+  --gradient-feature-from: #1B2D47;
+  --gradient-feature-to: #2A3F5C;
+
   /* INTIO Design Tokens */
   --color-cream: #FAF2DF;
   --color-navy: #1B2D47;
@@ -72,35 +76,40 @@ html[data-theme="dark"] {
 
 /* === Dark Academia ===
    Activé via [data-theme="academia"] sur <html>.
-   Palette warm dark, transitions lentes, ombres diffuses, accents bordeaux/laiton. */
+   Schéma CLAIR-CHAUD : fond cream, texte velours, sidebar et cartes navy gardent
+   leur contraste sombre via leurs propres gradients. */
 html[data-theme="academia"] {
-  --color-cream: #1B130D;          /* base velours profond */
-  --color-navy: #F2EAD8;            /* texte chaux */
-  --color-navy-dark: #D9C9A8;       /* texte parchemin */
-  --color-gold: #C4A472;            /* laiton soft */
-  --color-gold-light: #2A1F16;      /* surface chaude pour boutons */
-  --color-teal: #C19A6B;            /* accent secondaire chaud */
-  --color-teal-light: #2A1F16;
-  --color-white-soft: #261A12;      /* surfaces de cartes */
-  --color-gray-soft: #B79E78;       /* texte secondaire chaud */
-  --color-light-gray: #3B2C24;      /* bordures cuir */
+  --color-cream: #EBE0CB;           /* parchemin chaud (fond app) */
+  --color-navy: #2A1F16;            /* velours profond (texte + sidebar) */
+  --color-navy-dark: #1B130D;       /* encre — accents */
+  --color-gold: #A88656;            /* laiton */
+  --color-gold-light: #F2E5C2;      /* cream-or pour boutons sur fond sombre */
+  --color-teal: #7A1F2B;            /* bordeaux remplace le teal pour l'accent secondaire */
+  --color-teal-light: #F0E1E0;      /* tint léger bordeaux */
+  --color-white-soft: #FBF6E8;      /* cream très clair pour les cartes */
+  --color-gray-soft: #6B5A40;       /* brun chaud pour texte secondaire */
+  --color-light-gray: #DDCEB1;      /* dividers parchemin */
   --color-red-alert: #B5394A;       /* bordeaux */
-  --color-purple-alt: #A88656;      /* laiton */
-  --color-purple-light: #2A1F16;
-  --color-client-purple: #A88656;
+  --color-purple-alt: #5A3A2C;      /* cuir */
+  --color-purple-light: #ECE0CC;    /* tint purple-cream */
+  --color-client-purple: #5A3A2C;
   --color-client-orange: #B5394A;
-  --color-client-teal: #C4A472;
-  --color-client-blue: #B79E78;
+  --color-client-teal: #A88656;
+  --color-client-blue: #6B5A40;
   --background: var(--color-cream);
   --foreground: var(--color-navy);
 
-  /* Diffuse two-stop shadows (lux, not flashy) */
-  --shadow-card: 0 1px 1px rgba(0,0,0,.20), 0 18px 40px rgba(0,0,0,.34);
-  --shadow-card-hover: 0 1px 1px rgba(0,0,0,.30), 0 30px 80px rgba(0,0,0,.45);
-  --shadow-modal: 0 24px 80px rgba(0,0,0,.65);
-  --shadow-tweaks: 0 12px 50px rgba(0,0,0,.40);
+  /* Soft warm shadows (lux, pas de bleu) */
+  --shadow-card: 0 1px 1px rgba(40,28,20,.04), 0 12px 32px rgba(40,28,20,.10);
+  --shadow-card-hover: 0 1px 1px rgba(40,28,20,.06), 0 24px 48px rgba(40,28,20,.16);
+  --shadow-modal: 0 24px 64px rgba(40,28,20,.32);
+  --shadow-tweaks: 0 12px 40px rgba(40,28,20,.18);
 
-  color-scheme: dark;
+  /* Warm-dark gradient for featured cards in academia */
+  --gradient-feature-from: #1B130D;
+  --gradient-feature-to: #2A1F16;
+
+  color-scheme: light;
 }
 
 /* Slow controlled motion for academia (luxury = slowness) */

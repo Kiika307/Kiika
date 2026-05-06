@@ -148,7 +148,8 @@ export default async function DashboardPage() {
             className="rounded-[18px] p-6 relative overflow-hidden"
             style={
               {
-                background: "linear-gradient(135deg, var(--color-navy) 0%, #2A3F5C 100%)",
+                background:
+                  "linear-gradient(135deg, var(--gradient-feature-from) 0%, var(--gradient-feature-to) 100%)",
                 color: "var(--color-gold-light)",
                 "--aca-photo": `url(${academiaFeaturePhotos.kiikaAssistant})`,
               } as React.CSSProperties

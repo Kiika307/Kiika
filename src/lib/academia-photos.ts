@@ -32,6 +32,6 @@ export const academiaFeaturePhotos = {
   kiikaAssistant: `${BASE}/photo-1506880018603-83d5b814b5a6?${Q}&w=720&h=520`,
   /** Plant + cup of tea — weekly recap */
   weeklyRecap: `${BASE}/photo-1453928582365-b6ad33cbcf64?${Q}&w=720&h=420`,
-  /** Library bottom of sidebar — vase + dried flowers + books */
-  sidebarFooter: `${BASE}/photo-1518791841217-8f162f1e1131?${Q}&w=300&h=460`,
+  /** Library aisle (vertical crop) — bottom of sidebar */
+  sidebarFooter: `${BASE}/photo-1481627834876-b7833e8f5570?${Q}&w=300&h=520`,
 };
