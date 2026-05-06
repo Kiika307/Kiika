@@ -20,6 +20,7 @@ import {
   Brain,
 } from "lucide-react";
 import { signOutAction } from "@/app/login/actions";
+import { academiaFeaturePhotos } from "@/lib/academia-photos";
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -120,8 +121,23 @@ export function Sidebar({ therapistName, therapistInitials, therapistRole }: Sid
           </button>
         </div>
 
-        <nav className="flex-1 px-3" aria-label="Sections de l'application">
-          <ul className="space-y-1">
+        <nav className="flex-1 px-3 relative" aria-label="Sections de l'application">
+          {/* Decorative photo (academia theme only) */}
+          <div
+            className="aca-only pointer-events-none absolute left-0 right-0 bottom-0 h-[42%] aca-sidebar-photo"
+            style={
+              {
+                "--aca-photo": `url(${academiaFeaturePhotos.sidebarFooter})`,
+                opacity: 0.7,
+                WebkitMaskImage: "linear-gradient(to top, black 30%, transparent 100%)",
+                maskImage: "linear-gradient(to top, black 30%, transparent 100%)",
+                borderRadius: "12px",
+                zIndex: 0,
+              } as React.CSSProperties
+            }
+            aria-hidden="true"
+          />
+          <ul className="space-y-1 relative" style={{ zIndex: 1 }}>
             {navItems.map(({ href, label, icon: Icon }) => {
               const active = href === "/" ? pathname === "/" : pathname.startsWith(href);
               return (

@@ -14,6 +14,7 @@ import {
   getClients,
   getProtocols,
 } from "@/lib/data";
+import { academiaStatPhotos, academiaFeaturePhotos } from "@/lib/academia-photos";
 
 const todayLabel = new Intl.DateTimeFormat("fr-FR", {
   weekday: "long",
@@ -54,6 +55,7 @@ export default async function DashboardPage() {
           value={stats.clientsActifs}
           sub={stats.clientsNouveaux > 0 ? `+${stats.clientsNouveaux} nouveaux` : "—"}
           color="#2E8A7B"
+          photoUrl={academiaStatPhotos.clients}
         />
         <StatCard
           icon={<CalendarCheck size={18} strokeWidth={1.8} aria-hidden="true" />}
@@ -61,6 +63,7 @@ export default async function DashboardPage() {
           value={stats.seancesTotal}
           sub={`${stats.seancesSemaine} cette semaine`}
           color="#C8A030"
+          photoUrl={academiaStatPhotos.sessions}
         />
         <StatCard
           icon={<TrendingUp size={18} strokeWidth={1.8} aria-hidden="true" />}
@@ -68,6 +71,7 @@ export default async function DashboardPage() {
           value={`${stats.tauxSuivi}%`}
           sub={stats.seancesTotal > 0 ? "sur RDV planifiés" : "Aucun RDV"}
           color="#2E8A7B"
+          photoUrl={academiaStatPhotos.followup}
         />
         <StatCard
           icon={<Sparkles size={18} strokeWidth={1.8} aria-hidden="true" />}
@@ -75,6 +79,7 @@ export default async function DashboardPage() {
           value={stats.protocolesActifs}
           sub={stats.protocolesActifs > 0 ? "associés à des RDV" : "—"}
           color="#7C5CBF"
+          photoUrl={academiaStatPhotos.protocols}
         />
       </div>
 
@@ -141,16 +146,20 @@ export default async function DashboardPage() {
         <div className="space-y-6">
           <section
             className="rounded-[18px] p-6 relative overflow-hidden"
-            style={{
-              background: "linear-gradient(135deg, var(--color-navy) 0%, #2A3F5C 100%)",
-              color: "var(--color-gold-light)",
-            }}
+            style={
+              {
+                background: "linear-gradient(135deg, var(--color-navy) 0%, #2A3F5C 100%)",
+                color: "var(--color-gold-light)",
+                "--aca-photo": `url(${academiaFeaturePhotos.kiikaAssistant})`,
+              } as React.CSSProperties
+            }
           >
             <div
               className="pointer-events-none absolute -top-12 -right-12 h-40 w-40 rounded-full opacity-20 blur-2xl"
               style={{ background: "radial-gradient(circle, #C8A030 0%, transparent 70%)" }}
               aria-hidden="true"
             />
+            <div className="aca-feature-photo" aria-hidden="true" />
             <header className="flex items-center gap-2.5 mb-3 relative">
               <div
                 className="inline-flex items-center justify-center rounded-[10px] w-9 h-9"
@@ -213,13 +222,26 @@ export default async function DashboardPage() {
             )}
           </section>
 
-          <section className="rounded-[18px] p-6" style={{ backgroundColor: "var(--color-gold-light)" }}>
-            <h2 className="font-serif text-[16px] font-semibold text-[var(--color-navy)] mb-4">Cette semaine</h2>
-            <div className="grid grid-cols-2 gap-4">
-              <Mini value={String(stats.seancesSemaine)} label="Séances" />
-              <Mini value={String(stats.clientsNouveaux)} label="Nouveaux clients" />
-              <Mini value={`${stats.tauxSuivi}%`} label="Taux de suivi" />
-              <Mini value={String(stats.protocolesActifs)} label="Protocoles" />
+          <section
+            className="rounded-[18px] p-6 relative overflow-hidden"
+            style={
+              {
+                backgroundColor: "var(--color-gold-light)",
+                "--aca-photo": `url(${academiaFeaturePhotos.weeklyRecap})`,
+              } as React.CSSProperties
+            }
+          >
+            <div className="aca-feature-photo" aria-hidden="true" />
+            <div className="relative z-[1]">
+              <h2 className="font-serif text-[16px] font-semibold text-[var(--color-navy)] mb-4">
+                Cette semaine
+              </h2>
+              <div className="grid grid-cols-2 gap-4">
+                <Mini value={String(stats.seancesSemaine)} label="Séances" />
+                <Mini value={String(stats.clientsNouveaux)} label="Nouveaux clients" />
+                <Mini value={`${stats.tauxSuivi}%`} label="Taux de suivi" />
+                <Mini value={String(stats.protocolesActifs)} label="Protocoles" />
+              </div>
             </div>
           </section>
         </div>

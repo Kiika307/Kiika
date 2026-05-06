@@ -70,11 +70,124 @@ html[data-theme="dark"] {
   color-scheme: dark;
 }
 
+/* === Dark Academia ===
+   Activé via [data-theme="academia"] sur <html>.
+   Palette warm dark, transitions lentes, ombres diffuses, accents bordeaux/laiton. */
+html[data-theme="academia"] {
+  --color-cream: #1B130D;          /* base velours profond */
+  --color-navy: #F2EAD8;            /* texte chaux */
+  --color-navy-dark: #D9C9A8;       /* texte parchemin */
+  --color-gold: #C4A472;            /* laiton soft */
+  --color-gold-light: #2A1F16;      /* surface chaude pour boutons */
+  --color-teal: #C19A6B;            /* accent secondaire chaud */
+  --color-teal-light: #2A1F16;
+  --color-white-soft: #261A12;      /* surfaces de cartes */
+  --color-gray-soft: #B79E78;       /* texte secondaire chaud */
+  --color-light-gray: #3B2C24;      /* bordures cuir */
+  --color-red-alert: #B5394A;       /* bordeaux */
+  --color-purple-alt: #A88656;      /* laiton */
+  --color-purple-light: #2A1F16;
+  --color-client-purple: #A88656;
+  --color-client-orange: #B5394A;
+  --color-client-teal: #C4A472;
+  --color-client-blue: #B79E78;
+  --background: var(--color-cream);
+  --foreground: var(--color-navy);
+
+  /* Diffuse two-stop shadows (lux, not flashy) */
+  --shadow-card: 0 1px 1px rgba(0,0,0,.20), 0 18px 40px rgba(0,0,0,.34);
+  --shadow-card-hover: 0 1px 1px rgba(0,0,0,.30), 0 30px 80px rgba(0,0,0,.45);
+  --shadow-modal: 0 24px 80px rgba(0,0,0,.65);
+  --shadow-tweaks: 0 12px 50px rgba(0,0,0,.40);
+
+  color-scheme: dark;
+}
+
+/* Slow controlled motion for academia (luxury = slowness) */
+html[data-theme="academia"] * {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
 html, body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+/* === Academia decorative photos (dashboard, sidebar) ===
+   Rendues toujours dans le DOM, masquées sur les autres thèmes.
+   Utilise une variable --aca-photo en inline style pour passer l'URL. */
+.aca-photo,
+.aca-photo-fade,
+.aca-feature-photo {
+  display: none;
+}
+html[data-theme="academia"] .aca-photo {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 45%;
+  background-image: var(--aca-photo);
+  background-size: cover;
+  background-position: center;
+  border-radius: inherit;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 35%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 35%, black 100%);
+}
+html[data-theme="academia"] .aca-photo-fade {
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-image: var(--aca-photo);
+  background-size: cover;
+  background-position: center;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.45;
+  -webkit-mask-image: linear-gradient(135deg, transparent 0%, black 60%);
+  mask-image: linear-gradient(135deg, transparent 0%, black 60%);
+}
+html[data-theme="academia"] .aca-feature-photo {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background-image: var(--aca-photo);
+  background-size: cover;
+  background-position: center;
+  border-radius: inherit;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
+  mask-image: linear-gradient(to right, transparent 0%, black 30%);
+}
+html[data-theme="academia"] .aca-sidebar-photo {
+  background-image: var(--aca-photo);
+  background-size: cover;
+  background-position: center;
+}
+html[data-theme="academia"] .aca-only {
+  display: revert;
+}
+.aca-only {
+  display: none;
+}
+
+/* Subtle paper grain on academia theme only — fixed, low opacity */
+html[data-theme="academia"] body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='420'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.92  0 0 0 0 0.85  0 0 0 0.6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 
 h1, h2, h3, h4, h5 {

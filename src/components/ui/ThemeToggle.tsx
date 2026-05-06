@@ -1,19 +1,27 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, BookOpen } from "lucide-react";
 
-type Theme = "light" | "dark";
+type Theme = "light" | "dark" | "academia";
 
 const STORAGE_KEY = "intio-theme";
+const ORDER: Theme[] = ["light", "dark", "academia"];
+const LABEL: Record<Theme, string> = {
+  light: "clair",
+  dark: "sombre",
+  academia: "academia",
+};
+
+function isTheme(value: string | null): value is Theme {
+  return value === "light" || value === "dark" || value === "academia";
+}
 
 function getInitialTheme(): Theme {
   if (typeof window === "undefined") return "light";
   const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (stored === "dark" || stored === "light") return stored;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+  if (isTheme(stored)) return stored;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
 export function ThemeToggle() {
@@ -31,7 +39,8 @@ export function ThemeToggle() {
     window.localStorage.setItem(STORAGE_KEY, theme);
   }, [theme, mounted]);
 
-  const toggle = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
+  const cycle = () =>
+    setTheme((t) => ORDER[(ORDER.indexOf(t) + 1) % ORDER.length] as Theme);
 
   if (!mounted) {
     return (
@@ -45,19 +54,19 @@ export function ThemeToggle() {
     );
   }
 
+  const next = ORDER[(ORDER.indexOf(theme) + 1) % ORDER.length] as Theme;
+
   return (
     <button
       type="button"
-      onClick={toggle}
-      aria-label={theme === "dark" ? "Activer le thème clair" : "Activer le thème sombre"}
-      title={theme === "dark" ? "Thème clair" : "Thème sombre"}
+      onClick={cycle}
+      aria-label={`Thème actuel : ${LABEL[theme]}. Basculer vers ${LABEL[next]}.`}
+      title={`Thème : ${LABEL[theme]} → ${LABEL[next]}`}
       className="inline-flex items-center justify-center rounded-[10px] min-h-9 min-w-9 text-[var(--color-gray-soft)] hover:bg-[var(--color-light-gray)] hover:text-[var(--color-navy)] transition-colors press-feedback"
     >
-      {theme === "dark" ? (
-        <Sun size={16} aria-hidden="true" />
-      ) : (
-        <Moon size={16} aria-hidden="true" />
-      )}
+      {theme === "light" && <Moon size={16} aria-hidden="true" />}
+      {theme === "dark" && <BookOpen size={16} aria-hidden="true" />}
+      {theme === "academia" && <Sun size={16} aria-hidden="true" />}
     </button>
   );
 }
