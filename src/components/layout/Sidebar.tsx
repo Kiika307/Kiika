@@ -113,7 +113,7 @@ export function Sidebar({
       <aside
         id="mobile-nav"
         className={cn(
-          "flex flex-col w-[260px] md:w-[222px] shrink-0 h-screen md:sticky md:top-0",
+          "flex flex-col w-[260px] md:w-[222px] shrink-0 h-screen md:sticky md:top-0 overflow-y-auto sidebar-scroll",
           "fixed md:static top-0 left-0 z-50 transition-transform md:transition-none",
           open ? "translate-x-0" : "-translate-x-full md:translate-x-0",
         )}
