@@ -1,37 +1,33 @@
 /**
- * Photothèque Dark Academia (Unsplash, free-to-use under Unsplash License).
- *
- * Toutes les URLs utilisent les paramètres Unsplash de transformation à la
- * volée (`?w=`, `?h=`, `?fit=crop`, `?q=`, `&auto=format`) — on n'héberge rien
- * localement, le CDN s'occupe du resize/format.
- *
- * Si Unsplash redirige ou tombe, basculer vers /public/academia/*.jpg.
+ * Photothèque Dark Academia — fichiers locaux dans /public/images/kiika/.
+ * Originaux PNG convertis en WebP via scripts/convert-kiika-images.mjs
+ * (-96% de poids, qualité visuelle équivalente). Toutes les images sont
+ * resized par next/image / Vercel à la volée si <Image /> est utilisé.
  */
-const BASE = "https://images.unsplash.com";
-const Q = "auto=format&fit=crop&q=75";
+const BASE = "/images/kiika";
 
 /**
  * 4 stat cards on dashboard — small landscape crops.
  */
 export const academiaStatPhotos = {
-  /** Old library hallway — clients */
-  clients: `${BASE}/photo-1481627834876-b7833e8f5570?${Q}&w=520&h=320`,
-  /** Coffee + book on desk — séances */
-  sessions: `${BASE}/photo-1455390582262-044cdead277a?${Q}&w=520&h=320`,
-  /** Plant in dark interior — taux de suivi */
-  followup: `${BASE}/photo-1545241047-6083a3684587?${Q}&w=520&h=320`,
-  /** Stacked old books with candle — protocoles */
-  protocols: `${BASE}/photo-1507842217343-583bb7270b66?${Q}&w=520&h=320`,
+  /** Bibliothèque chaleureuse — clients */
+  clients: `${BASE}/etude-chaleureuse-et-intime-avec-bibliotheque.webp`,
+  /** Café + livre — séances */
+  sessions: `${BASE}/moment-paisible-autour-d-une-tasse-de-cafe.webp`,
+  /** Coin lecture cosy — taux de suivi */
+  followup: `${BASE}/coin-lecture-chaleureux-et-intime.webp`,
+  /** Pile de livres anciens — protocoles */
+  protocols: `${BASE}/pile-de-livres-anciens-et-decorations-vintage.webp`,
 };
 
 /**
  * Featured cards — wider/larger.
  */
 export const academiaFeaturePhotos = {
-  /** Vintage brass lamp on wooden desk — KIIKA assistant card */
-  kiikaAssistant: `${BASE}/photo-1506880018603-83d5b814b5a6?${Q}&w=720&h=520`,
-  /** Plant + cup of tea — weekly recap */
-  weeklyRecap: `${BASE}/photo-1453928582365-b6ad33cbcf64?${Q}&w=720&h=420`,
-  /** Library aisle (vertical crop) — bottom of sidebar */
-  sidebarFooter: `${BASE}/photo-1481627834876-b7833e8f5570?${Q}&w=300&h=520`,
+  /** Bureau vintage avec lampe — KIIKA assistant card */
+  kiikaAssistant: `${BASE}/bureau-vintage-illumine-par-une-lampe.webp`,
+  /** Lumière dorée — weekly recap */
+  weeklyRecap: `${BASE}/vignette-de-lumiere-doree-et-serenite.webp`,
+  /** Vase + branchages d'olivier (portrait) — bas de la sidebar */
+  sidebarFooter: `${BASE}/vase-en-ceramique-et-branchages-d-olivier.webp`,
 };

@@ -208,7 +208,7 @@ function Section({
 }) {
   return (
     <section
-      className={`rounded-[16px] bg-white p-5 ${wide ? "lg:col-span-2" : ""}`}
+      className={`rounded-[16px] bg-[var(--color-white-soft)] p-5 ${wide ? "lg:col-span-2" : ""}`}
       style={{ boxShadow: "var(--shadow-card)" }}
     >
       <header className="flex items-center justify-between mb-3">
@@ -255,7 +255,7 @@ function Field({
 function FormSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section
-      className="rounded-[16px] bg-white p-5"
+      className="rounded-[16px] bg-[var(--color-white-soft)] p-5"
       style={{ boxShadow: "var(--shadow-card)" }}
     >
       <h3 className="font-serif text-[16px] font-semibold text-[var(--color-navy)] mb-4">{title}</h3>
@@ -294,7 +294,7 @@ function ConsentsSection({
 
   return (
     <section
-      className="rounded-[16px] bg-white p-5 lg:col-span-2"
+      className="rounded-[16px] bg-[var(--color-white-soft)] p-5 lg:col-span-2"
       style={{ boxShadow: "var(--shadow-card)" }}
     >
       <header className="flex items-start justify-between mb-4">

@@ -44,12 +44,12 @@ export function EraseClientButton({ clientId, clientName }: EraseClientButtonPro
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-red-200 bg-white px-3 py-2.5 text-[13px] font-semibold text-red-600 hover:bg-red-50 min-h-11"
-        title="Effacer définitivement (RGPD)"
-        aria-label="Effacer définitivement le client (droit à l'effacement RGPD)"
+        className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-red-200 bg-[var(--color-white-soft)] px-4 py-2.5 text-[13px] font-semibold text-red-600 hover:bg-red-50 min-h-11"
+        title="Supprimer définitivement (RGPD)"
+        aria-label="Supprimer définitivement le client (droit à l'effacement RGPD)"
       >
         <Trash2 size={14} aria-hidden="true" />
-        <span className="hidden sm:inline">Effacer</span>
+        <span>Supprimer</span>
       </button>
 
       {open && (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, Calendar, Download } from "lucide-react";
+import { Mail, Phone, Calendar, Download, Plus } from "lucide-react";
 import { exportClientDossier } from "@/lib/pdf-export";
 import { Avatar } from "@/components/ui/Avatar";
 import { Badge } from "@/components/ui/Badge";
@@ -103,7 +103,9 @@ export function ClientDetail({
                 <Calendar size={14} aria-hidden="true" />
                 Suivi depuis {client.since}
               </span>
-              <span>{client.sessions} séances</span>
+              <span>
+                {client.sessions} séance{client.sessions > 1 ? "s" : ""}
+              </span>
             </div>
           </div>
         </div>
@@ -123,19 +125,19 @@ export function ClientDetail({
                 therapistName,
               })
             }
-            className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-[var(--color-light-gray)] bg-white px-3 py-2.5 text-[13px] font-semibold text-[var(--color-navy)] hover:bg-[var(--color-light-gray)] min-h-11"
+            className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-[var(--color-light-gray)] bg-[var(--color-white-soft)] px-4 py-2.5 text-[13px] font-semibold text-[var(--color-navy)] hover:bg-[var(--color-light-gray)] min-h-11"
             title="Exporter le dossier en PDF"
             aria-label="Exporter le dossier client en PDF"
           >
             <Download size={14} aria-hidden="true" />
-            <span className="hidden sm:inline">Exporter</span>
-            <span className="sm:hidden">PDF</span>
+            <span>Exporter</span>
           </button>
           <button
-            className="flex-1 sm:flex-initial rounded-[10px] px-4 py-2.5 text-[13px] font-semibold text-white min-h-11"
+            className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 rounded-[10px] px-4 py-2.5 text-[13px] font-semibold text-white min-h-11"
             style={{ backgroundColor: "var(--color-gold)" }}
           >
-            Nouveau RDV
+            <Plus size={14} aria-hidden="true" />
+            <span>Nouveau RDV</span>
           </button>
           <EraseClientButton clientId={client.id} clientName={client.name} />
         </div>
