@@ -1,18 +1,21 @@
 import { AppShell } from "@/components/layout/AppShell";
 import { VisioClient } from "@/components/visio/VisioClient";
-import { getClientsRich, getVisioAppointments } from "@/lib/data";
+import { getClientsRich, getTherapist, getVisioAppointments } from "@/lib/data";
 
 export default async function VisioPage() {
-  const [appointments, clients] = await Promise.all([getVisioAppointments(), getClientsRich()]);
+  const [appointments, clients, therapist] = await Promise.all([
+    getVisioAppointments(),
+    getClientsRich(),
+    getTherapist(),
+  ]);
+  const firstName = therapist?.fullName?.split(" ")[0] ?? "";
   return (
     <AppShell>
-      <div className="mb-5">
-        <h1 className="font-serif text-[28px] font-bold text-[var(--color-navy)]">Visio</h1>
-        <p className="mt-1 text-[13px] text-[var(--color-gray-soft)]">
-          Salles vidéo chiffrées via Daily.co. Lancez ou copiez le lien d'invitation.
-        </p>
-      </div>
-      <VisioClient appointments={appointments} clients={clients} />
+      <VisioClient
+        appointments={appointments}
+        clients={clients}
+        therapistFirstName={firstName}
+      />
     </AppShell>
   );
 }
