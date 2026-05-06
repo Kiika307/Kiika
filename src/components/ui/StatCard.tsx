@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 
 interface StatCardProps {
@@ -8,6 +9,8 @@ interface StatCardProps {
   color?: string;
   /** Optional decorative photo URL — only displayed in academia theme via CSS. */
   photoUrl?: string;
+  /** When set, the whole card becomes a link to this route. */
+  href?: string;
 }
 
 export function StatCard({
@@ -17,6 +20,7 @@ export function StatCard({
   sub,
   color = "#2E8A7B",
   photoUrl,
+  href,
 }: StatCardProps) {
   const cardStyle: CSSProperties = {
     boxShadow: "var(--shadow-card)",
@@ -25,11 +29,9 @@ export function StatCard({
   if (photoUrl) {
     (cardStyle as Record<string, string>)["--aca-photo"] = `url(${photoUrl})`;
   }
-  return (
-    <div
-      className="relative rounded-[16px] bg-white-soft px-4 sm:px-[22px] py-4 sm:py-5 overflow-hidden"
-      style={cardStyle}
-    >
+
+  const inner = (
+    <>
       <div className="relative z-[1]">
         <div className="flex items-center justify-between mb-3">
           <span
@@ -52,6 +54,28 @@ export function StatCard({
         </div>
       </div>
       {photoUrl && <div className="aca-photo" aria-hidden="true" />}
+    </>
+  );
+
+  const baseClass =
+    "relative rounded-[16px] bg-white-soft px-4 sm:px-[22px] py-4 sm:py-5 overflow-hidden block";
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className={`${baseClass} transition-transform hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)]/50`}
+        style={cardStyle}
+        aria-label={`${label} — ${value}`}
+      >
+        {inner}
+      </Link>
+    );
+  }
+
+  return (
+    <div className={baseClass} style={cardStyle}>
+      {inner}
     </div>
   );
 }

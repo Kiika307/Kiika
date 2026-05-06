@@ -56,6 +56,7 @@ export default async function DashboardPage() {
           sub={stats.clientsNouveaux > 0 ? `+${stats.clientsNouveaux} nouveaux` : "—"}
           color="#2E8A7B"
           photoUrl={academiaStatPhotos.clients}
+          href="/clients"
         />
         <StatCard
           icon={<CalendarCheck size={18} strokeWidth={1.8} aria-hidden="true" />}
@@ -64,6 +65,7 @@ export default async function DashboardPage() {
           sub={`${stats.seancesSemaine} cette semaine`}
           color="#C8A030"
           photoUrl={academiaStatPhotos.sessions}
+          href="/agenda"
         />
         <StatCard
           icon={<TrendingUp size={18} strokeWidth={1.8} aria-hidden="true" />}
@@ -72,6 +74,7 @@ export default async function DashboardPage() {
           sub={stats.seancesTotal > 0 ? "sur RDV planifiés" : "Aucun RDV"}
           color="#2E8A7B"
           photoUrl={academiaStatPhotos.followup}
+          href="/agenda"
         />
         <StatCard
           icon={<Sparkles size={18} strokeWidth={1.8} aria-hidden="true" />}
@@ -80,6 +83,7 @@ export default async function DashboardPage() {
           sub={stats.protocolesActifs > 0 ? "associés à des RDV" : "—"}
           color="#7C5CBF"
           photoUrl={academiaStatPhotos.protocols}
+          href="/protocoles"
         />
       </div>
 
