@@ -878,6 +878,41 @@ export async function deepAnalyzeClientWithLLM(
     })
     .filter((x): x is LLMRecommendedProtocol => x !== null);
 
+  // Persist the analysis on the client file so the praticien finds it back
+  // under "Matching IA" and can use it as the direction d'accompagnement.
+  // Only save successful analyses with at least one recommendation, so
+  // half-failures don't pollute the history.
+  if (analysis.ok && recommendedDetailed.length > 0) {
+    const objectives = {
+      themes: client.profile?.themes ?? [],
+      objectifs: client.profile?.objectifs ?? [],
+      blocages: client.profile?.blocages ?? [],
+      dominante: client.selene?.dominante ?? client.profile?.dominante ?? null,
+    };
+    const { error: saveError } = await supabase
+      .from("client_kiika_analyses")
+      .insert({
+        therapist_id: auth.user.id,
+        client_id: clientId,
+        objectives,
+        recommended: analysis.recommended ?? [],
+        insight: analysis.insight ?? null,
+        alternative_angles: analysis.alternativeAngles ?? [],
+        caution_points: analysis.cautionPoints ?? [],
+        candidates_count: 25,
+        model: "claude-sonnet-4-6",
+      });
+    if (saveError) {
+      // Non-fatal: the praticien still sees the analysis in the KIIKA tab
+      // even if persistence fails. Surface the issue in logs only.
+      console.error("[kiika] Failed to persist analysis:", saveError.message);
+    } else {
+      // Refresh the /clients page so the new analysis shows up in the
+      // Matching IA tab on the client fiche without a manual reload.
+      revalidatePath("/clients");
+    }
+  }
+
   return {
     ok: analysis.ok,
     error: analysis.error,

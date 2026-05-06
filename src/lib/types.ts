@@ -266,3 +266,33 @@ export interface ProtocolDetail {
   stats: ProtoStat[];
   croyances: string[];
 }
+
+// ============================================================
+// KIIKA — analyses sauvegardées par client
+// ============================================================
+
+export interface KiikaAnalysisObjectives {
+  themes: string[];
+  objectifs: string[];
+  blocages: string[];
+  dominante: string | null;
+}
+
+export interface KiikaAnalysisRecommendation {
+  protocolId: number;
+  rank: number;
+  reasoning: string;
+}
+
+export interface ClientKiikaAnalysis {
+  id: string;
+  clientId: string;
+  generatedAt: string;
+  objectives: KiikaAnalysisObjectives;
+  recommended: KiikaAnalysisRecommendation[];
+  insight: string | null;
+  alternativeAngles: string[];
+  cautionPoints: string[];
+  candidatesCount: number;
+  model: string;
+}

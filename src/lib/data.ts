@@ -20,6 +20,9 @@ import type {
   DocumentCategory,
   ClientConsent,
   SignatureMethod,
+  ClientKiikaAnalysis,
+  KiikaAnalysisObjectives,
+  KiikaAnalysisRecommendation,
 } from "@/lib/types";
 
 const PALETTE = ["#7C5CBF", "#D4622A", "#2E8A7B", "#5B8FB9", "#C8A030"];
@@ -915,4 +918,102 @@ export async function getAllConsentsByClient(
     (out[c.clientId] ??= []).push(c);
   });
   return out;
+}
+
+// ============================================================
+// KIIKA analyses persisted per client
+// ============================================================
+
+interface KiikaAnalysisRow {
+  id: string;
+  client_id: string;
+  generated_at: string;
+  objectives: unknown;
+  recommended: unknown;
+  insight: string | null;
+  alternative_angles: unknown;
+  caution_points: unknown;
+  candidates_count: number;
+  model: string;
+}
+
+function safeStringArray(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  return value.filter((v): v is string => typeof v === "string");
+}
+
+function mapKiikaAnalysisRow(row: KiikaAnalysisRow): ClientKiikaAnalysis {
+  const objectivesRaw =
+    row.objectives && typeof row.objectives === "object"
+      ? (row.objectives as Record<string, unknown>)
+      : {};
+  const objectives: KiikaAnalysisObjectives = {
+    themes: safeStringArray(objectivesRaw.themes),
+    objectifs: safeStringArray(objectivesRaw.objectifs),
+    blocages: safeStringArray(objectivesRaw.blocages),
+    dominante:
+      typeof objectivesRaw.dominante === "string" ? objectivesRaw.dominante : null,
+  };
+
+  const recommendedRaw = Array.isArray(row.recommended) ? row.recommended : [];
+  const recommended: KiikaAnalysisRecommendation[] = recommendedRaw
+    .filter(
+      (r): r is { protocolId: number; rank: number; reasoning: string } =>
+        typeof r === "object" &&
+        r !== null &&
+        typeof (r as Record<string, unknown>).protocolId === "number" &&
+        typeof (r as Record<string, unknown>).rank === "number" &&
+        typeof (r as Record<string, unknown>).reasoning === "string",
+    )
+    .map((r) => ({ protocolId: r.protocolId, rank: r.rank, reasoning: r.reasoning }));
+
+  return {
+    id: row.id,
+    clientId: row.client_id,
+    generatedAt: row.generated_at,
+    objectives,
+    recommended,
+    insight: row.insight,
+    alternativeAngles: safeStringArray(row.alternative_angles),
+    cautionPoints: safeStringArray(row.caution_points),
+    candidatesCount: row.candidates_count,
+    model: row.model,
+  };
+}
+
+export async function getAllKiikaAnalysesByClient(
+  clientIds: string[],
+): Promise<Record<string, ClientKiikaAnalysis[]>> {
+  if (clientIds.length === 0) return {};
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("client_kiika_analyses")
+    .select(
+      "id, client_id, generated_at, objectives, recommended, insight, alternative_angles, caution_points, candidates_count, model",
+    )
+    .in("client_id", clientIds)
+    .order("generated_at", { ascending: false });
+  const out: Record<string, ClientKiikaAnalysis[]> = {};
+  for (const row of (data ?? []) as KiikaAnalysisRow[]) {
+    const a = mapKiikaAnalysisRow(row);
+    (out[a.clientId] ??= []).push(a);
+  }
+  return out;
+}
+
+export async function getLatestKiikaAnalysis(
+  clientId: string,
+): Promise<ClientKiikaAnalysis | null> {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("client_kiika_analyses")
+    .select(
+      "id, client_id, generated_at, objectives, recommended, insight, alternative_angles, caution_points, candidates_count, model",
+    )
+    .eq("client_id", clientId)
+    .order("generated_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  if (!data) return null;
+  return mapKiikaAnalysisRow(data as KiikaAnalysisRow);
 }

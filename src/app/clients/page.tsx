@@ -12,6 +12,7 @@ import {
   getAllInvoicesByClient,
   getAllDocumentsByClient,
   getAllConsentsByClient,
+  getAllKiikaAnalysesByClient,
 } from "@/lib/data";
 
 interface ClientsPageProps {
@@ -35,6 +36,7 @@ export default async function ClientsPage({ searchParams }: ClientsPageProps) {
     invoicesByClient,
     documentsByClient,
     consentsByClient,
+    kiikaAnalysesByClient,
   ] = await Promise.all([
     getAllNotesByClient(ids),
     getAllHistoryByClient(ids),
@@ -44,6 +46,7 @@ export default async function ClientsPage({ searchParams }: ClientsPageProps) {
     getAllInvoicesByClient(ids),
     getAllDocumentsByClient(ids),
     getAllConsentsByClient(ids),
+    getAllKiikaAnalysesByClient(ids),
   ]);
 
   return (
@@ -59,6 +62,7 @@ export default async function ClientsPage({ searchParams }: ClientsPageProps) {
         invoicesByClient={invoicesByClient}
         documentsByClient={documentsByClient}
         consentsByClient={consentsByClient}
+        kiikaAnalysesByClient={kiikaAnalysesByClient}
         therapistName={therapist?.fullName ?? "Thérapeute"}
         initialId={id}
       />

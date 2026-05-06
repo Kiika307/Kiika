@@ -17,6 +17,7 @@ import { InvoicesTab } from "./InvoicesTab";
 import { DocumentsTab } from "./DocumentsTab";
 import type {
   Client,
+  ClientKiikaAnalysis,
   ClientNote,
   ClientProtocolPlan,
   ClientTask,
@@ -50,6 +51,7 @@ interface ClientDetailProps {
   invoices: Invoice[];
   documents: ClientDocument[];
   consents: ClientConsent[];
+  kiikaAnalyses: ClientKiikaAnalysis[];
   therapistName: string;
 }
 
@@ -76,6 +78,7 @@ export function ClientDetail({
   invoices,
   documents,
   consents,
+  kiikaAnalyses,
   therapistName,
 }: ClientDetailProps) {
   const [tab, setTab] = useState<Tab>("informations");
@@ -175,7 +178,13 @@ export function ClientDetail({
       {tab === "plan" && <PlanTab clientId={client.id} plans={plans} protocols={protocols} />}
       {tab === "tasks" && <TasksTab clientId={client.id} tasks={tasks} />}
       {tab === "notes" && <NotesTab clientId={client.id} notes={notes} />}
-      {tab === "matching" && <MatchingTab client={client} protocols={protocols} />}
+      {tab === "matching" && (
+        <MatchingTab
+          client={client}
+          protocols={protocols}
+          kiikaAnalyses={kiikaAnalyses}
+        />
+      )}
       {tab === "historique" && <HistoriqueTab clientId={client.id} history={history} />}
       {tab === "facturation" && <InvoicesTab clientId={client.id} invoices={invoices} />}
       {tab === "documents" && <DocumentsTab clientId={client.id} documents={documents} />}
