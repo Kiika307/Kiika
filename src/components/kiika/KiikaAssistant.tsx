@@ -20,6 +20,7 @@ import { Avatar } from "@/components/ui/Avatar";
 import { Badge } from "@/components/ui/Badge";
 import { MatchBar } from "@/components/ui/MatchBar";
 import { EmptyState } from "@/components/ui/EmptyState";
+import { Markdown } from "@/components/ui/Markdown";
 import {
   analyzeClientWithKiika,
   deepAnalyzeClientWithLLM,
@@ -495,11 +496,7 @@ export function KiikaAssistant({ clients, llmEnabled }: KiikaAssistantProps) {
                           Lecture KIIKA
                         </h3>
                       </div>
-                      {deep.insight && (
-                        <div className="prose-kiika text-[13px] text-[var(--color-navy)] leading-[1.65] whitespace-pre-wrap">
-                          {deep.insight}
-                        </div>
-                      )}
+                      {deep.insight && <Markdown source={deep.insight} />}
                       {deep.alternativeAngles && deep.alternativeAngles.length > 0 && (
                         <div className="mt-5">
                           <h4 className="text-[12px] uppercase tracking-wide text-[var(--color-gold)] font-semibold mb-2 inline-flex items-center gap-1.5">
