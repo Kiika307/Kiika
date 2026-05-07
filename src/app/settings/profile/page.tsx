@@ -42,7 +42,33 @@ export default async function ProfileSettingsPage() {
         <RemindersToggle initialEnabled={therapist?.remindersEnabled ?? true} />
       </div>
 
-      <div className="mt-6">
+      <div className="mt-6 grid sm:grid-cols-2 gap-5">
+        <a
+          href="/settings/booking"
+          className="block rounded-[18px] p-6 transition-colors hover:bg-[var(--color-cream)]/40"
+          style={{
+            backgroundColor: "var(--color-white-soft)",
+            boxShadow: "var(--shadow-card)",
+          }}
+        >
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <h2 className="font-serif text-[16px] font-semibold text-[var(--color-navy)] mb-1">
+                Page de réservation publique
+              </h2>
+              <p className="text-[12.5px] text-[var(--color-gray-soft)] leading-[1.55]">
+                Lien partageable, horaires, anamnèse pré-séance.
+              </p>
+            </div>
+            <span
+              className="text-[13px] font-semibold whitespace-nowrap"
+              style={{ color: "var(--color-gold)" }}
+            >
+              Configurer →
+            </span>
+          </div>
+        </a>
+
         <a
           href="/subscription"
           className="block rounded-[18px] p-6 transition-colors hover:bg-[var(--color-cream)]/40"
@@ -53,15 +79,15 @@ export default async function ProfileSettingsPage() {
         >
           <div className="flex items-center justify-between gap-4">
             <div>
-              <h2 className="font-serif text-[18px] font-semibold text-[var(--color-navy)] mb-1">
+              <h2 className="font-serif text-[16px] font-semibold text-[var(--color-navy)] mb-1">
                 Mon abonnement
               </h2>
               <p className="text-[12.5px] text-[var(--color-gray-soft)] leading-[1.55]">
-                Gérer le paiement, télécharger les factures, résilier.
+                Paiement, factures, résiliation.
               </p>
             </div>
             <span
-              className="text-[13px] font-semibold"
+              className="text-[13px] font-semibold whitespace-nowrap"
               style={{ color: "var(--color-gold)" }}
             >
               Voir →

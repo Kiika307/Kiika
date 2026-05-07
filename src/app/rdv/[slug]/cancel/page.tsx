@@ -9,8 +9,12 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+// The dynamic segment is named `slug` because Next.js requires sibling
+// dynamic routes (here: /rdv/[slug] for booking and /rdv/[slug]/cancel for
+// cancellation) to share a parameter name. Semantically this `slug`
+// carries a 32-byte cancel token, not the praticien slug.
 interface PageProps {
-  params: Promise<{ token: string }>;
+  params: Promise<{ slug: string }>;
   searchParams: Promise<{ confirmed?: string; error?: string }>;
 }
 
@@ -33,7 +37,7 @@ function service() {
 }
 
 export default async function CancelPage({ params, searchParams }: PageProps) {
-  const { token } = await params;
+  const { slug: token } = await params;
   const { confirmed, error } = await searchParams;
 
   // Trim defensively — some email clients append whitespace.

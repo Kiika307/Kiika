@@ -26,6 +26,7 @@ import type {
   KiikaAnalysisRecommendation,
   KiikaCarePlanSession,
 } from "@/lib/types";
+import type { BookingSettings, WorkingHours } from "@/lib/booking";
 
 const PALETTE = ["#7C5CBF", "#D4622A", "#2E8A7B", "#5B8FB9", "#C8A030"];
 
@@ -1115,4 +1116,147 @@ export async function getAllKiikaCarePlansByClient(
     (out[cp.clientId] ??= []).push(cp);
   }
   return out;
+}
+
+// ============================================================
+// Public booking — fetched from the unauthenticated /rdv/[slug] page
+// ============================================================
+
+export interface PublicTherapist {
+  id: string;
+  fullName: string;
+  initials: string;
+  role: string;
+  avatarUrl: string | null;
+  intro: string | null;
+  booking: BookingSettings;
+}
+
+interface PublicProfileRow {
+  id: string;
+  full_name: string;
+  role: string | null;
+  avatar_url: string | null;
+  booking_slug: string | null;
+  booking_enabled: boolean;
+  booking_default_duration: number;
+  booking_buffer: number;
+  booking_timezone: string;
+  booking_intro: string | null;
+  booking_advance_days: number;
+  booking_working_hours: unknown;
+}
+
+const DEFAULT_WORKING_HOURS: WorkingHours = {
+  mon: [{ from: "09:00", to: "12:00" }, { from: "14:00", to: "18:00" }],
+  tue: [{ from: "09:00", to: "12:00" }, { from: "14:00", to: "18:00" }],
+  wed: [{ from: "09:00", to: "12:00" }, { from: "14:00", to: "18:00" }],
+  thu: [{ from: "09:00", to: "12:00" }, { from: "14:00", to: "18:00" }],
+  fri: [{ from: "09:00", to: "12:00" }, { from: "14:00", to: "18:00" }],
+  sat: [],
+  sun: [],
+};
+
+function safeWorkingHours(value: unknown): WorkingHours {
+  if (typeof value !== "object" || value === null) return DEFAULT_WORKING_HOURS;
+  const v = value as Record<string, unknown>;
+  const out: WorkingHours = { ...DEFAULT_WORKING_HOURS };
+  for (const k of ["mon", "tue", "wed", "thu", "fri", "sat", "sun"] as const) {
+    const arr = v[k];
+    if (!Array.isArray(arr)) continue;
+    out[k] = arr
+      .filter(
+        (it): it is { from: string; to: string } =>
+          typeof it === "object" &&
+          it !== null &&
+          typeof (it as Record<string, unknown>).from === "string" &&
+          typeof (it as Record<string, unknown>).to === "string",
+      )
+      .map((it) => ({ from: it.from, to: it.to }));
+  }
+  return out;
+}
+
+function mapPublicTherapist(row: PublicProfileRow): PublicTherapist {
+  return {
+    id: row.id,
+    fullName: row.full_name,
+    initials: initials(row.full_name),
+    role:
+      row.role === "admin"
+        ? "Administrateur"
+        : row.role && row.role !== "user"
+          ? row.role
+          : "Praticien holistique",
+    avatarUrl: row.avatar_url,
+    intro: row.booking_intro,
+    booking: {
+      enabled: row.booking_enabled,
+      defaultDuration: row.booking_default_duration,
+      buffer: row.booking_buffer,
+      timezone: row.booking_timezone,
+      workingHours: safeWorkingHours(row.booking_working_hours),
+      advanceDays: row.booking_advance_days,
+    },
+  };
+}
+
+/**
+ * Fetched from the public /rdv/[slug] page using the service role
+ * (no auth context). We only return praticiens whose booking page
+ * is enabled to avoid leaking profiles that haven't opted in.
+ */
+export async function getPublicTherapistBySlug(
+  slug: string,
+): Promise<PublicTherapist | null> {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !serviceKey) return null;
+  const { createClient: serviceClient } = await import("@supabase/supabase-js");
+  const supabase = serviceClient(url, serviceKey, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+  const { data } = await supabase
+    .from("profiles")
+    .select(
+      "id, full_name, role, avatar_url, booking_slug, booking_enabled, booking_default_duration, booking_buffer, booking_timezone, booking_intro, booking_advance_days, booking_working_hours",
+    )
+    .eq("booking_slug", slug)
+    .eq("booking_enabled", true)
+    .maybeSingle();
+  if (!data) return null;
+  return mapPublicTherapist(data as PublicProfileRow);
+}
+
+/**
+ * Busy intervals to subtract from the public availability grid:
+ * every appointment of the praticien that is not already cancelled.
+ */
+export async function getPublicBusyForTherapist(
+  therapistId: string,
+  windowDays: number,
+): Promise<Array<{ startsAt: string; durationMin: number }>> {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !serviceKey) return [];
+  const { createClient: serviceClient } = await import("@supabase/supabase-js");
+  const supabase = serviceClient(url, serviceKey, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+  const horizon = new Date(Date.now() + windowDays * 24 * 3600_000);
+  const { data } = await supabase
+    .from("appointments")
+    .select("starts_at, duration, status")
+    .eq("therapist_id", therapistId)
+    .gte("starts_at", new Date().toISOString())
+    .lt("starts_at", horizon.toISOString())
+    .neq("status", "cancelled");
+  return ((data ?? []) as Array<{
+    starts_at: string;
+    duration: number | null;
+    status: string;
+  }>).map((row) => ({
+    startsAt: row.starts_at,
+    durationMin: row.duration ?? 60,
+  }));
 }
