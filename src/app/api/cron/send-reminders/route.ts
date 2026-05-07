@@ -13,7 +13,7 @@ interface AppointmentRow {
   id: string;
   starts_at: string;
   mode: "visio" | "presentiel";
-  duration: number | null;
+  duration_min: number | null;
   therapist_id: string;
   client: {
     id: string;
@@ -134,7 +134,7 @@ async function processTask(
   const { data: apptData } = await supabase
     .from("appointments")
     .select(
-      `id, starts_at, mode, duration, therapist_id,
+      `id, starts_at, mode, duration_min, therapist_id,
        client:clients(id, full_name, email, reminders_disabled),
        protocol:protocols(name)`,
     )

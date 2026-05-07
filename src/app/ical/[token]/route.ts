@@ -16,7 +16,7 @@ interface PageParams {
 interface AppointmentRow {
   id: string;
   starts_at: string;
-  duration: number | null;
+  duration_min: number | null;
   mode: "visio" | "presentiel";
   status: string;
   created_at: string | null;
@@ -69,7 +69,7 @@ export async function GET(
   const { data: appts } = await supabase
     .from("appointments")
     .select(
-      `id, starts_at, duration, mode, status, created_at,
+      `id, starts_at, duration_min, mode, status, created_at,
        client:clients(full_name, email),
        protocol:protocols(name)`,
     )
@@ -81,7 +81,7 @@ export async function GET(
   const rows = (appts ?? []) as unknown as AppointmentRow[];
   const events: IcalEvent[] = rows.map((row) => {
     const startsAt = new Date(row.starts_at);
-    const endsAt = new Date(startsAt.getTime() + (row.duration ?? 60) * 60_000);
+    const endsAt = new Date(startsAt.getTime() + (row.duration_min ?? 60) * 60_000);
     const clientName = row.client?.full_name ?? "Client";
     const protocolName = row.protocol?.name ?? null;
     const summary = protocolName ? `${clientName} · ${protocolName}` : clientName;

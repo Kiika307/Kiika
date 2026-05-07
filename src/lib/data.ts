@@ -1254,7 +1254,7 @@ export async function getPublicBusyForTherapist(
   const [{ data: appts }, { data: profile }] = await Promise.all([
     supabase
       .from("appointments")
-      .select("starts_at, duration, status")
+      .select("starts_at, duration_min, status")
       .eq("therapist_id", therapistId)
       .gte("starts_at", now.toISOString())
       .lt("starts_at", horizon.toISOString())
@@ -1269,12 +1269,12 @@ export async function getPublicBusyForTherapist(
   const out: Array<{ startsAt: string; durationMin: number }> = (
     (appts ?? []) as Array<{
       starts_at: string;
-      duration: number | null;
+      duration_min: number | null;
       status: string;
     }>
   ).map((row) => ({
     startsAt: row.starts_at,
-    durationMin: row.duration ?? 60,
+    durationMin: row.duration_min ?? 60,
   }));
 
   if (profile?.google_calendar_sync_enabled) {

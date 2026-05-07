@@ -105,14 +105,14 @@ export async function submitPublicBookingAction(
   // Slot recheck — anti-race.
   const { data: collision } = await supabase
     .from("appointments")
-    .select("id, starts_at, duration")
+    .select("id, starts_at, duration_min")
     .eq("therapist_id", profile.id)
     .neq("status", "cancelled")
     .gte("starts_at", new Date(startsAt.getTime() - 4 * 3600_000).toISOString())
     .lt("starts_at", new Date(slotEnd.getTime() + 4 * 3600_000).toISOString());
   const overlap = (collision ?? []).some((row) => {
     const s = new Date(row.starts_at);
-    const e = new Date(s.getTime() + (row.duration ?? 60) * 60_000);
+    const e = new Date(s.getTime() + (row.duration_min ?? 60) * 60_000);
     return s < slotEnd && e > startsAt;
   });
   if (overlap) {
@@ -155,14 +155,23 @@ export async function submitPublicBookingAction(
       therapist_id: profile.id,
       client_id: clientId,
       starts_at: startsAt.toISOString(),
-      duration,
+      duration_min: duration,
       mode: "presentiel",
       status: "planned",
     })
     .select("id")
     .single();
   if (apptErr || !appt) {
-    return { ok: false, error: "Impossible de créer le rendez-vous." };
+    // Surface the underlying DB error so a future schema drift is
+    // diagnosable from the prospect-facing alert without diving into
+    // server logs.
+    console.error("[public-booking] appointment insert failed", apptErr);
+    return {
+      ok: false,
+      error: apptErr?.message
+        ? `Impossible de créer le rendez-vous : ${apptErr.message}`
+        : "Impossible de créer le rendez-vous.",
+    };
   }
 
   if (trimmed.motif) {
