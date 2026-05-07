@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useActionState } from "react";
 import { FormField } from "@/components/ui/FormField";
 import { signupAction, type AuthState } from "@/app/login/actions";
+import { GoogleSignInButton, AuthDivider } from "./GoogleSignInButton";
 
 const initial: AuthState = {};
 
@@ -11,7 +12,31 @@ export function SignupForm() {
   const [state, formAction, pending] = useActionState(signupAction, initial);
 
   return (
-    <form action={formAction} className="space-y-4">
+    <div className="space-y-4">
+      <GoogleSignInButton next="/" label="S'inscrire avec Google" />
+      <p className="text-[11px] text-[var(--color-gray-soft)] leading-[1.5] text-center">
+        En continuant avec Google, vous acceptez les{" "}
+        <Link
+          href="/cgu"
+          target="_blank"
+          rel="noopener"
+          className="underline underline-offset-2 hover:text-[var(--color-gold)]"
+        >
+          CGU
+        </Link>{" "}
+        et les{" "}
+        <Link
+          href="/cgv"
+          target="_blank"
+          rel="noopener"
+          className="underline underline-offset-2 hover:text-[var(--color-gold)]"
+        >
+          CGV
+        </Link>
+        .
+      </p>
+      <AuthDivider />
+      <form action={formAction} className="space-y-4">
       <FormField label="Nom complet" name="fullName" type="text" required autoComplete="name" />
       <FormField
         label="Email professionnel"
@@ -80,6 +105,7 @@ export function SignupForm() {
       >
         {pending ? "Création…" : "Créer mon compte"}
       </button>
-    </form>
+      </form>
+    </div>
   );
 }

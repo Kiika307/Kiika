@@ -3,6 +3,7 @@
 import { useActionState } from "react";
 import { FormField } from "@/components/ui/FormField";
 import { loginAction, type AuthState } from "@/app/login/actions";
+import { GoogleSignInButton, AuthDivider } from "./GoogleSignInButton";
 
 const initial: AuthState = {};
 
@@ -15,8 +16,11 @@ export function LoginForm({ redirectTo, registered }: LoginFormProps) {
   const [state, formAction, pending] = useActionState(loginAction, initial);
 
   return (
-    <form action={formAction} className="space-y-4">
-      <input type="hidden" name="redirect" value={redirectTo} />
+    <div className="space-y-4">
+      <GoogleSignInButton next={redirectTo} label="Se connecter avec Google" />
+      <AuthDivider />
+      <form action={formAction} className="space-y-4">
+        <input type="hidden" name="redirect" value={redirectTo} />
       {registered && !state.error && (
         <div
           role="status"
@@ -41,14 +45,15 @@ export function LoginForm({ redirectTo, registered }: LoginFormProps) {
           {state.error}
         </div>
       )}
-      <button
-        type="submit"
-        disabled={pending}
-        className="w-full rounded-[10px] py-2.5 text-[14px] font-semibold text-white transition-opacity disabled:opacity-60"
-        style={{ background: "var(--color-navy)" }}
-      >
-        {pending ? "Connexion…" : "Se connecter"}
-      </button>
-    </form>
+        <button
+          type="submit"
+          disabled={pending}
+          className="w-full rounded-[10px] py-2.5 text-[14px] font-semibold text-white transition-opacity disabled:opacity-60"
+          style={{ background: "var(--color-navy)" }}
+        >
+          {pending ? "Connexion…" : "Se connecter"}
+        </button>
+      </form>
+    </div>
   );
 }

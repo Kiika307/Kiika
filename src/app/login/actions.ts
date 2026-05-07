@@ -104,3 +104,46 @@ export async function signOutAction() {
   await supabase.auth.signOut();
   redirect("/login");
 }
+
+/**
+ * Kick off the OAuth dance with Google. Supabase generates a provider URL
+ * we redirect the browser to — once the user consents, Google sends them
+ * back to /auth/callback?code=… which exchanges the code for a session.
+ *
+ * Requires the Google provider to be enabled in Supabase Auth settings
+ * (Dashboard → Authentication → Providers → Google) with a client ID and
+ * client secret obtained from Google Cloud Console (OAuth 2.0 client),
+ * and `https://<project-ref>.supabase.co/auth/v1/callback` registered as
+ * an authorised redirect URI.
+ */
+export async function signInWithGoogleAction(formData: FormData): Promise<void> {
+  const next = safeRelativePath(String(formData.get("next") ?? "/"));
+  const supabase = await createClient();
+
+  // Resolve the public origin from the request headers; fall back to the
+  // configured site URL or localhost for safety.
+  const { headers } = await import("next/headers");
+  const h = await headers();
+  const proto = h.get("x-forwarded-proto") ?? "https";
+  const host = h.get("x-forwarded-host") ?? h.get("host") ?? "localhost:3000";
+  const origin = `${proto}://${host}`;
+
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: `${origin}/auth/callback?next=${encodeURIComponent(next)}`,
+      // Always re-prompt for account selection so users can pick which
+      // Google account to use (avoids surprises on shared devices).
+      queryParams: {
+        access_type: "offline",
+        prompt: "select_account",
+      },
+    },
+  });
+
+  if (error || !data?.url) {
+    redirect("/login?error=google");
+  }
+
+  redirect(data.url);
+}
