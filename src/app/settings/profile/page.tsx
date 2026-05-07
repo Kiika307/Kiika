@@ -41,6 +41,34 @@ export default async function ProfileSettingsPage() {
       <div className="mt-6">
         <RemindersToggle initialEnabled={therapist?.remindersEnabled ?? true} />
       </div>
+
+      <div className="mt-6">
+        <a
+          href="/subscription"
+          className="block rounded-[18px] p-6 transition-colors hover:bg-[var(--color-cream)]/40"
+          style={{
+            backgroundColor: "var(--color-white-soft)",
+            boxShadow: "var(--shadow-card)",
+          }}
+        >
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <h2 className="font-serif text-[18px] font-semibold text-[var(--color-navy)] mb-1">
+                Mon abonnement
+              </h2>
+              <p className="text-[12.5px] text-[var(--color-gray-soft)] leading-[1.55]">
+                Gérer le paiement, télécharger les factures, résilier.
+              </p>
+            </div>
+            <span
+              className="text-[13px] font-semibold"
+              style={{ color: "var(--color-gold)" }}
+            >
+              Voir →
+            </span>
+          </div>
+        </a>
+      </div>
     </AppShell>
   );
 }

@@ -13,6 +13,7 @@ const PUBLIC_PREFIXES = [
   "/playground",
   "/rdv",
   "/api/cron",
+  "/api/webhooks",
   "/_next",
   "/favicon",
 ];
