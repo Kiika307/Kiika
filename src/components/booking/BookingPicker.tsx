@@ -1,7 +1,15 @@
 "use client";
 
 import { useMemo, useState, useTransition } from "react";
-import { Calendar, Clock, Check, ArrowLeft, Loader2 } from "lucide-react";
+import {
+  Calendar,
+  Clock,
+  Check,
+  ArrowLeft,
+  ChevronLeft,
+  ChevronRight,
+  Loader2,
+} from "lucide-react";
 import type { DaySlots } from "@/lib/booking";
 import {
   submitPublicBookingAction,
@@ -21,17 +29,54 @@ const DAY_FMT = new Intl.DateTimeFormat("fr-FR", {
   day: "2-digit",
   month: "long",
 });
-const DAY_SHORT = new Intl.DateTimeFormat("fr-FR", {
-  weekday: "short",
-  day: "2-digit",
-  month: "short",
+const MONTH_FMT = new Intl.DateTimeFormat("fr-FR", {
+  month: "long",
+  year: "numeric",
 });
+
+const DOW_LABELS = ["L", "M", "M", "J", "V", "S", "D"];
 
 function parseDateKey(key: string): Date {
   // "YYYY-MM-DD" — Date.parse with that string yields UTC midnight, which
   // is fine for label rendering.
   const [y, m, d] = key.split("-").map(Number);
   return new Date(Date.UTC(y, m - 1, d, 12, 0, 0));
+}
+
+function formatDateKey(d: Date): string {
+  // ISO date in UTC since the Date is normalised to UTC noon on day-d.
+  const y = d.getUTCFullYear();
+  const m = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const dd = String(d.getUTCDate()).padStart(2, "0");
+  return `${y}-${m}-${dd}`;
+}
+
+function startOfMonthUTC(d: Date): Date {
+  return new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), 1, 12, 0, 0));
+}
+
+function addMonthsUTC(d: Date, n: number): Date {
+  return new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + n, 1, 12, 0, 0));
+}
+
+/**
+ * Build a 6×7 calendar grid for the given month, starting on Monday.
+ * Days outside the month are still returned (faded in the UI) so the
+ * grid keeps a constant 6-row height across navigation.
+ */
+function buildMonthGrid(viewMonth: Date): Date[] {
+  const first = startOfMonthUTC(viewMonth);
+  // Monday-based offset: getUTCDay() = 0 (Sun) … 6 (Sat); we want Mon=0.
+  const dow = (first.getUTCDay() + 6) % 7;
+  const start = new Date(first);
+  start.setUTCDate(first.getUTCDate() - dow);
+  const cells: Date[] = [];
+  for (let i = 0; i < 42; i++) {
+    const d = new Date(start);
+    d.setUTCDate(start.getUTCDate() + i);
+    cells.push(d);
+  }
+  return cells;
 }
 
 export function BookingPicker({
@@ -47,13 +92,48 @@ export function BookingPicker({
   const [confirmation, setConfirmation] =
     useState<PublicBookingResult | null>(null);
 
+  // Initial visible month = month of the first available slot, or current
+  // month as a fallback. Users can navigate freely with the chevrons.
+  const initialView = useMemo(() => {
+    const seed = firstAvailable ? parseDateKey(firstAvailable) : new Date();
+    return startOfMonthUTC(seed);
+  }, [firstAvailable]);
+  const [viewMonth, setViewMonth] = useState<Date>(initialView);
+
   const dayMap = useMemo(() => {
     const m = new Map<string, DaySlots>();
     for (const d of slots) m.set(d.date, d);
     return m;
   }, [slots]);
 
+  const grid = useMemo(() => buildMonthGrid(viewMonth), [viewMonth]);
+
+  const lastAvailable = useMemo(() => {
+    if (slots.length === 0) return null;
+    return parseDateKey(slots[slots.length - 1].date);
+  }, [slots]);
+
+  const canGoPrev = useMemo(() => {
+    if (!firstAvailable) return false;
+    const firstAvailableMonth = startOfMonthUTC(parseDateKey(firstAvailable));
+    return viewMonth.getTime() > firstAvailableMonth.getTime();
+  }, [firstAvailable, viewMonth]);
+
+  const canGoNext = useMemo(() => {
+    if (!lastAvailable) return false;
+    const lastMonth = startOfMonthUTC(lastAvailable);
+    return viewMonth.getTime() < lastMonth.getTime();
+  }, [lastAvailable, viewMonth]);
+
   const activeDay = selectedDate ? dayMap.get(selectedDate) : null;
+  // "Today" in the user's local zone for the small marker under the day number.
+  const todayKey = useMemo(() => {
+    const now = new Date();
+    const y = now.getFullYear();
+    const m = String(now.getMonth() + 1).padStart(2, "0");
+    const d = String(now.getDate()).padStart(2, "0");
+    return `${y}-${m}-${d}`;
+  }, []);
 
   if (slots.length === 0) {
     return (
@@ -129,51 +209,135 @@ export function BookingPicker({
         </p>
       </header>
 
-      <div className="mb-5">
-        <p className="text-[11px] uppercase tracking-wide text-[var(--color-gold)] font-semibold mb-2">
-          Date
-        </p>
-        <div className="flex gap-2 overflow-x-auto pb-2 -mx-2 px-2">
-          {slots.map((d) => {
-            const date = parseDateKey(d.date);
-            const active = selectedDate === d.date;
-            return (
-              <button
-                key={d.date}
-                type="button"
-                onClick={() => {
-                  setSelectedDate(d.date);
-                  setSelectedTime(null);
-                }}
-                className="shrink-0 rounded-[12px] px-3 py-2.5 text-center min-w-[78px] transition-colors border"
-                style={{
-                  backgroundColor: active
-                    ? "var(--color-gold)"
-                    : "var(--color-white-soft)",
-                  borderColor: active
-                    ? "var(--color-gold)"
-                    : "var(--color-light-gray)",
-                  color: active ? "var(--color-navy)" : "var(--color-navy)",
-                }}
-              >
-                <div
-                  className="text-[10px] uppercase tracking-wide"
-                  style={{
-                    color: active ? "var(--color-navy)" : "var(--color-gray-soft)",
-                  }}
-                >
-                  {DAY_SHORT.format(date).split(" ")[0]}
-                </div>
-                <div className="font-serif text-[18px] font-bold">
-                  {String(date.getUTCDate()).padStart(2, "0")}
-                </div>
-                <div className="text-[10px] capitalize">
-                  {DAY_SHORT.format(date).split(" ")[1]?.replace(".", "") ?? ""}
-                </div>
-              </button>
-            );
-          })}
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-[11px] uppercase tracking-wide text-[var(--color-gold)] font-semibold">
+            Date
+          </p>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setViewMonth(addMonthsUTC(viewMonth, -1))}
+              disabled={!canGoPrev}
+              className="inline-flex items-center justify-center w-8 h-8 rounded-[8px] border border-[var(--color-light-gray)] bg-[var(--color-white-soft)] text-[var(--color-navy)] hover:bg-[var(--color-cream)] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+              aria-label="Mois précédent"
+            >
+              <ChevronLeft size={14} aria-hidden="true" />
+            </button>
+            <div
+              className="font-serif text-[15px] font-semibold text-[var(--color-navy)] capitalize min-w-[140px] text-center tabular"
+              aria-live="polite"
+            >
+              {MONTH_FMT.format(viewMonth)}
+            </div>
+            <button
+              type="button"
+              onClick={() => setViewMonth(addMonthsUTC(viewMonth, 1))}
+              disabled={!canGoNext}
+              className="inline-flex items-center justify-center w-8 h-8 rounded-[8px] border border-[var(--color-light-gray)] bg-[var(--color-white-soft)] text-[var(--color-navy)] hover:bg-[var(--color-cream)] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+              aria-label="Mois suivant"
+            >
+              <ChevronRight size={14} aria-hidden="true" />
+            </button>
+          </div>
         </div>
+
+        <div
+          className="rounded-[14px] p-3 sm:p-4"
+          style={{ backgroundColor: "var(--color-cream)" }}
+        >
+          <div
+            className="grid grid-cols-7 gap-1 mb-2"
+            role="row"
+          >
+            {DOW_LABELS.map((label, i) => (
+              <div
+                key={i}
+                className="text-center text-[10.5px] uppercase tracking-wide text-[var(--color-gray-soft)] font-semibold py-1"
+              >
+                {label}
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-7 gap-1" role="grid">
+            {grid.map((d) => {
+              const key = formatDateKey(d);
+              const inMonth = d.getUTCMonth() === viewMonth.getUTCMonth();
+              const dayInfo = dayMap.get(key);
+              const available = !!dayInfo;
+              const active = selectedDate === key;
+              const isToday = key === todayKey;
+              const isWeekend = d.getUTCDay() === 0 || d.getUTCDay() === 6;
+              return (
+                <button
+                  key={key}
+                  type="button"
+                  disabled={!available}
+                  onClick={() => {
+                    if (!available) return;
+                    setSelectedDate(key);
+                    setSelectedTime(null);
+                  }}
+                  className="aspect-square rounded-[10px] flex flex-col items-center justify-center transition-colors relative disabled:cursor-not-allowed"
+                  style={{
+                    backgroundColor: active
+                      ? "var(--color-gold)"
+                      : available
+                        ? "var(--color-white-soft)"
+                        : "transparent",
+                    color: active
+                      ? "var(--color-navy)"
+                      : available
+                        ? "var(--color-navy)"
+                        : "var(--color-gray-soft)",
+                    opacity: !inMonth ? 0.35 : !available ? 0.55 : 1,
+                    fontWeight: active ? 700 : available ? 600 : 400,
+                  }}
+                  aria-label={`${available ? "Réserver le " : "Indisponible le "}${DAY_FMT.format(d)}`}
+                  aria-pressed={active}
+                >
+                  <span
+                    className={
+                      active
+                        ? "font-serif text-[15px]"
+                        : isWeekend && available
+                          ? "font-serif text-[15px] italic"
+                          : "font-serif text-[15px]"
+                    }
+                  >
+                    {d.getUTCDate()}
+                  </span>
+                  {isToday && !active && (
+                    <span
+                      className="absolute bottom-1 w-1 h-1 rounded-full"
+                      style={{ backgroundColor: "var(--color-gold)" }}
+                      aria-hidden="true"
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <p className="mt-2.5 text-[11px] text-[var(--color-gray-soft)] inline-flex items-center gap-3">
+          <span className="inline-flex items-center gap-1.5">
+            <span
+              className="w-2 h-2 rounded-full"
+              style={{ backgroundColor: "var(--color-gold)" }}
+              aria-hidden="true"
+            />
+            Aujourd&apos;hui
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <span
+              className="w-2.5 h-2.5 rounded-[3px]"
+              style={{ backgroundColor: "var(--color-white-soft)", border: "1px solid var(--color-light-gray)" }}
+              aria-hidden="true"
+            />
+            Disponible
+          </span>
+        </p>
       </div>
 
       {activeDay && (
