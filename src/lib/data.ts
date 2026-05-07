@@ -394,6 +394,32 @@ export async function getClientsRich(): Promise<Client[]> {
 
 const DAY_SHORT = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
 
+export async function getAppointmentsForMonth(): Promise<Appointment[]> {
+  const supabase = await createClient();
+  const today = new Date();
+  const start = new Date(today.getFullYear(), today.getMonth(), 1);
+  const end = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+  const { data } = await supabase
+    .from("appointments")
+    .select("id, client_id, starts_at, duration_min, mode, protocol_id")
+    .gte("starts_at", start.toISOString())
+    .lt("starts_at", end.toISOString())
+    .order("starts_at", { ascending: true });
+  return (data ?? []).map((row): Appointment => {
+    const d = new Date(row.starts_at);
+    return {
+      id: row.id,
+      clientId: row.client_id,
+      day: DAY_SHORT[d.getDay()],
+      date: d.getDate(),
+      time: TIME_FMT.format(d),
+      duration: row.duration_min,
+      mode: row.mode as "visio" | "presentiel",
+      protocol: null,
+    };
+  });
+}
+
 export async function getAppointmentsForWeek(): Promise<Appointment[]> {
   const supabase = await createClient();
   const start = new Date();

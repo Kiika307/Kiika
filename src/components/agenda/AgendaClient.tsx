@@ -10,15 +10,31 @@ import type { Appointment, Client, Protocol } from "@/lib/types";
 
 interface AgendaClientProps {
   appointments: Appointment[];
+  monthAppointments: Appointment[];
   clients: Client[];
   protocols: Protocol[];
   weekLabel: string;
   weekStart: string;
+  monthStart: number;
+  daysInMonth: number;
+  todayDate: number;
+  monthLabel: string;
 }
 
 type View = "semaine" | "mois";
 
-export function AgendaClient({ appointments, clients, protocols, weekLabel, weekStart }: AgendaClientProps) {
+export function AgendaClient({
+  appointments,
+  monthAppointments,
+  clients,
+  protocols,
+  weekLabel,
+  weekStart,
+  monthStart,
+  daysInMonth,
+  todayDate,
+  monthLabel,
+}: AgendaClientProps) {
   const router = useRouter();
   const [view, setView] = useState<View>("semaine");
   const [modalOpen, setModalOpen] = useState(false);
@@ -32,7 +48,9 @@ export function AgendaClient({ appointments, clients, protocols, weekLabel, week
       <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6 sm:mb-7">
         <div>
           <h1 className="font-serif text-[24px] sm:text-[28px] font-bold text-[var(--color-navy)]">Agenda</h1>
-          <p className="mt-1 text-[13px] sm:text-[14px] text-[var(--color-gray-soft)]">{weekLabel}</p>
+          <p className="mt-1 text-[13px] sm:text-[14px] text-[var(--color-gray-soft)] capitalize">
+            {view === "semaine" ? weekLabel : monthLabel}
+          </p>
         </div>
         <div className="flex items-center gap-3">
           <div
@@ -80,7 +98,14 @@ export function AgendaClient({ appointments, clients, protocols, weekLabel, week
           onSelect={openClient}
         />
       ) : (
-        <MonthView appointments={appointments} clients={clients} onSelect={openClient} />
+        <MonthView
+          appointments={monthAppointments}
+          clients={clients}
+          monthStart={monthStart}
+          daysInMonth={daysInMonth}
+          todayDate={todayDate}
+          onSelect={openClient}
+        />
       )}
 
       <NewAppointmentModal

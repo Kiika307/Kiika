@@ -1,8 +1,26 @@
 import { AppShell } from "@/components/layout/AppShell";
 import { AgendaClient } from "@/components/agenda/AgendaClient";
-import { getAppointmentsForWeek, getClientsRich, getProtocols } from "@/lib/data";
+import {
+  getAppointmentsForMonth,
+  getAppointmentsForWeek,
+  getClientsRich,
+  getProtocols,
+} from "@/lib/data";
 
-const MONTHS_FR = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
+const MONTHS_FR = [
+  "janv.",
+  "févr.",
+  "mars",
+  "avr.",
+  "mai",
+  "juin",
+  "juil.",
+  "août",
+  "sept.",
+  "oct.",
+  "nov.",
+  "déc.",
+];
 
 function currentWeekStart(): Date {
   const start = new Date();
@@ -21,21 +39,59 @@ function weekLabel(start: Date): string {
     : `Semaine du ${start.getDate()} ${MONTHS_FR[start.getMonth()]} au ${end.getDate()} ${MONTHS_FR[end.getMonth()]}`;
 }
 
+interface MonthMeta {
+  /** Monday-based offset of the 1st of the month (Mon=0…Sun=6). */
+  monthStart: number;
+  /** Number of days in the current month. */
+  daysInMonth: number;
+  /** Today's day-of-month (1-31). */
+  todayDate: number;
+  /** "Mai 2026" — capitalised label for the month header. */
+  monthLabel: string;
+}
+
+function currentMonthMeta(): MonthMeta {
+  const today = new Date();
+  const first = new Date(today.getFullYear(), today.getMonth(), 1);
+  // Monday-based offset: getDay() = 0 (Sun) … 6 (Sat); we want Mon=0.
+  const monthStart = (first.getDay() + 6) % 7;
+  // 0-th day of next month = last day of current month.
+  const daysInMonth = new Date(
+    today.getFullYear(),
+    today.getMonth() + 1,
+    0,
+  ).getDate();
+  return {
+    monthStart,
+    daysInMonth,
+    todayDate: today.getDate(),
+    monthLabel: `${MONTHS_FR[today.getMonth()].replace(".", "")} ${today.getFullYear()}`,
+  };
+}
+
 export default async function AgendaPage() {
-  const [appointments, clients, protocols] = await Promise.all([
-    getAppointmentsForWeek(),
-    getClientsRich(),
-    getProtocols(),
-  ]);
+  const [weekAppointments, monthAppointments, clients, protocols] =
+    await Promise.all([
+      getAppointmentsForWeek(),
+      getAppointmentsForMonth(),
+      getClientsRich(),
+      getProtocols(),
+    ]);
   const weekStart = currentWeekStart();
+  const monthMeta = currentMonthMeta();
   return (
     <AppShell>
       <AgendaClient
-        appointments={appointments}
+        appointments={weekAppointments}
+        monthAppointments={monthAppointments}
         clients={clients}
         protocols={protocols}
         weekLabel={weekLabel(weekStart)}
         weekStart={weekStart.toISOString()}
+        monthStart={monthMeta.monthStart}
+        daysInMonth={monthMeta.daysInMonth}
+        todayDate={monthMeta.todayDate}
+        monthLabel={monthMeta.monthLabel}
       />
     </AppShell>
   );
