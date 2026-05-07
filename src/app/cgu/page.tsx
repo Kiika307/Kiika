@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function CGUPage() {
   return (
-    <LegalShell title="Conditions Générales d'Utilisation" lastUpdated="3 mai 2026">
+    <LegalShell title="Conditions Générales d'Utilisation" lastUpdated="7 mai 2026">
       <section>
         <h2 className="font-serif text-[20px] font-semibold text-[var(--color-navy)] mb-3">
           1. Préambule
@@ -128,9 +128,60 @@ export default function CGUPage() {
           </li>
           <li>
             prise de notes, plans d&apos;accompagnement, suivi de tâches, export PDF,
-            facturation, gestion documentaire et de consentements.
+            facturation, gestion documentaire et de consentements ;
+          </li>
+          <li>
+            assistance par intelligence artificielle (KIIKA IA), à titre strictement
+            indicatif, pour proposer une lecture de profil et suggérer des protocoles
+            d&apos;accompagnement (voir section 5 bis).
           </li>
         </ul>
+      </section>
+
+      <section>
+        <h2 className="font-serif text-[20px] font-semibold text-[var(--color-navy)] mb-3">
+          5 bis. Assistance par intelligence artificielle (KIIKA IA)
+        </h2>
+        <p>
+          L&apos;Application intègre un assistant fondé sur des modèles de langage
+          («&nbsp;KIIKA IA&nbsp;») qui propose, à partir du profil et des objectifs
+          déclarés du Client final, une lecture du profil et des suggestions de
+          protocoles d&apos;accompagnement.
+        </p>
+        <p className="mt-2">
+          L&apos;Utilisateur reconnaît expressément que&nbsp;:
+        </p>
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>
+            KIIKA IA <strong>n&apos;est pas un dispositif médical</strong> au sens du
+            règlement (UE) 2017/745 ;
+          </li>
+          <li>
+            les suggestions générées <strong>ne constituent ni un diagnostic, ni une
+            recommandation clinique, ni une prescription</strong> ;
+          </li>
+          <li>
+            l&apos;Utilisateur reste seul responsable de toute décision
+            d&apos;accompagnement et conserve son entière autonomie professionnelle ;
+          </li>
+          <li>
+            les modèles d&apos;IA peuvent produire des résultats inexacts, incomplets ou
+            inappropriés&nbsp;; l&apos;Utilisateur s&apos;engage à exercer son jugement
+            critique avant tout usage des suggestions ;
+          </li>
+          <li>
+            le contenu transmis aux modèles d&apos;IA est anonymisé (initiales et données
+            psychométriques) — aucune donnée identifiante directe (nom complet, e-mail,
+            téléphone, adresse, date de naissance précise) n&apos;est transmise.
+          </li>
+        </ul>
+        <p className="mt-2">
+          L&apos;Utilisateur s&apos;engage à orienter sans délai son Client final vers un
+          professionnel de santé qualifié dès lors qu&apos;il identifie un signal
+          dépassant le cadre de l&apos;accompagnement holistique (idées suicidaires,
+          dépression sévère, trauma complexe, dissociation pathologique, ou tout autre
+          signal nécessitant une prise en charge médicale ou psychologique réglementée).
+        </p>
       </section>
 
       <section>
@@ -148,6 +199,11 @@ export default function CGUPage() {
           <li>
             ne pas utiliser l&apos;Application pour stocker des données médicales au sens
             strict ;
+          </li>
+          <li>
+            exercer son jugement professionnel sur toute suggestion produite par KIIKA IA
+            et ne pas substituer cette dernière à sa propre analyse clinique ou à un avis
+            médical qualifié ;
           </li>
           <li>
             respecter la confidentialité des informations relatives à ses Clients finaux ;

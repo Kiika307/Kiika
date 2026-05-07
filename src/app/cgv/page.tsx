@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function CGVPage() {
   return (
-    <LegalShell title="Conditions Générales de Vente" lastUpdated="3 mai 2026">
+    <LegalShell title="Conditions Générales de Vente" lastUpdated="7 mai 2026">
       <section>
         <h2 className="font-serif text-[20px] font-semibold text-[var(--color-navy)] mb-3">
           1. Objet
@@ -51,17 +51,23 @@ export default function CGVPage() {
 
       <section>
         <h2 className="font-serif text-[20px] font-semibold text-[var(--color-navy)] mb-3">
-          3. Description des offres
+          3. Description de l&apos;offre
         </h2>
         <p>
-          L&apos;Application est actuellement proposée en <strong>version bêta gratuite</strong>.
-          Les fonctionnalités et conditions tarifaires des futures offres payantes seront
-          détaillées sur la page tarifaire de l&apos;Application avant toute souscription.
+          L&apos;Application est proposée sous la forme d&apos;un{" "}
+          <strong>abonnement mensuel unique</strong> donnant accès à
+          l&apos;ensemble des fonctionnalités&nbsp;: gestion des Clients finaux,
+          agenda et rappels de rendez-vous, messagerie, bibliothèque de protocoles,
+          assistance KIIKA IA, plans d&apos;accompagnement, facturation et gestion
+          documentaire.
         </p>
         <p className="mt-2">
-          Les offres payantes pourront comprendre, à titre indicatif, des plans mensuels ou
-          annuels assortis de limites différentes en termes de Clients finaux, de stockage
-          documentaire ou de fonctionnalités avancées.
+          Toute nouvelle souscription bénéficie d&apos;une{" "}
+          <strong>période d&apos;essai gratuite de quatorze (14) jours</strong>{" "}
+          calendaires à compter de la création du compte. À l&apos;issue de cette
+          période, l&apos;abonnement bascule automatiquement en version payante,
+          sauf résiliation expresse de l&apos;Utilisateur depuis son espace
+          personnel avant la fin de la période d&apos;essai.
         </p>
       </section>
 
@@ -70,15 +76,18 @@ export default function CGVPage() {
           4. Prix
         </h2>
         <p>
-          Les prix sont exprimés en euros (€). En l&apos;absence d&apos;assujettissement à
-          la TVA, la mention «&nbsp;TVA non applicable, art. 293 B du CGI&nbsp;» figurera
-          le cas échéant sur les factures.
+          Le prix de l&apos;abonnement est fixé à{" "}
+          <strong>37&nbsp;€ TTC par mois</strong> (TVA non applicable, art.&nbsp;293&nbsp;B
+          du CGI le cas échéant). Le prix est exprimé en euros (€) et facturé pour des
+          périodes mensuelles successives à compter de la fin de la période
+          d&apos;essai.
         </p>
         <p className="mt-2">
-          L&apos;Éditeur se réserve le droit de modifier les prix à tout moment. Les
+          L&apos;Éditeur se réserve le droit de modifier le prix à tout moment. Les
           nouveaux prix s&apos;appliqueront uniquement aux souscriptions futures et aux
-          renouvellements. Les Utilisateurs déjà abonnés en seront informés au moins
-          trente (30) jours avant la prise d&apos;effet.
+          renouvellements à venir. Les Utilisateurs déjà abonnés seront informés au
+          moins trente (30) jours avant la prise d&apos;effet de la modification et
+          pourront résilier sans pénalité avant l&apos;application du nouveau prix.
         </p>
       </section>
 
@@ -87,10 +96,18 @@ export default function CGVPage() {
           5. Modalités de paiement
         </h2>
         <p>
-          Le paiement s&apos;effectue par carte bancaire ou prélèvement SEPA via le
-          prestataire de paiement sécurisé désigné par l&apos;Éditeur. L&apos;Éditeur
-          n&apos;a jamais accès aux données bancaires complètes de l&apos;Utilisateur,
-          celles-ci étant traitées exclusivement par le prestataire.
+          Le paiement s&apos;effectue par carte bancaire via{" "}
+          <strong>Stripe Payments Europe, Limited</strong>, prestataire de paiement
+          sécurisé désigné par l&apos;Éditeur. L&apos;Éditeur n&apos;a jamais accès
+          aux données bancaires complètes de l&apos;Utilisateur, celles-ci étant
+          traitées exclusivement par Stripe et conservées sur ses propres serveurs
+          conformes à la norme PCI-DSS.
+        </p>
+        <p className="mt-2">
+          Lors de la souscription, le moyen de paiement de l&apos;Utilisateur est
+          enregistré chez Stripe. À l&apos;issue de la période d&apos;essai gratuite
+          de quatorze (14) jours, le premier prélèvement est effectué automatiquement
+          puis chaque mois à la même date jusqu&apos;à résiliation.
         </p>
         <p className="mt-2">
           En cas d&apos;échec de prélèvement, l&apos;accès aux fonctionnalités payantes
@@ -104,10 +121,12 @@ export default function CGVPage() {
           6. Durée et renouvellement
         </h2>
         <p>
-          Les abonnements sont souscrits pour la durée choisie par l&apos;Utilisateur
-          (mensuelle ou annuelle). Ils se renouvellent automatiquement à l&apos;échéance,
-          sauf résiliation par l&apos;Utilisateur depuis son espace personnel au moins
-          quarante-huit (48) heures avant le terme en cours.
+          L&apos;abonnement est mensuel. Il se renouvelle automatiquement à
+          chaque échéance pour une nouvelle période d&apos;un mois, sauf résiliation
+          par l&apos;Utilisateur depuis son espace personnel au moins quarante-huit
+          (48) heures avant le terme en cours. La résiliation prend effet à
+          l&apos;échéance de la période en cours, sans remboursement prorata
+          temporis et sans pénalité.
         </p>
       </section>
 
