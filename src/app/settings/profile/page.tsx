@@ -49,7 +49,7 @@ export default async function ProfileSettingsPage() {
         />
       </div>
 
-      <div className="mt-6 grid sm:grid-cols-2 gap-5">
+      <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         <a
           href="/settings/booking"
           className="block rounded-[18px] p-6 transition-colors hover:bg-[var(--color-cream)]/40"
@@ -72,6 +72,32 @@ export default async function ProfileSettingsPage() {
               style={{ color: "var(--color-gold)" }}
             >
               Configurer →
+            </span>
+          </div>
+        </a>
+
+        <a
+          href="/settings/calendar"
+          className="block rounded-[18px] p-6 transition-colors hover:bg-[var(--color-cream)]/40"
+          style={{
+            backgroundColor: "var(--color-white-soft)",
+            boxShadow: "var(--shadow-card)",
+          }}
+        >
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <h2 className="font-serif text-[16px] font-semibold text-[var(--color-navy)] mb-1">
+                Synchronisation calendrier
+              </h2>
+              <p className="text-[12.5px] text-[var(--color-gray-soft)] leading-[1.55]">
+                Google Calendar, Apple Calendar, Outlook.
+              </p>
+            </div>
+            <span
+              className="text-[13px] font-semibold whitespace-nowrap"
+              style={{ color: "var(--color-gold)" }}
+            >
+              Connecter →
             </span>
           </div>
         </a>

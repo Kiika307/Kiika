@@ -14,6 +14,8 @@ const PUBLIC_PREFIXES = [
   "/rdv",
   "/api/cron",
   "/api/webhooks",
+  "/api/google-calendar/callback",
+  "/ical",
   "/_next",
   "/favicon",
 ];

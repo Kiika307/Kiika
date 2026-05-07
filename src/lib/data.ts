@@ -1229,8 +1229,13 @@ export async function getPublicTherapistBySlug(
 }
 
 /**
- * Busy intervals to subtract from the public availability grid:
- * every appointment of the praticien that is not already cancelled.
+ * Busy intervals to subtract from the public availability grid.
+ *
+ * Combines two sources:
+ *   1. Existing KIIKA appointments (anything not "cancelled").
+ *   2. Google Calendar FreeBusy when the praticien has connected and
+ *      enabled sync — so personal events (lunch, holidays, family
+ *      stuff in their own calendar) automatically block the slot grid.
  */
 export async function getPublicBusyForTherapist(
   therapistId: string,
@@ -1243,20 +1248,88 @@ export async function getPublicBusyForTherapist(
   const supabase = serviceClient(url, serviceKey, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
-  const horizon = new Date(Date.now() + windowDays * 24 * 3600_000);
-  const { data } = await supabase
-    .from("appointments")
-    .select("starts_at, duration, status")
-    .eq("therapist_id", therapistId)
-    .gte("starts_at", new Date().toISOString())
-    .lt("starts_at", horizon.toISOString())
-    .neq("status", "cancelled");
-  return ((data ?? []) as Array<{
-    starts_at: string;
-    duration: number | null;
-    status: string;
-  }>).map((row) => ({
+  const now = new Date();
+  const horizon = new Date(now.getTime() + windowDays * 24 * 3600_000);
+
+  const [{ data: appts }, { data: profile }] = await Promise.all([
+    supabase
+      .from("appointments")
+      .select("starts_at, duration, status")
+      .eq("therapist_id", therapistId)
+      .gte("starts_at", now.toISOString())
+      .lt("starts_at", horizon.toISOString())
+      .neq("status", "cancelled"),
+    supabase
+      .from("profiles")
+      .select("google_calendar_sync_enabled, google_calendar_id")
+      .eq("id", therapistId)
+      .maybeSingle(),
+  ]);
+
+  const out: Array<{ startsAt: string; durationMin: number }> = (
+    (appts ?? []) as Array<{
+      starts_at: string;
+      duration: number | null;
+      status: string;
+    }>
+  ).map((row) => ({
     startsAt: row.starts_at,
     durationMin: row.duration ?? 60,
   }));
+
+  if (profile?.google_calendar_sync_enabled) {
+    try {
+      const { getGoogleBusy } = await import("@/lib/google-calendar");
+      const googleBusy = await getGoogleBusy({
+        userId: therapistId,
+        calendarId: profile.google_calendar_id ?? "primary",
+        from: now,
+        to: horizon,
+      });
+      for (const b of googleBusy) {
+        const durationMin = Math.max(
+          1,
+          Math.round((b.end.getTime() - b.start.getTime()) / 60_000),
+        );
+        out.push({ startsAt: b.start.toISOString(), durationMin });
+      }
+    } catch (e) {
+      console.error("[booking] google freeBusy fetch failed", e);
+    }
+  }
+
+  return out;
+}
+
+// ============================================================
+// Calendar sync — settings page data
+// ============================================================
+
+export interface CalendarSyncSettings {
+  icalToken: string;
+  googleConnected: boolean;
+  googleEmail: string | null;
+  googleSyncEnabled: boolean;
+}
+
+export async function getCalendarSyncSettings(): Promise<CalendarSyncSettings | null> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return null;
+
+  const { data } = await supabase
+    .from("profiles")
+    .select(
+      "ical_token, google_calendar_email, google_calendar_refresh_token, google_calendar_sync_enabled",
+    )
+    .eq("id", auth.user.id)
+    .maybeSingle();
+  if (!data) return null;
+
+  return {
+    icalToken: data.ical_token,
+    googleConnected: !!data.google_calendar_refresh_token,
+    googleEmail: data.google_calendar_email ?? null,
+    googleSyncEnabled: data.google_calendar_sync_enabled ?? false,
+  };
 }

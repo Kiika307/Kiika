@@ -5,6 +5,7 @@ import { createClient as createServiceClient } from "@supabase/supabase-js";
 import { localToUtc } from "@/lib/booking";
 import { getSmtpTransporter, emailFrom } from "@/lib/email/smtp-client";
 import { sendPushTo } from "@/lib/push";
+import { createGoogleEvent } from "@/lib/google-calendar";
 
 export interface PublicBookingInput {
   therapistSlug: string;
@@ -74,7 +75,7 @@ export async function submitPublicBookingAction(
   const { data: profile } = await supabase
     .from("profiles")
     .select(
-      "id, full_name, booking_enabled, booking_default_duration, booking_timezone, booking_advance_days",
+      "id, full_name, booking_enabled, booking_default_duration, booking_timezone, booking_advance_days, google_calendar_sync_enabled, google_calendar_id",
     )
     .eq("booking_slug", trimmed.therapistSlug)
     .eq("booking_enabled", true)
@@ -172,6 +173,34 @@ export async function submitPublicBookingAction(
       title: "Anamnèse — page de réservation",
       body: trimmed.motif,
     });
+  }
+
+  // Push to Google Calendar — best-effort. Failure does NOT roll the
+  // booking back; the praticien gets the RDV in KIIKA either way and
+  // can re-sync manually if needed.
+  if (profile.google_calendar_sync_enabled) {
+    try {
+      const summary = `Séance KIIKA · ${trimmed.fullName}`;
+      const description = trimmed.motif
+        ? `Anamnèse :\n${trimmed.motif}\n\nContact : ${trimmed.email}${trimmed.phone ? " · " + trimmed.phone : ""}`
+        : `Contact : ${trimmed.email}${trimmed.phone ? " · " + trimmed.phone : ""}`;
+      const eventId = await createGoogleEvent({
+        userId: profile.id,
+        calendarId: profile.google_calendar_id ?? "primary",
+        summary,
+        description,
+        startsAt,
+        endsAt: slotEnd,
+      });
+      if (eventId) {
+        await supabase
+          .from("appointments")
+          .update({ google_event_id: eventId })
+          .eq("id", appt.id);
+      }
+    } catch (e) {
+      console.error("[public-booking] google calendar push failed", e);
+    }
   }
 
   // Push notification to the praticien — best-effort. Same dateLabel /
