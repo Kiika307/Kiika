@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { AppShell } from "@/components/layout/AppShell";
 import { ProfileForm } from "@/components/settings/ProfileForm";
 import { RemindersToggle } from "@/components/settings/RemindersToggle";
+import { PushNotificationsToggle } from "@/components/settings/PushNotificationsToggle";
 import { getTherapist } from "@/lib/data";
 import { createClient } from "@/lib/supabase/server";
 
@@ -40,6 +41,12 @@ export default async function ProfileSettingsPage() {
 
       <div className="mt-6">
         <RemindersToggle initialEnabled={therapist?.remindersEnabled ?? true} />
+      </div>
+
+      <div className="mt-6">
+        <PushNotificationsToggle
+          vapidPublicKey={process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? ""}
+        />
       </div>
 
       <div className="mt-6 grid sm:grid-cols-2 gap-5">

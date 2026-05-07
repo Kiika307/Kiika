@@ -19,6 +19,17 @@ export const metadata: Metadata = {
   title: "KIIKA — Espace praticien",
   description:
     "KIIKA — du Ki au Ka : la plateforme des praticiens et accompagnants holistiques pour suivre, accompagner et faire évoluer leurs clients.",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "KIIKA",
+    statusBarStyle: "default",
+  },
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icons/apple-touch-icon.png",
+  },
 };
 
 export const viewport: Viewport = {
@@ -49,6 +60,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className="min-h-full">
         <a href="#main-content" className="skip-link">Aller au contenu principal</a>
         {children}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if ('serviceWorker' in navigator) { window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function(){}); }); }`,
+          }}
+        />
         <Toaster
           position="bottom-right"
           duration={4000}

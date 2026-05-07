@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { createClient as createServiceClient } from "@supabase/supabase-js";
 import { localToUtc } from "@/lib/booking";
 import { getSmtpTransporter, emailFrom } from "@/lib/email/smtp-client";
+import { sendPushTo } from "@/lib/push";
 
 export interface PublicBookingInput {
   therapistSlug: string;
@@ -171,6 +172,32 @@ export async function submitPublicBookingAction(
       title: "Anamnèse — page de réservation",
       body: trimmed.motif,
     });
+  }
+
+  // Push notification to the praticien — best-effort. Same dateLabel /
+  // timeLabel computed below for the email; we factor it inline to keep
+  // the SMTP try/catch isolated from the push try/catch.
+  try {
+    const tzShort = profile.booking_timezone || "Europe/Paris";
+    const dateShort = new Intl.DateTimeFormat("fr-FR", {
+      weekday: "short",
+      day: "2-digit",
+      month: "short",
+      timeZone: tzShort,
+    }).format(startsAt);
+    const timeShort = new Intl.DateTimeFormat("fr-FR", {
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZone: tzShort,
+    }).format(startsAt);
+    await sendPushTo(profile.id, {
+      title: "Nouveau rendez-vous",
+      body: `${trimmed.fullName} · ${dateShort} ${timeShort}`,
+      url: "/agenda",
+      tag: `booking-${appt.id}`,
+    });
+  } catch (e) {
+    console.error("[public-booking] push notification failed", e);
   }
 
   // Confirmation email — best-effort, doesn't fail the booking.
