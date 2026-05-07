@@ -48,6 +48,7 @@ export const clients: Client[] = [
     ],
     info: EMPTY_INFO,
     selene: null,
+    remindersDisabled: false,
   },
   {
     id: "2",
@@ -75,6 +76,7 @@ export const clients: Client[] = [
     ],
     info: EMPTY_INFO,
     selene: null,
+    remindersDisabled: false,
   },
   {
     id: "3",
@@ -93,6 +95,7 @@ export const clients: Client[] = [
     topProtocols: [],
     info: EMPTY_INFO,
     selene: null,
+    remindersDisabled: false,
   },
   {
     id: "4",
@@ -120,6 +123,7 @@ export const clients: Client[] = [
     ],
     info: EMPTY_INFO,
     selene: null,
+    remindersDisabled: false,
   },
 ];
 

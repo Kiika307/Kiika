@@ -40,6 +40,7 @@ export interface Client {
   topProtocols: Array<{ id: number; score: number; reason: string }>;
   info: ClientInfo;
   selene: SeleneSummary | null;
+  remindersDisabled: boolean;
 }
 
 export type Sexe = "F" | "M" | "Autre" | "Non précisé";

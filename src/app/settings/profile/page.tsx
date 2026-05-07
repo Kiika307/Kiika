@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { AppShell } from "@/components/layout/AppShell";
 import { ProfileForm } from "@/components/settings/ProfileForm";
+import { RemindersToggle } from "@/components/settings/RemindersToggle";
 import { getTherapist } from "@/lib/data";
 import { createClient } from "@/lib/supabase/server";
 
@@ -36,6 +37,10 @@ export default async function ProfileSettingsPage() {
         initials={therapist?.initials ?? "?"}
         email={auth.user.email ?? ""}
       />
+
+      <div className="mt-6">
+        <RemindersToggle initialEnabled={therapist?.remindersEnabled ?? true} />
+      </div>
     </AppShell>
   );
 }

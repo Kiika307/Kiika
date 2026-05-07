@@ -11,6 +11,8 @@ const PUBLIC_PREFIXES = [
   "/confidentialite",
   "/selene",
   "/playground",
+  "/rdv",
+  "/api/cron",
   "/_next",
   "/favicon",
 ];

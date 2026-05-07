@@ -1108,3 +1108,43 @@ export async function generateKiikaCarePlanForClient(
   revalidatePath("/clients");
   return { ok: true, carePlanId: inserted.id };
 }
+
+// ============================================================
+// Rappels de RDV — toggles
+// ============================================================
+
+export async function setRemindersEnabled(
+  enabled: boolean,
+): Promise<{ ok: boolean; error?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const { error } = await supabase
+    .from("profiles")
+    .update({ reminders_enabled: enabled, updated_at: new Date().toISOString() })
+    .eq("id", auth.user.id);
+  if (error) return { ok: false, error: error.message };
+
+  revalidatePath("/", "layout");
+  return { ok: true };
+}
+
+export async function setClientRemindersDisabled(
+  clientId: string,
+  disabled: boolean,
+): Promise<{ ok: boolean; error?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const { error } = await supabase
+    .from("clients")
+    .update({ reminders_disabled: disabled })
+    .eq("id", clientId)
+    .eq("therapist_id", auth.user.id);
+  if (error) return { ok: false, error: error.message };
+
+  revalidatePath("/clients");
+  return { ok: true };
+}

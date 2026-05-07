@@ -1,10 +1,14 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { Pencil, Save, X, ShieldCheck, Plus } from "lucide-react";
+import { Pencil, Save, X, ShieldCheck, Plus, Bell, BellOff } from "lucide-react";
 import { toast } from "sonner";
 import { FormField, FormSelect, FormTextarea } from "@/components/ui/FormField";
-import { updateClientInfo, recordClientConsent } from "@/lib/actions";
+import {
+  updateClientInfo,
+  recordClientConsent,
+  setClientRemindersDisabled,
+} from "@/lib/actions";
 import type { Client, ClientConsent, ClientInfo, Sexe, SignatureMethod } from "@/lib/types";
 
 interface InformationsTabProps {
@@ -74,6 +78,12 @@ export function InformationsTab({ client, consents }: InformationsTabProps) {
         </Section>
 
         <ConsentsSection clientId={client.id} consents={consents} />
+
+        <ClientRemindersSection
+          clientId={client.id}
+          initialDisabled={client.remindersDisabled}
+          clientFirstName={client.name.split(" ")[0]}
+        />
       </div>
     );
   }
@@ -426,4 +436,87 @@ function formatConsentDate(iso: string): string {
     month: "long",
     year: "numeric",
   });
+}
+
+function ClientRemindersSection({
+  clientId,
+  initialDisabled,
+  clientFirstName,
+}: {
+  clientId: string;
+  initialDisabled: boolean;
+  clientFirstName: string;
+}) {
+  const [disabled, setDisabled] = useState(initialDisabled);
+  const [pending, startTransition] = useTransition();
+
+  const handleToggle = (next: boolean) => {
+    const previous = disabled;
+    setDisabled(next);
+    startTransition(async () => {
+      const res = await setClientRemindersDisabled(clientId, next);
+      if (!res.ok) {
+        setDisabled(previous);
+        toast.error(res.error ?? "Impossible de mettre à jour");
+        return;
+      }
+      toast.success(
+        next
+          ? `Rappels désactivés pour ${clientFirstName}`
+          : `Rappels réactivés pour ${clientFirstName}`,
+      );
+    });
+  };
+
+  return (
+    <section
+      className="rounded-[16px] bg-[var(--color-white-soft)] p-5 lg:col-span-2"
+      style={{ boxShadow: "var(--shadow-card)" }}
+    >
+      <header className="flex items-start justify-between gap-3 flex-wrap">
+        <div className="flex items-start gap-2.5">
+          {disabled ? (
+            <BellOff size={16} className="text-[var(--color-gray-soft)] mt-0.5" aria-hidden="true" />
+          ) : (
+            <Bell size={16} className="text-[var(--color-teal)] mt-0.5" aria-hidden="true" />
+          )}
+          <div>
+            <h3 className="font-serif text-[15px] font-semibold text-[var(--color-navy)]">
+              Rappels de rendez-vous
+            </h3>
+            <p className="mt-0.5 text-[11.5px] text-[var(--color-gray-soft)] leading-[1.5]">
+              {disabled
+                ? `Aucun rappel automatique n'est envoyé à ${clientFirstName}.`
+                : `${clientFirstName} reçoit un rappel par email 24h puis 1h avant chaque séance.`}
+            </p>
+          </div>
+        </div>
+        <button
+          type="button"
+          role="switch"
+          aria-checked={!disabled}
+          onClick={() => handleToggle(!disabled)}
+          disabled={pending}
+          className="relative inline-flex h-6 w-11 items-center rounded-full transition-colors disabled:opacity-60 shrink-0"
+          style={{
+            backgroundColor: !disabled
+              ? "var(--color-teal)"
+              : "var(--color-light-gray)",
+          }}
+        >
+          <span className="sr-only">
+            {disabled
+              ? `Activer les rappels pour ${clientFirstName}`
+              : `Désactiver les rappels pour ${clientFirstName}`}
+          </span>
+          <span
+            className="inline-block h-4 w-4 transform rounded-full bg-white shadow-sm transition-transform"
+            style={{
+              transform: !disabled ? "translateX(22px)" : "translateX(2px)",
+            }}
+          />
+        </button>
+      </header>
+    </section>
+  );
 }

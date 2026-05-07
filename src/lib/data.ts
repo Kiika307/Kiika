@@ -49,6 +49,7 @@ export interface TherapistInfo {
   initials: string;
   role: string;
   avatarUrl: string | null;
+  remindersEnabled: boolean;
 }
 
 export async function getTherapist(): Promise<TherapistInfo | null> {
@@ -58,7 +59,7 @@ export async function getTherapist(): Promise<TherapistInfo | null> {
 
   const { data: profile } = await supabase
     .from("profiles")
-    .select("id, full_name, role, avatar_url")
+    .select("id, full_name, role, avatar_url, reminders_enabled")
     .eq("id", auth.user.id)
     .maybeSingle();
 
@@ -79,6 +80,7 @@ export async function getTherapist(): Promise<TherapistInfo | null> {
     initials: initials(profile.full_name),
     role,
     avatarUrl: profile.avatar_url ?? null,
+    remindersEnabled: profile.reminders_enabled ?? true,
   };
 }
 
@@ -285,6 +287,7 @@ interface ClientRowDb {
   selene_dominante: string | null;
   selene_top3: string[] | null;
   selene_taken_at: string | null;
+  reminders_disabled: boolean | null;
 }
 
 export async function getClientsRich(): Promise<Client[]> {
@@ -292,7 +295,7 @@ export async function getClientsRich(): Promise<Client[]> {
   const { data: rows } = await supabase
     .from("clients")
     .select(
-      "id, full_name, email, phone, age, status, color, test_done, profile_axes, profile_dominante, themes, objectifs, blocages, created_at, date_naissance, sexe, profession, situation_familiale, adresse, medecin_traitant, personne_referente, antecedents_medicaux, antecedents_psy, traitements_en_cours, selene_scores, selene_dominante, selene_top3, selene_taken_at",
+      "id, full_name, email, phone, age, status, color, test_done, profile_axes, profile_dominante, themes, objectifs, blocages, created_at, date_naissance, sexe, profession, situation_familiale, adresse, medecin_traitant, personne_referente, antecedents_medicaux, antecedents_psy, traitements_en_cours, selene_scores, selene_dominante, selene_top3, selene_taken_at, reminders_disabled",
     )
     .order("created_at", { ascending: true });
 
@@ -362,6 +365,7 @@ export async function getClientsRich(): Promise<Client[]> {
       profile,
       testDone: row.test_done,
       topProtocols: [],
+      remindersDisabled: row.reminders_disabled ?? false,
       info: {
         dateNaissance: row.date_naissance,
         sexe: row.sexe,
