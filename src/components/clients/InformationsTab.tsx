@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { useState, useTransition } from "react";
 import { Pencil, Save, X, ShieldCheck, Plus, Bell, BellOff } from "lucide-react";
 import { toast } from "sonner";
@@ -9,7 +10,12 @@ import {
   recordClientConsent,
   setClientRemindersDisabled,
 } from "@/lib/actions";
+import { pickBackgroundImage } from "@/lib/academia-photos";
 import type { Client, ClientConsent, ClientInfo, Sexe, SignatureMethod } from "@/lib/types";
+
+function sectionPhoto(clientId: string, key: string): CSSProperties {
+  return { "--aca-photo": `url(${pickBackgroundImage(`${clientId}-${key}`)})` } as CSSProperties;
+}
 
 interface InformationsTabProps {
   client: Client;
@@ -58,7 +64,11 @@ export function InformationsTab({ client, consents }: InformationsTabProps) {
   if (!editing) {
     return (
       <div className="grid gap-5 lg:grid-cols-2">
-        <Section title="État civil" onEdit={() => setEditing(true)}>
+        <Section
+          title="État civil"
+          onEdit={() => setEditing(true)}
+          photoStyle={sectionPhoto(client.id, "etat-civil")}
+        >
           <Field label="Date de naissance" value={formatDate(client.info.dateNaissance)} />
           <Field label="Sexe" value={client.info.sexe} />
           <Field label="Profession" value={client.info.profession} />
@@ -66,12 +76,16 @@ export function InformationsTab({ client, consents }: InformationsTabProps) {
           <Field label="Adresse" value={client.info.adresse} />
         </Section>
 
-        <Section title="Contacts médicaux">
+        <Section title="Contacts médicaux" photoStyle={sectionPhoto(client.id, "contacts-medicaux")}>
           <Field label="Médecin traitant" value={client.info.medecinTraitant} />
           <Field label="Personne référente" value={client.info.personneReferente} />
         </Section>
 
-        <Section title="Antécédents & traitements" wide>
+        <Section
+          title="Antécédents & traitements"
+          wide
+          photoStyle={sectionPhoto(client.id, "antecedents")}
+        >
           <Field label="Antécédents médicaux" value={client.info.antecedentsMedicaux} multiline />
           <Field label="Antécédents psychologiques" value={client.info.antecedentsPsy} multiline />
           <Field label="Traitements en cours" value={client.info.traitementsEnCours} multiline />
@@ -210,31 +224,36 @@ function Section({
   children,
   onEdit,
   wide,
+  photoStyle,
 }: {
   title: string;
   children: React.ReactNode;
   onEdit?: () => void;
   wide?: boolean;
+  photoStyle?: CSSProperties;
 }) {
   return (
     <section
-      className={`rounded-[16px] bg-[var(--color-white-soft)] p-5 ${wide ? "lg:col-span-2" : ""}`}
-      style={{ boxShadow: "var(--shadow-card)" }}
+      className={`relative overflow-hidden rounded-[16px] bg-[var(--color-white-soft)] p-5 ${wide ? "lg:col-span-2" : ""}`}
+      style={{ boxShadow: "var(--shadow-card)", ...photoStyle }}
     >
-      <header className="flex items-center justify-between mb-3">
-        <h3 className="font-serif text-[16px] font-semibold text-[var(--color-navy)]">{title}</h3>
-        {onEdit && (
-          <button
-            type="button"
-            onClick={onEdit}
-            className="inline-flex items-center gap-1 text-[12px] font-semibold text-[var(--color-gold)] hover:underline"
-          >
-            <Pencil size={12} />
-            Modifier
-          </button>
-        )}
-      </header>
-      <div className="space-y-2.5">{children}</div>
+      {photoStyle && <div className="aca-photo" aria-hidden="true" />}
+      <div className="relative z-[1]">
+        <header className="flex items-center justify-between mb-3">
+          <h3 className="font-serif text-[16px] font-semibold text-[var(--color-navy)]">{title}</h3>
+          {onEdit && (
+            <button
+              type="button"
+              onClick={onEdit}
+              className="inline-flex items-center gap-1 text-[12px] font-semibold text-[var(--color-gold)] hover:underline"
+            >
+              <Pencil size={12} />
+              Modifier
+            </button>
+          )}
+        </header>
+        <div className="space-y-2.5">{children}</div>
+      </div>
     </section>
   );
 }
@@ -304,9 +323,11 @@ function ConsentsSection({
 
   return (
     <section
-      className="rounded-[16px] bg-[var(--color-white-soft)] p-5 lg:col-span-2"
-      style={{ boxShadow: "var(--shadow-card)" }}
+      className="relative overflow-hidden rounded-[16px] bg-[var(--color-white-soft)] p-5 lg:col-span-2"
+      style={{ boxShadow: "var(--shadow-card)", ...sectionPhoto(clientId, "consent") }}
     >
+      <div className="aca-photo" aria-hidden="true" />
+      <div className="relative z-[1]">
       <header className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-2">
           <ShieldCheck size={18} className="text-[var(--color-teal)]" />
@@ -426,6 +447,7 @@ function ConsentsSection({
           ))}
         </div>
       )}
+      </div>
     </section>
   );
 }
@@ -470,9 +492,11 @@ function ClientRemindersSection({
 
   return (
     <section
-      className="rounded-[16px] bg-[var(--color-white-soft)] p-5 lg:col-span-2"
-      style={{ boxShadow: "var(--shadow-card)" }}
+      className="relative overflow-hidden rounded-[16px] bg-[var(--color-white-soft)] p-5 lg:col-span-2"
+      style={{ boxShadow: "var(--shadow-card)", ...sectionPhoto(clientId, "reminders") }}
     >
+      <div className="aca-photo" aria-hidden="true" />
+      <div className="relative z-[1]">
       <header className="flex items-start justify-between gap-3 flex-wrap">
         <div className="flex items-start gap-2.5">
           {disabled ? (
@@ -517,6 +541,7 @@ function ClientRemindersSection({
           />
         </button>
       </header>
+      </div>
     </section>
   );
 }
