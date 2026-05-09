@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useTransition, useMemo } from "react";
-import { Plus, Trash2, Pencil, Save, X, FileText, Receipt } from "lucide-react";
+import { Plus, Trash2, Pencil, Save, X, FileText, Receipt, Eye, Send } from "lucide-react";
 import { toast } from "sonner";
 import { FormField, FormSelect, FormTextarea } from "@/components/ui/FormField";
 import { EmptyState } from "@/components/ui/EmptyState";
@@ -43,9 +43,11 @@ const EUR = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" 
 export function InvoicesTab({ clientId, invoices }: InvoicesTabProps) {
   const [adding, setAdding] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
+  const [previewId, setPreviewId] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
   const [error, setError] = useState<string | null>(null);
   const { confirm, dialog } = useConfirm();
+  const previewInvoice = previewId ? invoices.find((i) => i.id === previewId) ?? null : null;
 
   const totals = useMemo(() => {
     let billed = 0;
@@ -165,6 +167,7 @@ export function InvoicesTab({ clientId, invoices }: InvoicesTabProps) {
               key={inv.id}
               invoice={inv}
               pending={pending}
+              onPreview={() => setPreviewId(inv.id)}
               onEdit={() => setEditingId(inv.id)}
               onDelete={async () => {
                 const ok = await confirm({
@@ -201,6 +204,28 @@ export function InvoicesTab({ clientId, invoices }: InvoicesTabProps) {
           ),
         )}
       </div>
+      {previewInvoice && (
+        <InvoicePreviewModal
+          invoice={previewInvoice}
+          pending={pending}
+          onClose={() => setPreviewId(null)}
+          onSend={() => {
+            startTransition(async () => {
+              const res = await updateInvoice(previewInvoice.id, { statut: "envoyee" });
+              if (res.ok) {
+                toast.success(`Facture ${previewInvoice.numero} marquée comme envoyée`);
+                setPreviewId(null);
+              } else {
+                setError(res.error ?? "Erreur");
+                toast.error(res.error ?? "Impossible de marquer comme envoyée");
+              }
+            });
+          }}
+          onPrint={() => {
+            if (typeof window !== "undefined") window.print();
+          }}
+        />
+      )}
       {dialog}
     </div>
   );
@@ -223,12 +248,14 @@ function SummaryCard({ label, value, color }: { label: string; value: string; co
 function InvoiceRow({
   invoice,
   pending,
+  onPreview,
   onEdit,
   onDelete,
   onStatusChange,
 }: {
   invoice: Invoice;
   pending: boolean;
+  onPreview: () => void;
   onEdit: () => void;
   onDelete: () => void;
   onStatusChange: (s: InvoiceStatut) => void;
@@ -277,6 +304,16 @@ function InvoiceRow({
             <option key={s} value={s}>{STATUT_LABEL[s]}</option>
           ))}
         </select>
+        <button
+          type="button"
+          onClick={onPreview}
+          disabled={pending}
+          className="inline-flex items-center justify-center rounded text-[var(--color-gray-soft)] hover:bg-[var(--color-light-gray)] hover:text-[var(--color-navy)] disabled:opacity-50 min-h-9 min-w-9"
+          title="Aperçu"
+          aria-label="Voir l'aperçu de la facture"
+        >
+          <Eye size={13} aria-hidden="true" />
+        </button>
         <button
           type="button"
           onClick={onEdit}
@@ -434,4 +471,154 @@ function formatDate(iso: string): string {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
   return d.toLocaleDateString("fr-FR", { day: "2-digit", month: "short", year: "numeric" });
+}
+
+function InvoicePreviewModal({
+  invoice,
+  pending,
+  onClose,
+  onSend,
+  onPrint,
+}: {
+  invoice: Invoice;
+  pending: boolean;
+  onClose: () => void;
+  onSend: () => void;
+  onPrint: () => void;
+}) {
+  const alreadySent =
+    invoice.statut === "envoyee" || invoice.statut === "reglee" || invoice.statut === "relance";
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 px-4 py-6 print:bg-white print:p-0"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="invoice-preview-title"
+      onClick={onClose}
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-[16px] bg-white print:max-h-none print:overflow-visible print:rounded-none print:shadow-none"
+        style={{ boxShadow: "var(--shadow-card)" }}
+      >
+        <div className="flex items-center justify-between gap-3 px-6 py-4 border-b border-[var(--color-light-gray)] print:hidden">
+          <h2
+            id="invoice-preview-title"
+            className="font-serif text-[18px] font-semibold text-[var(--color-navy)]"
+          >
+            Aperçu de la facture
+          </h2>
+          <button
+            type="button"
+            onClick={onClose}
+            className="rounded p-1 text-[var(--color-gray-soft)] hover:bg-[var(--color-light-gray)]"
+            aria-label="Fermer l'aperçu"
+          >
+            <X size={16} aria-hidden="true" />
+          </button>
+        </div>
+
+        <div className="px-8 py-8 space-y-6">
+          <div className="flex items-start justify-between gap-6">
+            <div>
+              <div className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)]">
+                Facture
+              </div>
+              <div className="mt-1 font-serif text-[24px] font-bold text-[var(--color-navy)]">
+                {invoice.numero}
+              </div>
+            </div>
+            <div className="text-right">
+              <span
+                className="inline-block rounded-[8px] px-3 py-1 text-[12px] font-semibold text-white"
+                style={{ backgroundColor: STATUT_COLOR[invoice.statut] }}
+              >
+                {STATUT_LABEL[invoice.statut]}
+              </span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <PreviewField label="Date d'émission" value={formatDate(invoice.dateEmission)} />
+            <PreviewField
+              label="Date d'échéance"
+              value={invoice.dateEcheance ? formatDate(invoice.dateEcheance) : "—"}
+            />
+            <PreviewField
+              label="Mode de financement"
+              value={invoice.modeFinancement ? MODE_LABEL[invoice.modeFinancement] : "—"}
+            />
+            <PreviewField
+              label="Montant réglé"
+              value={EUR.format(invoice.montantRegle)}
+            />
+          </div>
+
+          <div className="rounded-[12px] bg-[var(--color-cream)] px-5 py-4 flex items-center justify-between">
+            <div className="text-[13px] font-semibold text-[var(--color-navy)]">
+              Montant total
+            </div>
+            <div className="font-serif text-[22px] font-bold text-[var(--color-navy)] tabular">
+              {EUR.format(invoice.montant)}
+            </div>
+          </div>
+
+          {invoice.notes && (
+            <div>
+              <div className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)] mb-1">
+                Notes
+              </div>
+              <p className="text-[13px] text-[var(--color-navy)] whitespace-pre-wrap">
+                {invoice.notes}
+              </p>
+            </div>
+          )}
+        </div>
+
+        <div className="flex flex-wrap justify-end gap-2 px-6 py-4 border-t border-[var(--color-light-gray)] print:hidden">
+          <button
+            type="button"
+            onClick={onClose}
+            disabled={pending}
+            className="inline-flex items-center gap-1.5 rounded-[10px] border border-[var(--color-light-gray)] px-3 py-2 text-[13px] font-semibold text-[var(--color-navy)] hover:bg-[var(--color-light-gray)] disabled:opacity-50"
+          >
+            Fermer
+          </button>
+          <button
+            type="button"
+            onClick={onPrint}
+            disabled={pending}
+            className="inline-flex items-center gap-1.5 rounded-[10px] border border-[var(--color-light-gray)] px-3 py-2 text-[13px] font-semibold text-[var(--color-navy)] hover:bg-[var(--color-light-gray)] disabled:opacity-50"
+          >
+            <FileText size={13} aria-hidden="true" />
+            Imprimer / PDF
+          </button>
+          {!alreadySent && (
+            <button
+              type="button"
+              onClick={onSend}
+              disabled={pending}
+              className="inline-flex items-center gap-1.5 rounded-[10px] px-4 py-2 text-[13px] font-semibold text-white disabled:opacity-50"
+              style={{ backgroundColor: "var(--color-gold)" }}
+            >
+              <Send size={13} aria-hidden="true" />
+              {pending ? "…" : "Marquer comme envoyée"}
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PreviewField({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <div className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)]">
+        {label}
+      </div>
+      <div className="mt-1 text-[13px] font-semibold text-[var(--color-navy)]">{value}</div>
+    </div>
+  );
 }
