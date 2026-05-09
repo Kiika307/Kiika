@@ -11,6 +11,7 @@ import {
   LogOut,
 } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { academiaFeaturePhotos } from "@/lib/academia-photos";
 
 const navItems = [
   { href: "/portail", label: "Mon espace", icon: LayoutDashboard, exact: true },
@@ -42,8 +43,23 @@ export function PortalSidebar({ clientName, clientInitials, therapistName }: Por
         </div>
       </div>
 
-      <nav className="flex-1 px-3 py-2" aria-label="Sections">
-        <ul className="space-y-1">
+      <nav className="flex-1 px-3 py-2 relative" aria-label="Sections">
+        {/* Photo décorative academia (cohérence avec le portail thérapeute) */}
+        <div
+          className="aca-only pointer-events-none absolute left-0 right-0 bottom-0 h-[42%] aca-sidebar-photo"
+          style={
+            {
+              "--aca-photo": `url(${academiaFeaturePhotos.sidebarFooter})`,
+              opacity: 0.7,
+              WebkitMaskImage: "linear-gradient(to top, black 30%, transparent 100%)",
+              maskImage: "linear-gradient(to top, black 30%, transparent 100%)",
+              borderRadius: "12px",
+              zIndex: 0,
+            } as React.CSSProperties
+          }
+          aria-hidden="true"
+        />
+        <ul className="space-y-1 relative" style={{ zIndex: 1 }}>
           {navItems.map(({ href, label, icon: Icon, exact }) => {
             const active = exact ? pathname === href : pathname.startsWith(href);
             return (
