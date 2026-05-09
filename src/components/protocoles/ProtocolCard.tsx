@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Sparkles, Clock } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { protocolDetails } from "@/lib/protocol-details";
+import { pickBackgroundImage } from "@/lib/academia-photos";
 import type { Protocol } from "@/lib/types";
 
 interface ProtocolCardProps {
@@ -13,15 +14,32 @@ interface ProtocolCardProps {
 
 export function ProtocolCard({ protocol, matchScore }: ProtocolCardProps) {
   const hasDetail = !!protocolDetails[protocol.id];
+  const backgroundImage = pickBackgroundImage(protocol.id);
   return (
     <Link
       href={`/protocoles/${protocol.id}`}
-      className="group relative block rounded-[16px] bg-[var(--color-white-soft)] p-[22px] transition-all duration-200 hover:-translate-y-0.5 press-feedback focus-ring virtualized-card"
+      className="group relative block overflow-hidden rounded-[16px] bg-[var(--color-white-soft)] p-[22px] transition-all duration-200 hover:-translate-y-0.5 press-feedback focus-ring virtualized-card"
       style={{
         borderTop: `3px solid ${protocol.color}`,
         boxShadow: "var(--shadow-card)",
       }}
     >
+      {/* Image de fond décorative */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none rounded-[inherit] bg-cover bg-center transition-opacity duration-300 opacity-[0.18] group-hover:opacity-[0.28]"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      />
+      {/* Voile pour garder la lisibilité du texte */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none rounded-[inherit]"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(255,253,248,0.78) 0%, rgba(255,253,248,0.92) 55%, rgba(255,253,248,0.98) 100%)",
+        }}
+      />
+      <div className="relative">
       <div
         className="absolute inset-0 rounded-[16px] opacity-0 transition-opacity duration-200 group-hover:opacity-100 pointer-events-none"
         style={{ boxShadow: "var(--shadow-card-hover)" }}
@@ -73,6 +91,7 @@ export function ProtocolCard({ protocol, matchScore }: ProtocolCardProps) {
         <span className="font-semibold" style={{ color: protocol.color }}>
           Voir la fiche →
         </span>
+      </div>
       </div>
     </Link>
   );
