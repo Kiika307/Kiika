@@ -91,6 +91,7 @@ export default async function ClientsPage({ searchParams }: ClientsPageProps) {
             bankName: null,
             invoiceFooter: null,
             paymentTerms: null,
+            logoUrl: null,
           }
         }
         initialId={id}

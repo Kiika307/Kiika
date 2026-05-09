@@ -10,7 +10,7 @@ import { useConfirm } from "@/components/ui/ConfirmDialog";
 import { addInvoice, updateInvoice, deleteInvoice } from "@/lib/actions";
 import { exportInvoicePdf } from "@/lib/pdf-export";
 import type { TherapistBilling } from "@/lib/data";
-import type { Client, Invoice, InvoiceStatut, ModeFinancement } from "@/lib/types";
+import type { Client, Invoice, InvoiceLineItem, InvoiceStatut, ModeFinancement } from "@/lib/types";
 
 interface InvoicesTabProps {
   clientId: string;
@@ -239,14 +239,19 @@ export function InvoicesTab({
               }
             });
           }}
-          onDownload={() => {
-            exportInvoicePdf({
-              invoice: previewInvoice,
-              client,
-              therapistName,
-              therapistRole,
-              billing,
-            });
+          onDownload={async () => {
+            try {
+              await exportInvoicePdf({
+                invoice: previewInvoice,
+                client,
+                therapistName,
+                therapistRole,
+                billing,
+              });
+            } catch (e) {
+              const msg = e instanceof Error ? e.message : "Erreur PDF";
+              toast.error(`Impossible de générer le PDF : ${msg}`);
+            }
           }}
         />
       )}
@@ -370,6 +375,8 @@ function InvoiceRow({
 
 interface EditorInput {
   numero: string;
+  project: string | null;
+  lineItems: InvoiceLineItem[];
   montant: number;
   modeFinancement?: ModeFinancement | null;
   dateEmission?: string;
@@ -389,7 +396,12 @@ function InvoiceEditor({
   onSubmit: (input: EditorInput) => void;
 }) {
   const [numero, setNumero] = useState(initial?.numero ?? autoNumero());
-  const [montant, setMontant] = useState(String(initial?.montant ?? ""));
+  const [project, setProject] = useState(initial?.project ?? "");
+  const [items, setItems] = useState<InvoiceLineItem[]>(
+    initial?.lineItems && initial.lineItems.length > 0
+      ? initial.lineItems
+      : [{ description: "", qty: 1, unitPrice: 0 }],
+  );
   const [modeFinancement, setModeFinancement] = useState<ModeFinancement | "">(
     initial?.modeFinancement ?? "",
   );
@@ -399,8 +411,23 @@ function InvoiceEditor({
   const [dateEcheance, setDateEcheance] = useState(initial?.dateEcheance ?? "");
   const [notes, setNotes] = useState(initial?.notes ?? "");
 
+  const subtotal = useMemo(
+    () => items.reduce((s, it) => s + (Number(it.qty) || 0) * (Number(it.unitPrice) || 0), 0),
+    [items],
+  );
+
+  function updateItem(idx: number, patch: Partial<InvoiceLineItem>) {
+    setItems((arr) => arr.map((it, i) => (i === idx ? { ...it, ...patch } : it)));
+  }
+  function removeItem(idx: number) {
+    setItems((arr) => (arr.length === 1 ? arr : arr.filter((_, i) => i !== idx)));
+  }
+  function addItem() {
+    setItems((arr) => [...arr, { description: "", qty: 1, unitPrice: 0 }]);
+  }
+
   return (
-    <div className="rounded-[12px] bg-white p-4 space-y-3" style={{ boxShadow: "var(--shadow-card)" }}>
+    <div className="rounded-[12px] bg-white p-4 space-y-4" style={{ boxShadow: "var(--shadow-card)" }}>
       <div className="grid grid-cols-3 gap-3">
         <FormField
           label="Numéro"
@@ -410,13 +437,11 @@ function InvoiceEditor({
           required
         />
         <FormField
-          label="Montant (€)"
-          type="number"
-          min={0}
-          step={0.01}
-          value={montant}
-          onChange={(e) => setMontant(e.target.value)}
-          required
+          label="Projet (optionnel)"
+          type="text"
+          value={project}
+          onChange={(e) => setProject(e.target.value)}
+          placeholder="Ex : Accompagnement, séances de groupe…"
         />
         <FormSelect
           label="Mode de financement"
@@ -441,13 +466,79 @@ function InvoiceEditor({
           onChange={(e) => setDateEcheance(e.target.value)}
         />
       </div>
+
+      <div>
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="text-[12px] uppercase tracking-wide font-semibold text-[var(--color-gray-soft)]">
+            Lignes de prestation
+          </h3>
+          <button
+            type="button"
+            onClick={addItem}
+            className="inline-flex items-center gap-1 rounded-[8px] border border-[var(--color-light-gray)] px-2 py-1 text-[11px] font-semibold text-[var(--color-navy)] hover:bg-[var(--color-light-gray)]"
+          >
+            <Plus size={12} />
+            Ajouter une ligne
+          </button>
+        </div>
+        <div className="space-y-2">
+          {items.map((it, idx) => (
+            <div
+              key={idx}
+              className="grid grid-cols-12 gap-2 items-start"
+            >
+              <input
+                type="text"
+                value={it.description}
+                onChange={(e) => updateItem(idx, { description: e.target.value })}
+                placeholder="Description de la prestation"
+                className="col-span-6 rounded-[10px] border border-[var(--color-light-gray)] px-3 py-2 text-[12.5px] text-[var(--color-navy)] focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/40"
+              />
+              <input
+                type="number"
+                min={0}
+                step={1}
+                value={it.qty}
+                onChange={(e) => updateItem(idx, { qty: Number(e.target.value) || 0 })}
+                placeholder="Qté"
+                className="col-span-2 rounded-[10px] border border-[var(--color-light-gray)] px-3 py-2 text-[12.5px] text-right tabular text-[var(--color-navy)] focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/40"
+              />
+              <input
+                type="number"
+                min={0}
+                step={0.01}
+                value={it.unitPrice}
+                onChange={(e) => updateItem(idx, { unitPrice: Number(e.target.value) || 0 })}
+                placeholder="PU HT"
+                className="col-span-3 rounded-[10px] border border-[var(--color-light-gray)] px-3 py-2 text-[12.5px] text-right tabular text-[var(--color-navy)] focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/40"
+              />
+              <button
+                type="button"
+                onClick={() => removeItem(idx)}
+                disabled={items.length === 1}
+                className="col-span-1 inline-flex items-center justify-center rounded-[8px] text-[var(--color-gray-soft)] hover:bg-red-50 hover:text-red-600 disabled:opacity-30 min-h-9"
+                title="Supprimer la ligne"
+                aria-label="Supprimer la ligne"
+              >
+                <Trash2 size={13} />
+              </button>
+            </div>
+          ))}
+        </div>
+        <div className="mt-2 flex justify-end text-[12.5px]">
+          <span className="text-[var(--color-gray-soft)] mr-2">Sous-total HT :</span>
+          <span className="font-semibold text-[var(--color-navy)] tabular">{EUR.format(subtotal)}</span>
+        </div>
+      </div>
+
       <FormTextarea
-        label="Notes"
+        label="Message libre / Notes (optionnel)"
         rows={2}
-        placeholder="Notes (optionnel)…"
+        placeholder="Texte ajouté sous le tableau (ex : Toute demande supplémentaire engendrera des modifications. Cordialement,)…"
         value={notes}
         onChange={(e) => setNotes(e.target.value)}
       />
+
       <div className="flex justify-end gap-2">
         <button
           type="button"
@@ -460,17 +551,24 @@ function InvoiceEditor({
         </button>
         <button
           type="button"
-          onClick={() =>
+          onClick={() => {
+            const cleanItems = items.filter((it) => it.description.trim());
+            const total = cleanItems.reduce(
+              (s, it) => s + (Number(it.qty) || 0) * (Number(it.unitPrice) || 0),
+              0,
+            );
             onSubmit({
               numero: numero.trim(),
-              montant: Number(montant) || 0,
+              project: project.trim() || null,
+              lineItems: cleanItems,
+              montant: +total.toFixed(2),
               modeFinancement: modeFinancement || null,
               dateEmission: dateEmission || undefined,
               dateEcheance: dateEcheance || null,
               notes: notes.trim() || null,
-            })
-          }
-          disabled={pending || !numero.trim() || !montant}
+            });
+          }}
+          disabled={pending || !numero.trim() || items.every((it) => !it.description.trim())}
           className="inline-flex items-center gap-1.5 rounded-[10px] px-3 py-1.5 text-[12px] font-semibold text-white disabled:opacity-50"
           style={{ backgroundColor: "var(--color-gold)" }}
         >
@@ -644,8 +742,10 @@ function InvoicePreviewModal({
           </div>
 
           {/* Méta */}
-          <div className="grid grid-cols-3 gap-4 py-5 border-b border-[var(--color-light-gray)]">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-4 py-5 border-b border-[var(--color-light-gray)]">
+            <PreviewField label="N° de facture" value={invoice.numero} />
             <PreviewField label="Date d'émission" value={formatDate(invoice.dateEmission)} />
+            <PreviewField label="Projet" value={invoice.project || "—"} />
             <PreviewField
               label="Date d'échéance"
               value={invoice.dateEcheance ? formatDate(invoice.dateEcheance) : "—"}
@@ -657,32 +757,64 @@ function InvoicePreviewModal({
           </div>
 
           {/* Tableau prestations */}
-          <table className="w-full mt-6 text-[12.5px]">
-            <thead>
-              <tr className="bg-[var(--color-navy)] text-white">
-                <th className="text-left px-3 py-2 font-semibold">Description</th>
-                <th className="text-right px-3 py-2 font-semibold w-16">Qté</th>
-                <th className="text-right px-3 py-2 font-semibold w-28">P.U. HT</th>
-                {isAssujetti && (
-                  <th className="text-right px-3 py-2 font-semibold w-20">TVA</th>
-                )}
-                <th className="text-right px-3 py-2 font-semibold w-28">Total HT</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b border-[var(--color-light-gray)]">
-                <td className="px-3 py-3">
-                  {invoice.notes?.trim() || `Prestation — ${invoice.numero}`}
-                </td>
-                <td className="px-3 py-3 text-right tabular">1</td>
-                <td className="px-3 py-3 text-right tabular">{EUR.format(ht)}</td>
-                {isAssujetti && (
-                  <td className="px-3 py-3 text-right tabular">{tvaRate.toFixed(2)} %</td>
-                )}
-                <td className="px-3 py-3 text-right tabular">{EUR.format(ht)}</td>
-              </tr>
-            </tbody>
-          </table>
+          {(() => {
+            const items =
+              invoice.lineItems.length > 0
+                ? invoice.lineItems
+                : [
+                    {
+                      description:
+                        invoice.notes?.trim() || `Prestation — ${invoice.numero}`,
+                      qty: 1,
+                      unitPrice: ht,
+                    },
+                  ];
+            return (
+              <table className="w-full mt-6 text-[12.5px]">
+                <thead>
+                  <tr className="border-b border-[#d4c4a8]">
+                    <th className="text-left px-3 py-2 font-bold" style={{ color: "#7d5429" }}>
+                      Description
+                    </th>
+                    <th className="text-center px-3 py-2 font-bold w-16" style={{ color: "#7d5429" }}>
+                      Qté
+                    </th>
+                    <th className="text-right px-3 py-2 font-bold w-24" style={{ color: "#7d5429" }}>
+                      PU HT
+                    </th>
+                    {isAssujetti && (
+                      <th className="text-right px-3 py-2 font-bold w-20" style={{ color: "#7d5429" }}>
+                        TVA
+                      </th>
+                    )}
+                    <th className="text-right px-3 py-2 font-bold w-28" style={{ color: "#7d5429" }}>
+                      Total HT
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {items.map((it, idx) => (
+                    <tr
+                      key={idx}
+                      style={{
+                        backgroundColor: idx % 2 === 1 ? "#f5f2eb" : "transparent",
+                      }}
+                    >
+                      <td className="px-3 py-2.5">{it.description}</td>
+                      <td className="px-3 py-2.5 text-center tabular">{it.qty}</td>
+                      <td className="px-3 py-2.5 text-right tabular">{EUR.format(it.unitPrice)}</td>
+                      {isAssujetti && (
+                        <td className="px-3 py-2.5 text-right tabular">{tvaRate.toFixed(2)} %</td>
+                      )}
+                      <td className="px-3 py-2.5 text-right tabular">
+                        {EUR.format(it.qty * it.unitPrice)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            );
+          })()}
 
           {/* Totaux */}
           <div className="flex justify-end mt-4">

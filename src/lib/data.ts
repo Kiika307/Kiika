@@ -65,6 +65,7 @@ export interface TherapistBilling {
   bankName: string | null;
   invoiceFooter: string | null;
   paymentTerms: string | null;
+  logoUrl: string | null;
 }
 
 export interface TherapistInfo {
@@ -85,7 +86,7 @@ export async function getTherapist(): Promise<TherapistInfo | null> {
   const { data: profile } = await supabase
     .from("profiles")
     .select(
-      "id, full_name, role, avatar_url, reminders_enabled, business_name, legal_form, address_line1, address_line2, postal_code, city, country, phone, siret, ape_code, rcs, tva_number, tva_regime, tva_rate, iban, bic, bank_name, invoice_footer, payment_terms",
+      "id, full_name, role, avatar_url, reminders_enabled, business_name, legal_form, address_line1, address_line2, postal_code, city, country, phone, siret, ape_code, rcs, tva_number, tva_regime, tva_rate, iban, bic, bank_name, invoice_footer, payment_terms, logo_url",
     )
     .eq("id", auth.user.id)
     .maybeSingle();
@@ -133,6 +134,7 @@ export async function getTherapist(): Promise<TherapistInfo | null> {
       bankName: (profile as { bank_name?: string | null }).bank_name ?? null,
       invoiceFooter: (profile as { invoice_footer?: string | null }).invoice_footer ?? null,
       paymentTerms: (profile as { payment_terms?: string | null }).payment_terms ?? null,
+      logoUrl: (profile as { logo_url?: string | null }).logo_url ?? null,
     },
   };
 }
@@ -883,6 +885,8 @@ interface InvoiceRow {
   client_id: string;
   appointment_id: string | null;
   numero: string;
+  project: string | null;
+  line_items: unknown;
   montant: string | number;
   montant_regle: string | number;
   mode_financement: string | null;
@@ -895,6 +899,21 @@ interface InvoiceRow {
   created_at: string;
 }
 
+function parseLineItems(raw: unknown): import("./types").InvoiceLineItem[] {
+  if (!Array.isArray(raw)) return [];
+  return raw
+    .map((it) => {
+      if (it == null || typeof it !== "object") return null;
+      const o = it as Record<string, unknown>;
+      const description = typeof o.description === "string" ? o.description : "";
+      const qty = Number(o.qty);
+      const unitPrice = Number(o.unitPrice ?? o.unit_price);
+      if (!Number.isFinite(qty) || !Number.isFinite(unitPrice)) return null;
+      return { description, qty, unitPrice };
+    })
+    .filter((x): x is import("./types").InvoiceLineItem => x !== null);
+}
+
 export async function getAllInvoicesByClient(
   clientIds: string[],
 ): Promise<Record<string, Invoice[]>> {
@@ -902,7 +921,7 @@ export async function getAllInvoicesByClient(
   const supabase = await createClient();
   const { data } = await supabase
     .from("invoices")
-    .select("id, client_id, appointment_id, numero, montant, montant_regle, mode_financement, statut, date_emission, date_echeance, date_reglement, notes, pdf_url, created_at")
+    .select("id, client_id, appointment_id, numero, project, line_items, montant, montant_regle, mode_financement, statut, date_emission, date_echeance, date_reglement, notes, pdf_url, created_at")
     .in("client_id", clientIds)
     .order("date_emission", { ascending: false });
 
@@ -913,6 +932,8 @@ export async function getAllInvoicesByClient(
       clientId: row.client_id,
       appointmentId: row.appointment_id,
       numero: row.numero,
+      project: row.project,
+      lineItems: parseLineItems(row.line_items),
       montant: Number(row.montant),
       montantRegle: Number(row.montant_regle),
       modeFinancement: row.mode_financement as ModeFinancement | null,

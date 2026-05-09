@@ -121,11 +121,19 @@ export interface ClientDocument {
 export type ModeFinancement = "autofinancement" | "cpf" | "mutuelle" | "employeur" | "autre";
 export type InvoiceStatut = "en_attente" | "envoyee" | "reglee" | "relance" | "annulee";
 
+export interface InvoiceLineItem {
+  description: string;
+  qty: number;
+  unitPrice: number;
+}
+
 export interface Invoice {
   id: string;
   clientId: string;
   appointmentId: string | null;
   numero: string;
+  project: string | null;
+  lineItems: InvoiceLineItem[];
   montant: number;
   montantRegle: number;
   modeFinancement: ModeFinancement | null;

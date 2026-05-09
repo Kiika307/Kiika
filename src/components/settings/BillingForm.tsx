@@ -33,6 +33,7 @@ export function BillingForm({ initial }: BillingFormProps) {
     initial.paymentTerms ?? "Paiement à réception de la facture",
   );
   const [invoiceFooter, setInvoiceFooter] = useState(initial.invoiceFooter ?? "");
+  const [logoUrl, setLogoUrl] = useState(initial.logoUrl ?? "");
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -57,6 +58,7 @@ export function BillingForm({ initial }: BillingFormProps) {
         bankName,
         invoiceFooter,
         paymentTerms,
+        logoUrl,
       });
       if (res.ok) {
         toast.success("Coordonnées de facturation enregistrées");
@@ -85,6 +87,23 @@ export function BillingForm({ initial }: BillingFormProps) {
       <Section title="Identité légale">
         <Field label="Raison sociale / Nom commercial" value={businessName} onChange={setBusinessName} placeholder="Ex : Cabinet Varinka Robert" />
         <Field label="Forme juridique" value={legalForm} onChange={setLegalForm} placeholder="Ex : Micro-entreprise, EI, EURL, SASU…" />
+        <Field
+          label="URL du logo (optionnel)"
+          value={logoUrl}
+          onChange={setLogoUrl}
+          placeholder="https://… (image JPG/PNG accessible publiquement)"
+        />
+        {logoUrl && (
+          <div className="rounded-[10px] border border-[var(--color-light-gray)] p-3 bg-white">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={logoUrl}
+              alt="Aperçu du logo"
+              className="max-h-20 object-contain"
+              onError={(e) => ((e.target as HTMLImageElement).style.display = "none")}
+            />
+          </div>
+        )}
       </Section>
 
       <Section title="Adresse">

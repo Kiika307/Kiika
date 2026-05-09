@@ -387,277 +387,357 @@ export interface InvoicePdfInput {
   billing: TherapistBilling;
 }
 
-export function exportInvoicePdf({
+const BRONZE: [number, number, number] = [125, 84, 41];
+const ROW_ALT: [number, number, number] = [245, 242, 235];
+const TEXT_DARK: [number, number, number] = [38, 38, 38];
+
+async function loadImageAsDataURL(url: string): Promise<string | null> {
+  try {
+    const res = await fetch(url, { mode: "cors" });
+    if (!res.ok) return null;
+    const blob = await res.blob();
+    return await new Promise<string | null>((resolve) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve((reader.result as string) || null);
+      reader.onerror = () => resolve(null);
+      reader.readAsDataURL(blob);
+    });
+  } catch {
+    return null;
+  }
+}
+
+export async function exportInvoicePdf({
   invoice,
   client,
   therapistName,
   therapistRole,
   billing,
-}: InvoicePdfInput) {
+}: InvoicePdfInput): Promise<void> {
   const doc = new jsPDF({ unit: "mm", format: "a4" });
   const pageW = doc.internal.pageSize.getWidth();
   const pageH = doc.internal.pageSize.getHeight();
 
-  // Bandeau supérieur navy + filet doré
-  doc.setFillColor(...NAVY);
-  doc.rect(0, 0, pageW, 18, "F");
-  doc.setFillColor(...GOLD);
-  doc.rect(0, 18, pageW, 0.8, "F");
-  doc.setTextColor(255, 255, 255);
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(13);
-  doc.text("FACTURE", MARGIN_X, 11);
-  doc.setFont("helvetica", "normal");
-  doc.setFontSize(10);
-  doc.text(invoice.numero, pageW - MARGIN_X, 11, { align: "right" });
+  // Bandeau bronze en haut
+  doc.setFillColor(...BRONZE);
+  doc.rect(0, 0, pageW, 4, "F");
 
-  // Émetteur
-  doc.setTextColor(...NAVY);
+  // Logo (optionnel) — top left
+  let logoBottom = 0;
+  if (billing.logoUrl) {
+    const dataUrl = await loadImageAsDataURL(billing.logoUrl);
+    if (dataUrl) {
+      try {
+        const fmt = dataUrl.startsWith("data:image/png") ? "PNG" : "JPEG";
+        const logoH = 18;
+        const logoW = 38;
+        doc.addImage(dataUrl, fmt, MARGIN_X, 12, logoW, logoH, undefined, "FAST");
+        logoBottom = 12 + logoH;
+      } catch {
+        // ignore image errors silently
+      }
+    }
+  }
+
+  // Émetteur (gauche, sous le logo)
+  let yLeft = (logoBottom || 12) + 6;
+  doc.setTextColor(...TEXT_DARK);
   doc.setFont("helvetica", "bold");
   doc.setFontSize(11);
-  let y = 30;
-  doc.text(billing.businessName || therapistName, MARGIN_X, y);
-  y += 5;
+  doc.text(billing.businessName || therapistName, MARGIN_X, yLeft);
+  yLeft += 5;
   doc.setFont("helvetica", "normal");
   doc.setFontSize(9);
-  doc.setTextColor(...GRAY);
+  doc.setTextColor(80, 80, 80);
   if (billing.businessName && therapistName !== billing.businessName) {
-    doc.text(`${therapistName} — ${therapistRole}`, MARGIN_X, y);
-    y += 4;
-  } else if (therapistRole) {
-    doc.text(therapistRole, MARGIN_X, y);
-    y += 4;
+    doc.text(`${therapistName} — ${therapistRole}`, MARGIN_X, yLeft);
+    yLeft += 4;
   }
   if (billing.legalForm) {
-    doc.text(billing.legalForm, MARGIN_X, y);
-    y += 4;
+    doc.text(billing.legalForm, MARGIN_X, yLeft);
+    yLeft += 4;
   }
   if (billing.addressLine1) {
-    doc.text(billing.addressLine1, MARGIN_X, y);
-    y += 4;
+    doc.text(billing.addressLine1, MARGIN_X, yLeft);
+    yLeft += 4;
   }
   if (billing.addressLine2) {
-    doc.text(billing.addressLine2, MARGIN_X, y);
-    y += 4;
+    doc.text(billing.addressLine2, MARGIN_X, yLeft);
+    yLeft += 4;
   }
   const cityLine = [billing.postalCode, billing.city].filter(Boolean).join(" ");
   if (cityLine) {
-    doc.text(cityLine, MARGIN_X, y);
-    y += 4;
+    doc.text(cityLine, MARGIN_X, yLeft);
+    yLeft += 4;
   }
   if (billing.country) {
-    doc.text(billing.country, MARGIN_X, y);
-    y += 4;
-  }
-  if (billing.phone) {
-    doc.text(`Tél : ${billing.phone}`, MARGIN_X, y);
-    y += 4;
-  }
-  if (billing.email) {
-    doc.text(`Email : ${billing.email}`, MARGIN_X, y);
-    y += 4;
+    doc.text(billing.country, MARGIN_X, yLeft);
+    yLeft += 4;
   }
   if (billing.siret) {
-    doc.text(`SIRET : ${billing.siret}`, MARGIN_X, y);
-    y += 4;
+    doc.text(`N° SIRET ${billing.siret}`, MARGIN_X, yLeft);
+    yLeft += 4;
   }
   if (billing.apeCode) {
-    doc.text(`Code APE : ${billing.apeCode}`, MARGIN_X, y);
-    y += 4;
+    doc.text(`APE ${billing.apeCode}`, MARGIN_X, yLeft);
+    yLeft += 4;
   }
   if (billing.rcs) {
-    doc.text(billing.rcs, MARGIN_X, y);
-    y += 4;
-  }
-  if (billing.tvaRegime === "assujetti" && billing.tvaNumber) {
-    doc.text(`N° TVA : ${billing.tvaNumber}`, MARGIN_X, y);
-    y += 4;
+    doc.text(billing.rcs, MARGIN_X, yLeft);
+    yLeft += 4;
   }
 
-  // Bloc client (à droite)
-  const clientX = pageW / 2 + 10;
-  let yc = 30;
+  // Destinataire (droite, aligné à droite)
+  let yRight = (logoBottom || 12) + 6;
+  const rightX = pageW - MARGIN_X;
   doc.setFont("helvetica", "bold");
-  doc.setFontSize(10);
-  doc.setTextColor(...NAVY);
-  doc.text("Facturé à", clientX, yc);
-  yc += 5;
+  doc.setFontSize(11);
+  doc.setTextColor(...TEXT_DARK);
+  doc.text(client.name, rightX, yRight, { align: "right" });
+  yRight += 5;
   doc.setFont("helvetica", "normal");
   doc.setFontSize(9);
-  doc.setTextColor(...GRAY);
-  doc.text(client.name, clientX, yc);
-  yc += 4;
+  doc.setTextColor(80, 80, 80);
   if (client.info?.adresse) {
-    const lines = doc.splitTextToSize(client.info.adresse, pageW - clientX - MARGIN_X);
+    const lines = doc.splitTextToSize(client.info.adresse, 80);
     for (const line of lines) {
-      doc.text(line, clientX, yc);
-      yc += 4;
+      doc.text(line, rightX, yRight, { align: "right" });
+      yRight += 4;
     }
   }
   if (client.email) {
-    doc.text(client.email, clientX, yc);
-    yc += 4;
+    doc.text(client.email, rightX, yRight, { align: "right" });
+    yRight += 4;
   }
   if (client.phone) {
-    doc.text(client.phone, clientX, yc);
-    yc += 4;
+    doc.text(client.phone, rightX, yRight, { align: "right" });
+    yRight += 4;
   }
 
-  // Méta-données facture (dates, mode)
-  let yMeta = Math.max(y, yc) + 6;
-  doc.setDrawColor(220, 220, 220);
+  // Méta : N° facture / Projet à gauche, Date émission / échéance à droite (4 cellules)
+  let yMeta = Math.max(yLeft, yRight) + 8;
+  const colMid = pageW / 2;
+  const drawMeta = (label: string, value: string, x: number, y: number) => {
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(11);
+    doc.setTextColor(...TEXT_DARK);
+    doc.text(label, x, y);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(10);
+    doc.setTextColor(80, 80, 80);
+    doc.text(value || "—", x, y + 5);
+  };
+
+  drawMeta("N° de facture", invoice.numero, MARGIN_X, yMeta);
+  drawMeta("Date d'émission", fmtDate(invoice.dateEmission), colMid, yMeta);
+  yMeta += 12;
+  drawMeta("Projet", invoice.project || "—", MARGIN_X, yMeta);
+  drawMeta(
+    "Date d'échéance",
+    invoice.dateEcheance ? fmtDate(invoice.dateEcheance) : "—",
+    colMid,
+    yMeta,
+  );
+  yMeta += 14;
+
+  // Filet séparateur
+  doc.setDrawColor(220, 215, 205);
+  doc.setLineWidth(0.3);
   doc.line(MARGIN_X, yMeta, pageW - MARGIN_X, yMeta);
   yMeta += 6;
-  const metaCols: Array<[string, string]> = [
-    ["Date d'émission", fmtDate(invoice.dateEmission)],
-    ["Date d'échéance", invoice.dateEcheance ? fmtDate(invoice.dateEcheance) : "—"],
-    [
-      "Mode de financement",
-      invoice.modeFinancement ? MODE_LABEL_FR[invoice.modeFinancement] : "—",
-    ],
-    ["Statut", STATUT_LABEL_FR[invoice.statut]],
-  ];
-  doc.setFont("helvetica", "normal");
-  doc.setFontSize(9);
-  const colW = (pageW - MARGIN_X * 2) / metaCols.length;
-  metaCols.forEach(([label, value], i) => {
-    const x = MARGIN_X + colW * i;
-    doc.setTextColor(...GRAY);
-    doc.text(label.toUpperCase(), x, yMeta);
-    doc.setTextColor(...NAVY);
-    doc.setFont("helvetica", "bold");
-    doc.text(value, x, yMeta + 5);
-    doc.setFont("helvetica", "normal");
-  });
-  yMeta += 12;
 
-  // Tableau des prestations
-  const ttc = invoice.montant;
+  // Tableau prestations
   const isAssujetti = billing.tvaRegime === "assujetti" && billing.tvaRate != null;
   const tvaRate = isAssujetti ? Number(billing.tvaRate) : 0;
-  const ht = isAssujetti ? +(ttc / (1 + tvaRate / 100)).toFixed(2) : ttc;
-  const tva = isAssujetti ? +(ttc - ht).toFixed(2) : 0;
-  const description = invoice.notes?.trim() || `Prestation — ${invoice.numero}`;
+  const ttc = invoice.montant;
+
+  const items =
+    invoice.lineItems.length > 0
+      ? invoice.lineItems
+      : [
+          {
+            description: invoice.notes?.trim() || `Prestation — ${invoice.numero}`,
+            qty: 1,
+            unitPrice: isAssujetti ? +(ttc / (1 + tvaRate / 100)).toFixed(2) : ttc,
+          },
+        ];
+
+  const subTotalHT = items.reduce((s, it) => s + it.qty * it.unitPrice, 0);
+  const computedTTC = isAssujetti ? +(subTotalHT * (1 + tvaRate / 100)).toFixed(2) : subTotalHT;
+  const tvaAmount = isAssujetti ? +(computedTTC - subTotalHT).toFixed(2) : 0;
+  // Préfère le total saisi si cohérent, sinon le calculé
+  const finalTTC = ttc || computedTTC;
+
+  const head = isAssujetti
+    ? [["Description", "Qté", "PU HT", "TVA", "Total HT"]]
+    : [["Description", "Qté", "PU HT", "Total HT"]];
+  const body = items.map((it) => {
+    const lineHT = it.qty * it.unitPrice;
+    return isAssujetti
+      ? [
+          it.description,
+          String(it.qty),
+          EUR.format(it.unitPrice),
+          `${tvaRate.toFixed(2)} %`,
+          EUR.format(lineHT),
+        ]
+      : [it.description, String(it.qty), EUR.format(it.unitPrice), EUR.format(lineHT)];
+  });
 
   autoTable(doc, {
     startY: yMeta,
-    head: [["Description", "Qté", "P.U. HT", isAssujetti ? "TVA" : "", "Total HT"]],
-    body: [
-      [
-        description,
-        "1",
-        EUR.format(ht),
-        isAssujetti ? `${tvaRate.toFixed(2)} %` : "—",
-        EUR.format(ht),
-      ],
-    ],
-    headStyles: { fillColor: NAVY, textColor: 255, fontSize: 9 },
-    bodyStyles: { fontSize: 9, textColor: [40, 40, 50] },
+    head,
+    body,
+    theme: "plain",
+    headStyles: {
+      fillColor: [255, 255, 255],
+      textColor: BRONZE,
+      fontStyle: "bold",
+      fontSize: 10,
+      halign: "left",
+      cellPadding: { top: 4, right: 3, bottom: 4, left: 3 },
+      lineWidth: 0,
+    },
+    bodyStyles: {
+      fontSize: 10,
+      textColor: TEXT_DARK,
+      cellPadding: { top: 3.5, right: 3, bottom: 3.5, left: 3 },
+      lineWidth: 0,
+    },
+    alternateRowStyles: { fillColor: ROW_ALT },
+    columnStyles: isAssujetti
+      ? {
+          0: { cellWidth: "auto" },
+          1: { halign: "center", cellWidth: 18 },
+          2: { halign: "right", cellWidth: 26 },
+          3: { halign: "right", cellWidth: 22 },
+          4: { halign: "right", cellWidth: 28 },
+        }
+      : {
+          0: { cellWidth: "auto" },
+          1: { halign: "center", cellWidth: 22 },
+          2: { halign: "right", cellWidth: 32 },
+          3: { halign: "right", cellWidth: 32 },
+        },
     margin: { left: MARGIN_X, right: MARGIN_X },
+    didDrawPage: () => {
+      // Bandeau bronze redessiné si nouvelle page
+      doc.setFillColor(...BRONZE);
+      doc.rect(0, 0, pageW, 4, "F");
+    },
   });
 
   type AutoTableDoc = jsPDF & { lastAutoTable?: { finalY: number } };
   const after = (doc as AutoTableDoc).lastAutoTable;
-  let yt = (after?.finalY ?? yMeta) + 6;
+  let yt = (after?.finalY ?? yMeta) + 4;
 
-  // Totaux
-  const totalsX = pageW - MARGIN_X - 70;
-  const totalsW = 70;
+  // Ligne sous-total / TVA / Net à payer
+  const labelLeftX = MARGIN_X;
+  const labelMidX = pageW - MARGIN_X - 60;
+  const valueX = pageW - MARGIN_X;
+
+  // Mention TVA à gauche
   doc.setFont("helvetica", "normal");
   doc.setFontSize(9);
-  doc.setTextColor(...NAVY);
+  doc.setTextColor(140, 140, 140);
+  if (!isAssujetti) {
+    doc.text("TVA non applicable, art. 293 B du CGI.", labelLeftX, yt + 5);
+  }
+
+  // Sous-total à droite
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(10);
+  doc.setTextColor(...BRONZE);
+  doc.text("Sous-total", labelMidX, yt + 5);
+  doc.setTextColor(...TEXT_DARK);
+  doc.text(EUR.format(subTotalHT), valueX, yt + 5, { align: "right" });
+  yt += 10;
 
   if (isAssujetti) {
-    doc.text("Total HT", totalsX, yt);
-    doc.text(EUR.format(ht), totalsX + totalsW, yt, { align: "right" });
-    yt += 5;
-    doc.text(`TVA (${tvaRate.toFixed(2)} %)`, totalsX, yt);
-    doc.text(EUR.format(tva), totalsX + totalsW, yt, { align: "right" });
-    yt += 5;
+    doc.setTextColor(...BRONZE);
+    doc.text(`TVA (${tvaRate.toFixed(2)} %)`, labelMidX, yt);
+    doc.setTextColor(...TEXT_DARK);
+    doc.text(EUR.format(tvaAmount), valueX, yt, { align: "right" });
+    yt += 6;
   }
-  doc.setDrawColor(200, 200, 200);
-  doc.line(totalsX, yt, totalsX + totalsW, yt);
-  yt += 4;
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(11);
-  doc.text("Total TTC", totalsX, yt);
-  doc.text(EUR.format(ttc), totalsX + totalsW, yt, { align: "right" });
-  yt += 5;
-  if (invoice.montantRegle > 0) {
+
+  doc.setTextColor(...BRONZE);
+  doc.text("Net à payer", labelMidX, yt);
+  doc.setTextColor(...TEXT_DARK);
+  doc.text(EUR.format(finalTTC), valueX, yt, { align: "right" });
+  yt += 8;
+
+  if (invoice.montantRegle > 0 && invoice.montantRegle < finalTTC) {
     doc.setFont("helvetica", "normal");
     doc.setFontSize(9);
-    doc.text("Montant réglé", totalsX, yt);
-    doc.text(EUR.format(invoice.montantRegle), totalsX + totalsW, yt, { align: "right" });
-    yt += 4;
-    const due = +(ttc - invoice.montantRegle).toFixed(2);
-    if (due > 0) {
-      doc.setFont("helvetica", "bold");
-      doc.text("Reste à payer", totalsX, yt);
-      doc.text(EUR.format(due), totalsX + totalsW, yt, { align: "right" });
-      yt += 5;
-    }
-  }
-  yt += 4;
-
-  // Mention TVA et conditions
-  doc.setFont("helvetica", "italic");
-  doc.setFontSize(8.5);
-  doc.setTextColor(...GRAY);
-  if (!isAssujetti) {
-    doc.text("TVA non applicable, art. 293 B du CGI.", MARGIN_X, yt);
-    yt += 4;
-  }
-  if (billing.paymentTerms) {
-    doc.setFont("helvetica", "normal");
-    doc.text(`Conditions de règlement : ${billing.paymentTerms}`, MARGIN_X, yt);
-    yt += 4;
-  }
-  if (billing.iban || billing.bic || billing.bankName) {
-    doc.setFont("helvetica", "normal");
-    const banky = yt + 2;
-    doc.setFillColor(248, 245, 235);
-    doc.rect(MARGIN_X, banky, pageW - MARGIN_X * 2, 18, "F");
-    doc.setTextColor(...NAVY);
+    doc.setTextColor(80, 80, 80);
+    doc.text("Montant réglé", labelMidX, yt);
+    doc.text(EUR.format(invoice.montantRegle), valueX, yt, { align: "right" });
+    yt += 5;
     doc.setFont("helvetica", "bold");
-    doc.setFontSize(9);
-    doc.text("Coordonnées bancaires", MARGIN_X + 4, banky + 5);
-    doc.setFont("helvetica", "normal");
-    doc.setFontSize(8.5);
-    let by = banky + 10;
-    if (billing.bankName) {
-      doc.text(`Banque : ${billing.bankName}`, MARGIN_X + 4, by);
-      by += 4;
-    }
-    if (billing.iban) {
-      doc.text(`IBAN : ${billing.iban}`, MARGIN_X + 4, by);
-    }
-    if (billing.bic) {
-      doc.text(`BIC : ${billing.bic}`, pageW / 2, by);
-    }
-    yt = banky + 24;
+    doc.setTextColor(...BRONZE);
+    doc.text("Reste dû", labelMidX, yt);
+    doc.setTextColor(...TEXT_DARK);
+    doc.text(EUR.format(+(finalTTC - invoice.montantRegle).toFixed(2)), valueX, yt, {
+      align: "right",
+    });
+    yt += 8;
   }
 
-  if (billing.invoiceFooter) {
-    doc.setFont("helvetica", "italic");
-    doc.setTextColor(...GRAY);
-    doc.setFontSize(8);
-    const lines = doc.splitTextToSize(billing.invoiceFooter, pageW - MARGIN_X * 2);
-    for (const line of lines) {
-      if (yt > pageH - 15) {
+  // Notes libres / message client (sous le tableau)
+  if (invoice.notes && invoice.lineItems.length > 0) {
+    yt += 4;
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(10);
+    doc.setTextColor(...TEXT_DARK);
+    const noteLines = doc.splitTextToSize(invoice.notes, pageW - MARGIN_X * 2);
+    for (const line of noteLines) {
+      if (yt > pageH - 30) {
         doc.addPage();
         yt = 20;
       }
       doc.text(line, MARGIN_X, yt);
-      yt += 3.5;
+      yt += 5;
     }
   }
 
-  // Pied de page
-  doc.setFont("helvetica", "italic");
+  // Pied de page : conditions, IBAN, mentions
+  const footerLines: string[] = [];
+  if (billing.paymentTerms) {
+    footerLines.push(`Conditions de règlement : ${billing.paymentTerms}`);
+  }
+  if (billing.iban) {
+    footerLines.push(`IBAN : ${billing.iban}${billing.bic ? `   BIC : ${billing.bic}` : ""}`);
+  }
+  if (billing.bankName) {
+    footerLines.push(`Banque : ${billing.bankName}`);
+  }
+  if (billing.invoiceFooter) {
+    footerLines.push(...billing.invoiceFooter.split(/\r?\n/));
+  } else {
+    footerLines.push("Aucun escompte consenti pour règlement anticipé.");
+    footerLines.push(
+      "Tout incident de paiement est passible d'intérêts de retard au taux d'intérêt légal en vigueur.",
+    );
+    footerLines.push(
+      "Indemnité forfaitaire pour frais de recouvrement due au créancier en cas de retard de paiement : 40 €.",
+    );
+  }
+
+  // Place les mentions en bas de page
+  const footerStart = Math.max(yt + 8, pageH - 8 - footerLines.length * 3.4);
+  doc.setFont("helvetica", "normal");
   doc.setFontSize(7.5);
-  doc.setTextColor(...GRAY);
-  const footer = `${billing.businessName || therapistName} — Facture ${invoice.numero} — ${new Date().toLocaleDateString("fr-FR")}`;
-  doc.text(footer, pageW / 2, pageH - 8, { align: "center" });
+  doc.setTextColor(120, 120, 120);
+  let yf = footerStart;
+  for (const line of footerLines) {
+    if (yf > pageH - 6) {
+      doc.addPage();
+      yf = 20;
+    }
+    doc.text(line, MARGIN_X, yf);
+    yf += 3.4;
+  }
 
   const safe = invoice.numero.replace(/[^\w\-]/g, "_");
   doc.save(`Facture_${safe}.pdf`);

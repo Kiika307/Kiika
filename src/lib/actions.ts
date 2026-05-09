@@ -78,6 +78,7 @@ export async function updateTherapistBilling(input: {
   bankName?: string | null;
   invoiceFooter?: string | null;
   paymentTerms?: string | null;
+  logoUrl?: string | null;
 }): Promise<{ ok: boolean; error?: string }> {
   const supabase = await createClient();
   const { data: auth } = await supabase.auth.getUser();
@@ -103,6 +104,7 @@ export async function updateTherapistBilling(input: {
     bank_name: norm(input.bankName),
     invoice_footer: norm(input.invoiceFooter),
     payment_terms: norm(input.paymentTerms),
+    logo_url: norm(input.logoUrl),
   };
   if (input.tvaRegime) patch.tva_regime = input.tvaRegime;
   if (input.tvaRate != null && Number.isFinite(input.tvaRate)) patch.tva_rate = input.tvaRate;
@@ -554,6 +556,8 @@ export async function addInvoice(input: {
   clientId: string;
   appointmentId?: string | null;
   numero: string;
+  project?: string | null;
+  lineItems?: Array<{ description: string; qty: number; unitPrice: number }>;
   montant: number;
   modeFinancement?: ModeFinancement | null;
   dateEmission?: string | null;
@@ -571,6 +575,14 @@ export async function addInvoice(input: {
   if (input.notes && input.notes.length > MAX_INVOICE_NOTES)
     return { ok: false, error: "Notes trop longues" };
 
+  const lineItems = (input.lineItems ?? [])
+    .filter((it) => it && it.description.trim())
+    .map((it) => ({
+      description: it.description.trim().slice(0, 500),
+      qty: Number(it.qty) || 0,
+      unit_price: Number(it.unitPrice) || 0,
+    }));
+
   const { data, error } = await supabase
     .from("invoices")
     .insert({
@@ -578,6 +590,8 @@ export async function addInvoice(input: {
       client_id: input.clientId,
       appointment_id: input.appointmentId ?? null,
       numero: input.numero.trim(),
+      project: input.project?.trim() || null,
+      line_items: lineItems,
       montant: input.montant,
       mode_financement: input.modeFinancement ?? null,
       date_emission: input.dateEmission ?? new Date().toISOString().slice(0, 10),
@@ -596,6 +610,8 @@ export async function updateInvoice(
   invoiceId: string,
   patch: {
     numero?: string;
+    project?: string | null;
+    lineItems?: Array<{ description: string; qty: number; unitPrice: number }>;
     montant?: number;
     montantRegle?: number;
     modeFinancement?: ModeFinancement | null;
@@ -620,6 +636,16 @@ export async function updateInvoice(
 
   const update: Record<string, unknown> = {};
   if (patch.numero !== undefined) update.numero = patch.numero;
+  if (patch.project !== undefined) update.project = patch.project?.trim() || null;
+  if (patch.lineItems !== undefined) {
+    update.line_items = patch.lineItems
+      .filter((it) => it && it.description.trim())
+      .map((it) => ({
+        description: it.description.trim().slice(0, 500),
+        qty: Number(it.qty) || 0,
+        unit_price: Number(it.unitPrice) || 0,
+      }));
+  }
   if (patch.montant !== undefined) update.montant = patch.montant;
   if (patch.montantRegle !== undefined) update.montant_regle = patch.montantRegle;
   if (patch.modeFinancement !== undefined) update.mode_financement = patch.modeFinancement;
