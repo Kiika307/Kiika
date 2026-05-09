@@ -68,6 +68,31 @@ export default async function ClientsPage({ searchParams }: ClientsPageProps) {
         kiikaAnalysesByClient={kiikaAnalysesByClient}
         kiikaCarePlansByClient={kiikaCarePlansByClient}
         therapistName={therapist?.fullName ?? "Thérapeute"}
+        therapistRole={therapist?.role ?? "Thérapeute"}
+        billing={
+          therapist?.billing ?? {
+            businessName: null,
+            legalForm: null,
+            addressLine1: null,
+            addressLine2: null,
+            postalCode: null,
+            city: null,
+            country: "France",
+            phone: null,
+            email: null,
+            siret: null,
+            apeCode: null,
+            rcs: null,
+            tvaNumber: null,
+            tvaRegime: "franchise",
+            tvaRate: null,
+            iban: null,
+            bic: null,
+            bankName: null,
+            invoiceFooter: null,
+            paymentTerms: null,
+          }
+        }
         initialId={id}
       />
     </AppShell>

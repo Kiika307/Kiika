@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { AppShell } from "@/components/layout/AppShell";
 import { ProfileForm } from "@/components/settings/ProfileForm";
+import { BillingForm } from "@/components/settings/BillingForm";
 import { RemindersToggle } from "@/components/settings/RemindersToggle";
 import { PushNotificationsToggle } from "@/components/settings/PushNotificationsToggle";
 import { getTherapist } from "@/lib/data";
@@ -38,6 +39,12 @@ export default async function ProfileSettingsPage() {
         initials={therapist?.initials ?? "?"}
         email={auth.user.email ?? ""}
       />
+
+      {therapist?.billing && (
+        <div className="mt-6">
+          <BillingForm initial={therapist.billing} />
+        </div>
+      )}
 
       <div className="mt-6">
         <RemindersToggle initialEnabled={therapist?.remindersEnabled ?? true} />

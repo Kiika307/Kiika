@@ -18,6 +18,7 @@ import type {
   Protocol,
   SessionHistoryEntry,
 } from "@/lib/types";
+import type { TherapistBilling } from "@/lib/data";
 
 interface ClientsClientProps {
   clients: Client[];
@@ -33,6 +34,8 @@ interface ClientsClientProps {
   kiikaAnalysesByClient: Record<string, ClientKiikaAnalysis[]>;
   kiikaCarePlansByClient: Record<string, ClientKiikaCarePlan[]>;
   therapistName: string;
+  therapistRole: string;
+  billing: TherapistBilling;
   initialId?: string;
 }
 
@@ -50,6 +53,8 @@ export function ClientsClient({
   kiikaAnalysesByClient,
   kiikaCarePlansByClient,
   therapistName,
+  therapistRole,
+  billing,
   initialId,
 }: ClientsClientProps) {
   const validInitial = initialId != null && clients.some((c) => c.id === initialId) ? initialId : null;
@@ -96,6 +101,8 @@ export function ClientsClient({
             kiikaAnalyses={kiikaAnalysesByClient[selected.id] ?? []}
             kiikaCarePlans={kiikaCarePlansByClient[selected.id] ?? []}
             therapistName={therapistName}
+            therapistRole={therapistRole}
+            billing={billing}
           />
         </div>
       )}

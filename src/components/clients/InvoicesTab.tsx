@@ -1,17 +1,24 @@
 "use client";
 
 import { useState, useTransition, useMemo } from "react";
-import { Plus, Trash2, Pencil, Save, X, FileText, Receipt, Eye, Send } from "lucide-react";
+import Link from "next/link";
+import { Plus, Trash2, Pencil, Save, X, FileText, Receipt, Eye, Send, Download } from "lucide-react";
 import { toast } from "sonner";
 import { FormField, FormSelect, FormTextarea } from "@/components/ui/FormField";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { useConfirm } from "@/components/ui/ConfirmDialog";
 import { addInvoice, updateInvoice, deleteInvoice } from "@/lib/actions";
-import type { Invoice, InvoiceStatut, ModeFinancement } from "@/lib/types";
+import { exportInvoicePdf } from "@/lib/pdf-export";
+import type { TherapistBilling } from "@/lib/data";
+import type { Client, Invoice, InvoiceStatut, ModeFinancement } from "@/lib/types";
 
 interface InvoicesTabProps {
   clientId: string;
+  client: Client;
   invoices: Invoice[];
+  therapistName: string;
+  therapistRole: string;
+  billing: TherapistBilling;
 }
 
 const STATUT_LABEL: Record<InvoiceStatut, string> = {
@@ -40,7 +47,14 @@ const MODE_LABEL: Record<ModeFinancement, string> = {
 
 const EUR = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" });
 
-export function InvoicesTab({ clientId, invoices }: InvoicesTabProps) {
+export function InvoicesTab({
+  clientId,
+  client,
+  invoices,
+  therapistName,
+  therapistRole,
+  billing,
+}: InvoicesTabProps) {
   const [adding, setAdding] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [previewId, setPreviewId] = useState<string | null>(null);
@@ -207,6 +221,10 @@ export function InvoicesTab({ clientId, invoices }: InvoicesTabProps) {
       {previewInvoice && (
         <InvoicePreviewModal
           invoice={previewInvoice}
+          client={client}
+          therapistName={therapistName}
+          therapistRole={therapistRole}
+          billing={billing}
           pending={pending}
           onClose={() => setPreviewId(null)}
           onSend={() => {
@@ -221,8 +239,14 @@ export function InvoicesTab({ clientId, invoices }: InvoicesTabProps) {
               }
             });
           }}
-          onPrint={() => {
-            if (typeof window !== "undefined") window.print();
+          onDownload={() => {
+            exportInvoicePdf({
+              invoice: previewInvoice,
+              client,
+              therapistName,
+              therapistRole,
+              billing,
+            });
           }}
         />
       )}
@@ -475,23 +499,44 @@ function formatDate(iso: string): string {
 
 function InvoicePreviewModal({
   invoice,
+  client,
+  therapistName,
+  therapistRole,
+  billing,
   pending,
   onClose,
   onSend,
-  onPrint,
+  onDownload,
 }: {
   invoice: Invoice;
+  client: Client;
+  therapistName: string;
+  therapistRole: string;
+  billing: TherapistBilling;
   pending: boolean;
   onClose: () => void;
   onSend: () => void;
-  onPrint: () => void;
+  onDownload: () => void;
 }) {
   const alreadySent =
     invoice.statut === "envoyee" || invoice.statut === "reglee" || invoice.statut === "relance";
+  const isAssujetti = billing.tvaRegime === "assujetti" && billing.tvaRate != null;
+  const tvaRate = isAssujetti ? Number(billing.tvaRate) : 0;
+  const ttc = invoice.montant;
+  const ht = isAssujetti ? +(ttc / (1 + tvaRate / 100)).toFixed(2) : ttc;
+  const tva = isAssujetti ? +(ttc - ht).toFixed(2) : 0;
+  const due = +(ttc - invoice.montantRegle).toFixed(2);
+
+  // Mentions obligatoires manquantes (FR) : nom + adresse + SIRET au minimum
+  const missingMandatory: string[] = [];
+  if (!billing.businessName && !therapistName) missingMandatory.push("nom / raison sociale");
+  if (!billing.addressLine1 || !billing.city || !billing.postalCode)
+    missingMandatory.push("adresse complète");
+  if (!billing.siret) missingMandatory.push("SIRET");
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 px-4 py-6 print:bg-white print:p-0"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 px-4 py-6"
       role="dialog"
       aria-modal="true"
       aria-labelledby="invoice-preview-title"
@@ -499,10 +544,10 @@ function InvoicePreviewModal({
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-[16px] bg-white print:max-h-none print:overflow-visible print:rounded-none print:shadow-none"
+        className="w-full max-w-3xl max-h-[92vh] overflow-y-auto rounded-[16px] bg-white"
         style={{ boxShadow: "var(--shadow-card)" }}
       >
-        <div className="flex items-center justify-between gap-3 px-6 py-4 border-b border-[var(--color-light-gray)] print:hidden">
+        <div className="flex items-center justify-between gap-3 px-6 py-4 border-b border-[var(--color-light-gray)]">
           <h2
             id="invoice-preview-title"
             className="font-serif text-[18px] font-semibold text-[var(--color-navy)]"
@@ -519,27 +564,87 @@ function InvoicePreviewModal({
           </button>
         </div>
 
-        <div className="px-8 py-8 space-y-6">
-          <div className="flex items-start justify-between gap-6">
+        {missingMandatory.length > 0 && (
+          <div className="mx-6 mt-4 rounded-[10px] bg-amber-50 border border-amber-200 px-4 py-3 text-[12.5px] text-amber-900">
+            <div className="font-semibold mb-1">Mentions obligatoires manquantes</div>
+            <p>
+              Pour qu'une facture soit valable, il manque : {missingMandatory.join(", ")}.
+              {" "}
+              <Link href="/settings/profile" className="underline font-semibold">
+                Compléter dans Réglages → Mon profil
+              </Link>
+              .
+            </p>
+          </div>
+        )}
+
+        {/* Aperçu format facture */}
+        <div className="px-8 py-8 text-[13px] text-[var(--color-navy)]">
+          {/* En-tête facture */}
+          <div className="flex items-start justify-between gap-6 pb-6 border-b border-[var(--color-light-gray)]">
             <div>
-              <div className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)]">
-                Facture
+              <div className="font-serif text-[24px] font-bold">FACTURE</div>
+              <div className="mt-1 text-[var(--color-gray-soft)]">N° {invoice.numero}</div>
+            </div>
+            <span
+              className="inline-block rounded-[8px] px-3 py-1 text-[12px] font-semibold text-white"
+              style={{ backgroundColor: STATUT_COLOR[invoice.statut] }}
+            >
+              {STATUT_LABEL[invoice.statut]}
+            </span>
+          </div>
+
+          {/* Émetteur / Destinataire */}
+          <div className="grid grid-cols-2 gap-8 py-6 border-b border-[var(--color-light-gray)]">
+            <div>
+              <div className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)] mb-2">
+                Émetteur
               </div>
-              <div className="mt-1 font-serif text-[24px] font-bold text-[var(--color-navy)]">
-                {invoice.numero}
+              <div className="font-semibold">{billing.businessName || therapistName}</div>
+              {billing.businessName && therapistName !== billing.businessName && (
+                <div className="text-[12px] text-[var(--color-gray-soft)]">
+                  {therapistName} — {therapistRole}
+                </div>
+              )}
+              {billing.legalForm && (
+                <div className="text-[12px] text-[var(--color-gray-soft)]">{billing.legalForm}</div>
+              )}
+              <div className="mt-2 text-[12.5px] leading-snug whitespace-pre-line">
+                {[
+                  billing.addressLine1,
+                  billing.addressLine2,
+                  [billing.postalCode, billing.city].filter(Boolean).join(" "),
+                  billing.country,
+                ]
+                  .filter(Boolean)
+                  .join("\n") || "—"}
+              </div>
+              <div className="mt-2 text-[12px] text-[var(--color-gray-soft)] space-y-0.5">
+                {billing.phone && <div>Tél : {billing.phone}</div>}
+                {billing.email && <div>Email : {billing.email}</div>}
+                {billing.siret && <div>SIRET : {billing.siret}</div>}
+                {billing.apeCode && <div>Code APE : {billing.apeCode}</div>}
+                {billing.rcs && <div>{billing.rcs}</div>}
+                {isAssujetti && billing.tvaNumber && <div>N° TVA : {billing.tvaNumber}</div>}
               </div>
             </div>
-            <div className="text-right">
-              <span
-                className="inline-block rounded-[8px] px-3 py-1 text-[12px] font-semibold text-white"
-                style={{ backgroundColor: STATUT_COLOR[invoice.statut] }}
-              >
-                {STATUT_LABEL[invoice.statut]}
-              </span>
+            <div>
+              <div className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)] mb-2">
+                Facturé à
+              </div>
+              <div className="font-semibold">{client.name}</div>
+              {client.info?.adresse && (
+                <div className="mt-1 text-[12.5px] whitespace-pre-line">{client.info.adresse}</div>
+              )}
+              <div className="mt-2 text-[12px] text-[var(--color-gray-soft)] space-y-0.5">
+                {client.email && <div>{client.email}</div>}
+                {client.phone && <div>{client.phone}</div>}
+              </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          {/* Méta */}
+          <div className="grid grid-cols-3 gap-4 py-5 border-b border-[var(--color-light-gray)]">
             <PreviewField label="Date d'émission" value={formatDate(invoice.dateEmission)} />
             <PreviewField
               label="Date d'échéance"
@@ -549,34 +654,91 @@ function InvoicePreviewModal({
               label="Mode de financement"
               value={invoice.modeFinancement ? MODE_LABEL[invoice.modeFinancement] : "—"}
             />
-            <PreviewField
-              label="Montant réglé"
-              value={EUR.format(invoice.montantRegle)}
-            />
           </div>
 
-          <div className="rounded-[12px] bg-[var(--color-cream)] px-5 py-4 flex items-center justify-between">
-            <div className="text-[13px] font-semibold text-[var(--color-navy)]">
-              Montant total
-            </div>
-            <div className="font-serif text-[22px] font-bold text-[var(--color-navy)] tabular">
-              {EUR.format(invoice.montant)}
-            </div>
-          </div>
+          {/* Tableau prestations */}
+          <table className="w-full mt-6 text-[12.5px]">
+            <thead>
+              <tr className="bg-[var(--color-navy)] text-white">
+                <th className="text-left px-3 py-2 font-semibold">Description</th>
+                <th className="text-right px-3 py-2 font-semibold w-16">Qté</th>
+                <th className="text-right px-3 py-2 font-semibold w-28">P.U. HT</th>
+                {isAssujetti && (
+                  <th className="text-right px-3 py-2 font-semibold w-20">TVA</th>
+                )}
+                <th className="text-right px-3 py-2 font-semibold w-28">Total HT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-[var(--color-light-gray)]">
+                <td className="px-3 py-3">
+                  {invoice.notes?.trim() || `Prestation — ${invoice.numero}`}
+                </td>
+                <td className="px-3 py-3 text-right tabular">1</td>
+                <td className="px-3 py-3 text-right tabular">{EUR.format(ht)}</td>
+                {isAssujetti && (
+                  <td className="px-3 py-3 text-right tabular">{tvaRate.toFixed(2)} %</td>
+                )}
+                <td className="px-3 py-3 text-right tabular">{EUR.format(ht)}</td>
+              </tr>
+            </tbody>
+          </table>
 
-          {invoice.notes && (
-            <div>
-              <div className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)] mb-1">
-                Notes
+          {/* Totaux */}
+          <div className="flex justify-end mt-4">
+            <div className="w-full max-w-xs space-y-1.5 text-[13px]">
+              {isAssujetti && (
+                <>
+                  <div className="flex justify-between">
+                    <span>Total HT</span>
+                    <span className="tabular">{EUR.format(ht)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>TVA ({tvaRate.toFixed(2)} %)</span>
+                    <span className="tabular">{EUR.format(tva)}</span>
+                  </div>
+                </>
+              )}
+              <div className="flex justify-between font-bold text-[15px] pt-2 border-t border-[var(--color-light-gray)]">
+                <span>Total TTC</span>
+                <span className="tabular">{EUR.format(ttc)}</span>
               </div>
-              <p className="text-[13px] text-[var(--color-navy)] whitespace-pre-wrap">
-                {invoice.notes}
-              </p>
+              {invoice.montantRegle > 0 && (
+                <>
+                  <div className="flex justify-between text-[var(--color-gray-soft)]">
+                    <span>Montant réglé</span>
+                    <span className="tabular">{EUR.format(invoice.montantRegle)}</span>
+                  </div>
+                  {due > 0 && (
+                    <div className="flex justify-between font-semibold">
+                      <span>Reste à payer</span>
+                      <span className="tabular">{EUR.format(due)}</span>
+                    </div>
+                  )}
+                </>
+              )}
             </div>
-          )}
+          </div>
+
+          {/* Mentions / RIB / pied */}
+          <div className="mt-8 space-y-3 text-[11.5px] text-[var(--color-gray-soft)] italic leading-relaxed">
+            {!isAssujetti && <p>TVA non applicable, art. 293 B du CGI.</p>}
+            {billing.paymentTerms && (
+              <p className="not-italic">Conditions de règlement : {billing.paymentTerms}</p>
+            )}
+            {(billing.iban || billing.bic || billing.bankName) && (
+              <div className="rounded-[10px] bg-[var(--color-cream)] px-4 py-3 not-italic text-[12px] text-[var(--color-navy)]">
+                <div className="font-semibold mb-1">Coordonnées bancaires</div>
+                {billing.bankName && <div>Banque : {billing.bankName}</div>}
+                {billing.iban && <div>IBAN : {billing.iban}</div>}
+                {billing.bic && <div>BIC : {billing.bic}</div>}
+              </div>
+            )}
+            {billing.invoiceFooter && <p className="whitespace-pre-line">{billing.invoiceFooter}</p>}
+          </div>
         </div>
 
-        <div className="flex flex-wrap justify-end gap-2 px-6 py-4 border-t border-[var(--color-light-gray)] print:hidden">
+        <div className="flex flex-wrap justify-end gap-2 px-6 py-4 border-t border-[var(--color-light-gray)]">
           <button
             type="button"
             onClick={onClose}
@@ -587,12 +749,12 @@ function InvoicePreviewModal({
           </button>
           <button
             type="button"
-            onClick={onPrint}
+            onClick={onDownload}
             disabled={pending}
             className="inline-flex items-center gap-1.5 rounded-[10px] border border-[var(--color-light-gray)] px-3 py-2 text-[13px] font-semibold text-[var(--color-navy)] hover:bg-[var(--color-light-gray)] disabled:opacity-50"
           >
-            <FileText size={13} aria-hidden="true" />
-            Imprimer / PDF
+            <Download size={13} aria-hidden="true" />
+            Télécharger PDF
           </button>
           {!alreadySent && (
             <button

@@ -44,6 +44,29 @@ function colorFor(idx: number, fallback?: string | null): string {
   return PALETTE[idx % PALETTE.length];
 }
 
+export interface TherapistBilling {
+  businessName: string | null;
+  legalForm: string | null;
+  addressLine1: string | null;
+  addressLine2: string | null;
+  postalCode: string | null;
+  city: string | null;
+  country: string | null;
+  phone: string | null;
+  email: string | null;
+  siret: string | null;
+  apeCode: string | null;
+  rcs: string | null;
+  tvaNumber: string | null;
+  tvaRegime: "franchise" | "assujetti";
+  tvaRate: number | null;
+  iban: string | null;
+  bic: string | null;
+  bankName: string | null;
+  invoiceFooter: string | null;
+  paymentTerms: string | null;
+}
+
 export interface TherapistInfo {
   id: string;
   fullName: string;
@@ -51,6 +74,7 @@ export interface TherapistInfo {
   role: string;
   avatarUrl: string | null;
   remindersEnabled: boolean;
+  billing: TherapistBilling;
 }
 
 export async function getTherapist(): Promise<TherapistInfo | null> {
@@ -60,7 +84,9 @@ export async function getTherapist(): Promise<TherapistInfo | null> {
 
   const { data: profile } = await supabase
     .from("profiles")
-    .select("id, full_name, role, avatar_url, reminders_enabled")
+    .select(
+      "id, full_name, role, avatar_url, reminders_enabled, business_name, legal_form, address_line1, address_line2, postal_code, city, country, phone, siret, ape_code, rcs, tva_number, tva_regime, tva_rate, iban, bic, bank_name, invoice_footer, payment_terms",
+    )
     .eq("id", auth.user.id)
     .maybeSingle();
 
@@ -75,6 +101,10 @@ export async function getTherapist(): Promise<TherapistInfo | null> {
       : rawRole === "user" || rawRole === ""
         ? "Thérapeute holistique"
         : rawRole;
+  const tvaRegimeRaw = (profile as { tva_regime?: string }).tva_regime;
+  const tvaRegime: TherapistBilling["tvaRegime"] =
+    tvaRegimeRaw === "assujetti" ? "assujetti" : "franchise";
+
   return {
     id: profile.id,
     fullName: profile.full_name,
@@ -82,6 +112,28 @@ export async function getTherapist(): Promise<TherapistInfo | null> {
     role,
     avatarUrl: profile.avatar_url ?? null,
     remindersEnabled: profile.reminders_enabled ?? true,
+    billing: {
+      businessName: (profile as { business_name?: string | null }).business_name ?? null,
+      legalForm: (profile as { legal_form?: string | null }).legal_form ?? null,
+      addressLine1: (profile as { address_line1?: string | null }).address_line1 ?? null,
+      addressLine2: (profile as { address_line2?: string | null }).address_line2 ?? null,
+      postalCode: (profile as { postal_code?: string | null }).postal_code ?? null,
+      city: (profile as { city?: string | null }).city ?? null,
+      country: (profile as { country?: string | null }).country ?? "France",
+      phone: (profile as { phone?: string | null }).phone ?? null,
+      email: auth.user.email ?? null,
+      siret: (profile as { siret?: string | null }).siret ?? null,
+      apeCode: (profile as { ape_code?: string | null }).ape_code ?? null,
+      rcs: (profile as { rcs?: string | null }).rcs ?? null,
+      tvaNumber: (profile as { tva_number?: string | null }).tva_number ?? null,
+      tvaRegime,
+      tvaRate: (profile as { tva_rate?: number | null }).tva_rate ?? null,
+      iban: (profile as { iban?: string | null }).iban ?? null,
+      bic: (profile as { bic?: string | null }).bic ?? null,
+      bankName: (profile as { bank_name?: string | null }).bank_name ?? null,
+      invoiceFooter: (profile as { invoice_footer?: string | null }).invoice_footer ?? null,
+      paymentTerms: (profile as { payment_terms?: string | null }).payment_terms ?? null,
+    },
   };
 }
 

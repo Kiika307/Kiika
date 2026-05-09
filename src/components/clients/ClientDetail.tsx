@@ -26,6 +26,7 @@ import type {
   Protocol,
   SessionHistoryEntry,
 } from "@/lib/types";
+import type { TherapistBilling } from "@/lib/data";
 
 type Tab =
   | "informations"
@@ -49,6 +50,8 @@ interface ClientDetailProps {
   kiikaAnalyses: ClientKiikaAnalysis[];
   kiikaCarePlans: ClientKiikaCarePlan[];
   therapistName: string;
+  therapistRole: string;
+  billing: TherapistBilling;
 }
 
 const tabs: Array<{ id: Tab; label: string }> = [
@@ -74,6 +77,8 @@ export function ClientDetail({
   kiikaAnalyses,
   kiikaCarePlans,
   therapistName,
+  therapistRole,
+  billing,
 }: ClientDetailProps) {
   const [tab, setTab] = useState<Tab>("informations");
 
@@ -187,7 +192,16 @@ export function ClientDetail({
           kiikaAnalyses={kiikaAnalyses}
         />
       )}
-      {tab === "facturation" && <InvoicesTab clientId={client.id} invoices={invoices} />}
+      {tab === "facturation" && (
+        <InvoicesTab
+          clientId={client.id}
+          client={client}
+          invoices={invoices}
+          therapistName={therapistName}
+          therapistRole={therapistRole}
+          billing={billing}
+        />
+      )}
       {tab === "documents" && (
         <DocumentsTab clientId={client.id} documents={documents} history={history} />
       )}

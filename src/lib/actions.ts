@@ -58,6 +58,62 @@ function validMoney(v: number, max: number): boolean {
   return Number.isFinite(v) && v >= 0 && v <= max;
 }
 
+export async function updateTherapistBilling(input: {
+  businessName?: string | null;
+  legalForm?: string | null;
+  addressLine1?: string | null;
+  addressLine2?: string | null;
+  postalCode?: string | null;
+  city?: string | null;
+  country?: string | null;
+  phone?: string | null;
+  siret?: string | null;
+  apeCode?: string | null;
+  rcs?: string | null;
+  tvaNumber?: string | null;
+  tvaRegime?: "franchise" | "assujetti";
+  tvaRate?: number | null;
+  iban?: string | null;
+  bic?: string | null;
+  bankName?: string | null;
+  invoiceFooter?: string | null;
+  paymentTerms?: string | null;
+}): Promise<{ ok: boolean; error?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const norm = (v: string | null | undefined) => (v == null ? null : v.trim() || null);
+
+  const patch: Record<string, unknown> = {
+    business_name: norm(input.businessName),
+    legal_form: norm(input.legalForm),
+    address_line1: norm(input.addressLine1),
+    address_line2: norm(input.addressLine2),
+    postal_code: norm(input.postalCode),
+    city: norm(input.city),
+    country: norm(input.country) ?? "France",
+    phone: norm(input.phone),
+    siret: norm(input.siret),
+    ape_code: norm(input.apeCode),
+    rcs: norm(input.rcs),
+    tva_number: norm(input.tvaNumber),
+    iban: norm(input.iban),
+    bic: norm(input.bic),
+    bank_name: norm(input.bankName),
+    invoice_footer: norm(input.invoiceFooter),
+    payment_terms: norm(input.paymentTerms),
+  };
+  if (input.tvaRegime) patch.tva_regime = input.tvaRegime;
+  if (input.tvaRate != null && Number.isFinite(input.tvaRate)) patch.tva_rate = input.tvaRate;
+
+  const { error } = await supabase.from("profiles").update(patch).eq("id", auth.user.id);
+  if (error) return { ok: false, error: error.message };
+
+  revalidatePath("/settings/profile");
+  return { ok: true };
+}
+
 export async function createClientAction(input: {
   fullName: string;
   email?: string | null;
