@@ -58,6 +58,52 @@ function validMoney(v: number, max: number): boolean {
   return Number.isFinite(v) && v >= 0 && v <= max;
 }
 
+export async function createClientAction(input: {
+  fullName: string;
+  email?: string | null;
+  phone?: string | null;
+  age?: number | null;
+  status?: "actif" | "nouveau" | "inactif";
+}): Promise<{ ok: boolean; error?: string; id?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const fullName = input.fullName.trim();
+  if (!fullName || fullName.length > MAX_TEXT_SHORT) {
+    return { ok: false, error: "Nom requis (max 500 caractères)" };
+  }
+  const email = input.email?.trim() || null;
+  const phone = input.phone?.trim() || null;
+  const age =
+    input.age != null && Number.isFinite(input.age) && input.age >= 0 && input.age <= 130
+      ? Math.floor(input.age)
+      : null;
+  const status = input.status ?? "nouveau";
+
+  const palette = ["#7C5CBF", "#C8A030", "#2E8A7B", "#B85450", "#5B8FB9", "#E08550"];
+  const color = palette[Math.floor(Math.random() * palette.length)];
+
+  const { data, error } = await supabase
+    .from("clients")
+    .insert({
+      therapist_id: auth.user.id,
+      full_name: fullName,
+      email,
+      phone,
+      age,
+      status,
+      color,
+    })
+    .select("id")
+    .single();
+
+  if (error) return { ok: false, error: error.message };
+
+  revalidatePath("/clients");
+  return { ok: true, id: data.id };
+}
+
 export async function markAppointmentDone(appointmentId: string): Promise<{ ok: boolean; error?: string }> {
   const supabase = await createClient();
   const { data: auth } = await supabase.auth.getUser();

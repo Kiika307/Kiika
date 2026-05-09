@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import { useState, useTransition, useRef } from "react";
 import { Trash2, Download, FileText, FolderOpen } from "lucide-react";
 import { toast } from "sonner";
@@ -8,12 +9,16 @@ import { recordClientDocument, deleteClientDocument } from "@/lib/actions";
 import { getDocumentSignedUrl } from "@/lib/storage";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { useConfirm } from "@/components/ui/ConfirmDialog";
-import type { ClientDocument, DocumentCategory } from "@/lib/types";
+import { HistoriqueTab } from "./HistoriqueTab";
+import type { ClientDocument, DocumentCategory, SessionHistoryEntry } from "@/lib/types";
 
 interface DocumentsTabProps {
   clientId: string;
   documents: ClientDocument[];
+  history: SessionHistoryEntry[];
 }
+
+type DocSubTab = "documents" | "historique";
 
 const CATEGORY_LABEL: Record<DocumentCategory, string> = {
   questionnaire: "Questionnaire",
@@ -23,7 +28,7 @@ const CATEGORY_LABEL: Record<DocumentCategory, string> = {
   autre: "Autre",
 };
 
-export function DocumentsTab({ clientId, documents }: DocumentsTabProps) {
+export function DocumentsTab({ clientId, documents, history }: DocumentsTabProps) {
   const fileRef = useRef<HTMLInputElement>(null);
   const [pending, startTransition] = useTransition();
   const [uploading, setUploading] = useState(false);
@@ -31,6 +36,12 @@ export function DocumentsTab({ clientId, documents }: DocumentsTabProps) {
   const [category, setCategory] = useState<DocumentCategory>("autre");
   const [description, setDescription] = useState("");
   const { confirm, dialog } = useConfirm();
+  const [subTab, setSubTab] = useState<DocSubTab>("documents");
+
+  const subTabs: Array<{ id: DocSubTab; label: string }> = [
+    { id: "documents", label: "Documents" },
+    { id: "historique", label: "Historique" },
+  ];
 
   async function handleUpload(file: File) {
     setError(null);
@@ -80,6 +91,104 @@ export function DocumentsTab({ clientId, documents }: DocumentsTabProps) {
     }
   }
 
+  return (
+    <div className="space-y-4">
+      <nav
+        className="flex gap-1 border-b"
+        style={{ borderColor: "var(--color-light-gray)" }}
+        aria-label="Sous-sections documents"
+      >
+        {subTabs.map((s) => (
+          <button
+            key={s.id}
+            type="button"
+            onClick={() => setSubTab(s.id)}
+            className="relative px-4 py-2.5 text-[13px] font-semibold transition-colors whitespace-nowrap min-h-11"
+            style={{
+              color: subTab === s.id ? "var(--color-navy)" : "var(--color-gray-soft)",
+            }}
+            aria-current={subTab === s.id ? "page" : undefined}
+          >
+            {s.label}
+            {subTab === s.id && (
+              <span
+                className="absolute left-0 right-0 -bottom-px h-[2px] rounded-full"
+                style={{ backgroundColor: "var(--color-gold)" }}
+                aria-hidden="true"
+              />
+            )}
+          </button>
+        ))}
+      </nav>
+
+      {subTab === "historique" && (
+        <HistoriqueTab clientId={clientId} history={history} />
+      )}
+
+      {subTab === "documents" && (
+        <DocumentsContent
+          clientId={clientId}
+          documents={documents}
+          fileRef={fileRef}
+          pending={pending}
+          startTransition={startTransition}
+          uploading={uploading}
+          error={error}
+          setError={setError}
+          category={category}
+          setCategory={setCategory}
+          description={description}
+          setDescription={setDescription}
+          handleUpload={handleUpload}
+          handleDownload={handleDownload}
+          confirm={confirm}
+        />
+      )}
+      {dialog}
+    </div>
+  );
+}
+
+interface DocumentsContentProps {
+  clientId: string;
+  documents: ClientDocument[];
+  fileRef: React.RefObject<HTMLInputElement | null>;
+  pending: boolean;
+  startTransition: React.TransitionStartFunction;
+  uploading: boolean;
+  error: string | null;
+  setError: (v: string | null) => void;
+  category: DocumentCategory;
+  setCategory: (c: DocumentCategory) => void;
+  description: string;
+  setDescription: (v: string) => void;
+  handleUpload: (file: File) => Promise<void>;
+  handleDownload: (doc: ClientDocument) => Promise<void>;
+  confirm: (opts: {
+    title: string;
+    message: string;
+    confirmLabel?: string;
+    destructive?: boolean;
+  }) => Promise<boolean>;
+}
+
+function DocumentsContent({
+  clientId: _clientId,
+  documents,
+  fileRef,
+  pending,
+  startTransition,
+  uploading,
+  error,
+  setError,
+  category,
+  setCategory,
+  description,
+  setDescription,
+  handleUpload,
+  handleDownload,
+  confirm,
+}: DocumentsContentProps) {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -224,7 +333,6 @@ export function DocumentsTab({ clientId, documents }: DocumentsTabProps) {
           ))}
         </div>
       )}
-      {dialog}
     </div>
   );
 }

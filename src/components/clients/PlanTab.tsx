@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import { useState, useTransition, useMemo } from "react";
 import { Plus, Trash2, ChevronUp, ChevronDown, Play, CheckCircle2, X, BookOpen } from "lucide-react";
 import { toast } from "sonner";
@@ -13,9 +14,13 @@ import {
   removeClientProtocol,
 } from "@/lib/actions";
 import { KiikaCarePlanCard } from "./KiikaCarePlanCard";
+import { TasksTab } from "./TasksTab";
+import { NotesTab } from "./NotesTab";
 import type {
   ClientKiikaCarePlan,
+  ClientNote,
   ClientProtocolPlan,
+  ClientTask,
   PlanStatus,
   Protocol,
 } from "@/lib/types";
@@ -26,7 +31,11 @@ interface PlanTabProps {
   plans: ClientProtocolPlan[];
   protocols: Protocol[];
   carePlans: ClientKiikaCarePlan[];
+  tasks: ClientTask[];
+  notes: ClientNote[];
 }
+
+type SubTab = "plan" | "tasks" | "notes";
 
 const STATUS_LABEL: Record<PlanStatus, string> = {
   planned: "Planifié",
@@ -48,11 +57,14 @@ export function PlanTab({
   plans,
   protocols,
   carePlans,
+  tasks,
+  notes,
 }: PlanTabProps) {
   const [adding, setAdding] = useState(false);
   const [pending, startTransition] = useTransition();
   const [error, setError] = useState<string | null>(null);
   const { confirm, dialog } = useConfirm();
+  const [subTab, setSubTab] = useState<SubTab>("plan");
 
   const assignedIds = useMemo(() => new Set(plans.map((p) => p.protocolId)), [plans]);
   const available = useMemo(
@@ -60,6 +72,102 @@ export function PlanTab({
     [protocols, assignedIds],
   );
 
+  const subTabs: Array<{ id: SubTab; label: string }> = [
+    { id: "plan", label: "Plan d'accompagnement" },
+    { id: "tasks", label: "Tâches" },
+    { id: "notes", label: "Notes" },
+  ];
+
+  return (
+    <div className="space-y-6">
+      <nav
+        className="flex gap-1 border-b -mb-2"
+        style={{ borderColor: "var(--color-light-gray)" }}
+        aria-label="Sous-sections du plan d'accompagnement"
+      >
+        {subTabs.map((s) => (
+          <button
+            key={s.id}
+            type="button"
+            onClick={() => setSubTab(s.id)}
+            className="relative px-4 py-2.5 text-[13px] font-semibold transition-colors whitespace-nowrap min-h-11"
+            style={{
+              color: subTab === s.id ? "var(--color-navy)" : "var(--color-gray-soft)",
+            }}
+            aria-current={subTab === s.id ? "page" : undefined}
+          >
+            {s.label}
+            {subTab === s.id && (
+              <span
+                className="absolute left-0 right-0 -bottom-px h-[2px] rounded-full"
+                style={{ backgroundColor: "var(--color-gold)" }}
+                aria-hidden="true"
+              />
+            )}
+          </button>
+        ))}
+      </nav>
+
+      {subTab === "tasks" && <TasksTab clientId={clientId} tasks={tasks} />}
+      {subTab === "notes" && <NotesTab clientId={clientId} notes={notes} />}
+      {subTab === "plan" && (
+        <PlanContent
+          clientId={clientId}
+          clientFirstName={clientFirstName}
+          plans={plans}
+          protocols={protocols}
+          carePlans={carePlans}
+          adding={adding}
+          setAdding={setAdding}
+          pending={pending}
+          startTransition={startTransition}
+          error={error}
+          setError={setError}
+          confirm={confirm}
+          available={available}
+        />
+      )}
+      {dialog}
+    </div>
+  );
+}
+
+interface PlanContentProps {
+  clientId: string;
+  clientFirstName: string;
+  plans: ClientProtocolPlan[];
+  protocols: Protocol[];
+  carePlans: ClientKiikaCarePlan[];
+  adding: boolean;
+  setAdding: (v: boolean) => void;
+  pending: boolean;
+  startTransition: React.TransitionStartFunction;
+  error: string | null;
+  setError: (v: string | null) => void;
+  confirm: (opts: {
+    title: string;
+    message: string;
+    confirmLabel?: string;
+    destructive?: boolean;
+  }) => Promise<boolean>;
+  available: Protocol[];
+}
+
+function PlanContent({
+  clientId,
+  clientFirstName,
+  plans,
+  protocols,
+  carePlans,
+  adding,
+  setAdding,
+  pending,
+  startTransition,
+  error,
+  setError,
+  confirm,
+  available,
+}: PlanContentProps) {
   return (
     <div className="space-y-6">
       <KiikaCarePlanCard
@@ -71,7 +179,7 @@ export function PlanTab({
 
       <div className="flex items-center justify-between">
         <h2 className="font-serif text-[18px] font-semibold text-[var(--color-navy)]">
-          Plan de soin
+          Plan d'accompagnement
           <span className="ml-2 text-[12px] font-normal text-[var(--color-gray-soft)]">
             {plans.length} protocole{plans.length > 1 ? "s" : ""}
           </span>
@@ -128,7 +236,7 @@ export function PlanTab({
         >
           <EmptyState
             icon={BookOpen}
-            title="Aucun protocole dans le plan de soin"
+            title="Aucun protocole dans le plan d'accompagnement"
             message="Assignez un protocole de la bibliothèque pour structurer l'accompagnement."
             action={
               <button
@@ -166,7 +274,7 @@ export function PlanTab({
             onRemove={async () => {
               const ok = await confirm({
                 title: "Retirer le protocole",
-                message: "Retirer ce protocole du plan de soin ? Les sessions associées resteront dans l'historique.",
+                message: "Retirer ce protocole du plan d'accompagnement ? Les sessions associées resteront dans l'historique.",
                 confirmLabel: "Retirer",
                 destructive: true,
               });
@@ -185,7 +293,6 @@ export function PlanTab({
           />
         ))}
       </div>
-      {dialog}
     </div>
   );
 }

@@ -8,11 +8,8 @@ import { Badge } from "@/components/ui/Badge";
 import { EraseClientButton } from "./EraseClientButton";
 import { ProfilTab } from "./ProfilTab";
 import { MatchingTab } from "./MatchingTab";
-import { HistoriqueTab } from "./HistoriqueTab";
 import { InformationsTab } from "./InformationsTab";
-import { NotesTab } from "./NotesTab";
 import { PlanTab } from "./PlanTab";
-import { TasksTab } from "./TasksTab";
 import { InvoicesTab } from "./InvoicesTab";
 import { DocumentsTab } from "./DocumentsTab";
 import type {
@@ -34,10 +31,7 @@ type Tab =
   | "informations"
   | "profil"
   | "plan"
-  | "tasks"
-  | "notes"
   | "matching"
-  | "historique"
   | "facturation"
   | "documents";
 
@@ -60,11 +54,8 @@ interface ClientDetailProps {
 const tabs: Array<{ id: Tab; label: string }> = [
   { id: "informations", label: "Informations" },
   { id: "profil", label: "Profil psychométrique" },
-  { id: "plan", label: "Plan de soin" },
-  { id: "tasks", label: "Tâches" },
-  { id: "notes", label: "Notes" },
+  { id: "plan", label: "Plan d'accompagnement" },
   { id: "matching", label: "Matching IA" },
-  { id: "historique", label: "Historique" },
   { id: "facturation", label: "Facturation" },
   { id: "documents", label: "Documents" },
 ];
@@ -185,10 +176,10 @@ export function ClientDetail({
           plans={plans}
           protocols={protocols}
           carePlans={kiikaCarePlans}
+          tasks={tasks}
+          notes={notes}
         />
       )}
-      {tab === "tasks" && <TasksTab clientId={client.id} tasks={tasks} />}
-      {tab === "notes" && <NotesTab clientId={client.id} notes={notes} />}
       {tab === "matching" && (
         <MatchingTab
           client={client}
@@ -196,9 +187,10 @@ export function ClientDetail({
           kiikaAnalyses={kiikaAnalyses}
         />
       )}
-      {tab === "historique" && <HistoriqueTab clientId={client.id} history={history} />}
       {tab === "facturation" && <InvoicesTab clientId={client.id} invoices={invoices} />}
-      {tab === "documents" && <DocumentsTab clientId={client.id} documents={documents} />}
+      {tab === "documents" && (
+        <DocumentsTab clientId={client.id} documents={documents} history={history} />
+      )}
     </section>
   );
 }
