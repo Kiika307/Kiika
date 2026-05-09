@@ -49,6 +49,7 @@ export const clients: Client[] = [
     info: EMPTY_INFO,
     selene: null,
     remindersDisabled: false,
+    portal: { userId: null, invitedAt: null, cguAcceptedAt: null, cgvAcceptedAt: null, rgpdAcceptedAt: null },
   },
   {
     id: "2",
@@ -77,6 +78,7 @@ export const clients: Client[] = [
     info: EMPTY_INFO,
     selene: null,
     remindersDisabled: false,
+    portal: { userId: null, invitedAt: null, cguAcceptedAt: null, cgvAcceptedAt: null, rgpdAcceptedAt: null },
   },
   {
     id: "3",
@@ -96,6 +98,7 @@ export const clients: Client[] = [
     info: EMPTY_INFO,
     selene: null,
     remindersDisabled: false,
+    portal: { userId: null, invitedAt: null, cguAcceptedAt: null, cgvAcceptedAt: null, rgpdAcceptedAt: null },
   },
   {
     id: "4",
@@ -124,6 +127,7 @@ export const clients: Client[] = [
     info: EMPTY_INFO,
     selene: null,
     remindersDisabled: false,
+    portal: { userId: null, invitedAt: null, cguAcceptedAt: null, cgvAcceptedAt: null, rgpdAcceptedAt: null },
   },
 ];
 

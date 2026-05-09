@@ -350,7 +350,7 @@ export async function getClientsRich(): Promise<Client[]> {
   const { data: rows } = await supabase
     .from("clients")
     .select(
-      "id, full_name, email, phone, age, status, color, test_done, profile_axes, profile_dominante, themes, objectifs, blocages, created_at, date_naissance, sexe, profession, situation_familiale, adresse, medecin_traitant, personne_referente, antecedents_medicaux, antecedents_psy, traitements_en_cours, selene_scores, selene_dominante, selene_top3, selene_taken_at, reminders_disabled",
+      "id, full_name, email, phone, age, status, color, test_done, profile_axes, profile_dominante, themes, objectifs, blocages, created_at, date_naissance, sexe, profession, situation_familiale, adresse, medecin_traitant, personne_referente, antecedents_medicaux, antecedents_psy, traitements_en_cours, selene_scores, selene_dominante, selene_top3, selene_taken_at, reminders_disabled, user_id, portal_invited_at, cgu_accepted_at, cgv_accepted_at, rgpd_accepted_at",
     )
     .order("created_at", { ascending: true });
 
@@ -442,6 +442,13 @@ export async function getClientsRich(): Promise<Client[]> {
               takenAt: row.selene_taken_at,
             }
           : null,
+      portal: {
+        userId: (row as { user_id?: string | null }).user_id ?? null,
+        invitedAt: (row as { portal_invited_at?: string | null }).portal_invited_at ?? null,
+        cguAcceptedAt: (row as { cgu_accepted_at?: string | null }).cgu_accepted_at ?? null,
+        cgvAcceptedAt: (row as { cgv_accepted_at?: string | null }).cgv_accepted_at ?? null,
+        rgpdAcceptedAt: (row as { rgpd_accepted_at?: string | null }).rgpd_accepted_at ?? null,
+      },
     };
   });
 }

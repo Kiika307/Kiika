@@ -11,6 +11,7 @@ import {
   setClientRemindersDisabled,
 } from "@/lib/actions";
 import { pickBackgroundImage } from "@/lib/academia-photos";
+import { PortalInviteSection } from "./PortalInviteSection";
 import type { Client, ClientConsent, ClientInfo, Sexe, SignatureMethod } from "@/lib/types";
 
 function sectionPhoto(clientId: string, key: string): CSSProperties {
@@ -90,6 +91,13 @@ export function InformationsTab({ client, consents }: InformationsTabProps) {
           <Field label="Antécédents psychologiques" value={client.info.antecedentsPsy} multiline />
           <Field label="Traitements en cours" value={client.info.traitementsEnCours} multiline />
         </Section>
+
+        <PortalInviteSection
+          clientId={client.id}
+          clientFirstName={client.name.split(" ")[0]}
+          hasEmail={!!client.email}
+          portal={client.portal}
+        />
 
         <ConsentsSection clientId={client.id} consents={consents} />
 

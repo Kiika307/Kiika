@@ -23,6 +23,14 @@ export interface SeleneSummary {
   takenAt: string;                       // ISO datetime
 }
 
+export interface ClientPortalState {
+  userId: string | null;
+  invitedAt: string | null;
+  cguAcceptedAt: string | null;
+  cgvAcceptedAt: string | null;
+  rgpdAcceptedAt: string | null;
+}
+
 export interface Client {
   id: string;
   name: string;
@@ -41,6 +49,16 @@ export interface Client {
   info: ClientInfo;
   selene: SeleneSummary | null;
   remindersDisabled: boolean;
+  portal: ClientPortalState;
+}
+
+export interface ClientMessage {
+  id: string;
+  clientId: string;
+  senderRole: "therapist" | "client";
+  body: string;
+  readAt: string | null;
+  createdAt: string;
 }
 
 export type Sexe = "F" | "M" | "Autre" | "Non précisé";
