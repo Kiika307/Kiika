@@ -21,7 +21,10 @@ function getInitialTheme(): Theme {
   if (typeof window === "undefined") return "light";
   const stored = window.localStorage.getItem(STORAGE_KEY);
   if (isTheme(stored)) return stored;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  // On ne suit PAS prefers-color-scheme : le thème sombre n'est choisi
+  // qu'explicitement via le bouton. Évite l'inversion illisible sur les
+  // appareils (tablettes, mobiles) dont l'OS est en mode sombre.
+  return "light";
 }
 
 export function ThemeToggle() {

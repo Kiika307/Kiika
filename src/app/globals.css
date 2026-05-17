@@ -44,6 +44,10 @@
 :root {
   --background: var(--color-cream);
   --foreground: var(--color-navy);
+  /* Schéma clair explicite : empêche les navigateurs (Safari/Chrome tablette
+     en mode sombre OS) de ré-inverser automatiquement les couleurs et les
+     contrôles natifs. Le thème sombre est géré uniquement via data-theme. */
+  color-scheme: light;
 }
 
 /* === Dark mode ===
