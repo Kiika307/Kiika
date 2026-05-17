@@ -17,18 +17,19 @@ function isTheme(value: string | null): value is Theme {
   return value === "light" || value === "dark" || value === "academia";
 }
 
+const DEFAULT_THEME: Theme = "academia";
+
 function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return "light";
+  if (typeof window === "undefined") return DEFAULT_THEME;
   const stored = window.localStorage.getItem(STORAGE_KEY);
   if (isTheme(stored)) return stored;
-  // On ne suit PAS prefers-color-scheme : le thème sombre n'est choisi
-  // qu'explicitement via le bouton. Évite l'inversion illisible sur les
-  // appareils (tablettes, mobiles) dont l'OS est en mode sombre.
-  return "light";
+  // Thème par défaut = Dark Academia. On ne suit PAS prefers-color-scheme
+  // (évite l'inversion illisible sur appareils en mode sombre OS).
+  return DEFAULT_THEME;
 }
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
