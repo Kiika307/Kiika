@@ -181,7 +181,7 @@ function NewClientModal({ onClose, onCreated }: NewClientModalProps) {
           />
         </label>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <label className="flex flex-col gap-1">
             <span className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)]">
               Email
@@ -206,7 +206,7 @@ function NewClientModal({ onClose, onCreated }: NewClientModalProps) {
           </label>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <label className="flex flex-col gap-1">
             <span className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)]">
               Âge

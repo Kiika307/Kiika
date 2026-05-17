@@ -78,7 +78,7 @@ export function InvoicesTab({
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-2">
         <h2 className="font-serif text-[18px] font-semibold text-[var(--color-navy)]">
           Facturation
           <span className="ml-2 text-[12px] font-normal text-[var(--color-gray-soft)]">
@@ -98,7 +98,7 @@ export function InvoicesTab({
         )}
       </div>
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <SummaryCard label="Facturé" value={EUR.format(totals.billed)} color="#5B8FB9" />
         <SummaryCard label="Encaissé" value={EUR.format(totals.paid)} color="#2E8A7B" />
         <SummaryCard label="En attente" value={EUR.format(totals.outstanding)} color="#D4622A" />
@@ -428,7 +428,7 @@ function InvoiceEditor({
 
   return (
     <div className="rounded-[12px] bg-white p-4 space-y-4" style={{ boxShadow: "var(--shadow-card)" }}>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <FormField
           label="Numéro"
           type="text"
@@ -693,7 +693,7 @@ function InvoicePreviewModal({
           </div>
 
           {/* Émetteur / Destinataire */}
-          <div className="grid grid-cols-2 gap-8 py-6 border-b border-[var(--color-light-gray)]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-6 border-b border-[var(--color-light-gray)]">
             <div>
               <div className="text-[11px] uppercase tracking-wide text-[var(--color-gray-soft)] mb-2">
                 Émetteur
@@ -742,7 +742,7 @@ function InvoicePreviewModal({
           </div>
 
           {/* Méta */}
-          <div className="grid grid-cols-2 gap-x-8 gap-y-4 py-5 border-b border-[var(--color-light-gray)]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 py-5 border-b border-[var(--color-light-gray)]">
             <PreviewField label="N° de facture" value={invoice.numero} />
             <PreviewField label="Date d'émission" value={formatDate(invoice.dateEmission)} />
             <PreviewField label="Projet" value={invoice.project || "—"} />

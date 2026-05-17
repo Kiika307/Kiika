@@ -371,7 +371,7 @@ function ConsentsSection({
 
       {adding && (
         <div className="space-y-3 mb-4">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <FormSelect
               label="Méthode de signature"
               value={method}

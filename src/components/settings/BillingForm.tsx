@@ -109,7 +109,7 @@ export function BillingForm({ initial }: BillingFormProps) {
       <Section title="Adresse">
         <Field label="Adresse" value={addressLine1} onChange={setAddressLine1} />
         <Field label="Complément" value={addressLine2} onChange={setAddressLine2} />
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <Field label="Code postal" value={postalCode} onChange={setPostalCode} />
           <Field label="Ville" value={city} onChange={setCity} className="col-span-2" />
         </div>
@@ -118,7 +118,7 @@ export function BillingForm({ initial }: BillingFormProps) {
       </Section>
 
       <Section title="Numéros officiels">
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="SIRET" value={siret} onChange={setSiret} placeholder="14 chiffres" />
           <Field label="Code APE / NAF" value={apeCode} onChange={setApeCode} placeholder="Ex : 8690F" />
         </div>
@@ -140,7 +140,7 @@ export function BillingForm({ initial }: BillingFormProps) {
           </select>
         </label>
         {tvaRegime === "assujetti" && (
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Taux TVA (%)" value={tvaRate} onChange={setTvaRate} type="number" />
             <Field label="N° TVA intracommunautaire" value={tvaNumber} onChange={setTvaNumber} placeholder="FRxx xxxxxxxxx" />
           </div>
@@ -149,7 +149,7 @@ export function BillingForm({ initial }: BillingFormProps) {
 
       <Section title="Coordonnées bancaires">
         <Field label="Banque" value={bankName} onChange={setBankName} />
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <Field label="IBAN" value={iban} onChange={setIban} className="col-span-2" />
           <Field label="BIC" value={bic} onChange={setBic} />
         </div>

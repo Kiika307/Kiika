@@ -474,7 +474,7 @@ function AddProtocolForm({
         <p className="text-[12px] text-[var(--color-gray-soft)]">{selected.description}</p>
       )}
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <FormField
           label="Séances prévues"
           type="number"
