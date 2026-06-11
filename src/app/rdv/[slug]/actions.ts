@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { createClient as createServiceClient } from "@supabase/supabase-js";
 import { localToUtc } from "@/lib/booking";
-import { rateLimit, clientIp } from "@/lib/rate-limit";
+import { checkRateLimit, clientIp } from "@/lib/rate-limit";
 import { getSmtpTransporter, emailFrom } from "@/lib/email/smtp-client";
 import { sendPushTo } from "@/lib/push";
 import { createGoogleEvent } from "@/lib/google-calendar";
@@ -40,7 +40,7 @@ export async function submitPublicBookingAction(
   // Anti-spam : la réservation publique crée des fiches client + RDV sans
   // authentification. Limite par IP pour éviter la création en masse.
   const ip = await clientIp();
-  if (!rateLimit.consume(`booking:submit:${ip}`, 8, 60_000)) {
+  if (!(await checkRateLimit(`booking:submit:${ip}`, 8, 60_000))) {
     return { ok: false, error: "Trop de tentatives. Réessayez dans une minute." };
   }
 

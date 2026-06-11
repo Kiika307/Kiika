@@ -3,7 +3,7 @@
 import { randomBytes } from "node:crypto";
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
-import { rateLimit, clientIp } from "@/lib/rate-limit";
+import { checkRateLimit, clientIp } from "@/lib/rate-limit";
 import { getSmtpTransporter, emailFrom } from "@/lib/email/smtp-client";
 import {
   renderPortalInvitationSubject,
@@ -133,7 +133,7 @@ export async function claimClientInvitation(
   inviteToken: string,
 ): Promise<ClaimResult> {
   const ip = await clientIp();
-  if (!rateLimit.consume(`portal:claim:${ip}`, 10, 60_000)) {
+  if (!(await checkRateLimit(`portal:claim:${ip}`, 10, 60_000))) {
     return { ok: false, error: "Trop de tentatives. Réessayez dans une minute." };
   }
 
