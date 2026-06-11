@@ -506,7 +506,7 @@ function ParcoursBuilder({
               : `Générer le parcours (${sessionCount} séances)`}
         </button>
         <p className="mt-3 text-[10.5px] text-white/55">
-          Anonymisé (initiales seulement). Coût indicatif ≈ 0,05 €/parcours. ~30 secondes.
+          Anonymisé (initiales seulement). Génération en ~30 secondes.
         </p>
       </div>
 
