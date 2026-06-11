@@ -1317,3 +1317,75 @@ export async function setClientRemindersDisabled(
   revalidatePath("/clients");
   return { ok: true };
 }
+
+// ============================================================
+// SUIVI CLIENT (météo émotionnelle + journal partagé) — chargé à la demande
+// ============================================================
+
+export interface ClientMoodCheckin {
+  id: string;
+  score: number;
+  note: string | null;
+  createdAt: string;
+}
+
+export interface ClientJournalShared {
+  id: string;
+  title: string | null;
+  body: string;
+  createdAt: string;
+}
+
+export interface ClientSuiviData {
+  ok: boolean;
+  error?: string;
+  moods?: ClientMoodCheckin[];
+  journal?: ClientJournalShared[];
+}
+
+export async function getClientSuiviData(clientId: string): Promise<ClientSuiviData> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  // Ownership : la fiche doit appartenir au praticien connecté.
+  const { data: client } = await supabase
+    .from("clients")
+    .select("id")
+    .eq("id", clientId)
+    .eq("therapist_id", auth.user.id)
+    .maybeSingle();
+  if (!client) return { ok: false, error: "Client introuvable" };
+
+  const [{ data: moods }, { data: journal }] = await Promise.all([
+    supabase
+      .from("client_mood_checkins")
+      .select("id, score, note, created_at")
+      .eq("client_id", clientId)
+      .order("created_at", { ascending: false })
+      .limit(60),
+    supabase
+      .from("client_journal")
+      .select("id, title, body, created_at")
+      .eq("client_id", clientId)
+      .eq("shared", true)
+      .order("created_at", { ascending: false })
+      .limit(50),
+  ]);
+
+  return {
+    ok: true,
+    moods: (moods ?? []).map((m) => ({
+      id: m.id,
+      score: m.score,
+      note: m.note,
+      createdAt: m.created_at,
+    })),
+    journal: (journal ?? []).map((j) => ({
+      id: j.id,
+      title: j.title,
+      body: j.body,
+      createdAt: j.created_at,
+    })),
+  };
+}

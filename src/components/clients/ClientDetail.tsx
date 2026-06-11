@@ -15,6 +15,7 @@ import { PlanTab } from "./PlanTab";
 const MatchingTab = lazy(() =>
   import("./MatchingTab").then((m) => ({ default: m.MatchingTab })),
 );
+const SuiviTab = lazy(() => import("./SuiviTab").then((m) => ({ default: m.SuiviTab })));
 const InvoicesTab = lazy(() =>
   import("./InvoicesTab").then((m) => ({ default: m.InvoicesTab })),
 );
@@ -49,6 +50,7 @@ type Tab =
   | "informations"
   | "profil"
   | "plan"
+  | "suivi"
   | "matching"
   | "facturation"
   | "documents";
@@ -75,6 +77,7 @@ const tabs: Array<{ id: Tab; label: string }> = [
   { id: "informations", label: "Informations" },
   { id: "profil", label: "Profil psychométrique" },
   { id: "plan", label: "Plan d'accompagnement" },
+  { id: "suivi", label: "Suivi" },
   { id: "matching", label: "Matching IA" },
   { id: "facturation", label: "Facturation" },
   { id: "documents", label: "Documents" },
@@ -233,6 +236,11 @@ export function ClientDetail({
           tasks={tasks}
           notes={notes}
         />
+      )}
+      {tab === "suivi" && (
+        <Suspense fallback={<TabFallback />}>
+          <SuiviTab clientId={client.id} />
+        </Suspense>
       )}
       {tab === "matching" && (
         <Suspense fallback={<TabFallback />}>

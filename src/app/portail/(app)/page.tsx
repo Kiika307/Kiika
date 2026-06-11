@@ -11,6 +11,7 @@ import {
 import { requirePortalClient } from "@/lib/portal-server";
 import { StatCard } from "@/components/ui/StatCard";
 import { SectionCard } from "@/components/ui/SectionCard";
+import { MoodWidget } from "@/components/portal/MoodWidget";
 import { academiaStatPhotos, academiaFeaturePhotos } from "@/lib/academia-photos";
 
 const todayLabel = new Intl.DateTimeFormat("fr-FR", {
@@ -93,6 +94,15 @@ export default async function PortalDashboardPage() {
       .limit(3),
   ]);
 
+  // Météo émotionnelle déjà saisie aujourd'hui ?
+  const startOfDay = new Date();
+  startOfDay.setHours(0, 0, 0, 0);
+  const { count: moodTodayCount } = await supabase
+    .from("client_mood_checkins")
+    .select("id", { count: "exact", head: true })
+    .eq("client_id", clientId)
+    .gte("created_at", startOfDay.toISOString());
+
   const firstName = (client.full_name ?? "").split(" ")[0];
   const therapistName = therapist?.full_name ?? "votre praticien·ne";
   const openTasksCount = (openTasks ?? []).length;
@@ -152,6 +162,10 @@ export default async function PortalDashboardPage() {
           photoUrl={academiaStatPhotos.clients}
           href="/portail/messagerie"
         />
+      </div>
+
+      <div className="mb-6">
+        <MoodWidget alreadyToday={(moodTodayCount ?? 0) > 0} />
       </div>
 
       <div className="grid gap-6 lg:[grid-template-columns:1.15fr_0.85fr]">

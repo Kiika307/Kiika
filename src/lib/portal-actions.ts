@@ -304,3 +304,116 @@ export async function submitTaskFeedback(input: {
   revalidatePath("/clients");
   return { ok: true };
 }
+
+// ============================================================
+// 6. MÉTÉO ÉMOTIONNELLE (client)
+// ============================================================
+
+async function clientForUser(supabase: Awaited<ReturnType<typeof createClient>>, userId: string) {
+  const { data } = await supabase
+    .from("clients")
+    .select("id, therapist_id")
+    .eq("user_id", userId)
+    .maybeSingle();
+  return data;
+}
+
+export async function logMoodCheckin(input: {
+  score: number;
+  note?: string | null;
+}): Promise<{ ok: boolean; error?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const score = Math.round(Number(input.score));
+  if (!Number.isFinite(score) || score < 1 || score > 5) {
+    return { ok: false, error: "Score invalide (1 à 5)" };
+  }
+  const note = input.note?.trim().slice(0, 2000) || null;
+
+  const client = await clientForUser(supabase, auth.user.id);
+  if (!client) return { ok: false, error: "Non autorisé" };
+
+  const { error } = await supabase.from("client_mood_checkins").insert({
+    client_id: client.id,
+    therapist_id: client.therapist_id,
+    score,
+    note,
+  });
+  if (error) return { ok: false, error: error.message };
+  revalidatePath("/portail");
+  revalidatePath("/clients");
+  return { ok: true };
+}
+
+// ============================================================
+// 7. JOURNAL DE BORD (client)
+// ============================================================
+
+export async function saveJournalEntry(input: {
+  id?: string;
+  title?: string | null;
+  body: string;
+  shared: boolean;
+}): Promise<{ ok: boolean; error?: string; id?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const body = input.body.trim();
+  if (!body) return { ok: false, error: "Entrée vide" };
+  if (body.length > 20000) return { ok: false, error: "Entrée trop longue" };
+  const title = input.title?.trim().slice(0, 200) || null;
+
+  const client = await clientForUser(supabase, auth.user.id);
+  if (!client) return { ok: false, error: "Non autorisé" };
+
+  if (input.id) {
+    const { error } = await supabase
+      .from("client_journal")
+      .update({ title, body, shared: input.shared })
+      .eq("id", input.id)
+      .eq("client_id", client.id);
+    if (error) return { ok: false, error: error.message };
+    revalidatePath("/portail/journal");
+    revalidatePath("/clients");
+    return { ok: true, id: input.id };
+  }
+
+  const { data, error } = await supabase
+    .from("client_journal")
+    .insert({
+      client_id: client.id,
+      therapist_id: client.therapist_id,
+      title,
+      body,
+      shared: input.shared,
+    })
+    .select("id")
+    .single();
+  if (error) return { ok: false, error: error.message };
+  revalidatePath("/portail/journal");
+  revalidatePath("/clients");
+  return { ok: true, id: data.id };
+}
+
+export async function deleteJournalEntry(
+  id: string,
+): Promise<{ ok: boolean; error?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const client = await clientForUser(supabase, auth.user.id);
+  if (!client) return { ok: false, error: "Non autorisé" };
+
+  const { error } = await supabase
+    .from("client_journal")
+    .delete()
+    .eq("id", id)
+    .eq("client_id", client.id);
+  if (error) return { ok: false, error: error.message };
+  revalidatePath("/portail/journal");
+  return { ok: true };
+}

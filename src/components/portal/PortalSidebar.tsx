@@ -8,6 +8,7 @@ import {
   FileText,
   ClipboardList,
   MessageSquare,
+  BookOpen,
   LogOut,
 } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -16,6 +17,7 @@ import { academiaFeaturePhotos } from "@/lib/academia-photos";
 const navItems = [
   { href: "/portail", label: "Mon espace", icon: LayoutDashboard, exact: true },
   { href: "/portail/seances", label: "Mes séances", icon: CalendarDays },
+  { href: "/portail/journal", label: "Mon journal", icon: BookOpen },
   { href: "/portail/documents", label: "Mes documents", icon: FileText },
   { href: "/portail/devoirs", label: "Mes devoirs", icon: ClipboardList },
   { href: "/portail/messagerie", label: "Messagerie", icon: MessageSquare },
