@@ -8,14 +8,20 @@ import { Avatar } from "@/components/ui/Avatar";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { cn } from "@/lib/cn";
 import { sendPortalMessage } from "@/lib/portal-actions";
+import { useRealtimeMessages } from "@/lib/use-realtime-messages";
 import type { ChatMessage, Conversation, Client } from "@/lib/types";
 
 interface MessagerieClientProps {
   clients: Client[];
   conversations: Conversation[];
+  therapistId: string;
 }
 
-export function MessagerieClient({ clients, conversations: initialConversations }: MessagerieClientProps) {
+export function MessagerieClient({
+  clients,
+  conversations: initialConversations,
+  therapistId,
+}: MessagerieClientProps) {
   const [convs, setConvs] = useState<Conversation[]>(initialConversations);
   const [activeId, setActiveId] = useState<string>(
     initialConversations[0]?.clientId ?? clients[0]?.id ?? "",
@@ -32,6 +38,11 @@ export function MessagerieClient({ clients, conversations: initialConversations 
   useEffect(() => {
     setConvs(initialConversations);
   }, [initialConversations]);
+
+  // Réception en direct des messages clients (tous mes fils).
+  useRealtimeMessages(therapistId ? `therapist_id=eq.${therapistId}` : "", () =>
+    router.refresh(),
+  );
 
   const activeClient = useMemo(
     () => clients.find((c) => c.id === activeId) ?? clients[0],

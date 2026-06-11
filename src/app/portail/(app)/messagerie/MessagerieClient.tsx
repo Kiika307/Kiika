@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Send } from "lucide-react";
 import { toast } from "sonner";
 import { sendPortalMessage } from "@/lib/portal-actions";
+import { useRealtimeMessages } from "@/lib/use-realtime-messages";
 
 export interface PortalMessage {
   id: string;
@@ -14,15 +15,20 @@ export interface PortalMessage {
 }
 
 export function MessagerieClient({
+  clientId,
   therapistName,
   messages,
 }: {
+  clientId: string;
   therapistName: string;
   messages: PortalMessage[];
 }) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
   const [body, setBody] = useState("");
+
+  // Réception en direct des nouveaux messages du praticien.
+  useRealtimeMessages(`client_id=eq.${clientId}`, () => router.refresh());
 
   function handleSend(e: React.FormEvent) {
     e.preventDefault();

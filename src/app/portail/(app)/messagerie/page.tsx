@@ -36,6 +36,7 @@ export default async function PortalMessageriePage() {
 
   return (
     <MessagerieClient
+      clientId={client.id}
       therapistName={therapist?.full_name ?? "votre praticien·ne"}
       messages={messages}
     />
