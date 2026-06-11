@@ -78,9 +78,10 @@ export function ClientsClient({
             Retour
           </button>
 
-          <div
-            className={pending ? "opacity-50 pointer-events-none transition-opacity" : "transition-opacity"}
-          >
+          {/* Feedback visuel pendant le chargement d'un autre client — SANS
+              jamais bloquer les clics (pas de pointer-events-none, qui pouvait
+              rester collé si la transition ne se résolvait pas). */}
+          <div className={pending ? "opacity-60 transition-opacity" : "transition-opacity"}>
             <ClientDetail
               key={selected.id}
               client={selected}
