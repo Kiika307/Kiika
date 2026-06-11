@@ -1486,3 +1486,4 @@ export async function deleteSessionSynthese(
   revalidatePath("/clients");
   return { ok: true };
 }
+

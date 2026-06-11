@@ -1,20 +1,6 @@
 import { AppShell } from "@/components/layout/AppShell";
 import { ClientsClient } from "@/components/clients/ClientsClient";
-import {
-  getClientsRich,
-  getProtocols,
-  getTherapist,
-  getAllNotesByClient,
-  getAllHistoryByClient,
-  getAllPlansByClient,
-  getAllSnapshotsByClient,
-  getAllTasksByClient,
-  getAllInvoicesByClient,
-  getAllDocumentsByClient,
-  getAllConsentsByClient,
-  getAllKiikaAnalysesByClient,
-  getAllKiikaCarePlansByClient,
-} from "@/lib/data";
+import { getClientsRich, getProtocols, getTherapist, getClientDetailData } from "@/lib/data";
 
 interface ClientsPageProps {
   searchParams: Promise<{ id?: string }>;
@@ -22,51 +8,27 @@ interface ClientsPageProps {
 
 export default async function ClientsPage({ searchParams }: ClientsPageProps) {
   const { id } = await searchParams;
+  // Chargement léger : seulement la liste + protocoles + praticien.
+  // Le détail n'est chargé que pour LE client sélectionné (via ?id), au lieu
+  // de 10 requêtes pour TOUS les clients au montage (perf H1). La sélection
+  // navigue vers ?id=… → le serveur re-rend en chargeant un seul client.
   const [clients, protocols, therapist] = await Promise.all([
     getClientsRich(),
     getProtocols(),
     getTherapist(),
   ]);
-  const ids = clients.map((c) => c.id);
-  const [
-    notesByClient,
-    historyByClient,
-    plansByClient,
-    snapshotsByClient,
-    tasksByClient,
-    invoicesByClient,
-    documentsByClient,
-    consentsByClient,
-    kiikaAnalysesByClient,
-    kiikaCarePlansByClient,
-  ] = await Promise.all([
-    getAllNotesByClient(ids),
-    getAllHistoryByClient(ids),
-    getAllPlansByClient(ids),
-    getAllSnapshotsByClient(ids),
-    getAllTasksByClient(ids),
-    getAllInvoicesByClient(ids),
-    getAllDocumentsByClient(ids),
-    getAllConsentsByClient(ids),
-    getAllKiikaAnalysesByClient(ids),
-    getAllKiikaCarePlansByClient(ids),
-  ]);
+
+  const selectedId =
+    id && clients.some((c) => c.id === id) ? id : clients[0]?.id ?? null;
+  const detail = selectedId ? await getClientDetailData(selectedId) : null;
 
   return (
     <AppShell>
       <ClientsClient
         clients={clients}
         protocols={protocols}
-        notesByClient={notesByClient}
-        historyByClient={historyByClient}
-        plansByClient={plansByClient}
-        snapshotsByClient={snapshotsByClient}
-        tasksByClient={tasksByClient}
-        invoicesByClient={invoicesByClient}
-        documentsByClient={documentsByClient}
-        consentsByClient={consentsByClient}
-        kiikaAnalysesByClient={kiikaAnalysesByClient}
-        kiikaCarePlansByClient={kiikaCarePlansByClient}
+        selectedId={selectedId}
+        detail={detail}
         therapistName={therapist?.fullName ?? "Thérapeute"}
         therapistRole={therapist?.role ?? "Thérapeute"}
         billing={
@@ -94,7 +56,6 @@ export default async function ClientsPage({ searchParams }: ClientsPageProps) {
             logoUrl: null,
           }
         }
-        initialId={id}
       />
     </AppShell>
   );

@@ -1,85 +1,68 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
 import { ClientList } from "./ClientList";
 import { ClientDetail } from "./ClientDetail";
-import type {
-  Client,
-  ClientKiikaAnalysis,
-  ClientKiikaCarePlan,
-  ClientNote,
-  ClientProtocolPlan,
-  ClientTask,
-  ClientConsent,
-  ClientDocument,
-  Invoice,
-  ProfileSnapshot,
-  Protocol,
-  SessionHistoryEntry,
-} from "@/lib/types";
-import type { TherapistBilling } from "@/lib/data";
+import type { Client, Protocol } from "@/lib/types";
+import type { TherapistBilling, ClientDetailData } from "@/lib/data";
 
 interface ClientsClientProps {
   clients: Client[];
   protocols: Protocol[];
-  notesByClient: Record<string, ClientNote[]>;
-  historyByClient: Record<string, SessionHistoryEntry[]>;
-  plansByClient: Record<string, ClientProtocolPlan[]>;
-  snapshotsByClient: Record<string, ProfileSnapshot[]>;
-  tasksByClient: Record<string, ClientTask[]>;
-  invoicesByClient: Record<string, Invoice[]>;
-  documentsByClient: Record<string, ClientDocument[]>;
-  consentsByClient: Record<string, ClientConsent[]>;
-  kiikaAnalysesByClient: Record<string, ClientKiikaAnalysis[]>;
-  kiikaCarePlansByClient: Record<string, ClientKiikaCarePlan[]>;
+  /** Client sélectionné (depuis ?id), ou le premier de la liste. */
+  selectedId: string | null;
+  /** Détail du SEUL client sélectionné, chargé côté serveur. */
+  detail: ClientDetailData | null;
   therapistName: string;
   therapistRole: string;
   billing: TherapistBilling;
-  initialId?: string;
 }
+
+const EMPTY_DETAIL: ClientDetailData = {
+  notes: [],
+  history: [],
+  plans: [],
+  snapshots: [],
+  tasks: [],
+  invoices: [],
+  documents: [],
+  consents: [],
+  kiikaAnalyses: [],
+  kiikaCarePlans: [],
+};
 
 export function ClientsClient({
   clients,
   protocols,
-  notesByClient,
-  historyByClient,
-  plansByClient,
-  snapshotsByClient,
-  tasksByClient,
-  invoicesByClient,
-  documentsByClient,
-  consentsByClient,
-  kiikaAnalysesByClient,
-  kiikaCarePlansByClient,
+  selectedId,
+  detail,
   therapistName,
   therapistRole,
   billing,
-  initialId,
 }: ClientsClientProps) {
-  const validInitial = initialId != null && clients.some((c) => c.id === initialId) ? initialId : null;
-  const [selectedId, setSelectedId] = useState<string>(validInitial ?? clients[0]?.id ?? "");
+  const router = useRouter();
+  const [pending, startTransition] = useTransition();
   /** Sur mobile : "list" (liste seule) ou "detail" (fiche client). */
   const [mobileView, setMobileView] = useState<"list" | "detail">("list");
-  const selected = clients.find((c) => c.id === selectedId) ?? clients[0];
+  const selected = clients.find((c) => c.id === selectedId) ?? clients[0] ?? null;
+  const d = detail ?? EMPTY_DETAIL;
 
   function pickClient(id: string) {
-    setSelectedId(id);
     setMobileView("detail");
-    // Reflète le client courant dans l'URL (lien partageable + refresh stable)
-    // sans déclencher de navigation serveur. On efface ?tab au changement.
-    if (typeof window !== "undefined") {
-      const url = new URL(window.location.href);
-      url.searchParams.set("id", id);
-      url.searchParams.delete("tab");
-      window.history.replaceState(null, "", url);
-    }
+    if (id === selectedId) return;
+    // Navigation serveur vers ?id=… : le serveur re-rend en ne chargeant que ce
+    // client (perf). On efface ?tab au changement.
+    startTransition(() => {
+      router.push(`/clients?id=${id}`);
+    });
   }
 
   return (
     <div className="flex -mx-4 -my-5 sm:-mx-6 sm:-my-6 md:-mx-9 md:-my-8 min-h-[calc(100dvh-3.5rem)] md:min-h-screen">
       <div className={mobileView === "list" ? "block w-full md:block md:w-auto" : "hidden md:block"}>
-        <ClientList clients={clients} selectedId={selectedId} onSelect={pickClient} />
+        <ClientList clients={clients} selectedId={selected?.id ?? null} onSelect={pickClient} />
       </div>
 
       {selected && (
@@ -95,24 +78,28 @@ export function ClientsClient({
             Retour
           </button>
 
-          <ClientDetail
-            key={selected.id}
-            client={selected}
-            protocols={protocols}
-            notes={notesByClient[selected.id] ?? []}
-            history={historyByClient[selected.id] ?? []}
-            plans={plansByClient[selected.id] ?? []}
-            snapshots={snapshotsByClient[selected.id] ?? []}
-            tasks={tasksByClient[selected.id] ?? []}
-            invoices={invoicesByClient[selected.id] ?? []}
-            documents={documentsByClient[selected.id] ?? []}
-            consents={consentsByClient[selected.id] ?? []}
-            kiikaAnalyses={kiikaAnalysesByClient[selected.id] ?? []}
-            kiikaCarePlans={kiikaCarePlansByClient[selected.id] ?? []}
-            therapistName={therapistName}
-            therapistRole={therapistRole}
-            billing={billing}
-          />
+          <div
+            className={pending ? "opacity-50 pointer-events-none transition-opacity" : "transition-opacity"}
+          >
+            <ClientDetail
+              key={selected.id}
+              client={selected}
+              protocols={protocols}
+              notes={d.notes}
+              history={d.history}
+              plans={d.plans}
+              snapshots={d.snapshots}
+              tasks={d.tasks}
+              invoices={d.invoices}
+              documents={d.documents}
+              consents={d.consents}
+              kiikaAnalyses={d.kiikaAnalyses}
+              kiikaCarePlans={d.kiikaCarePlans}
+              therapistName={therapistName}
+              therapistRole={therapistRole}
+              billing={billing}
+            />
+          </div>
         </div>
       )}
     </div>

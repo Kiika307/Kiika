@@ -1444,3 +1444,66 @@ export async function getCalendarSyncSettings(): Promise<CalendarSyncSettings | 
     googleSyncEnabled: data.google_calendar_sync_enabled ?? false,
   };
 }
+
+// ============================================================
+// Détail d'UN client — chargé à la demande (lazy-load fiche, perf H1)
+// ============================================================
+
+export interface ClientDetailData {
+  notes: ClientNote[];
+  history: SessionHistoryEntry[];
+  plans: ClientProtocolPlan[];
+  snapshots: ProfileSnapshot[];
+  tasks: ClientTask[];
+  invoices: Invoice[];
+  documents: ClientDocument[];
+  consents: ClientConsent[];
+  kiikaAnalyses: ClientKiikaAnalysis[];
+  kiikaCarePlans: ClientKiikaCarePlan[];
+}
+
+/**
+ * Charge toutes les données de détail d'un SEUL client (10 requêtes en
+ * parallèle), au lieu de tout charger pour tous les clients au montage de la
+ * page. Réutilise les mappers existants (getAll*ByClient avec [clientId]).
+ * La RLS garantit que seules les lignes du praticien remontent.
+ */
+export async function getClientDetailData(clientId: string): Promise<ClientDetailData> {
+  const ids = [clientId];
+  const [
+    notes,
+    history,
+    plans,
+    snapshots,
+    tasks,
+    invoices,
+    documents,
+    consents,
+    kiikaAnalyses,
+    kiikaCarePlans,
+  ] = await Promise.all([
+    getAllNotesByClient(ids),
+    getAllHistoryByClient(ids),
+    getAllPlansByClient(ids),
+    getAllSnapshotsByClient(ids),
+    getAllTasksByClient(ids),
+    getAllInvoicesByClient(ids),
+    getAllDocumentsByClient(ids),
+    getAllConsentsByClient(ids),
+    getAllKiikaAnalysesByClient(ids),
+    getAllKiikaCarePlansByClient(ids),
+  ]);
+
+  return {
+    notes: notes[clientId] ?? [],
+    history: history[clientId] ?? [],
+    plans: plans[clientId] ?? [],
+    snapshots: snapshots[clientId] ?? [],
+    tasks: tasks[clientId] ?? [],
+    invoices: invoices[clientId] ?? [],
+    documents: documents[clientId] ?? [],
+    consents: consents[clientId] ?? [],
+    kiikaAnalyses: kiikaAnalyses[clientId] ?? [],
+    kiikaCarePlans: kiikaCarePlans[clientId] ?? [],
+  };
+}
