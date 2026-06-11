@@ -36,17 +36,18 @@ export function PortalSidebar({ clientName, clientInitials, therapistName }: Por
       style={{ backgroundColor: "var(--color-navy)", color: "white" }}
       aria-label="Navigation portail client"
     >
-      <div className="px-6 pt-6 pb-4">
-        <div className="font-serif text-[22px] tracking-[0.18em] font-bold">KIIKA</div>
+      <div className="px-4 md:px-6 pt-4 md:pt-6 pb-2 md:pb-4">
+        <div className="font-serif text-[20px] md:text-[22px] tracking-[0.18em] font-bold">KIIKA</div>
         <div className="mt-0.5 text-[10px] uppercase tracking-[0.3em] text-[var(--color-gold)]">
           Espace personnel
         </div>
       </div>
 
       <nav className="flex-1 px-3 py-2 relative" aria-label="Sections">
-        {/* Photo décorative academia (cohérence avec le portail thérapeute) */}
+        {/* Photo décorative academia — desktop uniquement (n'encombre pas le
+            bandeau de nav mobile horizontal). */}
         <div
-          className="aca-only pointer-events-none absolute left-0 right-0 bottom-0 h-[42%] aca-sidebar-photo"
+          className="aca-only hidden md:block pointer-events-none absolute left-0 right-0 bottom-0 h-[42%] aca-sidebar-photo"
           style={
             {
               "--aca-photo": `url(${academiaFeaturePhotos.sidebarFooter})`,
@@ -59,16 +60,20 @@ export function PortalSidebar({ clientName, clientInitials, therapistName }: Por
           }
           aria-hidden="true"
         />
-        <ul className="space-y-1 relative" style={{ zIndex: 1 }}>
+        {/* Mobile : rangée horizontale scrollable ; desktop : liste verticale */}
+        <ul
+          className="flex md:flex-col gap-1 relative overflow-x-auto md:overflow-visible pb-1 md:pb-0"
+          style={{ zIndex: 1 }}
+        >
           {navItems.map(({ href, label, icon: Icon, exact }) => {
             const active = exact ? pathname === href : pathname.startsWith(href);
             return (
-              <li key={href}>
+              <li key={href} className="shrink-0">
                 <Link
                   href={href}
                   aria-current={active ? "page" : undefined}
                   className={cn(
-                    "flex items-center gap-3 rounded-[10px] px-3 py-2.5 text-[13px] transition-colors",
+                    "flex items-center gap-2 md:gap-3 rounded-[10px] px-3 py-2.5 text-[13px] whitespace-nowrap transition-colors",
                     active
                       ? "text-[var(--color-gold-light)] font-semibold"
                       : "text-white/70 hover:bg-white/5 hover:text-white",
@@ -92,10 +97,10 @@ export function PortalSidebar({ clientName, clientInitials, therapistName }: Por
         </ul>
       </nav>
 
-      <div className="px-4 py-5 border-t border-white/10">
-        <div className="flex items-center gap-3 mb-3">
+      <div className="px-4 py-3 md:py-5 border-t border-white/10 flex items-center gap-3 md:block">
+        <div className="flex items-center gap-3 flex-1 min-w-0 md:mb-3">
           <div
-            className="inline-flex items-center justify-center w-9 h-9 rounded-full font-semibold text-[12px]"
+            className="inline-flex items-center justify-center w-9 h-9 rounded-full font-semibold text-[12px] shrink-0"
             style={{ backgroundColor: "var(--color-gold)", color: "var(--color-navy)" }}
           >
             {clientInitials}
@@ -105,13 +110,14 @@ export function PortalSidebar({ clientName, clientInitials, therapistName }: Por
             <div className="text-[10.5px] text-white/55 truncate">avec {therapistName}</div>
           </div>
         </div>
-        <form action="/portail/login/signout" method="post">
+        <form action="/portail/login/signout" method="post" className="shrink-0 md:w-full">
           <button
             type="submit"
-            className="w-full inline-flex items-center justify-center gap-1.5 rounded-[8px] border border-white/15 px-3 py-2 text-[12px] text-white/70 hover:bg-white/5 hover:text-white"
+            className="inline-flex items-center justify-center gap-1.5 rounded-[8px] border border-white/15 px-3 py-2 text-[12px] text-white/70 hover:bg-white/5 hover:text-white md:w-full"
+            aria-label="Se déconnecter"
           >
             <LogOut size={12} strokeWidth={1.8} />
-            Se déconnecter
+            <span className="hidden md:inline">Se déconnecter</span>
           </button>
         </form>
       </div>

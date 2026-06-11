@@ -8,7 +8,6 @@ import { FormField, FormSelect, FormTextarea } from "@/components/ui/FormField";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { useConfirm } from "@/components/ui/ConfirmDialog";
 import { addInvoice, updateInvoice, deleteInvoice } from "@/lib/actions";
-import { exportInvoicePdf } from "@/lib/pdf-export";
 import { computeInvoiceTotals } from "@/lib/invoice-totals";
 import type { TherapistBilling } from "@/lib/data";
 import type { Client, Invoice, InvoiceLineItem, InvoiceStatut, ModeFinancement } from "@/lib/types";
@@ -242,6 +241,7 @@ export function InvoicesTab({
           }}
           onDownload={async () => {
             try {
+              const { exportInvoicePdf } = await import("@/lib/pdf-export");
               await exportInvoicePdf({
                 invoice: previewInvoice,
                 client,

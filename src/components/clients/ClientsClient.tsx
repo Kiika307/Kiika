@@ -66,6 +66,14 @@ export function ClientsClient({
   function pickClient(id: string) {
     setSelectedId(id);
     setMobileView("detail");
+    // Reflète le client courant dans l'URL (lien partageable + refresh stable)
+    // sans déclencher de navigation serveur. On efface ?tab au changement.
+    if (typeof window !== "undefined") {
+      const url = new URL(window.location.href);
+      url.searchParams.set("id", id);
+      url.searchParams.delete("tab");
+      window.history.replaceState(null, "", url);
+    }
   }
 
   return (
@@ -88,6 +96,7 @@ export function ClientsClient({
           </button>
 
           <ClientDetail
+            key={selected.id}
             client={selected}
             protocols={protocols}
             notes={notesByClient[selected.id] ?? []}

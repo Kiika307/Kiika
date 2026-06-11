@@ -1,17 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense, lazy } from "react";
 import { Mail, Phone, Calendar, Download, Plus } from "lucide-react";
-import { exportClientDossier } from "@/lib/pdf-export";
+import { toast } from "sonner";
 import { Avatar } from "@/components/ui/Avatar";
 import { Badge } from "@/components/ui/Badge";
 import { EraseClientButton } from "./EraseClientButton";
 import { ProfilTab } from "./ProfilTab";
-import { MatchingTab } from "./MatchingTab";
 import { InformationsTab } from "./InformationsTab";
 import { PlanTab } from "./PlanTab";
-import { InvoicesTab } from "./InvoicesTab";
-import { DocumentsTab } from "./DocumentsTab";
+
+// Onglets lourds (facturation embarque jsPDF, matching de l'analyse IA,
+// documents l'upload) chargés à la demande → hors du bundle initial.
+const MatchingTab = lazy(() =>
+  import("./MatchingTab").then((m) => ({ default: m.MatchingTab })),
+);
+const InvoicesTab = lazy(() =>
+  import("./InvoicesTab").then((m) => ({ default: m.InvoicesTab })),
+);
+const DocumentsTab = lazy(() =>
+  import("./DocumentsTab").then((m) => ({ default: m.DocumentsTab })),
+);
+
+function TabFallback() {
+  return (
+    <div className="flex items-center justify-center py-16 text-[13px] text-[var(--color-gray-soft)]">
+      Chargement…
+    </div>
+  );
+}
 import type {
   Client,
   ClientKiikaAnalysis,
@@ -63,6 +80,12 @@ const tabs: Array<{ id: Tab; label: string }> = [
   { id: "documents", label: "Documents" },
 ];
 
+const TAB_IDS = new Set<Tab>(tabs.map((t) => t.id));
+
+function isTab(v: string | null): v is Tab {
+  return v != null && TAB_IDS.has(v as Tab);
+}
+
 export function ClientDetail({
   client,
   protocols,
@@ -80,7 +103,25 @@ export function ClientDetail({
   therapistRole,
   billing,
 }: ClientDetailProps) {
-  const [tab, setTab] = useState<Tab>("informations");
+  const [tab, setTabState] = useState<Tab>("informations");
+
+  // Lit l'onglet initial depuis l'URL (?tab=) au montage — permet le partage
+  // de liens profonds et la conservation de l'onglet au refresh.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const fromUrl = new URL(window.location.href).searchParams.get("tab");
+    if (isTab(fromUrl)) setTabState(fromUrl);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function setTab(next: Tab) {
+    setTabState(next);
+    if (typeof window === "undefined") return;
+    const url = new URL(window.location.href);
+    if (next === "informations") url.searchParams.delete("tab");
+    else url.searchParams.set("tab", next);
+    window.history.replaceState(null, "", url);
+  }
 
   return (
     <section className="flex-1 px-4 py-5 sm:px-6 sm:py-6 md:px-9 md:py-8 overflow-y-auto md:h-[100dvh]">
@@ -114,19 +155,27 @@ export function ClientDetail({
         <div className="flex gap-2 sm:flex-shrink-0">
           <button
             type="button"
-            onClick={() =>
-              exportClientDossier({
-                client,
-                notes,
-                history,
-                plans,
-                snapshots,
-                tasks,
-                invoices,
-                consents,
-                therapistName,
-              })
-            }
+            onClick={async () => {
+              try {
+                // Import dynamique : jsPDF (~400 KB) n'est chargé qu'au clic,
+                // pas dans le bundle initial de la page clients.
+                const { exportClientDossier } = await import("@/lib/pdf-export");
+                exportClientDossier({
+                  client,
+                  notes,
+                  history,
+                  plans,
+                  snapshots,
+                  tasks,
+                  invoices,
+                  consents,
+                  therapistName,
+                });
+              } catch (e) {
+                const msg = e instanceof Error ? e.message : "Erreur PDF";
+                toast.error(`Impossible de générer le PDF : ${msg}`);
+              }
+            }}
             className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-[var(--color-light-gray)] bg-[var(--color-white-soft)] px-4 py-2.5 text-[13px] font-semibold text-[var(--color-navy)] hover:bg-[var(--color-light-gray)] min-h-11"
             title="Exporter le dossier en PDF"
             aria-label="Exporter le dossier client en PDF"
@@ -186,24 +235,30 @@ export function ClientDetail({
         />
       )}
       {tab === "matching" && (
-        <MatchingTab
-          client={client}
-          protocols={protocols}
-          kiikaAnalyses={kiikaAnalyses}
-        />
+        <Suspense fallback={<TabFallback />}>
+          <MatchingTab
+            client={client}
+            protocols={protocols}
+            kiikaAnalyses={kiikaAnalyses}
+          />
+        </Suspense>
       )}
       {tab === "facturation" && (
-        <InvoicesTab
-          clientId={client.id}
-          client={client}
-          invoices={invoices}
-          therapistName={therapistName}
-          therapistRole={therapistRole}
-          billing={billing}
-        />
+        <Suspense fallback={<TabFallback />}>
+          <InvoicesTab
+            clientId={client.id}
+            client={client}
+            invoices={invoices}
+            therapistName={therapistName}
+            therapistRole={therapistRole}
+            billing={billing}
+          />
+        </Suspense>
       )}
       {tab === "documents" && (
-        <DocumentsTab clientId={client.id} documents={documents} history={history} />
+        <Suspense fallback={<TabFallback />}>
+          <DocumentsTab clientId={client.id} documents={documents} history={history} />
+        </Suspense>
       )}
     </section>
   );
