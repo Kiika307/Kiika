@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
 import { ClientList } from "./ClientList";
@@ -43,7 +43,6 @@ export function ClientsClient({
   billing,
 }: ClientsClientProps) {
   const router = useRouter();
-  const [pending, startTransition] = useTransition();
   /** Sur mobile : "list" (liste seule) ou "detail" (fiche client). */
   const [mobileView, setMobileView] = useState<"list" | "detail">("list");
   const selected = clients.find((c) => c.id === selectedId) ?? clients[0] ?? null;
@@ -53,10 +52,8 @@ export function ClientsClient({
     setMobileView("detail");
     if (id === selectedId) return;
     // Navigation serveur vers ?id=… : le serveur re-rend en ne chargeant que ce
-    // client (perf). On efface ?tab au changement.
-    startTransition(() => {
-      router.push(`/clients?id=${id}`);
-    });
+    // client (perf H1). Pas de useTransition (un état pending bloquait la fiche).
+    router.push(`/clients?id=${id}`);
   }
 
   return (
@@ -78,29 +75,24 @@ export function ClientsClient({
             Retour
           </button>
 
-          {/* Feedback visuel pendant le chargement d'un autre client — SANS
-              jamais bloquer les clics (pas de pointer-events-none, qui pouvait
-              rester collé si la transition ne se résolvait pas). */}
-          <div className={pending ? "opacity-60 transition-opacity" : "transition-opacity"}>
-            <ClientDetail
-              key={selected.id}
-              client={selected}
-              protocols={protocols}
-              notes={d.notes}
-              history={d.history}
-              plans={d.plans}
-              snapshots={d.snapshots}
-              tasks={d.tasks}
-              invoices={d.invoices}
-              documents={d.documents}
-              consents={d.consents}
-              kiikaAnalyses={d.kiikaAnalyses}
-              kiikaCarePlans={d.kiikaCarePlans}
-              therapistName={therapistName}
-              therapistRole={therapistRole}
-              billing={billing}
-            />
-          </div>
+          <ClientDetail
+            key={selected.id}
+            client={selected}
+            protocols={protocols}
+            notes={d.notes}
+            history={d.history}
+            plans={d.plans}
+            snapshots={d.snapshots}
+            tasks={d.tasks}
+            invoices={d.invoices}
+            documents={d.documents}
+            consents={d.consents}
+            kiikaAnalyses={d.kiikaAnalyses}
+            kiikaCarePlans={d.kiikaCarePlans}
+            therapistName={therapistName}
+            therapistRole={therapistRole}
+            billing={billing}
+          />
         </div>
       )}
     </div>
