@@ -1226,8 +1226,45 @@ export async function removeAvatar(): Promise<{ ok: boolean; error?: string }> {
 // KIIKA Care Plan — "Donne-moi un conseil" (parcours 10 séances)
 // ============================================================
 
+export async function saveSmartObjective(input: {
+  clientId: string;
+  specific: string;
+  measurable: string;
+  achievable: string;
+  realistic: string;
+  temporal: string;
+}): Promise<{ ok: boolean; error?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const clean = (v: string) => v.trim().slice(0, 1000);
+  const specific = clean(input.specific);
+  if (!specific) return { ok: false, error: "Le champ « Spécifique » est requis" };
+
+  const smart = {
+    specific,
+    measurable: clean(input.measurable),
+    achievable: clean(input.achievable),
+    realistic: clean(input.realistic),
+    temporal: clean(input.temporal),
+    updatedAt: new Date().toISOString(),
+  };
+
+  const { error } = await supabase
+    .from("clients")
+    .update({ smart_objective: smart })
+    .eq("id", input.clientId)
+    .eq("therapist_id", auth.user.id);
+  if (error) return { ok: false, error: error.message };
+
+  revalidatePath("/clients");
+  return { ok: true };
+}
+
 export async function generateKiikaCarePlanForClient(
   clientId: string,
+  opts?: { sessionCount?: number },
 ): Promise<{ ok: boolean; error?: string; carePlanId?: string }> {
   const supabase = await createClient();
   const { data: auth } = await supabase.auth.getUser();
@@ -1237,10 +1274,12 @@ export async function generateKiikaCarePlanForClient(
   const client = clients.find((c) => c.id === clientId);
   if (!client) return { ok: false, error: "Client introuvable" };
 
+  const sessionCount = Math.min(10, Math.max(5, Math.round(opts?.sessionCount ?? 10)));
+
   // Wider candidate pool than the matching analysis — the model needs real
-  // choice across 10 sessions.
+  // choice across the parcours.
   const ranked = rankProtocolsForClient(client, protocols, { topN: 50 });
-  const plan = await generateCarePlanWithLLM(client, ranked);
+  const plan = await generateCarePlanWithLLM(client, ranked, { sessionCount });
 
   if (!plan.ok) return { ok: false, error: plan.error };
   if (!plan.sessions || plan.sessions.length === 0) {
@@ -1252,6 +1291,9 @@ export async function generateKiikaCarePlanForClient(
     objectifs: client.profile?.objectifs ?? [],
     blocages: client.profile?.blocages ?? [],
     dominante: client.selene?.dominante ?? client.profile?.dominante ?? null,
+    smartObjective: client.smartObjective ?? null,
+    seleneTaken: client.selene != null,
+    sessionCount,
   };
 
   const { data: inserted, error: insertError } = await supabase

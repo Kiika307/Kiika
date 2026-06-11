@@ -50,6 +50,7 @@ export const clients: Client[] = [
     selene: null,
     remindersDisabled: false,
     portal: { userId: null, invitedAt: null, cguAcceptedAt: null, cgvAcceptedAt: null, rgpdAcceptedAt: null },
+    smartObjective: null,
   },
   {
     id: "2",
@@ -79,6 +80,7 @@ export const clients: Client[] = [
     selene: null,
     remindersDisabled: false,
     portal: { userId: null, invitedAt: null, cguAcceptedAt: null, cgvAcceptedAt: null, rgpdAcceptedAt: null },
+    smartObjective: null,
   },
   {
     id: "3",
@@ -99,6 +101,7 @@ export const clients: Client[] = [
     selene: null,
     remindersDisabled: false,
     portal: { userId: null, invitedAt: null, cguAcceptedAt: null, cgvAcceptedAt: null, rgpdAcceptedAt: null },
+    smartObjective: null,
   },
   {
     id: "4",
@@ -128,6 +131,7 @@ export const clients: Client[] = [
     selene: null,
     remindersDisabled: false,
     portal: { userId: null, invitedAt: null, cguAcceptedAt: null, cgvAcceptedAt: null, rgpdAcceptedAt: null },
+    smartObjective: null,
   },
 ];
 

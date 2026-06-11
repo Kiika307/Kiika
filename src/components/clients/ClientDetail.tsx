@@ -235,6 +235,8 @@ export function ClientDetail({
           carePlans={kiikaCarePlans}
           tasks={tasks}
           notes={notes}
+          seleneTaken={client.selene != null}
+          smartObjective={client.smartObjective}
         />
       )}
       {tab === "suivi" && (

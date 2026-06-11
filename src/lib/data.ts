@@ -354,7 +354,7 @@ export async function getClientsRich(): Promise<Client[]> {
   const { data: rows } = await supabase
     .from("clients")
     .select(
-      "id, full_name, email, phone, age, status, color, test_done, profile_axes, profile_dominante, themes, objectifs, blocages, created_at, date_naissance, sexe, profession, situation_familiale, adresse, medecin_traitant, personne_referente, antecedents_medicaux, antecedents_psy, traitements_en_cours, selene_scores, selene_dominante, selene_top3, selene_taken_at, reminders_disabled, user_id, portal_invited_at, cgu_accepted_at, cgv_accepted_at, rgpd_accepted_at",
+      "id, full_name, email, phone, age, status, color, test_done, profile_axes, profile_dominante, themes, objectifs, blocages, created_at, date_naissance, sexe, profession, situation_familiale, adresse, medecin_traitant, personne_referente, antecedents_medicaux, antecedents_psy, traitements_en_cours, selene_scores, selene_dominante, selene_top3, selene_taken_at, reminders_disabled, user_id, portal_invited_at, cgu_accepted_at, cgv_accepted_at, rgpd_accepted_at, smart_objective",
     )
     .order("created_at", { ascending: true });
 
@@ -453,8 +453,27 @@ export async function getClientsRich(): Promise<Client[]> {
         cgvAcceptedAt: (row as { cgv_accepted_at?: string | null }).cgv_accepted_at ?? null,
         rgpdAcceptedAt: (row as { rgpd_accepted_at?: string | null }).rgpd_accepted_at ?? null,
       },
+      smartObjective: parseSmartObjective(
+        (row as { smart_objective?: unknown }).smart_objective,
+      ),
     };
   });
+}
+
+function parseSmartObjective(raw: unknown): import("./types").SmartObjective | null {
+  if (raw == null || typeof raw !== "object") return null;
+  const o = raw as Record<string, unknown>;
+  const str = (v: unknown) => (typeof v === "string" ? v : "");
+  const obj = {
+    specific: str(o.specific),
+    measurable: str(o.measurable),
+    achievable: str(o.achievable),
+    realistic: str(o.realistic),
+    temporal: str(o.temporal),
+    updatedAt: str(o.updatedAt) || new Date(0).toISOString(),
+  };
+  // Considère l'objectif "défini" s'il a au moins le champ Spécifique.
+  return obj.specific.trim() ? obj : null;
 }
 
 const DAY_SHORT = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];

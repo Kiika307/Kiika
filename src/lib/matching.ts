@@ -450,6 +450,16 @@ function anonymizeForLLM(client: Client) {
     themes: (client.profile?.themes ?? []).map(sanitizeForPrompt),
     objectifs: (client.profile?.objectifs ?? []).map(sanitizeForPrompt),
     blocages: (client.profile?.blocages ?? []).map(sanitizeForPrompt),
+    // Objectif SMART de la 1ère séance — pierre angulaire du parcours.
+    smart_objective: client.smartObjective
+      ? {
+          specifique: sanitizeForPrompt(client.smartObjective.specific),
+          mesurable: sanitizeForPrompt(client.smartObjective.measurable),
+          atteignable: sanitizeForPrompt(client.smartObjective.achievable),
+          realiste: sanitizeForPrompt(client.smartObjective.realistic),
+          temporel: sanitizeForPrompt(client.smartObjective.temporal),
+        }
+      : null,
   };
 }
 
@@ -748,7 +758,10 @@ export interface LLMCarePlan {
 export async function generateCarePlanWithLLM(
   client: Client,
   candidates: ScoredProtocol[],
+  opts?: { sessionCount?: number },
 ): Promise<LLMCarePlan> {
+  // Durée du parcours choisie par le praticien (5 à 10), défaut 10.
+  const sessionCount = Math.min(10, Math.max(5, Math.round(opts?.sessionCount ?? 10)));
   const apiKey = process.env.ANTHROPIC_API_KEY;
   const enabled = process.env.KIIKA_ENABLE_LLM_ANALYSIS === "true";
   if (!enabled) {
@@ -773,7 +786,7 @@ export async function generateCarePlanWithLLM(
   }));
 
   const systemPrompt = `Tu es KIIKA, assistant pour praticiens et accompagnants holistiques.
-On te demande de bâtir un PARCOURS COMPLET D'ACCOMPAGNEMENT SUR 10 SÉANCES pour un client donné.
+On te demande de bâtir un PARCOURS COMPLET D'ACCOMPAGNEMENT SUR ${sessionCount} SÉANCES pour un client donné.
 
 CONTEXTE CRITIQUE :
 - Tu n'es PAS un médecin, tu n'établis aucun diagnostic médical.
@@ -781,10 +794,15 @@ CONTEXTE CRITIQUE :
 - Tu suggères des pistes d'accompagnement holistique, pas une prescription.
 - Si le profil contient des signaux dépassant le cadre coaching/holistique (idéations suicidaires, dépression sévère, trauma complexe non traité, dissociation pathologique), tu le signales clairement dans "redFlags" et tu adaptes le parcours pour stabiliser plutôt que creuser.
 
+POINT DE DÉPART DU PARCOURS :
+- Si "smart_objective" est présent dans le payload, c'est L'OBJECTIF CENTRAL fixé avec le client en 1ère séance (méthode SMART). TOUT le parcours doit converger vers cet objectif : le critère "mesurable" et l'échéance "temporel" guident tes "metrics" et le rythme des ${sessionCount} séances.
+- Si "selene" est présent, fonde ta lecture psychométrique dessus en priorité (9 dimensions) ; sinon utilise legacy_profile.
+- Croise objectif SMART + profil Selene pour personnaliser réellement.
+
 PRINCIPES DE CONSTRUCTION DU PARCOURS :
-1. Les 1-2 premières séances sécurisent : alliance, ressources internes, ancres corporelles.
-2. Les séances suivantes ciblent le cœur du problème par approches complémentaires (jamais 10 fois la même chose).
-3. Les 1-2 dernières consolident : intégration, métacompétences, autonomisation.
+1. La 1ère séance ancre l'objectif SMART et sécurise : alliance, ressources internes, clarification de l'objectif.
+2. Les séances du milieu ciblent le cœur du problème par approches complémentaires (jamais la même chose répétée).
+3. La/les dernière(s) consolident : intégration, métacompétences, autonomisation, mesure de l'atteinte de l'objectif.
 4. Chaque séance combine 1-3 protocoles cohérents (au moins 1, jusqu'à 3 si vraiment justifiés).
 5. Tu n'utilises QUE les protocolId présents dans la liste fournie. Ne JAMAIS inventer un id.
 6. "homework" est une amorce simple entre séances (5-10 min/jour) — peut être null si pas pertinent.
@@ -792,8 +810,8 @@ PRINCIPES DE CONSTRUCTION DU PARCOURS :
 
 FORMAT — JSON STRICT, RIEN D'AUTRE :
 {
-  "diagnostic": "Markdown 200-300 mots. Lecture du profil : dimensions dominantes, tensions internes, ressources disponibles, hypothèses cliniques (au sens holistique).",
-  "direction": "1-2 phrases : la trajectoire d'accompagnement en une ligne stratégique.",
+  "diagnostic": "Markdown 200-300 mots. Lecture du profil au regard de l'objectif SMART : dimensions dominantes, tensions internes, ressources disponibles, hypothèses (au sens holistique), faisabilité de l'objectif dans l'échéance fixée.",
+  "direction": "1-2 phrases : la trajectoire d'accompagnement vers l'objectif, en une ligne stratégique.",
   "sessions": [
     {
       "num": 1,
@@ -803,9 +821,9 @@ FORMAT — JSON STRICT, RIEN D'AUTRE :
       "homework": "Devoir d'intersession (ou null)",
       "signals": ["signal 1", "signal 2", "signal 3"]
     },
-    ... 10 séances au total, num: 1 à 10
+    ... ${sessionCount} séances au total, num: 1 à ${sessionCount}
   ],
-  "metrics": ["3-5 indicateurs d'évolution mesurables sur la durée du parcours"],
+  "metrics": ["3-5 indicateurs d'évolution mesurables, alignés sur le critère mesurable de l'objectif SMART"],
   "redFlags": ["1-3 signaux qui justifieraient une réorientation médicale/psychologique (laisse vide [] si rien)"]
 }`;
 
@@ -815,7 +833,7 @@ ${JSON.stringify(anonClient, null, 2)}
 Bibliothèque de protocoles disponibles (${catalog.length} entrées, pré-filtrées par pertinence locale) :
 ${JSON.stringify(catalog, null, 2)}
 
-Construis un parcours complet sur 10 séances.`;
+Construis un parcours complet sur ${sessionCount} séances, ancré sur l'objectif SMART du client.`;
 
   try {
     const res = await fetch("https://api.anthropic.com/v1/messages", {

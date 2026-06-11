@@ -23,6 +23,15 @@ export interface SeleneSummary {
   takenAt: string;                       // ISO datetime
 }
 
+export interface SmartObjective {
+  specific: string;
+  measurable: string;
+  achievable: string;
+  realistic: string;
+  temporal: string;
+  updatedAt: string;
+}
+
 export interface ClientPortalState {
   userId: string | null;
   invitedAt: string | null;
@@ -50,6 +59,7 @@ export interface Client {
   selene: SeleneSummary | null;
   remindersDisabled: boolean;
   portal: ClientPortalState;
+  smartObjective: SmartObjective | null;
 }
 
 export interface ClientMessage {

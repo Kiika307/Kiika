@@ -23,6 +23,7 @@ import type {
   ClientTask,
   PlanStatus,
   Protocol,
+  SmartObjective,
 } from "@/lib/types";
 
 interface PlanTabProps {
@@ -33,6 +34,8 @@ interface PlanTabProps {
   carePlans: ClientKiikaCarePlan[];
   tasks: ClientTask[];
   notes: ClientNote[];
+  seleneTaken: boolean;
+  smartObjective: SmartObjective | null;
 }
 
 type SubTab = "plan" | "tasks" | "notes";
@@ -59,6 +62,8 @@ export function PlanTab({
   carePlans,
   tasks,
   notes,
+  seleneTaken,
+  smartObjective,
 }: PlanTabProps) {
   const [adding, setAdding] = useState(false);
   const [pending, startTransition] = useTransition();
@@ -117,6 +122,8 @@ export function PlanTab({
           plans={plans}
           protocols={protocols}
           carePlans={carePlans}
+          seleneTaken={seleneTaken}
+          smartObjective={smartObjective}
           adding={adding}
           setAdding={setAdding}
           pending={pending}
@@ -138,6 +145,8 @@ interface PlanContentProps {
   plans: ClientProtocolPlan[];
   protocols: Protocol[];
   carePlans: ClientKiikaCarePlan[];
+  seleneTaken: boolean;
+  smartObjective: SmartObjective | null;
   adding: boolean;
   setAdding: (v: boolean) => void;
   pending: boolean;
@@ -159,6 +168,8 @@ function PlanContent({
   plans,
   protocols,
   carePlans,
+  seleneTaken,
+  smartObjective,
   adding,
   setAdding,
   pending,
@@ -175,6 +186,8 @@ function PlanContent({
         clientFirstName={clientFirstName}
         carePlans={carePlans}
         protocols={protocols}
+        seleneTaken={seleneTaken}
+        smartObjective={smartObjective}
       />
 
       <div className="flex items-center justify-between">
