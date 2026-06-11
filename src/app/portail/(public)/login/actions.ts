@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 
 export interface PortalLoginState {
   error?: string;
@@ -27,6 +28,12 @@ export async function sendPortalMagicLink(
   const email = String(formData.get("email") ?? "").trim();
   const next = safeNext(String(formData.get("next") ?? "/portail"));
   if (!email) return { error: "Adresse e-mail requise" };
+
+  // Limite l'envoi de liens magiques (anti-spam / anti-énumération d'e-mails).
+  const ip = await clientIp();
+  if (!rateLimit.consume(`portal:magic:${ip}`, 5, 60_000)) {
+    return { error: "Trop de tentatives. Réessayez dans une minute." };
+  }
 
   const supabase = await createClient();
   const redirectTo = `${appUrl()}/auth/callback?next=${encodeURIComponent(next)}`;

@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { createClient as createServiceClient } from "@supabase/supabase-js";
 import { localToUtc } from "@/lib/booking";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 import { getSmtpTransporter, emailFrom } from "@/lib/email/smtp-client";
 import { sendPushTo } from "@/lib/push";
 import { createGoogleEvent } from "@/lib/google-calendar";
@@ -36,6 +37,13 @@ export interface PublicBookingResult {
 export async function submitPublicBookingAction(
   input: PublicBookingInput,
 ): Promise<PublicBookingResult> {
+  // Anti-spam : la réservation publique crée des fiches client + RDV sans
+  // authentification. Limite par IP pour éviter la création en masse.
+  const ip = await clientIp();
+  if (!rateLimit.consume(`booking:submit:${ip}`, 8, 60_000)) {
+    return { ok: false, error: "Trop de tentatives. Réessayez dans une minute." };
+  }
+
   const trimmed = {
     therapistSlug: input.therapistSlug.trim().toLowerCase(),
     date: input.date.trim(),
@@ -162,15 +170,16 @@ export async function submitPublicBookingAction(
     .select("id")
     .single();
   if (apptErr || !appt) {
-    // Surface the underlying DB error so a future schema drift is
-    // diagnosable from the prospect-facing alert without diving into
-    // server logs.
-    console.error("[public-booking] appointment insert failed", apptErr);
+    // Ne JAMAIS renvoyer le message d'erreur SQL brut à un visiteur anonyme
+    // (fuite du schéma DB). Log côté serveur uniquement (code + hint, pas le
+    // message complet qui peut contenir des valeurs de ligne / PII).
+    console.error("[public-booking] appointment insert failed", {
+      code: apptErr?.code,
+      hint: apptErr?.hint,
+    });
     return {
       ok: false,
-      error: apptErr?.message
-        ? `Impossible de créer le rendez-vous : ${apptErr.message}`
-        : "Impossible de créer le rendez-vous.",
+      error: "Impossible de créer le rendez-vous. Réessayez ou contactez le praticien.",
     };
   }
 

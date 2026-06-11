@@ -3,6 +3,7 @@
 import { randomBytes } from "node:crypto";
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 import { getSmtpTransporter, emailFrom } from "@/lib/email/smtp-client";
 import {
   renderPortalInvitationSubject,
@@ -131,43 +132,29 @@ export interface ClaimResult {
 export async function claimClientInvitation(
   inviteToken: string,
 ): Promise<ClaimResult> {
+  const ip = await clientIp();
+  if (!rateLimit.consume(`portal:claim:${ip}`, 10, 60_000)) {
+    return { ok: false, error: "Trop de tentatives. Réessayez dans une minute." };
+  }
+
   const supabase = await createClient();
   const { data: auth } = await supabase.auth.getUser();
   if (!auth.user) return { ok: false, error: "Non authentifié" };
 
-  const { data: client } = await supabase
-    .from("clients")
-    .select("id, user_id, portal_invite_expires_at, cgu_accepted_at, cgv_accepted_at, rgpd_accepted_at")
-    .eq("portal_invite_token", inviteToken)
-    .maybeSingle();
-
-  if (!client) return { ok: false, error: "Lien d'invitation invalide" };
-
-  if (
-    client.portal_invite_expires_at &&
-    new Date(client.portal_invite_expires_at).getTime() < Date.now()
-  ) {
-    return { ok: false, error: "Lien expiré — demandez à votre praticien·ne de le renvoyer" };
-  }
-
-  // Si la fiche est déjà liée à un autre auth user, refuser pour éviter le piratage
-  if (client.user_id && client.user_id !== auth.user.id) {
-    return { ok: false, error: "Ce lien est déjà lié à un autre compte" };
-  }
-
-  const { error } = await supabase
-    .from("clients")
-    .update({
-      user_id: auth.user.id,
-      portal_invite_token: null,
-      portal_invite_expires_at: null,
-    })
-    .eq("id", client.id);
+  // Le claim passe par une RPC SECURITY DEFINER : avant la liaison, la RLS
+  // empêche le client de lire/écrire sa fiche par token. La RPC valide aussi
+  // la correspondance d'e-mail (anti-détournement de lien).
+  const { data, error } = await supabase.rpc("claim_portal_invitation", {
+    p_token: inviteToken,
+  });
 
   if (error) return { ok: false, error: error.message };
 
-  const needsTerms = !(client.cgu_accepted_at && client.cgv_accepted_at && client.rgpd_accepted_at);
-  return { ok: true, needsTerms };
+  const result = (data ?? {}) as { ok?: boolean; error?: string; needsTerms?: boolean };
+  if (!result.ok) {
+    return { ok: false, error: result.error ?? "Lien d'invitation invalide" };
+  }
+  return { ok: true, needsTerms: result.needsTerms ?? false };
 }
 
 // ============================================================
@@ -187,13 +174,29 @@ export async function acceptPortalTerms(input: {
     return { ok: false, error: "Les trois consentements sont obligatoires" };
   }
 
+  // Garde applicative : si les consentements sont déjà enregistrés, ne pas
+  // réécrire (la date initiale fait foi — RGPD art. 7). Le trigger DB
+  // fn_lock_client_self_update applique aussi cette immutabilité (write-once).
+  const { data: existing } = await supabase
+    .from("clients")
+    .select("cgu_accepted_at, cgv_accepted_at, rgpd_accepted_at")
+    .eq("user_id", auth.user.id)
+    .maybeSingle();
+
+  if (!existing) return { ok: false, error: "Fiche introuvable" };
+
+  if (existing.cgu_accepted_at && existing.cgv_accepted_at && existing.rgpd_accepted_at) {
+    revalidatePath("/portail");
+    return { ok: true };
+  }
+
   const now = new Date().toISOString();
   const { error } = await supabase
     .from("clients")
     .update({
-      cgu_accepted_at: now,
-      cgv_accepted_at: now,
-      rgpd_accepted_at: now,
+      cgu_accepted_at: existing.cgu_accepted_at ?? now,
+      cgv_accepted_at: existing.cgv_accepted_at ?? now,
+      rgpd_accepted_at: existing.rgpd_accepted_at ?? now,
     })
     .eq("user_id", auth.user.id);
 
@@ -235,6 +238,8 @@ export async function sendPortalMessage(input: {
     });
     if (error) return { ok: false, error: error.message };
     revalidatePath("/portail/messagerie");
+    revalidatePath("/clients");
+    revalidatePath("/messagerie");
     return { ok: true };
   }
 
@@ -256,6 +261,8 @@ export async function sendPortalMessage(input: {
   });
   if (error) return { ok: false, error: error.message };
   revalidatePath("/clients");
+  revalidatePath("/messagerie");
+  revalidatePath("/portail/messagerie");
   return { ok: true };
 }
 
@@ -276,11 +283,21 @@ export async function submitTaskFeedback(input: {
   const patch: Record<string, unknown> = { client_feedback: feedback || null };
   if (input.markCompleted) patch.completed_at = new Date().toISOString();
 
-  // RLS s'occupe du contrôle d'accès
+  // Contrôle d'accès explicite (défense en profondeur, en plus de la RLS +
+  // du trigger fn_lock_client_task_update qui empêche de toucher d'autres
+  // colonnes) : la tâche doit appartenir à la fiche du client connecté.
+  const { data: clientRow } = await supabase
+    .from("clients")
+    .select("id")
+    .eq("user_id", auth.user.id)
+    .maybeSingle();
+  if (!clientRow) return { ok: false, error: "Non autorisé" };
+
   const { error } = await supabase
     .from("client_tasks")
     .update(patch)
-    .eq("id", input.taskId);
+    .eq("id", input.taskId)
+    .eq("client_id", clientRow.id);
 
   if (error) return { ok: false, error: error.message };
   revalidatePath("/portail/devoirs");

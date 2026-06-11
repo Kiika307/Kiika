@@ -20,12 +20,11 @@ export async function GET(request: NextRequest) {
     return NextResponse.redirect(new URL("/login?redirect=/settings/calendar", request.url));
   }
 
-  const proto = request.headers.get("x-forwarded-proto") ?? "https";
-  const host =
-    request.headers.get("x-forwarded-host") ??
-    request.headers.get("host") ??
-    "kiika.intio.fr";
-  const redirectUri = `${proto}://${host}/api/google-calendar/callback`;
+  // Le redirect_uri OAuth ne doit JAMAIS dériver d'un header contrôlable par le
+  // client (x-forwarded-host) : sinon un proxy mal configuré permettrait
+  // d'exfiltrer le code/token vers un domaine tiers. On le fige via env var.
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://kiika.intio.fr";
+  const redirectUri = `${baseUrl}/api/google-calendar/callback`;
 
   const stateSecret = process.env.CRON_SECRET ?? "";
   if (!stateSecret) {
