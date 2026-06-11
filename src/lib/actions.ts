@@ -1336,11 +1336,22 @@ export interface ClientJournalShared {
   createdAt: string;
 }
 
+export interface SessionSynthese {
+  id: string;
+  sessionDate: string;
+  summary: string;
+  keyPoints: string | null;
+  nextSteps: string | null;
+  shared: boolean;
+  createdAt: string;
+}
+
 export interface ClientSuiviData {
   ok: boolean;
   error?: string;
   moods?: ClientMoodCheckin[];
   journal?: ClientJournalShared[];
+  syntheses?: SessionSynthese[];
 }
 
 export async function getClientSuiviData(clientId: string): Promise<ClientSuiviData> {
@@ -1357,7 +1368,7 @@ export async function getClientSuiviData(clientId: string): Promise<ClientSuiviD
     .maybeSingle();
   if (!client) return { ok: false, error: "Client introuvable" };
 
-  const [{ data: moods }, { data: journal }] = await Promise.all([
+  const [{ data: moods }, { data: journal }, { data: syntheses }] = await Promise.all([
     supabase
       .from("client_mood_checkins")
       .select("id, score, note, created_at")
@@ -1370,6 +1381,12 @@ export async function getClientSuiviData(clientId: string): Promise<ClientSuiviD
       .eq("client_id", clientId)
       .eq("shared", true)
       .order("created_at", { ascending: false })
+      .limit(50),
+    supabase
+      .from("session_syntheses")
+      .select("id, session_date, summary, key_points, next_steps, shared, created_at")
+      .eq("client_id", clientId)
+      .order("session_date", { ascending: false })
       .limit(50),
   ]);
 
@@ -1387,5 +1404,85 @@ export async function getClientSuiviData(clientId: string): Promise<ClientSuiviD
       body: j.body,
       createdAt: j.created_at,
     })),
+    syntheses: (syntheses ?? []).map((s) => ({
+      id: s.id,
+      sessionDate: s.session_date,
+      summary: s.summary,
+      keyPoints: s.key_points,
+      nextSteps: s.next_steps,
+      shared: s.shared,
+      createdAt: s.created_at,
+    })),
   };
+}
+
+export async function saveSessionSynthese(input: {
+  id?: string;
+  clientId: string;
+  sessionDate: string;
+  summary: string;
+  keyPoints?: string | null;
+  nextSteps?: string | null;
+  shared: boolean;
+}): Promise<{ ok: boolean; error?: string; id?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const summary = input.summary.trim();
+  if (!summary) return { ok: false, error: "La synthèse ne peut pas être vide" };
+  if (summary.length > 20000) return { ok: false, error: "Synthèse trop longue" };
+
+  const { data: client } = await supabase
+    .from("clients")
+    .select("id")
+    .eq("id", input.clientId)
+    .eq("therapist_id", auth.user.id)
+    .maybeSingle();
+  if (!client) return { ok: false, error: "Client introuvable" };
+
+  const payload = {
+    session_date: input.sessionDate || new Date().toISOString().slice(0, 10),
+    summary,
+    key_points: input.keyPoints?.trim().slice(0, 10000) || null,
+    next_steps: input.nextSteps?.trim().slice(0, 10000) || null,
+    shared: input.shared,
+  };
+
+  if (input.id) {
+    const { error } = await supabase
+      .from("session_syntheses")
+      .update(payload)
+      .eq("id", input.id)
+      .eq("therapist_id", auth.user.id);
+    if (error) return { ok: false, error: error.message };
+    revalidatePath("/clients");
+    return { ok: true, id: input.id };
+  }
+
+  const { data, error } = await supabase
+    .from("session_syntheses")
+    .insert({ ...payload, therapist_id: auth.user.id, client_id: input.clientId })
+    .select("id")
+    .single();
+  if (error) return { ok: false, error: error.message };
+  revalidatePath("/clients");
+  return { ok: true, id: data.id };
+}
+
+export async function deleteSessionSynthese(
+  id: string,
+): Promise<{ ok: boolean; error?: string }> {
+  const supabase = await createClient();
+  const { data: auth } = await supabase.auth.getUser();
+  if (!auth.user) return { ok: false, error: "Non authentifié" };
+
+  const { error } = await supabase
+    .from("session_syntheses")
+    .delete()
+    .eq("id", id)
+    .eq("therapist_id", auth.user.id);
+  if (error) return { ok: false, error: error.message };
+  revalidatePath("/clients");
+  return { ok: true };
 }

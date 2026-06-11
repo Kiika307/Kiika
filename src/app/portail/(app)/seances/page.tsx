@@ -14,16 +14,26 @@ interface ApptRow {
 export default async function PortalSeancesPage() {
   const { supabase, client } = await requirePortalClient();
 
-  const { data: rows } = await supabase
-    .from("appointments")
-    .select("id, starts_at, duration_min, mode, status, daily_room_url")
-    .eq("client_id", client.id)
-    .order("starts_at", { ascending: false });
+  const [{ data: rows }, { data: synthRows }] = await Promise.all([
+    supabase
+      .from("appointments")
+      .select("id, starts_at, duration_min, mode, status, daily_room_url")
+      .eq("client_id", client.id)
+      .order("starts_at", { ascending: false }),
+    supabase
+      .from("session_syntheses")
+      .select("id, session_date, summary, key_points, next_steps")
+      .eq("client_id", client.id)
+      .eq("shared", true)
+      .order("session_date", { ascending: false })
+      .limit(50),
+  ]);
 
   const all = (rows ?? []) as ApptRow[];
   const now = Date.now();
   const upcoming = all.filter((a) => new Date(a.starts_at).getTime() >= now).reverse();
   const past = all.filter((a) => new Date(a.starts_at).getTime() < now);
+  const syntheses = synthRows ?? [];
 
   return (
     <>
@@ -59,8 +69,47 @@ export default async function PortalSeancesPage() {
           </ul>
         )}
       </Section>
+
+      {syntheses.length > 0 && (
+        <Section title="Comptes-rendus partagés">
+          <ul className="space-y-3">
+            {syntheses.map((s) => (
+              <li
+                key={s.id}
+                className="rounded-[14px] bg-[var(--color-white-soft)] p-4"
+                style={{ boxShadow: "var(--shadow-card)" }}
+              >
+                <div className="font-semibold text-[14px] text-[var(--color-navy)] mb-1">
+                  Séance du {formatSessionDate(s.session_date)}
+                </div>
+                <p className="text-[13px] text-[var(--color-navy)]/85 whitespace-pre-wrap">
+                  {s.summary}
+                </p>
+                {s.key_points && (
+                  <p className="mt-2 text-[12.5px] text-[var(--color-navy)]/75">
+                    <span className="font-semibold">Points clés :</span> {s.key_points}
+                  </p>
+                )}
+                {s.next_steps && (
+                  <p className="mt-1 text-[12.5px] text-[var(--color-navy)]/75">
+                    <span className="font-semibold">Pour la suite :</span> {s.next_steps}
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
     </>
   );
+}
+
+function formatSessionDate(iso: string): string {
+  return new Date(iso).toLocaleDateString("fr-FR", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  });
 }
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
