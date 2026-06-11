@@ -187,7 +187,7 @@ export function ClientDetail({
             <span>Exporter</span>
           </button>
           <button
-            className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 rounded-[10px] px-4 py-2.5 text-[13px] font-semibold text-white min-h-11"
+            className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 rounded-[10px] px-4 py-2.5 text-[13px] font-semibold text-white min-h-11 transition-opacity hover:opacity-90 active:opacity-80"
             style={{ backgroundColor: "var(--color-gold)" }}
           >
             <Plus size={14} aria-hidden="true" />
@@ -206,10 +206,11 @@ export function ClientDetail({
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
-            className="relative px-4 py-2.5 text-[13px] font-semibold transition-colors whitespace-nowrap min-h-11"
-            style={{
-              color: tab === t.id ? "var(--color-navy)" : "var(--color-gray-soft)",
-            }}
+            className={`relative px-4 py-2.5 text-[13px] font-semibold transition-colors whitespace-nowrap min-h-11 rounded-t-[8px] ${
+              tab === t.id
+                ? "text-[var(--color-navy)]"
+                : "text-[var(--color-gray-soft)] hover:text-[var(--color-navy)] hover:bg-[var(--color-light-gray)]/50"
+            }`}
             aria-current={tab === t.id ? "page" : undefined}
           >
             {t.label}

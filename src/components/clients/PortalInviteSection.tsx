@@ -103,7 +103,7 @@ export function PortalInviteSection({
           type="button"
           onClick={handleInvite}
           disabled={pending || !hasEmail}
-          className="inline-flex items-center gap-1.5 rounded-[10px] px-3 py-2 text-[12px] font-semibold text-white disabled:opacity-50"
+          className="inline-flex items-center gap-1.5 rounded-[10px] px-3 py-2 text-[12px] font-semibold text-white disabled:opacity-50 transition-opacity hover:opacity-90 active:opacity-80"
           style={{
             backgroundColor: status === "active" ? "var(--color-navy)" : "var(--color-gold)",
           }}

@@ -216,7 +216,7 @@ export function InformationsTab({ client, consents }: InformationsTabProps) {
           type="button"
           onClick={handleSave}
           disabled={pending}
-          className="inline-flex items-center gap-1.5 rounded-[10px] px-4 py-2 text-[13px] font-semibold text-white disabled:opacity-50"
+          className="inline-flex items-center gap-1.5 rounded-[10px] px-4 py-2 text-[13px] font-semibold text-white disabled:opacity-50 transition-opacity hover:opacity-90 active:opacity-80"
           style={{ backgroundColor: "var(--color-gold)" }}
         >
           <Save size={14} />
@@ -253,7 +253,7 @@ function Section({
             <button
               type="button"
               onClick={onEdit}
-              className="inline-flex items-center gap-1 text-[12px] font-semibold text-[var(--color-gold)] hover:underline"
+              className="inline-flex items-center gap-1 text-[12px] font-semibold text-[var(--color-gold)] rounded-[8px] px-2 py-1 -mr-2 transition-colors hover:bg-[var(--color-gold)]/12 hover:underline"
             >
               <Pencil size={12} />
               Modifier
@@ -354,7 +354,7 @@ function ConsentsSection({
           <button
             type="button"
             onClick={() => setAdding(true)}
-            className="inline-flex items-center gap-1.5 rounded-[10px] px-3 py-1.5 text-[12px] font-semibold text-white"
+            className="inline-flex items-center gap-1.5 rounded-[10px] px-3 py-1.5 text-[12px] font-semibold text-white transition-opacity hover:opacity-90 active:opacity-80"
             style={{ backgroundColor: latest ? "var(--color-navy)" : "var(--color-gold)" }}
           >
             <Plus size={12} />
@@ -423,7 +423,7 @@ function ConsentsSection({
                 });
               }}
               disabled={pending}
-              className="inline-flex items-center gap-1.5 rounded-[10px] px-3 py-1.5 text-[12px] font-semibold text-white disabled:opacity-50"
+              className="inline-flex items-center gap-1.5 rounded-[10px] px-3 py-1.5 text-[12px] font-semibold text-white disabled:opacity-50 transition-opacity hover:opacity-90 active:opacity-80"
               style={{ backgroundColor: "var(--color-gold)" }}
             >
               <Save size={12} />
