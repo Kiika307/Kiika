@@ -196,7 +196,9 @@ export interface UpcomingAppointment {
   initials: string;
   color: string;
   startsAt: string;
+  durationMin: number;
   mode: "visio" | "presentiel";
+  dailyRoomUrl: string | null;
   dayLabel: string;
   timeLabel: string;
 }
@@ -208,7 +210,7 @@ export async function getUpcomingAppointments(limit = 4): Promise<UpcomingAppoin
   const supabase = await createClient();
   const { data } = await supabase
     .from("appointments")
-    .select("id, starts_at, mode, client:clients(id, full_name, color)")
+    .select("id, starts_at, duration_min, mode, daily_room_url, client:clients(id, full_name, color)")
     .gte("starts_at", new Date().toISOString())
     .order("starts_at", { ascending: true })
     .limit(limit);
@@ -224,7 +226,9 @@ export async function getUpcomingAppointments(limit = 4): Promise<UpcomingAppoin
       initials: initials(name),
       color: colorFor(i, client?.color ?? null),
       startsAt: row.starts_at,
+      durationMin: row.duration_min ?? 60,
       mode: row.mode as "visio" | "presentiel",
+      dailyRoomUrl: (row as { daily_room_url?: string | null }).daily_room_url ?? null,
       dayLabel: `${DAY_LABELS[date.getDay()]} ${date.getDate()}`,
       timeLabel: DT_FMT.format(date),
     };

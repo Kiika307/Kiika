@@ -1,5 +1,6 @@
 import { CalendarDays, Video, MapPin } from "lucide-react";
 import { requirePortalClient } from "@/lib/portal-server";
+import { visioRoomUrl, isVisioJoinable } from "@/lib/visio";
 
 interface ApptRow {
   id: string;
@@ -7,6 +8,7 @@ interface ApptRow {
   duration_min: number;
   mode: "visio" | "presentiel";
   status: string;
+  daily_room_url: string | null;
 }
 
 export default async function PortalSeancesPage() {
@@ -14,7 +16,7 @@ export default async function PortalSeancesPage() {
 
   const { data: rows } = await supabase
     .from("appointments")
-    .select("id, starts_at, duration_min, mode, status")
+    .select("id, starts_at, duration_min, mode, status, daily_room_url")
     .eq("client_id", client.id)
     .order("starts_at", { ascending: false });
 
@@ -97,12 +99,23 @@ function ApptCard({ appt, upcoming }: { appt: ApptRow; upcoming: boolean }) {
           {appt.status && appt.status !== "scheduled" && ` · ${labelStatus(appt.status)}`}
         </div>
       </div>
-      {upcoming && (
+      {upcoming && appt.mode === "visio" && isVisioJoinable(appt.starts_at, appt.duration_min) ? (
+        <a
+          href={visioRoomUrl(appt.id, appt.daily_room_url)}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-1.5 rounded-[10px] px-3 py-2 text-[12px] font-semibold text-white"
+          style={{ backgroundColor: "var(--color-gold)" }}
+        >
+          <Video size={13} />
+          Rejoindre
+        </a>
+      ) : upcoming ? (
         <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[var(--color-teal)]">
           <CalendarDays size={13} />
           Programmé
         </span>
-      )}
+      ) : null}
     </li>
   );
 }

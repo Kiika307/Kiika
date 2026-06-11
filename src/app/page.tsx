@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Users, CalendarCheck, TrendingUp, Sparkles, AlertTriangle, Brain, Zap } from "lucide-react";
+import { Users, CalendarCheck, TrendingUp, Sparkles, AlertTriangle, Brain, Zap, Video } from "lucide-react";
+import { visioRoomUrl, isVisioJoinable } from "@/lib/visio";
 import { AppShell } from "@/components/layout/AppShell";
 import { Avatar } from "@/components/ui/Avatar";
 import { Badge } from "@/components/ui/Badge";
@@ -107,7 +108,20 @@ export default async function DashboardPage() {
                         {a.dayLabel} · {a.timeLabel} · {a.mode === "visio" ? "Visio" : "Présentiel"}
                       </div>
                     </div>
-                    <Badge color={a.color}>{a.mode === "visio" ? "Visio" : "Présentiel"}</Badge>
+                    {a.mode === "visio" && isVisioJoinable(a.startsAt, a.durationMin) ? (
+                      <a
+                        href={visioRoomUrl(a.id, a.dailyRoomUrl)}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-[8px] px-2.5 py-1.5 text-[12px] font-semibold text-white"
+                        style={{ backgroundColor: "var(--color-gold)" }}
+                      >
+                        <Video size={13} aria-hidden="true" />
+                        Rejoindre
+                      </a>
+                    ) : (
+                      <Badge color={a.color}>{a.mode === "visio" ? "Visio" : "Présentiel"}</Badge>
+                    )}
                     <MarkDoneButton appointmentId={a.id} />
                   </li>
                 ))}
