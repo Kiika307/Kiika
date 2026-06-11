@@ -9,6 +9,7 @@ import { EmptyState } from "@/components/ui/EmptyState";
 import { useConfirm } from "@/components/ui/ConfirmDialog";
 import { addInvoice, updateInvoice, deleteInvoice } from "@/lib/actions";
 import { exportInvoicePdf } from "@/lib/pdf-export";
+import { computeInvoiceTotals } from "@/lib/invoice-totals";
 import type { TherapistBilling } from "@/lib/data";
 import type { Client, Invoice, InvoiceLineItem, InvoiceStatut, ModeFinancement } from "@/lib/types";
 
@@ -618,12 +619,11 @@ function InvoicePreviewModal({
 }) {
   const alreadySent =
     invoice.statut === "envoyee" || invoice.statut === "reglee" || invoice.statut === "relance";
-  const isAssujetti = billing.tvaRegime === "assujetti" && billing.tvaRate != null;
-  const tvaRate = isAssujetti ? Number(billing.tvaRate) : 0;
-  const ttc = invoice.montant;
-  const ht = isAssujetti ? +(ttc / (1 + tvaRate / 100)).toFixed(2) : ttc;
-  const tva = isAssujetti ? +(ttc - ht).toFixed(2) : 0;
-  const due = +(ttc - invoice.montantRegle).toFixed(2);
+  const totals = computeInvoiceTotals(invoice, {
+    tvaRegime: billing.tvaRegime,
+    tvaRate: billing.tvaRate,
+  });
+  const { isAssujetti, tvaRate, ht, tva, ttc, due } = totals;
 
   // Mentions obligatoires manquantes (FR) : nom + adresse + SIRET au minimum
   const missingMandatory: string[] = [];
@@ -758,17 +758,7 @@ function InvoicePreviewModal({
 
           {/* Tableau prestations */}
           {(() => {
-            const items =
-              invoice.lineItems.length > 0
-                ? invoice.lineItems
-                : [
-                    {
-                      description:
-                        invoice.notes?.trim() || `Prestation — ${invoice.numero}`,
-                      qty: 1,
-                      unitPrice: ht,
-                    },
-                  ];
+            const items = totals.items;
             return (
               <table className="w-full mt-6 text-[12.5px]">
                 <thead>

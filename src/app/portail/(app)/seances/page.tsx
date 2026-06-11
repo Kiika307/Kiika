@@ -1,5 +1,5 @@
 import { CalendarDays, Video, MapPin } from "lucide-react";
-import { createClient } from "@/lib/supabase/server";
+import { requirePortalClient } from "@/lib/portal-server";
 
 interface ApptRow {
   id: string;
@@ -10,18 +10,12 @@ interface ApptRow {
 }
 
 export default async function PortalSeancesPage() {
-  const supabase = await createClient();
-  const { data: auth } = await supabase.auth.getUser();
-  const { data: client } = await supabase
-    .from("clients")
-    .select("id")
-    .eq("user_id", auth.user!.id)
-    .single();
+  const { supabase, client } = await requirePortalClient();
 
   const { data: rows } = await supabase
     .from("appointments")
     .select("id, starts_at, duration_min, mode, status")
-    .eq("client_id", client!.id)
+    .eq("client_id", client.id)
     .order("starts_at", { ascending: false });
 
   const all = (rows ?? []) as ApptRow[];

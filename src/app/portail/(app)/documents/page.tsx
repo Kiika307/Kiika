@@ -1,5 +1,5 @@
 import { FileText, Download } from "lucide-react";
-import { createClient } from "@/lib/supabase/server";
+import { requirePortalClient } from "@/lib/portal-server";
 
 const CATEGORY_LABEL: Record<string, string> = {
   questionnaire: "Questionnaire",
@@ -10,18 +10,12 @@ const CATEGORY_LABEL: Record<string, string> = {
 };
 
 export default async function PortalDocumentsPage() {
-  const supabase = await createClient();
-  const { data: auth } = await supabase.auth.getUser();
-  const { data: client } = await supabase
-    .from("clients")
-    .select("id")
-    .eq("user_id", auth.user!.id)
-    .single();
+  const { supabase, client } = await requirePortalClient();
 
   const { data: documents } = await supabase
     .from("client_documents")
     .select("id, filename, mime_type, size_bytes, category, description, created_at, storage_path")
-    .eq("client_id", client!.id)
+    .eq("client_id", client.id)
     .order("created_at", { ascending: false });
 
   const docs = documents ?? [];

@@ -1,25 +1,19 @@
-import { createClient } from "@/lib/supabase/server";
+import { requirePortalClient } from "@/lib/portal-server";
 import { MessagerieClient, type PortalMessage } from "./MessagerieClient";
 
 export default async function PortalMessageriePage() {
-  const supabase = await createClient();
-  const { data: auth } = await supabase.auth.getUser();
-  const { data: client } = await supabase
-    .from("clients")
-    .select("id, therapist_id")
-    .eq("user_id", auth.user!.id)
-    .single();
+  const { supabase, client } = await requirePortalClient();
 
   const { data: therapist } = await supabase
     .from("profiles")
     .select("full_name")
-    .eq("id", client!.therapist_id)
+    .eq("id", client.therapist_id)
     .maybeSingle();
 
   const { data: rows } = await supabase
     .from("client_messages")
     .select("id, body, sender_role, created_at, read_at")
-    .eq("client_id", client!.id)
+    .eq("client_id", client.id)
     .order("created_at", { ascending: true });
 
   // Marque comme lus les messages thérapeute non encore lus

@@ -13,6 +13,7 @@ import type {
   SessionHistoryEntry,
 } from "@/lib/types";
 import type { TherapistBilling } from "@/lib/data";
+import { computeInvoiceTotals } from "@/lib/invoice-totals";
 
 interface ExportInput {
   client: Client;
@@ -546,27 +547,16 @@ export async function exportInvoicePdf({
   doc.line(MARGIN_X, yMeta, pageW - MARGIN_X, yMeta);
   yMeta += 6;
 
-  // Tableau prestations
-  const isAssujetti = billing.tvaRegime === "assujetti" && billing.tvaRate != null;
-  const tvaRate = isAssujetti ? Number(billing.tvaRate) : 0;
-  const ttc = invoice.montant;
-
-  const items =
-    invoice.lineItems.length > 0
-      ? invoice.lineItems
-      : [
-          {
-            description: invoice.notes?.trim() || `Prestation — ${invoice.numero}`,
-            qty: 1,
-            unitPrice: isAssujetti ? +(ttc / (1 + tvaRate / 100)).toFixed(2) : ttc,
-          },
-        ];
-
-  const subTotalHT = items.reduce((s, it) => s + it.qty * it.unitPrice, 0);
-  const computedTTC = isAssujetti ? +(subTotalHT * (1 + tvaRate / 100)).toFixed(2) : subTotalHT;
-  const tvaAmount = isAssujetti ? +(computedTTC - subTotalHT).toFixed(2) : 0;
-  // Préfère le total saisi si cohérent, sinon le calculé
-  const finalTTC = ttc || computedTTC;
+  // Tableau prestations — totaux calculés par l'utilitaire partagé (cohérence
+  // centime près avec l'aperçu écran et l'éditeur).
+  const totals = computeInvoiceTotals(invoice, {
+    tvaRegime: billing.tvaRegime,
+    tvaRate: billing.tvaRate,
+  });
+  const { isAssujetti, tvaRate, items } = totals;
+  const subTotalHT = totals.ht;
+  const tvaAmount = totals.tva;
+  const finalTTC = totals.ttc;
 
   const head = isAssujetti
     ? [["Description", "Qté", "PU HT", "TVA", "Total HT"]]

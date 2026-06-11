@@ -1,11 +1,13 @@
 "use client";
 
-import { useMemo, useState, useRef, useEffect } from "react";
+import { useMemo, useState, useRef, useEffect, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import { Send, Search, ChevronLeft, MessageSquare } from "lucide-react";
 import { toast } from "sonner";
 import { Avatar } from "@/components/ui/Avatar";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { cn } from "@/lib/cn";
+import { sendPortalMessage } from "@/lib/portal-actions";
 import type { ChatMessage, Conversation, Client } from "@/lib/types";
 
 interface MessagerieClientProps {
@@ -23,6 +25,13 @@ export function MessagerieClient({ clients, conversations: initialConversations 
   /** Sur mobile : "list" (liste des clients) ou "thread" (conversation). */
   const [mobileView, setMobileView] = useState<"list" | "thread">("list");
   const threadRef = useRef<HTMLDivElement | null>(null);
+  const [pending, startTransition] = useTransition();
+  const router = useRouter();
+
+  // Resync quand le serveur renvoie de nouvelles conversations (router.refresh).
+  useEffect(() => {
+    setConvs(initialConversations);
+  }, [initialConversations]);
 
   const activeClient = useMemo(
     () => clients.find((c) => c.id === activeId) ?? clients[0],
@@ -51,9 +60,11 @@ export function MessagerieClient({ clients, conversations: initialConversations 
 
   function send() {
     const body = draft.trim();
-    if (!body) return;
-    const msg: ChatMessage = {
-      id: String(Date.now()),
+    if (!body || !activeId || pending) return;
+
+    // Affichage optimiste immédiat.
+    const optimistic: ChatMessage = {
+      id: `tmp-${Date.now()}`,
       from: "therapist",
       body,
       time: new Date().toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" }),
@@ -61,12 +72,31 @@ export function MessagerieClient({ clients, conversations: initialConversations 
     setConvs((prev) => {
       const exists = prev.some((c) => c.clientId === activeId);
       if (exists) {
-        return prev.map((c) => (c.clientId === activeId ? { ...c, messages: [...c.messages, msg] } : c));
+        return prev.map((c) =>
+          c.clientId === activeId ? { ...c, messages: [...c.messages, optimistic] } : c,
+        );
       }
-      return [...prev, { clientId: activeId, messages: [msg] }];
+      return [...prev, { clientId: activeId, messages: [optimistic] }];
     });
     setDraft("");
-    toast.success("Message envoyé");
+
+    startTransition(async () => {
+      const res = await sendPortalMessage({ clientId: activeId, body });
+      if (res.ok) {
+        router.refresh(); // récupère le message persisté (et ceux du client)
+      } else {
+        toast.error(res.error ?? "Échec de l'envoi");
+        // Retire le message optimiste en cas d'échec.
+        setConvs((prev) =>
+          prev.map((c) =>
+            c.clientId === activeId
+              ? { ...c, messages: c.messages.filter((m) => m.id !== optimistic.id) }
+              : c,
+          ),
+        );
+        setDraft(body);
+      }
+    });
   }
 
   function pickClient(id: string) {
@@ -221,7 +251,7 @@ export function MessagerieClient({ clients, conversations: initialConversations 
           </label>
           <button
             type="submit"
-            disabled={!draft.trim()}
+            disabled={!draft.trim() || pending}
             className="inline-flex items-center justify-center min-w-11 min-h-11 rounded-[var(--radius-input)] bg-[var(--color-navy)] text-white transition-opacity disabled:opacity-40 hover:opacity-90"
             title="Envoyer"
             aria-label="Envoyer le message"

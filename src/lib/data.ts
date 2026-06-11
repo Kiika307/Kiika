@@ -245,9 +245,9 @@ export interface RecentMessage {
 export async function getRecentMessages(limit = 5): Promise<RecentMessage[]> {
   const supabase = await createClient();
   const { data } = await supabase
-    .from("messages")
-    .select("id, body, created_at, read_at, from_role, client:clients(id, full_name, color)")
-    .eq("from_role", "client")
+    .from("client_messages")
+    .select("id, body, created_at, read_at, sender_role, client:clients(id, full_name, color)")
+    .eq("sender_role", "client")
     .order("created_at", { ascending: false })
     .limit(limit);
 
@@ -538,15 +538,16 @@ export async function getVisioAppointments(): Promise<Appointment[]> {
 export async function getConversations(): Promise<Conversation[]> {
   const supabase = await createClient();
   const { data } = await supabase
-    .from("messages")
-    .select("id, client_id, from_role, body, created_at")
-    .order("created_at", { ascending: true });
+    .from("client_messages")
+    .select("id, client_id, sender_role, body, created_at")
+    .order("created_at", { ascending: true })
+    .limit(2000);
 
   const map = new Map<string, ChatMessage[]>();
   (data ?? []).forEach((row) => {
     const msg: ChatMessage = {
       id: row.id,
-      from: row.from_role as "therapist" | "client",
+      from: row.sender_role as "therapist" | "client",
       body: row.body,
       time: TIME_FMT.format(new Date(row.created_at)),
     };

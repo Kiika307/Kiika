@@ -583,6 +583,16 @@ export async function addInvoice(input: {
       unit_price: Number(it.unitPrice) || 0,
     }));
 
+  // Source de vérité : si des lignes sont présentes, le montant est dérivé de
+  // leur somme côté serveur (ignore tout montant client divergent).
+  const montant =
+    lineItems.length > 0
+      ? +lineItems.reduce((s, it) => s + it.qty * it.unit_price, 0).toFixed(2)
+      : input.montant;
+
+  if (!validMoney(montant, MAX_INVOICE_AMOUNT))
+    return { ok: false, error: "Montant invalide" };
+
   const { data, error } = await supabase
     .from("invoices")
     .insert({
@@ -592,7 +602,7 @@ export async function addInvoice(input: {
       numero: input.numero.trim(),
       project: input.project?.trim() || null,
       line_items: lineItems,
-      montant: input.montant,
+      montant,
       mode_financement: input.modeFinancement ?? null,
       date_emission: input.dateEmission ?? new Date().toISOString().slice(0, 10),
       date_echeance: input.dateEcheance ?? null,
@@ -637,17 +647,48 @@ export async function updateInvoice(
   const update: Record<string, unknown> = {};
   if (patch.numero !== undefined) update.numero = patch.numero;
   if (patch.project !== undefined) update.project = patch.project?.trim() || null;
+
+  // Montant effectif : dérivé des lignes si fournies, sinon patch.montant.
+  let effectiveMontant: number | undefined = patch.montant;
   if (patch.lineItems !== undefined) {
-    update.line_items = patch.lineItems
+    const cleaned = patch.lineItems
       .filter((it) => it && it.description.trim())
       .map((it) => ({
         description: it.description.trim().slice(0, 500),
         qty: Number(it.qty) || 0,
         unit_price: Number(it.unitPrice) || 0,
       }));
+    update.line_items = cleaned;
+    if (cleaned.length > 0) {
+      effectiveMontant = +cleaned.reduce((s, it) => s + it.qty * it.unit_price, 0).toFixed(2);
+    }
   }
-  if (patch.montant !== undefined) update.montant = patch.montant;
-  if (patch.montantRegle !== undefined) update.montant_regle = patch.montantRegle;
+  if (effectiveMontant !== undefined) {
+    if (!validMoney(effectiveMontant, MAX_INVOICE_AMOUNT))
+      return { ok: false, error: "Montant invalide" };
+    update.montant = effectiveMontant;
+  }
+
+  // Garde : le montant réglé ne peut pas dépasser le montant de la facture.
+  if (patch.montantRegle !== undefined) {
+    let cap = effectiveMontant;
+    if (cap === undefined) {
+      const { data: cur } = await supabase
+        .from("invoices")
+        .select("montant")
+        .eq("id", invoiceId)
+        .eq("therapist_id", auth.user.id)
+        .maybeSingle();
+      cap = cur ? Number(cur.montant) : undefined;
+    }
+    if (cap !== undefined && patch.montantRegle > cap + 0.001) {
+      return {
+        ok: false,
+        error: "Le montant réglé ne peut pas dépasser le montant de la facture.",
+      };
+    }
+    update.montant_regle = patch.montantRegle;
+  }
   if (patch.modeFinancement !== undefined) update.mode_financement = patch.modeFinancement;
   if (patch.statut !== undefined) {
     update.statut = patch.statut;
@@ -915,7 +956,7 @@ export async function exportClientData(
       supabase.from("invoices").select("*").eq("client_id", clientId).eq("therapist_id", tid),
       supabase.from("client_documents").select("*").eq("client_id", clientId).eq("therapist_id", tid),
       supabase.from("client_consents").select("*").eq("client_id", clientId).eq("therapist_id", tid),
-      supabase.from("messages").select("*").eq("client_id", clientId).eq("therapist_id", tid),
+      supabase.from("client_messages").select("*").eq("client_id", clientId).eq("therapist_id", tid),
     ]);
 
   return {

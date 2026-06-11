@@ -8,7 +8,7 @@ import {
   ArrowRight,
   Heart,
 } from "lucide-react";
-import { createClient } from "@/lib/supabase/server";
+import { requirePortalClient } from "@/lib/portal-server";
 import { StatCard } from "@/components/ui/StatCard";
 import { SectionCard } from "@/components/ui/SectionCard";
 import { academiaStatPhotos, academiaFeaturePhotos } from "@/lib/academia-photos";
@@ -36,22 +36,13 @@ const MONTH_FULL = [
 ];
 
 export default async function PortalDashboardPage() {
-  const supabase = await createClient();
-  const { data: auth } = await supabase.auth.getUser();
-  const userId = auth.user!.id;
-
-  const { data: client } = await supabase
-    .from("clients")
-    .select("id, full_name, therapist_id")
-    .eq("user_id", userId)
-    .single();
-
-  const clientId = client!.id;
+  const { supabase, client } = await requirePortalClient();
+  const clientId = client.id;
 
   const { data: therapist } = await supabase
     .from("profiles")
     .select("full_name")
-    .eq("id", client!.therapist_id)
+    .eq("id", client.therapist_id)
     .maybeSingle();
 
   const [
@@ -102,7 +93,7 @@ export default async function PortalDashboardPage() {
       .limit(3),
   ]);
 
-  const firstName = (client!.full_name ?? "").split(" ")[0];
+  const firstName = (client.full_name ?? "").split(" ")[0];
   const therapistName = therapist?.full_name ?? "votre praticien·ne";
   const openTasksCount = (openTasks ?? []).length;
 
